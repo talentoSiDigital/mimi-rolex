@@ -7,8 +7,6 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
-
-  
 });
 
 const db = {};
@@ -16,6 +14,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.tutorials = require("./model.js")(sequelize, Sequelize);
+db.headerSlider = require("./headerSlider.model")(sequelize, Sequelize);
 
 module.exports = db;

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import router from './router'
 
 /* import router from './router' */
 
@@ -53,6 +54,6 @@ library.add(
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
-/*     .use(router) */
+    .use(router) 
     .component('vue-cookie-accept-decline', VueCookieAcceptDecline)
     .mount('#app')

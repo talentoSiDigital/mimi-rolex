@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#images and assets (PRODUCTION ONLY)
+
+src/assets
