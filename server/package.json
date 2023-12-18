@@ -4,6 +4,7 @@
   "description": "\"Sistema personalizado para Mimi Joyeria\"",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Talento si digital, Manuel Zorrilla",

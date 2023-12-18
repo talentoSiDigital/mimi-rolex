@@ -11,10 +11,16 @@ const db = require("./app/models");
 //   console.log("Drop and re-sync db.");
 // });
 
+// Static files
+app.use(express.static('storage'));
+
+
+
 
 var corsOptions = {
   origin: "http://localhost:8080/api/"
 };
+
 app.use(cors(corsOptions));
 
 
@@ -30,7 +36,6 @@ const headerController = require('./app/controllers/headerController')
 
 // Require the upload middleware
 const upload = require('./app/middleware/headerUpload');
-app.use(express.static('storage/'));
 
 
 
