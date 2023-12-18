@@ -1,13 +1,10 @@
 
 module.exports = (sequelize, Sequelize) => {
     const HeaderSlider = sequelize.define("headersliders", {
-      route: {
+      path: {
         type: Sequelize.STRING
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      mobileName: {
+      mobilePath: {
         type: Sequelize.STRING
       }
     });

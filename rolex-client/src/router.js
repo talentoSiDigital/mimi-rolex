@@ -1,5 +1,7 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import Home from './views/Home.view.vue'
+import Rolex from './views/Rolex/Rolex.view.vue'
+import RolexNewModels from './views/Rolex/RolexNewModels.view.vue'
 
 
 
@@ -14,7 +16,23 @@ const router = createRouter({
                 title:'Mimi Joyería | Distribuidor Oficial Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
             }
         },
-        
+        // ROLEX STATIC ROUTES
+        {
+          path:"/rolex",
+          name:"rolex",
+          component:Rolex,  
+          meta: {
+            title:'Rolex en Mimi Joyería  - Mimi Joyería | Distribuidor Oficial Rolex'
+        }
+        },        
+        {
+          path:"/nuevos-modelos-2023",
+          name:"rolex-modelos-2023",
+          component:RolexNewModels,  
+          meta: {
+            title:'Nuevos Modelos 2023  - Mimi Joyería | Distribuidor Oficial Rolex'
+        }
+        }        
       
     ]
 })

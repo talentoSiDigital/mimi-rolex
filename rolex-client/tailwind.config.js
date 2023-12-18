@@ -8,6 +8,8 @@ export default {
       extend: {
         colors:{
           'main-green': '#ADBAAD',
+          'secondary-green':'#adbaad',
+
           'rolex-green': '#127749',
           'gray-button':'#484848'
         }

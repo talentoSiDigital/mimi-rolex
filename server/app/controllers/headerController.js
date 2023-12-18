@@ -2,6 +2,9 @@ const db = require("../models");
 const HeaderSlider = db.headerSlider;
 const Op = db.Sequelize.Op;
 
+
+const storagePath = require('path').resolve(__dirname, '..' + "\\")
+
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
     // Validate request
@@ -34,6 +37,9 @@ exports.create = (req, res) => {
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
+    // let allItems = []
+    
+
     HeaderSlider.findAll()
       .then(data => {
         res.send(data)
