@@ -6,7 +6,7 @@
 
             </slot>
         </p>
-        <h1 class="text-4xl text-center py-8 tracking-wider">
+        <h1 class="text-4xl text-center py-8 ">
             <slot name="title">
     
             </slot>

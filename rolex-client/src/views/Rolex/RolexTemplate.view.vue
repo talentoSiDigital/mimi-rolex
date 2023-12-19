@@ -16,6 +16,8 @@ import RolexFooter from '../../components/global-components/RolexFooter.vue'
 
         </slot>
         <SliderNavigationRolex  /> 
+        <RolexFooter  /> 
+
         
 
 
