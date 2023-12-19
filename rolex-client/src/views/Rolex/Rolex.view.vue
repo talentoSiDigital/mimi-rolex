@@ -1,16 +1,14 @@
 <script setup>
-import RolexNavbar from '../../components/global-components/RolexNavbar.vue'
-
+import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
-
 
 </script>
 
 <template>
-    <div id="rolex-main-content">
-        <RolexNavbar />
-        <PageBanner type="rolex" />
+    <RolexTemplate>
+        <template #content>
+            <PageBanner type="rolex" />
 
 
 
@@ -28,8 +26,11 @@ import RolexHeader from '../../components/RolexHeader.vue'
         </RolexHeader>
 
 
-    </div>
+        </template>
+    </RolexTemplate>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 

@@ -1,6 +1,6 @@
 
 <template>
-    <header class="flex flex-col justify-center items-center text-neutral-700 h-[60vh]">
+    <header class="flex flex-col justify-center items-center text-neutral-700 h-fit mt-8 mb-6">
         <p>
             <slot name="sub">
 
