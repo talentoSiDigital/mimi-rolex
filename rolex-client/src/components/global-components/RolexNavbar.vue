@@ -22,7 +22,7 @@ function collapseNav() {
         </svg>
         </div>
 
-        <router-link to="/rolex" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600  md:hover:text-rolex-green w-full md:w-fit text-center w-full md:w-fit text-center">
+        <router-link to="/rolex" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600  md:hover:text-rolex-green w-full md:w-fit text-center ">
             <h2>Rolex en Mimi Joyería</h2>
         </router-link>  
 
@@ -32,32 +32,37 @@ function collapseNav() {
 
         </router-link>  
 
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+        <router-link to="/coleccion-rolex" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Colección Rolex</h2>
 
-        </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+        </router-link> 
+
+        <router-link to="/mantenimiento-rolex" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Mantenimiento Rolex</h2>
 
-        </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+        </router-link>
+
+        <router-link to="/historia" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Historia</h2>
 
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+
+        <router-link to="/showroom" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Showroom</h2>
 
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+
+        <router-link to="/watchmaking" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Rolex Watchmaking</h2>
 
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
+
+        <router-link to="/contactenos" class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
             <h2>Contactanos</h2>
 

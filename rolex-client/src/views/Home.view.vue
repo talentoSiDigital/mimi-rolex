@@ -1,8 +1,12 @@
 <script setup>
 import { ref, watch } from 'vue';
 import HeaderSlider from '../services/headerSliderDataServices'
+import Footer from '../components/global-components/Footer.vue';
+
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+
 import { useAsyncState } from '@vueuse/core'
 
 const { isLoading, state, isReady, execute } = useAsyncState(
@@ -163,6 +167,9 @@ const jewelSlideshow = [
 
 
         <img src="../assets/routes-assets/Home/banner-graduate.webp" alt="banner-graduacion">
+
+
+        <Footer/>
 </div>
 
 
