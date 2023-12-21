@@ -6,7 +6,7 @@
 <template>
     <div id="rolex-footer" class="flex flex-col justify-center items-center gap-6">
         <img src="../../assets/rolex-logo.webp" alt="logo-rolex" class="w-32">
-        <div class="flex justify-center border-y py-2">
+        <div class="flex flex-col md:flex-row justify-center border-y py-2 ">
             <router-link to="/rolex"
                 class="hover:text-rolex-green px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
                 <h2>Rolex en Mimi Joyería</h2>

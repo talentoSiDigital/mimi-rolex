@@ -11,6 +11,9 @@ import RolexWatchmaking from './views/Rolex/RolexWatchmaking.view.vue'
 import RolexContacto from './views/Rolex/RolexContacto.view.vue'
 
 
+// WATCHES ROUTES
+import Tudor from './views/Tudor.view.vue'
+
 
 
 
@@ -69,7 +72,7 @@ const router = createRouter({
     }
     ,
     {
-      path: "/rolex-watchmaking",
+      path: "/watchmaking",
       name: "rolex-watchmaking",
       component: RolexWatchmaking,
       meta: {
@@ -83,6 +86,14 @@ const router = createRouter({
       component: RolexContacto,
       meta: {
         title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    },
+    {
+      path: "/tudor",
+      name: "tudor",
+      component: Tudor,
+      meta: {
+        title: ' Tudor - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     // ,

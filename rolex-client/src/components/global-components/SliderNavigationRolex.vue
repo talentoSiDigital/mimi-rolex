@@ -84,6 +84,7 @@ const sliderItems = [
 
 <template>
     <section id="rolex-footer-slider" class=" my-8 py-4 w-full flex flex-col items-center justify-center ">
+        <h2 class="font-bold mb-4">Explorar Mas</h2>
         <div id="carousel" class="w-3/4">
             <carousel :breakpoints="breakpoints" :wrap-around="true" v-model="currentSlide" :autoplay="2000">
                 <slide v-for="slide in sliderItems" :key="slide">
