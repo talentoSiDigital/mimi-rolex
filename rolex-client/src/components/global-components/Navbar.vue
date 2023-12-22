@@ -35,13 +35,13 @@ function collapseNav() {
         <router-link to="/tudor" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Tudor</h2>
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/relojeria" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Relojería</h2>
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/joyeria" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Joyería</h2>
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/sobre-mimi" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Sobre Mimi</h2>
         </router-link>  
         <router-link to="/" class="border-b-2 border-transparent hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">

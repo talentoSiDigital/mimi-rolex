@@ -10,10 +10,15 @@ import RolexShowroom from './views/Rolex/RolexShowroom.view.vue'
 import RolexWatchmaking from './views/Rolex/RolexWatchmaking.view.vue'
 import RolexContacto from './views/Rolex/RolexContacto.view.vue'
 
+import Relojeria from './views/Relojeria.view.vue'
 
-// WATCHES ROUTES
+
+// MIMI SHOWCASE ROUTES
 import Tudor from './views/Tudor.view.vue'
+import Joyeria from './views/Joyeria.view.vue'
+import SobreMimi from './views/SobreMimi.view.vue'
 
+// MIMI STORE ROUTES
 
 
 
@@ -94,6 +99,31 @@ const router = createRouter({
       component: Tudor,
       meta: {
         title: ' Tudor - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    {
+      path: "/relojeria",
+      name: "relojeria",
+      component: Relojeria,
+      meta: {
+        title: 'Relojeria - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    },
+    {
+      path: "/joyeria",
+      name: "joyeria",
+      component: Joyeria,
+      meta: {
+        title: 'Joyería  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    },
+    {
+      path: "/sobre-mimi",
+      name: "sobre-mimi",
+      component: SobreMimi,
+      meta: {
+        title: 'Sobre Mimi- Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     // ,
