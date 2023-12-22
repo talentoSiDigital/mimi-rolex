@@ -18,38 +18,25 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import {
-    faMagnifyingGlass,
-    faAngleDown,
-    faIndustry,
-    faHandshake,
-    faAward,
-    faHandsHoldingCircle,
-    faCircleCheck,
-    faEnvelope,
     faPhone,
     faLocationDot,
-    faXmark, 
-    faBackward, 
-    faAngleUp
+    faAngleUp,
+    faCircleInfo,
+    faArrowRight
 } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 
 library.add(
-    faMagnifyingGlass,
     faFacebookF,
     faInstagram,
-    faAngleDown,
-    faIndustry,
-    faHandshake,
-    faAward,
-    faHandsHoldingCircle,
-    faCircleCheck,
-    faEnvelope,
+    faXTwitter,
+    faWhatsapp, 
     faPhone,
     faLocationDot,
-    faXTwitter,
-    faXmark, faWhatsapp, faBackward, faAngleUp
+    faAngleUp,
+    faCircleInfo,
+    faArrowRight
 )
 
 
