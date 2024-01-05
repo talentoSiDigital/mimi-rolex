@@ -32,7 +32,6 @@ const jewelSlideshow = [
 
 <template>
     <div id="main-content">
-
         <carousel :items-to-show="1" >
             <slide v-for="slide in state" :key="slide">
                 <img class="hidden md:block" :src="slide.path" :alt="slide.path">
