@@ -15,5 +15,12 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.headerSlider = require("./headerSlider.model")(sequelize, Sequelize);
+db.rolex = require("./rolex.model")(sequelize, Sequelize)
+
+
 
 module.exports = db;
+
+
+
+

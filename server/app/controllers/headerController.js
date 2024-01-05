@@ -37,7 +37,7 @@ exports.create = (req, res) => {
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-    // let allItems = []
+    
     
 
     HeaderSlider.findAll()
