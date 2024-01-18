@@ -3,5 +3,5 @@ server/node_modules
 server/.env
 
 
-server/storage/rolex-relojes
+server/storage/
 server/LOCAL/

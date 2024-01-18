@@ -1,6 +1,6 @@
 <script setup>
-import OverlaySection from '../components/cards/OverlaySection.vue'
-import PageBanner from '../components/banners-components/PageBanner.vue'
+import OverlaySection from '../../components/cards/OverlaySection.vue'
+import PageBanner from '../../components/banners-components/PageBanner.vue'
 </script>
 
 <template>

@@ -29,22 +29,22 @@ function collapseNav() {
             <path class="stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
         </div>
-        <router-link to="/rolex" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50  md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/rolex" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50  md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Rolex</h2>
         </router-link>  
-        <router-link to="/tudor" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/tudor" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Tudor</h2>
         </router-link>  
-        <router-link to="/relojeria" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/relojeria" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Relojería</h2>
         </router-link>  
-        <router-link to="/joyeria" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/joyeria" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Joyería</h2>
         </router-link>  
-        <router-link to="/sobre-mimi" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/sobre-mimi" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Sobre Mimi</h2>
         </router-link>  
-        <router-link to="/" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-light text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+        <router-link to="/contactenos" class="border-b-2 border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-2xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
             <h2>Contacto</h2>
         </router-link>  
         

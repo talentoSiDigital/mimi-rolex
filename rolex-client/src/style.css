@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: 'Roboto';
+
+
+@font-face {
+    font-family: "Vilsuve";
+    font-weight: 400;
+    src: url(/fonts/Vilsuve-Regular.ttf);
+}
+@font-face {
+    font-family: "Meta";
+    font-weight: 700;
+    src: url(/fonts/Meta.ttf);
 }

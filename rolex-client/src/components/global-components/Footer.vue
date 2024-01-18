@@ -97,7 +97,7 @@ import { RouterLink } from "vue-router";
 
                 
                 <li>
-                    <RouterLink to="/" class="hover:underline ">
+                    <RouterLink to="/contacto" class="hover:underline ">
                         Contacto
                     </RouterLink>
                 </li>

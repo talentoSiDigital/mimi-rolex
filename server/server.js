@@ -15,8 +15,6 @@ const db = require("./app/models");
 app.use(express.static('storage'));
   
 
-
-
 var corsOptions = {
   origin: "http://localhost:8080/api/"
 };

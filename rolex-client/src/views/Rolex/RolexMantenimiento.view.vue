@@ -19,7 +19,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 <RolexHeader>
                     <template #sub>
                         <h2 class="text-center text-neutral-700 mb-4">CREADOS PARA PERDURAR</h2>
-                        <strong>MANTENIMIENTO DE RELOJES ROLEX Y REPARACIÓN EN MIMI JOYERÍA</strong>
+                        <h2 class="text-center text-neutral-700 mb-4 ">MANTENIMIENTO DE RELOJES ROLEX Y REPARACIÓN EN MIMI JOYERÍA</h2>
                     </template>
                     <template #title>
                         GARANTIA DE DURABILIDAD

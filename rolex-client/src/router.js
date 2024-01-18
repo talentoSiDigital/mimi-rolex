@@ -9,14 +9,21 @@ import RolexHistoria from './views/Rolex/RolexHistoria.view.vue'
 import RolexShowroom from './views/Rolex/RolexShowroom.view.vue'
 import RolexWatchmaking from './views/Rolex/RolexWatchmaking.view.vue'
 import RolexContacto from './views/Rolex/RolexContacto.view.vue'
+import RolexAll from './views/Rolex/RolexAll.view.vue'
 
-import Relojeria from './views/Relojeria.view.vue'
+import RolexWatchCollection from './views/Rolex/RolexWatchCollection.view.vue'
+import RolexWatchDetail from './views/Rolex/RolexWatchDetail.view.vue'
+
 
 
 // MIMI SHOWCASE ROUTES
-import Tudor from './views/Tudor.view.vue'
-import Joyeria from './views/Joyeria.view.vue'
-import SobreMimi from './views/SobreMimi.view.vue'
+import Tudor from './views/Mimi/Tudor.view.vue'
+import Relojeria from './views/Mimi/Relojeria.view.vue'
+import Joyeria from './views/Mimi/Joyeria.view.vue'
+import SobreMimi from './views/Mimi/SobreMimi.view.vue'
+import Contacto from './views/Mimi/Contacto.view.vue'
+
+
 
 // MIMI STORE ROUTES
 
@@ -86,8 +93,8 @@ const router = createRouter({
     }
     ,
     {
-      path: "/contactenos",
-      name: "contactenos",
+      path: "/contacto",
+      name: "contacto",
       component: RolexContacto,
       meta: {
         title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
@@ -102,6 +109,33 @@ const router = createRouter({
       }
     }
     ,
+    // ROLEX WATCHES VIEW 
+    {
+      path: "/coleccion-rolex",
+      name: "coleccion-rolex",
+      component: RolexAll,
+      meta: {
+        title: 'Coleccion Rolex | Distribuidor Oficial Rolex'
+      }
+    },
+    {
+      path: "/coleccion/:id",
+      name: "coleccion",
+      component: RolexWatchCollection,
+      meta: {
+        title: 'Coleccion Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    },
+    {
+      path: "/relojes/:id",
+      name: "relojes",
+      component: RolexWatchDetail,
+      meta: {
+        title: 'Modelos de Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    // MIMI STATIC ROUTES
+    ,
     {
       path: "/relojeria",
       name: "relojeria",
@@ -109,7 +143,8 @@ const router = createRouter({
       meta: {
         title: 'Relojeria - Mimi Joyería | Distribuidor Oficial Rolex'
       }
-    },
+    }
+    ,
     {
       path: "/joyeria",
       name: "joyeria",
@@ -126,7 +161,17 @@ const router = createRouter({
         title: 'Sobre Mimi- Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
-    // ,
+    ,
+    {
+      path: "/contactenos",
+      name: "contactenos",
+      component: Contacto,
+      meta: {
+        title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    
     // {
     //   path: "/",
     //   name: "",
@@ -135,17 +180,31 @@ const router = createRouter({
     //     title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
     //   }
     // }
+    // ,
 
-]})
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 10,
+        behavior: 'smooth'
+      }
+    }
+    return { top: 0, behavior: 'smooth', }
+
+  },
+
+})
 
 
 router.beforeEach((to, from, next) => {
   // Get the page title from the route meta data that we have defined
   // See further down below for how we setup this data
   const title = to.meta.title
-
   //Take the title from the parameters
   const titleFromParams = to.params.pageTitle;
+
   // If the route has a title, set it as the page title of the document/page
   if (title) {
     document.title = title
@@ -153,7 +212,8 @@ router.beforeEach((to, from, next) => {
   // If we have a title from the params, extend the title with the title
   // from our params
   if (titleFromParams) {
-    document.title = `${titleFromParams} - ${document.title}`;
+
+    document.title = ` ${document.title}`;
   }
   // Continue resolving the route
   next()

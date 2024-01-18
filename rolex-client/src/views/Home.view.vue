@@ -31,8 +31,8 @@ const jewelSlideshow = [
 </script>
 
 <template>
-    <div id="main-content">
-        <carousel :items-to-show="1" >
+    <div id="main-content" class="font-montserrat">
+        <carousel :items-to-show="1">
             <slide v-for="slide in state" :key="slide">
                 <img class="hidden md:block" :src="slide.path" :alt="slide.path">
                 <img class="block md:hidden" :src="slide.mobilePath" :alt="slide.mobilePath">
@@ -49,7 +49,8 @@ const jewelSlideshow = [
                 <!-- The left line -->
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
                 <!-- Your text here -->
-                <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-medium">PRESENTE EN TUS MOMENTOS ESPECIALES</h1>
+                <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-medium">PRESENTE EN TUS
+                    MOMENTOS ESPECIALES</h1>
 
                 <!-- The right line -->
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
@@ -58,61 +59,31 @@ const jewelSlideshow = [
             <div class="hidden md:block">
                 <div class="flex justify-center gap-6 ">
 
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[0] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[0]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[0] }}</h2>
+                    <div v-for="item in jewelSlideshow"
+                        class="flex-col justify-center items-center duration-500 hover:scale-110" :key="item">
+
+                        <img class="w-36" :src="`/src/assets/routes-assets/Home/${item}-home-mini.webp`" :alt="item">
+                        <h2 class="text-center uppercase">{{ item }}</h2>
                     </div>
-
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[1] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[1]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[1] }}</h2>
-                    </div>
-
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[2] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[2]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[3] }}</h2>
-                    </div>
-
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[3] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[3]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[3] }}</h2>
-                    </div>
-
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[4] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[4]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[4] }}</h2>
-                    </div>
-
-                    <div class="flex-col justify-center items-center duration-500 hover:scale-110">
-                        <img class="w-36" :src="'/src/assets/routes-assets/Home/' + jewelSlideshow[5] + '-home-mini.webp'"
-                            :alt="jewelSlideshow[5]">
-                        <h2 class="text-center uppercase">{{ jewelSlideshow[5] }}</h2>
-                    </div>
-
-
                 </div>
 
             </div>
 
             <div class="block md:hidden w-44">
-                <carousel :items-to-show="1" :autoplay="1000"  :wrap-around="true">
+                <carousel :items-to-show="1" :autoplay="1000" :wrap-around="true">
                     <slide v-for="slide in jewelSlideshow" :key="slide">
                         <img class="w-full" :src="'/src/assets/routes-assets/Home/' + slide + '-home-mini.webp'"
                             :alt="slide">
                     </slide>
 
-                    
+
                 </carousel>
             </div>
         </div>
 
 
-        <div id="home-section" class="flex flex-col md:flex-row items-center justify-center gap-8 h-screen text-neutral-700">
+        <div id="home-section"
+            class="flex flex-col md:flex-row items-center justify-center gap-8 h-screen text-neutral-700">
             <img class="w-3/4 md:w-1/3 duration-500 hover:scale-110" src="../assets/routes-assets/Home/home-1.webp"
                 alt="mujer-gargantilla">
             <div class="w-3/4 md:w-1/3 text-center">
@@ -124,7 +95,8 @@ const jewelSlideshow = [
         </div>
 
 
-        <div id="home-section-2" class="flex flex-col md:flex-row-reverse  items-center justify-center gap-8 h-screen text-neutral-700">
+        <div id="home-section-2"
+            class="flex flex-col md:flex-row-reverse  items-center justify-center gap-8 h-screen text-neutral-700">
             <img class="w-3/4 md:w-1/3 duration-500 hover:scale-110" src="../assets/routes-assets/Home/home-2.webp"
                 alt="brazaletes-oro">
             <div class="w-3/4 md:w-1/3 text-center">
@@ -139,7 +111,8 @@ const jewelSlideshow = [
                 <!-- The left line -->
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
                 <!-- Your text here -->
-                <h1 class="text-center text-3xl tracking-widest mx-4 font-medium text-neutral-700">PRESENTE EN TUS MOMENTOS
+                <h1 class="text-center text-3xl tracking-widest mx-4 font-medium text-neutral-700">PRESENTE
+                    EN TUS MOMENTOS
                     ESPECIALES</h1>
 
                 <!-- The right line -->

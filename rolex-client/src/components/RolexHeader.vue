@@ -6,13 +6,13 @@
 
             </slot>
         </p>
-        <h1 class="text-4xl text-center py-8 ">
+        <h1 class="text-4xl text-center py-8 font-arial">
             <slot name="title">
     
             </slot>
             
         </h1>
-        <p class="w-1/2 text-center font-normal">
+        <p class="w-3/4 md:w-1/2 text-center font-normal font-arial">
             <slot name="text">
     
             </slot>

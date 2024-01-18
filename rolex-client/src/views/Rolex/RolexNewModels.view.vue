@@ -1,7 +1,5 @@
 <script setup>
-
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-
 import RolexNavbar from '../../components/global-components/RolexNavbar.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
 import RolexHeader from '../../components/RolexHeader.vue'

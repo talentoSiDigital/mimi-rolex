@@ -17,7 +17,7 @@
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             </div>
 
-            <img src="../assets/routes-assets/sobre-mimi.webp" alt="entrada-mimi-joyería" class="w-2/3">
+            <img src="../../assets/routes-assets/sobre-mimi.webp" alt="entrada-mimi-joyería" class="w-2/3">
             <header class="w-2/3 p-6 text-center">
                 <p>Mimi Joyería nace en la ciudad de Caracas el 23 de marzo de 1982, con la firme intención de estar siempre
                     presente en los momentos especiales de las personas, desde el nacimiento hasta la graduación, el
@@ -32,7 +32,7 @@
         <main class="bg-neutral-100 pb-14">
 
             <section class="flex flex-col items-center justify-center md:flex-row">
-                <img src="../assets/routes-assets/historia/historia-1.webp" alt="showroom-mimi-tolon" class="w-1/3">
+                <img src="../../assets/routes-assets/historia/historia-1.webp" alt="showroom-mimi-tolon" class="w-1/3">
                 <header class="w-1/3 p-6 ">
                     <header class="pb-8">
                         <h1 class="text-3xl  text-center">MISIÓN</h1>
@@ -52,7 +52,7 @@
 
 
             <section class="flex flex-col items-center justify-center md:flex-row-reverse">
-                <img src="../assets/routes-assets/showroom/showroom-3.webp" alt="showroom-rolex-oyster" class="w-1/3">
+                <img src="../../assets/routes-assets/showroom/showroom-3.webp" alt="showroom-rolex-oyster" class="w-1/3">
                 <header class="w-1/3 p-6 ">
                     <h1 class="text-3xl  text-center">ROLEX EN MIMI JOYERÍA</h1>
                     <p>
@@ -69,7 +69,7 @@
             </section>
 
             <section class="flex flex-col items-center justify-center md:flex-row">
-                <img src="../assets/routes-assets/showroom/showroom-1.webp" alt="showroom-rolex-oyster" class="w-1/3">
+                <img src="../../assets/routes-assets/showroom/showroom-1.webp" alt="showroom-rolex-oyster" class="w-1/3">
                 <header class="w-1/3 p-6 ">
                     <h1 class="text-3xl  text-center">SIEMPRE PRESENTE</h1>
                     <p class="">
@@ -85,7 +85,6 @@
             </section>
 
         </main>
-    </div></template>
-
-<style scoped></style>
-
+    </div>
+    
+</template>

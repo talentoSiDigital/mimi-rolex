@@ -4,7 +4,11 @@ module.exports = app =>{
     
     // Routes
     router.get("/rolex", rolex.showDisplay)
+    router.get("/collection/:id", rolex.getCollectionDetails)
+    router.get("/collection", rolex.getAllRolex)
+    router.get("/rolex/:id", rolex.getRolexDetails)
+
     
     app.use('/api',router)
-
+// 
 }

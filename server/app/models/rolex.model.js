@@ -14,6 +14,13 @@ module.exports = (sequelize, Sequelize) => {
       watch:{
         type: Sequelize.STRING
  
+      },
+      idName:{
+        type: Sequelize.STRING
+ 
+      },
+      hasVideo:{
+        type: Sequelize.BOOLEAN
       }
     },{
       timestamps:false
@@ -25,11 +32,14 @@ module.exports = (sequelize, Sequelize) => {
       modelo: {
         type: Sequelize.STRING
       },
-      
       nombre: {
         type: Sequelize.STRING
       },
       material: {
+        type: Sequelize.STRING
+      },
+      size :{
+        
         type: Sequelize.STRING
       },
       cajaDelModelo: {
