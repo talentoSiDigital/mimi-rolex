@@ -67,7 +67,7 @@ exports.showDisplay = (req, res) => {
           err.message || "Some error occurred while retrieving tutorials."
 
       });
-    });
+    }); 
 };
 
 // Show by collection

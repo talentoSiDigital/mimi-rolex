@@ -174,7 +174,7 @@ watch(searchParams.value, () => {
 
                                         <img :src="item.img" :alt="item.modelo">
                                         <h2 class="uppercase text-center ">Rolex</h2>
-                                        <h2 class="uppercase text-center font-bold">{{ item.nombre }}</h2>
+                                        <h2 class="uppercase text-center font-bold text-xl font-vilsuve">{{ item.nombre }}</h2>
                                         <h2 class="text-center text-xs font-extralight">{{ item.cajaDelModelo }}</h2>
 
                                     </RouterLink>

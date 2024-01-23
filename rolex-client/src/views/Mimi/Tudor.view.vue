@@ -138,10 +138,11 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-black bg-opacity-40 ">
 
                 <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
-                <a href="https://tienda.mimijoyeria.com/collections/tudor" target="_blank"
-                    class="font-tudor tracking-tighter  hover:text-red-700 duration-200 border-t border-b border-white  md:border-black p-4 md:p-6">QUIERO
-                    UN TUDOR</a>
-                <RouterLink to="/" class=" hover:text-red-700 duration-200 p-4 md:p-6">
+                
+                <RouterLink to="/relojeria/tudor" class=" hover:text-red-700 duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
+                </RouterLink>
+                <RouterLink to="/contactenos" class=" hover:text-red-700 duration-200 p-4 md:p-6">
                     <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
                 </RouterLink>
 

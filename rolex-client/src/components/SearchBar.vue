@@ -4,9 +4,9 @@ import { computed, ref, watch } from 'vue';
 const { args} = defineProps(['args'])
 
 const model = defineModel()
-// const size = ref()
-// const material = ref()
-// const esfera = ref()
+
+
+const active = ref(false)
 
 
 
@@ -29,9 +29,8 @@ const searchArgs = {
     "all":['block','block','block','block']
 }
 
-
 const modelCheck = computed(() => {
-    return model.value.length == 0 ? 'bg-gray-500 text-gray-600 cursor-not-allowed' : 'bg-rolex-green text-white'
+    return active.value == false ? 'bg-gray-500 text-gray-600 cursor-not-allowed' : 'bg-rolex-green text-white'
 })
 
 
@@ -43,7 +42,16 @@ function deleteSearch(){
     model.value.size = ""
     model.value.material = ""
     model.value.esfera = ""
+    active.value = false
 } 
+
+watch(model.value,()=>{
+    if(model.value.material != "" || model.value.esfera != "" || model.value.size != ""){
+        active.value = true
+        return
+    }
+    active.value = false
+})
 
 
 
@@ -53,7 +61,8 @@ function deleteSearch(){
 <template>
     <section id="search-bar" class=" w-1/3 flex justify-end">
         <div class=" flex flex-col w-9/12 ">
-            <h2 class="mb-2 font-title font-bold text-xl tracking-widest uppercase">BúSQUEDA AVANZADA</h2>
+            <h2 class="mb-2 font-vilsuve font-bold text-xl tracking-widest uppercase ">BúSQUEDA AVANZADA</h2>
+            {{ active }}
             <hr>
             <button class="mt-2 mb-8 border border-white px-2 py-2 rounded-3xl  duration-700" :class="modelCheck"
                 :disabled="disable" @click="deleteSearch">
@@ -62,7 +71,7 @@ function deleteSearch(){
             </button>
 
             <div id="estilo" :class="searchArgs[args][0]" class="my-6 flex flex-col gap-4">
-                <h2 class="uppercase font-title font-bold text-md tracking-[.18em]">ESTILO</h2>
+                <h2 class="uppercase font-vilsuve font-bold text-md tracking-[.18em]">ESTILO</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
@@ -79,7 +88,7 @@ function deleteSearch(){
             </div>
 
             <div id="size" :class="searchArgs[args][1]" class="my-6 flex flex-col gap-4">
-                <h2 class="uppercase font-title font-bold   text-md tracking-[.18em]">Tamaño</h2>
+                <h2 class="uppercase font-vilsuve font-bold   text-md tracking-[.18em]">Tamaño</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
@@ -103,7 +112,7 @@ function deleteSearch(){
             </div>
 
             <div id="material" :class="searchArgs[args][2]" class="my-6 flex flex-col gap-4">
-                <h2 class="uppercase font-title font-bold   text-md tracking-[.18em]">Material</h2>
+                <h2 class="uppercase font-vilsuve font-bold   text-md tracking-[.18em]">Material</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
@@ -139,7 +148,7 @@ function deleteSearch(){
             </div>
 
             <div id="esfera" :class="searchArgs[args][3]" class="my-6 flex flex-col gap-4">
-                <h2 class="uppercase font-title font-bold text-md tracking-[.18em]">Esfera</h2>
+                <h2 class="uppercase font-vilsuve font-bold text-md tracking-[.18em]">Esfera</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
@@ -176,7 +185,7 @@ function deleteSearch(){
 
 
             <div id="navigation">
-                <h2 class="uppercase font-title font-bold  text-md tracking-[.18em]">ver colecciones</h2>
+                <h2 class="uppercase font-vilsuve font-bold  text-md tracking-[.18em]">ver colecciones</h2>
                 <div class=" flex flex-col gap-2">
                     <a class="text-base" href="/coleccion/1">Rolex 1908</a>
                     <a class="text-base" href="/coleccion/2">Rolex AIR-KING</a>

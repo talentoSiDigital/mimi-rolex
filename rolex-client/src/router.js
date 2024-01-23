@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './views/Home.view.vue'
-// ROLEX ROUTES
+// ROLEX COMPONENTS
 import Rolex from './views/Rolex/Rolex.view.vue'
 import RolexNewModels from './views/Rolex/RolexNewModels.view.vue'
 import RolexMantenimiento from './views/Rolex/RolexMantenimiento.view.vue'
@@ -16,17 +16,26 @@ import RolexWatchDetail from './views/Rolex/RolexWatchDetail.view.vue'
 
 
 
-// MIMI SHOWCASE ROUTES
+// MIMI SHOWCASE COMPONENTS
 import Tudor from './views/Mimi/Tudor.view.vue'
 import Relojeria from './views/Mimi/Relojeria.view.vue'
 import Joyeria from './views/Mimi/Joyeria.view.vue'
 import SobreMimi from './views/Mimi/SobreMimi.view.vue'
 import Contacto from './views/Mimi/Contacto.view.vue'
+import NotFound404 from './views/404.view.vue'
 
 
 
-// MIMI STORE ROUTES
+// MIMI STORE COMPONENTS
 
+import StoreJoyeria from './views/Tienda/StoreJoyeria.view.vue'
+import StoreRelojeria from './views/Tienda/StoreRelojeria.view.vue'
+import StoreJoyeriaDetail from './views/Tienda/StoreJoyeriaDetail.view.vue'
+import StoreRelojeriaDetail from './views/Tienda/StoreRelojeriaDetail.view.vue'
+
+// MIMI ADMIN COMPONENTS
+import Login from './views/Admin/Login.view.vue'
+import Register from './views/Admin/Register.view.vue'
 
 
 const router = createRouter({
@@ -109,6 +118,8 @@ const router = createRouter({
       }
     }
     ,
+    // ****************
+    // ****************
     // ROLEX WATCHES VIEW 
     {
       path: "/coleccion-rolex",
@@ -134,6 +145,8 @@ const router = createRouter({
         title: 'Modelos de Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
+    // ****************
+    // ****************
     // MIMI STATIC ROUTES
     ,
     {
@@ -171,7 +184,84 @@ const router = createRouter({
       }
     }
     ,
+    // ****************
+    // ****************
+    // MIMI STORE ROUTES
+
+    {
+      path: "/joyeria/:id",
+      name: "joyas",
+      component: StoreJoyeria,
+      meta: {
+        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+      },
+
+    }
+
+    ,
+    {
+      path: "/relojeria/:id",
+      name: "reloj",
+      component: StoreRelojeria,
+      meta: {
+        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+      },
+
+    }
+    ,
+    {
+      path: "/relojeria/:serie/:id",
+      name: "relojProducto",
+      component: StoreRelojeriaDetail,
+      meta: {
+        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+      },
+
+    }
+    ,
+    {
+      path: "/joyeria/:serie/:id",
+      name: "joyeriaProducto",
+      component: StoreJoyeriaDetail,
+      meta: {
+        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+      },
+
+    }
+    ,
+    {
+      path: "/:notFound",
+      name: "notFound",
+      component: NotFound404,
+      meta: {
+        title: 'Pagina no encontrada -  Mimi Joyería | Distribuidor Oficial Rolex'
+      },
+
+    }
+    // ****************
+    // ****************
+    // ADMIN ROUTES
+    ,
+    {
+      path: "/login",
+      name: "login",
+      component: Login,
+      meta: {
+        title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
     
+    {
+      path: "/registrar",
+      name: "registrar",
+      component: Register,
+      meta: {
+        title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    // ,
     // {
     //   path: "/",
     //   name: "",
@@ -199,11 +289,13 @@ const router = createRouter({
 
 
 router.beforeEach((to, from, next) => {
+
+  // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : 'Home';
   // Get the page title from the route meta data that we have defined
   // See further down below for how we setup this data
   const title = to.meta.title
   //Take the title from the parameters
-  const titleFromParams = to.params.pageTitle;
+  const titleFromParams = to.params.id;
 
   // If the route has a title, set it as the page title of the document/page
   if (title) {
@@ -212,9 +304,11 @@ router.beforeEach((to, from, next) => {
   // If we have a title from the params, extend the title with the title
   // from our params
   if (titleFromParams) {
+    const parsedTitleFromParams = titleFromParams.charAt(0).toUpperCase() + titleFromParams.slice(1)
 
-    document.title = ` ${document.title}`;
+    document.title = `${parsedTitleFromParams.replaceAll("-", " ")} - ${title}`;
   }
+
   // Continue resolving the route
   next()
 })

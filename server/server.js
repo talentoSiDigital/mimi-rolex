@@ -7,10 +7,11 @@ const cors = require("cors");
 const app = express();
 
 const db = require("./app/models");
+
 // db.sequelize.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
 // });
-   
+     
 // Static files
 app.use(express.static('storage'));
   
@@ -40,6 +41,10 @@ const upload = require('./app/middleware/headerUpload');
 //ROUTES
 require("./app/api/slider.routes")(app);
 require("./app/api/rolex.routes")(app);
+require("./app/api/store.routes")(app);
+
+require('./app/api/auth.routes')(app);
+require('./app/api/user.routes')(app);
 
 
 // set port, listen for requests

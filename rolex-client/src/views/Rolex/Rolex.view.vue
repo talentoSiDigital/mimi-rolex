@@ -47,8 +47,8 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                     <div v-for="(item,index) in state" id="card" class="w-full" :key="index">
                         <router-link :to="{name:'coleccion', params: {id: index+1}}" v-if="item.nombre != 'MUJERES' && item.nombre != 'ORO' && item.nombre != 'HOMBRES'">
                             <img :src="item.file" :alt="item.watch">
-                            <h2 class="uppercase text-center font-bold">Rolex</h2>
-                            <h2 class="uppercase text-center font-bold">{{ item.nombre }}</h2>
+                            <h2 class="uppercase text-center ">Rolex</h2>
+                            <h2 class="uppercase text-center ">{{ item.nombre }}</h2>
                         </router-link>
                     </div>
                 </div>

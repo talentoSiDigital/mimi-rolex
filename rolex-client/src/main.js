@@ -29,10 +29,11 @@ import {
     faEnvelope,
     faArrowsRotate,
     faLocationArrow,
-    faAngleDown
+    faAngleDown,
+    faArrowLeft
 } from '@fortawesome/free-solid-svg-icons'
 
-import { faFacebookF, faInstagram, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
 
 
 library.add(
@@ -50,7 +51,8 @@ library.add(
     faEnvelope,
     faArrowsRotate,
     faLocationArrow,
-    faAngleDown
+    faAngleDown,
+    faArrowLeft, faPinterest
 )
 
 createApp(App)
