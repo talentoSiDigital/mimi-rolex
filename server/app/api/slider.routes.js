@@ -6,6 +6,7 @@ module.exports = app =>{
     // Routes
 
     router.get("/main-slider", headerController.findAll);
+    router.post("/main-slider/edit/:id", headerController.update);
 
 
     app.use('/api',router)

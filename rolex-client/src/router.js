@@ -36,6 +36,11 @@ import StoreRelojeriaDetail from './views/Tienda/StoreRelojeriaDetail.view.vue'
 // MIMI ADMIN COMPONENTS
 import Login from './views/Admin/Login.view.vue'
 import Register from './views/Admin/Register.view.vue'
+import Dashboard from './views/Admin/Dashboard.view.vue'
+
+import Profile from './components/dashboard/Profile.vue'
+import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
+
 
 
 const router = createRouter({
@@ -247,7 +252,7 @@ const router = createRouter({
       name: "login",
       component: Login,
       meta: {
-        title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: 'Iniciar sesion  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     ,
@@ -257,7 +262,29 @@ const router = createRouter({
       name: "registrar",
       component: Register,
       meta: {
-        title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: 'Registrar  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    
+    {
+      path: "/dashboard/",
+      name: "dashboard",
+      component: Dashboard,
+      children:[
+        {
+          path:"",
+          name:"main",
+          component:Profile
+        },
+        {
+          path:"banner-edit",
+          name:"banner-edit",
+          component:SliderChangeForm
+        },
+      ],
+      meta: {
+        title: 'Panel de control  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     ,

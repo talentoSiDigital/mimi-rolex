@@ -4,6 +4,11 @@ import App from './App.vue'
 import router from './router'
 import VueTelInput from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
+import {createPinia} from 'pinia'
+
+
+// Defining pinia
+const pinia = createPinia()
 
 
 /* import router from './router' */
@@ -58,6 +63,7 @@ library.add(
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router) 
+    .use(pinia)
     .use(VueTelInput)
     .component('vue-cookie-accept-decline', VueCookieAcceptDecline)
     .mount('#app')

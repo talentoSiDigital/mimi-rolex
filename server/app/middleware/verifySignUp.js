@@ -1,5 +1,6 @@
 const db = require("../models");
-const User = db.user;
+const ROLES = db.ROLES;
+const User = db.user.User;
 
 checkDuplicateUsernameOrEmail = (req, res, next) => {
   // check if  Username is taken
@@ -9,9 +10,9 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
     }
   }).then(user => {
     if (user) {
-        // if it is taken, send errror an return void
+      // if it is taken, send errror an return void
       res.status(400).send({
-        message: "Failed! Username is already in use!"
+        message: "Nombre de usuario no disponible"
       });
       return;
     }
@@ -24,7 +25,7 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
     }).then(user => {
       if (user) {
         res.status(400).send({
-          message: "Failed! Email is already in use!"
+          message: "Email no disponible"
         });
         return;
       }
@@ -34,9 +35,24 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
   });
 };
 
+checkRolesExisted = (req, res, next) => {
+  if (req.body.roles) {
+    for (let i = 0; i < req.body.roles.length; i++) {
+      if (!ROLES.includes(req.body.roles[i])) {
+        res.status(400).send({
+          message: "Failed! Role does not exist = " + req.body.roles[i]
+        });
+        return;
+      }
+    }
+  }
+
+  next();
+};
 
 const verifySignUp = {
-  checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail
+  checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
+  checkRolesExisted: checkRolesExisted
 };
 
 module.exports = verifySignUp;

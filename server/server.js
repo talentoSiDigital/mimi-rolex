@@ -8,9 +8,25 @@ const app = express();
 
 const db = require("./app/models");
 
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and re-sync db.");
+
+function initial() {
+  
+  db.user.Role.create({
+    id: 1,
+    name: "user"
+  });
+ 
+  db.user.Role.create({
+    id: 2,
+    name: "admin"
+  });
+ 
+} 
+// db.sequelize.sync().then(() => {
+  // console.log("Drop and re-sync db.");
+//  initial()
 // });
+
      
 // Static files
 app.use(express.static('storage'));

@@ -5,35 +5,6 @@ const Op = db.Sequelize.Op;
 
 const storagePath = require('path').resolve(__dirname, '..' + "\\")
 
-// Create and Save a new Tutorial
-exports.create = (req, res) => {
-    // Validate request
-    if (!req.body.title) {
-        res.status(400).send({
-          message: "Content can not be empty!"
-        });
-        return;
-      }
-    
-      // Create a Image object
-      const sliderImg = {
-        route: req.destination,
-        name: req.filename,
-        mobileName: req.body.description
-      };
-    
-      // Save Tutorial in the database
-      HeaderSlider.create(sliderImg)
-        .then(data => {
-          res.send(data);
-        })
-        .catch(err => {
-          res.status(500).send({
-            message:
-              err.message || "Some error occurred while creating the Tutorial."
-          });
-        });
-};
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
@@ -59,11 +30,27 @@ exports.findAll = (req, res) => {
 
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
-  
+  const id = req.params.id;
+
+  HeaderSlider.update(req.body, {
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Banner actualizado correctamente"
+        });
+      } else {
+        res.send({
+          message: `No se pudo actualizar el banner el la ${id} posicion. Intenta nuevamente`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error updating Tutorial with id=" + id
+      });
+    });
 };
 
-// Delete a Tutorial with the specified id in the request
-exports.delete = (req, res) => {
-  
-};
 

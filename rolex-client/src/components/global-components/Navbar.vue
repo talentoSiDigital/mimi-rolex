@@ -1,6 +1,16 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { auth } from '../../store/auth.module'
+import router from '../../router'
+
+const piniaStore = auth()
+
+
+
+const loggedIn = computed(() => {
+    return piniaStore.$state.status.loggedIn
+})
 
 const activate = ref('h-20')
 
@@ -25,6 +35,7 @@ function collapseNav() {
 
         <div id="navigation-bar" :class="activate"
             class="flex overflow-hidden md:overflow-visible flex-col md:flex-row md:justify-center items-center  shadow-lg md:gap-2  bg-main-green">
+
             <div class="py-6 md:hidden" @click="collapseNav">
                 <svg class="w-8 h-8 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 17 14">
@@ -32,6 +43,7 @@ function collapseNav() {
                         d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </div>
+
             <router-link to="/rolex"
                 class=" md:border-0 md:border-b-2  md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50  md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Rolex</h2>
@@ -41,7 +53,7 @@ function collapseNav() {
                 class=" md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Tudor</h2>
             </router-link>
-
+            <!-- **** -->
             <div class="hidden md:block group relative">
                 <router-link to="/relojeria"
                     class=" tracking-widest hover:bg-neutral-600 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center flex items-center ">
@@ -52,21 +64,28 @@ function collapseNav() {
 
                 <div
                     class="absolute z-50 border left-0 md:left-3 bg-[#637263]  md:bg-main-green p-8 md:p-5 hidden group-hover:block ">
-                    <router-link :to="{name:'reloj', params: {id:'tudor'}}" class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
+                    <router-link :to="{ name: 'reloj', params: { id: 'tudor' } }"
+                        class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Tudor</h2>
                     </router-link>
-                    <router-link :to="{name:'reloj', params: {id:'tissot'}}" class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
+                    <router-link :to="{ name: 'reloj', params: { id: 'tissot' } }"
+                        class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Tissot</h2>
                     </router-link>
-                    <router-link to="/relojeria/longines" class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
+                    <router-link to="/relojeria/longines"
+                        class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Longines</h2>
                     </router-link>
-                    <router-link to="/relojeria/victorinox" class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
+                    <router-link to="/relojeria/victorinox"
+                        class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Victorinox</h2>
                     </router-link>
                 </div>
+
             </div>
+
             <div class="hidden md:block group relative">
+
                 <router-link to="/joyeria"
                     class=" tracking-widest hover:bg-neutral-600 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center flex items-center ">
                     <h2 class="uppercase">Joyería</h2>
@@ -88,11 +107,14 @@ function collapseNav() {
                         class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Graduación</h2>
                     </router-link>
-                    <router-link to="/joyeria/regalos" class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
+                    <router-link to="/joyeria/regalos"
+                        class="text-xl font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Regalos</h2>
                     </router-link>
                 </div>
+
             </div>
+
 
             <!-- **** -->
             <div class=" md:hidden w-full flex flex-col items-center">
@@ -124,7 +146,7 @@ function collapseNav() {
 
                 <router-link to="/joyeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
-                    <h2 class="uppercase">Relojería</h2>
+                    <h2 class="uppercase">Joyería</h2>
                 </router-link>
 
                 <router-link to="/joyeria/nacimiento-y-bautizos"
@@ -143,7 +165,7 @@ function collapseNav() {
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Regalos</h2>
                 </router-link>
-                
+
 
             </div>
 
@@ -159,7 +181,56 @@ function collapseNav() {
                 <h2 class="uppercase">Contacto</h2>
             </router-link>
 
+
+            <div v-if="loggedIn" class="md:hidden w-full flex flex-col items-center">
+                <div
+                    class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+                    <h2 class="uppercase">Perfil</h2>
+                </div>
+
+                <router-link to="/dashboard"
+                    class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
+                    <h2 class="uppercase">Panel</h2>
+
+                </router-link>
+                <router-link to="/logout"
+                    class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
+                    <h2 class="uppercase">Cerrar sesión</h2>
+
+                </router-link>
+
+            </div>
+
+            <div v-if="loggedIn" class="hidden md:block group relative">
+
+                <div
+                    class=" tracking-widest hover:bg-neutral-600 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center flex items-center ">
+                    <h2 class="uppercase">Panel</h2>
+                    <font-awesome-icon :icon="['fas', 'angle-down']" class="text-sm pt-1" />
+
+                </div>
+
+                <div
+                    class="absolute z-50 border left-0 md:left-3 bg-[#637263] w-fit md:bg-main-green p-8 md:p-5 hidden group-hover:block ">
+                    <router-link to="/dashboard"
+                        class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
+                        <h2 class="my-1 uppercase">Perfil</h2>
+                    </router-link>
+                    <router-link to="/logout"
+                        class="text-xl font-normal whitespace-nowrap  font-montserrat text-slate-50  md:hover:underline">
+                        <h2 class="my-1 uppercase">Cerrar sesión</h2>
+                    </router-link>
+                    
+                </div>
+
+            </div>
+
+
+
         </div>
+
+
+
     </nav>
 </template>
 

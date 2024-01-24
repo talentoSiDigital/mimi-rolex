@@ -20,6 +20,14 @@ db.store = require("./store.model")(sequelize, Sequelize)
 db.user = require("./user.model")(sequelize, Sequelize)
 
 
+db.user.Role.belongsToMany(db.user.User, {
+  through: "user_roles"
+});
+db.user.User.belongsToMany(db.user.Role, {
+  through: "user_roles"
+});
+
+db.ROLES = ["user", "admin"];
 
 module.exports = db;
 

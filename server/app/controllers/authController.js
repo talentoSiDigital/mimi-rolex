@@ -1,7 +1,8 @@
 const db = require("../models");
 const config = require("../config/auth.config");
 
-const User = db.user;
+const User = db.user.User;
+const Role = db.user.Role;
 const Op = db.Sequelize.Op;
 
 const jwt = require("jsonwebtoken")
@@ -14,16 +15,24 @@ exports.signup = (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8)
-    })
-        .then(() => {
-
-            res.send({ message: "User was registered successfully!" });
-
-
-        })
-        .catch(err => {
-            res.status(500).send({ message: err.message });
-        });
+    }).then(user => {
+        if (req.body.roles) {
+            Role.findAll({
+                where: { name: { [Op.or]: req.body.roles } }
+            })
+                .then(roles => {
+                    user.setRoles(roles).then(() => {
+                        res.send({ message: "El usuario ha sido registrado exitosamente" })
+                    });
+                })
+        } else {
+            user.setRoles([1]).then(() => {
+                res.send({ message: "El usuario ha sido registrado exitosamente" });
+            });
+        }
+    }).catch(err => {
+        res.status(500).send({ message: err.message });
+    });
 };
 
 exports.signin = (req, res) => {
@@ -47,20 +56,28 @@ exports.signin = (req, res) => {
             });
         }
 
-        const token = jwt.sign({ id: user.id },
-            config.secret,
+        const token = jwt.sign({ id: user.id }, config.secret,
             {
                 algorithm: 'HS256',
                 allowInsecureKeySizes: true,
                 expiresIn: 86400, // 24 hours
             });
 
-        res.status(200).send({
-            id: user.id,
-            username: user.username,
-            email: user.email,
-            accessToken: token
+
+        let authorities = [];
+        user.getRoles().then(roles => {
+            for (let i = 0; i < roles.length; i++) {
+                authorities.push("ROLE_" + roles[i].name.toUpperCase());
+            }
+            res.status(200).send({
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                roles: authorities,
+                accessToken: token
+            });
         });
+
 
     }).catch(err => {
         res.status(500).send({ message: err.message });

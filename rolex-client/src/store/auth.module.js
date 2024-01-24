@@ -1,39 +1,39 @@
-import AuthService from '../services/auth.service';
+import AuthService from '../services/auth/authDataService';
+import { defineStore } from "pinia";
 
 const user = JSON.parse(localStorage.getItem('user'));
-const initialState = user ? { status: { loggedIn: true }, user }: { status: { loggedIn: false }, user: null };
+const initialState = ()=>{
+   return user ? { status: { loggedIn: true }, user:user }: { status: { loggedIn: false }, user: null };}
 
-export const auth = {
+export const auth = defineStore('auth',{
   namespaced: true,
   state: initialState,
   actions: {
-    login({ commit }, user) {
+    login( user) {
       return AuthService.login(user).then(
         user => {
-          commit('loginSuccess', user);
           return Promise.resolve(user);
         },
         error => {
-          commit('loginFailure');
           return Promise.reject(error);
         }
       );
     },
-    logout({ commit }) {
+    logout() {
       AuthService.logout();
-      commit('logout');
     },
-    register({ commit }, user) {
+    register(user) {
       return AuthService.register(user).then(
         response => {
-          commit('registerSuccess');
           return Promise.resolve(response.data);
         },
         error => {
-          commit('registerFailure');
           return Promise.reject(error);
         }
       );
+    },
+    test(){
+      console.log('Its working')
     }
   },
   mutations: {
@@ -56,4 +56,4 @@ export const auth = {
       state.status.loggedIn = false;
     }
   }
-};
+});
