@@ -40,6 +40,7 @@ import Dashboard from './views/Admin/Dashboard.view.vue'
 
 import Profile from './components/dashboard/Profile.vue'
 import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
+import JoyeriaForm from './components/dashboard/JoyeriaForm.vue'
 
 
 
@@ -281,6 +282,11 @@ const router = createRouter({
           path:"banner-edit",
           name:"banner-edit",
           component:SliderChangeForm
+        },
+        {
+          path:"agregar-joyeria",
+          name:"agregar-joyeria",
+          component:JoyeriaForm
         },
       ],
       meta: {

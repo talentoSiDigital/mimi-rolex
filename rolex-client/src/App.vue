@@ -5,7 +5,7 @@ import Footer from './components/global-components/Footer.vue'
 
 const route = useRoute()
 
-</script>
+</script> 
 
 <template>
   <div id="app-main">

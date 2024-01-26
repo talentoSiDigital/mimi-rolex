@@ -42,8 +42,8 @@ function handleLogin(user) {
             router.push("/dashboard");
         },
         (error) => {
-            loading = false;
-            message =
+            loading.value = false;
+            message.value =
                 (error.response &&
                     error.response.data &&
                     error.response.data.message) ||

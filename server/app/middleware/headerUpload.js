@@ -1,16 +1,24 @@
+const util = require('util');
 const multer = require('multer');
+
+const storagePath = require('path').resolve(__dirname, '..','..','storage','header-slider' )
+
 
 // Set up storage for uploaded files
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, '../../storage/header-slider');
+    cb(null, storagePath);
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname);
+    cb(null, file.originalname);
   }
 });
 
-// Create the multer instance
-const upload = multer({ storage: storage });
+let uploadFile = multer({
+  storage: storage,
+});
 
-module.exports = upload;
+// let uploadFileMiddleware = util.promisify(uploadFile);
+module.exports = uploadFile;
+
+
