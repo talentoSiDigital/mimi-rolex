@@ -7,12 +7,12 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 
 import { useAsyncState } from '@vueuse/core'
+import { RouterLink } from 'vue-router';
 
 const { isLoading, state, isReady, execute } = useAsyncState(
     HeaderSlider.getAll()
         .then(d => d.data)
 )
-
 
 
 
@@ -34,9 +34,12 @@ const jewelSlideshow = [
     <div id="main-content" class="font-montserrat">
         <carousel :items-to-show="1">
             <slide v-for="slide in state" :key="slide">
-                <img class="hidden md:block" :src="slide.path" :alt="slide.path">
-                <img class="block md:hidden" :src="slide.mobilePath" :alt="slide.mobilePath">
-
+                <RouterLink to="/coleccion-rolex">
+                    <img class="hidden md:block" :src="slide.path" :alt="slide.path">
+                </RouterLink>
+                <RouterLink to="/coleccion-rolex">
+                    <img class="block md:hidden" :src="slide.mobilePath" :alt="slide.mobilePath">
+                </RouterLink>
             </slide>
 
             <template #addons>

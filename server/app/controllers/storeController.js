@@ -2,40 +2,69 @@ const db = require("../models");
 const Store = db.store;
 const Op = db.Sequelize.Op;
 
+const fs = require("fs");
+const storagePath = require('path').resolve(__dirname, '..', '..', 'storage', 'store-products')
 
-const storagePath = require('path').resolve(__dirname, '..' + "\\")
 
+function truncExtension(text) { return text.split('.')[0] }
 
 // JEWELS
 
 // Create and Save a new Jewel instance (ADMIN)
-exports.create = (req, res) => {
-    // Validate request
-    if (!req.body.title) {
-        res.status(400).send({
-            message: "Content can not be empty!"
-        });
-        return;
+exports.createJ = (req, res) => {
+
+
+    const files = [req.files.imagen1[0].filename, req.files.imagen2[0].filename]
+    const body = req.body
+
+    if (!files) {
+        res.status(404).send({
+            message: "El formulario no ha sido recibido"
+        })
+
+    } else {
+
+
+
+
+        fs.rename(`${storagePath}/${files[0]}`, `${storagePath}/${req.body.serie}-1.webp`,
+            (error) => {
+                if (error) {
+                    console.log(error);
+                    return
+                }
+                fs.rename(`${storagePath}/${files[1]}`, `${storagePath}/${req.body.serie}-2.webp`,
+                    (error) => {
+                        if (error) {
+                            console.log(error);
+                        }
+                        else {
+                            console.log("\nFile Renamed\n");
+                        }
+                    });
+            });
+
+
+        // Create object
+        const joyeriaObject = {
+            "serie": body.serie,
+            "nombre": body.name,
+            "titulo": body.title,
+            "tipo": body.type,
+            "tags": body.collection,
+            "coleccion": body.collection,
+            "precio": `$${body.price}`
+        }
+
+        Store.Joyeria.create(joyeriaObject).then(() => {
+            res.send("File added successfully")
+        }).catch(err => {
+            res.send(err.message)
+        })
+
+
     }
 
-    //   // Create a Image object
-    //   const sliderImg = {
-    //     route: req.destination,
-    //     name: req.filename,
-    //     mobileName: req.body.description
-    //   };
-
-    //   // Save Tutorial in the database
-    //   HeaderSlider.create(sliderImg)
-    //     .then(data => {
-    //       res.send(data);
-    //     })
-    //     .catch(err => {
-    //       res.status(500).send({
-    //         message:
-    //           err.message || "Some error occurred while creating the item."
-    //       });
-    //     });
 };
 
 // Retrieve jewels by collection.
@@ -109,7 +138,7 @@ exports.findDetailJ = (req, res) => {
 
 
 // Update a jewel by the id in the request (ADMIN)
-exports.update = (req, res) => {
+exports.updateJ = (req, res) => {
     // Validate request
     if (!req.body.title) {
         res.status(400).send({
@@ -121,33 +150,51 @@ exports.update = (req, res) => {
 // WATCHES
 
 // Create and Save a new WATCH instance (ADMIN)
-exports.create = (req, res) => {
+exports.createR = (req, res) => {
     // Validate request
-    if (!req.body.title) {
-        res.status(400).send({
-            message: "Content can not be empty!"
-        });
-        return;
+    const files = req.files
+    const body = req.body
+
+    if (!files) {
+        res.status(404).send({
+            message: "El formulario no ha sido recibido"
+        })
+
+    } else {
+
+        for (let i = 0; i < body.quantity; i++) {
+            fs.rename(`${storagePath}/${files[i].filename}`, `${storagePath}/${req.body.serie}-${i + 1}.webp`,
+                (error) => {
+                    if (error) {
+                        console.log(error);
+                        return
+                    }
+                });
+        }
+
+
+
+        // Create object
+        const relojeriaObject = {
+            "serie": body.serie,
+            "nombre": body.name,
+            "titulo": body.title,
+            "contenidoTabla": body.tableRows[0],
+            "coleccion": body.collection,
+            "precio": `$${body.price}`,
+            "cantidadImagenes": body.quantity
+        }
+
+
+        Store.Relojeria.create(relojeriaObject).then(() => {
+            res.send("File added successfully")
+        }).catch(err => {
+            res.send(err.message)
+        })
+
+
     }
 
-    //   // Create a Image object
-    //   const sliderImg = {
-    //     route: req.destination,
-    //     name: req.filename,
-    //     mobileName: req.body.description
-    //   };
-
-    //   // Save Tutorial in the database
-    //   HeaderSlider.create(sliderImg)
-    //     .then(data => {
-    //       res.send(data);
-    //     })
-    //     .catch(err => {
-    //       res.status(500).send({
-    //         message:
-    //           err.message || "Some error occurred while creating the item."
-    //       });
-    //     });
 };
 
 // Retrieve WATCH by collection.
@@ -203,10 +250,10 @@ exports.findDetailR = (req, res) => {
         .then(data => {
             data[0].dataValues.img = []
 
-            for (let index = 1; index <= data[0].dataValues.cantidadImagenes ; index++) {
+            for (let index = 1; index <= data[0].dataValues.cantidadImagenes; index++) {
                 data[0].dataValues.img.push(`${process.env.LOCALPATH}store-products/${data[0].dataValues.serie}-${index}.webp`)
             }
-            res.send(data) 
+            res.send(data)
 
 
         })
@@ -224,7 +271,7 @@ exports.findDetailR = (req, res) => {
 
 
 // Update a WATCH by the id in the request (ADMIN)
-exports.update = (req, res) => {
+exports.updateR = (req, res) => {
     // Validate request
     if (!req.body.title) {
         res.status(400).send({

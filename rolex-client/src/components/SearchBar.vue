@@ -62,7 +62,6 @@ watch(model.value,()=>{
     <section id="search-bar" class=" w-1/3 flex justify-end">
         <div class=" flex flex-col w-9/12 ">
             <h2 class="mb-2 font-vilsuve font-bold text-xl tracking-widest uppercase ">BúSQUEDA AVANZADA</h2>
-            {{ active }}
             <hr>
             <button class="mt-2 mb-8 border border-white px-2 py-2 rounded-3xl  duration-700" :class="modelCheck"
                 :disabled="disable" @click="deleteSearch">

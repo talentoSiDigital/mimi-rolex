@@ -37,10 +37,12 @@ import StoreRelojeriaDetail from './views/Tienda/StoreRelojeriaDetail.view.vue'
 import Login from './views/Admin/Login.view.vue'
 import Register from './views/Admin/Register.view.vue'
 import Dashboard from './views/Admin/Dashboard.view.vue'
+import Logout from './views/Admin/Logout.view.vue'
 
 import Profile from './components/dashboard/Profile.vue'
 import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
 import JoyeriaForm from './components/dashboard/JoyeriaForm.vue'
+import RelojeriaForm from './components/dashboard/RelojeriaForm.vue'
 
 
 
@@ -267,6 +269,17 @@ const router = createRouter({
       }
     }
     ,
+    ,
+    
+    {
+      path: "/logout",
+      name: "logout",
+      component: Logout,
+      meta: {
+        title: 'Registrar  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
     
     {
       path: "/dashboard/",
@@ -287,6 +300,11 @@ const router = createRouter({
           path:"agregar-joyeria",
           name:"agregar-joyeria",
           component:JoyeriaForm
+        },
+        {
+          path:"agregar-relojeria",
+          name:"agregar-relojeria",
+          component:RelojeriaForm
         },
       ],
       meta: {

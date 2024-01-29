@@ -1,12 +1,19 @@
 <script setup>
 import { computed, ref } from 'vue';
 import Terms from '../global-components/Terms.vue'
+import emailjs from '@emailjs/browser';
 
-const {message} = defineProps(['message'])
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+
+const { message } = defineProps(['message'])
 
 const inputOptions = {
     "placeholder": "Ingrese su numero de telefono"
 }
+
+const phone = ref()
+
 
 const terms = ref(false)
 
@@ -14,42 +21,57 @@ const showTerms = () => {
     terms.value = !terms.value
 }
 
-const messageToSend = computed(()=>{
-    return message == undefined ? "":message
+const messageToSend = computed(() => {
+    return message == undefined ? "" : message
 })
 
-</script>
+
+function sendValue(value){
+    value.phone = phone.value
+
+
+
+
+
+}
+
+</script> 
 
 <template>
     <div id="main-contact" class="my-10 flex flex-col items-center">
         <h2 class="text-3xl text-neutral-800 my-8">CONTÁCTENOS</h2>
-        <p class="mb-4">Le rogamos que nos especifique su forma de contacto deseada y le responderemos lo más pronto posible.</p>
+        <p class="mb-4">Le rogamos que nos especifique su forma de contacto deseada y le responderemos lo más pronto
+            posible.</p>
 
-        <form class="flex flex-col w-1/2 ">
+        <Form class="flex flex-col w-1/2" @submit="sendValue">
             <div id="row" class="py-2 flex w-full">
                 <div class="flex flex-col w-full">
                     <label for="tto">Tto:</label>
-                    <select name="tto" id="" class="h-10 p-2 border border-[#bbb]">
-                        <option value="Sr">Sr.</option>
+                    <Field as="select" name="tto" id="tto" class="h-10 p-2 border border-[#bbb]">
+                        <option selected="selected" value="Sr">Sr.</option>
                         <option value="Mrs">Mrs.</option>
                         <option value="Sra">Sra.</option>
                         <option value="Sr">Sr.</option>
                         <option value="Miss">Miss</option>
                         <option value="Dr">Dr.</option>
                         <option value="Dra">Dra.</option>
-                    </select>
+                    </Field>
+
 
                 </div>
 
                 <div class="flex flex-col w-full">
                     <label for="nombre">*Nombre:</label>
-                    <input type="text" name="nombre" placeholder="Nombre" class="h-10 p-2 border border-[#bbb]">
+                    <Field type="text" name="nombre" id="nombre" placeholder="Nombre" class="h-10 p-2 border border-[#bbb]" />
+                    <ErrorMessage name="nombre" class="text-red-700" />
 
                 </div>
 
                 <div class="flex flex-col w-full">
                     <label for="apellido">*Apellido:</label>
-                    <input type="text" name="apellido" placeholder="Apellido" class="h-10 p-2 border border-[#bbb]">
+                    <Field type="text" name="apellido" placeholder="Apellido" class="h-10 p-2 border border-[#bbb]" />
+                    <ErrorMessage name="nombre" class="text-red-700" />
+
 
                 </div>
             </div>
@@ -59,23 +81,23 @@ const messageToSend = computed(()=>{
 
                 <div class="flex flex-col w-1/3">
                     <label for="email">*Email:</label>
-                    <input type="text" name="email" placeholder="Correo Electronico" class="h-10 p-2 border border-[#bbb]">
-
+                    <Field type="email" name="email" placeholder="Correo Electronico" aria-autocomplete="@gmail.com"
+                        class="h-10 p-2 border border-[#bbb]" />
+                    <ErrorMessage name="nombre" class="text-red-700" />
                 </div>
 
                 <div class=" w-full">
-                    <vue-tel-input :inputOptions="inputOptions" styleClasses="h-10 p-2"></vue-tel-input>
+                    <vue-tel-input :inputOptions="inputOptions" styleClasses="h-10 p-2" v-model="phone"/>
 
                 </div>
             </div>
 
             <div id="row" class="py-2 flex items-end justify-center ">
-
-
                 <div class="flex flex-col w-full">
-                    <label for="nombre">Dirección:</label>
-                    <input type="text" name="nombre" placeholder="Correo Electronico"
-                        class="p-2 h-10  border border-[#bbb]">
+                    <label for="direccion">Dirección:</label>
+                    <Field type="text" name="direccion" placeholder="Correo Electronico"
+                        class="p-2 h-10  border border-[#bbb]" />
+                    <ErrorMessage name="direccion" class="text-red-700" />
 
                 </div>
 
@@ -83,13 +105,13 @@ const messageToSend = computed(()=>{
 
             <div id="row" class="py-2 flex flex-col">
                 <label for="mensaje">Su mensaje:</label>
-                <textarea name="mensaje" id="" placeholder="Introduzca su mensaje aquí"
-                    class="border border-[#bbb] max-h-52 min-h-min h-24 p-4" v-model="messageToSend"></textarea>
+                <Field as="textarea" name="mensaje" placeholder="Introduzca su mensaje aquí"
+                    class="border border-[#bbb] max-h-52 min-h-min h-24 p-4" v-model="messageToSend" />
             </div>
 
             <div id="conditions">
-                <input type="checkbox" name="terms" id=""
-                    class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer">
+                <Field type="checkbox" name="terms" 
+                    class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer" />
                 <label for="terms"> *He leído y acepto los <span class="underline cursor-pointer"
                         @click="showTerms">Términos y Condiciones y la Política de Privacidad.</span></label>
             </div>
@@ -97,8 +119,8 @@ const messageToSend = computed(()=>{
             <Terms v-if="terms" />
 
             <div id="row">
-                <input type="checkbox" name="optional" id=""
-                    class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer">
+                <Field type="checkbox" name="optional" id="optional"
+                    class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer" />
                 <label for="optional"> Acepto recibir información comercial sobre Rolex de Mimi Joyería</label>
             </div>
 
@@ -119,7 +141,7 @@ const messageToSend = computed(()=>{
 
 
 
-        </form>
+        </Form>
 
     </div>
 </template>

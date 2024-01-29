@@ -44,11 +44,11 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 
             <div class="flex flex-col justify-center items-center w-full">
                 <div id="rolex-container" class="grid grid-cols-1 place-items-center md:grid-cols-3 w-8/12">
-                    <div v-for="(item,index) in state" id="card" class="w-full" :key="index">
-                        <router-link :to="{name:'coleccion', params: {id: index+1}}" v-if="item.nombre != 'MUJERES' && item.nombre != 'ORO' && item.nombre != 'HOMBRES'">
+                    <div v-for="(item,index) in state" id="card" class="w-full border border-transparent hover:border-gray-700" :key="index">
+                        <router-link :to="{name:'coleccion', params: {id: index+1}}" v-if="item.nombre != 'MUJERES' && item.nombre != 'ORO' && item.nombre != 'HOMBRES'" >
                             <img :src="item.file" :alt="item.watch">
                             <h2 class="uppercase text-center ">Rolex</h2>
-                            <h2 class="uppercase text-center ">{{ item.nombre }}</h2>
+                            <h2 class="uppercase text-center font-bold">{{ item.nombre }}</h2>
                         </router-link>
                     </div>
                 </div>

@@ -36,32 +36,23 @@ const currentUser = computed(() => {
             <ul class="flex flex-col items-center justify-center bg-main-green w-1/5 p-4 rounded-md">
                 <li>
                     <RouterLink to="/dashboard/banner-edit" class="hover:underline">
-                          <p>Editar banner principal</p>  
+                        <p>Editar banner principal</p>
                     </RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/dashboard/agregar-relojeria" class="hover:underline">
-                        <p>Agregar Nuevo Reloj</p>  
+                        <p>Agregar Nuevo Reloj</p>
 
                     </RouterLink>
                 </li>
-                <li>
-                    <RouterLink to="/dashboard/editar-relojeria" class="hover:underline">
-                        <p>Editar relojeria</p>  
 
-                    </RouterLink>
-                </li>
                 <li>
                     <RouterLink to="/dashboard/agregar-joyeria" class="hover:underline">
-                        <p>Agregar nueva joyeria</p>  
+                        <p>Agregar nueva joyeria</p>
 
                     </RouterLink>
                 </li>
-                <li>
-                    <RouterLink to="/dashboard/editar-joyeria" class="hover:underline">
-                        <p>Editar joyeria</p>  
-                    </RouterLink>
-                </li>
+
             </ul>
 
 
