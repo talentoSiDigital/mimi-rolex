@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import { useAsyncState } from '@vueuse/core'
 
@@ -39,6 +39,14 @@ let { isLoading, state, isReady, execute } = useAsyncState(
     RolexDataServices.getByCollection(currentRoute.value)
         .then((d) => {
             totalPages.value = Math.ceil(d.data.watches.length / 18)
+            const checkIfMobile = computed(() => {
+                if (state.collection.nombre == "ORO" || state.collection.nombre == "HOMBRES" || state.collection.nombre == "MUJERES") {
+                    return true
+                }
+                return false
+
+
+            })
             return d.data
         })
 
@@ -125,6 +133,7 @@ watch(searchParams.value, () => {
 
 
 
+
                     <header class="flex flex-col justify-center items-center text-neutral-700 h-fit mt-8 mb-6">
                         <p>
                             {{ state.collection[0].subHeader }}
@@ -134,16 +143,16 @@ watch(searchParams.value, () => {
                             ROLEX {{ state.collection[0].nombre }}
 
                         </h1>
-                        <p class="w-1/2 text-center font-normal">
+                        <p class="w-10/12 md:w-1/2 text-justify md:text-center font-normal">
                             {{ state.collection[0].text }}
 
                         </p>
                     </header>
 
 
-                    <div class="w-full h-screen flex justify-center " v-if="state.collection[0].hasVideo">
+                    <div class="w-full h-[50vh] md:h-screen flex justify-center " v-if="state.collection[0].hasVideo">
 
-                        <div class="aspect-w-16 w-full md:w-3/4 h-full">
+                        <div class="aspect-w-16 w-3/4  h-full md:h-full">
                             <iframe :src="state.collection[0].video" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -151,7 +160,7 @@ watch(searchParams.value, () => {
                     </div>
 
 
-                    <main class="flex mt-8">
+                    <main class="flex flex-col md:flex-row mt-8">
                         <SearchBar v-model="searchParams" :args="state.collection[0].idName" />
 
 
@@ -173,7 +182,7 @@ watch(searchParams.value, () => {
 
                                 </div>
                             </div>
-                            <div v-if="totalPages > 1" id="pagination" class="flex w-1/6 justify-between mt-4">
+                            <div v-if="totalPages > 1" id="pagination" class="flex md:w-1/6 justify-between mt-4">
                                 <button v-if="currentPage != 1" @click="changePage(-1)">
                                     <font-awesome-icon :icon="['fas', 'chevron-left']"
                                         class="text-rolex-green hover:text-black" />

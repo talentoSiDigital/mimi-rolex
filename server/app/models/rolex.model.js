@@ -47,6 +47,10 @@ module.exports = (sequelize, Sequelize) => {
       },
       claseDeEsfera: {
         type: Sequelize.STRING
+      },
+      estilo:{
+        type: Sequelize.STRING
+
       }
     },{
       timestamps:false

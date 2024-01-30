@@ -1,6 +1,49 @@
 <script setup>
+import { ref } from 'vue';
+
+import router from '../../router'
+
 import OverlaySection from '../../components/cards/OverlaySection.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
+import Loading from '../../components/global-components/Loading.vue'
+
+import emailjs from '@emailjs/browser';
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+
+const message = ref("")
+const loading = ref(false)
+const schema = yup.object().shape({
+    name: yup.string().required("El nombre es obligatorio!"),
+    phone: yup.number().required("El numero de telefono es obligatorio!"),
+    email: yup.string().required("Email es obligatorio").email("Email invalido!").max(50, "Debe contener un maximo de 50 caracteres"),
+    message: yup.string().required("El campo no puede estar vacio").min(5,"Debe contener un minimo de 5 caracteres!"),
+    
+});
+
+
+function sendValue(value) {
+    loading.value = !loading.value   
+
+    emailjs.init('ZW9HU7fRsG4rIrQbu') //Esta es una llave publica 
+    emailjs.send("service_5phuk1y", "template_79xr9ei", {
+        nombre: value["name"],
+        email: value["email"],
+        telefono: value["phone"],
+        mensaje: value["message"],
+
+    })
+    .then(function (){
+       router.go()
+    },function(error) {
+       console.log('FAILED...', error);
+    })
+
+
+
+}
+
+
 </script>
 
 <template>
@@ -52,19 +95,25 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </div>
         </div>
 
-        <form class=" flex flex-col items-center my-20">
+        <Form v-if="!loading" @submit="sendValue" class=" flex flex-col items-center my-20" :validation-schema="schema">
 
             <h2 class="text-3xl text-left py-6 font-light">ENVÍANOS UN MENSAJE</h2>
             
-            <div class="flex flex-col gap-2 w-2/3">
-                <input type="text" name="name" placeholder="Nombre y apellido" class="bg-neutral-100 h-12 p-4">
-                <input type="text" name="name" placeholder="email@ejemplo.com" class="bg-neutral-100 h-12 p-4">
-                <input type="number" name="name" placeholder="+58 222 2222" class="bg-neutral-100 h-12 p-4">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje" class="bg-neutral-100 h-24 p-4"></textarea>
+            <div class="flex flex-col gap-2 w-10/12 md:w-2/3">
+                <Field type="text" name="name" placeholder="Nombre y apellido" class="bg-neutral-100 h-12 p-4"/>
+                <ErrorMessage name="name" class="text-red-700" />
+                
+                <Field type="email" name="email" placeholder="email@ejemplo.com" class="bg-neutral-100 h-12 p-4"/>
+                <ErrorMessage name="email" class="text-red-700" />
+                <Field type="number" name="phone" placeholder="+58 222 2222" class="bg-neutral-100 h-12 p-4"/>
+                <ErrorMessage name="phone" class="text-red-700" />
+                <Field as="textarea" name="message" id="" cols="30" rows="10" placeholder="Mensaje" class="bg-neutral-100 h-24 p-4" v-model="message" />
+                <ErrorMessage name="message" class="text-red-700" />
                 <button class="border bg-[#adbaad] text-white h-14 hover:bg-white hover:text-[#adbaad] duration-150">Enviar mensaje</button>
             </div>
 
-        </form>
+        </Form>
+        <Loading v-else/>
 
 
     </div>

@@ -40,7 +40,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             <p class="font-tudor tracking-tighter  text-xl text-red-700 stroke-black">
                 HISTORIA DE TUDOR
             </p>
-            <h1 class="text-4xl py-4 font-tudor tracking-tighter ">
+            <h1 class="text-4xl py-4 text-center font-tudor tracking-tighter ">
                 INTUICIÓN DE HANS WILSDORF
             </h1>
             <img class="mb-4 w-1/2" src="../../assets/routes-assets/tudor/tudor-1.webp" alt="tudor-mosaico">
@@ -93,7 +93,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 
         <section class="flex flex-col md:flex-row-reverse justify-around items-center p-10 w-full">
             <img src="../../assets/routes-assets/tudor/tudor-2.webp" alt="david-beckham">
-            <header class="w-[40%]">
+            <header class="md:w-[40%]">
                 <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
                 <h1 class="text-4xl py-4 font-tudor tracking-tighter ">DAVID BECKHAM</h1>
                 <p class=" text-justify">De niño, David Beckham tenía un sueño. Cada vez que le preguntaban qué quería ser
@@ -107,7 +107,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 
         <section class="flex flex-col md:flex-row justify-around items-center p-10 w-full">
             <img src="../../assets/routes-assets/tudor/tudor-3.webp" alt="jay-chou">
-            <header class="w-[40%]">
+            <header class="md:w-[40%]">
                 <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
                 <h1 class="text-4xl py-4 font-tudor tracking-tighter ">JAY CHOU</h1>
                 <p class=" text-justify">Jay Chou creció en el seno de una familia de maestros en Taiwán y, en vista de su

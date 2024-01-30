@@ -2,12 +2,13 @@
 import { computed, ref, watch } from 'vue';
 
 const { args} = defineProps(['args'])
-
+console.log(args)
 const model = defineModel()
 
 
 const active = ref(false)
-
+const collapseValue = ref(false)
+const windowWidth = ref(window.innerWidth)
 
 
 
@@ -26,7 +27,10 @@ const searchArgs = {
     "sky-dweller": ['hidden','hidden','block','block'],
     "submariner": ['hidden','hidden','block','block'],
     "yatch-master": ['block','block','block','block'],
-    "all":['block','block','block','block']
+    "all":['block','block','block','block'],
+    "oro":['block','block','hidden','block'],
+    "hombres":['hidden','block','block','block'],
+    "mujeres":['hidden','block','block','block'],
 }
 
 const modelCheck = computed(() => {
@@ -53,15 +57,32 @@ watch(model.value,()=>{
     active.value = false
 })
 
+const activateCheck = computed(() => {
+    if (windowWidth.value<768) {
+        return collapseValue.value ? 'h-fit':'h-14'
+    } else {
+        return 'h-fit'
+    }
+
+})
+
+function activate(){
+    collapseValue.value = !collapseValue.value
+}
 
 
 
 </script>
 
 <template>
-    <section id="search-bar" class=" w-1/3 flex justify-end">
-        <div class=" flex flex-col w-9/12 ">
-            <h2 class="mb-2 font-vilsuve font-bold text-xl tracking-widest uppercase ">BúSQUEDA AVANZADA</h2>
+    <section id="search-bar" class="w-full md:w-1/3 flex justify-center md:justify-end">
+        
+        <div :class="activateCheck" class=" flex flex-col w-9/12 overflow-hidden duration-200">
+            <h2 class=" text-center font-vilsuve font-bold text-xl tracking-widest uppercase ">BúSQUEDA AVANZADA</h2>
+            <div class="flex gap-2 justify-center  md:hidden">
+                <h2>Agregar filtros</h2>
+                <font-awesome-icon :icon="['fas', 'square-plus']" class="text-2xl text-main-green hover:text-[#8d958d] duration-100 cursor-pointer" @click="activate"/>
+            </div>
             <hr>
             <button class="mt-2 mb-8 border border-white px-2 py-2 rounded-3xl  duration-700" :class="modelCheck"
                 :disabled="disable" @click="deleteSearch">
@@ -186,20 +207,20 @@ watch(model.value,()=>{
             <div id="navigation">
                 <h2 class="uppercase font-vilsuve font-bold  text-md tracking-[.18em]">ver colecciones</h2>
                 <div class=" flex flex-col gap-2">
-                    <a class="text-base" href="/coleccion/1">Rolex 1908</a>
-                    <a class="text-base" href="/coleccion/2">Rolex AIR-KING</a>
-                    <a class="text-base" href="/coleccion/3">Rolex COSMOGRAPH DAYTONA</a>
-                    <a class="text-base" href="/coleccion/4">Rolex DATEJUST</a>
-                    <a class="text-base" href="/coleccion/5">Rolex DAY‑DATE</a>
-                    <a class="text-base" href="/coleccion/6">Rolex DEEPSEA</a>
-                    <a class="text-base" href="/coleccion/7">Rolex EXPLORER</a>
-                    <a class="text-base" href="/coleccion/8">Rolex GMT-MASTER II</a>
-                    <a class="text-base" href="/coleccion/9">Rolex LADY‑DATEJUST</a>
-                    <a class="text-base" href="/coleccion/10">Rolex OYSTER PERPETUAL</a>
-                    <a class="text-base" href="/coleccion/11">Rolex SEA-DWELLER</a>
-                    <a class="text-base" href="/coleccion/12">Rolex SKY‑DWELLER</a>
-                    <a class="text-base" href="/coleccion/13">Rolex SUBMARINER</a>
-                    <a class="text-base" href="/coleccion/14">Rolex YACHT‑MASTER</a>
+                    <a class="text-base" href="/coleccion/1908">Rolex 1908</a>
+                    <a class="text-base" href="/coleccion/air-king">Rolex AIR-KING</a>
+                    <a class="text-base" href="/coleccion/cosmograph-daytona">Rolex COSMOGRAPH DAYTONA</a>
+                    <a class="text-base" href="/coleccion/datejust">Rolex DATEJUST</a>
+                    <a class="text-base" href="/coleccion/day-date">Rolex DAY‑DATE</a>
+                    <a class="text-base" href="/coleccion/deepsea">Rolex DEEPSEA</a>
+                    <a class="text-base" href="/coleccion/explorer">Rolex EXPLORER</a>
+                    <a class="text-base" href="/coleccion/gmt-master-ii">Rolex GMT-MASTER II</a>
+                    <a class="text-base" href="/coleccion/datejust">Rolex LADY‑DATEJUST</a>
+                    <a class="text-base" href="/coleccion/oyster-perpetual">Rolex OYSTER PERPETUAL</a>
+                    <a class="text-base" href="/coleccion/sea-dweller">Rolex SEA-DWELLER</a>
+                    <a class="text-base" href="/coleccion/sky-dweller">Rolex SKY‑DWELLER</a>
+                    <a class="text-base" href="/coleccion/submariner">Rolex SUBMARINER</a>
+                    <a class="text-base" href="/coleccion/yatch-master">Rolex YACHT‑MASTER</a>
 
                 </div>
 
@@ -209,5 +230,4 @@ watch(model.value,()=>{
         </div>
     </section>
 </template>
-
 

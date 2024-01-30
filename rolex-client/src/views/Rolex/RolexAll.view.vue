@@ -159,7 +159,7 @@ watch(searchParams.value, () => {
                     </RolexHeader>
 
 
-                    <main class="flex">
+                    <main class="flex flex-col md:flex-row">
                         <SearchBar v-model="searchParams" args="all" />
 
 

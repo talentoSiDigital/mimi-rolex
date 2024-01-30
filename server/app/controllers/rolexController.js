@@ -2,21 +2,12 @@ const db = require("../models");
 const rolex = db.rolex;
 const Op = db.Sequelize.Op;
 const sequelize = db.sequelize;
-
-
 const storagePath = require('path').resolve(__dirname, '..' + "\\")
-
-// SHOW DISPLAY 
-// SHOW BY COLLECTIONS 
-// SHOW ALL
-// DETAILED 
-
 
 function helper() {
   let a = Math.floor((Math.random() * 195) + 1)
   return [a, a + 5]
 }
-
 
 const mainVideos = {
   "1908": "https://www.youtube.com/embed/qtzBHB8fyF0?si=hkEK8DlpRzHxLp2v",
@@ -40,16 +31,11 @@ const mainVideos = {
 
 }
 
-
-
-
-
-
 // Show display of all collections
 exports.showDisplay = (req, res) => {
 
   rolex.RolexCollections.findAll({
-    attributes: ['nombre', 'watch']
+    attributes: ['nombre', 'watch', 'idName']
   })
     .then(data => {
       for (let index = 0; index < data.length; index++) {
@@ -67,7 +53,7 @@ exports.showDisplay = (req, res) => {
           err.message || "Some error occurred while retrieving tutorials."
 
       });
-    }); 
+    });
 };
 
 // Show by collection
@@ -77,18 +63,17 @@ exports.getCollectionDetails = (req, res) => {
 
   rolex.RolexCollections.findAll({
     where: {
-      id: req.params.id
+      idName: req.params.id
     }
   })
     .then(data => {
       for (let index = 0; index < data.length; index++) {
         // Adding images to response
+        const parsed = data[0].dataValues
 
+          data[0].dataValues.fileLandscape = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
 
-        data[0].dataValues.fileLandscape = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
-
-        data[0].dataValues.fileMobile = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
-
+          data[0].dataValues.fileMobile = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
 
         if (data[0].dataValues.hasVideo) {
           data[0].dataValues.video = mainVideos[data[0].dataValues.idName]
@@ -97,26 +82,63 @@ exports.getCollectionDetails = (req, res) => {
       }
       collection = data
 
-    })
-    .then(() => {
-
-      rolex.RolexGetAll.findAll({
-        where: {
-          RolexCollectionId: req.params.id
-        }
-      })
-        .then((data) => {
-          // Adding images to response
-          for (let index = 0; index < data.length; index++) {
-            data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
-
+    }).then((data) => {
+      if (collection[0].dataValues.nombre == 'ORO') {
+        rolex.RolexGetAll.findAll({
+          where: {
+            material: "Oro"
           }
-          watches = data
-
-          res.send({ collection, watches })
-
-
         })
+          .then((data) => {
+            // Adding images to response
+            for (let index = 0; index < data.length; index++) {
+              data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+
+            }
+            watches = data
+
+            res.send({ collection, watches })
+          })
+      } else {
+        if (collection[0].dataValues.nombre == 'HOMBRES' || collection[0].dataValues.nombre == 'MUJERES') {
+          rolex.RolexGetAll.findAll({
+            where: {
+              estilo: collection[0].dataValues.nombre
+
+            }
+          })
+            .then((data) => {
+              // Adding images to response
+              for (let index = 0; index < data.length; index++) {
+                data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+
+              }
+              watches = data
+
+              res.send({ collection, watches })
+
+            })
+        } else {
+
+          rolex.RolexGetAll.findAll({
+            where: {
+              RolexCollectionId: collection[0].dataValues.id
+            }
+          })
+            .then((data) => {
+              // Adding images to response
+              for (let index = 0; index < data.length; index++) {
+                data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+
+              }
+              watches = data
+
+              res.send({ collection, watches })
+
+
+            })
+        }
+      }
     })
 
 }
@@ -133,11 +155,8 @@ exports.getAllRolex = (req, res) => {
       for (let index = 0; index < data.length; index++) {
         // Adding images to response
         data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
-
       }
-
       res.send(data)
-
     })
     .catch((err) => {
     })
@@ -233,7 +252,7 @@ exports.getRolexDetails = (req, res) => {
 
       parsedName.img = `${process.env.LOCALPATH}rolex-relojes/${parsedName.modelo}.avif`
 
-      if (adjustVideos[parsedName.nombre] != false) {
+      if (adjustVideos[parsedName.nombre]) {
 
         parsedName.videoAdjust = adjustVideos[parsedName.nombre].video
 
@@ -260,41 +279,41 @@ exports.getRolexDetails = (req, res) => {
           RolexGetAllId: rolexResponse.getAll.id
         }
       })
-      .then(data => {
-        // console.log('id: ', rolexResponse.getAll.id)
-        
-        data[1] = {}
-        data[1].img = []
-        
-        for (let index = 0; index < data[0].sliderImg + 1; index++) {
-          // Adding images to response
-          data[1].img[index] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-slider-${index + 1}.avif`
-          
-        }
-        
-        data[1].img[data[1].img.length - 1] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-side.avif`
-        data[0].precio = data[0].precio.toString()
-        
-        rolexResponse.details = data
-      })
+        .then(data => {
+          // console.log('id: ', rolexResponse.getAll.id)
+
+          data[1] = {}
+          data[1].img = []
+
+          for (let index = 0; index < data[0].sliderImg + 1; index++) {
+            // Adding images to response
+            data[1].img[index] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-slider-${index + 1}.avif`
+
+          }
+
+          data[1].img[data[1].img.length - 1] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-side.avif`
+          data[0].precio = data[0].precio.toString()
+
+          rolexResponse.details = data
+        })
     })
     // getting headers
     .then(() => {
-      
+
       rolex.RolexHeaders.findAll({
         where: {
           RolexGetAllId: rolexResponse.getAll.id
         }
       })
-      .then(data => {
+        .then(data => {
           data[0].dataValues.img = []
           // Adding images to response
           data[0].dataValues.img[0] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen1}.avif`
-          
+
           data[0].dataValues.img[1] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen2}.avif`
 
           data[0].dataValues.img[2] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen3}.avif`
- 
+
 
           rolexResponse.headers = data
         })
@@ -315,11 +334,11 @@ exports.getRolexDetails = (req, res) => {
 
 
             if (data[0].dataValues.hasVideo) {
-              if(data[0].dataValues.idName == 'lady-datejust'){
+              if (data[0].dataValues.idName == 'lady-datejust') {
                 data[0].dataValues.video = mainVideos['lady-datejust-2']
-              } else{
+              } else {
                 data[0].dataValues.video = mainVideos[data[0].dataValues.idName]
-                
+
               }
             }
 
@@ -363,12 +382,3 @@ exports.getRolexDetails = (req, res) => {
 
 
 }
-
-
-
-
-// exports.getAllRolex = (req, res) => {
-
-//       }
-
-

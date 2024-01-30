@@ -34,7 +34,7 @@ function collapseNav() {
                 class="border-b-2 border-transparent hover:bg-rolex-green hover:text-white md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-md text-neutral-600 md:hover:text-rolex-green w-full md:w-fit text-center">
 
                 <h2>Nuevos Modelos 2023</h2>
-
+ 
             </router-link>
 
             <router-link to="/coleccion-rolex"

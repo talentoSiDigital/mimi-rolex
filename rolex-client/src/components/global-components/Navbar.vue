@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 import { computed, ref } from 'vue'
 import { auth } from '../../store/auth.module'
 import router from '../../router'
-
+const windowWidth = ref(window.innerWidth)
 const piniaStore = auth()
 
 
@@ -15,7 +15,9 @@ const loggedIn = computed(() => {
 const activate = ref('h-20')
 
 function collapseNav() {
-    activate.value == 'h-20' ? activate.value = 'h-fit' : activate.value = 'h-20'
+    if(windowWidth.value < 768){
+        activate.value == 'h-20' ? activate.value = 'h-fit' : activate.value = 'h-20'
+    }
 }
 
 </script>
@@ -44,12 +46,12 @@ function collapseNav() {
                 </svg>
             </div>
 
-            <router-link to="/rolex"
+            <router-link @click="collapseNav" to="/rolex"
                 class=" md:border-0 md:border-b-2  md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50  md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Rolex</h2>
             </router-link>
 
-            <router-link to="/tudor"
+            <router-link @click="collapseNav" to="/tudor"
                 class=" md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Tudor</h2>
             </router-link>
@@ -117,18 +119,18 @@ function collapseNav() {
 
 
             <!-- **** -->
-            <div class=" md:hidden w-full flex flex-col items-center">
-                <router-link to="/relojeria"
+            <div class=" md:hidden w-full flex flex-col items-center"> 
+                <router-link @click="collapseNav" to="/relojeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                     <h2 class="uppercase">Relojería</h2>
                 </router-link>
 
-                <router-link to="/relojeria/tudor"
+                <router-link @click="collapseNav" to="/relojeria/tudor"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Tudor</h2>
 
                 </router-link>
-                <router-link to="/relojeria/tissot"
+                <router-link @click="collapseNav" to="/relojeria/tissot"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Tissot</h2>
 
@@ -138,30 +140,30 @@ function collapseNav() {
                     <h2 class="uppercase">Longines</h2>
 
                 </router-link>
-                <router-link to="/relojeria/victorinox"
+                <router-link @click="collapseNav" to="/relojeria/victorinox"
                     class=" tracking-widest border bg-neutral-500 md:hover:bg-transparent px-6 py-2 text-xl font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center  ">
                     <h2 class="uppercase">Victorinox</h2>
 
                 </router-link>
 
-                <router-link to="/joyeria"
+                <router-link @click="collapseNav" to="/joyeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                     <h2 class="uppercase">Joyería</h2>
                 </router-link>
 
-                <router-link to="/joyeria/nacimiento-y-bautizos"
+                <router-link @click="collapseNav" to="/joyeria/nacimiento-y-bautizos"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Nacimiento y bautizos</h2>
                 </router-link>
-                <router-link to="/joyeria/compromiso-y-matrimonio"
+                <router-link @click="collapseNav" to="/joyeria/compromiso-y-matrimonio"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Compromiso y matrimonio</h2>
                 </router-link>
-                <router-link to="/joyeria/graduacion"
+                <router-link @click="collapseNav" to="/joyeria/graduacion"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Graduación</h2>
                 </router-link>
-                <router-link to="/joyeria/regalos"
+                <router-link @click="collapseNav" to="/joyeria/regalos"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Regalos</h2>
                 </router-link>
@@ -171,12 +173,12 @@ function collapseNav() {
 
 
 
-            <router-link to="/sobre-mimi"
+            <router-link @click="collapseNav" to="/sobre-mimi"
                 class="border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Sobre Mimi</h2>
             </router-link>
 
-            <router-link to="/contactenos"
+            <router-link @click="collapseNav" to="/contactenos"
                 class="border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Contacto</h2>
             </router-link>
@@ -188,12 +190,12 @@ function collapseNav() {
                     <h2 class="uppercase">Perfil</h2>
                 </div>
 
-                <router-link to="/dashboard"
+                <router-link @click="collapseNav" to="/dashboard"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Panel</h2>
 
                 </router-link>
-                <router-link to="/logout"
+                <router-link @click="collapseNav" to="/logout"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Cerrar sesión</h2>
 

@@ -52,8 +52,8 @@ function sendMessage(state) {
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             </div>
 
-            <section class="flex px-10 ">
-                <div id="carousel" class="w-1/2 flex flex-col items-center gap-3">
+            <section class="flex flex-col items-center md:flex-row px-10 ">
+                <div id="carousel" class="md:w-1/2 flex flex-col items-center gap-3">
                     <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                         <slide v-for="slide in 2" :key="slide">
                             <img :src="state[0].img[slide - 1]" :alt="state[0].serie" class="w-3/4 bg-white">
@@ -73,7 +73,7 @@ function sendMessage(state) {
 
                     </div>
                 </div>
-                <div id="info" class="w-1/3 flex flex-col">
+                <div id="info" class="mt-4 md:mt-0 md:w-1/3 flex flex-col">
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
                     <h2 class="text-xl font-medium pb-6">MIMI JOYERÍA</h2>
                     <a :href="sendMessage(state)" target="_blank"

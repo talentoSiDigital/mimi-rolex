@@ -1,6 +1,5 @@
 <script setup>
 const {name} = defineProps(["name"])
-console.log(name)
 
 const refLinks = {
     "cosmograph-daytona":"https://www.rolex.com/watches/new-watches/new-cosmograph-daytona?cmpid=www.mimijoyeria.com_watchgrid-new_watches_corner",

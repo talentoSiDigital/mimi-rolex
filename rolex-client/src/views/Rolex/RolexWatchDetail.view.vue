@@ -12,6 +12,7 @@ import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexDataServices from '../../services/rolexDataService'
 import ContactWatchRolex from '../../components/global-components/ContactWatchRolex.vue'
 
+const windowWidth = ref(window.innerWidth)
 const currentSlide = ref(0)
 const route = useRoute()
 const currentRoute = ref(route.params.id)
@@ -35,11 +36,29 @@ const breakpoints = {
         snapAlign: 'start',
     }
 }
+const breakpoints2 = {
+    500: {
+        // 500px and up
+        itemsToShow: 1,
+        snapAlign: 'center',
+    }
+    ,
+    700: {
+        // 700px and up
+        itemsToShow: 2,
+        snapAlign: 'center',
+    },
+    1024: {
+        // 1024 and up
+        itemsToShow: 3,
+        snapAlign: 'start',
+    }
+}
 
 let { isLoading, state, isReady, execute } = useAsyncState(
     RolexDataServices.getDetailedWatch(currentRoute.value)
         .then((d) => {
-
+            
             return d.data
         })
 
@@ -58,14 +77,27 @@ function getHeaderImg(img) {
 
 function getColors(colors) {
     if (colors == 'Amarillo') {
-        return 'to-[#c7b69c] from-[#392e1b]'
+        return 'md:to-[#c7b69c] md:from-[#392e1b]'
     }
     if (colors == 'Rosado') {
-        return 'to-[#c7ae9e] from-[#32241b]'
+        return 'md:to-[#c7ae9e] md:from-[#32241b]'
     }
 
-    return 'to-[#b6b6b4] from-[#1b1917]'
-
+    return 'md:to-[#b6b6b4] md:from-[#1b1917]'
+    
+}
+function getResponsiveColors(colors) {
+    if (windowWidth.value <768) {
+        if (colors == 'Amarillo') {
+            return 'to-[#c7b69c] from-[#392e1b]'
+        }
+        if (colors == 'Rosado') {
+            return 'to-[#c7ae9e] from-[#32241b]'
+        }
+        
+        return 'to-[#b6b6b4] from-[#1b1917]'
+    }
+    
 }
 
 
@@ -78,9 +110,9 @@ function getColors(colors) {
                 <div v-if="isReady" class="mb-44">
 
 
-                    <div id="banner" :class="getColors(state.details[0].color)" class="m-4 bg-gradient-to-t flex ">
+                    <div id="banner" :class="getColors(state.details[0].color)" class="m-4 bg-gradient-to-t flex flex-col-reverse md:flex-row ">
 
-                        <div id="carousel" class="w-3/4">
+                        <div id="carousel" class="md:w-3/4 bg-gradient-to-t" :class="getResponsiveColors(state.details[0].color)">
                             <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                                 <slide v-for="slide in state.details[0].sliderImg" :key="slide">
                                     <img :src="state.details[1].img[slide - 1]" :alt="slide.alt">
@@ -94,16 +126,16 @@ function getColors(colors) {
                         </div>
 
 
-                        <div class="text-white w-1/2 flex flex-col justify-center ml-32 ">
-                            <header class="">
+                        <div class="md:text-white  w-full md:w-1/2 flex flex-col items-center justify-center md:ml-32 ">
+                            <header class=" text-center md:text-left">
                                 <h2 class="">Rolex</h2>
                                 <h2 class=" text-4xl my-4 font-vilsuve font-bold">{{ state.getAll.nombre }}</h2>
                                 <h2 class="font-arial-light">{{ state.getAll.cajaDelModelo }}</h2>
                                 <h2 class="font-arial-light">Precio ${{ addComma(state.details[0].precio) }}</h2>
-                                <a href="#" class="underline font-arial-light">Disponibilidad del modelo</a>
+                                <a href="#" class="underline font-arial-light hidden md:block ">Disponibilidad del modelo</a>
                             </header>
 
-                            <div id="info">
+                            <div id="info" class=" hidden md:block ">
                                 <div class="flex items-center gap-4 my-6  ">
                                     <a href="#"
                                         class="group border border-white w-10 h-10 p-3 rounded-full flex hover:bg-white duration-200">
@@ -124,15 +156,16 @@ function getColors(colors) {
 
 
 
-                            <div id="slider-nav" class="flex">
+                            <div id="slider-nav" class="hidden md:flex w-full ">
 
-                                <div class="flex w-1/3 gap-2">
+                                <div class="flex w-10/12 gap-2">
                                     <div class="hover:bg-gray-400"
                                         :class="[item == currentSlide + 1 ? 'bg-gray-400' : 'bg-white']"
                                         v-for="item in state.details[0].sliderImg" :key="item">
                                         <div @click="currentSlide = item - 1">
                                             <img :src="state.details[1].img[item - 1]"
-                                                :alt="state.details[1].img[item - 1]">
+                                                :alt="state.details[1].img[item - 1]"
+                                                class="w-40">
                                         </div>
                                     </div>
 
@@ -145,7 +178,7 @@ function getColors(colors) {
                     </div>
 
 
-                    <section id="info" class="flex my-2 p-14 flex-col-reverse md:flex-row">
+                    <section id="info" class="flex my-2 p-8 md:p-14 flex-col-reverse md:flex-row">
                         <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
                             <div>
                                 <div>
@@ -197,9 +230,9 @@ function getColors(colors) {
                     </section>
 
 
-                    <section id="info" class="flex my-2 px-16 pb-10 flex-col-reverse md:flex-row-reverse">
+                    <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row-reverse">
                         <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                            <div class="w-8/12">
+                            <div class="md:w-8/12">
                                 <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{ state.headers[0].header1
                                 }}</h1>
                                 <h1 class="leading-relaxed ">{{ state.headers[0].texto1 }}</h1>
@@ -210,9 +243,9 @@ function getColors(colors) {
                         </div>
                     </section>
 
-                    <section id="info" class="flex my-2 px-16 pb-10 flex-col-reverse md:flex-row">
+                    <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row">
                         <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                            <div class="w-8/12">
+                            <div class="md:w-8/12">
                                 <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{ state.headers[0].header2
                                 }}</h1>
                                 <h1 class="leading-relaxed ">{{ state.headers[0].texto2 }}</h1>
@@ -223,9 +256,9 @@ function getColors(colors) {
                         </div>
                     </section>
 
-                    <section id="info" class="flex my-2 px-16 pb-10 flex-col-reverse md:flex-row-reverse">
+                    <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row-reverse">
                         <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                            <div class="w-8/12">
+                            <div class="md:w-8/12">
                                 <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{ state.headers[0].header3
                                 }}</h1>
                                 <h1 class="leading-relaxed ">{{ state.headers[0].texto3 }}</h1>
@@ -237,9 +270,9 @@ function getColors(colors) {
                     </section>
 
                     <section class="bg-[#f8f8f8] flex flex-col justify-center items-center">
-                        <img src="../../assets/routes-assets/scarcity-corners.png" alt="rolex-corner" class="w-1/4 py-20">
-                        <h1 class="block text-left text-3xl scale-x-[1] scale-y-[0.8] pb-6">DISPONIBILIDAD DEL MODELO</h1>
-                        <h1 class="leading-relaxed text-md w-7/12 text-center pb-16">
+                        <img src="../../assets/routes-assets/scarcity-corners.png" alt="rolex-corner" class="w-1/2 md:w-1/3 py-20">
+                        <h1 class="block  text-3xl scale-x-[1] scale-y-[0.8] pb-6 w-1/2 md:w-full text-center">DISPONIBILIDAD DEL MODELO</h1>
+                        <h1 class="leading-relaxed text-md w-10/12 md:w-7/12 text-justify md:text-center pb-16">
                             Todos los relojes Rolex se ensamblan a mano con sumo cuidado para responder a los elevados
                             estándares de calidad de la marca. Naturalmente, tal nivel de exigencia condiciona la capacidad
                             de producción de Rolex y una gran demanda puede limitar la disponibilidad de determinados
@@ -269,9 +302,8 @@ function getColors(colors) {
 
                             </div>
 
-                            <div class="flex flex-col items-center text-center my-10 w-2/6">
-                                <h2 class="block w-10/12 uppercase  text-4xl scale-x-[1] scale-y-[0.8]">CÓMO AJUSTAR SU {{
-                                    state.getAll.nombre }}</h2>
+                            <div class="flex flex-col items-center text-center my-10 w-10/12 md:w-2/6">
+                                <h2 class="block w-10/12 uppercase  text-4xl scale-x-[1] scale-y-[0.8]">CÓMO AJUSTAR SU {{state.getAll.nombre }}</h2>
                                 <h2 class="leading-relaxed ">Sinónimos de excelencia y fiabilidad, los relojes Rolex están
                                     diseñados para el día a día, y en función del modelo, se adaptan perfectamente a una
                                     gran variedad de actividades y deportes. Creados para perdurar, estos relojes se
@@ -283,7 +315,7 @@ function getColors(colors) {
 
 
                     <section v-if="state.collection[0].hasVideo">
-                        <div class="h-screen flex justify-center">
+                        <div class="h-[50vh] md:h-screen flex justify-center">
                             <div class="aspect-w-16 w-full md:w-3/4 h-full">
                                 <iframe :src="state.collection[0].video" title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -292,7 +324,7 @@ function getColors(colors) {
 
                         </div>
                         <div class="flex flex-col items-center justify-center my-10 ">
-                            <h2 class="font-arial-bold font-bold text-center w-2/3 ">{{ state.collection[0].text }}</h2>
+                            <h2 class="font-arial-bold font-bold text-justify md:text-center w-10/12 md:w-2/3 ">{{ state.collection[0].text }}</h2>
                         </div>
 
                     </section>
@@ -323,9 +355,9 @@ function getColors(colors) {
 
                     <section class="flex flex-col justify-center items-center">
 
-                        <h1 class="block text-left text-4xl py-8">Tambien puede interesarle...</h1>
+                        <h1 class="block text-center md:text-left text-4xl py-8">Tambien puede interesarle...</h1>
                         <div id="carousel" class="w-9/12">
-                            <carousel :items-to-show="3" :items-to-scroll="3" :wrap-around="false">
+                            <carousel :breakpoints="breakpoints2" :wrap-around="false">
                                 <slide v-for="(slide, index) in state.sliderCollection" :key="index">
 
 

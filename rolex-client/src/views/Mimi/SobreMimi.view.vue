@@ -32,17 +32,17 @@
         <main class="bg-neutral-100 pb-14">
 
             <section class="flex flex-col items-center justify-center md:flex-row">
-                <img src="../../assets/routes-assets/historia/historia-1.webp" alt="showroom-mimi-tolon" class="w-1/3">
-                <header class="w-1/3 p-6 ">
+                <img src="../../assets/routes-assets/historia/historia-1.webp" alt="showroom-mimi-tolon" class="w-10/12 md:w-1/3">
+                <header class="w-10/12 md:w-1/3 p-6 ">
                     <header class="pb-8">
                         <h1 class="text-3xl  text-center">MISIÓN</h1>
-                        <p>Ofrecer a nuestros clientes la más amplia variedad de prendas garantizadas en oro 18Kt, así como
+                        <p class="text-center">Ofrecer a nuestros clientes la más amplia variedad de prendas garantizadas en oro 18Kt, así como
                             relojes de las marcas más reconocidas a nivel mundial.</p>
                     </header>
 
                     <header>
                         <h1 class="text-3xl  text-center">VISIÓN</h1>
-                        <p>Ser la primera opción de las personas al momento de buscar regalos para todas y cada una de las
+                        <p class="text-center">Ser la primera opción de las personas al momento de buscar regalos para todas y cada una de las
                             ocasiones especiales, acompañándote en cumpleaños, graduaciones, bautizos, matrimonios, navidad,
                             entre otros.</p>
                     </header>
@@ -52,10 +52,10 @@
 
 
             <section class="flex flex-col items-center justify-center md:flex-row-reverse">
-                <img src="../../assets/routes-assets/showroom/showroom-3.webp" alt="showroom-rolex-oyster" class="w-1/3">
-                <header class="w-1/3 p-6 ">
+                <img src="../../assets/routes-assets/showroom/showroom-3.webp" alt="showroom-rolex-oyster" class="w-10/12 md:w-1/3">
+                <header class="w-10/12 md:w-1/3 p-6 ">
                     <h1 class="text-3xl  text-center">ROLEX EN MIMI JOYERÍA</h1>
-                    <p>
+                    <p class="text-center">
                         En el año 1998 comienza nuestra relación con la prestigiosa marca Rolex y Tudor, en el centro
                         Comercial Sambil en la ciudad de Caracas.
                         <br>
@@ -69,10 +69,10 @@
             </section>
 
             <section class="flex flex-col items-center justify-center md:flex-row">
-                <img src="../../assets/routes-assets/showroom/showroom-1.webp" alt="showroom-rolex-oyster" class="w-1/3">
-                <header class="w-1/3 p-6 ">
+                <img src="../../assets/routes-assets/showroom/showroom-1.webp" alt="showroom-rolex-oyster" class="w-10/12 md:w-1/3">
+                <header class="w-10/12 md:w-1/3 p-6 ">
                     <h1 class="text-3xl  text-center">SIEMPRE PRESENTE</h1>
-                    <p class="">
+                    <p class="text-center">
                         En el año 2013 se realiza una remodelación en nuestra sucursal ubicada en el Centro Comercial Tolón
                         Fashion Mall, resaltando la elegancia y calidad que Mimi Joyería y Rolex comparten, embelleciendo
                         aún más el piso de venta, de esta forma, manteniendo la marca a la vanguardia de los nuevos tiempos.
