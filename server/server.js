@@ -38,7 +38,8 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
-
+var cookieParser = require('cookie-parser');
+app.use(cookieParser())
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
@@ -58,6 +59,7 @@ const upload = require('./app/middleware/headerUpload');
 require("./app/api/slider.routes")(app);
 require("./app/api/rolex.routes")(app);
 require("./app/api/store.routes")(app);
+require("./app/api/cookies.routes")(app);
 
 require('./app/api/auth.routes')(app);
 require('./app/api/user.routes')(app);

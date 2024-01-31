@@ -47,7 +47,6 @@ const loading = ref(true);
 
 function handleRegister(user) {
     // piniaStore.test()
-    console.log('executing')
     piniaStore.register(user).then(
         (data) => {
             message.value = data.message;

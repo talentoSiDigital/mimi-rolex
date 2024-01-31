@@ -51,9 +51,10 @@ class Store {
         let tableContent = []
         for (let index = 1; index <= data["tableRows"]; index++) {
             tableContent.push(`${data[`header${index}`]}: ${data[`content${index}`]}`)
-
         }
+
         tableContent = tableContent.join('; ')
+        
         formData.append('tableRows', `${tableContent.toString()};`)
 
         for (const key in data) {

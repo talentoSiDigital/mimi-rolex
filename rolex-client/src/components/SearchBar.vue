@@ -46,11 +46,12 @@ function deleteSearch(){
     model.value.size = ""
     model.value.material = ""
     model.value.esfera = ""
+    model.value.estilo = ""
     active.value = false
 } 
 
 watch(model.value,()=>{
-    if(model.value.material != "" || model.value.esfera != "" || model.value.size != ""){
+    if(model.value.material != "" || model.value.esfera != "" || model.value.size != "" || model.value.estilo != ""){
         active.value = true
         return
     }
@@ -80,9 +81,11 @@ function activate(){
         <div :class="activateCheck" class=" flex flex-col w-9/12 overflow-hidden duration-200">
             <h2 class=" text-center font-vilsuve font-bold text-xl tracking-widest uppercase ">BúSQUEDA AVANZADA</h2>
             <div class="flex gap-2 justify-center  md:hidden">
+
                 <h2>Agregar filtros</h2>
                 <font-awesome-icon :icon="['fas', 'square-plus']" class="text-2xl text-main-green hover:text-[#8d958d] duration-100 cursor-pointer" @click="activate"/>
             </div>
+         
             <hr>
             <button class="mt-2 mb-8 border border-white px-2 py-2 rounded-3xl  duration-700" :class="modelCheck"
                 :disabled="disable" @click="deleteSearch">
@@ -95,13 +98,13 @@ function activate(){
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
-                        type="checkbox" name="hombre">
+                        type="radio" name="hombre" value="HOMBRES" v-model="model.estilo">
                     <label class="font-helvetica" for="hombre">Hombre</label>
                 </div>
                 <div class="flex items-center gap-3 pl-2">
                     <input
                         class="appearance-none border border-black w-4 h-4 rounded-none checked:bg-rolex-green cursor-pointer"
-                        type="checkbox" name="mujer">
+                        type="radio" name="mujer" value="MUJERES" v-model="model.estilo">
                     <label class="font-helvetica" for="mujer">Mujer</label>
                 </div>
 

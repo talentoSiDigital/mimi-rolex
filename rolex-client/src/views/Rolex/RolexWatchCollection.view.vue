@@ -20,6 +20,7 @@ const currentPage = ref(1)
 const totalPages = ref(1)
 
 const searchParams = ref({
+    "estilo":"",
     "size": "",
     "material": "",
     "esfera": ""
@@ -64,52 +65,28 @@ function changePage(page) {
 
 
 watch(searchParams.value, () => {
-    items.value = []
-    let position = 0
-
-    for (const item of state.value.watches) {
-        if (searchParams.value.size !== "" && searchParams.value.size === item.size) {
-            items.value.includes(item) ? '' : items.value.push(item)
 
 
+    for (const item of state.value) {
+        for (const key in searchParams.value) {
+            if (searchParams.value[key] !== "") {
+                if (searchParams.value[key] === item[key]) {
+                    if (!items.value.includes(item)) {
+                        items.value.push(item)
+                    }
 
-        } else {
+                } else {
+                    if (items.value.includes(item)) {
+                        items.value.splice(items.value.indexOf(item), 1)
 
-            if (items.value.includes(item) && searchParams.value.material !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
+                    }
+                }
             }
-
         }
-
-        if (searchParams.value.material !== "" && searchParams.value.material == item.material) {
-
-            items.value.includes(item) ? '' : items.value.push(item)
-
-
-        } else {
-            if (items.value.includes(item) && searchParams.value.material !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
-            }
-
-        }
-        if (searchParams.value.esfera !== "" && searchParams.value.esfera == item.claseDeEsfera) {
-            items.value.includes(item) ? '' : items.value.push(item)
-
-
-        } else {
-
-            if (items.value.includes(item) && searchParams.value.esfera !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
-            }
-
-        }
-
-
 
     }
+
+    
 
 
 })

@@ -4,7 +4,7 @@ import HeaderSlider from '../services/headerSliderDataServices'
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
+import Cookies from '../components/cards/Cookies.vue'
 
 import { useAsyncState } from '@vueuse/core'
 import { RouterLink } from 'vue-router';
@@ -32,6 +32,9 @@ const jewelSlideshow = [
 
 <template>
     <div id="main-content" class="font-montserrat">
+        <Cookies/>
+
+
         <carousel :items-to-show="1">
             <slide v-for="slide in state" :key="slide">
                 <RouterLink to="/coleccion-rolex">

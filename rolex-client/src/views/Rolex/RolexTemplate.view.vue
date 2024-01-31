@@ -2,17 +2,19 @@
 import RolexNavbar from '../../components/global-components/RolexNavbar.vue'
 
 import SliderNavigationRolex from '../../components/global-components/SliderNavigationRolex.vue'
-import RolexFooter from '../../components/global-components/RolexFooter.vue'  
+import RolexFooter from '../../components/global-components/RolexFooter.vue'
 
-import {loadScript} from "vue-plugin-load-script";
+import { onMounted, onUnmounted } from 'vue';
 
-// loadScript("//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js")
-//     .then(() => {
-//       console.log('loaded successfully')
-//     })
-//     .catch(() => {
-//         console.log('Failed to load')
-//     });
+let externalScript = document.createElement('script')
+externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js')
+onMounted(() => {
+    document.head.appendChild(externalScript)
+})
+
+onUnmounted(() => {
+    document.head.removeChild(externalScript)
+})
 
 </script>
 
@@ -24,14 +26,13 @@ import {loadScript} from "vue-plugin-load-script";
 
 
         </slot>
-        <SliderNavigationRolex  /> 
-        <RolexFooter  /> 
+        <SliderNavigationRolex />
+        <RolexFooter />
 
-        
+
 
     </div>
 </template>
 
-<!-- <script src="//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js"></script> -->
 
 

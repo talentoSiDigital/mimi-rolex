@@ -45,85 +45,55 @@ const { isLoading, state, isReady, execute } = useAsyncState(
         })
 
 )
+const items = ref([])
 
+// watch(state, () => {
+//     items.value = state.value
+// })
 
 function changePage(page) {
     currentPage.value = currentPage.value + page
     router.push({ path: `/coleccion-rolex`, hash: '#rolex-container' })
-
 }
 
 
 const searchParams = ref({
+    "estilo": "",
     "size": "",
     "material": "",
     "esfera": ""
 })
-const items = ref([])
 
-function searchIn(state) {
 
+
+
+function searchIn() {
 
 }
 
-watch(searchParams.value, () => {
-    items.value = []
-    let position = 0
 
+watch(searchParams.value, () => {
 
 
     for (const item of state.value) {
-        if (searchParams.value.size !== "" && searchParams.value.size === item.size) {
-            items.value.includes(item) ? '' : items.value.push(item)
+        for (const key in searchParams.value) {
+            if (searchParams.value[key] !== "") {
+                if (searchParams.value[key] === item[key]) {
+                    if (!items.value.includes(item)) {
+                        items.value.push(item)
+                    }
 
+                } else {
+                    if (items.value.includes(item)) {
+                        items.value.splice(items.value.indexOf(item), 1)
 
-
-        } else {
-
-            if (items.value.includes(item) && searchParams.value.material !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
+                    }
+                }
             }
-
         }
-
-        if (searchParams.value.material !== "" && searchParams.value.material == item.material) {
-
-            items.value.includes(item) ? '' : items.value.push(item)
-
-
-        } else {
-            if (items.value.includes(item) && searchParams.value.material !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
-            }
-
-        }
-        if (searchParams.value.esfera !== "" && searchParams.value.esfera == item.claseDeEsfera) {
-            items.value.includes(item) ? '' : items.value.push(item)
-
-
-        } else {
-
-            if (items.value.includes(item) && searchParams.value.esfera !== "") {
-                position = items.value.indexOf(item)
-                items.value.includes(item) ? items.value.splice(position, 1) : 'do nothing'
-            }
-
-        }
-
-
 
     }
 
-    if (
-        searchParams.value.size != "" &&
-        searchParams.value.material != "" &&
-        searchParams.value.esfera != "" &&
-        items.value.length == 0
-    ) {
-        
-    }
 
 
 })
@@ -140,6 +110,7 @@ watch(searchParams.value, () => {
             <template #content>
                 <div v-if="isReady">
                     <PageBanner type="coleccion-rolex" />
+
                     <RolexHeader>
                         <template #sub>
                             <strong>Rendimiento y prestigio</strong>
@@ -174,7 +145,8 @@ watch(searchParams.value, () => {
 
                                         <img :src="item.img" :alt="item.modelo">
                                         <h2 class="uppercase text-center ">Rolex</h2>
-                                        <h2 class="uppercase text-center font-bold text-xl font-vilsuve">{{ item.nombre }}</h2>
+                                        <h2 class="uppercase text-center font-bold text-xl font-vilsuve">{{ item.nombre }}
+                                        </h2>
                                         <h2 class="text-center text-xs font-extralight">{{ item.cajaDelModelo }}</h2>
 
                                     </RouterLink>
@@ -192,7 +164,7 @@ watch(searchParams.value, () => {
 
                                 <span v-else class="block w-4"></span>
 
-                                <h2>Página {{ currentPage }}</h2>
+                                <h2>Página {{ currentPage }} de {{ totalPages }}</h2>
 
                                 <button v-if="currentPage != totalPages" @click="changePage(1)">
                                     <font-awesome-icon :icon="['fas', 'chevron-right']"
