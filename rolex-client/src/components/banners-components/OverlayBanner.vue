@@ -39,7 +39,7 @@ function parseString(str) {
 <template>
     <section>
         <div class="group relative h-fit overflow-hidden">
-            <header class=" absolute z-10  bg-opaco w-full h-full flex flex-col justify-center items-center text-white">
+            <header class=" absolute z-  bg-opaco w-full h-full flex flex-col justify-center items-center text-white">
                 <h2 v-if="checkType(type)" class="uppercase text-3xl font-montserrat font-semibold drop-shadow-md">COLECCIÓN
                     {{ type }}</h2>
                 <h2 v-else class="uppercase text-3xl font-montserrat font-semibold drop-shadow-md">{{ parseString(type) }}

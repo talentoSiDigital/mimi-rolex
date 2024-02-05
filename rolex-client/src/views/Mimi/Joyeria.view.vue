@@ -15,7 +15,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 Nos sumamos a la enorme felicidad de recibir una nueva vida y te acompañamos en este momento tan especial.
             </template>
             <template #button>
-                Descubrir
+                <router-link to="/joyeria/nacimiento-y-bautizos" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 
@@ -27,7 +29,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 Los momentos especiales los celebramos con detalles únicos como su ternura.
             </template>
             <template #button>
-                Descubrir
+                 <router-link to="/joyeria/nacimiento-y-bautizos" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 
@@ -41,7 +45,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 El éxito en la vida no se mide por lo que logras, sino por los obstáculos que superas, es por eso que queremos acompañarte en este momento tan valioso.
             </template>
             <template #button>
-                Descubrir
+                 <router-link to="/joyeria/graduacion" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 
@@ -53,7 +59,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 El inicio de una nueva etapa juntos.
             </template>
             <template #button>
-                Descubrir
+                 <router-link to="/joyeria/compromiso-y-matrimonio" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 
@@ -65,7 +73,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 Sella tu amor para toda la vida con prendas únicas especialmente diseñadas para ti.
             </template>
             <template #button>
-                Descubrir
+                 <router-link to="/joyeria/compromiso-y-matrimonio" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 
@@ -77,7 +87,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 Complementa tu brillo con joyas únicas y especiales que resalten tu lado más elegante.
             </template>
             <template #button>
-                Descubrir
+                 <router-link to="/joyeria/regalos" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                    Descubrir
+                </router-link>
             </template>
         </OverlaySection>
 

@@ -1,11 +1,11 @@
 <script setup>
-import { computed, ref } from 'vue';
-import Terms from '../global-components/Terms.vue'
 import emailjs from '@emailjs/browser';
+import { computed, ref } from 'vue';
+import Terms from '../global-components/Terms.vue';
 
-import { Form, Field, ErrorMessage } from "vee-validate";
+import { ErrorMessage, Field, Form } from "vee-validate";
 import * as yup from "yup";
-import router from '../../router'
+import router from '../../router';
 
 const schema = yup.object().shape({
     nombre: yup.string().required("El nombre es obligatorio!"),

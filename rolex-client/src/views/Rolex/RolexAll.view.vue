@@ -140,7 +140,7 @@ watch(searchParams.value, () => {
                                     class="w-full border border-white hover:border-gray-500 duration-200" :key="index">
 
 
-                                    <RouterLink :to="{ name: 'relojes', params: { id: item.modelo } }"
+                                    <RouterLink :to="{ name: 'relojes-rolex', params: { id: item.modelo } }"
                                         v-if="itemsRange[currentPage] > index && index >= itemsRange[currentPage - 1]">
 
                                         <img :src="item.img" :alt="item.modelo">

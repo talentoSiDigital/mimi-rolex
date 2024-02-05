@@ -20,7 +20,6 @@ if (!piniaStore.$state.status.loggedIn) {
 const item = ref()
 item.value = null
 
-console.log(item.value)
 const { isLoading, state, isReady, execute } = useAsyncState(
     HeaderSlider.getAll()
         .then(d => d.data)
@@ -38,7 +37,6 @@ const schema = yup.object().shape({
 
 function sendChanges(values) {
 
-    // console.log(item.value.id)
     // let form = new FormData();
     // form.append('file')
     HeaderSlider.updateSlider(values).then(()=>{

@@ -37,7 +37,8 @@ import {
     faAngleDown,
     faArrowLeft,
     faSquarePlus,
-    faSquareMinus
+    faSquareMinus,
+    faGear
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -62,7 +63,8 @@ library.add(
     faArrowLeft, 
     faPinterest,
     faSquarePlus,
-    faSquareMinus
+    faSquareMinus,
+    faGear
 )
 
 createApp(App)

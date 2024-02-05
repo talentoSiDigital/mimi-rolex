@@ -32,23 +32,24 @@ const jewelSlideshow = [
 
 <template>
     <div id="main-content" class="font-montserrat">
-        <Cookies/>
 
 
-        <carousel :items-to-show="1">
-            <slide v-for="slide in state" :key="slide">
-                <RouterLink to="/coleccion-rolex">
-                    <img class="hidden md:block" :src="slide.path" :alt="slide.path">
-                </RouterLink>
-                <RouterLink to="/coleccion-rolex">
-                    <img class="block md:hidden" :src="slide.mobilePath" :alt="slide.mobilePath">
-                </RouterLink>
-            </slide>
+        <div class="relative z-0">
+            <carousel :items-to-show="1">
+                <slide v-for="slide in state" :key="slide">
+                    <RouterLink to="/coleccion-rolex">
+                        <img class="hidden md:block" :src="slide.path" :alt="slide.path">
+                    </RouterLink>
+                    <RouterLink to="/coleccion-rolex">
+                        <img class="block md:hidden" :src="slide.mobilePath" :alt="slide.mobilePath">
+                    </RouterLink>
+                </slide>
 
-            <template #addons>
-                <pagination />
-            </template>
-        </carousel>
+                <template #addons>
+                    <pagination />
+                </template>
+            </carousel>
+        </div>
 
         <div id="joyeria" class="h-80 mt-8 flex flex-col items-center justify-center text-neutral-600 ">
             <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full">
@@ -95,8 +96,8 @@ const jewelSlideshow = [
             <div class="w-3/4 md:w-1/3 text-center">
                 <h2 class="my-4 text-3xl">UNA JOYA QUE TE COMPLEMENTA</h2>
                 <p class="mb-8 text-xl">Descubre un mundo de opciones en joyería para ti.</p>
-                <a class="bg-neutral-500 px-6 py-4 my-4 rounded-lg text-white shadow-2xl hover:bg-neutral-600 "
-                    href="#">DESCUBRIR</a>
+                <router-link to="/joyeria" class="bg-neutral-500 px-6 py-4 my-4 rounded-lg text-white shadow-2xl hover:bg-neutral-600 "
+                    >DESCUBRIR</router-link>
             </div>
         </div>
 
@@ -127,34 +128,34 @@ const jewelSlideshow = [
 
             <div class="flex flex-col md:flex-row w-full overflow-x-hidden  text-neutral-700 mb-10">
                 <div class="flex flex-col items-center justify-center">
-                    <a href="https://tienda.mimijoyeria.com/products/tudor-black-bay-gmt-s-g">
+                    <router-link :to="{ name: 'reloj', params: { id: 'tudor' }}">
                         <img src="../assets/routes-assets/Home/TUDOR.webp" alt="tudor-black-bay-gmt"
                             class="duration-500 hover:scale-110">
-                    </a>
+                    </router-link>
                     <h3 class="text-xl font-light">Black Bay GMT S&G</h3>
                     <h3 class="text-xl font-light">TUDOR</h3>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <a href="https://tienda.mimijoyeria.com/products/hydroconquest">
-                        <img src="../assets/routes-assets/Home/LONGINESS.webp" alt="tudor-black-bay-gmt"
+                    <router-link :to="{ name: 'reloj', params: { id: 'longines' }}">
+                        <img src="../assets/routes-assets/Home/LONGINESS.webp" alt="longiness-hydrocontest"
                             class="duration-500 hover:scale-110">
-                    </a>
+                    </router-link>
                     <h3 class="text-xl font-light">Longines Hydroconquest</h3>
                     <h3 class="text-xl font-light">LONGINESS</h3>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <a href="https://tienda.mimijoyeria.com/products/tissot-seastar-1">
-                        <img src="../assets/routes-assets/Home/TISSOT.webp" alt="tudor-black-bay-gmt"
+                    <router-link :to="{ name: 'reloj', params: { id: 'tissot' }}">
+                        <img src="../assets/routes-assets/Home/TISSOT.webp" alt="tissot-seastar-gts"
                             class="duration-500 hover:scale-110">
-                    </a>
+                    </router-link>
                     <h3 class="text-xl font-light">Tissot Seastar GTS</h3>
                     <h3 class="text-xl font-light">TISSOT</h3>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <a href="https://tienda.mimijoyeria.com/products/victorinox-241676-1-reloj-analogico">
-                        <img src="../assets/routes-assets/Home/VICTORINOX.webp" alt="tudor-black-bay-gmt"
+                    <router-link :to="{ name: 'reloj', params: { id: 'victorinox' }}">
+                        <img src="../assets/routes-assets/Home/VICTORINOX.webp" alt="victorinox-maverick-sport"
                             class="duration-500 hover:scale-110">
-                    </a>
+                    </router-link>
                     <h3 class="text-xl font-light">Victorinox Maverick Sport</h3>
                     <h3 class="text-xl font-light">VICTORINOX</h3>
                 </div>

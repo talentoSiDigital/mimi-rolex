@@ -3,10 +3,9 @@ import { RouterLink } from 'vue-router';
 import { computed, ref } from 'vue'
 import { auth } from '../../store/auth.module'
 import router from '../../router'
+
 const windowWidth = ref(window.innerWidth)
 const piniaStore = auth()
-
-
 
 const loggedIn = computed(() => {
     return piniaStore.$state.status.loggedIn
@@ -23,9 +22,9 @@ function collapseNav() {
 </script>
 
 <template>
-    <nav>
+    <nav class="relative z-30"> 
         <div id="top-bar" class="flex justify-around items-center p-2">
-            <img src="../../assets/tudor-retailer.jpg" alt="tudor-retailer-badge" class="w-24 md:w-32    ">
+            <img src="../../assets/tudor-retailer.jpg" alt="tudor-retailer-badge" class="w-24 md:w-32">
             <router-link to="/">
                 <img src="../../assets/mimi-logo.png" alt="mimi-joyeria-logo">
             </router-link>
@@ -52,7 +51,7 @@ function collapseNav() {
             </router-link>
 
             <router-link @click="collapseNav" to="/tudor"
-                class=" md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
+                class="md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Tudor</h2>
             </router-link>
             <!-- **** -->

@@ -55,7 +55,7 @@ function sendMessage(state) {
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             </div>
 
-            <section class="flex flex-col items-center md:flex-row px-10 ">
+            <section class="flex flex-col items-start md:flex-row px-10 ">
                 <div id="carousel" class="md:w-1/2 flex flex-col items-center gap-3">
                     <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                         <slide v-for="(slide, index) in state[0].cantidadImagenes + 1" :key="index">

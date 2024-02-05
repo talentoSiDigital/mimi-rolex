@@ -52,7 +52,7 @@ import NewModelsCard from '../../components/cards/NewModelsCard.vue'
                 </div>
 
                 <div id="footer-banner">
-                    <img src="../../assets/routes-assets/banners/banner-2-nuevos-modelos.png" alt="banner-rolex-oro" class="w-full">
+                    <img src="../../assets/routes-assets/banners/banner-2-nuevos-modelos.webp" alt="banner-rolex-oro" class="w-full">
                 </div>
 
 

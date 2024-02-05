@@ -65,7 +65,7 @@ const router = createRouter({
       meta: {
         title: 'Rolex en Mimi Joyería  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
-    },
+    }, 
     {
       path: "/nuevos-modelos-2023",
       name: "rolex-modelos-2023",
@@ -85,7 +85,7 @@ const router = createRouter({
     },
     {
       path: "/historia",
-      name: "historia",
+      name: "rolex-historia",
       component: RolexHistoria,
       meta: {
         title: 'Historia  - Mimi Joyería | Distribuidor Oficial Rolex'
@@ -93,7 +93,7 @@ const router = createRouter({
     },
     {
       path: "/showroom",
-      name: "showroom",
+      name: "rolex-showroom",
       component: RolexShowroom,
       meta: {
         title: 'Showroom  - Mimi Joyería | Distribuidor Oficial Rolex'
@@ -111,7 +111,7 @@ const router = createRouter({
     ,
     {
       path: "/contacto",
-      name: "contacto",
+      name: "rolex-contacto",
       component: RolexContacto,
       meta: {
         title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
@@ -139,7 +139,7 @@ const router = createRouter({
     },
     {
       path: "/coleccion/:id",
-      name: "coleccion",
+      name: "rolex-coleccion",
       component: RolexWatchCollection,
       meta: {
         title: 'Coleccion Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
@@ -147,7 +147,7 @@ const router = createRouter({
     },
     {
       path: "/relojes/:id",
-      name: "relojes",
+      name: "relojes-rolex",
       component: RolexWatchDetail,
       meta: {
         title: 'Modelos de Rolex - Mimi Joyería | Distribuidor Oficial Rolex'

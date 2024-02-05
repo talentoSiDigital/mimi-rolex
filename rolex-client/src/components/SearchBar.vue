@@ -2,7 +2,6 @@
 import { computed, ref, watch } from 'vue';
 
 const { args} = defineProps(['args'])
-console.log(args)
 const model = defineModel()
 
 

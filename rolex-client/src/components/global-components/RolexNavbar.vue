@@ -14,7 +14,7 @@ function collapseNav() {
 <template>
     <nav>
         <div id="navigation-bar" :class="activate"
-            class="flex overflow-hidden flex-col md:flex-row lg:justify-center items-center  shadow-lg gap-2 pb-4 md:pb-0 font-arial">
+            class="relative z-20 flex overflow-hidden flex-col md:flex-row lg:justify-center items-center  shadow-lg gap-2 pb-4 md:pb-0 font-arial">
             <div class="py-6 md:hidden" @click="collapseNav">
                 <svg class="w-8 h-8 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 17 14">

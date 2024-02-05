@@ -21,11 +21,9 @@ const { imgSrc, altText, type } = defineProps(['imgSrc', 'altText', 'type'])
 
                 </p>
 
-                <a href="#" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
                     <slot name="button">
 
                     </slot>
-                </a>
 
         </header>
 
