@@ -2,12 +2,13 @@ const db = require("../models");
 const rolex = db.rolex;
 const Op = db.Sequelize.Op;
 const sequelize = db.sequelize;
-const storagePath = require('path').resolve(__dirname, '..' + "\\")
+const storagePath = process.env.IMGPATH
+
 
 function helper() {
   let a = Math.floor((Math.random() * 195) + 1)
   return [a, a + 5]
-}
+} 
 
 const mainVideos = {
   "1908": "https://www.youtube.com/embed/qtzBHB8fyF0?si=hkEK8DlpRzHxLp2v",
@@ -40,8 +41,11 @@ exports.showDisplay = (req, res) => {
     .then(data => {
       for (let index = 0; index < data.length; index++) {
         // Adding images to response
-        data[index].dataValues.file = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.watch}.avif`
+        data[index].dataValues.file = `${storagePath}/rolex-relojes/${data[index].dataValues.watch}.avif`
+        // console.log(data[index].dataValues.file)
       }
+     
+
       res.send(data)
 
     })
@@ -56,7 +60,7 @@ exports.showDisplay = (req, res) => {
     });
 };
 
-// Show by collection
+// Show by especific collection
 exports.getCollectionDetails = (req, res) => {
   let collection = {}
   let watches = {}
@@ -71,9 +75,9 @@ exports.getCollectionDetails = (req, res) => {
         // Adding images to response
         const parsed = data[0].dataValues
 
-          data[0].dataValues.fileLandscape = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
+        data[0].dataValues.fileLandscape = `${storagePath}/rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
 
-          data[0].dataValues.fileMobile = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
+        data[0].dataValues.fileMobile = `${storagePath}/rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
 
         if (data[0].dataValues.hasVideo) {
           data[0].dataValues.video = mainVideos[data[0].dataValues.idName]
@@ -92,7 +96,7 @@ exports.getCollectionDetails = (req, res) => {
           .then((data) => {
             // Adding images to response
             for (let index = 0; index < data.length; index++) {
-              data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+              data[index].dataValues.img = `${storagePath}/rolex-relojes/${data[index].dataValues.modelo}.avif`
 
             }
             watches = data
@@ -110,7 +114,7 @@ exports.getCollectionDetails = (req, res) => {
             .then((data) => {
               // Adding images to response
               for (let index = 0; index < data.length; index++) {
-                data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+                data[index].dataValues.img = `${storagePath}/rolex-relojes/${data[index].dataValues.modelo}.avif`
 
               }
               watches = data
@@ -128,7 +132,7 @@ exports.getCollectionDetails = (req, res) => {
             .then((data) => {
               // Adding images to response
               for (let index = 0; index < data.length; index++) {
-                data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+                data[index].dataValues.img = `${storagePath}/rolex-relojes/${data[index].dataValues.modelo}.avif`
 
               }
               watches = data
@@ -143,7 +147,7 @@ exports.getCollectionDetails = (req, res) => {
 
 }
 
-// Get all watches
+// Get all individual watches
 exports.getAllRolex = (req, res) => {
 
   rolex.RolexGetAll.findAll({
@@ -154,7 +158,7 @@ exports.getAllRolex = (req, res) => {
     .then((data) => {
       for (let index = 0; index < data.length; index++) {
         // Adding images to response
-        data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+        data[index].dataValues.img = `${storagePath}/rolex-relojes/${data[index].dataValues.modelo}.avif`
       }
       res.send(data)
     })
@@ -162,7 +166,7 @@ exports.getAllRolex = (req, res) => {
     })
 }
 
-// Get watch for detailed page
+// Get all details for watch detailed page
 exports.getRolexDetails = (req, res) => {
   // Set response object
   let rolexResponse = {}
@@ -244,13 +248,13 @@ exports.getRolexDetails = (req, res) => {
       modelo: req.params.id
     }
   })
-    // processing the first query
+    // processing the first query (Get watch)
     .then(data => {
 
       // Processing response
       let parsedName = data[0].dataValues
 
-      parsedName.img = `${process.env.LOCALPATH}rolex-relojes/${parsedName.modelo}.avif`
+      parsedName.img = `${storagePath}/rolex-relojes/${parsedName.modelo}.avif`
 
       if (adjustVideos[parsedName.nombre]) {
 
@@ -272,7 +276,7 @@ exports.getRolexDetails = (req, res) => {
 
 
     })
-    // getting details
+    // getting details from watch
     .then(() => {
       rolex.RolexDetails.findAll({
         where: {
@@ -287,11 +291,11 @@ exports.getRolexDetails = (req, res) => {
 
           for (let index = 0; index < data[0].sliderImg + 1; index++) {
             // Adding images to response
-            data[1].img[index] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-slider-${index + 1}.avif`
+            data[1].img[index] = `${storagePath}/rolex-relojes/${rolexResponse.getAll.modelo}-slider-${index + 1}.avif`
 
           }
 
-          data[1].img[data[1].img.length - 1] = `${process.env.LOCALPATH}rolex-relojes/${rolexResponse.getAll.modelo}-side.avif`
+          data[1].img[data[1].img.length - 1] = `${storagePath}/rolex-relojes/${rolexResponse.getAll.modelo}-side.avif`
           data[0].precio = data[0].precio.toString()
 
           rolexResponse.details = data
@@ -308,11 +312,11 @@ exports.getRolexDetails = (req, res) => {
         .then(data => {
           data[0].dataValues.img = []
           // Adding images to response
-          data[0].dataValues.img[0] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen1}.avif`
+          data[0].dataValues.img[0] = `${storagePath}/rolex-relojes/content-images/${data[0].imagen1}.avif`
 
-          data[0].dataValues.img[1] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen2}.avif`
+          data[0].dataValues.img[1] = `${storagePath}/rolex-relojes/content-images/${data[0].imagen2}.avif`
 
-          data[0].dataValues.img[2] = `${process.env.LOCALPATH}rolex-relojes/content-images/${data[0].imagen3}.avif`
+          data[0].dataValues.img[2] = `${storagePath}/rolex-relojes/content-images/${data[0].imagen3}.avif`
 
 
           rolexResponse.headers = data
@@ -328,10 +332,9 @@ exports.getRolexDetails = (req, res) => {
         .then(data => {
           for (let index = 0; index < data.length; index++) {
             // Adding images to response
-            data[0].dataValues.fileLandscape = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
+            data[0].dataValues.fileLandscape = `${storagePath}/rolex-watch-banners/banner-${data[0].dataValues.idName}-landscape.jpg`
 
-            data[0].dataValues.fileMobile = `${process.env.LOCALPATH}rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
-
+            data[0].dataValues.fileMobile = `${storagePath}/rolex-watch-banners/banner-${data[0].dataValues.idName}-mobile.jpg`
 
             if (data[0].dataValues.hasVideo) {
               if (data[0].dataValues.idName == 'lady-datejust') {
@@ -348,6 +351,7 @@ exports.getRolexDetails = (req, res) => {
 
         })
     })
+
     .then(() => {
       rolex.RolexGetAll.findAll({
         where: {
@@ -359,26 +363,13 @@ exports.getRolexDetails = (req, res) => {
           // Processing response
           for (let index = 0; index < data.length; index++) {
             // Adding images to response
-            data[index].dataValues.img = `${process.env.LOCALPATH}rolex-relojes/${data[index].dataValues.modelo}.avif`
+            data[index].dataValues.img = `${storagePath}/rolex-relojes/${data[index].dataValues.modelo}.avif`
           }
-
-
-
 
           // Adding data to response 
           rolexResponse.sliderCollection = data
-
           res.send(rolexResponse)
-
-
-
         })
-
-
     })
-
-
-
-
 
 }

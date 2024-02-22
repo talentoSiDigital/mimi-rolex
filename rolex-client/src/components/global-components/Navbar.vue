@@ -1,39 +1,58 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import { storeToRefs } from 'pinia';
 import { computed, ref } from 'vue'
 import { auth } from '../../store/auth.module'
 import router from '../../router'
 
+
+
 const windowWidth = ref(window.innerWidth)
 const piniaStore = auth()
+const IsLogged = storeToRefs(piniaStore)
 
 const loggedIn = computed(() => {
-    return piniaStore.$state.status.loggedIn
+    return IsLogged.status.value.loggedIn
 })
 
 const activate = ref('h-20')
 
 function collapseNav() {
-    if(windowWidth.value < 768){
+    if (windowWidth.value < 768) {
         activate.value == 'h-20' ? activate.value = 'h-fit' : activate.value = 'h-20'
     }
+}
+
+
+
+function handleLogout() {
+    logginOut.value = true
+    piniaStore.logout()
+    router.push("/")
 }
 
 </script>
 
 <template>
-    <nav class="relative z-30"> 
+    <nav class="relative z-30">
         <div id="top-bar" class="flex justify-around items-center p-2">
-            <img src="../../assets/tudor-retailer.jpg" alt="tudor-retailer-badge" class="w-24 md:w-32">
-            <router-link to="/">
-                <img src="../../assets/mimi-logo.png" alt="mimi-joyeria-logo">
+            <router-link to="/tudor" class="cursor-pointer hidden md:block">
+                <img src="/assets/tudor-retailer.jpg" alt="tudor-retailer-badge" class="w-24 md:w-32">
             </router-link>
-            <iframe
-                src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
-                frameborder="0" class="translate-y-10 w-40"></iframe>
+            <router-link to="/" class="w-fit">
+                <img src="/assets/mimi-logo.png" alt="mimi-joyeria-logo" class="w-24 md:w-full">
+            </router-link>
+            <div class="relative items-center hidden md:flex">
+                <router-link to="/rolex" class=" cursor-pointer absolute z-10 block md:w-40 md:h-20">
+                </router-link>
+                <iframe
+                    src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
+                    frameborder="0" class="  w-40 h-[5.5rem]  cursor-pointer"></iframe>
+            </div>
+
         </div>
 
-
+        <!--  -->
         <div id="navigation-bar" :class="activate"
             class="flex overflow-hidden md:overflow-visible flex-col md:flex-row md:justify-center items-center  shadow-lg md:gap-2  bg-main-green">
 
@@ -118,7 +137,7 @@ function collapseNav() {
 
 
             <!-- **** -->
-            <div class=" md:hidden w-full flex flex-col items-center"> 
+            <div class=" md:hidden w-full flex flex-col items-center">
                 <router-link @click="collapseNav" to="/relojeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                     <h2 class="uppercase">Relojería</h2>
@@ -194,11 +213,11 @@ function collapseNav() {
                     <h2 class="uppercase">Panel</h2>
 
                 </router-link>
-                <router-link @click="collapseNav" to="/logout"
+                <button @click="collapseNav, handleLogout"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Cerrar sesión</h2>
 
-                </router-link>
+                </button>
 
             </div>
 
@@ -217,11 +236,11 @@ function collapseNav() {
                         class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Perfil</h2>
                     </router-link>
-                    <router-link to="/logout"
+                    <button @click="handleLogout"
                         class="text-xl font-normal whitespace-nowrap  font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Cerrar sesión</h2>
-                    </router-link>
-                    
+                    </button>
+
                 </div>
 
             </div>

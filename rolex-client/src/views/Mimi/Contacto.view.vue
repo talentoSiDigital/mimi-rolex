@@ -3,7 +3,6 @@ import { ref } from 'vue';
 
 import router from '../../router'
 
-import OverlaySection from '../../components/cards/OverlaySection.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
 import Loading from '../../components/global-components/Loading.vue'
 
@@ -67,7 +66,7 @@ function sendValue(value) {
                 referrerpolicy="no-referrer-when-downgrade" class="pt-2/4 w-10/12 md:w-1/3"></iframe>
 
             <div class="w-10/12 md:w-1/3">
-                <div class="w-full flex flex-col gap-2 ">
+                <div class="w-full flex flex-col gap-6 ">
                     <h2 class="text-3xl text-center">CONTACTA CON NOSOTROS</h2>
 
                     <a href="https://maps.app.goo.gl/FemKdGHF9r7tBANW6" target="_blank"

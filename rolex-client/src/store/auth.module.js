@@ -9,10 +9,12 @@ export const auth = defineStore('auth',{
   namespaced: true,
   state: initialState,
   actions: {
-    login( user) {
+    login(user) {
       return AuthService.login(user).then(
         user => {
-          return Promise.resolve(user);
+          this.$state.status.loggedIn=true;
+          this.$state.user=user;
+          return Promise.resolve(user); 
         },
         error => {
           return Promise.reject(error);
@@ -20,7 +22,10 @@ export const auth = defineStore('auth',{
       );
     },
     logout() {
-      AuthService.logout();
+      AuthService.logout() 
+      this.$state.status.loggedIn=true;
+      this.$state.user=user;
+      
     },
     register(user) {
       return AuthService.register(user).then(
@@ -32,9 +37,7 @@ export const auth = defineStore('auth',{
         }
       );
     },
-    test(){
-      console.log('Its working')
-    }
+   
   },
   mutations: {
     loginSuccess(state, user) {

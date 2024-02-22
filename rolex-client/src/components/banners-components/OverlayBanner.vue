@@ -1,6 +1,11 @@
 <script setup>
-import storeCopy from '../../storeCopy.json';
+import {filename} from 'pathe/utils'
+import storeCopy from '../../storeCopy.json'
+
 const { type } = defineProps(["type"])
+
+
+
 
 const items = {
     "tudor": "watch",
@@ -46,10 +51,8 @@ function parseString(str) {
                 </h2>
             </header>
             <div>
-                <img class="w-full" :src="'/src/assets/routes-assets/banners/banner-' + type + '.webp'" :alt="type">
+                <img class="w-full" :src="`/assets/routes-assets/banners/banner-${type}.webp`" :alt="type">
             </div>
-
-
         </div>
         <div class="flex items-center justify-center py-20">
             <h2 class="w-3/4 text-center text-xl">
@@ -60,4 +63,6 @@ function parseString(str) {
 </template>
 
 <style scoped></style>
+
+
 

@@ -92,7 +92,7 @@ function activate(){
                 Borrar filtros
             </button>
 
-            <div id="estilo" :class="searchArgs[args][0]" class="my-6 flex flex-col gap-4">
+            <div id="estilo" :class="searchArgs[args][0]" class="my-6 flex flex-col gap-4 pb-4">
                 <h2 class="uppercase font-vilsuve font-bold text-md tracking-[.18em]">ESTILO</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
@@ -109,7 +109,7 @@ function activate(){
 
             </div>
 
-            <div id="size" :class="searchArgs[args][1]" class="my-6 flex flex-col gap-4">
+            <div id="size" :class="searchArgs[args][1]" class="my-6 flex flex-col gap-4 pb-4">
                 <h2 class="uppercase font-vilsuve font-bold   text-md tracking-[.18em]">Tamaño</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
@@ -133,7 +133,7 @@ function activate(){
 
             </div>
 
-            <div id="material" :class="searchArgs[args][2]" class="my-6 flex flex-col gap-4">
+            <div id="material" :class="searchArgs[args][2]" class="my-6 flex flex-col gap-4 pb-4">
                 <h2 class="uppercase font-vilsuve font-bold   text-md tracking-[.18em]">Material</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
@@ -169,7 +169,7 @@ function activate(){
 
             </div>
 
-            <div id="esfera" :class="searchArgs[args][3]" class="my-6 flex flex-col gap-4">
+            <div id="esfera" :class="searchArgs[args][3]" class="my-6 flex flex-col gap-4 pb-4">
                 <h2 class="uppercase font-vilsuve font-bold text-md tracking-[.18em]">Esfera</h2>
                 <div class="flex items-center gap-3 pl-2">
                     <input
@@ -206,9 +206,9 @@ function activate(){
             </div>
 
 
-            <div id="navigation">
-                <h2 class="uppercase font-vilsuve font-bold  text-md tracking-[.18em]">ver colecciones</h2>
-                <div class=" flex flex-col gap-2">
+            <div id="navigation" class="pt-4">
+                <h2 class="uppercase font-vilsuve font-bold  text-md tracking-[.18em] pb-4">ver colecciones</h2>
+                <div class=" flex flex-col gap-6">
                     <a class="text-base" href="/coleccion/1908">Rolex 1908</a>
                     <a class="text-base" href="/coleccion/air-king">Rolex AIR-KING</a>
                     <a class="text-base" href="/coleccion/cosmograph-daytona">Rolex COSMOGRAPH DAYTONA</a>

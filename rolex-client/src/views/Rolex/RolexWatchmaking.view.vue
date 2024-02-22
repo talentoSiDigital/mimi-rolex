@@ -54,11 +54,11 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </RolexHeader>
 
                 <div class="flex justify-center">
-                    <img src="../../assets/routes-assets/watchmaking/watchmaking-1.webp"
+                    <img src="/assets/routes-assets/watchmaking/watchmaking-1.webp"
                         alt="fundador-hans-wilsdorf">
                 </div>
 
-                <TwoSectionCard img-src="watchmaking/watchmaking-2.webp" alt-text="women-watchmaker" type="normal">
+                <TwoSectionCard img-src="watchmaking/watchmaking-2" alt-text="women-watchmaker" type="normal">
                     <template #title>
                         LOS VALORES FUNDAMENTALES DE LA MANUFACTURA ROLEX
                     </template>
@@ -74,7 +74,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                     <iframe src="https://www.youtube.com/embed/aHNEZg35ok8?si=gUxeirwi5sb3AfOv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
-                <TwoSectionCard img-src="watchmaking/watchmaking-3.webp" alt-text="rolex-daydate-gold" type="reverse">
+                <TwoSectionCard img-src="watchmaking/watchmaking-3" alt-text="rolex-daydate-gold" type="reverse">
                     <template #title>
                         LOS VALORES FUNDAMENTALES DE LA MANUFACTURA ROLEX
                     </template>
@@ -87,7 +87,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </TwoSectionCard>
 
 
-                <TwoSectionCard class="bg-black" img-src="watchmaking/watchmaking-4.webp" alt-text="rolex-superlative-certified" type="normal">
+                <TwoSectionCard class="bg-black" img-src="watchmaking/watchmaking-4" alt-text="rolex-superlative-certified" type="normal">
                     <template #title>
                         <span class="text-white">
                             
@@ -110,7 +110,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                     <iframe  src="https://www.youtube.com/embed/wclKW2Gprco?si=ZB0ycpT5OFfL5JBv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
-                <TwoSectionCard  img-src="watchmaking/watchmaking-5.webp" alt-text="rolex-brazalete-fabrica" type="normal">
+                <TwoSectionCard  img-src="watchmaking/watchmaking-5" alt-text="rolex-brazalete-fabrica" type="normal">
                     <template #title>
                             
                             INNOVATION IN MOTION
@@ -124,7 +124,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard  img-src="watchmaking/watchmaking-6.webp" alt-text="men-watchmaking" type="reverse">
+                <TwoSectionCard  img-src="watchmaking/watchmaking-6" alt-text="men-watchmaking" type="reverse">
                     <template #title>
                             
                         INTEGRACIÓN DE TODAS LAS ÁREAS DEL CONOCIMIENTO
@@ -135,10 +135,10 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                     </template>
 
 
-                </TwoSectionCard>
+                    </TwoSectionCard>
 
                 <div id="footer-banner">
-                    <img src="../../assets/routes-assets/banners/banner-2-watchmaking.webp" alt="banner-rolex-acero" class="w-full">
+                    <img src="/assets/routes-assets/banners/banner-2-watchmaking.webp" alt="banner-rolex-acero" class="w-full">
                 </div>
 
 

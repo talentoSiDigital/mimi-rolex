@@ -4,4 +4,7 @@ server/.env
 
 
 server/storage/
-server/LOCAL/
+server/app/views/
+
+
+

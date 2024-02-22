@@ -46,6 +46,7 @@ class Store {
     getRelojeriaDetails(id) {
         return http.get(`/relojeria/producto/${id}`)
     }
+    
     postNewRelojeria(data) {
         let formData = new FormData();
         let tableContent = []

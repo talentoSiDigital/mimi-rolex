@@ -1,5 +1,7 @@
 <script setup>
+import { filename } from 'pathe/utils'
 const {name} = defineProps(["name"])
+
 
 const refLinks = {
     "cosmograph-daytona":"https://www.rolex.com/watches/new-watches/new-cosmograph-daytona?cmpid=www.mimijoyeria.com_watchgrid-new_watches_corner",
@@ -11,12 +13,15 @@ const refLinks = {
     "oyster-perpetual":"https://www.rolex.com/watches/new-watches/new-oyster-perpetual?cmpid=www.mimijoyeria.com_watchgrid-new_watches_corner",
     "day-date":"https://www.rolex.com/watches/new-watches/new-day-date-36?cmpid=www.mimijoyeria.com_watchgrid-new_watches_corner"
 }
+
+
+
 </script>
 
 <template>
     <div id="new-model-card" class="w-[95%]">
         <a :href="refLinks['cosmograph-daytona']" target="_blank">
-            <img :src="'/src/assets/routes-assets/nuevos-modelos/' + name+ '-cover.webp'" :alt="`${name}-cover`" class="w-full">
+            <img :src="`/assets/routes-assets/nuevos-modelos/${name}-cover.webp`" :alt="`${name}-cover`" class="w-full">
         <h3 class="text-neutral-700 font-bold uppercase my-4 w-1/2">{{ name }}</h3>
         </a>
     </div>

@@ -30,7 +30,6 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 
         <section>
             <div v-if="isReady">
-                <!-- <p>{{ state[0] }}</p> -->
                 <div v-if="state.length == 0" class="flex justify-center items-center h-52">
                     <h1 class="font-semibold">Lo sentimos, no hay productos que coincidan con su búsqueda.</h1>
                 </div>

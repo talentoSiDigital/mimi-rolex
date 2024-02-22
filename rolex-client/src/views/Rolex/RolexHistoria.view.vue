@@ -24,7 +24,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </RolexHeader>
 
 
-                <TwoSectionCard  img-src="historia/historia-1.webp" alt-text="tienda-mimi-joyeria" type="normal">
+                <TwoSectionCard   img-src="historia/historia-1" alt-text="tienda-mimi-joyeria" type="normal">
                     <template #title>
                         DESDE 1982
                     </template>
@@ -42,7 +42,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard img-src="historia/historia-2.webp" alt-text="tienda-mimi-joyeria-antes" type="reverse">
+                <TwoSectionCard  img-src="historia/historia-2" alt-text="tienda-mimi-joyeria-antes" type="reverse">
 
                     <template #title>
                         ROLEX EN MIMI JOYERÍA
@@ -59,7 +59,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard img-src="historia/historia-3.webp" alt-text="tienda-mimi-joyeria-actual" type="normal">
+                <TwoSectionCard  img-src="historia/historia-3" alt-text="tienda-mimi-joyeria-actual" type="normal">
 
                     <template #title>
                         MIMI JOYERÍA SIEMPRE PRESENTE
@@ -89,10 +89,10 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 
                 <section class=" h-[300px] w-full overflow-hidden bg-black mb-36
                  relative">
-                    <img src="../../assets/routes-assets/historia/historia-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
+                    <img src="/assets/routes-assets/historia/historia-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
                     <header class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
                     
-                        <h1 class="text-2xl  text-center  py-4">
+                        <h1 class="text-xl md:text-2xl  text-center  py-4">
                             YA SON CUARENTA AÑOS DE EXPERIENCIA, CONSTANCIA Y DEDICACIÓN, QUE RESPALDAN NUESTRO COMPROMISO COMO DISTRIBUIDORES ROLEX , BRINDANDO UNA EXCELENTE EXPERIENCIA DE COMPRA.
                         </h1>
                     

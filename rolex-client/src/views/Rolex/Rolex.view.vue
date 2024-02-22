@@ -29,7 +29,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                     Bienvenido a Mimi Joyería
                 </template>
                 <template #title>
-                    DISTRIBUIDOR OFICIAL DE <br /> EN CARACAS
+                    DISTRIBUIDOR OFICIAL DE ROLEX EN CARACAS
                 </template>
                 <template #text>
                     Los relojes Rolex son creados a partir de las mejores materias primas y montados con escrupulosa
@@ -38,7 +38,6 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                 </template>
 
             </RolexHeader>
-
 
 
 
@@ -76,7 +75,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
             </section>
 
             <section class="flex flex-col justfy-center items-center mt-32">
-                <img src="../../assets/routes-assets/chairs.webp" alt="rolex table" class="w-1/2">
+                <img src="/assets/routes-assets/chairs.webp" alt="rolex table" class="w-1/2">
 
 
                 <header class="flex flex-col justify-center items-center text-neutral-700 h-fit mt-8 mb-6">
@@ -84,7 +83,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                     <h1 class="text-4xl text-center py-8 px-5 md:px-0  ">
                         VISÍTENOS EN NUESTRO PUNTO DE VENTA
                     </h1>
-                    <p class="w-2/3 md:w-1/2 text-center font-normal">
+                    <p class="w-2/3 md:w-1/2 text-justify md:text-center font-normal">
 
                         Mimi Joyería se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex,
                         autorizados para vender y realizar el mantenimiento de los relojes Rolex. En Mimi Joyería, estamos a
@@ -94,7 +93,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                         Oficial
                         Rolex ya que solo vende relojes Rolex oficiales.
                     </p>
-                    <RouterLink to="/contactenos" class="duration-300 mt-4 border px-10 py-2 bg-rolex-green rounded-3xl border-white text-white hover:bg-white hover:text-rolex-green hover:border-rolex-green ">
+                    <RouterLink to="/contactenos" class="duration-300 mt-4 w-1/5 text-center border  py-2 bg-rolex-green rounded-3xl border-white text-white hover:bg-white hover:text-rolex-green hover:border-rolex-green ">
                         Póngase en contacto con nosotros
                     </RouterLink>
                 </header>
@@ -103,5 +102,3 @@ const { isLoading, state, isReady, execute } = useAsyncState(
     </RolexTemplate>
 </template>
 
-
-../../services/rolexDataService

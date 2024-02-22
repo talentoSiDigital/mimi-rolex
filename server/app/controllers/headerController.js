@@ -5,7 +5,7 @@ const uploadFile = require("../middleware/headerUpload")
 
 
 
-const storagePath = require('path').resolve(__dirname, '..', '..', 'storage', 'header-slider')
+
 
 
 // Retrieve all Tutorials from the database.

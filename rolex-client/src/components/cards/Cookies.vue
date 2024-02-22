@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onUnmounted, watchEffect } from "vue";
+import { computed, ref, watchEffect } from "vue";
 import { useCookies } from '@vueuse/integrations/useCookies'
 import {useRoute} from 'vue-router'
 import routerFile from '../../router'
@@ -16,6 +16,7 @@ const cookies = useCookies()
 if(cookies.get('rlx-consent') === undefined) {
     cookies.set('rlx-consent','false')
 }
+
 
 function checkCookies() {
     if (cookies.get('rlx-consent') && router.name.includes('rolex')) {
@@ -47,9 +48,8 @@ watchEffect(()=>{
 </script>
 
 <template>
-    <section class="absolute w-full h-screen top-0 z-0">
-        <div :class="isOpenUp" class="fixed z-10 h-fit duration-500">
-            <div class=" h-[60vh] relative  w-full flex flex-col justify-end items-center">
+        <div :class="isOpenUp" class="fixed z-30 h-fit duration-500">
+            <div class=" h-[60vh] relative  w-full flex flex-col justify-end items-center z-10">
                 <div class="h-1/6 flex justify-end w-full mr-16">
                     <div class=" group border-l border-r border-t rounded-t-md shadow-md shadow-rolex-green border-rolex-green cursor-pointer p-4 fixed flex items-center gap-2 bg-white  hover:text-rolex-green duration-100 h-[4.5rem]"
                         @click="openUp">
@@ -60,7 +60,7 @@ watchEffect(()=>{
 
                 <div id="content" class="border-2 bg-white border-rolex-green h-4/5 w-full relative flex flex-col md:flex-row items-center">
                     <div class="md:w-2/3 overflow-y-scroll md:overflow-y-hidden border h-3/5 md:h-full flex flex-col justify-start md:justify-center items-center" >
-                        <img src="../../assets/mimi-logo.png" alt="Logo mimi joyeria" class="w-32">
+                        <img src="/assets/mimi-logo.png" alt="Logo mimi joyeria" class="w-32">
                         <h2 class="w-10/12 text-justify text-xs md:text-sm">Para brindar las mejores experiencias, utilizamos tecnologías como cookies para almacenar y/o
                             acceder a información del dispositivo. Dar su consentimiento a estas tecnologías nos permitirá
                             procesar datos como el comportamiento de navegación o identificaciones únicas en este sitio. No
@@ -78,7 +78,6 @@ watchEffect(()=>{
 
             </div>
         </div>
-    </section>
 </template>
 
 

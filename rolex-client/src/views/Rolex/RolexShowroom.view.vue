@@ -33,7 +33,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </RolexHeader>
 
                 <div class="flex justify-center">
-                    <img src="../../assets/routes-assets/showroom/showroom-1.webp" alt="rolex-reloj-guante-blanco-joyeria">
+                    <img src="/assets/routes-assets/showroom/showroom-1.webp" alt="rolex-reloj-guante-blanco-joyeria">
                 </div>
 
                 <RolexHeader>
@@ -50,7 +50,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </RolexHeader>
 
-                <TwoSectionCard class="bg-neutral-900" img-src="showroom/showroom-2.webp"
+                <TwoSectionCard class="bg-neutral-900" img-src="showroom/showroom-2"
                     alt-text="rolex-display-fondo-blanco" type="reverse">
                     <template #title>
                         <span class="text-white">LOS MEJORES MODELOS ROLEX</span>
@@ -75,7 +75,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </TwoSectionCard>
 
 
-                <TwoSectionCard img-src="showroom/showroom-3.webp" alt-text="rolex-display-fondo-oyster" type="normal">
+                <TwoSectionCard img-src="showroom/showroom-3" alt-text="rolex-display-fondo-oyster" type="normal">
                     <template #title>
 
                         VISITA EL CATÁLOGO DIGITAL
@@ -93,7 +93,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard img-src="showroom/showroom-4.webp" alt-text="rolex-logo-oro-amarillo" type="reverse">
+                <TwoSectionCard img-src="showroom/showroom-4" alt-text="rolex-logo-oro-amarillo" type="reverse">
                     <template #title>
                         RELOJES DE LUJO ATEMPORALES
                     </template>
@@ -109,7 +109,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard img-src="showroom/showroom-5.webp" alt-text="rolex-logo-oro-amarillo" type="normal">
+                <TwoSectionCard img-src="showroom/showroom-5" alt-text="rolex-logo-oro-amarillo" type="normal">
                     <template #title>
                         C.C. TOLÓN FASHION MALL
                     </template>
@@ -150,7 +150,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 <section class=" h-[300px] w-full overflow-hidden bg-black mb-36
                  relative">
-                    <img src="../../assets/routes-assets/showroom/showroom-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
+                    <img src="/assets/routes-assets/showroom/showroom-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
                     <header class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
                     
                         <h1 class="text-2xl  text-center  py-4">

@@ -13,7 +13,7 @@ function reload() {
     <main class="w-full flex flex-col justify-center items-center gap-6 my-4 h-fit py-4">
         <h1 class="text-3xl font-bold">500</h1>
         <h2 class="text-xl">Error en busqueda</h2>
-        <img src="../../assets/mimi-logo.png" alt="logo-mimi">
+        <img src="/assets/mimi-logo.png" alt="logo-mimi">
         <p>El servidor arrojó el error 500, el cual significa que la página a la cual intentas acceder, tuvó un error al cargar. </p>
         <p>Pulsa el botón para intentarlo de nuevo </p>
 

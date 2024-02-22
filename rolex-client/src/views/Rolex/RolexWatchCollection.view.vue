@@ -14,7 +14,8 @@ import ServerError from '../../components/cards/ServerError.vue'
 
 
 const route = useRoute()
-const currentRoute = ref(route.params.id)
+const currentRoute = route.params.id
+console.log(currentRoute)
 
 const currentPage = ref(1)
 const totalPages = ref(1)
@@ -37,7 +38,7 @@ const itemsRange = {
 }
 
 let { isLoading, state, isReady, execute } = useAsyncState(
-    RolexDataServices.getByCollection(currentRoute.value)
+    RolexDataServices.getByCollection(currentRoute)
         .then((d) => {
             totalPages.value = Math.ceil(d.data.watches.length / 18)
             const checkIfMobile = computed(() => {
@@ -60,13 +61,7 @@ function changePage(page) {
 
 }
 
-
-
-
-
 watch(searchParams.value, () => {
-
-
     for (const item of state.value) {
         for (const key in searchParams.value) {
             if (searchParams.value[key] !== "") {
@@ -90,10 +85,6 @@ watch(searchParams.value, () => {
 
 
 })
-
-
-
-
 
 
 </script>

@@ -62,11 +62,11 @@ import { RouterLink } from "vue-router";
 <!-- <RouterLink to="/">
 </RouterLink> -->
 
-<footer class="bg-main-green rounded-lg shadow">
+<footer class="bg-main-green rounded-lg shadow relative z-40">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between">
             <RouterLink to="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="../../assets/mimi-logo.png" class="h-14" alt="Mimi joyeria Logo" />
+                <img src="/assets/mimi-logo.png" class="h-14" alt="Mimi joyeria Logo" />
             </RouterLink>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-800 sm:mb-0 ">
                 <li>

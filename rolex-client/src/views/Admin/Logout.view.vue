@@ -12,7 +12,7 @@ function handleLogout() {
     piniaStore.logout()
     router.push("/")
 }
-// handleLogout()
+handleLogout()
 
 </script>
 

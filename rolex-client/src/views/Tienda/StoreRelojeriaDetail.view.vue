@@ -41,7 +41,7 @@ function sendMessage(state) {
 </script>
 
 <template>
-    <main class="bg-neutral-100 font-montserrat text-neutral-700">
+    <main class="bg-neutral-100 font-montserrat text-neutral-700 flex ">
         <div v-if="isReady">
 
             <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full h-32">
@@ -55,11 +55,11 @@ function sendMessage(state) {
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             </div>
 
-            <section class="flex flex-col items-start md:flex-row px-10 ">
+            <section class="flex flex-col items-center md:items-start md:flex-row px-10 ">
                 <div id="carousel" class="md:w-1/2 flex flex-col items-center gap-3">
                     <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                         <slide v-for="(slide, index) in state[0].cantidadImagenes + 1" :key="index">
-                            <img :src="state[0].img[index - 1]" :alt="slide.serie" class="w-3/4 bg-white">
+                            <img :src="state[0].img[index - 1]" :alt="slide.serie" class="w-1/2 md:w-3/4 bg-white">
                         </slide>
 
                     </carousel>
@@ -69,7 +69,7 @@ function sendMessage(state) {
                             <div class="hover:bg-gray-400" :class="[index == currentSlide + 1 ? 'bg-gray-400' : 'bg-white']"
                                 v-for="(slide, index) in state[0].cantidadImagenes" :key="index">
                                 <div class="cursor-pointer" @click="currentSlide = index + 1">
-                                    <img :src="state[0].img[index]" :alt="slide.serie" class="w-20">
+                                    <img :src="state[0].img[index]" :alt="slide.serie" class="w-10 md:w-20">
 
                                 </div>
                             </div>

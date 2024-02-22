@@ -22,7 +22,7 @@ function collapseNav() {
                         d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </div>
-            <img src="../../assets/rolex-retailer.webp" alt="tudor-retailer-badge" class="w-18 md:w-24    ">
+            <img src="/assets/rolex-retailer.webp" alt="tudor-retailer-badge" class="w-18 md:w-24    ">
 
 
             <router-link to="/rolex"

@@ -7,14 +7,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 const piniaStore = auth()
 
-if (!piniaStore.$state.status.loggedIn) {
-    router.push("/login")
-}
-
 
 const currentUser = computed(() => {
     return piniaStore.$state.user
 })
+
 </script>
 
 <template>
@@ -37,7 +34,7 @@ const currentUser = computed(() => {
                 <li>
                     <RouterLink to="/dashboard/banner-edit" class="hover:underline">
                         <p>Editar banner principal</p>
-                    </RouterLink>
+                     </RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/dashboard/agregar-relojeria" class="hover:underline">

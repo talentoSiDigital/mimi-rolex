@@ -38,16 +38,16 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </RolexHeader>
 
                 <div class="flex justify-center">
-                    <img src="../../assets/routes-assets/mantenimiento/mantenimiento-1.webp"
+                    <img src="/assets/routes-assets/mantenimiento/mantenimiento-1.webp"
                         alt="rolex-reloj-guante-blanco-joyeria">
                 </div>
 
-                <header class="text-center flex flex-col justify-center items-center my-20 text-neutral-600">
-                    <h1 class="text-4xl py-8 ">
+                <header class=" text-center flex flex-col justify-center items-center my-20 text-neutral-600 ">
+                    <h1 class="text-2xl md:text-4xl py-8 w-2/3 md:w-full ">
                         DÉJESE ACONSEJAR POR UN EXPERTO
 
                     </h1>
-                    <p class="font-normal w-4/6">
+                    <p class="font-normal w-4/6 text-justify md:text-center">
                         Al pasar muchos años entre un mantenimiento y otro, su reloj merece la mayor de las atenciones. Como
                         Distribuidor Oficial Rolex, Mimi Joyería puede hacerse cargo de su reloj Rolex para su
                         mantenimiento. Gracias a nuestros conocimientos, destreza y savoir-faire, estamos a su disposición
@@ -56,13 +56,13 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </header>
 
                 <section class="flex bg-black text-white mb-10 flex-col  md:flex-row">
-                    <img src="../../assets/routes-assets/mantenimiento/mantenimiento-2.webp" alt="tecnico-arreglando-rolex"
+                    <img src="/assets/routes-assets/mantenimiento/mantenimiento-2.webp" alt="tecnico-arreglando-rolex"
                         class="w-full md:w-1/2">
                     <header class="flex flex-col justify-center items-center p-20">
-                        <h1 class="text-3xl pb-4 ">
+                        <h1 class="text-2xl md:text-4xl pb-4 ">
                             EL MANTENIMIENTO DE SU ROLEX EN MIMI JOYERÍA
                         </h1>
-                        <p class=" font-normal">
+                        <p class=" font-normal text-justify  md:text-center">
                             Mimi Joyería forma parte de nuestra red mundial de relojeros formados por Rolex. El
                             procedimiento de mantenimiento de Rolex está diseñado para garantizar que todas y cada una de
                             las piezas que abandonan un taller Rolex cumplan con sus especificaciones estéticas y
@@ -74,10 +74,11 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 </section>
 
 
-                <TwoSectionCard img-src="mantenimiento/mantenimiento-3.webp" alt-text="mantenimiento-rolex-1" type="reverse">
+                <TwoSectionCard img-src="mantenimiento/mantenimiento-3" alt-text="mantenimiento-rolex-1" type="reverse">
                     <template #optional>
-                        <img src="/src/assets/routes-assets/mantenimiento/Rolex-service-plaque.webp"
-                            alt="rolex-service-plaque" class="mb-8">
+                        <div class="w-full flex justify-center md:justify-start">
+                            <img src="/assets/routes-assets/mantenimiento/Rolex-service-plaque.webp" alt="rolex-service-plaque" class="w-24 mb-8">
+                        </div>
                     </template>
                     <template #title>
                         SU CENTRO DE SERVICIO AUTORIZADO
@@ -95,7 +96,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
               
 
                 
-                <TwoSectionCard img-src="mantenimiento/mantenimiento-4.webp" alt-text="tecnico-arreglando-rolex" type="normal">
+                <TwoSectionCard img-src="mantenimiento/mantenimiento-4" alt-text="tecnico-arreglando-rolex" type="normal">
                     
                     <template #title>
                         PROCEDIMIENTO DE MANTENIMIENTO DE ROLEX
@@ -109,7 +110,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 </TwoSectionCard>
 
-                <TwoSectionCard img-src="mantenimiento/mantenimiento-5.webp" alt-text="rolex-international-service-guaranty-card" type="reverse">
+                <TwoSectionCard img-src="mantenimiento/mantenimiento-5" alt-text="rolex-international-service-guaranty-card" type="reverse">
                     
                     <template #title>
                         LA GARANTÍA DE MANTENIMIENTO DE DOS AÑOS
@@ -126,7 +127,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
 
                 <section class=" h-[300px] w-full overflow-hidden bg-black mb-36
                  relative">
-                    <img src="../../assets/routes-assets/mantenimiento/mantenimiento-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
+                    <img src="/assets/routes-assets/mantenimiento/mantenimiento-overlay.webp" alt="mantenimiento-rolex-mimi" class="h-full w-full">
                     <header class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
                         <p class="w-1/2 text-center font-normal">
                             Mantenimiento Rolex

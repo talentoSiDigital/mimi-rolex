@@ -16,7 +16,7 @@ import ServerError from '../../components/cards/ServerError.vue'
 const windowWidth = ref(window.innerWidth)
 const currentSlide = ref(0)
 const route = useRoute()
-const currentRoute = ref(route.params.id)
+const currentRoute = route.params.id
 
 
 const breakpoints = {
@@ -55,14 +55,12 @@ const breakpoints2 = {
         snapAlign: 'start',
     }
 }
-  
+
 let { isLoading, state, isReady, execute } = useAsyncState(
-    RolexDataServices.getDetailedWatch(currentRoute.value)
+    RolexDataServices.getDetailedWatch(currentRoute)
         .then((d) => {
-            console.log(d.data)
             return d.data
         })
-
 )
 
 function addComma(price) { return `${price.slice(0, price.length - 3)},${price.slice(price.length - 3, price.length)}` }
@@ -129,7 +127,7 @@ function getResponsiveColors(colors) {
 
 
                             <div class="md:text-white  w-full md:w-1/2 flex flex-col items-center justify-center md:ml-32 ">
-                                <header class=" text-center md:text-left">
+                                <header class=" text-center md:text-left w-full">
                                     <h2 class="">Rolex</h2>
                                     <h2 class=" text-4xl my-4 font-vilsuve font-bold">{{ state.getAll.nombre }}</h2>
                                     <h2 class="font-arial-light">{{ state.getAll.cajaDelModelo }}</h2>
@@ -138,7 +136,7 @@ function getResponsiveColors(colors) {
                                         modelo</a>
                                 </header>
 
-                                <div id="info" class=" hidden md:block ">
+                                <div id="info" class=" hidden md:block w-full">
                                     <div class="flex items-center gap-4 my-6  ">
                                         <a href="#"
                                             class="group border border-white w-10 h-10 p-3 rounded-full flex hover:bg-white duration-200">
@@ -167,7 +165,7 @@ function getResponsiveColors(colors) {
                                             v-for="item in state.details[0].sliderImg" :key="item">
                                             <div @click="currentSlide = item - 1">
                                                 <img :src="state.details[1].img[item - 1]"
-                                                    :alt="state.details[1].img[item - 1]" class="w-40">
+                                                    :alt="state.details[1].img[item - 1]" class="w-32">
                                             </div>
                                         </div>
 
@@ -276,7 +274,7 @@ function getResponsiveColors(colors) {
                         </section>
 
                         <section class="bg-[#f8f8f8] flex flex-col justify-center items-center">
-                            <img src="../../assets/routes-assets/scarcity-corners.png" alt="rolex-corner"
+                            <img src="/assets/routes-assets/scarcity-corners.png" alt="rolex-corner"
                                 class="w-1/2 md:w-1/3 py-20">
                             <h1 class="block  text-3xl scale-x-[1] scale-y-[0.8] pb-6 w-1/2 md:w-full text-center">
                                 DISPONIBILIDAD DEL MODELO</h1>
@@ -329,28 +327,31 @@ function getResponsiveColors(colors) {
                         </section>
 
 
-                        <section v-if="state.collection[0].hasVideo">
-                            <div class="h-[50vh] md:h-screen flex justify-center">
-                                <div class="aspect-w-16 w-full md:w-3/4 h-full">
-                                    <iframe :src="state.collection[0].video" title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
+                        <div v-if="state.collection[0] != undefined">
+                            <section v-if="state.collection[0].hasVideo">
+                                <div class="h-[50vh] md:h-screen flex justify-center">
+                                    <div class="aspect-w-16 w-full md:w-3/4 h-full">
+                                        <iframe :src="state.collection[0].video" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                                <div class="flex flex-col items-center justify-center my-10 ">
+                                    <h2 class="font-arial-bold font-bold text-justify md:text-center w-10/12 md:w-2/3 ">{{
+                                        state.collection[0].text }}</h2>
                                 </div>
 
-                            </div>
-                            <div class="flex flex-col items-center justify-center my-10 ">
-                                <h2 class="font-arial-bold font-bold text-justify md:text-center w-10/12 md:w-2/3 ">{{
-                                    state.collection[0].text }}</h2>
-                            </div>
-
-                        </section>
+                            </section>
+                        </div>
 
 
                         <section class="group relative h-fit overflow-hidden">
                             <header
                                 class=" absolute z-10  bg-opaco w-full h-full flex flex-col justify-center items-center text-white">
                                 <h2>{{ state.collection[0].nombre }}</h2>
-                                <h1 class="block text-left text-4xl py-8">{{ state.collection[0].subHeader }}</h1>
+                                <h1 class="block text-left text-2xl md:text-4xl py-8">{{ state.collection[0].subHeader }}</h1>
 
                                 <router-link :to="{ name: 'coleccion-rolex' }"
                                     class="border border-white px-8 py-2 rounded-3xl group-hover:bg-white group-hover:text-rolex-green duration-700">
@@ -394,19 +395,20 @@ function getResponsiveColors(colors) {
 
                                     </template>
                                 </carousel>
-                        </div>
-                    </section>
-               
-                    
+                            </div>
+                        </section>
+
+
                     </div>
 
-                    <ServerError v-else/>
+                    <ServerError v-else />
                 </div>
 
 
 
-        </template>
-    </RolexTemplate>
+            </template>
+        </RolexTemplate>
 
-</div></template>
+    </div>
+</template>
 

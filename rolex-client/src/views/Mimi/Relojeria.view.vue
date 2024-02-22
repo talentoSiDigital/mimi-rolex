@@ -7,7 +7,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
     <div id="relojeria">
         <PageBanner type="relojeria"/>
 
-        <OverlaySection img-src="relojeria/longines.webp" alt-text="reloj-longines-azul" type="normal">
+        <OverlaySection img-src="relojeria/longines" alt-text="reloj-longines-azul" type="normal">
             <template #title>
                 COLECCIÓN LONGINES
             </template>
@@ -21,7 +21,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="relojeria/tissot.webp" alt-text="reloj-tissot-rojo" type="reverse">
+        <OverlaySection img-src="relojeria/tissot" alt-text="reloj-tissot-rojo" type="reverse">
             <template #title>
                 COLECCIÓN TISSOT
             </template>
@@ -35,7 +35,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="relojeria/victorinox.webp" alt-text="reloj-victorinox-negro" type="normal">
+        <OverlaySection img-src="relojeria/victorinox" alt-text="reloj-victorinox-negro" type="normal">
             <template #title>
                 COLECCIÓN VICTORINOX
             </template>

@@ -1,8 +1,9 @@
 <script setup>
+import { ref } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
+import {filename} from 'pathe/utils'  
+
 
 const currentSlide = ref(0)
 
@@ -27,49 +28,49 @@ const breakpoints = {
 
 const sliderItems = [
     {
-        "src": "rolex-mimi.webp",
+        "src": "rolex-mimi",
         "link": "/rolex",
         "alt": "Rolex-en-mimi",
         "title": "Rolex en Mimi"
 
     },
     {
-        "src": "coleccion-rolex.webp",
+        "src": "coleccion-rolex",
         "link": "/coleccion-rolex",
         "alt": "Coleccion-Rolex",
         "title": "Coleccion Rolex"
 
     },
     {
-        "src": "nuevos-modelos.webp",
+        "src": "nuevos-modelos",
         "link": "/nuevos-modelos-2023",
         "alt": "Rolex-nuevos-modelos",
         "title": "Nuevos modelos 2023"
 
     },
     {
-        "src": "mantenimiento.webp",
+        "src": "mantenimiento",
         "link": "/mantenimiento-rolex",
         "alt": "Rolex-mantenimiento",
         "title": "Mantenimiento Rolex"
 
     },
     {
-        "src": "historia.webp",
+        "src": "historia",
         "link": "/historia",
         "alt": "historia-mimi-joyeria",
         "title": "Historia Mimi joyería"
 
     },
     {
-        "src": "showroom.webp",
+        "src": "showroom",
         "link": "/showroom",
         "alt": "showroom-mimi-joyeria",
         "title": "Showroom"
 
     },
     {
-        "src": "contacto.webp",
+        "src": "contacto",
         "link": "/contactenos",
         "alt": "contacto-mimi-joyeria",
         "title": "Contacto"
@@ -77,6 +78,7 @@ const sliderItems = [
     }
 
 ]
+
 
 
 
@@ -89,7 +91,7 @@ const sliderItems = [
             <carousel :breakpoints="breakpoints" :wrap-around="true" v-model="currentSlide" :autoplay="2000">
                 <slide v-for="slide in sliderItems" :key="slide">
                     <router-link :to="slide.link">
-                        <img :src="'/src/assets/routes-assets/rolex-slider/' + slide.src" :alt="slide.alt">
+                        <img :src="`/assets/routes-assets/rolex-slider/${slide.src}.webp`" :alt="slide.alt">
                         <h2>{{ slide.title }}</h2>
                     </router-link>
                 </slide>

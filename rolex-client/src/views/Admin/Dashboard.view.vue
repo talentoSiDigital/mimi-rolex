@@ -1,28 +1,35 @@
 <script setup>
-import { ref, computed } from "vue";
-import router from '../../router'
-import { auth } from '../../store/auth.module'
-import { RouterLink, RouterView } from 'vue-router'
-import PageBanner from '../../components/banners-components/PageBanner.vue'
+import { storeToRefs } from 'pinia';
+import { computed, ref } from "vue";
+import { RouterView } from 'vue-router';
+import PageBanner from '../../components/banners-components/PageBanner.vue';
+import router from '../../router';
+import { auth } from '../../store/auth.module';
 const piniaStore = auth()
+const isUserLogged = storeToRefs(piniaStore)
 
-if (!piniaStore.$state.status.loggedIn) {
-    router.push("/login")
+
+if (!isUserLogged.status.value.loggedIn) {
+    router.push("/")
 }
-
 const logginOut = ref(false)
 
 const currentUser = computed(() => {
-    return piniaStore.$state.user
+    return isUserLogged.user.value
+
 })
+
+
 
 
 function handleLogout() {
     logginOut.value = true
     piniaStore.logout()
     router.push("/")
-
 }
+
+
+
 // handleLogout()
 
 
@@ -30,8 +37,8 @@ function handleLogout() {
 </script>
 
 <template>
-    <main class="bg-neutral-100">
-    
+    <main class="bg-neutral-100" v-if="isUserLogged.status.value.loggedIn">
+
         <div v-if="!logginOut">
             <PageBanner type="joyeria" />
 
@@ -40,10 +47,14 @@ function handleLogout() {
             </RouterView>
 
             <div class="flex items-center justify-center py-8">
-                <button @click="handleLogout"
+                <a href="/logout" 
                     class="w-1/3 border border-main-green text-black bg-main-green hover:bg-white  font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
                     Cerrar Sesión
-                </button>
+                </a>
+                <!-- <button @click="handleLogout"
+                    class="w-1/3 border border-main-green text-black bg-main-green hover:bg-white  font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
+                    Cerrar Sesión
+                </button> -->
             </div>
         </div>
 

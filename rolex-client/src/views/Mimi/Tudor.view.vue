@@ -28,11 +28,11 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </p>
             <div id="button" class="relative  py-2 px-14 bg-red-700">
                 <div class="py-4 px-6 border"></div>
-                <a href="#"
+                <router-link to="/relojeria/tudor"
                     class="w-full h-full inset-0 absolute flex items-center justify-center gap-1  border bg-white border-red-700 hover:-translate-x-1 hover:-translate-y-1 duration-200">
                     <p class="text-sm font-tudor tracking-tighter  ">VER COLECCIÓN</p>
                     <font-awesome-icon :icon="['fas', 'arrow-right']" />
-                </a>
+                </router-link>
             </div>
         </header>
 
@@ -43,7 +43,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             <h1 class="text-4xl py-4 text-center font-tudor tracking-tighter ">
                 INTUICIÓN DE HANS WILSDORF
             </h1>
-            <img class="mb-4 w-1/2" src="../../assets/routes-assets/tudor/tudor-1.webp" alt="tudor-mosaico">
+            <img class="mb-4 w-1/2" src="/assets/routes-assets/tudor/tudor-1.webp" alt="tudor-mosaico">
             <p class="w-3/4 text-center">«Llevaba muchos años considerando la idea de crear relojes que nuestros
                 distribuidores pudieran vender a un precio un poco más bajo que el de nuestros Rolex, pero alcanzando los
                 mismos niveles de confianza por los que Rolex es reconocido en todo el mundo. Por eso decidí fundar una
@@ -84,7 +84,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                     <iframe src="https://www.youtube.com/embed/t0ZU3FoQ0Io?si=eTA7KBN88LYBD1gx" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>../../assets/routes-assets
+                        allowfullscreen></iframe>/assets/routes-assets
                 </div>
             </div>
 
@@ -92,7 +92,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
         </section>
 
         <section class="flex flex-col md:flex-row-reverse justify-around items-center p-10 w-full">
-            <img src="../../assets/routes-assets/tudor/tudor-2.webp" alt="david-beckham">
+            <img src="/assets/routes-assets/tudor/tudor-2.webp" alt="david-beckham">
             <header class="md:w-[40%]">
                 <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
                 <h1 class="text-4xl py-4 font-tudor tracking-tighter ">DAVID BECKHAM</h1>
@@ -106,7 +106,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
         </section>
 
         <section class="flex flex-col md:flex-row justify-around items-center p-10 w-full">
-            <img src="../../assets/routes-assets/tudor/tudor-3.webp" alt="jay-chou">
+            <img src="/assets/routes-assets/tudor/tudor-3.webp" alt="jay-chou">
             <header class="md:w-[40%]">
                 <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
                 <h1 class="text-4xl py-4 font-tudor tracking-tighter ">JAY CHOU</h1>
@@ -120,7 +120,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
         </section>
 
         <section class=" h-[300px] w-full overflow-hidden bg-black relative">
-            <img src="../../assets/routes-assets/tudor/tudor-overlay.webp" alt="tudor-banner" class="h-full w-full">
+            <img src="/assets/routes-assets/tudor/tudor-overlay.webp" alt="tudor-banner" class="h-full w-full">
             <header
                 class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
 
@@ -133,7 +133,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
         </section>
 
         <section class="pb-16 w-full overflow-hidden gap-6 bg-black relative flex flex-col justify-center items-center">
-            <img src="../../assets/tudor-logo.webp" alt="tudor-logo" class="w-32">
+            <img src="/assets/tudor-logo.webp" alt="tudor-logo" class="w-32">
             <header
                 class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-black bg-opacity-40 ">
 

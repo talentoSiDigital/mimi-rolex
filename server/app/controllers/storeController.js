@@ -3,7 +3,7 @@ const Store = db.store;
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
-const storagePath = require('path').resolve(__dirname, '..', '..', 'storage', 'store-products')
+const storagePath = process.env.IMGPATH
 
 
 function truncExtension(text) { return text.split('.')[0] }
@@ -86,7 +86,7 @@ exports.findJ = (req, res) => {
         .then(data => {
 
             for (let index = 0; index < data.length; index++) {
-                data[index].dataValues.img = `${process.env.LOCALPATH}store-products/${data[index].dataValues.serie}-1.webp`
+                data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }
             res.send(data)
 
@@ -119,8 +119,8 @@ exports.findDetailJ = (req, res) => {
         .then(data => {
             data[0].dataValues.img = []
 
-            data[0].dataValues.img.push(`${process.env.LOCALPATH}store-products/${data[0].dataValues.serie}-1.webp`)
-            data[0].dataValues.img.push(`${process.env.LOCALPATH}store-products/${data[0].dataValues.serie}-2.webp`)
+            data[0].dataValues.img.push(`${storagePath}/store-products/${data[0].dataValues.serie}-1.webp`)
+            data[0].dataValues.img.push(`${storagePath}/store-products/${data[0].dataValues.serie}-2.webp`)
 
             res.send(data)
 
@@ -215,7 +215,7 @@ exports.findR = (req, res) => {
     })
         .then(data => {
             for (let index = 0; index < data.length; index++) {
-                data[index].dataValues.img = `${process.env.LOCALPATH}store-products/${data[index].dataValues.serie}-1.webp`
+                data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }
             res.send(data)
 
@@ -251,7 +251,7 @@ exports.findDetailR = (req, res) => {
             data[0].dataValues.img = []
 
             for (let index = 1; index <= data[0].dataValues.cantidadImagenes; index++) {
-                data[0].dataValues.img.push(`${process.env.LOCALPATH}store-products/${data[0].dataValues.serie}-${index}.webp`)
+                data[0].dataValues.img.push(`${storagePath}/store-products/${data[0].dataValues.serie}-${index}.webp`)
             }
             res.send(data)
 

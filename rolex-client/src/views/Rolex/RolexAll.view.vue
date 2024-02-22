@@ -133,7 +133,6 @@ watch(searchParams.value, () => {
                     <main class="flex flex-col md:flex-row">
                         <SearchBar v-model="searchParams" args="all" />
 
-
                         <section id="watch" class="flex flex-col justify-start items-center w-full">
                             <div id="rolex-container" class="grid grid-cols-1 place-items-start md:grid-cols-3 w-11/12">
                                 <div v-for="(item, index) in items.length > 0 ? items : state" id="card"

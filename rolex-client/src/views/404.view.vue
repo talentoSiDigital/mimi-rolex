@@ -10,10 +10,10 @@ function goBack() {
 </script>
 
 <template>
-    <main class="w-full flex flex-col justify-center items-center gap-6 my-4 h-fit py-4">
+    <main class="w-full flex flex-col justify-center items-center gap-6 my-4 h-fit py-4 relative z-10">
         <h1 class="text-3xl font-bold">404</h1>
         <h2 class="text-xl">Pagína no encontrada</h2>
-        <img src="../assets/mimi-logo.png" alt="logo-mimi">
+        <img src="/assets/mimi-logo.png" alt="logo-mimi">
         <p>El servidor arrojó el error 404, el cual significa que la página a la cual intentas acceder no existe. </p>
 
         <button

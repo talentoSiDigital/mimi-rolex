@@ -8,7 +8,6 @@ import { Form, Field, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 const piniaStore = auth()
 
-
 const message = ref("");
 const successful = ref(false);
 const loading = ref(false)
@@ -35,10 +34,10 @@ if (loggedIn.value) {
 
 
 function handleLogin(user) {
-    loading.value = true;
+    loading.value = true; 
     piniaStore.login(user).then(
         () => {
-
+            
             router.push("/dashboard");
         },
         (error) => {
@@ -57,7 +56,7 @@ function handleLogin(user) {
 <template>
     <section class="bg-gray-50 ">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <img src="../../assets/mimi-logo.png" alt="logo">
+            <img src="/assets/mimi-logo.png" alt="logo">
             <div class="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
@@ -89,7 +88,7 @@ function handleLogin(user) {
                         </div>
 
                     </Form>
-                    <div v-if="message" class="font-bold">
+                    <div v-if="message != ''" class="font-bold">
                         <p :class="successful ? 'text-rolex-green' : 'text-red-700'" class="pb-4">{{ message }}</p>
                         <RouterLink to="/login" :class="[successful ? 'block' : 'hidden']"
                             class="rounded px-4 py-2 text-white bg-rolex-green w-fit">

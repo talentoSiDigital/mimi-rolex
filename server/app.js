@@ -8,7 +8,6 @@ const app = express();
 
 const db = require("./app/models");
 
-
 function initial() {
   
   db.user.Role.create({
@@ -22,21 +21,22 @@ function initial() {
   });
  
 } 
-// db.sequelize.sync({force:true}).then(() => {
-//   console.log("Drop and re-sync db.");
-//  initial()
-// });
+db.sequelize.sync().then(() => {
+  console.log("Drop and re-sync db.");
+//  initial() 
+});
+
 
      
 // Static files
-app.use(express.static('storage'));
+app.use('/storage',express.static('storage'));
   
 
 var corsOptions = {
-  origin: "http://localhost:8080/api/"
+  origin: process.env.ROOTPATH_API
 };
-
-app.use(cors(corsOptions));
+ 
+// app.use(cors(corsOptions));
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
   next();
@@ -61,6 +61,14 @@ const upload = require('./app/middleware/headerUpload');
 
 
 //ROUTES
+var history = require('connect-history-api-fallback');
+const serveStatic = require("serve-static")
+const path = __dirname + '/app/views/';
+
+app.use(express.static(path)); 
+app.use(history())
+app.use(serveStatic(path));
+
 require("./app/api/slider.routes")(app);
 require("./app/api/rolex.routes")(app);
 require("./app/api/store.routes")(app);
@@ -68,9 +76,12 @@ require("./app/api/store.routes")(app);
 require('./app/api/auth.routes')(app);
 require('./app/api/user.routes')(app);
 
+    
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
+const LOCALPATH = process.env.LOCALPATH 
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
-});
+}); 

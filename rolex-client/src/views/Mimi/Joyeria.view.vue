@@ -7,7 +7,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
     <div id="joyeria">
         <PageBanner type="joyeria"/>
 
-        <OverlaySection img-src="joyeria/joyeria-1.webp" alt-text="nacimiento" type="normal">
+        <OverlaySection img-src="joyeria/joyeria-1" alt-text="nacimiento" type="normal">
             <template #title>
                 NACIMIENTO
             </template>
@@ -21,7 +21,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="joyeria/joyeria-2.webp" alt-text="blanco" type="reverse">
+        <OverlaySection img-src="joyeria/joyeria-2" alt-text="blanco" type="reverse">
             <template #title>
                 BAUTIZO
             </template>
@@ -37,7 +37,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 
 
 
-        <OverlaySection img-src="joyeria/joyeria-3.webp" alt-text="graduacion" type="normal">
+        <OverlaySection img-src="joyeria/joyeria-3" alt-text="graduacion" type="normal">
             <template #title>
                 GRADUACIÓN
             </template>
@@ -51,7 +51,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="joyeria/joyeria-4.webp" alt-text="compromiso" type="reverse">
+        <OverlaySection img-src="joyeria/joyeria-4" alt-text="compromiso" type="reverse">
             <template #title>
                 COMPROMISO
             </template>
@@ -65,7 +65,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="joyeria/joyeria-5.webp" alt-text="matrimonio" type="normal">
+        <OverlaySection img-src="joyeria/joyeria-5" alt-text="matrimonio" type="normal">
             <template #title>
                 MATRIMONIO
             </template>
@@ -79,7 +79,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="joyeria/joyeria-6.webp" alt-text="regalos" type="reverse">
+        <OverlaySection img-src="joyeria/joyeria-6" alt-text="regalos" type="reverse">
             <template #title>
                 REGALOS
             </template>
