@@ -3,11 +3,6 @@ const HeaderSlider = db.headerSlider;
 const Op = db.Sequelize.Op;
 const uploadFile = require("../middleware/headerUpload")
 
-
-
-
-
-
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
 

@@ -8,7 +8,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   dialect: dbConfig.dialect,
   operatorsAliases: false,
 });
-
+ 
 const db = {};
 
 db.Sequelize = Sequelize;

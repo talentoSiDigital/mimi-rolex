@@ -27,7 +27,6 @@ module.exports = app => {
             const desktop = files.desktop[0].filename
 
             if (files.mobile) {
-                // console.log(`${truncExtension(mobile)}.webp`)
 
                 fs.unlink(`${storagePath}/${req.body.id}-mobile.webp`, (err) => {
                     if (err) {
@@ -38,17 +37,19 @@ module.exports = app => {
                             throw err;
                         }
                     } else { console.log('File deleted!') }
+                }).then(()=>{
+                    fs.rename(`${storagePath}/${mobile}`, `${storagePath}/${req.body.id}-mobile.webp`,
+                    (error) => {
+                        if (error) {
+                            console.log(error);
+                        }
+                        else {
+                            console.log("\nFile Renamed\n");
+                        }
+                    });
                 })
 
-                fs.rename(`${storagePath}/${mobile}`, `${storagePath}/${req.body.id}-mobile.webp`,
-                (error) => {
-                    if (error) {
-                        console.log(error);
-                    }
-                    else {
-                        console.log("\nFile Renamed\n");
-                    }
-                });
+               
             }
             if (files.desktop) {
                 fs.unlink(`${storagePath}/${req.body.id}-desktop.webp`, (err) => {
@@ -60,19 +61,23 @@ module.exports = app => {
                             throw err;
                         }
                     } else { console.log('File deleted!') }
-                })
+                }).then(() => {
 
-                fs.rename(`${storagePath}/${desktop}`, `${storagePath}/${req.body.id}-desktop.webp`,
-                (error) => {
-                    if (error) {
-                        console.log(error);
-                    }
-                    else {
-                        console.log("\nFile Renamed\n");
-                    }
-                });
+                    fs.rename(`${storagePath}/${desktop}`, `${storagePath}/${req.body.id}-desktop.webp`,
+                    (error) => {
+                        if (error) {
+                            console.log(error);
+                        }
+                        else {
+                            console.log("\nFile Renamed\n");
+                        }
+                    });
+                }).then(() => {res.send('All clear')})
+
             }
-            res.send('All clear');
+
+
+            
         }
 
 

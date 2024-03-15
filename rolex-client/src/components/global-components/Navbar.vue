@@ -220,6 +220,10 @@ function handleLogout() {
                 </button>
 
             </div>
+            <router-link to="/login" v-else
+                class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center ">
+                <h2 class="uppercase">Iniciar Sesión</h2>
+            </router-link>
 
             <div v-if="loggedIn" class="hidden md:block group relative">
 
@@ -253,5 +257,3 @@ function handleLogout() {
 
     </nav>
 </template>
-
-

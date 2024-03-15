@@ -1,14 +1,39 @@
-exports.allAccess = (req, res) => {
-    res.status(200).send("Public Content.");
+const db = require("../models");
+
+const User = db.user.User;
+
+
+exports.listUsers = (req, res) => {
+    User.findAll().then(user => {
+
+        res.status(200).send({ user });
+
+
+    }).catch(err => {
+        res.status(500).send({ message: err.message });
+    });
 };
 
-exports.userBoard = (req, res) => {
-    res.status(200).send("User Content.");
-  };
+exports.findUserData = (req, res) => {
+    console.log(req.params)
+    User.findAll({
+        attributes: ['name',
+            'lastName',
+            'age',
+            'phone',
+            'email'
+        ],
+        where: {
+            id: req.params.id
+        } 
+    }).then(user => {
+        res.send(user)
+    }).catch(err => {
+        res.status(400).send({ message: err })
+    })
+}
 
-exports.adminBoard = (req, res) => {
-    res.status(200).send("Admin Content.");
-};
+
 
 
 

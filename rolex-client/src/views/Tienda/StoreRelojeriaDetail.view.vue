@@ -82,7 +82,9 @@ function sendMessage(state) {
                 </div>
                 <div id="info" class="mt-4 md:mt-0 md:w-1/3 flex flex-col">
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
-                    <h2 class="text-xl font-medium pb-6">MIMI JOYERÍA</h2>
+                    <h2 class="text-xl font-medium pb-3" >MIMI JOYERÍA</h2>
+                    <h2 class="text-md font-medium pb-3 text-[#c40f0f]" v-if="state[0].coleccion == 'Tudor'">Disponible su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos</h2>
+
                     <a :href="sendMessage(state)" target="_blank"
                         class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">CONTACTAR</a>
                     <div v-for="item in getTableContent(state[0].contenidoTabla, ';')" :key="item"

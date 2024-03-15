@@ -1,21 +1,30 @@
 <script setup>
-import emailjs from '@emailjs/browser';
 import { computed, ref } from 'vue';
 import Terms from '../global-components/Terms.vue';
 
 import { ErrorMessage, Field, Form } from "vee-validate";
 import * as yup from "yup";
-import router from '../../router';
+
+import mailDataService from '../../services/mailDataService';
+const { message } = defineProps(['message'])
+
+function sendEmail(data) {
+    mailDataService.rolexMail(data).then(
+        data => console.log('email sended')
+    ).catch(
+        error => console.log(error)
+    )
+}
+
 
 const schema = yup.object().shape({
     nombre: yup.string().required("El nombre es obligatorio!"),
     apellido: yup.string().required("El apellido es obligatorio!"),
     email: yup.string().required("Email es obligatorio").email("Email invalido!").max(50, "Debe contener un maximo de 50 caracteres"),
     mensaje: yup.string().required("El campo no puede estar vacio"),
-    
+
 });
 
-const { message } = defineProps(['message'])
 
 const inputOptions = {
     "placeholder": "Ingrese su numero de telefono"
@@ -38,39 +47,39 @@ const messageToSend = computed(() => {
 
 function sendValue(value) {
     for (const key in value) {
-       if(value[key] == undefined && value[key] == ""){
+        if (value[key] == undefined && value[key] == "") {
             value[key] = "Datos no subministrados por el remitente."
-       }
+        }
     }
-    
-
-    emailjs.init('ZW9HU7fRsG4rIrQbu') //Esta es una llave publica 
-    emailjs.send("service_5phuk1y", "template_x6cajsr", {
+    let data = {
         tto: value["tto"],
         nombre: value["nombre"],
         apellido: value["apellido"],
         email: value["email"],
         mensaje: value["mensaje"],
         direccion: value["direccion"],
-        phone: value["phone"],
+        phone: phone.value,
 
-    })
-    .then(function (response){
-        router.go()
-    },function(error) {
-       console.log('FAILED...', error);
-    })
+    }
 
+    mailDataService.rolexMail(data).then(
+        data => console.log('email sended')
+    ).catch(error =>console.log(error))
+
+  
 
 
 }
 
-</script> 
+</script>
 
 <template>
+
     <div id="main-contact" class="my-10 flex flex-col items-center">
+
         <h2 class="text-3xl text-neutral-800 text-center my-8">CONTÁCTENOS</h2>
-        <p class="mb-4 text-center">Le rogamos que nos especifique su forma de contacto deseada y le responderemos lo más
+        <p class="mb-4 text-center">Le rogamos que nos especifique su forma de contacto deseada y le responderemos lo
+            más
             pronto posible.</p>
 
         <Form class="flex flex-col w-11/12 md:w-1/2" @submit="sendValue" :validation-schema="schema">
@@ -138,7 +147,7 @@ function sendValue(value) {
                 <label for="mensaje">Su mensaje:</label>
                 <Field as="textarea" name="mensaje" placeholder="Introduzca su mensaje aquí"
                     class="border border-[#bbb] max-h-52 min-h-min h-24 p-4" v-model="messageToSend" />
-                    <ErrorMessage name="mensaje" class="text-red-700" />
+                <ErrorMessage name="mensaje" class="text-red-700" />
 
             </div>
 
@@ -178,5 +187,3 @@ function sendValue(value) {
 
     </div>
 </template>
-
-

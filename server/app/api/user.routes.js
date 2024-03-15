@@ -10,17 +10,23 @@ module.exports = function(app) {
     next();
   });
 
-  app.get("/api/test/all", controller.allAccess);
-  
-  app.get(
-    "/api/test/user",
-    [authJwt.verifyToken],
-    controller.userBoard
-  );
+  app.get("/api/user/get-all", controller.listUsers)
+  app.get("/api/user/find-user/:id", controller.findUserData)
 
-  app.get(
-    "/api/test/admin",
-    [authJwt.verifyToken],
-    controller.adminBoard
-  );
+
+  
+  // app.get("/api/test/all", controller.allAccess);
+  
+  // app.get(
+  //   "/api/test/user",
+  //   [authJwt.verifyToken],
+  //   controller.userBoard
+  // );
+
+  // app.get(
+  //   "/api/test/admin",
+  //   [authJwt.verifyToken],
+  //   controller.adminBoard
+  // );
+
 };

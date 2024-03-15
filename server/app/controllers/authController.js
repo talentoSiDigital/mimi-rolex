@@ -12,26 +12,20 @@ const bcrypt = require('bcrypt');
 exports.signup = (req, res) => {
     // CREATE USER WITH REQUEST PARAMS
     User.create({
+        name: req.body.name,
+        lastName: req.body.lastname,
         username: req.body.username,
+        age: req.body.age,
+        phone: req.body.phone,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8)
     }).then(user => {
-        if (req.body.roles) {
-            Role.findAll({
-                where: { name: { [Op.or]: req.body.roles } }
-            })
-                .then(roles => {
-                    user.setRoles(roles).then(() => {
-                        res.send({ message: "El usuario ha sido registrado exitosamente" })
-                    });
-                })
-        } else {
-            user.setRoles([1]).then(() => {
-                res.send({ message: "El usuario ha sido registrado exitosamente" });
-            });
-        }
+        user.setRoles([1]).then(() => {
+            return res.send({ message: "El usuario ha sido registrado exitosamente" })
+        });
     }).catch(err => {
-        res.status(500).send({ message: err.message });
+        console.log("Error: 1")
+        return res.status(500).send({ message: err.message })
     });
 };
 
@@ -83,5 +77,7 @@ exports.signin = (req, res) => {
         res.status(500).send({ message: err.message });
     });
 };
+
+
 
 

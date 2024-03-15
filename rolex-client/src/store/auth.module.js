@@ -6,7 +6,7 @@ const initialState = ()=>{
    return user ? { status: { loggedIn: true }, user:user }: { status: { loggedIn: false }, user: null };}
 
 export const auth = defineStore('auth',{
-  namespaced: true,
+  namespaced: true, 
   state: initialState,
   actions: {
     login(user) {

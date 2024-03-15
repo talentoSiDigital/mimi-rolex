@@ -11,6 +11,7 @@ if (!piniaStore.$state.status.loggedIn) {
 function handleLogout() {
     piniaStore.logout()
     router.push("/")
+    // window.location.href = 'http://www.google.com';
 }
 handleLogout()
 

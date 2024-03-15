@@ -14,3 +14,22 @@
     font-weight: 700;
     src: url(/fonts/Meta.ttf);
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    transition: 200ms ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+    width: 10px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: #adbaad;
+    border-radius: 10px;
+
+    /* Customize the scrollbar thumb */
+}
