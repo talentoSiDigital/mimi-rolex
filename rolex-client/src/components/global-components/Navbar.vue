@@ -73,7 +73,7 @@ function handleLogout() {
                 class="md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
                 <h2 class="uppercase">Tudor</h2>
             </router-link>
-            <!-- **** -->
+            <!-- **Mobile** -->
             <div class="hidden md:block group relative">
                 <router-link to="/relojeria"
                     class=" tracking-widest hover:bg-neutral-600 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center flex items-center ">
@@ -136,7 +136,7 @@ function handleLogout() {
             </div>
 
 
-            <!-- **** -->
+            <!-- **EndMobile** -->
             <div class=" md:hidden w-full flex flex-col items-center">
                 <router-link @click="collapseNav" to="/relojeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-600 md:hover:bg-transparent md:hover:border-gray-button px-6 py-2 text-lg font-normal font-montserrat text-slate-50 md:hover:text-gray-button w-full md:w-fit text-center">
@@ -213,6 +213,11 @@ function handleLogout() {
                     <h2 class="uppercase">Panel</h2>
 
                 </router-link>
+                <router-link @click="collapseNav" to="/carrito"
+                    class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
+                    <h2 class="uppercase">Carrito</h2>
+
+                </router-link>
                 <button @click="collapseNav, handleLogout"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Cerrar sesión</h2>
@@ -240,10 +245,14 @@ function handleLogout() {
                         class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Perfil</h2>
                     </router-link>
-                    <button @click="handleLogout"
+                    <router-link to="/carrito"
+                        class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
+                        <h2 class="my-1 uppercase">Carrito</h2>
+                    </router-link>
+                    <a href="/logout"
                         class="text-xl font-normal whitespace-nowrap  font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Cerrar sesión</h2>
-                    </button>
+                    </a>
 
                 </div>
 

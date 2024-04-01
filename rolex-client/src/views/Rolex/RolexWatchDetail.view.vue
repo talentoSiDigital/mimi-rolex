@@ -108,6 +108,7 @@ function getResponsiveColors(colors) {
             <template #content>
                 <div v-if="isReady" class="mb-44">
                     <div v-if="state">
+                       
                         <div id="banner" :class="getColors(state.details[0].color)"
                             class="m-4 bg-gradient-to-t flex flex-col-reverse md:flex-row ">
 
@@ -369,7 +370,11 @@ function getResponsiveColors(colors) {
                         </section>
 
                         <ContactWatchRolex
-                            :message="`Me interesa el Rolex ${state.getAll.nombre} (Modelo de referencia ${state.getAll.modelo})`" />
+                            :message="`Me interesa el Rolex ${state.getAll.nombre} (Modelo de referencia ${state.getAll.modelo})`" 
+                            :watch="state.getAll.nombre"
+                            :modelo="state.getAll.modelo"
+                            :cajaDelModelo="state.getAll.cajaDelModelo"
+                            />
 
                         <section class="flex flex-col justify-center items-center">
 

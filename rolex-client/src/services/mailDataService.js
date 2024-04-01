@@ -24,7 +24,10 @@ class MailSender {
       "email": data.email,
       "mensaje": data.mensaje,
       "direccion": data.direccion,
-      "telefono": data.phone
+      "telefono": data.phone,
+      "watch": data.watch,
+      "modelo": data.modelo,
+      "cajaDelModelo": data.cajaDelModelo
     }
 
 

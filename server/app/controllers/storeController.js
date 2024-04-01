@@ -1,5 +1,6 @@
 const db = require("../models");
 const Store = db.store;
+const User = db.user.User;
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
@@ -46,7 +47,7 @@ exports.createJ = (req, res) => {
 
 
         // Create object
-        const joyeriaObject = {
+        const jewelerObject = {
             "serie": body.serie,
             "nombre": body.name,
             "titulo": body.title,
@@ -56,7 +57,7 @@ exports.createJ = (req, res) => {
             "precio": `$${body.price}`
         }
 
-        Store.Joyeria.create(joyeriaObject).then(() => {
+        Store.Jeweler.create(jewelerObject).then(() => {
             res.send("File added successfully")
         }).catch(err => {
             res.send(err.message)
@@ -78,7 +79,7 @@ exports.findJ = (req, res) => {
     }
     console.log(req.params.id)
 
-    Store.Joyeria.findAll({
+    Store.Jeweler.findAll({
         where: {
             coleccion: { [Op.substring]: req.params.id }
         }
@@ -111,7 +112,7 @@ exports.findDetailJ = (req, res) => {
         return;
     }
 
-    Store.Joyeria.findAll({
+    Store.Jeweler.findAll({
         where: {
             serie: req.params.id
         }
@@ -175,7 +176,7 @@ exports.createR = (req, res) => {
 
 
         // Create object
-        const relojeriaObject = {
+        const watchmakingObject = {
             "serie": body.serie,
             "nombre": body.name,
             "titulo": body.title,
@@ -186,7 +187,7 @@ exports.createR = (req, res) => {
         }
 
 
-        Store.Relojeria.create(relojeriaObject).then(() => {
+        Store.Watchmaking.create(watchmakingObject).then(() => {
             res.send("File added successfully")
         }).catch(err => {
             res.send(err.message)
@@ -208,7 +209,7 @@ exports.findR = (req, res) => {
     }
     console.log(req.params.id)
 
-    Store.Relojeria.findAll({
+    Store.Watchmaking.findAll({
         where: {
             coleccion: req.params.id
         }
@@ -231,7 +232,7 @@ exports.findR = (req, res) => {
         });
 };
 
-//Retrieve Wat
+//Retrieve Watch 
 
 exports.findDetailR = (req, res) => {
     // Validate request
@@ -242,7 +243,7 @@ exports.findDetailR = (req, res) => {
         return;
     }
 
-    Store.Relojeria.findAll({
+    Store.Watchmaking.findAll({
         where: {
             serie: req.params.id
         }
@@ -268,8 +269,6 @@ exports.findDetailR = (req, res) => {
         });
 };
 
-
-
 // Update a WATCH by the id in the request (ADMIN)
 exports.updateR = (req, res) => {
     // Validate request
@@ -280,6 +279,88 @@ exports.updateR = (req, res) => {
         return;
     }
 };
+
+
+// SHOPPING CART 
+// Add watch to cart
+exports.addWatchToCart = (req, res) => {
+    // Validate request
+    const itemId = parseInt(req.params.id);
+    const userId = parseInt(req.params.user)
+
+
+    Store.Cart.findOrCreate({ where: { ownerId: userId } })
+        .then((d) => Store.CartProduct.create({
+            "watchmakingId": itemId,
+            "cartId": d[0].id
+        }))
+        .then(() => res.send('Clear'))
+        .catch((err) => { res.status(500).send(err); })
+};
+
+// Retrieve cart by owner 
+exports.getCartByOwner = (req, res) => {
+    // Validate request
+    const userId = parseInt(req.params.user)
+    let watchesId = []
+
+
+    Store.Cart.findAll({
+        where: {
+            ownerId: userId
+        }
+    }).then((d) => Store.CartProduct.findAll({
+        where: { cartId: d[0].id },
+        attributes: ['watchmakingId']
+    }))
+        .then((d) => {
+            for (let index = 0; index < d.length; index++) {
+                watchesId.push(d[index].dataValues.watchmakingId);
+            }
+            Store.Watchmaking.findAll({
+                where: {
+                    id: {
+                        [Op.or]: watchesId
+                    }
+                }
+            }).then((watchesId) => {
+                
+                for (let index = 1; index <= watchesId.length; index++) {
+                    let serie = watchesId[index-1].dataValues
+                    serie.img = `${storagePath}/store-products/${serie.serie}-1.webp`
+                }
+                res.send(watchesId)
+
+            })
+        }).catch((err) => { res.status(500).send(err) })
+
+
+    //   Store.Watchmaking.findAll({
+    //     where: {
+    //         serie: req.params.id
+    //     }
+    // })
+    //     .then(data => {
+    //         data[0].dataValues.img = []
+
+    //         for (let index = 1; index <= data[0].dataValues.cantidadImagenes; index++) {
+    //             data[0].dataValues.img.push(`${storagePath}/store-products/${data[0].dataValues.serie}-${index}.webp`)
+    //         }
+    //         res.send(data)
+
+
+    //     })
+    //     .catch(err => {
+
+    //         res.status(500).json({
+
+    //             message:
+    //                 err.message || "Some error occurred while retrieving tutorials."
+
+    //         });
+    //     });
+};
+
 
 
 

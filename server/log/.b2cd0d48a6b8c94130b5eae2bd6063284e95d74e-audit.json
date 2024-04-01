@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 10
+    },
+    "auditLog": "log\\.b2cd0d48a6b8c94130b5eae2bd6063284e95d74e-audit.json",
+    "files": [
+        {
+            "date": 1711380140181,
+            "name": "log\\cybs-2024-03-25.log",
+            "hash": "b0ae60dc87cc891c8f6a9f3bdc9c4cd2d3b8081da7c26d6f53ff87a97795bd5c"
+        }
+    ],
+    "hashType": "sha256"
+}

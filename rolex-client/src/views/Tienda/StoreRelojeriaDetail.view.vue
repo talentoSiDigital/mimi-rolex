@@ -1,16 +1,30 @@
 <script setup>
-import { ref } from 'vue';
-import { useAsyncState } from '@vueuse/core'
+import { useAsyncState } from '@vueuse/core';
+import { ref, computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useRoute } from 'vue-router';
+import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
+import router from '../../router';
+import StoreDataService from '../../services/storeDataService';
+import { auth } from '../../store/auth.module';
+import RegisterModal from '../../components/global-components/RegisterModal.vue'
 
-import router from '../../router'
-import { RouterLink, useRoute } from 'vue-router';
+const piniaStore = auth()
 
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue'
+const isUserLogged = storeToRefs(piniaStore)
+const user = piniaStore.$state.user.id
+
+function addToCart(item) {
+    if (!isUserLogged.status.value.loggedIn) {
+        router.push("/registrar")
+    }else{
+        console.log('isLogged');
+    }
+}
 
 
-import StoreDataService from '../../services/storeDataService'
 
 const route = useRoute()
 const currentSlide = ref(1)
@@ -41,7 +55,10 @@ function sendMessage(state) {
 </script>
 
 <template>
-    <main class="bg-neutral-100 font-montserrat text-neutral-700 flex ">
+
+
+
+    <section class="bg-neutral-100 font-montserrat text-neutral-700 flex ">
         <div v-if="isReady">
 
             <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full h-32">
@@ -66,7 +83,8 @@ function sendMessage(state) {
                     <div id="slider-nav" class="flex">
 
                         <div class="flex gap-2">
-                            <div class="hover:bg-gray-400" :class="[index == currentSlide + 1 ? 'bg-gray-400' : 'bg-white']"
+                            <div class="hover:bg-gray-400"
+                                :class="[index == currentSlide + 1 ? 'bg-gray-400' : 'bg-white']"
                                 v-for="(slide, index) in state[0].cantidadImagenes" :key="index">
                                 <div class="cursor-pointer" @click="currentSlide = index + 1">
                                     <img :src="state[0].img[index]" :alt="slide.serie" class="w-10 md:w-20">
@@ -82,11 +100,16 @@ function sendMessage(state) {
                 </div>
                 <div id="info" class="mt-4 md:mt-0 md:w-1/3 flex flex-col">
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
-                    <h2 class="text-xl font-medium pb-3" >MIMI JOYERÍA</h2>
-                    <h2 class="text-md font-medium pb-3 text-[#c40f0f]" v-if="state[0].coleccion == 'Tudor'">Disponible su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos</h2>
+                    <h2 class="text-xl font-medium pb-3">MIMI JOYERÍA</h2>
+                    <h2 class="text-md font-medium pb-3 text-[#c40f0f]">Disponible
+                        su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos
+                    </h2>
 
+                    <button @click="addToCart()" v-if="state[0].coleccion == 'Tudor'"
+                        class="border border-black w-full mb-2 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Agregar
+                        al carrito</button>
                     <a :href="sendMessage(state)" target="_blank"
-                        class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">CONTACTAR</a>
+                        class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Contactar</a>
                     <div v-for="item in getTableContent(state[0].contenidoTabla, ';')" :key="item"
                         class="flex justify-center ">
 
@@ -125,6 +148,6 @@ function sendMessage(state) {
 
 
 
-    </main></template>
+    </section>
 
-
+</template>

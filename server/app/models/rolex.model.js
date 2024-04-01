@@ -26,7 +26,6 @@ module.exports = (sequelize, Sequelize) => {
       timestamps:false
     })
   
-  
     const RolexGetAll = sequelize.define("rolex-get-all", {
    
       modelo: {

@@ -43,6 +43,7 @@ import Profile from './components/dashboard/Profile.vue'
 import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
 import JoyeriaForm from './components/dashboard/JoyeriaForm.vue'
 import RelojeriaForm from './components/dashboard/RelojeriaForm.vue'
+import ShoppingCart from './components/dashboard/ShoppingCart.vue'
 
 
 
@@ -306,9 +307,26 @@ const router = createRouter({
           name:"agregar-relojeria",
           component:RelojeriaForm
         },
+        // {
+        //   path:"carrito",
+        //   name:"carrito",
+        //   component:ShoppingCart
+        // },
       ],
       meta: {
         title: 'Panel de control  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    // ****************
+    // PAYMENT ROUTES
+    ,
+    {
+      path: "/carrito",
+      name: "carrito",
+      component: ShoppingCart,
+      meta: {
+        title: 'Carrito De Compras  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     ,

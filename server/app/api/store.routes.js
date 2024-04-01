@@ -16,6 +16,11 @@ module.exports = app =>{
     router.get("/relojeria/producto/:id", store.findDetailR)
     router.post("/relojeria/producto/create",uploadFiles.any() ,store.createR)
     
+    
+    //Shopping Cart
+    router.get("/cart/relojeria/:user/:id", store.addWatchToCart)
+    router.get("/cart/relojeria/:user", store.getCartByOwner) 
+    
      
     app.use('/api',router)
 // 

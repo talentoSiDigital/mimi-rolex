@@ -6,7 +6,13 @@ import { ErrorMessage, Field, Form } from "vee-validate";
 import * as yup from "yup";
 
 import mailDataService from '../../services/mailDataService';
-const { message } = defineProps(['message'])
+
+
+
+const { message, watch,modelo,cajaDelModelo } = defineProps(['message', 'watch','modelo','cajaDelModelo'])
+
+
+
 
 function sendEmail(data) {
     mailDataService.rolexMail(data).then(
@@ -44,7 +50,6 @@ const messageToSend = computed(() => {
 })
 
 
-
 function sendValue(value) {
     for (const key in value) {
         if (value[key] == undefined && value[key] == "") {
@@ -59,6 +64,10 @@ function sendValue(value) {
         mensaje: value["mensaje"],
         direccion: value["direccion"],
         phone: phone.value,
+        watch: watch,
+        modelo:modelo,
+        cajaDelModelo: cajaDelModelo
+
 
     }
 
