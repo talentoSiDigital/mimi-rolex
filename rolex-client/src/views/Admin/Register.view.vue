@@ -111,10 +111,6 @@ function handleRegister(user,phoneNumber) {
 
 
 }
-// function debug(user,phoneNumber) {
-//     user.phone = "+"+ phoneNumber.code + phoneNumber.phone
-//     console.log(user)
-// }
 
 
 </script>

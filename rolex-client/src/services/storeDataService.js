@@ -72,6 +72,19 @@ class Store {
           })
 
     }
+    
+    postAddToCart(id,user){
+        return http.post(`/cart/relojeria/${user}/${id}`)
+    }
+    
+    getCartByUser(user){
+        return http.get(`/cart/relojeria/${user}`)
+    }
+    
+    deleteProductInCart(id,user){
+        return http.delete(`/cart/relojeria/delete/${user}/${id}`)
+        
+    }
 
 }
 

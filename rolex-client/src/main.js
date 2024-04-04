@@ -5,7 +5,17 @@ import router from './router'
 import VueTelInput from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
 import {createPinia} from 'pinia'
-
+import vueCountryRegionSelect from 'vue3-country-region-select'
+import i18next from 'i18next';
+import I18NextVue from 'i18next-vue';
+i18next.init({
+    lng: 'es',
+    interpolation: {
+      escapeValue: false
+    },
+    fallbackLng: false,
+   
+  });
 
 // Defining pinia
 const pinia = createPinia()
@@ -40,7 +50,8 @@ import {
     faSquareMinus,
     faGear,
     faPenToSquare,
-    faTrashCan
+    faTrashCan,
+    faCircleCheck
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -68,7 +79,8 @@ library.add(
     faSquareMinus,
     faGear,
     faPenToSquare,
-    faTrashCan
+    faTrashCan,
+    faCircleCheck
 )
 
 createApp(App)
@@ -76,5 +88,7 @@ createApp(App)
     .use(router) 
     .use(pinia)
     .use(VueTelInput)
+    .use(vueCountryRegionSelect)
+    .use(I18NextVue, {i18next})
     .component('vue-cookie-accept-decline', VueCookieAcceptDecline)
     .mount('#app')

@@ -1,55 +1,67 @@
 <script setup>
 import { useAsyncState } from '@vueuse/core';
-import { ref, computed } from 'vue';
 import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
+import RegisterModal from '../../components/global-components/RegisterModal.vue';
+import FinishedModal from '../../components/global-components/FinishedModal.vue';
 import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
 import router from '../../router';
 import StoreDataService from '../../services/storeDataService';
 import { auth } from '../../store/auth.module';
-import RegisterModal from '../../components/global-components/RegisterModal.vue'
+
+const route = useRoute()
+const currentSlide = ref(1)
 
 const piniaStore = auth()
-
 const isUserLogged = storeToRefs(piniaStore)
-const user = piniaStore.$state.user.id
+const user = piniaStore.$state.user
 
-function addToCart(item) {
+const active = ref(false)
+const complete = ref(false)
+
+
+
+const { isLoading, state, isReady, execute } = useAsyncState(
+    StoreDataService.getRelojeriaDetails(route.params.id)
+        .then(d => {
+            return d.data
+        })
+)
+
+function getTableContent(item, char) {
+    return item.split(char)
+}
+function activateModal() {
+    return active.value = !active.value
+}
+function closeModal(){
+    return complete.value = !complete.value
+}
+
+
+function addToCart(id) {
     if (!isUserLogged.status.value.loggedIn) {
-        router.push("/registrar")
-    }else{
-        console.log('isLogged');
+        activateModal()
+    } else {
+        // console.log(user);
+        StoreDataService.postAddToCart(id, user.id).then((d) => {
+            closeModal()
+        })
     }
 }
 
 
 
-const route = useRoute()
-const currentSlide = ref(1)
-const { isLoading, state, isReady, execute } = useAsyncState(
-    StoreDataService.getRelojeriaDetails(route.params.id)
-        .then(d => {
-
-            return d.data
-        })
-
-
-)
-
-
-function getTableContent(item, char) {
-    return item.split(char)
+function sendMessage(state) {
+    const message = `Quisiera saber mas informacion acerca del modelo ${state[0].nombre} de la colección ${state[0].coleccion}, por favor.`
+    return `https://wa.me/584122909996/?text=${message}`
 }
 
 function goBack() {
     router.go(-1)
-}
-
-function sendMessage(state) {
-    const message = `Quisiera saber mas informacion acerca del modelo ${state[0].nombre} de la colección ${state[0].coleccion}, por favor.`
-    return `https://wa.me/584122909996/?text=${message}`
 }
 
 </script>
@@ -59,6 +71,27 @@ function sendMessage(state) {
 
 
     <section class="bg-neutral-100 font-montserrat text-neutral-700 flex ">
+        <div>
+            <transition name="bounce">
+
+                <FinishedModal v-if="complete" @activate-modal="closeModal" />
+            </transition>
+          
+
+            <transition name="bounce">
+
+                <RegisterModal v-if="active" @activate-modal="activateModal" />
+            </transition>
+            <transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"
+                enter-to-class="opacity-100" leave-active-class="duration-700 ease-in-out"
+                leave-from-class="opacity-700" leave-to-class="transform opacity-0">
+                <div class="bg-[rgba(0,0,0,0.8)] z-40 fixed h-screen top-0 w-full" v-if="active || complete">
+
+                </div>
+            </transition>
+        </div>
+
+
         <div v-if="isReady">
 
             <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full h-32">
@@ -99,13 +132,16 @@ function sendMessage(state) {
                     </div>
                 </div>
                 <div id="info" class="mt-4 md:mt-0 md:w-1/3 flex flex-col">
+
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
                     <h2 class="text-xl font-medium pb-3">MIMI JOYERÍA</h2>
                     <h2 class="text-md font-medium pb-3 text-[#c40f0f]">Disponible
                         su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos
                     </h2>
 
-                    <button @click="addToCart()" v-if="state[0].coleccion == 'Tudor'"
+                   
+                   
+                    <button @click="addToCart(state[0].id)" v-if="state[0].coleccion == 'Tudor'"
                         class="border border-black w-full mb-2 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Agregar
                         al carrito</button>
                     <a :href="sendMessage(state)" target="_blank"
@@ -151,3 +187,27 @@ function sendMessage(state) {
     </section>
 
 </template>
+
+<style scoped>
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+</style>

@@ -6,7 +6,7 @@ module.exports = app =>{
     router.get("/payment", payment.paymentCheck)
    
 
-    
+     
     app.use('/api',router)
 // 
 }

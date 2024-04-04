@@ -18,8 +18,9 @@ module.exports = app =>{
     
     
     //Shopping Cart
-    router.get("/cart/relojeria/:user/:id", store.addWatchToCart)
+    router.post("/cart/relojeria/:user/:id", store.addWatchToCart)
     router.get("/cart/relojeria/:user", store.getCartByOwner) 
+    router.delete("/cart/relojeria/delete/:user/:id", store.removeCartProduct) 
     
      
     app.use('/api',router)

@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
+    extend: { 
       colors: {
         'main-green': '#ADBAAD',
         'secondary-green': '#adbaad',
@@ -27,6 +27,7 @@ export default {
     }
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/aspect-ratio'),
+    require('@tushargugnani/tailwind-group-peer-checked'),
   ],
 }

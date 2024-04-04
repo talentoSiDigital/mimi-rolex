@@ -294,9 +294,24 @@ exports.addWatchToCart = (req, res) => {
             "watchmakingId": itemId,
             "cartId": d[0].id
         }))
-        .then(() => res.send('Clear'))
+        .then(() => res.send('Product created successfully'))
         .catch((err) => { res.status(500).send(err); })
 };
+
+exports.removeCartProduct = (req, res) => {
+    const itemId = parseInt(req.params.id);
+    const userId = parseInt(req.params.user)
+
+    Store.Cart.findAll({ where: { ownerId: userId } })
+    .then((d) => Store.CartProduct.destroy({
+        where: {"watchmakingId": itemId}
+    }))
+    .then(() => res.send('Product Deleted Successfully'))
+    .catch((err) => { res.status(500).send(err); })
+    
+
+
+}
 
 // Retrieve cart by owner 
 exports.getCartByOwner = (req, res) => {
@@ -316,6 +331,10 @@ exports.getCartByOwner = (req, res) => {
         .then((d) => {
             for (let index = 0; index < d.length; index++) {
                 watchesId.push(d[index].dataValues.watchmakingId);
+                
+            }
+            if(watchesId.length == 0){
+                watchesId = [0]
             }
             Store.Watchmaking.findAll({
                 where: {
@@ -325,8 +344,9 @@ exports.getCartByOwner = (req, res) => {
                 }
             }).then((watchesId) => {
                 
+
                 for (let index = 1; index <= watchesId.length; index++) {
-                    let serie = watchesId[index-1].dataValues
+                    let serie = watchesId[index - 1].dataValues
                     serie.img = `${storagePath}/store-products/${serie.serie}-1.webp`
                 }
                 res.send(watchesId)
@@ -335,30 +355,7 @@ exports.getCartByOwner = (req, res) => {
         }).catch((err) => { res.status(500).send(err) })
 
 
-    //   Store.Watchmaking.findAll({
-    //     where: {
-    //         serie: req.params.id
-    //     }
-    // })
-    //     .then(data => {
-    //         data[0].dataValues.img = []
 
-    //         for (let index = 1; index <= data[0].dataValues.cantidadImagenes; index++) {
-    //             data[0].dataValues.img.push(`${storagePath}/store-products/${data[0].dataValues.serie}-${index}.webp`)
-    //         }
-    //         res.send(data)
-
-
-    //     })
-    //     .catch(err => {
-
-    //         res.status(500).json({
-
-    //             message:
-    //                 err.message || "Some error occurred while retrieving tutorials."
-
-    //         });
-    //     });
 };
 
 
