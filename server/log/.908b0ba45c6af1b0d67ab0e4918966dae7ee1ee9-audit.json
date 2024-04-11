@@ -14,6 +14,21 @@
             "date": 1712253634507,
             "name": "log\\cybs-2024-04-04.log",
             "hash": "05e94b70294eac5a9efe7c34a932e1705f5d898cc6d92a501ecde0107a1fb9f8"
+        },
+        {
+            "date": 1712602812875,
+            "name": "log\\cybs-2024-04-08.log",
+            "hash": "ee17a32db1e525aa0e21c446c8e15742ea81b2679a74c59e71c1b92e3b79a822"
+        },
+        {
+            "date": 1712776123394,
+            "name": "log\\cybs-2024-04-10.log",
+            "hash": "32b6c07859ca842b08adcd7fb113314f8b957c8d13cc1a200794cdccf6b88025"
+        },
+        {
+            "date": 1712840641789,
+            "name": "log\\cybs-2024-04-11.log",
+            "hash": "4794387be0a43e03b553f1b52a7e8967dad3927666fd2ad9f6a39d8245286ed8"
         }
     ],
     "hashType": "sha256"

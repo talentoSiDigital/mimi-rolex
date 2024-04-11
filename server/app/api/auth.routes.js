@@ -10,7 +10,7 @@ module.exports = function(app) {
     next();
   });
 
-  app.post(
+  app.post( 
     "/api/auth/signup",
     [ 
       verifySignUp.checkDuplicateUsernameOrEmail,

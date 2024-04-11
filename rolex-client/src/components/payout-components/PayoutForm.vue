@@ -1,11 +1,16 @@
 <script setup>
-import Icons from '../payout-components/Icons.vue'
-import InputCard from '../payout-components/InputCard.vue'
+import Icons from './Icons.vue'
+import InputCard from './InputCard.vue'
+import SelectInput from './SelectInput.vue'
+import ConfirmationModal from '../global-components/ConfirmationModal.vue'
 import { Form, Field, ErrorMessage } from "vee-validate";
 import { ref, watch } from 'vue';
 import * as yup from "yup";
 
-const { data, amount } = defineProps(['data', 'amount'])
+const { data } = defineProps(['amount'])
+const dataToSend = defineModel()
+const emit = defineEmits(['activate-modal'])
+
 const card = ref("")
 const actualYear = new Date().getFullYear()
 const digitsOnly = (value) => /^\d+$/.test(value)
@@ -16,23 +21,11 @@ const regionWarn = ref(false)
 const largeForm = ref(false)
 
 
-function checkCard(value) {
-    let card = mastercard(value)
-    if (card) {
-        return true
-    } else {
-        card = maestro(value)
-        if (card) {
-            return true
-        } else {
-            card = visa(value)
-            if (card) {
-                return true
-            }
-            return false
-        }
-    }
-}
+const dataExtra = ref({
+    "location": "",
+    "zip": "",
+    "buildingNumber": ""
+})
 
 const schema = yup.object().shape({
     name: yup
@@ -58,8 +51,7 @@ const schema = yup.object().shape({
         .integer("Número Inválido")
         .required("Dato obligatorio")
         .min(1, "Ese mes no existe")
-        .max(12, "Ese mes no existe")
-    ,
+        .max(12, "Ese mes no existe"),
     year: yup
         .number("Debes colocar un número")
         .typeError('Debes colocar un número')
@@ -70,73 +62,94 @@ const schema = yup.object().shape({
     ,
     address: yup
         .string()
-        .required("La dirección es obligatoria")
         .min(10, "La dirección es muy corta")
         .max(100, "La dirección es muy larga"),
     location: yup
         .string()
+        .when(dataToSend.value.country, {
+            is: 'US',
+            then: (schema) => schema.required("Campo Requerido"),
+            otherwise: (schema) => schema.notRequired()
+
+        })
         .required("La dirección es obligatoria")
         .min(10, "La dirección es muy corta")
         .max(100, "La dirección es muy larga"),
     zip: yup
         .string()
-        .required("Este campo es obligatorio")
+        .when(dataToSend.value.country, {
+            is: 'US',
+            then: (schema) => schema.required("Campo Requerido"),
+            otherwise: (schema) => schema.notRequired()
+
+        })
         .min(5, "Código Inválido")
         .max(25, "Código Inválido"),
     buildingNumber: yup
         .number("Debes colocar un número")
+        .when(dataToSend.value.country, {
+            is: 'US',
+            then: (schema) => schema.required("Campo Requerido"),
+            otherwise: (schema) => schema.notRequired()
+
+        })
         .typeError('Debes colocar un número')
         .integer("Número Inválido")
-        .required("Dato obligatorio")
         .positive("Número Inválido"),
 
 
 });
 
-
-const dataToSend = ref({
-    "amount": amount.toString(),
-    "firstName": "",
-    "lastName": "",
-    "phone": data.phone,
-    "email": data.email,
-    "address": "",
-    "country": "VE",
-    "cardNumber": "",
-    "cardExpirationMonth": "",
-    "cardExpirationYear": "",
-
-})
-
-const dataExtra = ref({
-    "region": "",
-    "location": "",
-    "zip": "",
-    "buildingNumber": ""
-})
+function checkCard(value) {
+    let card = mastercard(value)
+    if (card) {
+        return true
+    } else {
+        card = maestro(value)
+        if (card) {
+            return true
+        } else {
+            card = visa(value)
+            if (card) {
+                return true
+            }
+            return false
+        }
+    }
+}
 
 watch(dataToSend.value, () => {
+    
     if (dataToSend.value.country == "US" || dataToSend.value.country == "CA") {
         largeForm.value = true
     } else {
         largeForm.value = false
-
     }
+
+    
 })
 
-function handleRegister(user, phoneNumber) {
+
+function handleRegister() {
     dataToSend.value.cardNumber = card.value
     if (dataToSend.value.region == "") {
         regionWarn.value = true
     } else {
         regionWarn.value = false
-        console.log(dataToSend.value, dataExtra.value);
+        if (dataToSend.value.country == "US" || dataToSend.value.country == "CA") {
+            dataToSend.value.region = dataExtra.value.region
+            dataToSend.value.location = dataExtra.value.location
+            dataToSend.value.zip = dataExtra.value.zip
+            dataToSend.value.buildingNumber = dataExtra.value.buildingNumber
+            emit('activate-modal')
+        } else {
+
+            emit('activate-modal')
+        }
 
     }
-
-
 }
-function debug() {
+function debug(){
     console.log(dataToSend.value);
 }
 
@@ -144,16 +157,18 @@ function debug() {
 
 <template>
     <!-- bg-neutral-100 -->
+
+
     <div class="w-full  h-full ">
-        <h2 class="text-2xl pt-2" @click="debug()">Resumen del pedido</h2>
+        <h2 class="text-2xl pt-2" @click="debug()" >Resumen del pedido</h2>
         <p>*Todos los campos son obligatorios</p>
 
         <Icons />
-        <Form :validation-schema="schema" @submit="handleRegister(user, phoneNumber)">
+        <Form :validation-schema="schema" @submit="handleRegister()">
             <div class="">
 
-                <div class="flex w-full gap-2">
-                    <div class="w-1/2">
+                <div class="flex flex-col md:flex-row w-full gap-2">
+                    <div class="w-full md:w-1/2">
                         <label for="name" class="block mb-1 text-sm font-medium text-gray-900 ">Nombre</label>
                         <Field id="name" type="text" name="name" placeholder="John"
                             class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
@@ -165,7 +180,7 @@ function debug() {
                         </div>
 
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <label for="lastname" class="block mb-1 text-sm font-medium text-gray-900 ">Apellidos</label>
                         <Field id="lastname" type="text" name="lastname" placeholder="Doe"
                             class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
@@ -179,7 +194,8 @@ function debug() {
                 </div>
 
                 <div>
-                    <label for="card" class="block mb-1 text-sm font-medium text-gray-900 ">Número de tarjeta</label>
+                    <label for="card" class="block mb-1 text-sm font-medium text-gray-900 ">Número de
+                        tarjeta</label>
                     <div class="flex items-start gap-2">
                         <InputCard v-model="card" />
                         <div class="w-[90%]  h-full">
@@ -196,8 +212,8 @@ function debug() {
 
                 </div>
 
-                <div class="flex w-full gap-2">
-                    <div class="w-1/2">
+                <div class="flex flex-col md:flex-row w-full gap-2">
+                    <div class="w-full md:w-1/2">
                         <label for="month" class="block mb-1 text-sm font-medium text-gray-900 ">Mes de
                             vencimiento</label>
                         <Field id="month" type="number" name="month" placeholder="1"
@@ -210,7 +226,7 @@ function debug() {
                         </div>
 
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <label for="year" class="block mb-1 text-sm font-medium text-gray-900 ">Año de
                             vencimiento</label>
                         <Field id="year" type="number" name="year" placeholder="1982"
@@ -232,7 +248,8 @@ function debug() {
                         placeholder="C.C Tólon Fashion Mall Piso 1. Las Mercedes, 1080 Caracas."
                         class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                         v-model="dataToSend.address" />
-                    <h2 class="font-bold text-sm">*La Dirección debe ser tal como aparece en los registros del emisor de
+                    <h2 class="font-bold text-sm">*La Dirección debe ser tal como aparece en los registros del
+                        emisor de
                         la tarjeta de pago.</h2>
 
                     <div class=" h-6">
@@ -244,32 +261,30 @@ function debug() {
 
                 <div>
                     <label for="year" class="block mb-1 text-sm font-medium text-gray-900 ">País</label>
-                    <country-select v-model="dataToSend.country" :country="dataToSend.country" :shortCodeDropdown="true" topCountry="VE"
+                    <SelectInput v-model="dataToSend.country"
                         class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
                     <div class=" h-6">
 
                     </div>
                 </div>
 
-                <transition 
-                    enter-active-class="duration-300 ease-in-out" 
-                    enter-from-class="opacity-0"
-                    enter-to-class="opacity-100" 
-                    leave-active-class="duration-300 ease-in-out"
-                    leave-from-class="opacity-700" 
-                    leave-to-class="transform opacity-0">
+                
+                <div>
+                    <h2 class="block mb-1 text-sm font-medium text-gray-900 ">Región</h2>
+                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region"
+                        class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
+                    <div class=" h-6">
+                        <h2 v-if="regionWarn" class="text-red-700 text-sm">Debes seleccionar una region</h2>
+
+                    </div>
+                </div>
+         
+
+                <transition enter-active-class="duration-300 ease-in-out" enter-from-class="opacity-0"
+                    enter-to-class="opacity-100" leave-active-class="duration-300 ease-in-out"
+                    leave-from-class="opacity-700" leave-to-class="transform opacity-0">
                     <div v-if="largeForm">
 
-                        <div>
-                            <h2 class="block mb-1 text-sm font-medium text-gray-900 ">Región</h2>
-                            <region-select v-model="dataExtra.region" :country="dataToSend.country"
-                                :region="dataExtra.region"
-                                class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
-                            <div class=" h-6">
-                                <h2 v-if="regionWarn" class="text-red-700 text-sm">Debes seleccionar una region</h2>
-
-                            </div>
-                        </div>
 
                         <div>
                             <label for="location" class="block mb-1 text-sm font-medium text-gray-900 ">Locación</label>
@@ -287,7 +302,8 @@ function debug() {
                         </div>
 
                         <div>
-                            <label for="zip" class="block mb-1 text-sm font-medium text-gray-900 ">Código Postal</label>
+                            <label for="zip" class="block mb-1 text-sm font-medium text-gray-900 ">Código
+                                Postal</label>
                             <Field id="zip" type="text" name="zip" placeholder="00000-0000"
                                 class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                 v-model="dataExtra.zip" />
@@ -301,7 +317,8 @@ function debug() {
                         </div>
 
                         <div>
-                            <label for="buildingNumber" class="block mb-1 text-sm font-medium text-gray-900 ">Número de
+                            <label for="buildingNumber" class="block mb-1 text-sm font-medium text-gray-900 ">Número
+                                de
                                 edificio</label>
                             <Field id="buildingNumber" type="number" name="buildingNumber" placeholder="1234"
                                 class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
@@ -332,5 +349,3 @@ function debug() {
         </Form>
     </div>
 </template>
-
-<style scoped></style>

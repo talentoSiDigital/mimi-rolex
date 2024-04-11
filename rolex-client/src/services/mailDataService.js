@@ -16,7 +16,7 @@ class MailSender {
     // formData.append("email", data.email)
     // formData.append("mensaje", data.mensaje)
     // formData.append("direccion", data.direccion)
-    // formData.append("phone", data.phone)
+    // formData.append("phone", data.phone) 
     const dataToSend = {
       "tto": data.tto,
       "nombre": data.nombre,

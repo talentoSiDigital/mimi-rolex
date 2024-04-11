@@ -31,6 +31,11 @@ const { isLoading, state, isReady, execute } = useAsyncState(
         })
 )
 
+const closeModalInfo = ref({    
+    "message":"",
+    "icon": false 
+})
+
 function getTableContent(item, char) {
     return item.split(char)
 }
@@ -42,12 +47,17 @@ function closeModal(){
 }
 
 
+
+
 function addToCart(id) {
     if (!isUserLogged.status.value.loggedIn) {
         activateModal()
     } else {
         // console.log(user);
         StoreDataService.postAddToCart(id, user.id).then((d) => {
+            closeModalInfo.value.message = d.data.message
+            closeModalInfo.value.icon = d.data.icon
+
             closeModal()
         })
     }
@@ -74,7 +84,7 @@ function goBack() {
         <div>
             <transition name="bounce">
 
-                <FinishedModal v-if="complete" @activate-modal="closeModal" />
+                <FinishedModal v-if="complete" @activate-modal="closeModal" :message="closeModalInfo.message" :icon="closeModalInfo.icon"/>
             </transition>
           
 

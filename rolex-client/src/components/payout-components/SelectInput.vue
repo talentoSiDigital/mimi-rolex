@@ -1,9 +1,9 @@
 <script setup>
-
+const model = defineModel()
 </script>
 
 <template>
-    <select name="pais">
+    <select name="pais" v-model="model">
         <option value="AF">Afganistán</option>
         <option value="AL">Albania</option>
         <option value="DE">Alemania</option>
@@ -68,7 +68,7 @@
         <option value="AE">Emiratos Árabes Unidos</option>
         <option value="ER">Eritrea</option>
         <option value="SI">Eslovenia</option>
-        <option value="ES" selected>España</option>
+        <option value="ES">España</option>
         <option value="US">Estados Unidos</option>
         <option value="EE">Estonia</option>
         <option value="ET">Etiopía</option>
@@ -232,7 +232,7 @@
         <option value="UY">Uruguay</option>
         <option value="UZ">Uzbekistán</option>
         <option value="VU">Vanuatu</option>
-        <option value="VE">Venezuela</option>
+        <option value="VE" selected>Venezuela</option>
         <option value="VN">Vietnam</option>
         <option value="YE">Yemen</option>
         <option value="YU">Yugoslavia</option>

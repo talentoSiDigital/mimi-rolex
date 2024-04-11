@@ -7,12 +7,12 @@
 
 // common parameters
 const AuthenticationType = 'http_signature';
-const RunEnvironment = 'apitest.cybersource.com';
-const MerchantId = 'bc_5808459559';
+const RunEnvironment = process.env.CYBERSOURCE_RUN_ENVIROMENT;
+const MerchantId = process.env.CYBERSOURCE_MERCHANT_ID;
 
 // http_signature parameters
-const MerchantKeyId = 'ea34b9a9-fc29-46df-90c2-f6446f285bb1';
-const MerchantSecretKey = 'SEjMTAjv97bVARr7WAV1bIwfGW6cUMC5Iqt5iJ18MDo=';
+const MerchantKeyId = process.env.CYBERSOURCE_MERCHANT_KEY;
+const MerchantSecretKey = process.env.CYBERSOURCE_SECRET_KEY;
 
 // jwt parameters
 const KeysDirectory = 'Resource';

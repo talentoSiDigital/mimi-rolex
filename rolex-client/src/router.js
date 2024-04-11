@@ -25,7 +25,6 @@ import Contacto from './views/Mimi/Contacto.view.vue'
 import NotFound404 from './views/404.view.vue'
 
 
-
 // MIMI STORE COMPONENTS
 
 import StoreJoyeria from './views/Tienda/StoreJoyeria.view.vue'
@@ -43,8 +42,10 @@ import Profile from './components/dashboard/Profile.vue'
 import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
 import JoyeriaForm from './components/dashboard/JoyeriaForm.vue'
 import RelojeriaForm from './components/dashboard/RelojeriaForm.vue'
-import ShoppingCart from './components/dashboard/ShoppingCart.vue'
 
+import ShoppingCart from './components/dashboard/ShoppingCart.vue'
+import DataUpdate from './components/dashboard/DataUpdate.vue'
+import Checkout from './components/dashboard/Checkout.vue'
 
 
 const router = createRouter({
@@ -307,6 +308,12 @@ const router = createRouter({
           name:"agregar-relojeria",
           component:RelojeriaForm
         },
+        {
+          path:"actualizar-datos",
+          name:"actualizar-datos",
+          component:DataUpdate
+        },
+
         // {
         //   path:"carrito",
         //   name:"carrito",
@@ -321,12 +328,22 @@ const router = createRouter({
     // ****************
     // PAYMENT ROUTES
     ,
+  
     {
       path: "/carrito",
       name: "carrito",
       component: ShoppingCart,
       meta: {
         title: 'Carrito De Compras  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    {
+      path: "/checkout",
+      name: "checkout",
+      component: Checkout,
+      meta: {
+        title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     ,

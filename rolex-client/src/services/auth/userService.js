@@ -24,6 +24,20 @@ class UserService {
     return axios.get(API_URL + `find-user/${id}`, { headers: authHeader() });
   
   }
+  updateUserData(data){
+    const dataToSend = {
+      "id": data.id,
+      "name": data.name,
+      "lastname": data.lastname,
+      "age": data.age,
+      "phone": data.phone,
+      "email": data.email
+      
+    }
+    console.log(dataToSend);
+    return axios.post(API_URL +"update", dataToSend);
+
+  }
 }
   
 export default new UserService();

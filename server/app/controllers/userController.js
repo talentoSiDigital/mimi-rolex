@@ -15,9 +15,10 @@ exports.listUsers = (req, res) => {
 };
 
 exports.findUserData = (req, res) => {
-    console.log(req.params)
     User.findAll({
-        attributes: ['name',
+        attributes: [
+            'id',
+            'name',
             'lastName',
             'age',
             'phone',
@@ -33,6 +34,24 @@ exports.findUserData = (req, res) => {
     })
 }
 
+
+exports.updateUserData = (req,res) =>{
+    User.update({
+        name: req.body.name,
+        lastName : req.body.lastname,
+        age: req.body.age,
+        phone: req.body.phone,
+        email: req.body.email
+    },{
+        where:{
+            id : req.body.id
+        }
+    }).then(()=>{
+        res.status(200).send({ message:'Success'})
+    }).catch(err => {
+        res.send(err);
+    })
+}
 
 
 

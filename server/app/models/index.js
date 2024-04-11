@@ -23,6 +23,8 @@ const Cart = db.store.Cart;
 const CartProduct = db.store.CartProduct;
 const Watchmaking = db.store.Watchmaking;
 const User = db.user.User;
+const Bill = db.store.Bill;
+const BillProduct = db.store.BillProduct;
 
 
 Cart.belongsTo(User, { as: 'owner' })
@@ -33,6 +35,15 @@ CartProduct.belongsTo(Cart)
 CartProduct.belongsTo(Watchmaking)
 Cart.hasMany(CartProduct)
 Watchmaking.hasMany(CartProduct)
+
+Bill.belongsTo(User, { as: 'owner' })
+
+Watchmaking.belongsToMany(Bill , {through: BillProduct})
+Bill.belongsToMany(Watchmaking , {through: BillProduct})
+Bill.hasMany(BillProduct)
+BillProduct.belongsTo(Bill)
+Watchmaking.hasMany(BillProduct)
+BillProduct.belongsTo(Watchmaking)
 
 
 

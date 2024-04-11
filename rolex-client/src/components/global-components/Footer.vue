@@ -62,7 +62,7 @@ import { RouterLink } from "vue-router";
 <!-- <RouterLink to="/">
 </RouterLink> -->
 
-<footer class="bg-main-green rounded-lg shadow relative z-40">
+<footer class="bg-main-green rounded-lg shadow relative z-30">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between">
             <RouterLink to="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">

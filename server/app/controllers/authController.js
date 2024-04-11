@@ -4,6 +4,8 @@ const config = require("../config/auth.config");
 const User = db.user.User;
 const Role = db.user.Role;
 const Op = db.Sequelize.Op;
+const Store = db.store;
+
 
 const jwt = require("jsonwebtoken")
 const bcrypt = require('bcrypt');
@@ -11,6 +13,8 @@ const bcrypt = require('bcrypt');
 // Save User to Database
 exports.signup = (req, res) => {
     // CREATE USER WITH REQUEST PARAMS
+
+    
     User.create({
         name: req.body.name,
         lastName: req.body.lastname,
@@ -19,14 +23,16 @@ exports.signup = (req, res) => {
         phone: req.body.phone,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8)
-    }).then(user => {
-        user.setRoles([1]).then(() => {
-            return res.send({ message: "El usuario ha sido registrado exitosamente" })
+    })
+        .then((user) => {
+            user.setRoles([1])
+            Store.Cart.create( { ownerId: user.dataValues.id } )
+        }) 
+        .then(() => { return res.send({ message: "El usuario ha sido registrado exitosamente" }) })
+        .catch(err => {
+            console.log("Error: 1")
+            return res.status(400).send({ message: err.message })
         });
-    }).catch(err => {
-        console.log("Error: 1")
-        return res.status(500).send({ message: err.message })
-    });
 };
 
 exports.signin = (req, res) => {

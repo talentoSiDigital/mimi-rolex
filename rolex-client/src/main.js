@@ -51,7 +51,8 @@ import {
     faGear,
     faPenToSquare,
     faTrashCan,
-    faCircleCheck
+    faCircleCheck,
+    faCircleXmark
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -80,7 +81,8 @@ library.add(
     faGear,
     faPenToSquare,
     faTrashCan,
-    faCircleCheck
+    faCircleCheck,
+    faCircleXmark
 )
 
 createApp(App)

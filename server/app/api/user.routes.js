@@ -1,5 +1,6 @@
 const authJwt = require("../middleware/authJwt");
 const controller = require("../controllers/userController");
+const uploadFiles = require("../middleware/store")
 
 module.exports = function(app) {
   app.use(function(req, res, next) {
@@ -12,21 +13,8 @@ module.exports = function(app) {
 
   app.get("/api/user/get-all", controller.listUsers)
   app.get("/api/user/find-user/:id", controller.findUserData)
-
+  app.post("/api/user/update", uploadFiles.any(), controller.updateUserData)
 
   
-  // app.get("/api/test/all", controller.allAccess);
-  
-  // app.get(
-  //   "/api/test/user",
-  //   [authJwt.verifyToken],
-  //   controller.userBoard
-  // );
-
-  // app.get(
-  //   "/api/test/admin",
-  //   [authJwt.verifyToken],
-  //   controller.adminBoard
-  // );
 
 };

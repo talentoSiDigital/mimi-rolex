@@ -70,7 +70,7 @@ const tag = {
                         </table>
                     </div>
 
-                    <RouterLink to="/dashboard/banner-edit"
+                    <RouterLink to="/dashboard/actualizar-datos"
                         class="w-full border border-main-green text-black bg-main-green hover:bg-white  font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 ">
 
                         <p>Actualizar datos</p>

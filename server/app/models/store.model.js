@@ -53,13 +53,15 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     }
     ,
-
     precio: {
       type: Sequelize.STRING
     }
     ,
     cantidadImagenes: {
       type: Sequelize.INTEGER
+    },
+    cantidad:{
+      type: Sequelize.INTEGER 
     }
 
   }, {
@@ -71,11 +73,34 @@ module.exports = (sequelize, Sequelize) => {
   const CartProduct = sequelize.define("cart_product", {});
 
   
+  const Bill = sequelize.define("bill", {
+    codigo: {
+      type: Sequelize.STRING
+    },
+    direccion: {
+      type: Sequelize.STRING
+    },
+    
+    pais: {
+      type: Sequelize.STRING
+    },
+    
+    ciudad : {
+      type: Sequelize.STRING
+    },
+    total : {
+      type: Sequelize.STRING
+    },
 
+    
 
-  const Bill = sequelize.define("bill", {},{
+  },{
     timestamps: false
   });
+  
+  const BillProduct = sequelize.define("bill_product", {});
+
+  
 
 
   return { 
@@ -83,6 +108,7 @@ module.exports = (sequelize, Sequelize) => {
     Watchmaking,
     Cart,
     Bill,
-    CartProduct
+    CartProduct,
+    BillProduct
   };
 };

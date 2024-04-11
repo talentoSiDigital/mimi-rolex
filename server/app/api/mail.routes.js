@@ -6,11 +6,13 @@ module.exports = app =>{
     var router = require("express").Router()
     
     // Routes
-    router.get("/test-mail", mailController.testMail)
+    router.get("/paymail/:codigo", mailController.payMail)
     router.post("/email/rolex",uploadFiles.any() ,mailController.rolexContact)
 
+
+
     
-    app.use('/api',router)
+    app.use('/api',router) 
 
 
 }
