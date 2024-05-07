@@ -155,7 +155,7 @@ function goBack() {
                         class="border border-black w-full mb-2 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Agregar
                         al carrito</button>
                     <a :href="sendMessage(state)" target="_blank"
-                        class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Contactar</a>
+                        class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Contactar </a>
                     <div v-for="item in getTableContent(state[0].contenidoTabla, ';')" :key="item"
                         class="flex justify-center ">
 

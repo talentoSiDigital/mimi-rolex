@@ -1,5 +1,8 @@
 import AuthService from '../services/auth/authDataService';
 import { defineStore } from "pinia";
+import storeDataService from '../services/storeDataService.js';
+
+
 
 const user = JSON.parse(localStorage.getItem('user'));
 const initialState = ()=>{
@@ -14,6 +17,7 @@ export const auth = defineStore('auth',{
         user => {
           this.$state.status.loggedIn=true;
           this.$state.user=user;
+          
           return Promise.resolve(user); 
         },
         error => {

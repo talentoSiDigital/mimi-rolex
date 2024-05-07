@@ -8,23 +8,17 @@ const Store = db.store;
 
 
 exports.paymentCheck = async (req, res) => {
-
+	// Check if request has body
 	if (!req.body) {
-
 		res.status(500).send('Debes enviar el pago')
 		return
 	}
-
+	// user info setup
 	const userId = parseInt(req.params.id)
 
-	function randomStr() {
-		let ans = crypto.randomUUID()
-		let array = ans.split('-')
-		return array[array.length - 1].toUpperCase();
-	}
 
 	let info = {
-		"clientReferenceInformationCode": randomStr(),
+		"clientReferenceInformationCode": req.body.code,
 		"orderInformationAmountTotal": req.body.total,
 		"orderInformationAmountCurrency": 'USD',
 		"orderInformationBillToFirstName": req.body.firstName,
@@ -39,6 +33,8 @@ exports.paymentCheck = async (req, res) => {
 		"orderInformationBillToLocality": req.body.region
 
 	}
+
+
 	if (req.body.country == 'US' || req.body.country == 'CA') {
 		info.orderInformationBillToAdministrativeArea = req.body.region
 		info.orderInformationBillToPostalCode = req.body.zip
@@ -48,21 +44,26 @@ exports.paymentCheck = async (req, res) => {
 
 
 	try {
+		// Create Config Object
 		var configObject = new config();
 		var apiClient = new cybersourceRestApi.ApiClient();
-		var requestObj = new cybersourceRestApi.CreatePaymentRequest();
+		var requestObj = new cybersourceRestApi.CheckPayerAuthEnrollmentRequest();
 
+
+		// Code reference 
 		var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
 		clientReferenceInformation.code = info.clientReferenceInformationCode;
 		requestObj.clientReferenceInformation = clientReferenceInformation;
 
-		var orderInformation = new cybersourceRestApi.Ptsv2paymentsOrderInformation();
-		var orderInformationAmountDetails = new cybersourceRestApi.Ptsv2paymentsOrderInformationAmountDetails();
+		// order amount setup
+		var orderInformation = new cybersourceRestApi.Riskv1authenticationsOrderInformation();
+		var orderInformationAmountDetails = new cybersourceRestApi.Riskv1authenticationsOrderInformationAmountDetails();
 		orderInformationAmountDetails.totalAmount = info.orderInformationAmountTotal;
 		orderInformationAmountDetails.currency = info.orderInformationAmountCurrency;
 		orderInformation.amountDetails = orderInformationAmountDetails;
 
-		var orderInformationBillTo = new cybersourceRestApi.Ptsv2paymentsOrderInformationBillTo();
+		// Billing personal info setup
+		var orderInformationBillTo = new cybersourceRestApi.Riskv1authenticationsOrderInformationBillTo();
 		orderInformationBillTo.firstName = info.orderInformationBillToFirstName;
 		orderInformationBillTo.lastName = info.orderInformationBillToLastName;
 		orderInformationBillTo.address1 = info.orderInformationBillToAddress;
@@ -79,6 +80,7 @@ exports.paymentCheck = async (req, res) => {
 		orderInformation.billTo = orderInformationBillTo;
 		requestObj.orderInformation = orderInformation;
 
+		// Card information setup
 		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
 		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
 		paymentInformationCard.number = info.paymentInformationCardNumber;
@@ -88,104 +90,168 @@ exports.paymentCheck = async (req, res) => {
 
 		requestObj.paymentInformation = paymentInformation;
 
+
+
+		// Device fingerprint information, required by cybersource
+		var deviceInformation = new cybersourceRestApi.Riskv1decisionsDeviceInformation();
+		deviceInformation.fingerprintSessionId = req.body.deviceFingerPrintID
+		deviceInformation.ipAddress = req.body.ip;
+		requestObj.deviceInformation = deviceInformation;
+
+
+		// Merchant Defined Data (MDD) information, required by cybersource
+
+		var merchantDefinedInformation =	new Array();
+		var	merchantDefinedInformation1 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation1.key = '1';
+		merchantDefinedInformation1.value = 'bc_5808459559';
+		merchantDefinedInformation.push(merchantDefinedInformation1); 
+
+		var	merchantDefinedInformation2 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation2.key = '2';
+		merchantDefinedInformation2.value = 'WEB';
+		merchantDefinedInformation.push(merchantDefinedInformation2);
+
+		var	merchantDefinedInformation3 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation3.key = '3';
+		merchantDefinedInformation3.value = info.clientReferenceInformationCode; 
+		merchantDefinedInformation.push(merchantDefinedInformation3);
+
+		
+		var	merchantDefinedInformation4 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation4.key = '4';
+		merchantDefinedInformation4.value = 'P-3DS Joyeria';
+		merchantDefinedInformation.push(merchantDefinedInformation4);
+
+		var	merchantDefinedInformation5 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation5.key = '5';
+		merchantDefinedInformation5.value = 'INVERSIONES MIMI, C.A.';
+		merchantDefinedInformation.push(merchantDefinedInformation5);
+
+		
+		var	merchantDefinedInformation6 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation6.key = '6';
+		merchantDefinedInformation6.value = '5094 Precious Stones/Metals/Jewe';
+		merchantDefinedInformation.push(merchantDefinedInformation6);
+
+		
+		var	merchantDefinedInformation7 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation7.key = '7';
+		merchantDefinedInformation7.value = req.body.documentId;
+		merchantDefinedInformation.push(merchantDefinedInformation7);
+
+		
+		var	merchantDefinedInformation8 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		merchantDefinedInformation8.key = '8';
+		merchantDefinedInformation8.value = 'NO';
+		merchantDefinedInformation.push(merchantDefinedInformation8);
+
+		requestObj.merchantDefinedInformation = merchantDefinedInformation;
+
 		var tokenInformation = new cybersourceRestApi.Ptsv2paymentsTokenInformation();
 		tokenInformation.transientTokenJwt = process.env.SECRET_KEY;
 		requestObj.tokenInformation = tokenInformation;
-		var instance = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
+		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
+		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
 
-		instance.createPayment(requestObj, async function (error, data, response) {
-			if (error) {
-				console.log('\nError : ' + JSON.stringify(error));
-			}
-			else if (data) {
-				console.log('\nData : ' + JSON.stringify(data));
-			}
-
-			console.log('\nResponse : ' + JSON.stringify(response));
-			console.log('\nResponse Code of Process a Payment : ' + JSON.stringify(response['status']));
-			console.log('\nResponse text : ' + JSON.stringify(response['text']));
-			var status = response['status'];
-			if (status == '201') {
-				console.log('+++++++++++++++++++++++');
+	
+		instance.checkPayerAuthEnrollment(requestObj, function (error, data, response) {
+			var status = JSON.parse(response['text']);
 
 
-				const cartId = await Store.Cart.findAll({
-					where: {
-						ownerId: userId,
-					},
-					attributes: ['id']
+			if(status.status == 'AUTHENTICATION_SUCCESSFUL'){
+				console.log("Authentication status: ",status.status);
+				instance2.createPayment(requestObj, function (error, data, response){
+					console.log("Payment Status: ",JSON.parse(response['text']).status)
 				})
 
-				console.log('1+++++++++++++++++++++++');
-
-				Store.CartProduct.findAll({
-					where: {
-						cartId: cartId[0].dataValues.id
-					}
-				})
-					.then(async (d) => {
-						console.log('2++++++++++++++++++++++');
-
-						const products = d
-
-
-						const createBill = await Store.Bill.create({
-							codigo: info.clientReferenceInformationCode,
-							direccion: info.orderInformationBillToAddress,
-							pais: info.orderInformationBillToCountry,
-							ciudad: info.orderInformationBillToLocality,
-							total: `${info.orderInformationAmountTotal}`,
-							ownerId: userId
-						})
-						const data = []
-						for (let item = 0; item < products.length; item++) {
-							data.push({})
-							for (const key in products[item].dataValues) {
-
-								if (key !== "cartId") {
-									data[data.length - 1][key] = products[item].dataValues[key]
-								} else {
-									data[data.length - 1]["billId"] = createBill.dataValues.id
-								}
-							}
-						}
-
-						return data
-					})
-
-					.then((d) => {
-
-						console.log('6++++++++++++++++++++++');
-						Store.BillProduct.bulkCreate(d).then((result) => {
-							console.log(result, 'done');
-						})
-					})
-					.then((d) => {
-
-						console.log('7++++++++++++++++++++++');
-						Store.CartProduct.destroy({
-						where: {
-							cartId: cartId[0].dataValues.id
-						}
-					})})
-					.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
-					.catch((error) => {
-
-						console.log(error);
-						res.sendStatus(500).send(error)
-					})
-
-
-
-			}
-			else{
-				res.sendStatus(400).send('DECLINED')
+			} else{
+				res.send(status.status)
 			}
 
 
-			if (response['text'] == 'DECLINED') {
-				return
-			}
+			// console.log('\nResponse : ' + JSON.stringify(response));
+			// console.log('\nResponse Code of Process a Payment : ' + JSON.stringify(response['status']));
+			// console.log('\nResponse text : ' + JSON.parse(response['text']));
+			res.send(JSON.parse(response['text']));
+			// if (status.status == 'AUTHORIZED') {
+			// 	console.log('+++++++++++++++++++++++');
+
+
+			// 	const cartId = await Store.Cart.findAll({
+			// 		where: {
+			// 			ownerId: userId,
+			// 		},
+			// 		attributes: ['id']
+			// 	})
+
+			// 	console.log('1+++++++++++++++++++++++');
+
+			// 	Store.CartProduct.findAll({
+			// 		where: {
+			// 			cartId: cartId[0].dataValues.id
+			// 		}
+			// 	})
+			// 		.then(async (d) => {
+			// 			console.log('2++++++++++++++++++++++');
+
+			// 			const products = d
+
+
+			// 			const createBill = await Store.Bill.create({
+			// 				codigo: info.clientReferenceInformationCode,
+			// 				direccion: info.orderInformationBillToAddress,
+			// 				pais: info.orderInformationBillToCountry,
+			// 				ciudad: info.orderInformationBillToLocality,
+			// 				total: `${info.orderInformationAmountTotal}`,
+			// 				ownerId: userId
+			// 			})
+			// 			const data = []
+			// 			for (let item = 0; item < products.length; item++) {
+			// 				data.push({})
+			// 				for (const key in products[item].dataValues) {
+
+			// 					if (key !== "cartId") {
+			// 						data[data.length - 1][key] = products[item].dataValues[key]
+			// 					} else {
+			// 						data[data.length - 1]["billId"] = createBill.dataValues.id
+			// 					}
+			// 				}
+			// 			}
+
+			// 			return data
+			// 		})
+
+			// 		.then((d) => {
+
+			// 			console.log('6++++++++++++++++++++++');
+			// 			Store.BillProduct.bulkCreate(d).then((result) => {
+			// 				console.log(result, 'done');
+			// 			})
+			// 		})
+			// 		.then((d) => {
+
+			// 			console.log('7++++++++++++++++++++++');
+			// 			Store.CartProduct.destroy({
+			// 			where: {
+			// 				cartId: cartId[0].dataValues.id
+			// 			}
+			// 		})})
+			// 		.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
+			// 		.catch((error) => {
+
+			// 			console.log(error);
+			// 			res.sendStatus(500).send(error)
+			// 		})
+
+
+
+			// }
+			// else{
+			// 	res.sendStatus(400).send(status)
+			// }
+
+
 
 
 		});

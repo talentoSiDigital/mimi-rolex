@@ -14,7 +14,7 @@ const emit = defineEmits(['activate-modal'])
 const card = ref("")
 const actualYear = new Date().getFullYear()
 const digitsOnly = (value) => /^\d+$/.test(value)
-const mastercard = (value) => /(51[0-9]|55[0-9])+/.test(value)
+const mastercard = (value) => /(5[0-9]|55[0-9])+/.test(value)
 const visa = (value) => /(4[0-9])+/.test(value)
 const maestro = (value) => /(5020[0-9]|5018[0-9]|6[0-9])+/.test(value)
 const regionWarn = ref(false)
@@ -36,6 +36,11 @@ const schema = yup.object().shape({
     lastname: yup
         .string()
         .required("Nombre de usuario es obligatorio")
+        .min(2, "Debe contener al menos 1 caracter")
+        .max(30, "Debe contener un maximo de 30 caracteres"),
+    documentId: yup
+        .string()
+        .required("El documento de identidad es obligatorio")
         .min(2, "Debe contener al menos 1 caracter")
         .max(30, "Debe contener un maximo de 30 caracteres"),
     card: yup
@@ -194,6 +199,22 @@ function debug(){
                 </div>
 
                 <div>
+                    <label for="documentId" class="block mb-1 text-sm font-medium text-gray-900 ">Documento de identidad</label>
+                    <div class="flex items-start gap-2">
+                        <div class="w-full  h-full">
+                            <Field id="documentId" type="text" name="documentId" placeholder="1234569789"
+                                class="bg-white border border-gray-300 h-12 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                                v-model="dataToSend.documentId" />
+                        </div>
+
+                    </div>
+                    <div class=" h-6">
+
+                        <ErrorMessage name="documentId" class="text-red-700 text-sm" />
+                    </div>
+
+                </div>
+                <div>
                     <label for="card" class="block mb-1 text-sm font-medium text-gray-900 ">Número de
                         tarjeta</label>
                     <div class="flex items-start gap-2">
@@ -271,7 +292,7 @@ function debug(){
                 
                 <div>
                     <h2 class="block mb-1 text-sm font-medium text-gray-900 ">Región</h2>
-                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region"
+                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region" :regionName="true"
                         class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
                     <div class=" h-6">
                         <h2 v-if="regionWarn" class="text-red-700 text-sm">Debes seleccionar una region</h2>

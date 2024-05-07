@@ -14,12 +14,1407 @@ const mailOptions = {
 
 
 // Test route.
-exports.testMail = (req, res) => {
+exports.sendNewsletter = (req, res) => {
   const mailOptions = {
-    from: 'plataformapagosl@mimijoyeria.com',
-    to: 'mzorrilla.sidigital@gmail.com',
+    from: 'mzorrilla.sidigital@gmail.com',
+    to: 'manuelzorrilladev@gmail.com',
     subject: 'Mensaje de prueba',
-    text: 'Este mensaje es de prueba'
+    html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="x-apple-disable-message-reformatting">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="telephone=no" name="format-detection">
+        <title></title>
+        <!--[if (mso 16)]>
+        <style type="text/css">
+        a {text-decoration: none;}
+        </style>
+        <![endif]-->
+        <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+        <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG></o:AllowPNG>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+        <script async crossorigin="anonymous" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/https://edge.fullstory.com/s/fs.js"></script>
+    
+        <!-- DO NOT REMOVE -->
+        <style>
+    
+            /* CONFIG STYLES Please do not delete and edit CSS styles below */
+    /* IMPORTANT THIS STYLES MUST BE ON FINAL EMAIL */
+    .rollover span {
+        font-size: 0;
+    }
+    
+    #outlook a {
+        padding: 0;
+    }
+    
+    .es-button {
+        mso-style-priority: 100 !important;
+        text-decoration: none !important;
+    }
+    
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+    
+    .es-desk-hidden {
+        display: none;
+        float: left;
+        overflow: hidden;
+        width: 0;
+        max-height: 0;
+        line-height: 0;
+        mso-hide: all;
+    }
+    
+    /*
+    END OF IMPORTANT
+    */
+    body {
+        width: 100%;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+    
+    table {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+    
+    table td,
+    body,
+    .es-wrapper {
+        padding: 0;
+        Margin: 0;
+    }
+    
+    .es-content,
+    .es-header,
+    .es-footer {
+        table-layout: fixed !important;
+        width: 100%;
+    }
+    
+    img {
+        display: block;
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+    }
+    
+    p,
+    hr {
+        Margin: 0;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        Margin: 0;
+        line-height: 120%;
+        mso-line-height-rule: exactly;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    }
+    
+    p,
+    ul li,
+    ol li,
+    a {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+    }
+    
+    .es-left {
+        float: left;
+    }
+    
+    .es-right {
+        float: right;
+    }
+    
+    .es-p5 {
+        padding: 5px;
+    }
+    
+    .es-p5t {
+        padding-top: 5px;
+    }
+    
+    .es-p5b {
+        padding-bottom: 5px;
+    }
+    
+    .es-p5l {
+        padding-left: 5px;
+    }
+    
+    .es-p5r {
+        padding-right: 5px;
+    }
+    
+    .es-p10 {
+        padding: 10px;
+    }
+    
+    .es-p10t {
+        padding-top: 10px;
+    }
+    
+    .es-p10b {
+        padding-bottom: 10px;
+    }
+    
+    .es-p10l {
+        padding-left: 10px;
+    }
+    
+    .es-p10r {
+        padding-right: 10px;
+    }
+    
+    .es-p15 {
+        padding: 15px;
+    }
+    
+    .es-p15t {
+        padding-top: 15px;
+    }
+    
+    .es-p15b {
+        padding-bottom: 15px;
+    }
+    
+    .es-p15l {
+        padding-left: 15px;
+    }
+    
+    .es-p15r {
+        padding-right: 15px;
+    }
+    
+    .es-p20 {
+        padding: 20px;
+    }
+    
+    .es-p20t {
+        padding-top: 20px;
+    }
+    
+    .es-p20b {
+        padding-bottom: 20px;
+    }
+    
+    .es-p20l {
+        padding-left: 20px;
+    }
+    
+    .es-p20r {
+        padding-right: 20px;
+    }
+    
+    .es-p25 {
+        padding: 25px;
+    }
+    
+    .es-p25t {
+        padding-top: 25px;
+    }
+    
+    .es-p25b {
+        padding-bottom: 25px;
+    }
+    
+    .es-p25l {
+        padding-left: 25px;
+    }
+    
+    .es-p25r {
+        padding-right: 25px;
+    }
+    
+    .es-p30 {
+        padding: 30px;
+    }
+    
+    .es-p30t {
+        padding-top: 30px;
+    }
+    
+    .es-p30b {
+        padding-bottom: 30px;
+    }
+    
+    .es-p30l {
+        padding-left: 30px;
+    }
+    
+    .es-p30r {
+        padding-right: 30px;
+    }
+    
+    .es-p35 {
+        padding: 35px;
+    }
+    
+    .es-p35t {
+        padding-top: 35px;
+    }
+    
+    .es-p35b {
+        padding-bottom: 35px;
+    }
+    
+    .es-p35l {
+        padding-left: 35px;
+    }
+    
+    .es-p35r {
+        padding-right: 35px;
+    }
+    
+    .es-p40 {
+        padding: 40px;
+    }
+    
+    .es-p40t {
+        padding-top: 40px;
+    }
+    
+    .es-p40b {
+        padding-bottom: 40px;
+    }
+    
+    .es-p40l {
+        padding-left: 40px;
+    }
+    
+    .es-p40r {
+        padding-right: 40px;
+    }
+    
+    .es-menu td {
+        border: 0;
+    }
+    
+    .es-menu td a img {
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+    
+    /*
+    END CONFIG STYLES
+    */
+    s {
+        text-decoration: line-through;
+    }
+    
+    p,
+    ul li,
+    ol li {
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        line-height: 150%;
+    }
+    
+    ul li,
+    ol li {
+        Margin-bottom: 15px;
+        margin-left: 0;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .es-menu td a {
+        text-decoration: none;
+        display: block;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    }
+    
+    .es-wrapper {
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat;
+        background-position: center top;
+    }
+    
+    .es-wrapper-color,
+    .es-wrapper {
+        background-color: #f6f6f6;
+    }
+    
+    .es-header {
+        background-color: transparent;
+        background-repeat: repeat;
+        background-position: center top;
+    }
+    
+    .es-header-body {
+        background-color: #ffffff;
+    }
+    
+    .es-header-body p,
+    .es-header-body ul li,
+    .es-header-body ol li {
+        color: #333333;
+        font-size: 14px;
+    }
+    
+    .es-header-body a {
+        color: #0968AC;
+        font-size: 14px;
+    }
+    
+    .es-content-body {
+        background-color: #ffffff;
+    }
+    
+    .es-content-body p,
+    .es-content-body ul li,
+    .es-content-body ol li {
+        color: #333333;
+        font-size: 14px;
+    }
+    
+    .es-content-body a {
+        color: #be0100;
+        font-size: 14px;
+    }
+    
+    .es-footer {
+        background-color: transparent;
+        background-repeat: repeat;
+        background-position: center top;
+    }
+    
+    .es-footer-body {
+        background-color: #ffffff;
+    }
+    
+    .es-footer-body p,
+    .es-footer-body ul li,
+    .es-footer-body ol li {
+        color: #333333;
+        font-size: 14px;
+    }
+    
+    .es-footer-body a {
+        color: #ffffff;
+        font-size: 14px;
+    }
+    
+    .es-infoblock,
+    .es-infoblock p,
+    .es-infoblock ul li,
+    .es-infoblock ol li {
+        line-height: 120%;
+        font-size: 12px;
+        color: #cccccc;
+    }
+    
+    .es-infoblock a {
+        font-size: 12px;
+        color: #cccccc;
+    }
+    
+    h1 {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: normal;
+        color: #333333;
+    }
+    
+    h2 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: normal;
+        color: #333333;
+    }
+    
+    h3 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: #333333;
+    }
+    
+    .es-header-body h1 a,
+    .es-content-body h1 a,
+    .es-footer-body h1 a {
+        font-size: 30px;
+    }
+    
+    .es-header-body h2 a,
+    .es-content-body h2 a,
+    .es-footer-body h2 a {
+        font-size: 24px;
+    }
+    
+    .es-header-body h3 a,
+    .es-content-body h3 a,
+    .es-footer-body h3 a {
+        font-size: 20px;
+    }
+    
+    a.es-button,
+    button.es-button {
+        padding: 10px 20px 10px 20px;
+        display: inline-block;
+        background: #be0100;
+        border-radius: 30px;
+        font-size: 18px;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 120%;
+        color: #ffffff;
+        text-decoration: none;
+        width: auto;
+        text-align: center;
+        mso-padding-alt: 0;
+        mso-border-alt: 10px solid #be0100;
+    }
+    
+    .es-button-border {
+        border-style: solid solid solid solid;
+        border-color: #0968AC #0968AC #0968AC #0968AC;
+        background: #be0100;
+        border-width: 0px 0px 2px 0px;
+        display: inline-block;
+        border-radius: 30px;
+        width: auto;
+    }
+    
+    .msohide {
+        mso-hide: all;
+    }
+    
+    /* RESPONSIVE STYLES Please do not delete and edit CSS styles below. If you don't need responsive layout, please delete this section. */
+    @media only screen and (max-width: 600px) {
+    
+        p,
+        ul li,
+        ol li,
+        a {
+            line-height: 150% !important;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h1 a,
+        h2 a,
+        h3 a {
+            line-height: 120%;
+        }
+    
+        h1 {
+            font-size: 30px !important;
+            text-align: left;
+        }
+    
+        h2 {
+            font-size: 24px !important;
+            text-align: left;
+        }
+    
+        h3 {
+            font-size: 20px !important;
+            text-align: left;
+        }
+    
+        .es-header-body h1 a,
+        .es-content-body h1 a,
+        .es-footer-body h1 a {
+            font-size: 30px !important;
+            text-align: left;
+        }
+    
+        .es-header-body h2 a,
+        .es-content-body h2 a,
+        .es-footer-body h2 a {
+            font-size: 24px !important;
+            text-align: left;
+        }
+    
+        .es-header-body h3 a,
+        .es-content-body h3 a,
+        .es-footer-body h3 a {
+            font-size: 20px !important;
+            text-align: left;
+        }
+    
+        .es-menu td a {
+            font-size: 14px !important;
+        }
+    
+        .es-header-body p,
+        .es-header-body ul li,
+        .es-header-body ol li,
+        .es-header-body a {
+            font-size: 16px !important;
+        }
+    
+        .es-content-body p,
+        .es-content-body ul li,
+        .es-content-body ol li,
+        .es-content-body a {
+            font-size: 14px !important;
+        }
+    
+        .es-footer-body p,
+        .es-footer-body ul li,
+        .es-footer-body ol li,
+        .es-footer-body a {
+            font-size: 10px !important;
+        }
+    
+        .es-infoblock p,
+        .es-infoblock ul li,
+        .es-infoblock ol li,
+        .es-infoblock a {
+            font-size: 12px !important;
+        }
+    
+        *[class="gmail-fix"] {
+            display: none !important;
+        }
+    
+        .es-m-txt-c,
+        .es-m-txt-c h1,
+        .es-m-txt-c h2,
+        .es-m-txt-c h3 {
+            text-align: center !important;
+        }
+    
+        .es-m-txt-r,
+        .es-m-txt-r h1,
+        .es-m-txt-r h2,
+        .es-m-txt-r h3 {
+            text-align: right !important;
+        }
+    
+        .es-m-txt-l,
+        .es-m-txt-l h1,
+        .es-m-txt-l h2,
+        .es-m-txt-l h3 {
+            text-align: left !important;
+        }
+    
+        .es-m-txt-r img,
+        .es-m-txt-c img,
+        .es-m-txt-l img {
+            display: inline !important;
+        }
+    
+        .es-button-border {
+            display: inline-block !important;
+        }
+    
+        a.es-button,
+        button.es-button {
+            font-size: 18px !important;
+            display: inline-block !important;
+        }
+    
+        .es-adaptive table,
+        .es-left,
+        .es-right {
+            width: 100% !important;
+        }
+    
+        .es-content table,
+        .es-header table,
+        .es-footer table,
+        .es-content,
+        .es-footer,
+        .es-header {
+            width: 100% !important;
+            max-width: 600px !important;
+        }
+    
+        .es-adapt-td {
+            display: block !important;
+            width: 100% !important;
+        }
+    
+        .adapt-img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        .es-m-p0 {
+            padding: 0px !important;
+        }
+    
+        .es-m-p0r {
+            padding-right: 0px !important;
+        }
+    
+        .es-m-p0l {
+            padding-left: 0px !important;
+        }
+    
+        .es-m-p0t {
+            padding-top: 0px !important;
+        }
+    
+        .es-m-p0b {
+            padding-bottom: 0 !important;
+        }
+    
+        .es-m-p20b {
+            padding-bottom: 20px !important;
+        }
+    
+        .es-mobile-hidden,
+        .es-hidden {
+            display: none !important;
+        }
+    
+        tr.es-desk-hidden,
+        td.es-desk-hidden,
+        table.es-desk-hidden {
+            width: auto !important;
+            overflow: visible !important;
+            float: none !important;
+            max-height: inherit !important;
+            line-height: inherit !important;
+        }
+    
+        tr.es-desk-hidden {
+            display: table-row !important;
+        }
+    
+        table.es-desk-hidden {
+            display: table !important;
+        }
+    
+        td.es-desk-menu-hidden {
+            display: table-cell !important;
+        }
+    
+        .es-menu td {
+            width: 1% !important;
+        }
+    
+        table.es-table-not-adapt,
+        .esd-block-html table {
+            width: auto !important;
+        }
+    
+        table.es-social {
+            display: inline-block !important;
+        }
+    
+        table.es-social td {
+            display: inline-block !important;
+        }
+    
+        .es-desk-hidden {
+            display: table-row !important;
+            width: auto !important;
+            overflow: visible !important;
+            max-height: inherit !important;
+        }
+    
+        .h-auto {
+            height: auto !important;
+        }
+    }
+    
+    /* END RESPONSIVE STYLES */
+    .es-p-default {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+    }
+    
+    .es-p-all-default {
+        padding: 0px;
+    }
+    
+        </style>
+    </head>
+    
+    <body>
+        <div class="es-wrapper-color">
+            <!--[if gte mso 9]>
+          <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+            <v:fill type="tile" color="#f6f6f6"></v:fill>
+          </v:background>
+        <![endif]-->
+            <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td class="esd-email-paddings" valign="top">
+                            <table class="esd-header-popover es-header" cellspacing="0" cellpadding="0" align="center">
+                                <tbody>
+                                    <tr>
+                                        <td class="esd-stripe" align="center">
+                                            <table class="es-header-body" width="600" cellspacing="0" cellpadding="0" align="center" style="background-color: transparent;" bgcolor="rgba(0, 0, 0, 0)">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p20r es-p20l" align="left" bgcolor="#ffffff" style="background-color: #ffffff;" esd-custom-block-id="92632">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="esd-container-frame" width="560" valign="top" align="center">
+                                                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text">
+                                                                                            <!-- Please replace the text between the <b></b> tag with your logo text. -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image es-p15" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Please insert your logo image in the same folder of the index.html file and change the path below in src attribute with the file extension.  
+                                                                                            Ex -> your_logo.jpg
+    
+                                                                                            You can also change the alt and title attribute by replacing Tudor logo with your text
+    
+                                                                                            Ex -> alt="My logo"
+                                                                                            -->
+    
+                                                                                            <!-- Please replace image source in src attribute
+                                                                                                Important -> The image of your logo can be in format .png or jpg but it has to be located in the same folder of the index.html file.
+                                                                                            -->
+                                                                                            <img src="https://www.mimijoyeria.com/assets/mimi-logo.png" alt="Tudor logo" style="display: block; font-size: 12px;" height="103" title="Tudor logo"></a></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text es-p10">
+                                                                                            <h2 style="font-size: 21px; color: #b22222;"><strong>Presentando los nuevos y atrevidos modelos de TUDOR</strong></h2>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" class="es-content" align="center">
+                                <tbody>
+                                    <tr>
+                                        <td class="esd-stripe" align="center">
+                                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" width="600">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="esd-structure" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="600" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Banner image -->
+                                                                                            <img class="adapt-img" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/T24_PRO_M7939G1A0NRU-0001_077.jpg" alt="4 models" style="display: block; font-size: 12px;" width="600" title="4 models"></a></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text">
+                                                                                            <p><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20r es-p20l" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="esd-container-frame" width="560" valign="top" align="center">
+                                                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text">
+                                                                                            <p><br></p>
+                                                                                            <p>En Watches & Wonders 2024, TUDOR presentó cuatro nuevas incorporaciones a su atrevida gama de productos. Estos nuevos relojes conservan elementos característicos del pasado de la marca y al mismo tiempo allanan el camino con innovaciones técnicas que apuntan al futuro.</p>
+                                                                                            <p><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- In order to change the redirection of the button please change the URL inside href="" with the url of your page, even in the lines commented that start with [if mso] like below. ex href="https://my-site.com/tudor"-->
+                                                                                        <td align="center" class="esd-block-button es-p5">
+                                                                                            <!--[if mso]><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" target="_blank" hidden>
+                                                                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" 
+                                                                                                            style="height:39px; v-text-anchor:middle; width:162px" arcsize="50%" stroke="f"  fillcolor="#be0100">
+                                                                                                    <w:anchorlock></w:anchorlock>
+                                                                                                    <center style='color:#ffffff; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:14px; font-weight:400; line-height:14px;  mso-text-raise:1px'>Descubrir</center>
+                                                                                                </v:roundrect></a>
+                                                                                            <![endif]-->
+                                                                                            <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-width: 0px; border-color: #be0100; background: #be0100;"><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-watches.html" class="es-button es-button-1705584500964" target="_blank" style="background: #be0100; font-size: 16px; padding: 10px 20px;">Descubrir</a></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20t es-p20b es-p15r es-p15l" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p15b es-p35r es-p35l" align="left" style="border-radius: 65px;">
+                                                            <!--[if mso]><table width="530" cellpadding="0" cellspacing="0"><tr><td width="250" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="250" align="left" class="esd-container-frame es-m-p20b">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image es-p5t" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Grid first image -->
+                                                                                            <img class="adapt-img" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/T24_PRO_M7941A1A0NU-0002_087.png" alt="58 GMT" style="display: block; font-size: 12px; border-radius: 10px;" width="230" title="58 GMT"></a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td><td width="20"></td><td width="260" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="260" align="left" class="esd-container-frame">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" class="esd-block-text es-p5b es-p5r es-p5l">
+                                                                                            <p style="text-align: center; font-size: 18px;"><strong>Black Bay 58 GMT</strong></p>
+                                                                                            <p style="display: none;"><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="esd-block-text es-p10">
+                                                                                            <p style="color: #808080; text-align: justify;">Conozca el Black Bay 58 GMT, una incorporación completamente nueva a la línea Black Bay, que presenta la característica caja de 39 mm del Black Bay 58, equipada con el nuevo calibre de manufactura GMT de tamaño mediano MT5450-U de TUDOR.&nbsp;</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td></tr></table><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="600" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <!-- In order to change the redirection of the button please change the URL inside href="" with the url of your page, even in the lines commented that start with [if mso] like below. ex href="https://my-site.com/tudor"-->
+                                                                                        <td align="center" class="esd-block-button es-p10">
+                                                                                            <!--[if mso]><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" target="_blank" hidden>
+      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" 
+                    style="height:39px; v-text-anchor:middle; width:162px" arcsize="50%" stroke="f"  fillcolor="#be0100">
+        <w:anchorlock></w:anchorlock>
+        <center style='color:#ffffff; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:14px; font-weight:400; line-height:14px;  mso-text-raise:1px'>Descubrir</center>
+      </v:roundrect></a>
+    <![endif]-->
+                                                                                            <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-width: 0px; border-color: #be0100; background: #be0100;"><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-watches/black-bay-58-gmt.html" class="es-button es-button-1710236774668" target="_blank" style="background: #be0100; padding: 10px 20px; font-size: 16px; mso-border-alt: 10px solid #be0100">Descubrir</a></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p15b es-p20r es-p20l" align="left">
+                                                            <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="270" align="left" class="esd-container-frame es-m-p20b">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" class="esd-block-text es-p5b es-p5r es-p5l">
+                                                                                            <p style="text-align: center; font-size: 18px;"><strong>Black Bay</strong></p>
+                                                                                            <p style="display: none;"><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="esd-block-text es-p10t es-p10b es-p5l">
+                                                                                            <p style="color: #808080; text-align: justify;">La última versión del Black Bay de TUDOR con una estética monocromática, disponible con un brazalete de acero inoxidable de 5 eslabones con acabados pulido y satinado, con cierre TUDOR “T-fit”.</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="270" align="left" class="esd-container-frame">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image es-p5t" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Grid second image -->
+                                                                                            <img class="adapt-img" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/T24_PRO_M7941A1A0NU-0003_085.png" alt="Black Bay" style="display: block; font-size: 12px; border-radius: 10px;" width="230" title="Black Bay"></a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td></tr></table><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" class="es-footer" align="center">
+                                <tbody>
+                                    <tr>
+                                        <td class="esd-stripe" align="center" esd-custom-block-id="88273">
+                                            <table bgcolor="#ffffff" class="es-footer-body" align="center" cellpadding="0" cellspacing="0" width="600">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="esd-structure es-p10t es-p10b es-p20r es-p20l" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                                                                                                            <!-- In order to change the redirection of the button please change the URL inside href="" with the url of your page, even in the lines commented that start with [if mso] like below. ex href="https://my-site.com/tudor"-->
+                                                                                        <td align="center" class="esd-block-button es-p5">
+                                                                                            <!--[if mso]><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" target="_blank" hidden>
+      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" 
+                    style="height:39px; v-text-anchor:middle; width:162px" arcsize="50%" stroke="f"  fillcolor="#be0100">
+        <w:anchorlock></w:anchorlock>
+        <center style='color:#ffffff; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:14px; font-weight:400; line-height:14px;  mso-text-raise:1px'>Descubrir</center>
+      </v:roundrect></a>
+    <![endif]-->
+                                                                                            <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-width: 0px; border-color: #be0100; background: #be0100;"><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-watches/black-bay.html" class="es-button es-button-1710236802558" target="_blank" style="background: #be0100; font-size: 16px; padding: 10px 20px; mso-border-alt: 10px solid #be0100">Descubrir</a></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p35t es-p15b es-p35r es-p35l" align="left">
+                                                            <!--[if mso]><table width="530" cellpadding="0" cellspacing="0"><tr><td width="252" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="252" class="es-m-p20b esd-container-frame" align="left">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image es-p5t" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Grid third image -->
+                                                                                            <img class="adapt-img" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/T24_PRO_M79018V-0006_096.png" alt="58 18K" style="display: block; font-size: 12px; border-radius: 10px;" width="230" title="58 18K"></a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td><td width="20"></td><td width="258" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="258" class="esd-container-frame" align="left">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" class="esd-block-text es-p5b es-p5r es-p5l">
+                                                                                            <p style="text-align: center; font-size: 18px;"><strong>Black Bay 58 18K</strong></p>
+                                                                                            <p style="display: none;"><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="esd-block-text es-p10t es-p10b">
+                                                                                            <p style="color: #808080; text-align: justify;">Conozca el nuevo TUDOR Black Bay 58 18K, con caja de oro macizo de 39 mm&nbsp;</p>
+                                                                                            <p style="color: #808080; text-align: justify;">Brazalete de 3 eslabones, esfera y bisel "verde dorado" y calibre de manufactura certificado COSC<em>.</em></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td></tr></table><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p10t es-p20r es-p20l" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                                                                                                            <!-- In order to change the redirection of the button please change the URL inside href="" with the url of your page, even in the lines commented that start with [if mso] like below. ex href="https://my-site.com/tudor"-->
+                                                                                        <td align="center" class="esd-block-button es-p5">
+                                                                                            <!--[if mso]><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" target="_blank" hidden>
+      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" 
+                    style="height:39px; v-text-anchor:middle; width:162px" arcsize="50%" stroke="f"  fillcolor="#be0100">
+        <w:anchorlock></w:anchorlock>
+        <center style='color:#ffffff; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:14px; font-weight:400; line-height:14px;  mso-text-raise:1px'>Descubrir</center>
+      </v:roundrect></a>
+    <![endif]-->
+                                                                                            <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-width: 0px; border-color: #be0100; background: #be0100;"><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-watches/black-bay-58-18k.html" class="es-button es-button-1710236810998" target="_blank" style="background: #be0100; font-size: 16px; padding: 10px 20px; mso-border-alt: 10px solid #be0100">Descubrir</a></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p15b es-p35r es-p30l" align="left">
+                                                            <!--[if mso]><table width="535" cellpadding="0" cellspacing="0"><tr><td width="255" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-left" align="left">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="255" class="es-m-p20b esd-container-frame" align="left">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" class="esd-block-text es-p5b es-p5r es-p5l">
+                                                                                            <p style="text-align: center; font-size: 18px;"><strong>Clair de Rose</strong></p>
+                                                                                            <p style="display: none;"><br></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="esd-block-text es-p10t es-p10b es-p10l">
+                                                                                            <p style="color: #808080; text-align: justify;">Con un guiño a sus códigos estéticos pasados, TUDOR presenta su característica esfera "TUDOR Blue" en el atrevido pero delicado Clair de Rose, disponible con números romanos o marcadores de hora de diamantes..</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td><td width="20"></td><td width="260" valign="top"><![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" class="es-right" align="right">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="260" align="left" class="esd-container-frame">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank">
+                                                                                            <!-- Grid fourth image -->
+                                                                                            <img class="adapt-img" src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/T24_PRO_M35800-0010_103.png" alt="Clair de Rose" style="display: block; font-size: 12px; border-radius: 10px;" width="230" title="Clair de Rose"></a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--[if mso]></td></tr></table><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p20r es-p20l" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                                                                                                            <!-- In order to change the redirection of the button please change the URL inside href="" with the url of your page, even in the lines commented that start with [if mso] like below. ex href="https://my-site.com/tudor"-->
+                                                                                        <td align="center" class="esd-block-button es-p5">
+                                                                                            <!--[if mso]><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" target="_blank" hidden>
+      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://tocc.mytudornetwork.com/content/tudor/en/latest-campaigns" 
+                    style="height:39px; v-text-anchor:middle; width:162px" arcsize="50%" stroke="f"  fillcolor="#be0100">
+        <w:anchorlock></w:anchorlock>
+        <center style='color:#ffffff; font-family:arial, "helvetica neue", helvetica, sans-serif; font-size:14px; font-weight:400; line-height:14px;  mso-text-raise:1px'>Descubrir</center>
+      </v:roundrect></a>
+    <![endif]-->
+                                                                                            <!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-width: 0px; border-color: #be0100; background: #be0100;"><a href="https://tocc.mytudornetwork.com/content/tudor/en/latest-watches/clair-de-rose.html" class="es-button es-button-1710236817449" target="_blank" style="background: #be0100; font-size: 16px; padding: 10px 20px; mso-border-alt: 10px solid #be0100">Descubrir</a></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="esd-container-frame" width="600" valign="top" align="center">
+                                                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-spacer es-p20t es-p10b es-p10r es-p10l" style="font-size:0">
+                                                                                            <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-bottom: 1px solid #cccccc; background: unset; height: 1px; width: 100%; margin: 0px;"></td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-social es-p10" style="font-size:0">
+                                                                                            <table cellpadding="0" cellspacing="0" class="es-table-not-adapt es-social">
+                                                                                                <tbody>
+                                                                                                       <!-- To change the URL of the logos butotn please replace the it in the href attribute. EX -> href"https://www.facebook.com/myPage" -->
+                                                                                                    <tr>
+                                                                                                        <td align="center" valign="top" class="es-p10r"><a target="_blank" href="https://www.facebook.com/inversionesmimijoyeria">
+                                                                                                            <!-- Facebook logo -->
+                                                                                                            <img src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/facebook-logo-black.png" alt="Fb" title="Facebook" width="32"></a></td>
+                                                                                                        <td align="center" valign="top" class="es-p10r"><a target="_blank" href="https://www.instagram.com/mimijoyeria/">
+                                                                                                            <!-- Instagram logo -->
+                                                                                                            <img src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/instagram-logo-black.png" alt="Ig" title="Instagram" width="32"></a></td>
+                                                                                                        
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="esd-structure es-p20t es-p20r es-p20l" align="left" bgcolor="#333333" style="background-color: #333333;">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text" bgcolor="#333333">
+                                                                                            <p style="line-height: 120%; font-size: 11px; color: #efefef;">
+                                                                                                Montres TUDOR SA respeta su derecho a la privacidad y se compromete a mantener su confianza y confianza.</p>
+                                                                                            <p style="line-height: 120%; font-size: 11px; color: #efefef;"><br>Cualquier información que nos proporcione a través de nuestro sitio web no será vendida ni alquilada.<br><br>Montres TUDOR SA no recopila ninguna información suya sin su conocimiento y permiso, y no le solicita que ingrese ninguna información personal para acceder al sitio web.</p>
+                                                                                            <p style="line-height: 120%; font-size: 11px; color: #efefef;"><br>La información que usted proporciona a Montres TUDOR SA se almacena en un lugar seguro y solo el personal designado puede acceder a ella.</p>
+                                                                                            <p style="line-height: 120%; font-size: 11px; color: #efefef;"><br></p>
+                                                                                            <p style="line-height: 120%; font-size: 11px; color: #efefef;">© Montres TUDOR SA, Ginebra, Suiza</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-image es-p15" style="font-size: 0px;"><a target="_blank" href="https://www.tudorwatch.com"><img src="https://www.mimijoyeria.com/storage/mail-assets/newsletter-assets/tudor_logo__v_redwhite__rvb_2015.png" alt="Tudor Watch" style="display: block;" title="Tudor Watch" width="60"></a></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" class="es-content esd-footer-popover" align="center">
+                                <tbody>
+                                    <tr>
+                                        <td class="esd-stripe" align="center">
+                                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" width="600">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="es-p20t es-p20r es-p20l esd-structure" align="left">
+                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="560" class="esd-container-frame" align="center" valign="top">
+                                                                            <table cellpadding="0" cellspacing="0" width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="esd-block-text es-p5b" esd-links-color="#333333">
+                                                                                            <p>No quieres recibir más este correo ? <a data-msys-unsubscribe="1" data-msys-linkname="batch::unsub" href="https://content.tudorwatch.com/unsubscribe/" style="color: #333333;">Unsubscribe</a></p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    
+    </html>`
   }
 
   transport.sendMail(mailOptions, function (error, info) {
@@ -113,6 +1508,7 @@ exports.rolexContact = (req, res) => {
   })
 
 };
+
 exports.payMail = async (req, res) => {
   const billData = await Store.Bill.findAll({
     where: { codigo: req.params.codigo },
@@ -2058,10 +3454,5 @@ ${itemMailFrame}
 
 
 }
-
-function update() {
-
-}
-
 
 
