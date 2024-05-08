@@ -212,7 +212,7 @@ exports.findR = (req, res) => {
         where: {
             coleccion: req.params.id
         },
-        order:['nombre']
+        order: ['nombre']
     })
         .then(data => {
             for (let index = 0; index < data.length; index++) {
@@ -283,35 +283,49 @@ exports.updateR = (req, res) => {
 
 // SHOPPING CART 
 // Add watch to cart
-exports.addWatchToCart = (req, res) => {
+exports.addWatchToCart = async (req, res) => {
     // Validate request
     const itemId = parseInt(req.params.id);
     const userId = parseInt(req.params.user)
 
 
-    Store.Cart.findOrCreate({ where: { ownerId: userId } })
-        .then((d) => Store.CartProduct.create({
+    const item = await Store.Cart.findOrCreate({ where: { ownerId: userId } })
+   
+    const findItem = await Store.CartProduct.findAll({
+        where: {
             "watchmakingId": itemId,
-            "cartId": d[0].id
-        })).then(() => Store.Watchmaking.increment('cantidad', {
-            by: -1,
-            where: {
-                id: itemId
-            }
-        }))
-        .then(() => res.send({
-            "message": 'Producto agregado con exito',
-            "icon": true
-        }))
-        .catch((err) => {
-            if (err.name === 'SequelizeUniqueConstraintError') {
-                res.send({
-                    "message": 'Este producto ya esta agregado a tu carrito',
-                    "icon": false
-                })
-            }
+            "cartId": item[0].dataValues.id,
+        }
 
+    })
+
+
+    if (findItem.length == 0) {
+
+        Store.CartProduct.create({
+            "watchmakingId": itemId,
+            "cartId": item[0].dataValues.id
         })
+    } else {
+        Store.CartProduct.increment('quantity', {
+            by: 1,
+            where: {
+                "watchmakingId": itemId,
+                "cartId": item[0].dataValues.id,
+            }
+        })
+    }
+
+    Store.Watchmaking.increment('cantidad', {
+        by: -1,
+        where: {
+            id: itemId
+        }
+    }).then(() => res.send({
+        "message": 'Producto agregado con exito',
+        "icon": true
+    }))
+
 };
 
 //remove product from cart  
@@ -342,6 +356,7 @@ exports.getCartByOwner = (req, res) => {
     // Validate request
     const userId = parseInt(req.params.user)
     let watchesId = []
+    let watchesAndQuantity = []
 
 
     Store.Cart.findAll({
@@ -350,13 +365,17 @@ exports.getCartByOwner = (req, res) => {
         }
     }).then((d) => Store.CartProduct.findAll({
         where: { cartId: d[0].id },
-        attributes: ['watchmakingId']
+        attributes: ['watchmakingId','quantity']
     }))
         .then((d) => {
             for (let index = 0; index < d.length; index++) {
                 watchesId.push(d[index].dataValues.watchmakingId);
-
+                
             }
+            for (let index = 0; index < d.length; index++) {
+                watchesAndQuantity.push([d[index].dataValues.watchmakingId,d[index].dataValues.quantity]);
+            }
+
             if (watchesId.length == 0) {
                 watchesId = [0]
             }
@@ -373,10 +392,14 @@ exports.getCartByOwner = (req, res) => {
                     let serie = watchesId[index - 1].dataValues
                     serie.img = `${storagePath}/store-products/${serie.serie}-1.webp`
                 }
-                res.send(watchesId)
+                res.status(200).send([watchesId,watchesAndQuantity])
 
             })
-        }).catch((err) => { res.status(500).send(err) })
+        }).catch((err) => { 
+            console.log(err);
+            res.status(500).send({
+            message:err
+        }) })
 
 
 
@@ -386,59 +409,59 @@ exports.getCartByOwner = (req, res) => {
 exports.testRoute = async (req, res) => {
 
     const cartId = await Store.Cart.findAll({
-		where: {
-			ownerId: 1,
-		},
-		attributes:['id']	
-	})
+        where: {
+            ownerId: 1,
+        },
+        attributes: ['id']
+    })
 
 
     Store.CartProduct.findAll({
         where: {
             cartId: cartId[0].dataValues.id
         }
-    })  
-    .then((d) =>{ 
-        
-        const products = d
-        Store.Bill.findOrCreate({
-            where: {ownerId: 1},
-            default :{
-                codigo: 'asdasdasd',
-				direccion:info.orderInformationBillToAddress,
-				pais:info.orderInformationBillToCountry,
-				ciudad: info.orderInformationBillToLocality,
-				total:`${info.orderInformationAmountTotal}`,
-				ownerId: userId
-            }
-        })
-
-        return products
-        
     })
-    .then((d) => {
-        const data = []
-        for (let item = 0; item < d.length; item++)  {
-            data.push({})
-            for (const key in d[item].dataValues) {
-           
-                if (key !== "cartId" ) {
-                    data[data.length-1][key] = d[item].dataValues[key]
-                }else {
-                    data[data.length-1]["billId"] =d[item].dataValues[key]
+        .then((d) => {
+
+            const products = d
+            Store.Bill.findOrCreate({
+                where: { ownerId: 1 },
+                default: {
+                    codigo: 'asdasdasd',
+                    direccion: info.orderInformationBillToAddress,
+                    pais: info.orderInformationBillToCountry,
+                    ciudad: info.orderInformationBillToLocality,
+                    total: `${info.orderInformationAmountTotal}`,
+                    ownerId: userId
+                }
+            })
+
+            return products
+
+        })
+        .then((d) => {
+            const data = []
+            for (let item = 0; item < d.length; item++) {
+                data.push({})
+                for (const key in d[item].dataValues) {
+
+                    if (key !== "cartId") {
+                        data[data.length - 1][key] = d[item].dataValues[key]
+                    } else {
+                        data[data.length - 1]["billId"] = d[item].dataValues[key]
+                    }
                 }
             }
-        }
-        return data
-    })
-    .then((d) => Store.BillProduct.bulkCreate(d))
-    .then((d)=> Store.CartProduct.destroy({
-        where:{
-            cartId: cartId[0].dataValues.id
-        }
-    }))
-    .then((d) => res.sendStatus(200).send(d))
-    .catch((error) => res.sendStatus(500).send(error))
+            return data
+        })
+        .then((d) => Store.BillProduct.bulkCreate(d))
+        .then((d) => Store.CartProduct.destroy({
+            where: {
+                cartId: cartId[0].dataValues.id
+            }
+        }))
+        .then((d) => res.sendStatus(200).send(d))
+        .catch((error) => res.sendStatus(500).send(error))
 
 
 

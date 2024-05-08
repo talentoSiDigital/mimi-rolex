@@ -2,11 +2,16 @@
 import { RouterLink } from "vue-router";
 import DashboardCards from '../cards/DashboardCards.vue'
 
-const { emit } = defineEmits(['activate-modal'])
+const emit  = defineEmits(['activate-modal','go-back'])
 defineProps({
     message:String,
     icon:Boolean
 })
+
+function close(){
+    emit('go-back')
+    emit('activate-modal')
+}
 
 </script>
 
@@ -22,7 +27,7 @@ defineProps({
     
     
     
-                    <button @click="$emit('activate-modal')"
+                    <button @click="close"
                         class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded text-sm px-5 py-2.5 text-center duration-200 mt-0">
                         Cerrar
                     </button>

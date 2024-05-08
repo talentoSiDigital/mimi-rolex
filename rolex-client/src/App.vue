@@ -4,9 +4,15 @@ import Navbar from './components/global-components/Navbar.vue'
 import Footer from './components/global-components/Footer.vue'
 import Cookies from './components/cards/Cookies.vue'
 import ShoppingPop from './components/payout-components/ShoppingPop.vue';  
-
+import { storeToRefs } from 'pinia';
+import { auth } from './store/auth.module';
+const piniaStore = auth()
+const isUserLogged = storeToRefs(piniaStore)
+console.log();
 const route = useRoute()
-console.log(route.path);
+
+
+
 
 </script>   
 
@@ -15,7 +21,7 @@ console.log(route.path);
     <Navbar/>
     
     <Cookies/>
-    <ShoppingPop v-if="route.path !== '/carrito'"/>
+    <ShoppingPop v-if="route.path !== '/carrito' && isUserLogged.status.value.loggedIn"/>
     <RouterView :key="route.fullPath"/>
     <Footer/>
 

@@ -160,11 +160,7 @@ exports.paymentCheck = async (req, res) => {
 
 
 			if(status.status == 'AUTHENTICATION_SUCCESSFUL'){
-				console.log("Authentication status: ",status.status);
-				instance2.createPayment(requestObj, function (error, data, response){
-					console.log("Payment Status: ",JSON.parse(response['text']).status)
-				})
-
+				instance2.createPayment(requestObj)
 			} else{
 				res.send(status.status)
 			}

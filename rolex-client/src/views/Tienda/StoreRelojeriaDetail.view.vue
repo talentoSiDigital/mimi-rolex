@@ -53,8 +53,9 @@ function addToCart(id) {
     if (!isUserLogged.status.value.loggedIn) {
         activateModal()
     } else {
-        // console.log(user);
+        console.log(user.id);
         StoreDataService.postAddToCart(id, user.id).then((d) => {
+            console.log(id);
             closeModalInfo.value.message = d.data.message
             closeModalInfo.value.icon = d.data.icon
 
@@ -71,7 +72,7 @@ function sendMessage(state) {
 }
 
 function goBack() {
-    router.go(-1)
+    router.go()
 }
 
 </script>
@@ -84,7 +85,7 @@ function goBack() {
         <div>
             <transition name="bounce">
 
-                <FinishedModal v-if="complete" @activate-modal="closeModal" :message="closeModalInfo.message" :icon="closeModalInfo.icon"/>
+                <FinishedModal v-if="complete" @activate-modal="closeModal" :message="closeModalInfo.message" :icon="closeModalInfo.icon" @go-back="goBack"/>
             </transition>
           
 
@@ -151,7 +152,7 @@ function goBack() {
 
                    
                    
-                    <button @click="addToCart(state[0].id)" v-if="state[0].coleccion == 'Tudor'"
+                    <button @click="addToCart(state[0].id)" v-if="state[0].coleccion == 'Tudor' && state[0].cantidad >0"
                         class="border border-black w-full mb-2 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Agregar
                         al carrito</button>
                     <a :href="sendMessage(state)" target="_blank"

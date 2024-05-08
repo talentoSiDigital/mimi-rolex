@@ -21,12 +21,13 @@ function initial() {
   });
 
 }
+
 db.sequelize.sync().then(() => {
   console.log("Drop and re-sync db.");
 });
 // db.sequelize.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
-//   initial()
+//   initial() 
 // });
 
 

@@ -70,10 +70,15 @@ module.exports = (sequelize, Sequelize) => {
 
   const Cart = sequelize.define("cart",{});
   
-  const CartProduct = sequelize.define("cart_product", {});
+  const CartProduct = sequelize.define("cart_product", {
+    quantity:{
+      type:Sequelize.INTEGER,
+      defaultValue:1 
+    }
+  });
 
   
-  const Bill = sequelize.define("bill", {
+  const Bill = sequelize.define("bill", { 
     codigo: {
       type: Sequelize.STRING
     },
@@ -98,7 +103,12 @@ module.exports = (sequelize, Sequelize) => {
     timestamps: false
   });
   
-  const BillProduct = sequelize.define("bill_product", {});
+  const BillProduct = sequelize.define("bill_product", {
+    quantity:{
+      type:Sequelize.INTEGER,
+      defaultValue:1 
+    }
+  });
 
   
 

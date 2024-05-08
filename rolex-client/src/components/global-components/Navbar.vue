@@ -213,11 +213,7 @@ function handleLogout() {
                     <h2 class="uppercase">Panel</h2>
 
                 </router-link>
-                <router-link @click="collapseNav" to="/carrito"
-                    class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
-                    <h2 class="uppercase">Carrito</h2>
-
-                </router-link>
+           
                 <button @click="collapseNav, handleLogout"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
                     <h2 class="uppercase">Cerrar sesión</h2>
@@ -245,10 +241,7 @@ function handleLogout() {
                         class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Perfil</h2>
                     </router-link>
-                    <router-link to="/carrito"
-                        class="text-xl whitespace-nowrap  font-normal font-montserrat text-slate-50  md:hover:underline">
-                        <h2 class="my-1 uppercase">Carrito</h2>
-                    </router-link>
+                  
                     <a href="/logout"
                         class="text-xl font-normal whitespace-nowrap  font-montserrat text-slate-50  md:hover:underline">
                         <h2 class="my-1 uppercase">Cerrar sesión</h2>

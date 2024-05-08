@@ -44,6 +44,7 @@ function getPrice(product) {
 const { state, isReady } = useAsyncState(
     StoreDataService.getCartByUser(user)
         .then(d => {
+            console.log(d.data);
             return d.data
         })
 
@@ -155,6 +156,7 @@ function sendPayment() {
             <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-normal">
                 CARRITO DE COMPRAS
             </h1>
+            {{ state }}
 
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
         </div>
@@ -168,7 +170,10 @@ function sendPayment() {
                     <section class="h-[84%] overflow-y-scroll" v-if="isReady">
                         <div v-if="state.length > 0">
                             <div v-for="product in state" :key="product">
-                                <CartProductCard :product="product" @delete-item="deleteItemInCart" />
+                                <div v-for="item in product.cantidad" :key="item">
+
+                                    <CartProductCard :product="product" @delete-item="deleteItemInCart" />
+                                </div>
 
                             </div>
                         </div>
@@ -179,7 +184,7 @@ function sendPayment() {
 
                     <hr class="mt-2">
                     <section>
-                        <h2 class="text-2xl  text-right  py-2">Total: ${{ getPrice(state).toLocaleString('en-US') }}
+                        <h2 class="text-2xl  text-right  py-2">Total: ${{ getPrice(state[0]).toLocaleString('en-US') }}
                         </h2>
 
                     </section>
