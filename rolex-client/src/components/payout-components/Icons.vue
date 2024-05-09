@@ -8,7 +8,7 @@ const vFocus = {
 
 <template>
     <section class="bg-white rounded-lg border border-gray-300 py-2">
-        <h2 class="text-sm text-center pb-2 font-bold"> Metodos aceptados</h2>
+        <h2 class="text-sm text-center pb-2 font-bold"> Métodos aceptados</h2>
         <section class="flex gap-2 justify-center">
             <div class="relative">
 

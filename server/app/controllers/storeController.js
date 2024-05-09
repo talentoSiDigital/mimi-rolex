@@ -103,6 +103,8 @@ exports.findJ = (req, res) => {
         });
 };
 
+
+// Retrieve Jewel for detailed view 
 exports.findDetailJ = (req, res) => {
     // Validate request
     if (!req.params.id) {
@@ -290,7 +292,7 @@ exports.addWatchToCart = async (req, res) => {
 
 
     const item = await Store.Cart.findOrCreate({ where: { ownerId: userId } })
-   
+
     const findItem = await Store.CartProduct.findAll({
         where: {
             "watchmakingId": itemId,
@@ -329,22 +331,31 @@ exports.addWatchToCart = async (req, res) => {
 };
 
 //remove product from cart  
-exports.removeCartProduct = (req, res) => {
+exports.removeCartProduct = async (req, res) => {
     const itemId = parseInt(req.params.id);
     const userId = parseInt(req.params.user)
 
-    Store.Cart.findAll({ where: { ownerId: userId } })
-        .then(() => Store.Watchmaking.increment('cantidad', {
-            by: 1,
-            where: {
-                id: itemId
-            }
-        }))
-        .then(() => Store.CartProduct.destroy({
-            where: { "watchmakingId": itemId }
-        }))
+    const findCart = await Store.Cart.findAll({ where: { ownerId: userId } })
+    const findItem = await Store.CartProduct.findAll({ where: { cartId: findCart[0].dataValues.id } })
 
-        .then(() => res.send('Product Deleted Successfully'))
+    if (findItem[0].dataValues.quantity == 1) {
+        Store.CartProduct.destroy({
+            where: { "watchmakingId": itemId }
+        })
+    } else {
+
+        Store.CartProduct.increment('quantity', {
+            by: -1,
+            where: { "watchmakingId": itemId }
+        })
+    }
+
+    Store.Watchmaking.increment('cantidad', {
+        by: 1,
+        where: {
+            id: itemId
+        }
+    }).then(() => res.send('Product Deleted Successfully'))
         .catch((err) => { res.status(500).send(err); })
 
 
@@ -365,20 +376,23 @@ exports.getCartByOwner = (req, res) => {
         }
     }).then((d) => Store.CartProduct.findAll({
         where: { cartId: d[0].id },
-        attributes: ['watchmakingId','quantity']
+        attributes: ['watchmakingId', 'quantity']
     }))
         .then((d) => {
             for (let index = 0; index < d.length; index++) {
+
                 watchesId.push(d[index].dataValues.watchmakingId);
-                
+
             }
             for (let index = 0; index < d.length; index++) {
-                watchesAndQuantity.push([d[index].dataValues.watchmakingId,d[index].dataValues.quantity]);
+                watchesAndQuantity.push(d[index].dataValues.quantity);
+
             }
 
             if (watchesId.length == 0) {
                 watchesId = [0]
             }
+            console.log(watchesAndQuantity);
             Store.Watchmaking.findAll({
                 where: {
                     id: {
@@ -391,19 +405,52 @@ exports.getCartByOwner = (req, res) => {
                 for (let index = 1; index <= watchesId.length; index++) {
                     let serie = watchesId[index - 1].dataValues
                     serie.img = `${storagePath}/store-products/${serie.serie}-1.webp`
+                    serie.quantity = watchesAndQuantity[index - 1]
                 }
-                res.status(200).send([watchesId,watchesAndQuantity])
+                res.status(200).send(watchesId)
 
             })
-        }).catch((err) => { 
+        }).catch((err) => {
             console.log(err);
             res.status(500).send({
-            message:err
-        }) })
+                message: err
+            })
+        })
 
 
 
 };
+
+// Retrieve Bills by owner 
+exports.getBillsByOwner = (req, res) => {
+    // Validate request
+    const userId = parseInt(req.params.user)
+
+    Store.Bill.findAll({
+        where: {
+            ownerId: userId
+        }
+
+    }).then((d) => {
+        if(d.length == 0){
+            res.status(200).send('No hay registros que mostrar')
+            
+        } else{
+            
+            res.status(200).send(d)
+        }
+
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).send({
+            message: err
+        })
+    })
+
+
+
+};
+
 
 
 exports.testRoute = async (req, res) => {

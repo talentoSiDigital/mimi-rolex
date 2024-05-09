@@ -37,14 +37,9 @@ const tag = {
 <template>
     <div>
         <section class="flex w-full  justify-center my-2">
-            <div class="flex w-10/12 h-96  justify-around gap-4 items-center ">
-                <DashboardCards class="w-2/3 other-correction">
-                    <h2 class="text-2xl font-semibold">Facturación</h2>
-                    <Nothing class="mt-20" />
-                   
-
-                </DashboardCards>
-                <DashboardCards class="w-1/3 correction">
+            <div class="flex w-10/12 justify-around gap-4 items-center ">
+              
+                <DashboardCards class="w-1/2 correction">
                     <h2 class="text-2xl font-semibold">Actualizar Datos</h2>
                     
                     <div class="relative h- w-full my-4 flex justify-center ">

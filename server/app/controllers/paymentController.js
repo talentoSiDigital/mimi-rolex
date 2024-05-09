@@ -93,7 +93,7 @@ exports.paymentCheck = async (req, res) => {
 
 
 		// Device fingerprint information, required by cybersource
-		var deviceInformation = new cybersourceRestApi.Riskv1decisionsDeviceInformation();
+		var deviceInformation = new cybersourceRestApi.Ptsv2paymentsDeviceInformation();
 		deviceInformation.fingerprintSessionId = req.body.deviceFingerPrintID
 		deviceInformation.ipAddress = req.body.ip;
 		requestObj.deviceInformation = deviceInformation;
@@ -101,47 +101,47 @@ exports.paymentCheck = async (req, res) => {
 
 		// Merchant Defined Data (MDD) information, required by cybersource
 
-		var merchantDefinedInformation =	new Array();
-		var	merchantDefinedInformation1 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		var merchantDefinedInformation = new Array();
+		var merchantDefinedInformation1 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation1.key = '1';
 		merchantDefinedInformation1.value = 'bc_5808459559';
-		merchantDefinedInformation.push(merchantDefinedInformation1); 
+		merchantDefinedInformation.push(merchantDefinedInformation1);
 
-		var	merchantDefinedInformation2 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		var merchantDefinedInformation2 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation2.key = '2';
 		merchantDefinedInformation2.value = 'WEB';
 		merchantDefinedInformation.push(merchantDefinedInformation2);
 
-		var	merchantDefinedInformation3 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		var merchantDefinedInformation3 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation3.key = '3';
-		merchantDefinedInformation3.value = info.clientReferenceInformationCode; 
+		merchantDefinedInformation3.value = info.clientReferenceInformationCode;
 		merchantDefinedInformation.push(merchantDefinedInformation3);
 
-		
-		var	merchantDefinedInformation4 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+
+		var merchantDefinedInformation4 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation4.key = '4';
 		merchantDefinedInformation4.value = 'P-3DS Joyeria';
 		merchantDefinedInformation.push(merchantDefinedInformation4);
 
-		var	merchantDefinedInformation5 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+		var merchantDefinedInformation5 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation5.key = '5';
 		merchantDefinedInformation5.value = 'INVERSIONES MIMI, C.A.';
 		merchantDefinedInformation.push(merchantDefinedInformation5);
 
-		
-		var	merchantDefinedInformation6 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+
+		var merchantDefinedInformation6 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation6.key = '6';
 		merchantDefinedInformation6.value = '5094 Precious Stones/Metals/Jewe';
 		merchantDefinedInformation.push(merchantDefinedInformation6);
 
-		
-		var	merchantDefinedInformation7 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+
+		var merchantDefinedInformation7 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation7.key = '7';
 		merchantDefinedInformation7.value = req.body.documentId;
 		merchantDefinedInformation.push(merchantDefinedInformation7);
 
-		
-		var	merchantDefinedInformation8 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
+
+		var merchantDefinedInformation8 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation8.key = '8';
 		merchantDefinedInformation8.value = 'NO';
 		merchantDefinedInformation.push(merchantDefinedInformation8);
@@ -154,98 +154,105 @@ exports.paymentCheck = async (req, res) => {
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
 
-	
-		instance.checkPayerAuthEnrollment(requestObj, function (error, data, response) {
+
+		instance.checkPayerAuthEnrollment(requestObj, async function (error, data, response) {
 			var status = JSON.parse(response['text']);
+			var payStatus = ''
+			console.log(status);
+
+			if (status.status == 'AUTHENTICATION_SUCCESSFUL') {
+				instance2.createPayment(requestObj, async function (error, data, response) {
+					payStatus = JSON.parse(response['text'])
+					console.log('++++++++++++++++++++++');
+					console.log(payStatus);
+					console.log('++++++++++++++++++++++');
+					console.log(payStatus.status);
 
 
-			if(status.status == 'AUTHENTICATION_SUCCESSFUL'){
-				instance2.createPayment(requestObj)
-			} else{
-				res.send(status.status)
+					if (payStatus.status == 'AUTHORIZED') {
+						console.log('+++++++++++++++++++++++');
+
+
+						const cartId = await Store.Cart.findAll({
+							where: {
+								ownerId: userId,
+							},
+							attributes: ['id']
+						})
+
+						console.log('1+++++++++++++++++++++++');
+
+						Store.CartProduct.findAll({
+							where: {
+								cartId: cartId[0].dataValues.id
+							}
+						})
+							.then(async (d) => {
+								console.log('2++++++++++++++++++++++');
+
+								const products = d
+
+
+								const createBill = await Store.Bill.create({
+									codigo: info.clientReferenceInformationCode,
+									direccion: info.orderInformationBillToAddress,
+									pais: info.orderInformationBillToCountry,
+									ciudad: info.orderInformationBillToLocality,
+									total: `${info.orderInformationAmountTotal}`,
+									ownerId: userId
+								})
+								const data = []
+								for (let item = 0; item < products.length; item++) {
+									data.push({})
+									for (const key in products[item].dataValues) {
+
+										if (key !== "cartId") {
+											data[data.length - 1][key] = products[item].dataValues[key]
+										} else {
+											data[data.length - 1]["billId"] = createBill.dataValues.id
+										}
+									}
+								}
+
+								return data
+							})
+
+							.then((d) => {
+
+								console.log('6++++++++++++++++++++++');
+								Store.BillProduct.bulkCreate(d).then((result) => {
+									console.log(result, 'done');
+								})
+							})
+							.then((d) => {
+
+								console.log('7++++++++++++++++++++++');
+								Store.CartProduct.destroy({
+									where: {
+										cartId: cartId[0].dataValues.id
+									}
+								})
+							})
+							.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
+							.catch((error) => {
+
+								console.log(error);
+								res.sendStatus(500).send(error)
+							})
+
+
+
+					}
+					else {
+						res.sendStatus(400).send(payStatus.status)
+					}
+
+
+				})
+			} else {
+				res.send(status)
 			}
 
-
-			// console.log('\nResponse : ' + JSON.stringify(response));
-			// console.log('\nResponse Code of Process a Payment : ' + JSON.stringify(response['status']));
-			// console.log('\nResponse text : ' + JSON.parse(response['text']));
-			res.send(JSON.parse(response['text']));
-			// if (status.status == 'AUTHORIZED') {
-			// 	console.log('+++++++++++++++++++++++');
-
-
-			// 	const cartId = await Store.Cart.findAll({
-			// 		where: {
-			// 			ownerId: userId,
-			// 		},
-			// 		attributes: ['id']
-			// 	})
-
-			// 	console.log('1+++++++++++++++++++++++');
-
-			// 	Store.CartProduct.findAll({
-			// 		where: {
-			// 			cartId: cartId[0].dataValues.id
-			// 		}
-			// 	})
-			// 		.then(async (d) => {
-			// 			console.log('2++++++++++++++++++++++');
-
-			// 			const products = d
-
-
-			// 			const createBill = await Store.Bill.create({
-			// 				codigo: info.clientReferenceInformationCode,
-			// 				direccion: info.orderInformationBillToAddress,
-			// 				pais: info.orderInformationBillToCountry,
-			// 				ciudad: info.orderInformationBillToLocality,
-			// 				total: `${info.orderInformationAmountTotal}`,
-			// 				ownerId: userId
-			// 			})
-			// 			const data = []
-			// 			for (let item = 0; item < products.length; item++) {
-			// 				data.push({})
-			// 				for (const key in products[item].dataValues) {
-
-			// 					if (key !== "cartId") {
-			// 						data[data.length - 1][key] = products[item].dataValues[key]
-			// 					} else {
-			// 						data[data.length - 1]["billId"] = createBill.dataValues.id
-			// 					}
-			// 				}
-			// 			}
-
-			// 			return data
-			// 		})
-
-			// 		.then((d) => {
-
-			// 			console.log('6++++++++++++++++++++++');
-			// 			Store.BillProduct.bulkCreate(d).then((result) => {
-			// 				console.log(result, 'done');
-			// 			})
-			// 		})
-			// 		.then((d) => {
-
-			// 			console.log('7++++++++++++++++++++++');
-			// 			Store.CartProduct.destroy({
-			// 			where: {
-			// 				cartId: cartId[0].dataValues.id
-			// 			}
-			// 		})})
-			// 		.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
-			// 		.catch((error) => {
-
-			// 			console.log(error);
-			// 			res.sendStatus(500).send(error)
-			// 		})
-
-
-
-			// }
-			// else{
-			// 	res.sendStatus(400).send(status)
-			// }
 
 
 

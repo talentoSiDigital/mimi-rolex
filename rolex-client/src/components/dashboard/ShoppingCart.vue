@@ -31,12 +31,12 @@ const paymentStatus = ref("")
 
 function getPrice(product) {
     let total = 0
-
     for (let index = 0; index < product.length; index++) {
-        let string = product[index].precio
-        string = string.replace('$', "")
-        string = string.replace(',', "")
-        total = total + parseInt(string)
+        let amount = String(product[index].precio)
+        amount = amount.replace('$', "")
+        amount = amount.replace(',', "")
+        amount = parseInt(amount) * product[index].quantity
+        total = total + amount
     }
     return total
 }
@@ -44,7 +44,6 @@ function getPrice(product) {
 const { state, isReady } = useAsyncState(
     StoreDataService.getCartByUser(user)
         .then(d => {
-            console.log(d.data);
             return d.data
         })
 
@@ -73,7 +72,7 @@ const dataObject = ref({
     "cardExpirationYear": "2025",
     "region": "Distrito Federal",
     "code": code.value,
-    "deviceFingerPrintID": code.value
+    "deviceFingerPrintID": `1${code.value}`
 
 
 })
@@ -115,10 +114,12 @@ function sendPayment() {
 
     paymentDataServices.payWithData(dataObject.value, user).then((d) => {
         paymentStatus.value = d.data
-        if(paymentStatus.value.status == "AUTHORIZED"){
+        if (paymentStatus.value.status == "AUTHORIZED") {
             router.push(`/checkout/`)
             // activateModal()
         }
+    }).catch((e) => {
+        console.log(e);
     })
 }
 
@@ -156,8 +157,7 @@ function sendPayment() {
             <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-normal">
                 CARRITO DE COMPRAS
             </h1>
-            {{ state }}
-
+           
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
         </div>
         <div class=" min-h-[95vh] mb-10">
@@ -169,11 +169,11 @@ function sendPayment() {
                     <h2 class="text-2xl pb-1">Resumen del pedido</h2>
                     <section class="h-[84%] overflow-y-scroll" v-if="isReady">
                         <div v-if="state.length > 0">
-                            <div v-for="product in state" :key="product">
-                                <div v-for="item in product.cantidad" :key="item">
+                            <div v-for="(product,key) in state" :key="key">
+                                    <div v-for="item in state[key].quantity" :key="item">
 
-                                    <CartProductCard :product="product" @delete-item="deleteItemInCart" />
-                                </div>
+                                        <CartProductCard :product="product" @delete-item="deleteItemInCart" />
+                                    </div>
 
                             </div>
                         </div>
@@ -184,7 +184,8 @@ function sendPayment() {
 
                     <hr class="mt-2">
                     <section>
-                        <h2 class="text-2xl  text-right  py-2">Total: ${{ getPrice(state[0]).toLocaleString('en-US') }}
+                        <h2 v-if="isReady" class="text-2xl  text-right  py-2">
+                            Total: ${{ getPrice(state).toLocaleString('en-US') }}
                         </h2>
 
                     </section>

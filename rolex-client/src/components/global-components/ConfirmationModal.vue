@@ -12,10 +12,10 @@ defineProps({
 
 const dataToSend = defineModel()
 
-const orgID = '1snn5n9w'
+const orgID = '45ssiuz3'
 
 let externalScript = document.createElement('script')
-externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_5808459559${dataToSend.value.deviceFingerPrintID}`)
+externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_58084595591${dataToSend.value.deviceFingerPrintID}`)
 
 
 const emit = defineEmits(['activate-modal', 'send-payment'])
@@ -41,13 +41,14 @@ const nameTranslate = ref({
 function payWithData() {
     paymentProcess.value = true
     document.head.appendChild(externalScript)
+
     setTimeout(() => {
         emit('send-payment')
-    }, 3000);
+    }, 4000);
 }
 
-function filterData(index){
-    return  index !== 'code' && index !== 'deviceFingerPrintID' && index !== 'ip'
+function filterData(index) {
+    return index !== 'code' && index !== 'deviceFingerPrintID' && index !== 'ip'
 }
 
 
@@ -71,7 +72,7 @@ function filterData(index){
                             <tbody>
                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                                     v-for="(item, index) in dataToSend" :key="index">
-                                    <th scope="row" v-if="filterData(index)" 
+                                    <th scope="row" v-if="filterData(index)"
                                         class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         {{ nameTranslate[index] }}
                                     </th>

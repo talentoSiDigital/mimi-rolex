@@ -22,10 +22,16 @@ module.exports = app => {
     router.post("/cart/relojeria/:user/:id", [
         existenceMiddleware.checkIfAvailable,
     ], store.addWatchToCart)
+
     router.get("/cart/relojeria/:user", store.getCartByOwner)
     router.delete("/cart/relojeria/delete/:user/:id", store.removeCartProduct)
-    router.get("/test/store",store.testRoute)
+    router.get("/test/store", store.testRoute)
+
+    //billing 
+    router.get("/bill/:user", store.getBillsByOwner)
 
     app.use('/api', router)
-    // 
+
+
+
 }
