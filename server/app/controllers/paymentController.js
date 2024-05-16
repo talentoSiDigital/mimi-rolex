@@ -7,6 +7,185 @@ const db = require("../models");
 const Store = db.store;
 
 
+
+exports.paymentAuthenticationStep1 = async (req, res) => {
+	if (!req.body) {
+		res.status(500).send('Debes enviar el pago')
+		return
+	}
+	// user info setup
+	const userId = parseInt(req.params.id)
+
+
+	let info = {
+
+		"paymentInformationCardNumber": req.body.cardNumber,
+		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
+		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
+
+	}
+
+	try {
+		var configObject = new config();
+		var apiClient = new cybersourceRestApi.ApiClient();
+		var requestObj = new cybersourceRestApi.PayerAuthSetupRequest();
+
+		var clientReferenceInformation = new cybersourceRestApi.Riskv1decisionsClientReferenceInformation();
+		clientReferenceInformation.code = 'cybs_test';
+		var clientReferenceInformationPartner = new cybersourceRestApi.Riskv1decisionsClientReferenceInformationPartner();
+		clientReferenceInformationPartner.developerId = '7891234';
+		clientReferenceInformationPartner.solutionId = '89012345';
+		clientReferenceInformation.partner = clientReferenceInformationPartner;
+
+		requestObj.clientReferenceInformation = clientReferenceInformation;
+
+		var paymentInformation = new cybersourceRestApi.Riskv1authenticationsetupsPaymentInformation();
+		var paymentInformationCard = new cybersourceRestApi.Riskv1authenticationsetupsPaymentInformationCard();
+		paymentInformationCard.number = info.paymentInformationCardNumber;
+		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
+		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
+		paymentInformation.card = paymentInformationCard;
+
+		requestObj.paymentInformation = paymentInformation;
+
+
+		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
+
+		instance.payerAuthSetup(requestObj, function (error, data, response) {
+			if (error) {
+				console.log('\nError : ' + JSON.stringify(error));
+			}
+			else if (data) {
+				console.log('\nData : ' + JSON.stringify(data));
+			}
+
+			console.log('\nResponse : ' + JSON.stringify(response));
+			console.log('\nResponse Code of Setup Payer Auth : ' + JSON.stringify(response['status']));
+			var responseData = JSON.parse(response['text'])
+			res.send(responseData)
+		});
+	}
+	catch (error) {
+		console.log('\nException on calling the API : ' + error);
+	}
+
+}
+
+exports.paymentAuthenticationStep2 = (req, res) => {
+	if (!req.body) {
+		res.status(500).send('Debes enviar el pago')
+		return
+	}
+	// user info setup
+	const userId = parseInt(req.params.id)
+
+
+	let info = {
+		"clientReferenceInformationCode": req.body.code,
+		"orderInformationAmountTotal": req.body.total,
+		"orderInformationAmountCurrency": 'USD',
+		"orderInformationBillToFirstName": req.body.firstName,
+		"orderInformationBillToLastName": req.body.lastName,
+		"orderInformationBillToAddress": req.body.address,
+		"orderInformationBillToCountry": req.body.country,
+		"orderInformationBillToEmail": req.body.email,
+		"orderInformationBillToPhoneNumber": req.body.phone,
+		"paymentInformationCardNumber": req.body.cardNumber,
+		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
+		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
+		"orderInformationBillToLocality": req.body.region,
+		"documentId": req.body.documentId,
+		"userId": userId,
+		"fingerprintSessionId": req.body.deviceFingerPrintID,
+		"ipAddress": req.body.ip
+
+	}
+
+
+	if (req.body.country == 'US' || req.body.country == 'CA') {
+		info.orderInformationBillToAdministrativeArea = req.body.region
+		info.orderInformationBillToPostalCode = req.body.zip
+		info.orderInformationBillToDistrict = req.body.region
+		info.orderInformationBillToBuildingNumber = req.body.buildingNumber
+	}
+
+	try {
+		// Create Config Object
+		var configObject = new config();
+		var apiClient = new cybersourceRestApi.ApiClient();
+		var requestObj = new cybersourceRestApi.CheckPayerAuthEnrollmentRequest();
+
+
+		// Code reference 
+		var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
+		clientReferenceInformation.code = info.clientReferenceInformationCode;
+		requestObj.clientReferenceInformation = clientReferenceInformation;
+
+		// order amount setup
+		var orderInformation = new cybersourceRestApi.Riskv1authenticationsOrderInformation();
+		var orderInformationAmountDetails = new cybersourceRestApi.Riskv1authenticationsOrderInformationAmountDetails();
+		orderInformationAmountDetails.totalAmount = info.orderInformationAmountTotal;
+		orderInformationAmountDetails.currency = info.orderInformationAmountCurrency;
+		orderInformation.amountDetails = orderInformationAmountDetails;
+
+		// Billing personal info setup
+		var orderInformationBillTo = new cybersourceRestApi.Riskv1authenticationsOrderInformationBillTo();
+		orderInformationBillTo.firstName = info.orderInformationBillToFirstName;
+		orderInformationBillTo.lastName = info.orderInformationBillToLastName;
+		orderInformationBillTo.address1 = info.orderInformationBillToAddress;
+		orderInformationBillTo.country = info.orderInformationBillToCountry;
+		orderInformationBillTo.email = info.orderInformationBillToEmail;
+		orderInformationBillTo.phoneNumber = info.orderInformationBillToPhoneNumber;
+		orderInformationBillTo.locality = info.orderInformationBillToLocality;
+		if (req.body.country == 'US' || req.body.country == 'CA') {
+			orderInformationBillTo.administrativeArea = info.orderInformationBillToAdministrativeArea;
+			orderInformationBillTo.postalCode = info.orderInformationBillToPostalCode;
+			orderInformationBillTo.district = info.orderInformationBillToDistrict;
+			orderInformationBillTo.buildingNumber = info.orderInformationBillToBuildingNumber;
+		}
+		orderInformation.billTo = orderInformationBillTo;
+		requestObj.orderInformation = orderInformation;
+
+		// Card information setup
+		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
+		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
+		paymentInformationCard.number = info.paymentInformationCardNumber;
+		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
+		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
+		paymentInformation.card = paymentInformationCard;
+
+		requestObj.paymentInformation = paymentInformation;
+
+		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1decisionsConsumerAuthenticationInformation();
+		consumerAuthenticationInformation.transactionMode = 'MOTO';
+		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+
+
+		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
+
+		instance.checkPayerAuthEnrollment(requestObj, function (error, data, response) {
+			if (error) {
+				console.log('\nError : ' + JSON.stringify(error));
+			}
+			else if (data) {
+				console.log('\nData : ' + JSON.stringify(data));
+			}
+
+			console.log('\nResponse : ' + JSON.stringify(response));
+			console.log('\nResponse Code of Check Payer Auth Enrollment : ' + JSON.stringify(response['status']));
+			var responseData = JSON.parse(response['text'])
+			res.send(responseData)
+	
+		});
+	}
+	catch (error) {
+		console.log('\nException on calling the API : ' + error);
+	}
+
+}
+
+
+
 exports.paymentCheck = async (req, res) => {
 	// Check if request has body
 	if (!req.body) {
@@ -30,7 +209,8 @@ exports.paymentCheck = async (req, res) => {
 		"paymentInformationCardNumber": req.body.cardNumber,
 		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
 		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
-		"orderInformationBillToLocality": req.body.region
+		"orderInformationBillToLocality": req.body.region,
+		"documentId": req.body.documentId
 
 	}
 
@@ -93,7 +273,7 @@ exports.paymentCheck = async (req, res) => {
 
 
 		// Device fingerprint information, required by cybersource
-		var deviceInformation = new cybersourceRestApi.Ptsv2paymentsDeviceInformation();
+		var deviceInformation = new cybersourceRestApi.Riskv1decisionsDeviceInformation();
 		deviceInformation.fingerprintSessionId = req.body.deviceFingerPrintID
 		deviceInformation.ipAddress = req.body.ip;
 		requestObj.deviceInformation = deviceInformation;
@@ -158,7 +338,9 @@ exports.paymentCheck = async (req, res) => {
 		instance.checkPayerAuthEnrollment(requestObj, async function (error, data, response) {
 			var status = JSON.parse(response['text']);
 			var payStatus = ''
-			console.log(status);
+			setTimeout(() => {
+				console.log(status);
+			}, 2000);
 
 			if (status.status == 'AUTHENTICATION_SUCCESSFUL') {
 				instance2.createPayment(requestObj, async function (error, data, response) {

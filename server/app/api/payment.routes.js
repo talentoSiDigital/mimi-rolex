@@ -7,7 +7,9 @@ module.exports = app =>{
     var router = require("express").Router()
     
     // Routes
-    router.post("/payment/:id",uploadFiles.any() ,payment.paymentCheck)
+    router.post("/payment/:id",uploadFiles.any() ,payment.paymentAuthenticationStep1)
+
+    router.post("/enroll-payment/:id", uploadFiles.any(), payment.paymentAuthenticationStep2)
     // router.get("/payment/:id/bill",payment.createBill)
 
 

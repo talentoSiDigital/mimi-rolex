@@ -1,33 +1,26 @@
 <script setup>
 import { useAsyncState } from '@vueuse/core';
-import { computed, ref, watch } from "vue";
+import axios from "axios";
 import { storeToRefs } from 'pinia';
+import { ref, watch } from "vue";
+import router from '../../router';
+import paymentDataServices from '../../services/paymentDataServices';
 import StoreDataService from '../../services/storeDataService';
 import { auth } from '../../store/auth.module';
 import CartProductCard from '../cards/CartProductCard.vue';
 import DashboardCards from '../cards/DashboardCards.vue';
-import router from '../../router';
-import PayoutForm from '../payout-components/PayoutForm.vue'
-import ConfirmationModal from '../global-components/ConfirmationModal.vue'
-import paymentDataServices from '../../services/paymentDataServices'
-import axios from "axios"
-
-
-
+import ConfirmationModal from '../global-components/ConfirmationModal.vue';
+import DDCIframe from '../payout-components/DDCIframe.vue';
+import PayoutForm from '../payout-components/PayoutForm.vue';
 
 const code = ref(randomStr())
-
-
 const active = ref(false)
-
-
 const piniaStore = auth()
-
-const isUserLogged = storeToRefs(piniaStore)
 const user = piniaStore.$state.user.id
 
 const totalAmount = ref(0)
 const paymentStatus = ref("")
+const checkResponse = ref("")
 
 function getPrice(product) {
     let total = 0
@@ -56,26 +49,35 @@ function randomStr() {
 }
 
 
+const responseStep2 = ref()
 
 
 const dataObject = ref({
     "total": "0",
-    "firstName": "Manuel",
-    "lastName": "Zorrilla",
+    "firstName": "",
+    "lastName": "",
     "email": piniaStore.$state.user.email,
     "phone": piniaStore.$state.user.phone,
-    "documentId": "27515094",
-    "address": "Ciudad center, boleita",
+    "documentId": "",
+    "address": "",
     "country": "VE",
     "cardNumber": "",
-    "cardExpirationMonth": "1",
-    "cardExpirationYear": "2025",
-    "region": "Distrito Federal",
+    "cardExpirationMonth": "",
+    "cardExpirationYear": "",
+    "region": "",
     "code": code.value,
-    "deviceFingerPrintID": `1${code.value}`
+    "deviceFingerPrintID": code.value
 
 
 })
+
+const orgID = '1snn5n9w'
+
+let externalScript = document.createElement('script')
+externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_5808459559${dataObject.value.deviceFingerPrintID}`)
+
+
+document.head.appendChild(externalScript)
 
 
 
@@ -83,13 +85,9 @@ const dataObject = ref({
 axios.get('https://api.ipify.org')
     .then(response => {
         dataObject.value.ip = response.data
-        // console.log(response.data);
     })
 
-
-
-
-
+const checkStep = ref(false)
 
 function deleteItemInCart(id) {
     StoreDataService.deleteProductInCart(id, user).then(
@@ -112,17 +110,26 @@ function sendPayment() {
 
     console.log(dataObject.value);
 
-    paymentDataServices.payWithData(dataObject.value, user).then((d) => {
+    paymentDataServices.step1(dataObject.value, user).then((d) => {
         paymentStatus.value = d.data
-        if (paymentStatus.value.status == "AUTHORIZED") {
-            router.push(`/checkout/`)
-            // activateModal()
+        if (paymentStatus.value.status == "COMPLETED") {
+            // router.push(`/checkout/`)
+            checkStep.value = true
         }
     }).catch((e) => {
-        console.log(e);
+        console.log(e.message);
     })
 }
 
+
+watch(checkResponse, ()=>{
+    paymentDataServices.step2(dataObject.value, user).then((d) => {
+        responseStep2.value = d.data
+        console.log(responseStep2.value);
+    }).catch((e) => {
+        console.log(e);
+    })
+})
 
 </script>
 
@@ -138,9 +145,10 @@ function sendPayment() {
             <transition name="bounce">
 
                 <ConfirmationModal v-if="active" @activate-modal="activateModal" v-model="dataObject"
-                    @send-payment="sendPayment" :status="paymentStatus" />
-            </transition>
-
+                    @send-payment="sendPayment" :status="paymentStatus.status " />
+                </transition>
+                
+                <DDCIframe v-if="checkStep" :data="paymentStatus" v-model="checkResponse"/>
 
 
             <transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"

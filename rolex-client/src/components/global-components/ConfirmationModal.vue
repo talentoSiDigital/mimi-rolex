@@ -5,18 +5,9 @@ import paymentDataServices from '../../services/paymentDataServices'
 import DashboardCards from '../cards/DashboardCards.vue'
 
 
-defineProps({
-    status: String
-})
-
-
+const {status} = defineProps(['status'])
+console.log(status);
 const dataToSend = defineModel()
-
-const orgID = '45ssiuz3'
-
-let externalScript = document.createElement('script')
-externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_58084595591${dataToSend.value.deviceFingerPrintID}`)
-
 
 const emit = defineEmits(['activate-modal', 'send-payment'])
 const paymentProcess = ref(false)
@@ -40,11 +31,8 @@ const nameTranslate = ref({
 
 function payWithData() {
     paymentProcess.value = true
-    document.head.appendChild(externalScript)
-
-    setTimeout(() => {
-        emit('send-payment')
-    }, 4000);
+    emit('send-payment')
+    
 }
 
 function filterData(index) {
@@ -100,7 +88,7 @@ function filterData(index) {
                     </button>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status == ''">
+                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status == undefined">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         style="background: none; display: block; shape-rendering: auto;" width="200px" height="200px"
                         viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -113,7 +101,7 @@ function filterData(index) {
                     <h2 class="text-3xl">Procesando Pago...</h2>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status.status == 'DECLINED'">
+                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'DECLINED'">
                     <img src="/assets/mimi-logo.png" alt="logo-mimi">
                     <h2 class="text-xl">Pago Fallido</h2>
                     <h2>{{ status.errorInformation.reason }}</h2>
@@ -129,7 +117,7 @@ function filterData(index) {
                     </button>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'AUTHORIZED'">
+                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'COMPLETED'">
                     <img src="/assets/mimi-logo.png" alt="logo-mimi">
                     <!-- <h2 class="text-xl">{{ status }}</h2> -->
                     <h2 class="text-xl">Pago exitoso</h2>

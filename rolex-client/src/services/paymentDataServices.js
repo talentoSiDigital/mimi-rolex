@@ -7,6 +7,14 @@ class MailSender {
     return http.get("/test-mail");
   }
 
+  step1(data,id) {
+    
+    return http.post(`/payment/${id}`, data)
+  }
+  step2(data,id) {
+    
+    return http.post(`/enroll-payment/${id}`, data)
+  }
   payWithData(data,id) {
     
     return http.post(`/payment/${id}`, data)

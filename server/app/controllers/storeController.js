@@ -291,6 +291,7 @@ exports.addWatchToCart = async (req, res) => {
     const userId = parseInt(req.params.user)
 
 
+    
     const item = await Store.Cart.findOrCreate({ where: { ownerId: userId } })
 
     const findItem = await Store.CartProduct.findAll({
@@ -298,18 +299,18 @@ exports.addWatchToCart = async (req, res) => {
             "watchmakingId": itemId,
             "cartId": item[0].dataValues.id,
         }
-
+        
     })
-
-
+    console.log(findItem);
+    
     if (findItem.length == 0) {
-
-        Store.CartProduct.create({
+        console.log(item[0].dataValues.id);
+        await Store.CartProduct.create({
             "watchmakingId": itemId,
             "cartId": item[0].dataValues.id
         })
     } else {
-        Store.CartProduct.increment('quantity', {
+        await Store.CartProduct.increment('quantity', {
             by: 1,
             where: {
                 "watchmakingId": itemId,
@@ -324,7 +325,7 @@ exports.addWatchToCart = async (req, res) => {
             id: itemId
         }
     }).then(() => res.send({
-        "message": 'Producto agregado con exito',
+        "message": 'Producto agregado con éxito',
         "icon": true
     }))
 
