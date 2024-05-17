@@ -1,13 +1,12 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { RouterLink } from "vue-router";
 import paymentDataServices from '../../services/paymentDataServices'
 import DashboardCards from '../cards/DashboardCards.vue'
 
 
-const {status} = defineProps(['status'])
-console.log(status);
-const dataToSend = defineModel()
+const status = defineModel('status')
+const dataToSend = defineModel('dataObject')
 
 const emit = defineEmits(['activate-modal', 'send-payment'])
 const paymentProcess = ref(false)
@@ -32,12 +31,35 @@ const nameTranslate = ref({
 function payWithData() {
     paymentProcess.value = true
     emit('send-payment')
-    
+
 }
 
 function filterData(index) {
     return index !== 'code' && index !== 'deviceFingerPrintID' && index !== 'ip'
 }
+const responseTypes = {
+    'PENDING_AUTHENTICATION': 'Se ha detectado algo inusual en la autenticación de la tarjeta, debemos comprobar la veracidad del comprador.',
+    'AUTHENTICATION_SUCCESSFUL': 'Tarjeta autenticada con exito.',
+    'AUTHENTICATION_FAILED': 'Tarjeta no valida, ingrese un nuevo metodo de pago.'
+}
+const responseArray = ['PENDING_AUTHENTICATION','AUTHENTICATION_SUCCESSFUL','AUTHENTICATION_FAILED']
+
+const checkIfCorrect = computed(() => {
+    if (responseArray.includes(status.value.status)) {
+        return true
+    } else {
+        return false
+    }
+})
+
+const checkIfFailed = computed(() => {
+    if (status.value.status == 'INVALID_REQUEST') {
+        return true
+    } else {
+        return false
+    }
+})
+
 
 
 
@@ -88,7 +110,8 @@ function filterData(index) {
                     </button>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status == undefined">
+                <div class=" flex flex-col items-center justify-center h-[80vh]"
+                    v-if="paymentProcess && status.status == undefined">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         style="background: none; display: block; shape-rendering: auto;" width="200px" height="200px"
                         viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -101,7 +124,7 @@ function filterData(index) {
                     <h2 class="text-3xl">Procesando Pago...</h2>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'DECLINED'">
+                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="checkIfFailed">
                     <img src="/assets/mimi-logo.png" alt="logo-mimi">
                     <h2 class="text-xl">Pago Fallido</h2>
                     <h2>{{ status.errorInformation.reason }}</h2>
@@ -117,12 +140,29 @@ function filterData(index) {
                     </button>
                 </div>
 
-                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'COMPLETED'">
+                <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status.status == 'COMPLETED'">
                     <img src="/assets/mimi-logo.png" alt="logo-mimi">
                     <!-- <h2 class="text-xl">{{ status }}</h2> -->
-                    <h2 class="text-xl">Pago exitoso</h2>
+                    <h2 class="text-xl">Servicio Configurado con exito</h2>
                     <font-awesome-icon :icon="['fas', 'circle-check']" class="text-6xl text-green-500 py-8" />
-                    <h2 class="text-xl">Redirigiendo... </h2>
+                    <h2 class="text-xl">
+                        Recolectando data
+                        <font-awesome-icon :icon="['fas', 'spinner']" class="animate-spin " />
+                    </h2>
+
+                </div>
+                <div class=" flex flex-col items-center justify-center h-[80vh] text-center" v-if="checkIfCorrect">
+                    <img src="/assets/mimi-logo.png" alt="logo-mimi" class="pb-4">
+                    <h2 class="text-xl">Estatus: {{ status.status }}</h2>
+                    <h2 class="text-xl w-10/12">{{ responseTypes[status.status] }}</h2>
+                    <font-awesome-icon :icon="['fas', 'circle-check']" class="text-6xl text-green-500 py-8" v-if="status.status == 'AUTHENTICATION_SUCCESSFUL'"/>
+                    <font-awesome-icon :icon="['fas', 'circle-exclamation']" class="text-6xl text-yellow-500 py-8" v-if="status.status == 'PENDING_AUTHENTICATION'"/>
+                    <font-awesome-icon  :icon="['fas', 'circle-xmark']"
+                        class="text-6xl text-red-500 py-8" v-if="status.status == 'AUTHENTICATION_FAILED'"/>
+                    <h2 v-if="status.errorInformation != undefined">Respuesta del servidor: {{ status.errorInformation.reason }}</h2>
+                    
+                    <h2 v-if="status.errorInformation != undefined" class="w-10/12">{{ status.errorInformation.message }}</h2>
+                    <!-- <h2 class="text-xl">Redirigiendo... </h2> -->
                 </div>
 
             </DashboardCards>

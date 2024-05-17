@@ -97,7 +97,8 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		"documentId": req.body.documentId,
 		"userId": userId,
 		"fingerprintSessionId": req.body.deviceFingerPrintID,
-		"ipAddress": req.body.ip
+		"ipAddress": req.body.ip,
+		"referenceId": req.body.referenceId
 
 	}
 
@@ -149,6 +150,7 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		// Card information setup
 		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
 		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
+
 		paymentInformationCard.number = info.paymentInformationCardNumber;
 		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
 		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
@@ -158,6 +160,7 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1decisionsConsumerAuthenticationInformation();
 		consumerAuthenticationInformation.transactionMode = 'MOTO';
+		consumerAuthenticationInformation.referenceId = info.referenceId;
 		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
 
 

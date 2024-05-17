@@ -53,7 +53,9 @@ import {
     faTrashCan,
     faCircleCheck,
     faCircleXmark,
-    faCartShopping
+    faCartShopping,
+    faCircleExclamation,
+    faSpinner
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -84,7 +86,9 @@ library.add(
     faTrashCan,
     faCircleCheck,
     faCircleXmark,
-    faCartShopping
+    faCartShopping,
+    faCircleExclamation,
+    faSpinner
 )
 
 createApp(App)

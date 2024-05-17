@@ -11,6 +11,7 @@ import CartProductCard from '../cards/CartProductCard.vue';
 import DashboardCards from '../cards/DashboardCards.vue';
 import ConfirmationModal from '../global-components/ConfirmationModal.vue';
 import DDCIframe from '../payout-components/DDCIframe.vue';
+import ChallengeAuth from '../payout-components/ChallengeAuth.vue';
 import PayoutForm from '../payout-components/PayoutForm.vue';
 
 const code = ref(randomStr())
@@ -49,7 +50,7 @@ function randomStr() {
 }
 
 
-const responseStep2 = ref()
+const referenceId = ref()
 
 
 const dataObject = ref({
@@ -88,6 +89,7 @@ axios.get('https://api.ipify.org')
     })
 
 const checkStep = ref(false)
+const challenge = ref(false)
 
 function deleteItemInCart(id) {
     StoreDataService.deleteProductInCart(id, user).then(
@@ -112,6 +114,7 @@ function sendPayment() {
 
     paymentDataServices.step1(dataObject.value, user).then((d) => {
         paymentStatus.value = d.data
+        referenceId.value = paymentStatus.value.consumerAuthenticationInformation.referenceId
         if (paymentStatus.value.status == "COMPLETED") {
             // router.push(`/checkout/`)
             checkStep.value = true
@@ -123,9 +126,14 @@ function sendPayment() {
 
 
 watch(checkResponse, ()=>{
+    dataObject.value.referenceId = referenceId.value 
     paymentDataServices.step2(dataObject.value, user).then((d) => {
-        responseStep2.value = d.data
-        console.log(responseStep2.value);
+        
+        paymentStatus.value = d.data
+        if(paymentStatus.value.status == "PENDING_AUTHENTICATION"){
+            challenge.value = true
+        }
+        console.log(paymentStatus.value);
     }).catch((e) => {
         console.log(e);
     })
@@ -144,11 +152,12 @@ watch(checkResponse, ()=>{
         <div>
             <transition name="bounce">
 
-                <ConfirmationModal v-if="active" @activate-modal="activateModal" v-model="dataObject"
-                    @send-payment="sendPayment" :status="paymentStatus.status " />
+                <ConfirmationModal v-if="active" @activate-modal="activateModal" v-model:data-object="dataObject"
+                    @send-payment="sendPayment" v-model:status="paymentStatus" />
                 </transition>
                 
                 <DDCIframe v-if="checkStep" :data="paymentStatus" v-model="checkResponse"/>
+                <ChallengeAuth v-if="challenge" :data="paymentStatus" v-model="checkResponse"/>
 
 
             <transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"

@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 
 const { data } = defineProps(['data'])
 const checkResponse = defineModel()
+console.log(data);
 const input = ref(null)
 
 onMounted(() => {
@@ -11,6 +12,7 @@ onMounted(() => {
     window.addEventListener("message", function (event) {
         if (event.origin === "https://centinelapistag.cardinalcommerce.com") {
             checkResponse.value = event.data
+            console.log(event.data);
         }
     }, false);
 })
