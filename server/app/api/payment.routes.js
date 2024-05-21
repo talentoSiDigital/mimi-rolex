@@ -10,6 +10,7 @@ module.exports = app =>{
     router.post("/payment/:id",uploadFiles.any() ,payment.paymentAuthenticationStep1)
 
     router.post("/enroll-payment/:id", uploadFiles.any(), payment.paymentAuthenticationStep2)
+    router.post("/pay-with-data/:id", uploadFiles.any(), payment.paymentCheck)
     // router.get("/payment/:id/bill",payment.createBill)
 
 

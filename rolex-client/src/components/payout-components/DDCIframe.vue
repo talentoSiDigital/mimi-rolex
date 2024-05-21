@@ -2,9 +2,11 @@
 import { computed, onMounted, ref } from 'vue';
 
 const { data } = defineProps(['data'])
-const checkResponse = defineModel()
-console.log(data);
+const emit = defineEmits('close-modal')
+const checkResponse = defineModel('response')
+const closer = defineModel('closer')
 const input = ref(null)
+
 
 onMounted(() => {
 
@@ -12,7 +14,9 @@ onMounted(() => {
     window.addEventListener("message", function (event) {
         if (event.origin === "https://centinelapistag.cardinalcommerce.com") {
             checkResponse.value = event.data
-            console.log(event.data);
+            console.log(checkResponse.value);
+            closer.value = false
+            
         }
     }, false);
 })
@@ -27,7 +31,7 @@ onMounted(() => {
             :action="data.consumerAuthenticationInformation.deviceDataCollectionUrl">
             <input id="cardinal_collection_form_input" type="hidden" name="JWT"
                 :value="data.consumerAuthenticationInformation.accessToken" />
-            <button ref="input">c</button>
+            <button ref="input"></button>
         </form>
     </div>
 </template>

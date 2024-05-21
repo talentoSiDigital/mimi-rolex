@@ -18,6 +18,7 @@ exports.paymentAuthenticationStep1 = async (req, res) => {
 
 
 	let info = {
+		"clientReferenceInformationCode": req.body.code,
 
 		"paymentInformationCardNumber": req.body.cardNumber,
 		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
@@ -31,7 +32,7 @@ exports.paymentAuthenticationStep1 = async (req, res) => {
 		var requestObj = new cybersourceRestApi.PayerAuthSetupRequest();
 
 		var clientReferenceInformation = new cybersourceRestApi.Riskv1decisionsClientReferenceInformation();
-		clientReferenceInformation.code = 'cybs_test';
+		clientReferenceInformation.code = info.clientReferenceInformationCode;
 		var clientReferenceInformationPartner = new cybersourceRestApi.Riskv1decisionsClientReferenceInformationPartner();
 		clientReferenceInformationPartner.developerId = '7891234';
 		clientReferenceInformationPartner.solutionId = '89012345';
@@ -98,7 +99,8 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		"userId": userId,
 		"fingerprintSessionId": req.body.deviceFingerPrintID,
 		"ipAddress": req.body.ip,
-		"referenceId": req.body.referenceId
+		"authenticationTransactionId": req.body.authenticationTransactionId,
+		"referenceId": req.body.referenceId,
 
 	}
 
@@ -161,6 +163,7 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1decisionsConsumerAuthenticationInformation();
 		consumerAuthenticationInformation.transactionMode = 'MOTO';
 		consumerAuthenticationInformation.referenceId = info.referenceId;
+
 		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
 
 
@@ -177,8 +180,9 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 			console.log('\nResponse : ' + JSON.stringify(response));
 			console.log('\nResponse Code of Check Payer Auth Enrollment : ' + JSON.stringify(response['status']));
 			var responseData = JSON.parse(response['text'])
+			console.log(responseData);
 			res.send(responseData)
-	
+
 		});
 	}
 	catch (error) {
@@ -198,7 +202,6 @@ exports.paymentCheck = async (req, res) => {
 	// user info setup
 	const userId = parseInt(req.params.id)
 
-
 	let info = {
 		"clientReferenceInformationCode": req.body.code,
 		"orderInformationAmountTotal": req.body.total,
@@ -213,10 +216,20 @@ exports.paymentCheck = async (req, res) => {
 		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
 		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
 		"orderInformationBillToLocality": req.body.region,
-		"documentId": req.body.documentId
-
+		"documentId": req.body.documentId,
+		"transactionId": req.body.transactionId,
+		"referenceId": req.body.referenceId,
+		"signedPares": req.body.signedPares,
+		"cavv": req.body.cavv,
+		"xid": req.body.xid,
+		"ecommerceIndicator": req.body.ecommerceIndicator,
+		"ucafCollectionIndicator": req.body.ucafCollectionIndicator,
+		"ucafAuthenticationData": req.body.ucafAuthenticationData,
+		"veresEnrolled": req.body.veresEnrolled,
+		"directoryServerTransactionId": req.body.directoryServerTransactionId,
 	}
 
+	
 
 	if (req.body.country == 'US' || req.body.country == 'CA') {
 		info.orderInformationBillToAdministrativeArea = req.body.region
@@ -226,11 +239,12 @@ exports.paymentCheck = async (req, res) => {
 	}
 
 
+
 	try {
 		// Create Config Object
 		var configObject = new config();
 		var apiClient = new cybersourceRestApi.ApiClient();
-		var requestObj = new cybersourceRestApi.CheckPayerAuthEnrollmentRequest();
+		var requestObj = new cybersourceRestApi.CreatePaymentRequest();
 
 
 		// Code reference 
@@ -238,15 +252,38 @@ exports.paymentCheck = async (req, res) => {
 		clientReferenceInformation.code = info.clientReferenceInformationCode;
 		requestObj.clientReferenceInformation = clientReferenceInformation;
 
+
+		var processingInformation = new cybersourceRestApi.Ptsv2paymentsProcessingInformation();
+
+		processingInformation.ecommerceIndicator = info.ecommerceIndicator
+
+		requestObj.processingInformation = processingInformation;
+
+
+		// Card information setup
+		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
+		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
+		paymentInformationCard.number = info.paymentInformationCardNumber;
+		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
+		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
+		paymentInformation.card = paymentInformationCard;
+
+		requestObj.paymentInformation = paymentInformation;
+
+
+
 		// order amount setup
-		var orderInformation = new cybersourceRestApi.Riskv1authenticationsOrderInformation();
-		var orderInformationAmountDetails = new cybersourceRestApi.Riskv1authenticationsOrderInformationAmountDetails();
+		var orderInformation = new cybersourceRestApi.Ptsv2paymentsOrderInformation();
+		var orderInformationAmountDetails = new cybersourceRestApi.Ptsv2paymentsOrderInformationAmountDetails();
 		orderInformationAmountDetails.totalAmount = info.orderInformationAmountTotal;
 		orderInformationAmountDetails.currency = info.orderInformationAmountCurrency;
 		orderInformation.amountDetails = orderInformationAmountDetails;
 
+
+
+
 		// Billing personal info setup
-		var orderInformationBillTo = new cybersourceRestApi.Riskv1authenticationsOrderInformationBillTo();
+		var orderInformationBillTo = new cybersourceRestApi.Ptsv2paymentsOrderInformationBillTo();
 		orderInformationBillTo.firstName = info.orderInformationBillToFirstName;
 		orderInformationBillTo.lastName = info.orderInformationBillToLastName;
 		orderInformationBillTo.address1 = info.orderInformationBillToAddress;
@@ -262,16 +299,6 @@ exports.paymentCheck = async (req, res) => {
 		}
 		orderInformation.billTo = orderInformationBillTo;
 		requestObj.orderInformation = orderInformation;
-
-		// Card information setup
-		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
-		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
-		paymentInformationCard.number = info.paymentInformationCardNumber;
-		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
-		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
-		paymentInformation.card = paymentInformationCard;
-
-		requestObj.paymentInformation = paymentInformation;
 
 
 
@@ -331,6 +358,18 @@ exports.paymentCheck = async (req, res) => {
 
 		requestObj.merchantDefinedInformation = merchantDefinedInformation;
 
+		var consumerAuthenticationInformation = new cybersourceRestApi.Ptsv2paymentsConsumerAuthenticationInformation();
+		consumerAuthenticationInformation.transactionId = info.transactionId;
+		// consumerAuthenticationInformation.signedPares = info.signedPares;
+		consumerAuthenticationInformation.cavv = info.cavv
+		consumerAuthenticationInformation.xid = info.xid
+		consumerAuthenticationInformation.ecommerceIndicator= req.body.ecommerceIndicator,
+		consumerAuthenticationInformation.ucafCollectionIndicator= req.body.ucafCollectionIndicator,
+		consumerAuthenticationInformation.ucafAuthenticationData= req.body.ucafAuthenticationData,
+		consumerAuthenticationInformation.veresEnrolled= req.body.veresEnrolled,
+		consumerAuthenticationInformation.directoryServerTransactionId= req.body.directoryServerTransactionId,
+		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+
 		var tokenInformation = new cybersourceRestApi.Ptsv2paymentsTokenInformation();
 		tokenInformation.transientTokenJwt = process.env.SECRET_KEY;
 		requestObj.tokenInformation = tokenInformation;
@@ -338,111 +377,108 @@ exports.paymentCheck = async (req, res) => {
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
 
 
-		instance.checkPayerAuthEnrollment(requestObj, async function (error, data, response) {
-			var status = JSON.parse(response['text']);
-			var payStatus = ''
-			setTimeout(() => {
-				console.log(status);
-			}, 2000);
-
-			if (status.status == 'AUTHENTICATION_SUCCESSFUL') {
-				instance2.createPayment(requestObj, async function (error, data, response) {
-					payStatus = JSON.parse(response['text'])
-					console.log('++++++++++++++++++++++');
-					console.log(payStatus);
-					console.log('++++++++++++++++++++++');
-					console.log(payStatus.status);
-
-
-					if (payStatus.status == 'AUTHORIZED') {
-						console.log('+++++++++++++++++++++++');
+		console.log("//////////////////////////////");
+		console.log(requestObj);
+		console.log("//////////////////////////////");
+	
+		
+		instance2.createPayment(requestObj, async function (error, data, response) {
+			console.log('++++++++++++++++++++++');
+			payStatus = JSON.parse(response['text'])
+			console.log('++++++++++++++++++++++');
+			console.log(payStatus);
+			console.log('++++++++++++++++++++++');
+			console.log(JSON.parse(response["text"]));
+			res.send(payStatus)
 
 
-						const cartId = await Store.Cart.findAll({
-							where: {
-								ownerId: userId,
-							},
-							attributes: ['id']
-						})
-
-						console.log('1+++++++++++++++++++++++');
-
-						Store.CartProduct.findAll({
-							where: {
-								cartId: cartId[0].dataValues.id
-							}
-						})
-							.then(async (d) => {
-								console.log('2++++++++++++++++++++++');
-
-								const products = d
+			// if (payStatus.status == 'AUTHORIZED') {
+			// 	console.log('+++++++++++++++++++++++');
 
 
-								const createBill = await Store.Bill.create({
-									codigo: info.clientReferenceInformationCode,
-									direccion: info.orderInformationBillToAddress,
-									pais: info.orderInformationBillToCountry,
-									ciudad: info.orderInformationBillToLocality,
-									total: `${info.orderInformationAmountTotal}`,
-									ownerId: userId
-								})
-								const data = []
-								for (let item = 0; item < products.length; item++) {
-									data.push({})
-									for (const key in products[item].dataValues) {
+			// 	const cartId = await Store.Cart.findAll({
+			// 		where: {
+			// 			ownerId: userId,
+			// 		},
+			// 		attributes: ['id']
+			// 	})
 
-										if (key !== "cartId") {
-											data[data.length - 1][key] = products[item].dataValues[key]
-										} else {
-											data[data.length - 1]["billId"] = createBill.dataValues.id
-										}
-									}
-								}
+			// 	console.log('1+++++++++++++++++++++++');
 
-								return data
-							})
+			// 	Store.CartProduct.findAll({
+			// 		where: {
+			// 			cartId: cartId[0].dataValues.id
+			// 		}
+			// 	})
+			// 		.then(async (d) => {
+			// 			console.log('2++++++++++++++++++++++');
 
-							.then((d) => {
-
-								console.log('6++++++++++++++++++++++');
-								Store.BillProduct.bulkCreate(d).then((result) => {
-									console.log(result, 'done');
-								})
-							})
-							.then((d) => {
-
-								console.log('7++++++++++++++++++++++');
-								Store.CartProduct.destroy({
-									where: {
-										cartId: cartId[0].dataValues.id
-									}
-								})
-							})
-							.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
-							.catch((error) => {
-
-								console.log(error);
-								res.sendStatus(500).send(error)
-							})
+			// 			const products = d
 
 
+			// 			const createBill = await Store.Bill.create({
+			// 				codigo: info.clientReferenceInformationCode,
+			// 				direccion: info.orderInformationBillToAddress,
+			// 				pais: info.orderInformationBillToCountry,
+			// 				ciudad: info.orderInformationBillToLocality,
+			// 				total: `${info.orderInformationAmountTotal}`,
+			// 				ownerId: userId
+			// 			})
+			// 			const data = []
+			// 			for (let item = 0; item < products.length; item++) {
+			// 				data.push({})
+			// 				for (const key in products[item].dataValues) {
 
-					}
-					else {
-						res.sendStatus(400).send(payStatus.status)
-					}
+			// 					if (key !== "cartId") {
+			// 						data[data.length - 1][key] = products[item].dataValues[key]
+			// 					} else {
+			// 						data[data.length - 1]["billId"] = createBill.dataValues.id
+			// 					}
+			// 				}
+			// 			}
+
+			// 			return data
+			// 		})
+
+			// 		.then((d) => {
+
+			// 			console.log('6++++++++++++++++++++++');
+			// 			Store.BillProduct.bulkCreate(d).then((result) => {
+			// 				console.log(result, 'done');
+			// 			})
+			// 		})
+			// 		.then((d) => {
+
+			// 			console.log('7++++++++++++++++++++++');
+			// 			Store.CartProduct.destroy({
+			// 				where: {
+			// 					cartId: cartId[0].dataValues.id
+			// 				}
+			// 			})
+			// 		})
+			// 		.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
+			// 		.catch((error) => {
+
+			// 			console.log(error);
+			// 			res.sendStatus(500).send(error)
+			// 		})
 
 
-				})
-			} else {
-				res.send(status)
-			}
+
+			// }
+			// else {
+			// 	res.sendStatus(400).send(payStatus)
+			// }
+
+
+		})
 
 
 
 
 
-		});
+
+
 
 
 	}

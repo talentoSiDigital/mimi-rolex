@@ -292,7 +292,7 @@ function debug(){
                 
                 <div>
                     <h2 class="block mb-1 text-sm font-medium text-gray-900 ">Región</h2>
-                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region" :regionName="true"
+                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region" :regionName="true" :autocomplete="true"
                         class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
                     <div class=" h-6">
                         <h2 v-if="regionWarn" class="text-red-700 text-sm">Debes seleccionar una region</h2>

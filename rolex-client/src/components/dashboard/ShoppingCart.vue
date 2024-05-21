@@ -1,7 +1,6 @@
 <script setup>
 import { useAsyncState } from '@vueuse/core';
 import axios from "axios";
-import { storeToRefs } from 'pinia';
 import { ref, watch } from "vue";
 import router from '../../router';
 import paymentDataServices from '../../services/paymentDataServices';
@@ -10,8 +9,8 @@ import { auth } from '../../store/auth.module';
 import CartProductCard from '../cards/CartProductCard.vue';
 import DashboardCards from '../cards/DashboardCards.vue';
 import ConfirmationModal from '../global-components/ConfirmationModal.vue';
-import DDCIframe from '../payout-components/DDCIframe.vue';
 import ChallengeAuth from '../payout-components/ChallengeAuth.vue';
+import DDCIframe from '../payout-components/DDCIframe.vue';
 import PayoutForm from '../payout-components/PayoutForm.vue';
 
 const code = ref(randomStr())
@@ -22,6 +21,13 @@ const user = piniaStore.$state.user.id
 const totalAmount = ref(0)
 const paymentStatus = ref("")
 const checkResponse = ref("")
+const challengeResponse = ref()
+const accessToken = ref("")
+const referenceId = ref()
+const checkStep = ref(false)
+const challenge = ref(false)
+const orgID = '1snn5n9w'
+
 
 function getPrice(product) {
     let total = 0
@@ -49,10 +55,6 @@ function randomStr() {
     return array[array.length - 1].toUpperCase();
 }
 
-
-const referenceId = ref()
-
-
 const dataObject = ref({
     "total": "0",
     "firstName": "",
@@ -72,24 +74,17 @@ const dataObject = ref({
 
 })
 
-const orgID = '1snn5n9w'
 
 let externalScript = document.createElement('script')
 externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_5808459559${dataObject.value.deviceFingerPrintID}`)
 
-
 document.head.appendChild(externalScript)
-
-
-
 
 axios.get('https://api.ipify.org')
     .then(response => {
         dataObject.value.ip = response.data
     })
 
-const checkStep = ref(false)
-const challenge = ref(false)
 
 function deleteItemInCart(id) {
     StoreDataService.deleteProductInCart(id, user).then(
@@ -115,6 +110,7 @@ function sendPayment() {
     paymentDataServices.step1(dataObject.value, user).then((d) => {
         paymentStatus.value = d.data
         referenceId.value = paymentStatus.value.consumerAuthenticationInformation.referenceId
+        accessToken.value = paymentStatus.value.consumerAuthenticationInformation.accessToken
         if (paymentStatus.value.status == "COMPLETED") {
             // router.push(`/checkout/`)
             checkStep.value = true
@@ -124,16 +120,48 @@ function sendPayment() {
     })
 }
 
+function closeIframe() {
+    console.log("Closing Iframe");
+    // checkStep.value = false
+    // console.log("Closed Iframe");
+}
 
-watch(checkResponse, ()=>{
-    dataObject.value.referenceId = referenceId.value 
+
+watch(checkResponse, () => {
+    checkStep.value = false
+    dataObject.value.referenceId = referenceId.value
+
     paymentDataServices.step2(dataObject.value, user).then((d) => {
-        
+
         paymentStatus.value = d.data
-        if(paymentStatus.value.status == "PENDING_AUTHENTICATION"){
-            challenge.value = true
-        }
+
         console.log(paymentStatus.value);
+
+     
+        if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
+            challenge.value = true
+            checkStep.value = false
+            return        
+        }
+        if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+
+            dataObject.value.transactionId = d.data.consumerAuthenticationInformation.authenticationTransactionId
+            dataObject.value.signedPares = paymentStatus.value.consumerAuthenticationInformation.paresStatus
+            dataObject.value.cavv = paymentStatus.value.consumerAuthenticationInformation.cavv
+            dataObject.value.xid = paymentStatus.value.consumerAuthenticationInformation.xid
+            dataObject.value.ecommerceIndicator = paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator
+            dataObject.value.ucafCollectionIndicator = paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator
+            dataObject.value.ucafAuthenticationData = paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData
+            dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
+            dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
+
+
+            paymentDataServices.payWithData(dataObject.value , user).then((d) => {
+                console.log(d.data);
+            })
+        }
+        
+        
     }).catch((e) => {
         console.log(e);
     })
@@ -154,16 +182,19 @@ watch(checkResponse, ()=>{
 
                 <ConfirmationModal v-if="active" @activate-modal="activateModal" v-model:data-object="dataObject"
                     @send-payment="sendPayment" v-model:status="paymentStatus" />
-                </transition>
+            </transition>
+
+            <DDCIframe v-if="checkStep" v-model:closer="checkStep" :data="paymentStatus"
+                v-model:response="checkResponse" />
                 
-                <DDCIframe v-if="checkStep" :data="paymentStatus" v-model="checkResponse"/>
-                <ChallengeAuth v-if="challenge" :data="paymentStatus" v-model="checkResponse"/>
+            <ChallengeAuth v-if="challenge" :data="paymentStatus" v-model="challengeResponse"
+                :access-token="accessToken" />
 
 
             <transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"
                 enter-to-class="opacity-100" leave-active-class="duration-700 ease-in-out"
                 leave-from-class="opacity-700" leave-to-class="transform opacity-0">
-                <div class="bg-[rgba(0,0,0,0.8)] z-40 fixed h-screen top-0 w-full" v-if="active">
+                <div class="bg-[rgba(0,0,0,0.8)] z-30 fixed h-screen top-0 w-full" v-if="active">
 
                 </div>
             </transition>
@@ -174,7 +205,7 @@ watch(checkResponse, ()=>{
             <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-normal">
                 CARRITO DE COMPRAS
             </h1>
-           
+
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
         </div>
         <div class=" min-h-[95vh] mb-10">
@@ -186,11 +217,11 @@ watch(checkResponse, ()=>{
                     <h2 class="text-2xl pb-1">Resumen del pedido</h2>
                     <section class="h-[84%] overflow-y-scroll" v-if="isReady">
                         <div v-if="state.length > 0">
-                            <div v-for="(product,key) in state" :key="key">
-                                    <div v-for="item in state[key].quantity" :key="item">
+                            <div v-for="(product, key) in state" :key="key">
+                                <div v-for="item in state[key].quantity" :key="item">
 
-                                        <CartProductCard :product="product" @delete-item="deleteItemInCart" />
-                                    </div>
+                                    <CartProductCard :product="product" @delete-item="deleteItemInCart" />
+                                </div>
 
                             </div>
                         </div>

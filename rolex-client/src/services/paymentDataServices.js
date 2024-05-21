@@ -17,7 +17,7 @@ class MailSender {
   }
   payWithData(data,id) {
     
-    return http.post(`/payment/${id}`, data)
+    return http.post(`/pay-with-data/${id}`, data)
   }
 
 }

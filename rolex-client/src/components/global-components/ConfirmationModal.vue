@@ -66,7 +66,7 @@ const checkIfFailed = computed(() => {
 </script>
 
 <template>
-    <section class=" z-50 fixed h-screen top-0 w-full flex  items-center justify-center ">
+    <section class=" z-40 fixed h-screen top-0 w-full flex  items-center justify-center ">
         <div class="h-fit w-full flex items-center justify-center">
             <DashboardCards class="w-4/5 lg:w-3/5">
 
@@ -163,6 +163,10 @@ const checkIfFailed = computed(() => {
                     
                     <h2 v-if="status.errorInformation != undefined" class="w-10/12">{{ status.errorInformation.message }}</h2>
                     <!-- <h2 class="text-xl">Redirigiendo... </h2> -->
+                    <h2 class="text-xl" v-if="status.status == 'PENDING_AUTHENTICATION'">
+                        Autenticando tarjeta 
+                        <font-awesome-icon :icon="['fas', 'spinner']" class="animate-spin " />
+                    </h2>
                 </div>
 
             </DashboardCards>

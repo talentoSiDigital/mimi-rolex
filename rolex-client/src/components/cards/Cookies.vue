@@ -48,7 +48,7 @@ watchEffect(()=>{
 </script>
 
 <template>
-        <div :class="isOpenUp" class="fixed z-30 h-fit duration-500">
+        <div :class="isOpenUp" class="fixed z-20 h-fit duration-500">
             <div class=" h-[60vh] relative  w-full flex flex-col justify-end items-center z-10">
                 <div class="h-1/6 flex justify-end w-full mr-16">
                     <div class=" group border-l border-r border-t rounded-t-md shadow-md shadow-rolex-green border-rolex-green cursor-pointer p-4 fixed flex items-center gap-2 bg-white  hover:text-rolex-green duration-100 h-[4.5rem]"
