@@ -12,6 +12,8 @@ import ConfirmationModal from '../global-components/ConfirmationModal.vue';
 import ChallengeAuth from '../payout-components/ChallengeAuth.vue';
 import DDCIframe from '../payout-components/DDCIframe.vue';
 import PayoutForm from '../payout-components/PayoutForm.vue';
+import { useRouter } from 'vue-router';
+
 
 const code = ref(randomStr())
 const active = ref(false)
@@ -111,9 +113,11 @@ function sendPayment() {
         paymentStatus.value = d.data
         referenceId.value = paymentStatus.value.consumerAuthenticationInformation.referenceId
         accessToken.value = paymentStatus.value.consumerAuthenticationInformation.accessToken
+        console.log(paymentStatus.value);
         if (paymentStatus.value.status == "COMPLETED") {
             // router.push(`/checkout/`)
             checkStep.value = true
+
         }
     }).catch((e) => {
         console.log(e.message);
@@ -130,8 +134,11 @@ function closeIframe() {
 watch(checkResponse, () => {
     checkStep.value = false
     dataObject.value.referenceId = referenceId.value
+    dataObject.value.returnUrl = window.location.hostname
+    dataObject.value.clientId = user
 
     paymentDataServices.step2(dataObject.value, user).then((d) => {
+        console.log('object');
 
         paymentStatus.value = d.data
 

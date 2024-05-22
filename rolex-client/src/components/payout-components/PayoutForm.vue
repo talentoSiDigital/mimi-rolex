@@ -7,6 +7,7 @@ import { Form, Field, ErrorMessage } from "vee-validate";
 import { ref, watch } from 'vue';
 import * as yup from "yup";
 
+
 const { data } = defineProps(['amount'])
 const dataToSend = defineModel()
 const emit = defineEmits(['activate-modal'])

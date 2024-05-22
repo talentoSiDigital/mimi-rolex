@@ -1,7 +1,10 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
+
+console.log();
 const { data, accessToken } = defineProps(['data', 'access-token'])
 const link = JSON.parse(atob(data.consumerAuthenticationInformation.pareq))
+console.log(link);
 
 const challengeResponse = defineModel()
 const form = ref(null)
@@ -14,7 +17,6 @@ const sizes = ref({
     "05": "w-full h-screen",
 })
 
-console.log(data);
 
 onMounted(() => {
     inputButton.value.click()
@@ -52,10 +54,11 @@ onMounted(() => {
 
 <template>
     <div id="challenge" class="z-40 fixed h-screen top-0 w-full flex  items-center justify-center">
-        <iframe  name="step-up-iframe" :class="sizes[link.challengeWindowSize]" class="bg-white"></iframe>
-        <form ref="form" id="step-up-form" target="step-up-iframe" method="post"
+        <iframe  name="step-up-iframe" :class="sizes[link.challengeWindowSize]"  class="bg-white"></iframe>
+        <form id="step-up-form" target="step-up-iframe" method="post"
             :action="data.consumerAuthenticationInformation.stepUpUrl">
-            <input type="hidden" name="JWT" :value="accessToken" />
+            <input type="hidden" name="JWT" :value="data.consumerAuthenticationInformation.accessToken" />
+      
             <button ref="inputButton"></button>
         </form>
        

@@ -101,6 +101,8 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		"ipAddress": req.body.ip,
 		"authenticationTransactionId": req.body.authenticationTransactionId,
 		"referenceId": req.body.referenceId,
+		"returnUrl": req.body.returnUrl,
+		"clientId": req.body.clientId
 
 	}
 
@@ -118,11 +120,6 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		var apiClient = new cybersourceRestApi.ApiClient();
 		var requestObj = new cybersourceRestApi.CheckPayerAuthEnrollmentRequest();
 
-
-		// Code reference 
-		var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
-		clientReferenceInformation.code = info.clientReferenceInformationCode;
-		requestObj.clientReferenceInformation = clientReferenceInformation;
 
 		// order amount setup
 		var orderInformation = new cybersourceRestApi.Riskv1authenticationsOrderInformation();
@@ -150,8 +147,8 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		requestObj.orderInformation = orderInformation;
 
 		// Card information setup
-		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
-		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
+		var paymentInformation = new cybersourceRestApi.Riskv1decisionsPaymentInformation();
+		var paymentInformationCard = new cybersourceRestApi.Riskv1decisionsPaymentInformationCard();
 
 		paymentInformationCard.number = info.paymentInformationCardNumber;
 		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
@@ -160,9 +157,14 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 		requestObj.paymentInformation = paymentInformation;
 
+		var buyerInformation = new cybersourceRestApi.Riskv1authenticationsBuyerInformation();
+		buyerInformation.mobilePhone = parseInt(info.orderInformationBillToPhoneNumber);
+		requestObj.buyerInformation = buyerInformation;
+
 		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1decisionsConsumerAuthenticationInformation();
-		consumerAuthenticationInformation.transactionMode = 'MOTO';
+		consumerAuthenticationInformation.transactionMode = 'S';
 		consumerAuthenticationInformation.referenceId = info.referenceId;
+		consumerAuthenticationInformation.returnUrl = process.env.RETURN_URL + '/pay-with-data/'+ info.clientId;
 
 		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
 
@@ -178,6 +180,7 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 			}
 
 			console.log('\nResponse : ' + JSON.stringify(response));
+
 			console.log('\nResponse Code of Check Payer Auth Enrollment : ' + JSON.stringify(response['status']));
 			var responseData = JSON.parse(response['text'])
 			console.log(responseData);
@@ -191,7 +194,9 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 }
 
-
+exports.makePayment = async (req,res)=>{
+	res.send(req)
+}
 
 exports.paymentCheck = async (req, res) => {
 	// Check if request has body
@@ -228,7 +233,9 @@ exports.paymentCheck = async (req, res) => {
 		"veresEnrolled": req.body.veresEnrolled,
 		"directoryServerTransactionId": req.body.directoryServerTransactionId,
 	}
-
+	console.log("//////////////////////////////");
+	
+	console.log("//////////////////////////////");
 	
 
 	if (req.body.country == 'US' || req.body.country == 'CA') {
@@ -375,21 +382,19 @@ exports.paymentCheck = async (req, res) => {
 		requestObj.tokenInformation = tokenInformation;
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
+		res.send(requestObj)
 
 
-		console.log("//////////////////////////////");
-		console.log(requestObj);
-		console.log("//////////////////////////////");
 	
 		
-		instance2.createPayment(requestObj, async function (error, data, response) {
-			console.log('++++++++++++++++++++++');
-			payStatus = JSON.parse(response['text'])
-			console.log('++++++++++++++++++++++');
-			console.log(payStatus);
-			console.log('++++++++++++++++++++++');
-			console.log(JSON.parse(response["text"]));
-			res.send(payStatus)
+		// instance2.createPayment(requestObj, async function (error, data, response) {
+		// 	console.log('++++++++++++++++++++++');
+		// 	payStatus = JSON.parse(response['text'])
+		// 	console.log('++++++++++++++++++++++');
+		// 	console.log(payStatus);
+		// 	console.log('++++++++++++++++++++++');
+		// 	console.log(JSON.parse(response["text"]));
+		// 	res.send(payStatus)
 
 
 			// if (payStatus.status == 'AUTHORIZED') {
@@ -471,7 +476,7 @@ exports.paymentCheck = async (req, res) => {
 			// }
 
 
-		})
+		// })
 
 
 
