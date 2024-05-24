@@ -35,7 +35,6 @@ exports.paymentAuthenticationStep1 = async (req, res) => {
 		clientReferenceInformation.code = info.clientReferenceInformationCode;
 		var clientReferenceInformationPartner = new cybersourceRestApi.Riskv1decisionsClientReferenceInformationPartner();
 		clientReferenceInformationPartner.developerId = '7891234';
-		clientReferenceInformationPartner.solutionId = '89012345';
 		clientReferenceInformation.partner = clientReferenceInformationPartner;
 
 		requestObj.clientReferenceInformation = clientReferenceInformation;
@@ -54,20 +53,15 @@ exports.paymentAuthenticationStep1 = async (req, res) => {
 
 		instance.payerAuthSetup(requestObj, function (error, data, response) {
 			if (error) {
-				console.log('\nError : ' + JSON.stringify(error));
 			}
 			else if (data) {
-				console.log('\nData : ' + JSON.stringify(data));
 			}
 
-			console.log('\nResponse : ' + JSON.stringify(response));
-			console.log('\nResponse Code of Setup Payer Auth : ' + JSON.stringify(response['status']));
 			var responseData = JSON.parse(response['text'])
 			res.send(responseData)
 		});
 	}
 	catch (error) {
-		console.log('\nException on calling the API : ' + error);
 	}
 
 }
@@ -82,6 +76,7 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 
 	let info = {
+		"clientId": userId,
 		"clientReferenceInformationCode": req.body.code,
 		"orderInformationAmountTotal": req.body.total,
 		"orderInformationAmountCurrency": 'USD',
@@ -119,6 +114,14 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		var configObject = new config();
 		var apiClient = new cybersourceRestApi.ApiClient();
 		var requestObj = new cybersourceRestApi.CheckPayerAuthEnrollmentRequest();
+
+		var clientReferenceInformation = new cybersourceRestApi.Riskv1decisionsClientReferenceInformation();
+		clientReferenceInformation.code = info.clientReferenceInformationCode;
+		var clientReferenceInformationPartner = new cybersourceRestApi.Riskv1decisionsClientReferenceInformationPartner();
+		clientReferenceInformationPartner.developerId = '7891234';
+		clientReferenceInformation.partner = clientReferenceInformationPartner;
+
+		requestObj.clientReferenceInformation = clientReferenceInformation;
 
 
 		// order amount setup
@@ -161,10 +164,11 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		buyerInformation.mobilePhone = parseInt(info.orderInformationBillToPhoneNumber);
 		requestObj.buyerInformation = buyerInformation;
 
+
 		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1decisionsConsumerAuthenticationInformation();
 		consumerAuthenticationInformation.transactionMode = 'S';
 		consumerAuthenticationInformation.referenceId = info.referenceId;
-		consumerAuthenticationInformation.returnUrl = process.env.RETURN_URL + '/pay-with-data/'+ info.clientId;
+		consumerAuthenticationInformation.returnUrl = process.env.RETURN_URL + '/validation-step/';
 
 		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
 
@@ -173,30 +177,125 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 		instance.checkPayerAuthEnrollment(requestObj, function (error, data, response) {
 			if (error) {
-				console.log('\nError : ' + JSON.stringify(error));
 			}
 			else if (data) {
-				console.log('\nData : ' + JSON.stringify(data));
 			}
 
-			console.log('\nResponse : ' + JSON.stringify(response));
 
-			console.log('\nResponse Code of Check Payer Auth Enrollment : ' + JSON.stringify(response['status']));
 			var responseData = JSON.parse(response['text'])
-			console.log(responseData);
 			res.send(responseData)
 
 		});
 	}
 	catch (error) {
-		console.log('\nException on calling the API : ' + error);
 	}
 
 }
-
-exports.makePayment = async (req,res)=>{
-	res.send(req)
+exports.paymentAuthenticationStep4 = (req, res) => {
+	res.render("validation", {
+		data: req.body.TransactionId
+	})
 }
+exports.validationReturn = (req, res) => {
+	if (!req.body) {
+		res.status(500).send('Debes enviar el pago')
+		return
+	}
+	// user info setup
+	const userId = parseInt(req.params.id)
+
+
+	let info = {
+		"clientId": userId,
+		"clientReferenceInformationCode": req.body.code,
+		"orderInformationAmountTotal": req.body.total,
+		"orderInformationAmountCurrency": 'USD',
+		"orderInformationBillToFirstName": req.body.firstName,
+		"orderInformationBillToLastName": req.body.lastName,
+		"orderInformationBillToAddress": req.body.address,
+		"orderInformationBillToCountry": req.body.country,
+		"orderInformationBillToEmail": req.body.email,
+		"orderInformationBillToPhoneNumber": req.body.phone,
+		"paymentInformationCardNumber": req.body.cardNumber,
+		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
+		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
+		"orderInformationBillToLocality": req.body.region,
+		"documentId": req.body.documentId,
+		"userId": userId,
+		"fingerprintSessionId": req.body.deviceFingerPrintID,
+		"ipAddress": req.body.ip,
+		"authenticationTransactionId": req.body.authenticationTransactionId,
+		"referenceId": req.body.referenceId,
+		"returnUrl": req.body.returnUrl,
+		"clientId": req.body.clientId,
+		"authenticationTransactionId": req.body.authenticationTransactionId,
+
+	}
+
+
+	if (req.body.country == 'US' || req.body.country == 'CA') {
+		info.orderInformationBillToAdministrativeArea = req.body.region
+		info.orderInformationBillToPostalCode = req.body.zip
+		info.orderInformationBillToDistrict = req.body.region
+		info.orderInformationBillToBuildingNumber = req.body.buildingNumber
+	}
+	try {
+		var configObject = new config();
+		var apiClient = new cybersourceRestApi.ApiClient();
+		var requestObj = new cybersourceRestApi.ValidateRequest();
+
+		var clientReferenceInformation = new cybersourceRestApi.Riskv1decisionsClientReferenceInformation();
+		clientReferenceInformation.code = info.clientReferenceInformationCode;
+		var clientReferenceInformationPartner = new cybersourceRestApi.Riskv1decisionsClientReferenceInformationPartner();
+		clientReferenceInformationPartner.developerId = '7891234';
+		clientReferenceInformation.partner = clientReferenceInformationPartner;
+
+		requestObj.clientReferenceInformation = clientReferenceInformation;
+
+		var orderInformation = new cybersourceRestApi.Riskv1authenticationresultsOrderInformation();
+		var orderInformationAmountDetails = new cybersourceRestApi.Riskv1authenticationresultsOrderInformationAmountDetails();
+		orderInformationAmountDetails.currency = 'USD';
+		orderInformationAmountDetails.totalAmount = info.orderInformationAmountTotal;
+		orderInformation.amountDetails = orderInformationAmountDetails;
+
+		requestObj.orderInformation = orderInformation;
+
+		var paymentInformation = new cybersourceRestApi.Riskv1authenticationresultsPaymentInformation();
+		var paymentInformationCard = new cybersourceRestApi.Riskv1authenticationresultsPaymentInformationCard();
+		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
+		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
+		paymentInformationCard.number = info.paymentInformationCardNumber;
+		paymentInformation.card = paymentInformationCard;
+
+		requestObj.paymentInformation = paymentInformation;
+
+		var consumerAuthenticationInformation = new cybersourceRestApi.Riskv1authenticationresultsConsumerAuthenticationInformation();
+		consumerAuthenticationInformation.authenticationTransactionId = info.authenticationTransactionId;
+		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+
+
+		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
+
+		instance.validateAuthenticationResults(requestObj, function (error, data, response) {
+			if (error) {
+			}
+			else if (data) {
+			}
+
+
+			var responseData = JSON.parse(response['text'])
+
+			res.send(responseData)
+		});
+	}
+	catch (error) {
+	}
+
+
+
+}
+
+
 
 exports.paymentCheck = async (req, res) => {
 	// Check if request has body
@@ -233,10 +332,8 @@ exports.paymentCheck = async (req, res) => {
 		"veresEnrolled": req.body.veresEnrolled,
 		"directoryServerTransactionId": req.body.directoryServerTransactionId,
 	}
-	console.log("//////////////////////////////");
-	
-	console.log("//////////////////////////////");
-	
+
+
 
 	if (req.body.country == 'US' || req.body.country == 'CA') {
 		info.orderInformationBillToAdministrativeArea = req.body.region
@@ -370,113 +467,98 @@ exports.paymentCheck = async (req, res) => {
 		// consumerAuthenticationInformation.signedPares = info.signedPares;
 		consumerAuthenticationInformation.cavv = info.cavv
 		consumerAuthenticationInformation.xid = info.xid
-		consumerAuthenticationInformation.ecommerceIndicator= req.body.ecommerceIndicator,
-		consumerAuthenticationInformation.ucafCollectionIndicator= req.body.ucafCollectionIndicator,
-		consumerAuthenticationInformation.ucafAuthenticationData= req.body.ucafAuthenticationData,
-		consumerAuthenticationInformation.veresEnrolled= req.body.veresEnrolled,
-		consumerAuthenticationInformation.directoryServerTransactionId= req.body.directoryServerTransactionId,
-		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+		consumerAuthenticationInformation.ecommerceIndicator = req.body.ecommerceIndicator,
+			consumerAuthenticationInformation.ucafCollectionIndicator = req.body.ucafCollectionIndicator,
+			consumerAuthenticationInformation.ucafAuthenticationData = req.body.ucafAuthenticationData,
+			consumerAuthenticationInformation.veresEnrolled = req.body.veresEnrolled,
+			consumerAuthenticationInformation.directoryServerTransactionId = req.body.directoryServerTransactionId,
+			requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
 
 		var tokenInformation = new cybersourceRestApi.Ptsv2paymentsTokenInformation();
 		tokenInformation.transientTokenJwt = process.env.SECRET_KEY;
 		requestObj.tokenInformation = tokenInformation;
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
-		res.send(requestObj)
-
-
-	
-		
-		// instance2.createPayment(requestObj, async function (error, data, response) {
-		// 	console.log('++++++++++++++++++++++');
-		// 	payStatus = JSON.parse(response['text'])
-		// 	console.log('++++++++++++++++++++++');
-		// 	console.log(payStatus);
-		// 	console.log('++++++++++++++++++++++');
-		// 	console.log(JSON.parse(response["text"]));
-		// 	res.send(payStatus)
-
-
-			// if (payStatus.status == 'AUTHORIZED') {
-			// 	console.log('+++++++++++++++++++++++');
-
-
-			// 	const cartId = await Store.Cart.findAll({
-			// 		where: {
-			// 			ownerId: userId,
-			// 		},
-			// 		attributes: ['id']
-			// 	})
-
-			// 	console.log('1+++++++++++++++++++++++');
-
-			// 	Store.CartProduct.findAll({
-			// 		where: {
-			// 			cartId: cartId[0].dataValues.id
-			// 		}
-			// 	})
-			// 		.then(async (d) => {
-			// 			console.log('2++++++++++++++++++++++');
-
-			// 			const products = d
-
-
-			// 			const createBill = await Store.Bill.create({
-			// 				codigo: info.clientReferenceInformationCode,
-			// 				direccion: info.orderInformationBillToAddress,
-			// 				pais: info.orderInformationBillToCountry,
-			// 				ciudad: info.orderInformationBillToLocality,
-			// 				total: `${info.orderInformationAmountTotal}`,
-			// 				ownerId: userId
-			// 			})
-			// 			const data = []
-			// 			for (let item = 0; item < products.length; item++) {
-			// 				data.push({})
-			// 				for (const key in products[item].dataValues) {
-
-			// 					if (key !== "cartId") {
-			// 						data[data.length - 1][key] = products[item].dataValues[key]
-			// 					} else {
-			// 						data[data.length - 1]["billId"] = createBill.dataValues.id
-			// 					}
-			// 				}
-			// 			}
-
-			// 			return data
-			// 		})
-
-			// 		.then((d) => {
-
-			// 			console.log('6++++++++++++++++++++++');
-			// 			Store.BillProduct.bulkCreate(d).then((result) => {
-			// 				console.log(result, 'done');
-			// 			})
-			// 		})
-			// 		.then((d) => {
-
-			// 			console.log('7++++++++++++++++++++++');
-			// 			Store.CartProduct.destroy({
-			// 				where: {
-			// 					cartId: cartId[0].dataValues.id
-			// 				}
-			// 			})
-			// 		})
-			// 		.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
-			// 		.catch((error) => {
-
-			// 			console.log(error);
-			// 			res.sendStatus(500).send(error)
-			// 		})
 
 
 
-			// }
-			// else {
-			// 	res.sendStatus(400).send(payStatus)
-			// }
+
+		instance2.createPayment(requestObj, async function (error, data, response) {
+			payStatus = JSON.parse(response['text'])
+
+			if (payStatus.status == 'AUTHORIZED') {
 
 
-		// })
+				const cartId = await Store.Cart.findAll({
+					where: {
+						ownerId: userId,
+					},
+					attributes: ['id']
+				})
+
+
+				Store.CartProduct.findAll({
+					where: {
+						cartId: cartId[0].dataValues.id
+					}
+				})
+					.then(async (d) => {
+
+						const products = d
+
+
+						const createBill = await Store.Bill.create({
+							codigo: info.clientReferenceInformationCode,
+							direccion: info.orderInformationBillToAddress,
+							pais: info.orderInformationBillToCountry,
+							ciudad: info.orderInformationBillToLocality,
+							total: `${info.orderInformationAmountTotal}`,
+							ownerId: userId
+						})
+						const data = []
+						for (let item = 0; item < products.length; item++) {
+							data.push({})
+							for (const key in products[item].dataValues) {
+
+								if (key !== "cartId") {
+									data[data.length - 1][key] = products[item].dataValues[key]
+								} else {
+									data[data.length - 1]["billId"] = createBill.dataValues.id
+								}
+							}
+						}
+
+						return data
+					})
+
+					.then((d) => {
+
+						Store.BillProduct.bulkCreate(d).then((result) => {
+						})
+					})
+					.then((d) => {
+
+						Store.CartProduct.destroy({
+							where: {
+								cartId: cartId[0].dataValues.id
+							}
+						})
+					})
+					.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
+					.catch((error) => {
+
+						res.sendStatus(500).send(error)
+					})
+
+
+
+			}
+			else {
+				res.sendStatus(400).send(payStatus)
+			}
+
+
+		})
 
 
 
@@ -488,7 +570,6 @@ exports.paymentCheck = async (req, res) => {
 
 	}
 	catch (error) {
-		console.log('\nException on calling the API : ' + error);
 	}
 
 }

@@ -19,6 +19,10 @@ class MailSender {
     
     return http.post(`/pay-with-data/${id}`, data)
   }
+  validation(data,id){
+    
+    return http.post(`/validate-auth/${id}`, data)
+  }
 
 }
 

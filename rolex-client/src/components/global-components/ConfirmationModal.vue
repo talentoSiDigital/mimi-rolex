@@ -3,7 +3,7 @@ import { computed, ref } from "vue";
 import { RouterLink } from "vue-router";
 import paymentDataServices from '../../services/paymentDataServices'
 import DashboardCards from '../cards/DashboardCards.vue'
-
+import router from "../../router";
 
 const status = defineModel('status')
 const dataToSend = defineModel('dataObject')
@@ -42,7 +42,7 @@ const responseTypes = {
     'AUTHENTICATION_SUCCESSFUL': 'Tarjeta autenticada con exito.',
     'AUTHENTICATION_FAILED': 'Tarjeta no valida, ingrese un nuevo metodo de pago.'
 }
-const responseArray = ['PENDING_AUTHENTICATION','AUTHENTICATION_SUCCESSFUL','AUTHENTICATION_FAILED']
+const responseArray = ['PENDING_AUTHENTICATION', 'AUTHENTICATION_SUCCESSFUL', 'AUTHENTICATION_FAILED']
 
 const checkIfCorrect = computed(() => {
     if (responseArray.includes(status.value.status)) {
@@ -155,23 +155,40 @@ const checkIfFailed = computed(() => {
                     <img src="/assets/mimi-logo.png" alt="logo-mimi" class="pb-4">
                     <h2 class="text-xl">Estatus: {{ status.status }}</h2>
                     <h2 class="text-xl w-10/12">{{ responseTypes[status.status] }}</h2>
-                    <font-awesome-icon :icon="['fas', 'circle-check']" class="text-6xl text-green-500 py-8" v-if="status.status == 'AUTHENTICATION_SUCCESSFUL'"/>
-                    <font-awesome-icon :icon="['fas', 'circle-exclamation']" class="text-6xl text-yellow-500 py-8" v-if="status.status == 'PENDING_AUTHENTICATION'"/>
-                    <font-awesome-icon  :icon="['fas', 'circle-xmark']"
-                        class="text-6xl text-red-500 py-8" v-if="status.status == 'AUTHENTICATION_FAILED'"/>
-                    <h2 v-if="status.errorInformation != undefined">Respuesta del servidor: {{ status.errorInformation.reason }}</h2>
-                    
-                    <h2 v-if="status.errorInformation != undefined" class="w-10/12">{{ status.errorInformation.message }}</h2>
+                    <font-awesome-icon :icon="['fas', 'circle-check']" class="text-6xl text-green-500 py-8"
+                        v-if="status.status == 'AUTHENTICATION_SUCCESSFUL'" />
+                    <font-awesome-icon :icon="['fas', 'circle-exclamation']" class="text-6xl text-yellow-500 py-8"
+                        v-if="status.status == 'PENDING_AUTHENTICATION'" />
+                    <font-awesome-icon :icon="['fas', 'circle-xmark']" class="text-6xl text-red-500 py-8"
+                        v-if="status.status == 'AUTHENTICATION_FAILED'" />
+                    <h2 v-if="status.errorInformation != undefined">Respuesta del servidor: {{
+                        status.errorInformation.reason }}</h2>
+
+                    <h2 v-if="status.errorInformation != undefined" class="w-10/12">{{ status.errorInformation.message
+                        }}</h2>
                     <!-- <h2 class="text-xl">Redirigiendo... </h2> -->
                     <h2 class="text-xl" v-if="status.status == 'PENDING_AUTHENTICATION'">
-                        Autenticando tarjeta 
+                        Autenticando tarjeta
                         <font-awesome-icon :icon="['fas', 'spinner']" class="animate-spin " />
                     </h2>
+                    <h2 class="text-xl" v-if="status.status == 'AUTHENTICATION_SUCCESSFUL'">
+                        Realizando pago
+                        <font-awesome-icon :icon="['fas', 'spinner']" class="animate-spin " />
+                    </h2>
+
+                    <button
+                        v-if="status.status == 'AUTHENTICATION_FAILED'"
+                        @click="router.go()"
+                        class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded text-sm px-5 py-2.5 text-center duration-200 mt-0">
+                        Volver
+                    </button>
+
                 </div>
 
             </DashboardCards>
 
         </div>
+
 
 
     </section>

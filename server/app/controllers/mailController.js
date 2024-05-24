@@ -3407,14 +3407,14 @@ ${itemMailFrame}
 `
 
   const mailToClient = {
-    from: 'plataformapagos@mimijoyeria.com',
+    from: 'pagosweb@mimijoyeria.com',
     to: parsedBillData.owner.dataValues.email,
     subject: `Detalles de pago - Mimi Joyería`,
     html: htmlClient
 
   }
   const mailToAdmin = {
-    from: 'plataformapagos@mimijoyeria.com',
+    from: 'pagosweb@mimijoyeria.com',
     to: 'manuelzorrilladev@gmail.com',
     subject: `Detalles de pago - Mimi Joyería`,
     html: htmlAdmin

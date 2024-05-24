@@ -46,6 +46,8 @@ import RelojeriaForm from './components/dashboard/RelojeriaForm.vue'
 import ShoppingCart from './components/dashboard/ShoppingCart.vue'
 import DataUpdate from './components/dashboard/DataUpdate.vue'
 import Checkout from './components/dashboard/Checkout.vue'
+import Authorized from './components/dashboard/Authorized.vue'
+
 
 
 const router = createRouter({
@@ -342,6 +344,15 @@ const router = createRouter({
       path: "/checkout",
       name: "checkout",
       component: Checkout,
+      meta: {
+        title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
+      }
+    }
+    ,
+    {
+      path: "/authorized",
+      name: "authorized",
+      component: Authorized,
       meta: {
         title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
       }

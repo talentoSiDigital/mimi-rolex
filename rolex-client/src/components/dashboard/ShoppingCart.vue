@@ -59,16 +59,16 @@ function randomStr() {
 
 const dataObject = ref({
     "total": "0",
-    "firstName": "",
-    "lastName": "",
+    "firstName": "Manuel",
+    "lastName": "Zorrilla",
     "email": piniaStore.$state.user.email,
     "phone": piniaStore.$state.user.phone,
-    "documentId": "",
-    "address": "",
+    "documentId": "27515094",
+    "address": "Ciudad Center, boleita",
     "country": "VE",
     "cardNumber": "",
-    "cardExpirationMonth": "",
-    "cardExpirationYear": "",
+    "cardExpirationMonth": "12",
+    "cardExpirationYear": "2027",
     "region": "",
     "code": code.value,
     "deviceFingerPrintID": code.value
@@ -102,53 +102,35 @@ function activateModal() {
     return active.value = !active.value
 }
 
-
-
-
 function sendPayment() {
 
-    console.log(dataObject.value);
 
     paymentDataServices.step1(dataObject.value, user).then((d) => {
         paymentStatus.value = d.data
         referenceId.value = paymentStatus.value.consumerAuthenticationInformation.referenceId
         accessToken.value = paymentStatus.value.consumerAuthenticationInformation.accessToken
-        console.log(paymentStatus.value);
         if (paymentStatus.value.status == "COMPLETED") {
-            // router.push(`/checkout/`)
+
             checkStep.value = true
 
         }
     }).catch((e) => {
-        console.log(e.message);
     })
-}
-
-function closeIframe() {
-    console.log("Closing Iframe");
-    // checkStep.value = false
-    // console.log("Closed Iframe");
 }
 
 
 watch(checkResponse, () => {
-    checkStep.value = false
     dataObject.value.referenceId = referenceId.value
-    dataObject.value.returnUrl = window.location.hostname
     dataObject.value.clientId = user
 
     paymentDataServices.step2(dataObject.value, user).then((d) => {
-        console.log('object');
-
+    
         paymentStatus.value = d.data
-
-        console.log(paymentStatus.value);
-
-     
+    
         if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
             challenge.value = true
             checkStep.value = false
-            return        
+            return
         }
         if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
 
@@ -163,15 +145,49 @@ watch(checkResponse, () => {
             dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
 
 
-            paymentDataServices.payWithData(dataObject.value , user).then((d) => {
-                console.log(d.data);
+            paymentDataServices.payWithData(dataObject.value, user).then((d) => {
+                router.push(`/checkout/`)
             })
         }
-        
-        
+
+
     }).catch((e) => {
-        console.log(e);
     })
+})
+
+
+watch(challengeResponse, () => {
+
+    dataObject.value.authenticationTransactionId = challengeResponse.value
+    paymentDataServices.validation(dataObject.value, user).then((d) => {
+        paymentStatus.value = d.data
+
+
+        if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+
+            dataObject.value.transactionId = d.data.consumerAuthenticationInformation.authenticationTransactionId
+            dataObject.value.signedPares = paymentStatus.value.consumerAuthenticationInformation.paresStatus
+            dataObject.value.cavv = paymentStatus.value.consumerAuthenticationInformation.cavv
+            dataObject.value.xid = paymentStatus.value.consumerAuthenticationInformation.xid
+            dataObject.value.ecommerceIndicator = paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator
+            dataObject.value.ucafCollectionIndicator = paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator
+            dataObject.value.ucafAuthenticationData = paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData
+            dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
+            dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
+
+
+            paymentDataServices.payWithData(dataObject.value, user).then((d) => {
+                paymentStatus.value = d.data
+                if (paymentStatus.value.status == "AUTHORIZED") {
+                    router.push(`/checkout/`)
+                }
+            })
+        } else {
+
+        }
+    }).catch((e) => {
+    })
+
 })
 
 </script>
@@ -191,10 +207,9 @@ watch(checkResponse, () => {
                     @send-payment="sendPayment" v-model:status="paymentStatus" />
             </transition>
 
-            <DDCIframe v-if="checkStep" v-model:closer="checkStep" :data="paymentStatus"
-                v-model:response="checkResponse" />
-                
-            <ChallengeAuth v-if="challenge" :data="paymentStatus" v-model="challengeResponse"
+            <DDCIframe v-if="checkStep" :data="paymentStatus" v-model="checkResponse" />
+
+            <ChallengeAuth v-if="challenge" v-model="challengeResponse" :data="paymentStatus"
                 :access-token="accessToken" />
 
 

@@ -2,9 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 
 const { data } = defineProps(['data'])
-const emit = defineEmits('close-modal')
-const checkResponse = defineModel('response')
-const closer = defineModel('closer')
+const checkResponse = defineModel()
 const input = ref(null)
 
 
@@ -14,9 +12,6 @@ onMounted(() => {
     window.addEventListener("message", function (event) {
         if (event.origin === "https://centinelapistag.cardinalcommerce.com") {
             checkResponse.value = event.data
-            console.log(checkResponse.value);
-            closer.value = false
-            
         }
     }, false);
 })

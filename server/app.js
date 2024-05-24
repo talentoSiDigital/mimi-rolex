@@ -67,9 +67,11 @@ const upload = require('./app/middleware/headerUpload');
 
 
 //ROUTES
+const path = __dirname + '/app/views/';
+app.set('views', path);
+app.set("view engine", "ejs");
 var history = require('connect-history-api-fallback');
 const serveStatic = require("serve-static")
-const path = __dirname + '/app/views/';
 
 // app.use(express.static(path)); 
 // app.use(history())
