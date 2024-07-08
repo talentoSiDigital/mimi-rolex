@@ -17,7 +17,6 @@ export const auth = defineStore('auth',{
         user => {
           this.$state.status.loggedIn=true;
           this.$state.user=user;
-          
           return Promise.resolve(user); 
         },
         error => {

@@ -1,24 +1,21 @@
 <script setup>
+import { useAsyncState } from '@vueuse/core';
 import { ref } from 'vue';
-import { useAsyncState } from '@vueuse/core'
 
-import router from '../../router'
-import { RouterLink, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css';
 
-import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-import RolexDataServices from '../../services/rolexDataService'
-import ContactWatchRolex from '../../components/global-components/ContactWatchRolex.vue'
-import ServerError from '../../components/cards/ServerError.vue'
+import SectionNavigationCard from '../../components/cards/SectionNavigationCard.vue';
+import RolexDataServices from '../../services/rolexDataService';
+import RolexTemplate from './RolexTemplate.view.vue';
 
 const windowWidth = ref(window.innerWidth)
 const currentSlide = ref(0)
 const route = useRoute()
 const currentRoute = route.params.id
 
-
+console.log(route.params);
 const breakpoints = {
     500: {
         // 500px and up
@@ -59,6 +56,7 @@ const breakpoints2 = {
 let { isLoading, state, isReady, execute } = useAsyncState(
     RolexDataServices.getDetailedWatch(currentRoute)
         .then((d) => {
+            console.log(d.data);
             return d.data
         })
 )
@@ -99,6 +97,16 @@ function getResponsiveColors(colors) {
 
 }
 
+function capitalizeFirstLetter(inputString) {
+  // Convert the entire string to lowercase
+  const lowerCaseString = inputString.toLowerCase();
+  
+  // Capitalize the first letter
+  const capitalizedString = lowerCaseString.charAt(0).toUpperCase() + lowerCaseString.slice(1);
+  
+  return capitalizedString;
+}
+
 
 </script>
 
@@ -106,307 +114,211 @@ function getResponsiveColors(colors) {
     <div id="new-models">
         <RolexTemplate>
             <template #content>
-                <div v-if="isReady" class="mb-44">
-                    <div v-if="state">
-                       
-                        <div id="banner" :class="getColors(state.details[0].color)"
-                            class="m-4 bg-gradient-to-t flex flex-col-reverse md:flex-row ">
+                <div v-if="isReady" class="">
+                    <section class="bg-rolex-brown-light-2 relative md:h-[85vh]">
+                        <div class="flex items-center justify-center w-full">
 
-                            <div id="carousel" class="md:w-3/4 bg-gradient-to-t"
-                                :class="getResponsiveColors(state.details[0].color)">
-                                <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
-                                    <slide v-for="slide in state.details[0].sliderImg" :key="slide">
-                                        <img :src="state.details[1].img[slide - 1]" :alt="slide.alt">
-                                    </slide>
+                            <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}-showcase.webp`" :alt="`${state.getAll.nombre}-main-image`"
+                                class="w-1/2 md:w-1/4">
+                        </div>
+                        <div class="md:absolute w-full h-full  top-0 flex items-center pl-10 md:pl-24  pb-10 md:pb-0">
+                            <div class="font-helvetica md:w-1/3 ">
+                                <h2 class="font-bold text-rolex-brown text-2xl">Rolex</h2>
+                                <h2 class="font-bold text-rolex-brown  text-6xl">{{ state.getAll.nombre }}</h2>
+                                <h2 class="font-light">{{ state.getAll.cajaDelModelo }}</h2>
+                                <h2 class="font-light">$ {{ addComma(state.details[0].precio) }} </h2>
 
-                                    <template #addons>
-                                        <navigation />
-
-                                    </template>
-                                </carousel>
-                            </div>
-
-
-                            <div class="md:text-white  w-full md:w-1/2 flex flex-col items-center justify-center md:ml-32 ">
-                                <header class=" text-center md:text-left w-full">
-                                    <h2 class="">Rolex</h2>
-                                    <h2 class=" text-4xl my-4 font-vilsuve font-bold">{{ state.getAll.nombre }}</h2>
-                                    <h2 class="font-arial-light">{{ state.getAll.cajaDelModelo }}</h2>
-                                    <h2 class="font-arial-light">Precio ${{ addComma(state.details[0].precio) }}</h2>
-                                    <a href="#" class="underline font-arial-light hidden md:block ">Disponibilidad del
-                                        modelo</a>
-                                </header>
-
-                                <div id="info" class=" hidden md:block w-full">
-                                    <div class="flex items-center gap-4 my-6  ">
-                                        <a href="#"
-                                            class="group border border-white w-10 h-10 p-3 rounded-full flex hover:bg-white duration-200">
-                                            <font-awesome-icon :icon="['fas', 'phone']"
-                                                class=" group-hover:text-rolex-green " />
-                                        </a>
-                                        <p class="font-arial-light">+58 212-3008741</p>
-                                    </div>
-                                    <div class="flex items-center gap-4 my-6  ">
-                                        <a href="#"
-                                            class="group border border-white w-10 h-10 p-3 rounded-full flex hover:bg-white duration-200">
-                                            <font-awesome-icon :icon="['fas', 'envelope']"
-                                                class="group-hover:text-rolex-green" />
-                                        </a>
-                                        <p class="font-arial-light">Contáctenos</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div id="slider-nav" class="hidden md:flex w-full ">
-
-                                    <div class="flex w-10/12 gap-2">
-                                        <div class="hover:bg-gray-400"
-                                            :class="[item == currentSlide + 1 ? 'bg-gray-400' : 'bg-white']"
-                                            v-for="item in state.details[0].sliderImg" :key="item">
-                                            <div @click="currentSlide = item - 1">
-                                                <img :src="state.details[1].img[item - 1]"
-                                                    :alt="state.details[1].img[item - 1]" class="w-32">
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-
-                                </div>
                             </div>
                         </div>
+                    </section>
 
 
-                        <section id="info" class="flex my-2 p-8 md:p-14 flex-col-reverse md:flex-row">
-                            <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                                <div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">NÚMERO de modelo</p>
-                                        <p class="uppercase font-arial-light p-0">{{ parseModelNumber(state.getAll.modelo)
-                                        }}
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">CAJA DEL MODELO</p>
-                                        <p class="font-arial-light p-0">{{ state.getAll.cajaDelModelo }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">Bisel</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].bisel }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">hermeticidad</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].hermeticidad }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">movimiento</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].movimiento }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">calibre</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].calibre }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">reserva de marcha</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].reservaDeMarcha }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">brazalete</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].brazalete }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">esfera</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].esfera }}</p>
-                                    </div>
-                                    <div>
-                                        <p class="uppercase font-arial-bold font-bold">certificacion</p>
-                                        <p class=" font-arial-light p-0">{{ state.details[0].certificacion }}</p>
-                                    </div>
+                    <section
+                        class="flex flex-col-reverse md:flex-row items-center justify-between w-full bg-rolex-brown-light-1 py-[2vh]">
+                        <section class="w-2/3 flex flex-col items-center    ">
+                            <div class="flex gap-20 justify-center w-full pb-10">
+                                <div class="w-1/3  space-y-4">
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Referencia</h2>
+                                        <p class="font-light">{{ parseModelNumber(state.getAll.modelo) }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Caja del modelo
+                                        </h2>
+                                        <p class="font-light">{{ state.getAll.cajaDelModelo }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Hermeticidad</h2>
+                                        <p class="font-light">{{ state.details[0].hermeticidad }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Bisel</h2>
+                                        <p class="font-light">{{ state.details[0].bisel }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Esfera</h2>
+                                        <p class="font-light">{{ state.details[0].esfera }}</p>
+                                    </header>
                                 </div>
+
+                                <div class="w-1/3 space-y-4">
+
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Brazalete</h2>
+                                        <p class="font-light">{{ state.details[0].brazalete }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Movimiento</h2>
+                                        <p class="font-light">{{ state.details[0].movimiento }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Calibre</h2>
+                                        <p class="font-light">{{ state.details[0].calibre }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Reserva de marcha
+                                        </h2>
+                                        <p class="font-light">{{ state.details[0].reservaDeMarcha }}</p>
+                                    </header>
+                                    <header>
+                                        <h2 class="text-rolex-brown font-helvetica font-bold text-xl">Certificación</h2>
+                                        <p class="font-light">{{ state.details[0].certificacion }}</p>
+                                    </header>
+                                </div>
+
                             </div>
-                            <div id="info-img" class="w-full md:w-1/2">
-                                <img :src="getHeaderImg(state.details[1].img)" alt="side-img">
+                            <hr class="w-9/12 pb-6">
+                            <div class="w-3/4">
+                                <a :href="state.details[0].brochure" target="_blank"
+                                    class="flex gap-2 font-helvetica text-rolex-green font-bold hover:underline duration-200">
+
+                                    <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15"
+                                        xml:space="preserve" class="w-4">
+
+                                        <path id="icons_x2F_download" class="fill-rolex-green"
+                                            d="M15,10v5h-1h-1H2H0v-2v-3h2v3h11v-3H15z M5.5,9.5l2,2l2-2l2-2h-3V0H8H7H6.5v7.5h-3L5.5,9.5z" />
+                                    </svg>
+                                    <h2>Descargar Folleto</h2>
+
+                                </a>
                             </div>
                         </section>
-
-
-                        <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row-reverse">
-                            <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                                <div class="md:w-8/12">
-                                    <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{
-                                        state.headers[0].header1
-                                    }}</h1>
-                                    <h1 class="leading-relaxed ">{{ state.headers[0].texto1 }}</h1>
-                                </div>
-                            </div>
-                            <div id="info-img" class="w-full md:w-1/2">
-                                <img :src="state.headers[0].img[0]" :alt="state.headers[0].imagen1">
-                            </div>
+                        <section class="w-10/12 md:w-1/3">
+                            <img :src="state.details[1].img" alt="specs-section-img" class="hidden md:block ">
+                            <img :src="state.details[1].imgMobile" alt="specs-section-img-mobile"
+                                class="block md:hidden w-full">
                         </section>
 
-                        <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row">
-                            <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                                <div class="md:w-8/12">
-                                    <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{
-                                        state.headers[0].header2
-                                    }}</h1>
-                                    <h1 class="leading-relaxed ">{{ state.headers[0].texto2 }}</h1>
-                                </div>
-                            </div>
-                            <div id="info-img" class="w-full md:w-1/2">
-                                <img :src="state.headers[0].img[1]" :alt="state.headers[0].imagen2">
-                            </div>
-                        </section>
+                    </section>
 
-                        <section id="info" class="flex my-2 px-10 md:px-16 pb-10 flex-col-reverse md:flex-row-reverse">
-                            <div id="info-text" class="w-full md:w-1/2 flex flex-col justify-center items-center">
-                                <div class="md:w-8/12">
-                                    <h1 class="block text-left text-4xl scale-x-[1] scale-y-[0.8]">{{
-                                        state.headers[0].header3
-                                    }}</h1>
-                                    <h1 class="leading-relaxed ">{{ state.headers[0].texto3 }}</h1>
-                                </div>
-                            </div>
-                            <div id="info-img" class="w-full md:w-1/2">
-                                <img :src="state.headers[0].img[2]" :alt="state.headers[0].imagen3">
-                            </div>
-                        </section>
+                    <section class="flex flex-col items-center w-full bg-rolex-brown-light-2">
+                        <div class=" flex flex-col items-center py-[10vh]">
+                            <header
+                                class="flex flex-col gap-8   justify-around items-center  text-rolex-brown h-fit pb-[10vh]">
+                                <h1 class="font-helvetica font-bold text-2xl md:text-5xl w-10/12 md:w-1/2">
+                                    {{ state.headers.header1 }}
+                                </h1>
 
-                        <section class="bg-[#f8f8f8] flex flex-col justify-center items-center">
-                            <img src="/assets/routes-assets/scarcity-corners.png" alt="rolex-corner"
-                                class="w-1/2 md:w-1/3 py-20">
-                            <h1 class="block  text-3xl scale-x-[1] scale-y-[0.8] pb-6 w-1/2 md:w-full text-center">
-                                DISPONIBILIDAD DEL MODELO</h1>
-                            <h1 class="leading-relaxed text-md w-10/12 md:w-7/12 text-justify md:text-center pb-16">
-                                Todos los relojes Rolex se ensamblan a mano con sumo cuidado para responder a los elevados
-                                estándares de calidad de la marca. Naturalmente, tal nivel de exigencia condiciona la
-                                capacidad
-                                de producción de Rolex y una gran demanda puede limitar la disponibilidad de determinados
-                                modelos Rolex.
-                                <br>
-                                Los nuevos relojes Rolex están disponibles exclusivamente en los distribuidores oficiales,
-                                que
-                                se surten con regularidad y gestionan de manera independiente la distribución y las ventas
-                                de
-                                los relojes a sus clientes.
-
-                                <br>
-                                Mimi Joyería se enorgullece de formar parte de la red mundial de Distribuidores Oficiales
-                                Rolex
-                                y puede proporcionar información sobre la disponibilidad de los relojes Rolex.
-                            </h1>
-
-
-                        </section>
-
-                        <section class="my-10" v-if="state.getAll.videoAdjust != false">
-                            <div class="w-full flex flex-col items-center justify-center">
-
-                                <div class="h-screen w-full flex justify-center">
-                                    <div class="aspect-w-16 w-full md:w-3/4 h-full">
-                                        <iframe :src="state.getAll.videoAdjust" title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-
-                                </div>
-
-                                <div class="flex flex-col items-center text-center my-10 w-10/12 md:w-2/6">
-                                    <h2 class="block w-10/12 uppercase  text-4xl scale-x-[1] scale-y-[0.8]">CÓMO AJUSTAR SU
-                                        {{ state.getAll.nombre }}</h2>
-                                    <h2 class="leading-relaxed ">Sinónimos de excelencia y fiabilidad, los relojes Rolex
-                                        están
-                                        diseñados para el día a día, y en función del modelo, se adaptan perfectamente a una
-                                        gran variedad de actividades y deportes. Creados para perdurar, estos relojes se
-                                        caracterizan por su distintiva estética atemporal. {{ state.getAll.videoAdjustText
-                                        }}
-                                        Descubra más sobre sus características y cómo ajustar la hora al ver el vídeo.</h2>
-                                </div>
-                            </div>
-                        </section>
-
-
-                        <div v-if="state.collection[0] != undefined">
-                            <section v-if="state.collection[0].hasVideo">
-                                <div class="h-[50vh] md:h-screen flex justify-center">
-                                    <div class="aspect-w-16 w-full md:w-3/4 h-full">
-                                        <iframe :src="state.collection[0].video" title="YouTube video player"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-
-                                </div>
-                                <div class="flex flex-col items-center justify-center my-10 ">
-                                    <h2 class="font-arial-bold font-bold text-justify md:text-center w-10/12 md:w-2/3 ">{{
-                                        state.collection[0].text }}</h2>
-                                </div>
-
+                                <p
+                                    class="text-rolex-brown w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
+                                    {{ state.headers.texto1 }}
+                                </p>
+                            </header>
+                            <section class="w-10/12 md:w-1/2">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}.webp`" alt="heading-img-1"
+                                    class="hidden md:block ">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}-mobile.webp`" alt="heading-img-1-mobile"
+                                    class="block md:hidden w-full">
                             </section>
                         </div>
 
-
-                        <section class="group relative h-fit overflow-hidden">
+                        <div class=" flex flex-col items-center py-[10vh]">
                             <header
-                                class=" absolute z-10  bg-opaco w-full h-full flex flex-col justify-center items-center text-white">
-                                <h2>{{ state.collection[0].nombre }}</h2>
-                                <h1 class="block text-left text-2xl md:text-4xl py-8">{{ state.collection[0].subHeader }}</h1>
+                                class="flex flex-col gap-8   justify-around items-center  text-rolex-brown h-fit pb-[10vh]">
+                                <h1 class="font-helvetica font-bold text-2xl md:text-5xl w-10/12 md:w-1/2">
+                                    {{ state.headers.header2 }}
+                                </h1>
 
-                                <router-link :to="{ name: 'coleccion-rolex' }"
-                                    class="border border-white px-8 py-2 rounded-3xl group-hover:bg-white group-hover:text-rolex-green duration-700">
-                                    Ver todos los modelos
-                                </router-link>
+                                <p
+                                    class="text-rolex-brown w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
+                                    {{ state.headers.texto2 }}
+                                </p>
+                            </header>
+                            <section class="w-10/12 md:w-1/2">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}.webp`" alt="heading-img-2"
+                                    class="hidden md:block">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}-mobile.webp`" alt="heading-img-2-mobile"
+                                    class="block md:hidden w-full">
+                            </section>
+                        </div>
+
+                        <div class=" flex flex-col items-center py-[10vh]">
+                            <header
+                                class="flex flex-col gap-8   justify-around items-center  text-rolex-brown h-fit pb-[10vh]">
+                                <h1 class="font-helvetica font-bold text-2xl md:text-5xl w-10/12 md:w-1/2">
+                                    {{ state.headers.header3 }}
+                                </h1>
+                              
+
+                                <p
+                                    class="text-rolex-brown w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
+                                    {{ state.headers.texto3 }}
+                                </p>
+                            </header>
+                            <section class="w-10/12 ">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`" alt="heading-img-3"
+                                    class="hidden md:block ">
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`" alt="heading-img-3-mobile"
+                                    class="block md:hidden w-full">
+                            </section>
+                        </div>
+                        <div class=" flex flex-col justify-center items-center pt-[10vh] bg-rolex-brown-light-2">
+                            <header
+                                class="flex flex-col gap-8 w-10/12  justify-around items-center  text-rolex-brown h-fit  bg-white">
+                                <img src="/assets/crown-logo-rolex.svg" alt="logo-rolex" class="w-12 py-4">
+
+                                <h1 class="font-helvetica font-bold text-2xl md:text-5xl w-10/12 md:w-1/2 text-center">
+                                    Disponibilidad de los modelos
+                                </h1>
+
+                                <p
+                                    class="text-rolex-brown w-10/12 md:w-1/2 text-xl font-helvetica font-light  text-center ">
+                                    Todos los relojes Rolex se ensamblan a mano con sumo cuidado para garantizar una
+                                    calidad excep-cional. Unos estándares tan altos limitan naturalmente la capacidad de
+                                    producción de Rolex y, a veces, la demanda de relojes Rolex supera esta capacidad.
+                                    <br>
+                                    <br>
+                                    Por lo tanto, la disponibilidad de ciertos modelos puede ser limitada. Los relojes
+                                    Rolex nuevos se venden exclusivamente a través de los Distribuidores Oficiales
+                                    Rolex, que reciben entregas habitua-les y gestionan de manera independiente la
+                                    distribución y las ventas a sus clientes.
+                                    <br>
+                                    <br>
+
+                                    Mimi Joyería C.A. se enorgullece de formar parte de la red
+                                    mundial de Distribui-dores Oficiales Rolex, y puede proporcionar información sobre
+                                    la disponibilidad de los relojes Rolex.
+
+                                </p>
+                                <img :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}_presentation-box.webp`" alt="box-presentation-img" class=" w-1/2">
                             </header>
 
+                        </div>
+                    </section>
 
-                            <div>
+                    <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center py-[10vh]">
+                        <div class="w-10/12">
+                            <SectionNavigationCard :img="`banners/new-banner-collections-${route.params.colectionName}`"
+                                :link="`../${state.collection.nombre.toLowerCase().replace(' ', '-')}`" class="w-full ">
+                                <template #sub>Rolex {{capitalizeFirstLetter(state.collection.nombre)}}</template>
+                                <template #title>{{state.collection.subHeader}}</template>
+                                
+                                <template #button>Más información</template>
 
-                                <img class="w-full group-hover:scale-110 hidden md:block  duration-700"
-                                    :src="state.collection[0].fileLandscape" alt="banner-img">
-                                <img class="w-full block md:hidden " :src="state.collection[0].fileMobile" alt="banner-img">
-                            </div>
-                        </section>
-
-                        <ContactWatchRolex
-                            :message="`Me interesa el Rolex ${state.getAll.nombre} (Modelo de referencia ${state.getAll.modelo})`" 
-                            :watch="state.getAll.nombre"
-                            :modelo="state.getAll.modelo"
-                            :cajaDelModelo="state.getAll.cajaDelModelo"
-                            />
-
-                        <section class="flex flex-col justify-center items-center">
-
-                            <h1 class="block text-center md:text-left text-4xl py-8">Tambien puede interesarle...</h1>
-                            <div id="carousel" class="w-9/12">
-                                <carousel :breakpoints="breakpoints2" :wrap-around="false">
-                                    <slide v-for="(slide, index) in state.sliderCollection" :key="index">
-
-
-                                        <a :href="`/relojes/${state.sliderCollection[index].modelo}`">
-
-                                            <img :src="slide.img" :alt="slide.modelo">
-                                            <h2 class="uppercase text-center ">Rolex</h2>
-                                            <h2 class="uppercase text-center font-bold">{{ slide.nombre }}</h2>
-                                            <h2 class="text-center text-xs font-extralight">{{ slide.cajaDelModelo }}</h2>
-
-                                        </a>
-                                    </slide>
-
-                                    <template #addons>
-                                        <navigation />
-
-
-                                    </template>
-                                </carousel>
-                            </div>
-                        </section>
-
-
-                    </div>
-
-                    <ServerError v-else />
+                            </SectionNavigationCard>
+                        </div>
+                    </section>
                 </div>
 
 
@@ -416,4 +328,3 @@ function getResponsiveColors(colors) {
 
     </div>
 </template>
-

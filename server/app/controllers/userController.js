@@ -22,7 +22,8 @@ exports.findUserData = (req, res) => {
             'lastName',
             'age',
             'phone',
-            'email'
+            'email',
+            'referenceCode'
         ],
         where: {
             id: req.params.id

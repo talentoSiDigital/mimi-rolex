@@ -13,6 +13,8 @@ module.exports = app =>{
     router.post("/pay-with-data/:id", uploadFiles.any(), payment.paymentCheck)
     router.post("/validation-step/", uploadFiles.any(), payment.paymentAuthenticationStep4)
     router.post("/validate-auth/:id", uploadFiles.any(), payment.validationReturn)
+    router.post("/generate-token", uploadFiles.any(), payment.tokenGeneration)
+
     // router.get("/payment/:id/bill",payment.createBill)
 
 

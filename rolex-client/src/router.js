@@ -1,211 +1,276 @@
-import { createRouter, createWebHistory } from 'vue-router'
-
-import Home from './views/Home.view.vue'
-// ROLEX COMPONENTS
-import Rolex from './views/Rolex/Rolex.view.vue'
-import RolexNewModels from './views/Rolex/RolexNewModels.view.vue'
-import RolexMantenimiento from './views/Rolex/RolexMantenimiento.view.vue'
-import RolexHistoria from './views/Rolex/RolexHistoria.view.vue'
-import RolexShowroom from './views/Rolex/RolexShowroom.view.vue'
-import RolexWatchmaking from './views/Rolex/RolexWatchmaking.view.vue'
-import RolexContacto from './views/Rolex/RolexContacto.view.vue'
-import RolexAll from './views/Rolex/RolexAll.view.vue'
-
-import RolexWatchCollection from './views/Rolex/RolexWatchCollection.view.vue'
-import RolexWatchDetail from './views/Rolex/RolexWatchDetail.view.vue'
-
-
-
-// MIMI SHOWCASE COMPONENTS
-import Tudor from './views/Mimi/Tudor.view.vue'
-import Relojeria from './views/Mimi/Relojeria.view.vue'
-import Joyeria from './views/Mimi/Joyeria.view.vue'
-import SobreMimi from './views/Mimi/SobreMimi.view.vue'
-import Contacto from './views/Mimi/Contacto.view.vue'
-import NotFound404 from './views/404.view.vue'
-
-
-// MIMI STORE COMPONENTS
-
-import StoreJoyeria from './views/Tienda/StoreJoyeria.view.vue'
-import StoreRelojeria from './views/Tienda/StoreRelojeria.view.vue'
-import StoreJoyeriaDetail from './views/Tienda/StoreJoyeriaDetail.view.vue'
-import StoreRelojeriaDetail from './views/Tienda/StoreRelojeriaDetail.view.vue'
-
-// MIMI ADMIN COMPONENTS
-import Login from './views/Admin/Login.view.vue'
-import Register from './views/Admin/Register.view.vue'
-import Dashboard from './views/Admin/Dashboard.view.vue'
-import Logout from './views/Admin/Logout.view.vue'
-
-import Profile from './components/dashboard/Profile.vue'
-import SliderChangeForm from './components/dashboard/SliderChangeForm.vue'
-import JoyeriaForm from './components/dashboard/JoyeriaForm.vue'
-import RelojeriaForm from './components/dashboard/RelojeriaForm.vue'
-
-import ShoppingCart from './components/dashboard/ShoppingCart.vue'
-import DataUpdate from './components/dashboard/DataUpdate.vue'
-import Checkout from './components/dashboard/Checkout.vue'
-import Authorized from './components/dashboard/Authorized.vue'
-
+import { createRouter, createWebHistory } from "vue-router"
 
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
+    // Main Route
     {
       path: "/",
       name: "Home",
-      component: Home,
+      component: ()=>import("./views/Home.view.vue"),
       meta: {
-        title: 'Mimi Joyería | Distribuidor Oficial Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Mimi Joyería | Distribuidor Oficial Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
     // ROLEX STATIC ROUTES
     {
-      path: "/rolex",
+      path: "/descubre-rolex",
       name: "rolex",
-      component: Rolex,
+      component: ()=>import("./views/Rolex/Rolex.view.vue"),
       meta: {
-        title: 'Rolex en Mimi Joyería  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Rolex en Mimi Joyería  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }, 
-    {
-      path: "/nuevos-modelos-2023",
-      name: "rolex-modelos-2023",
-      component: RolexNewModels,
-      meta: {
-        title: 'Nuevos Modelos 2023  - Mimi Joyería | Distribuidor Oficial Rolex'
-      }
-    },
+   
     {
       path: "/mantenimiento-rolex",
       name: "mantenimiento-rolex",
-      component: RolexMantenimiento,
+      component:()=>import("./views/Rolex/RolexMantenimiento.view.vue"),
       meta: {
-        title: 'Mantenimiento Rolex  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Mantenimiento Rolex  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+
+    },
+    {
+      path: "/mantenimiento-rolex/procedimiento",
+      name: "mantenimiento-rolex-procedimiento",
+      component:()=>import("./views/Rolex/RolexMantenimientoProcedimiento.view.vue") ,
+      meta: {
+        title: "Procedimiento de mantenimiento Rolex  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
 
     },
     {
       path: "/historia",
       name: "rolex-historia",
-      component: RolexHistoria,
+      component:()=>import("./views/Rolex/RolexHistoria.view.vue"),
       meta: {
-        title: 'Historia  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Historia  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
-    {
-      path: "/showroom",
-      name: "rolex-showroom",
-      component: RolexShowroom,
-      meta: {
-        title: 'Showroom  - Mimi Joyería | Distribuidor Oficial Rolex'
-      }
-    }
-    ,
+
     {
       path: "/watchmaking",
       name: "rolex-watchmaking",
-      component: RolexWatchmaking,
+      component:()=>import("./views/Rolex/RolexWatchmaking.view.vue"),
       meta: {
-        title: 'RolexWatchmaking  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "RolexWatchmaking  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
     {
       path: "/contacto",
       name: "rolex-contacto",
-      component: RolexContacto,
+      component:()=>import("./views/Rolex/RolexContacto.view.vue"),
       meta: {
-        title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
-      }
-    },
-    {
-      path: "/tudor",
-      name: "tudor",
-      component: Tudor,
-      meta: {
-        title: ' Tudor - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
+    {
+      path: "/contacto/enviar-mensaje",
+      name: "rolex-contacto-enviar-mensaje",
+      component:()=>import("./views/Rolex/RolexContactMessage.view.vue"),
+      meta: {
+        title: "Enviar mensaje - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+  
+    // ----NEW MODELS ROLEX SECTION------
+    {
+      path: "/nuevos-modelos-2024",
+      name: "rolex-modelos-2024",
+      component:()=>import("./views/Rolex/RolexNewModels.view.vue"),
+      meta: {
+        title: "Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/1908",
+      name: "rolex-modelos-1908",
+      component:()=>import("./views/Rolex/new-models/New1908.view.vue"),
+      meta: {
+        title: "1908 | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/cosmograph-daytona",
+      name: "rolex-modelos-cosmograph-daytona",
+      component:()=>import("./views/Rolex/new-models/NewCosmograph.view.vue"),
+      meta: {
+        title: "Cosmograph Daytona | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/day-date",
+      name: "rolex-modelos-day-date",
+      component:()=>import("./views/Rolex/new-models/NewDayDate.view.vue"),
+      meta: {
+        title: "DayDate | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/deepsea",
+      name: "rolex-modelos-deepsea",
+      component:()=>import("./views/Rolex/new-models/NewDeepsea.view.vue"),
+      meta: {
+        title: "Deepsea | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/gmt-master-ii",
+      name: "rolex-modelos-gmt-master-ii",
+      component:()=>import("./views/Rolex/new-models/NewGMT.view.vue"),
+      meta: {
+        title: "GMT Master II | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/nuevos-modelos-2024/sky-dweller",
+      name: "rolex-modelos-sky-dweller",
+      component:()=>import("./views/Rolex/new-models/NewSkyDweller.view.vue"),
+      meta: {
+        title: "Sky Dweller | Nuevos Modelos 2024  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+
+    // ---------WORLD OF ROLEX SECTION ROUTES------------
+    {
+      path: "/world-of-rolex",
+      name: "world-of-rolex-hub",
+      component:()=>import("./views/Rolex/RolexWORHub.view.vue"),
+      meta: {
+        title: "World Of Rolex  - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/viaje-al-corazon-del-universo-rolex",
+      name: "world-of-rolex-article-1",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle1.view.vue"),
+      meta: {
+        title: "Viaje al corazón del universo Rolex - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/sail-gp",
+      name: "world-of-rolex-article-2",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle2.view.vue") ,
+      meta: {
+        title: "Sail GP - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/rolex-grand-slam",
+      name: "world-of-rolex-article-3",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle3.view.vue"),
+      meta: {
+        title: "Rolex Grand Slam - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/las-24-horas-de-le-mans",
+      name: "world-of-rolex-article-4",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle4.view.vue"),
+      meta: {
+        title: "Las 24 Horas de Le Mans - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/rolex-y-the-championships-wimbledon",
+      name: "world-of-rolex-article-5",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle5.view.vue"),
+      meta: {
+        title: "Rolex y The Championship, Wimbledon - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+    {
+      path: "/world-of-rolex/rolex-y-the-amundi-evian-championship",
+      name: "world-of-rolex-article-5",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
+      meta: {
+        title: "Rolex y The Amundi Evian Championship - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+
+ 
+  
     // ****************
-    // ****************
-    // ROLEX WATCHES VIEW 
+
+    // ROLEX WATCHES DYNAMIC ROUTES 
     {
       path: "/coleccion-rolex",
       name: "coleccion-rolex",
-      component: RolexAll,
+      component:()=>import("./views/Rolex/RolexWatches.view.vue"),
       meta: {
-        title: 'Coleccion Rolex | Distribuidor Oficial Rolex'
+        title: "Coleccion Rolex | Distribuidor Oficial Rolex"
       }
     },
+    
     {
-      path: "/coleccion/:id",
+      path: "/coleccion-rolex/:id",
       name: "rolex-coleccion",
-      component: RolexWatchCollection,
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
       meta: {
-        title: 'Coleccion Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Coleccion Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
     {
-      path: "/relojes/:id",
+      path: "/coleccion-rolex/:colectionName/:id",
       name: "relojes-rolex",
-      component: RolexWatchDetail,
+      component:()=>import("./views/Rolex/RolexWatchDetail.view.vue") ,
       meta: {
-        title: 'Modelos de Rolex - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Modelos de Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
       }
-    }
+    },
     // ****************
-    // ****************
+  
     // MIMI STATIC ROUTES
     ,
     {
       path: "/relojeria",
       name: "relojeria",
-      component: Relojeria,
+      component: ()=>import("./views/Mimi/Relojeria.view.vue"),
       meta: {
-        title: 'Relojeria - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Relojeria - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
     {
       path: "/joyeria",
       name: "joyeria",
-      component: Joyeria,
+      component: ()=>import("./views/Mimi/Joyeria.view.vue"),
       meta: {
-        title: 'Joyería  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Joyería  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
     {
       path: "/sobre-mimi",
       name: "sobre-mimi",
-      component: SobreMimi,
+      component: ()=>import("./views/Mimi/SobreMimi.view.vue"),
       meta: {
-        title: 'Sobre Mimi- Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Sobre Mimi- Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
     {
       path: "/contactenos",
       name: "contactenos",
-      component: Contacto,
+      component: ()=>import("./views/Mimi/Contacto.view.vue"),
       meta: {
-        title: 'Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Contáctenos  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
-    // ****************
     // ****************
     // MIMI STORE ROUTES
 
     {
       path: "/joyeria/:id",
       name: "joyas",
-      component: StoreJoyeria,
+      component: ()=>import("./views/Tienda/StoreJoyeria.view.vue"),
       meta: {
-        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "  Mimi Joyería | Distribuidor Oficial Rolex"
       },
 
     }
@@ -214,9 +279,9 @@ const router = createRouter({
     {
       path: "/relojeria/:id",
       name: "reloj",
-      component: StoreRelojeria,
+      component: ()=>import("./views/Tienda/StoreRelojeria.view.vue"),
       meta: {
-        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "  Mimi Joyería | Distribuidor Oficial Rolex"
       },
 
     }
@@ -224,9 +289,9 @@ const router = createRouter({
     {
       path: "/relojeria/:serie/:id",
       name: "relojProducto",
-      component: StoreRelojeriaDetail,
+      component: ()=>import("./views/Tienda/StoreRelojeriaDetail.view.vue"),
       meta: {
-        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "  Mimi Joyería | Distribuidor Oficial Rolex"
       },
 
     }
@@ -234,9 +299,9 @@ const router = createRouter({
     {
       path: "/joyeria/:serie/:id",
       name: "joyeriaProducto",
-      component: StoreJoyeriaDetail,
+      component: ()=>import("./views/Tienda/StoreJoyeriaDetail.view.vue"),
       meta: {
-        title: '  Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "  Mimi Joyería | Distribuidor Oficial Rolex"
       },
 
     }
@@ -244,22 +309,21 @@ const router = createRouter({
     {
       path: "/:notFound",
       name: "notFound",
-      component: NotFound404,
+      component: ()=>import("./views/404.view.vue"),
       meta: {
-        title: 'Pagina no encontrada -  Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Pagina no encontrada -  Mimi Joyería | Distribuidor Oficial Rolex"
       },
 
     }
     // ****************
-    // ****************
-    // ADMIN ROUTES
+    // AUTH AND USER ROUTES
     ,
     {
       path: "/login",
       name: "login",
-      component: Login,
+      component: ()=>import("./views/Admin/Login.view.vue"),
       meta: {
-        title: 'Iniciar sesion  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Iniciar sesion  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
@@ -267,20 +331,19 @@ const router = createRouter({
     {
       path: "/registrar",
       name: "registrar",
-      component: Register,
+      component: ()=>import("./views/Admin/Register.view.vue"),
       meta: {
-        title: 'Registrar  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Registrar  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
-    ,
     ,
     
     {
       path: "/logout",
       name: "logout",
-      component: Logout,
+      component: ()=>import("./views/Admin/Logout.view.vue"),
       meta: {
-        title: 'Registrar  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Registrar  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
@@ -288,53 +351,39 @@ const router = createRouter({
     {
       path: "/dashboard/",
       name: "dashboard",
-      component: Dashboard,
+      component: ()=>import("./views/Admin/Dashboard.view.vue"),
       children:[
         {
           path:"",
           name:"main",
-          component:Profile
+          component: ()=>import("./components/dashboard/Profile.vue")
         },
         {
           path:"banner-edit",
           name:"banner-edit",
-          component:SliderChangeForm
+          component: ()=>import("./components/dashboard/SliderChangeForm.vue")
         },
         {
           path:"agregar-joyeria",
           name:"agregar-joyeria",
-          component:JoyeriaForm
+          component: ()=>import("./components/dashboard/JoyeriaForm.vue")
         },
         {
           path:"agregar-relojeria",
           name:"agregar-relojeria",
-          component:RelojeriaForm
+          component: ()=>import("./components/dashboard/RelojeriaForm.vue")
         },
-        {
-          path:"actualizar-datos",
-          name:"actualizar-datos",
-          component:DataUpdate
-        },
-
-        // {
-        //   path:"carrito",
-        //   name:"carrito",
-        //   component:ShoppingCart
-        // },
       ],
       meta: {
-        title: 'Panel de control  - Mimi Joyería | Distribuidor Oficial Rolex'
+        title: "Panel de control  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
     ,
-    // ****************
-    // PAYMENT ROUTES
-    ,
-  
+    
     {
       path: "/carrito",
       name: "carrito",
-      component: ShoppingCart,
+      component: ()=>import('./components/dashboard/ShoppingCart.vue'),
       meta: {
         title: 'Carrito De Compras  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
@@ -343,7 +392,7 @@ const router = createRouter({
     {
       path: "/checkout",
       name: "checkout",
-      component: Checkout,
+      component: ()=>import('./components/dashboard/Checkout.vue'),
       meta: {
         title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
@@ -352,34 +401,39 @@ const router = createRouter({
     {
       path: "/authorized",
       name: "authorized",
-      component: Authorized,
+      component: ()=>import('./components/dashboard/Authorized.vue'),
       meta: {
         title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
       }
     }
     ,
-    // ,
+    
     // {
     //   path: "/",
     //   name: "",
-    //   component: Rolex,
+    //   component: ()=>import("./views/.vue"),
     //   meta: {
-    //     title: '  - Mimi Joyería | Distribuidor Oficial Rolex'
+    //     title: "  - Mimi Joyería | Distribuidor Oficial Rolex"
     //   }
     // }
+    
     // ,
+    // ****************
+    // PAYMENT ROUTES
+
+    
 
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        top: 10,
-        behavior: 'smooth'
-      }
+    // if (to.hash) {
+     
+    // }
+    // return { top: 0, behavior: "smooth", }
+    return {
+      el: "#top-bar",
+      top: 10,
+      behavior: "smooth"
     }
-    return { top: 0, behavior: 'smooth', }
-
   },
 
 })
@@ -387,7 +441,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
 
-  // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : 'Home';
+  // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
   // Get the page title from the route meta data that we have defined
   // See further down below for how we setup this data
   const title = to.meta.title

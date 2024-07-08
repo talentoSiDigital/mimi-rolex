@@ -28,7 +28,8 @@ class AuthService {
       age:user.age,
       email: user.email,
       phone: user.phone,
-      password: user.password
+      password: user.password,
+      referenceCode: user.referenceCode
     });
   }
 }

@@ -23,6 +23,9 @@ class MailSender {
     
     return http.post(`/validate-auth/${id}`, data)
   }
+  generateToken(data){
+    return http.post("/generate-token",data)
+  }
 
 }
 

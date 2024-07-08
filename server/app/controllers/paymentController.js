@@ -160,6 +160,8 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 
 		requestObj.paymentInformation = paymentInformation;
 
+
+
 		var buyerInformation = new cybersourceRestApi.Riskv1authenticationsBuyerInformation();
 		buyerInformation.mobilePhone = parseInt(info.orderInformationBillToPhoneNumber);
 		requestObj.buyerInformation = buyerInformation;
@@ -176,12 +178,6 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 
 		instance.checkPayerAuthEnrollment(requestObj, function (error, data, response) {
-			if (error) {
-			}
-			else if (data) {
-			}
-
-
 			var responseData = JSON.parse(response['text'])
 			res.send(responseData)
 
@@ -191,11 +187,13 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 	}
 
 }
+
 exports.paymentAuthenticationStep4 = (req, res) => {
 	res.render("validation", {
 		data: req.body.TransactionId
 	})
 }
+
 exports.validationReturn = (req, res) => {
 	if (!req.body) {
 		res.status(500).send('Debes enviar el pago')
@@ -277,10 +275,6 @@ exports.validationReturn = (req, res) => {
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 
 		instance.validateAuthenticationResults(requestObj, function (error, data, response) {
-			if (error) {
-			}
-			else if (data) {
-			}
 
 
 			var responseData = JSON.parse(response['text'])
@@ -295,7 +289,214 @@ exports.validationReturn = (req, res) => {
 
 }
 
+exports.tokenGeneration = async (req, res) => {
+	// Check if request has body
+	if (!req.body) {
+		res.status(500).send('Debes enviar el pago')
+		return
+	}
+	console.log("Comienzo de la ejecución")
 
+	var responseData = ""
+	let info = {
+		"clientReferenceInformationCode": req.body.code,
+		"orderInformationAmountTotal": req.body.total,
+		"orderInformationAmountCurrency": 'USD',
+		"orderInformationBillToFirstName": req.body.firstName,
+		"orderInformationBillToLastName": req.body.lastName,
+		"orderInformationBillToAddress": req.body.address,
+		"orderInformationBillToCountry": req.body.country,
+		"referenceCode": req.body.referenceCode,
+		"orderInformationBillToEmail": req.body.email,
+		"orderInformationBillToPhoneNumber": req.body.phone,
+		"paymentInformationCardNumber": req.body.cardNumber,
+		"paymentInformationCardExpirationMonth": req.body.cardExpirationMonth,
+		"paymentInformationCardExpirationYear": req.body.cardExpirationYear,
+		"orderInformationBillToLocality": req.body.region,
+		"transactionToken": req.body.transactionToken
+	}
+
+
+
+
+	if (req.body.country == 'US' || req.body.country == 'CA') {
+		info.orderInformationBillToAdministrativeArea = req.body.region
+		info.orderInformationBillToPostalCode = req.body.zip
+		info.orderInformationBillToDistrict = req.body.region
+		info.orderInformationBillToBuildingNumber = req.body.buildingNumber
+	}
+	
+	try {
+		var configObject = new config();
+		var apiClient = new cybersourceRestApi.ApiClient();
+
+		var instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
+	
+	var opts = [];
+
+		instance.getCustomer(info.referenceCode, opts, function (error, data, response) {
+			if(error) {
+				console.log('\nError : ' + JSON.stringify(error));
+			}
+			else if (data) {
+				console.log('\nData : ' + JSON.stringify(data));
+			}
+
+			console.log('\nResponse : ' + JSON.stringify(response));
+			console.log('\nResponse Code of Retrieve a Customer : ' + JSON.stringify(response['status']));
+			var status = response['status'];
+			write_log_audit(status);
+			callback(error, data, response);
+		});
+	}
+	catch (error) {
+		console.log('\nException on calling the API : ' + error);
+	}
+	
+	// try {
+	// 	var configObject = new config();
+	// 	var apiClient = new cybersourceRestApi.ApiClient();
+
+	// 	var instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
+	// 	console.log("paso 1");
+	// 	const customerTokenId = info.referenceCode
+
+	// 	instance.getCustomer(customerTokenId, function (error, data, response) {
+
+	// 		if(error) {
+	// 			console.log('\nError : ' + JSON.stringify(error));
+	// 		}
+	// 		else if (data) {
+	// 			console.log('\nData : ' + JSON.stringify(data));
+	// 		}
+
+	// 		console.log('\nResponse : ' + JSON.stringify(response));
+	// 		console.log('\nResponse Code of Retrieve a Customer : ' + JSON.stringify(response['status']));
+	// 		var status = response['status'];
+
+	// 		console.log("paso 2");
+		
+	// 		res.send(status)
+
+	// 		// var instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
+
+	// 		// requestObj = new cybersourceRestApi.PostCustomerShippingAddressRequest();
+	// 		// var customerTokenId = info.referenceCode
+	
+			
+	// 		// var shipTo = new cybersourceRestApi.Tmsv2customersEmbeddedDefaultShippingAddressShipTo();
+	
+	// 		// // Code reference 
+	// 		// var clientReferenceInformation = new cybersourceRestApi.Ptsv2paymentsClientReferenceInformation();
+	// 		// clientReferenceInformation.code = info.clientReferenceInformationCode;
+	// 		// requestObj.clientReferenceInformation = clientReferenceInformation;
+	
+	// 		// // Billing personal info setup
+	// 		// var shipTo = new cybersourceRestApi.Tmsv2customersEmbeddedDefaultShippingAddressShipTo();
+	// 		// shipTo.customerId = info.customerTokenId;
+	// 		// shipTo.firstName = info.orderInformationBillToFirstName;
+	// 		// shipTo.lastName = info.orderInformationBillToLastName;
+	// 		// shipTo.address1 = info.orderInformationBillToAddress;
+	// 		// shipTo.country = info.orderInformationBillToCountry;
+	// 		// shipTo.email = info.orderInformationBillToEmail;
+	// 		// shipTo.phoneNumber = info.orderInformationBillToPhoneNumber;
+	// 		// shipTo.locality = info.orderInformationBillToLocality;
+	// 		// if (req.body.country == 'US' || req.body.country == 'CA') {
+	// 		// 	shipTo.administrativeArea = info.orderInformationBillToAdministrativeArea;
+	// 		// 	shipTo.postalCode = info.orderInformationBillToPostalCode;
+	// 		// 	shipTo.district = info.orderInformationBillToDistrict;
+	// 		// 	shipTo.buildingNumber = info.orderInformationBillToBuildingNumber;
+	// 		// }
+	// 		// requestObj.shipTo = shipTo;
+	
+	
+	
+	// 		// instance = new cybersourceRestApi.CustomerShippingAddressApi(configObject, apiClient);
+	// 		// console.log("Point 2");
+	
+	// 		// instance.postCustomerShippingAddress(customerTokenId, requestObj, function (error, data, response) {
+	// 		// 	res.send(JSON.parse(response['text']));
+	// 		// 	// console.log(data);
+	// 		// 	if (error) {
+	// 		// 		console.log('\nError : ' + JSON.stringify(error));
+	// 		// 	}
+	
+	// 		// 	console.log("==============");
+	// 		// 	console.log(JSON.parse(response['text']));
+	// 		// 	console.log("==============");
+	// 		// 	requestObj = new cybersourceRestApi.PostInstrumentIdentifierRequest();
+	
+	// 		// 	var card = new cybersourceRestApi.TmsEmbeddedInstrumentIdentifierCard();
+	// 		// 	card.number = info.cardNumber;
+	// 		// 	requestObj.card = card;
+	
+	// 		// 	instance = new cybersourceRestApi.InstrumentIdentifierApi(configObject, apiClient);
+	
+	// 		// 	instance.postInstrumentIdentifier(requestObj, function (error, data, response) {
+	// 		// 		if (error) {
+	// 		// 			console.log('\nError : ' + JSON.stringify(error));
+	// 		// 		}
+	
+	// 		// 		console.log("Point 4");
+	// 		// 		console.log('\nData : ' + JSON.stringify(data));
+	// 		// 		responseData = JSON.parse(response['text']);
+	
+	// 		// 		console.log("==============");
+	// 		// 		console.log(responseData);
+	// 		// 		console.log("==============");
+	
+	// 		// 		requestObj = new cybersourceRestApi.PostCustomerPaymentInstrumentRequest();
+	
+	// 		// 		var card = new cybersourceRestApi.Tmsv2customersEmbeddedDefaultPaymentInstrumentCard();
+	// 		// 		card.expirationMonth = '12';
+	// 		// 		card.expirationYear = '2031';
+	// 		// 		card.type = '001';
+	// 		// 		requestObj.card = card;
+	
+	// 		// 		var instrumentIdentifier = new cybersourceRestApi.Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier();
+	// 		// 		instrumentIdentifier.id = responseData.id;
+	// 		// 		requestObj.instrumentIdentifier = instrumentIdentifier;
+	
+	
+	// 		// 		instance = new cybersourceRestApi.CustomerPaymentInstrumentApi(configObject, apiClient);
+	
+	// 		// 		instance.postCustomerPaymentInstrument(customerTokenId, requestObj, function (error, data, response) {
+	// 		// 			if (error) {
+	// 		// 				console.log('\nError : ' + JSON.stringify(error));
+	// 		// 			}
+	
+	// 		// 			responseData = JSON.parse(response['text']);
+	
+	// 		// 			console.log("==============");
+	// 		// 			console.log(responseData);
+	// 		// 			console.log("==============");
+	// 		// 			res.send(responseData);
+	// 		// 		});
+	
+	
+	
+	
+	
+	
+	// 		// 	});
+	
+	// 		// });
+	
+
+
+
+
+	// 	});
+
+		
+
+
+	// }
+	// catch (error) {
+	// 	res.send("Ocurrio un error: "+ error.message)
+	// }
+
+}
 
 exports.paymentCheck = async (req, res) => {
 	// Check if request has body
@@ -327,10 +528,14 @@ exports.paymentCheck = async (req, res) => {
 		"cavv": req.body.cavv,
 		"xid": req.body.xid,
 		"ecommerceIndicator": req.body.ecommerceIndicator,
+		"eciRaw": req.body.eciRaw,
 		"ucafCollectionIndicator": req.body.ucafCollectionIndicator,
 		"ucafAuthenticationData": req.body.ucafAuthenticationData,
 		"veresEnrolled": req.body.veresEnrolled,
 		"directoryServerTransactionId": req.body.directoryServerTransactionId,
+		"transactionToken": req.body.transactionToken,
+		"instrument": req.body.instrument,
+		"referenceCode": req.body.referenceCode,
 	}
 
 
@@ -343,7 +548,7 @@ exports.paymentCheck = async (req, res) => {
 	}
 
 
-
+	console.log(info);
 	try {
 		// Create Config Object
 		var configObject = new config();
@@ -359,20 +564,23 @@ exports.paymentCheck = async (req, res) => {
 
 		var processingInformation = new cybersourceRestApi.Ptsv2paymentsProcessingInformation();
 
-		processingInformation.ecommerceIndicator = info.ecommerceIndicator
+		processingInformation.commerceIndicator = info.ecommerceIndicator
 
 		requestObj.processingInformation = processingInformation;
 
 
 		// Card information setup
 		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
-		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCard();
+
+		var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationTokenizedCard();
+
 		paymentInformationCard.number = info.paymentInformationCardNumber;
 		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
 		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
 		paymentInformation.card = paymentInformationCard;
 
 		requestObj.paymentInformation = paymentInformation;
+
 
 
 
@@ -464,27 +672,28 @@ exports.paymentCheck = async (req, res) => {
 
 		var consumerAuthenticationInformation = new cybersourceRestApi.Ptsv2paymentsConsumerAuthenticationInformation();
 		consumerAuthenticationInformation.transactionId = info.transactionId;
-		// consumerAuthenticationInformation.signedPares = info.signedPares;
+		consumerAuthenticationInformation.signedPares = info.signedPares;
 		consumerAuthenticationInformation.cavv = info.cavv
 		consumerAuthenticationInformation.xid = info.xid
-		consumerAuthenticationInformation.ecommerceIndicator = req.body.ecommerceIndicator,
-			consumerAuthenticationInformation.ucafCollectionIndicator = req.body.ucafCollectionIndicator,
-			consumerAuthenticationInformation.ucafAuthenticationData = req.body.ucafAuthenticationData,
-			consumerAuthenticationInformation.veresEnrolled = req.body.veresEnrolled,
-			consumerAuthenticationInformation.directoryServerTransactionId = req.body.directoryServerTransactionId,
-			requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+		consumerAuthenticationInformation.ecommerceIndicator = info.ecommerceIndicator
+		consumerAuthenticationInformation.eciRaw = info.eciRaw
+		consumerAuthenticationInformation.transactionToken = info.transactionToken
+		consumerAuthenticationInformation.ucafCollectionIndicator = info.ucafCollectionIndicator
+		consumerAuthenticationInformation.ucafAuthenticationData = info.ucafAuthenticationData
+		consumerAuthenticationInformation.veresEnrolled = info.veresEnrolled
+		consumerAuthenticationInformation.directoryServerTransactionId = info.directoryServerTransactionId
+		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation
 
 		var tokenInformation = new cybersourceRestApi.Ptsv2paymentsTokenInformation();
 		tokenInformation.transientTokenJwt = process.env.SECRET_KEY;
 		requestObj.tokenInformation = tokenInformation;
-		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
 
-
-
+	
 
 		instance2.createPayment(requestObj, async function (error, data, response) {
 			payStatus = JSON.parse(response['text'])
+			res.send(payStatus)
 
 			if (payStatus.status == 'AUTHORIZED') {
 

@@ -1,9 +1,9 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router'
-import { useAsyncState } from '@vueuse/core'
+import { useAsyncState } from '@vueuse/core';
+import { RouterLink, useRoute } from 'vue-router';
 
-import OverlayBanner from '../../components/banners-components/OverlayBanner.vue'
-import StoreDataService from '../../services/storeDataService'
+import OverlayBanner from '../../components/banners-components/OverlayBanner.vue';
+import StoreDataService from '../../services/storeDataService';
 
 
 const route = useRoute()

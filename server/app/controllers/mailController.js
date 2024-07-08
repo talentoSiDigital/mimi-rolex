@@ -1508,6 +1508,246 @@ exports.rolexContact = (req, res) => {
   })
 
 };
+exports.rolexNewContact = (req, res) => {
+  console.log(req.body);
+
+  const message = `<div style=" width: 98vw; overflow-x: hidden; text-align: center; margin: 0; ">
+  <div class="main-container" style=" width: 100%;">
+    <div
+      class="container"
+      style="
+        background-color: #f5eeea;
+        min-height: 100vh;
+        height: fit-content;
+        padding: 20px 0px;
+       
+      "
+    >
+      <p style="padding-left: 132pt; text-indent: 0pt; text-align: left">
+        <span
+          ><table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p style="text-align: center; width: 98vw;">
+                  <img
+                    width="120"
+                    height="60"
+                    style=""
+                    src="http://www.mimijoyeria.com/storage/mail-assets/rolex-service-plaque.jpg"
+                  />
+                </p>
+              </td>
+            </tr></table
+        ></span>
+      </p>
+      <p style="text-indent: 0pt; text-align: left"><br /></p>
+      <p
+        style="
+          padding: 0pt 40px;
+          text-align: center;
+          color: #462c1f;
+          font-family: Arial, sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          text-decoration: none;
+          font-size: 18pt;
+        "
+      >
+        Tienes un nuevo mensaje, de parte del formulario de contacto de
+        <a
+          href="http://www.mimijoyeria.com/"
+          target="_blank"
+          style="
+            color: #462c1f;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 18pt;
+          "
+          >www.mimijoyeria.com</a
+        >
+      </p>
+      <p style="text-indent: 0pt; text-align: left"><br /></p>
+      <p
+        class="s1"
+        style="
+          padding: 0pt 60px;
+          text-indent: 0pt;
+          text-align: center;
+          font-size: 14pt;
+          font-weight: 300;
+          font-style: italic;
+          color: black;
+          font-family: Calibri, sans-serif;
+          font-weight: light;
+          text-decoration: none;
+          font-size: 18pt;
+          padding: 25px 0px;
+        "
+      >
+        ${req.body.message}
+      </p>
+      <p style="text-indent: 0pt; text-align: left"><br /></p>
+      <p
+        class="s1"
+        style="
+          padding: 20px 70px;
+          width: 80%;
+          text-indent: 0pt;
+          text-align: left;
+          color: #462c1f;
+          font-family: Calibri, sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          text-decoration: none;
+          font-size: 18pt;
+        "
+      >
+        Información del usuario:
+      </p>
+      <ul id="l1" style="padding: 0pt 0px; width: 100%; text-align: left;">
+        <li data-list-text="•" style="padding: 0px 70px; display: block">
+          <p
+            class="s2"
+            style="
+              color: black;
+              font-family: Calibri, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 14pt;
+            "
+          >
+            •Nombre: ${req.body.tto} ${req.body.name} ${req.body.lastName}
+          </p>
+        </li>
+        <li data-list-text="•" style="padding: 0px 70px; display: block">
+          <p
+            class="s2"
+            style="
+              color: black;
+              font-family: Calibri, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 14pt;
+            "
+          >
+            •Email: ${req.body.email}
+          </p>
+        </li>
+
+        <li data-list-text="•" style="padding: 0px 70px; display: block">
+          <p
+            class="s2"
+            style="
+              color: black;
+              font-family: Calibri, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 14pt;
+            "
+          >
+            •Telefono: ${req.body.phone}
+          </p>
+        </li>
+        <li data-list-text="•" style="padding: 0px 70px; display: block">
+          <p
+            class="s2"
+            style="
+              color: black;
+              font-family: Calibri, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 14pt;
+            "
+          >
+            •País: ${req.body.country}
+          </p>
+        </li>
+        <li data-list-text="•" style="padding: 0px 70px; display: block">
+          <p
+            class="s2"
+            style="
+              color: black;
+              font-family: Calibri, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 14pt;
+            "
+          >
+            •Region: ${req.body.region}
+          </p>
+        </li>
+      </ul>
+      <p style="text-indent: 0pt; text-align: left"><br /></p>
+      <p style="padding-left: 145pt; text-indent: 0pt; text-align: left">
+        <span
+          ><table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <p style="text-align: center; width: 98vw;">
+                  <img
+                    width="120"
+                    height="60"
+                    src="http://www.mimijoyeria.com/storage/mail-assets/rolex-footer.png"
+                  />
+                </p>
+              </td>
+            </tr></table
+        ></span>
+      </p>
+      <p style="padding-top: 10pt; text-indent: 0pt; text-align: left">
+        <br />
+      </p>
+      <p
+        style="
+          padding: 0px 60px;
+          text-indent: 0pt;
+          text-align: center;
+          color: black;
+          font-family: Calibri, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: none;
+          font-size: 12pt;
+          margin: 0pt;
+        "
+      >
+        Este es un mensaje auto generado, si deseas responder, puedes
+        utilizar los datos suministrados en dicho correo, la información
+        suministrada en este correo, es estrictamente confidencial.
+      </p>
+    </div>
+  </div> 
+</div>`
+
+  const mailOptions = {
+    from: 'plataformapagos@mimijoyeria.com',
+    to: 'mzorrilla.sidigital@gmail.com',
+    subject: `Mensaje de parte de: ${req.body.tto}. ${req.body.name} ${req.body.lastName}`,
+    html: message
+  }
+
+  transport.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      res.status(500).json({
+
+        message:
+          error.message || "Some error occurred sending de email."
+
+      });
+    } else {
+      res.status(200).send('Message sended successfully: ' + info)
+
+    }
+  })
+
+};
 
 exports.payMail = async (req, res) => {
   const billData = await Store.Bill.findAll({

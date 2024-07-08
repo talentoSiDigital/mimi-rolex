@@ -2,7 +2,7 @@ const db = require("../models");
 const rolex = db.rolex;
 const Op = db.Sequelize.Op;
 const sequelize = db.sequelize;
-const storagePath = process.env.IMGPATH
+const storagePath = 'https://www.mimijoyeria.com/storage'
 
 
 function helper() {
@@ -32,7 +32,6 @@ const mainVideos = {
 
 }
 
-
 // Show display of all collections
 exports.showDisplay = (req, res) => {
 
@@ -45,7 +44,7 @@ exports.showDisplay = (req, res) => {
         data[index].dataValues.file = `${storagePath}/rolex-relojes/${data[index].dataValues.watch}.avif`
         // console.log(data[index].dataValues.file)
       }
-     
+     console.log(storagePath)
 
       res.send(data)
 
@@ -171,6 +170,7 @@ exports.getAllRolex = (req, res) => {
 exports.getRolexDetails = (req, res) => {
   // Set response object
   let rolexResponse = {}
+
 
   // REFERENCE FOR ADJUST VIDEOS
   const adjustVideos = {
@@ -327,7 +327,7 @@ exports.getRolexDetails = (req, res) => {
     .then(() => {
       rolex.RolexCollections.findAll({
         where: {
-          id: rolexResponse.getAll.RolexCollectionId
+          id: rolexResponse.getAll.rolexCollectionId
         }
       })
         .then(data => {
@@ -374,3 +374,160 @@ exports.getRolexDetails = (req, res) => {
     })
 
 }
+
+// ROLEX NEW CONTROLLERS
+
+// Show display of all collections
+exports.showDisplayV2 = (req, res) => {
+
+  rolex.RolexCollections.findAll({
+    attributes: ['nombre', 'watch', 'idName']
+  })
+    .then(data => {
+      for (let index = 0; index < data.length; index++) {
+        // Adding images to response
+        data[index].dataValues.file = `${storagePath}/rolex-relojes-new-new/${data[index].dataValues.watch}.avif`
+        // console.log(data[index].dataValues.file)
+      }
+
+
+      res.send(data)
+
+    })
+    .catch(err => {
+
+      res.status(500).json({
+
+        message:
+          err.message || "Some error occurred while retrieving tutorials."
+
+      });
+    });
+};
+
+
+// Show by especific collection
+exports.getCollectionDetailsV2 = (req, res) => {
+  
+   
+console.log(req.params.id);
+ 
+
+
+  rolex.RolexCollections.findAll({
+    where: {
+      idName: req.params.id
+    }
+  })
+    .then((data) => {
+      rolex.RolexGetAllV2.findAll({
+        where: {
+          RolexCollectionId: data[0].dataValues.id
+
+        }
+      })
+        .then((data) => {
+          // Adding images to response
+          for (let index = 0; index < data.length; index++) {
+            data[index].dataValues.img = `${storagePath}/rolex-relojes-new/${data[index].dataValues.modelo}-showcase.webp`
+
+          }
+
+          res.send(data)
+
+        })
+    })
+
+
+}
+
+
+
+// Get all individual watches
+exports.getAllRolexV2 = (req, res) => {
+
+  rolex.RolexGetAllV2.findAll({
+    order: [
+      ['claseDeEsfera', 'ASC']
+    ]
+  })
+    .then((data) => {
+      for (let index = 0; index < data.length; index++) {
+        // Adding images to response
+        data[index].dataValues.img = `${storagePath}/rolex-relojes-new/${data[index].dataValues.modelo}.avif`
+      }
+      res.send(data)
+    })
+    .catch((err) => {
+    })
+}
+
+
+exports.getRolexDetailsV2 = async (req, res) => {
+
+  let rolexResponseObject = {}
+
+
+  const findId = await rolex.RolexGetAllV2.findAll({
+    where: {
+      modelo: req.params.id
+    }
+  })
+    console.log("Breakpoint 1")
+  let parsedName = findId[0]
+  parsedName.showcaseIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}-showcase.webp`
+  parsedName.boxIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box.webp`
+  parsedName.boxIMGMobile = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box-mobile.webp`
+
+
+  rolexResponseObject.getAll = parsedName
+  
+  const rolexId = parsedName.id
+    const collectionId =  parsedName.rolexCollectionId
+
+  let findDetails = await rolex.RolexDetailsV2.findByPk(rolexId)
+console.log("Breakpoint 2")
+  let detailsArray = []
+  detailsArray.push(findDetails)
+  detailsArray.push({})
+
+  detailsArray[1].img = `${storagePath}/rolex-relojes-new/${rolexResponseObject.getAll.modelo}_cor-specs.webp`
+  detailsArray[1].imgMobile = `${storagePath}/rolex-relojes-new/${rolexResponseObject.getAll.modelo}_cor-specs-mobile.webp`
+  detailsArray[0].precio = detailsArray[0].precio.toString()
+
+  rolexResponseObject.details = detailsArray
+
+
+  let getHeaders = await rolex.RolexHeadersV2.findByPk(rolexId)
+  console.log("Breakpoint 3")
+
+  let imgArray = []
+  imgArray = []
+  imgArray[0] = {}
+  imgArray[1] = {}
+  imgArray[2] = {}
+
+  imgArray[0].imgDesktop = `${storagePath}/rolex-relojes-new/${getHeaders.imagen1}.webp`
+  imgArray[0].imgMobile = `${storagePath}/rolex-relojes-new/${getHeaders.imagen1}-mobile.webp`
+
+  imgArray[1].imgDesktop = `${storagePath}/rolex-relojes-new/${getHeaders.imagen2}.webp`
+  imgArray[1].imgMobile = `${storagePath}/rolex-relojes-new/${getHeaders.imagen2}-mobile.webp`
+
+  imgArray[2].imgDesktop = `${storagePath}/rolex-relojes-new/${getHeaders.imagen3}.webp`
+  imgArray[2].imgMobile = `${storagePath}/rolex-relojes-new/${getHeaders.imagen3}-mobile.webp`
+
+  getHeaders.img = imgArray
+
+  rolexResponseObject.headers = getHeaders
+    
+      console.log(collectionId)
+  const getCollection = await rolex.RolexCollections.findByPk(collectionId)
+      console.log("Breakpoint 5")
+
+
+
+  rolexResponseObject.collection = getCollection
+  res.send(rolexResponseObject)
+
+}
+

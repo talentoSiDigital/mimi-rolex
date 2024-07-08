@@ -1,5 +1,7 @@
 const db = require("../models");
 const config = require("../config/auth.config");
+const configCybersource = require('../config/cybersource.config');
+const cybersourceRestApi = require('cybersource-rest-client');
 
 const User = db.user.User;
 const Role = db.user.Role;
@@ -10,11 +12,12 @@ const Store = db.store;
 const jwt = require("jsonwebtoken")
 const bcrypt = require('bcrypt');
 
+
 // Save User to Database
 exports.signup = (req, res) => {
     // CREATE USER WITH REQUEST PARAMS
 
-    
+
     User.create({
         name: req.body.name,
         lastName: req.body.lastname,
@@ -22,12 +25,15 @@ exports.signup = (req, res) => {
         age: req.body.age,
         phone: req.body.phone,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 8)
+        password: bcrypt.hashSync(req.body.password, 8),
+ 
     })
         .then((user) => {
             user.setRoles([1])
-            Store.Cart.create( { ownerId: user.dataValues.id } )
-        }) 
+            Store.Cart.create({ ownerId: user.dataValues.id })
+
+
+        })
         .then(() => { return res.send({ message: "El usuario ha sido registrado exitosamente" }) })
         .catch(err => {
             console.log("Error: 1")
@@ -76,6 +82,7 @@ exports.signin = (req, res) => {
                 phone: user.phone,
                 roles: authorities,
                 accessToken: token,
+                referenceCode: user.referenceCode
             });
         });
 

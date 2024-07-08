@@ -6,44 +6,24 @@
     "auditLog": "log\\.908b0ba45c6af1b0d67ab0e4918966dae7ee1ee9-audit.json",
     "files": [
         {
-            "date": 1715711788859,
-            "name": "log\\cybs-2024-05-14.log",
-            "hash": "826413a4085e5c312f7597ffd11f854b841c23fb4b299b26256415a3ff491373"
+            "date": 1718803023264,
+            "name": "log\\cybs-2024-06-19.log",
+            "hash": "041839803b2650799b6627d2bcf2719c0746249de5866cd0bc413a1d91c60a23"
         },
         {
-            "date": 1715871199827,
-            "name": "log\\cybs-2024-05-16.log",
-            "hash": "d6c506c0fdef2eadd6ce3f85b066f92a152226e7b943973eda54db6bda115c06"
+            "date": 1718889668087,
+            "name": "log\\cybs-2024-06-20.log",
+            "hash": "e628590d1b056ecc83d6dc10cc5cbcfec51f2993f58cadc323e5869ddbe0b0a0"
         },
         {
-            "date": 1715955688224,
-            "name": "log\\cybs-2024-05-17.log",
-            "hash": "a374c518df2c674c577e9b04a445377f256a4be9809f4bd450dc16914361f13b"
+            "date": 1719327640861,
+            "name": "log\\cybs-2024-06-25.log",
+            "hash": "fd3e51ce06331dd5c6ecb028a9a93f13fbe08029bcd0fa9d4f9981a1f26d2d50"
         },
         {
-            "date": 1716210356758,
-            "name": "log\\cybs-2024-05-20.log",
-            "hash": "ba31e5138ee8430c06e8b4b3f13c5be64362eb55a566824d7396916c8214f862"
-        },
-        {
-            "date": 1716295585323,
-            "name": "log\\cybs-2024-05-21.log",
-            "hash": "fb09a0e4e5da6032221d9c5b00ee30c5e40494e705c473786b9b46d31364d58f"
-        },
-        {
-            "date": 1716398741968,
-            "name": "log\\cybs-2024-05-22.log",
-            "hash": "3fba3e88e5a6618dc2e59575b2ebde137fc25bfef4676ccb07caf9446e5eec2b"
-        },
-        {
-            "date": 1716470901657,
-            "name": "log\\cybs-2024-05-23.log",
-            "hash": "256b6f7e769049b4b35f011242a27d951308fe31e8a0c6e88f43bed176239758"
-        },
-        {
-            "date": 1716554950116,
-            "name": "log\\cybs-2024-05-24.log",
-            "hash": "c1002b7bb04433620ae55e5c52fee448a073c2f1ff99e6a57110bfab502976ac"
+            "date": 1719583813934,
+            "name": "log\\cybs-2024-06-28.log",
+            "hash": "12eb95dc2d7be15f589a7d3a31545e9873a81b1c75d6a3965289ba36ed7aef24"
         }
     ],
     "hashType": "sha256"

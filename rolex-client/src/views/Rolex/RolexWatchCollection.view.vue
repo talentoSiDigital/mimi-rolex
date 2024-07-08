@@ -1,190 +1,213 @@
 <script setup>
-import { computed, ref, watch } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
-import { useAsyncState } from '@vueuse/core'
+import { routerKey, RouterLink, useRoute } from "vue-router";
+import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
+import SectionNavigationCard from "../../components/cards/SectionNavigationCard.vue";
+import RolexHeader from "../../components/RolexHeader.vue";
+import { useAsyncState } from "@vueuse/core";
+import WatchCard from "../../components/cards/WatchCard.vue";
 
-import RolexDataServices from '../../services/rolexDataService'
+import PageBanner from "../../components/banners-components/PageBanner.vue";
+import collectionsCopy from "../../collectionsCopy.json";
+import RolexDataServices from "../../services/rolexDataService";
+import { ref, watch } from "vue";
+import { computed } from "vue";
 
-import router from '../../router'
-
-
-import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-import SearchBar from '../../components/SearchBar.vue'
-import ServerError from '../../components/cards/ServerError.vue'
-
-
-const route = useRoute()
-const currentRoute = route.params.id
+const route = useRoute();
+const currentRoute = route.params.id;
+const currentData = collectionsCopy[currentRoute];
 console.log(currentRoute)
 
-const currentPage = ref(1)
-const totalPages = ref(1)
+const currentPage = ref(1);
+const totalPages = ref(1);
+const itemsPerPage = 6;
 
-const searchParams = ref({
-    "estilo": "",
-    "size": "",
-    "material": "",
-    "esfera": ""
-})
-const items = ref([])
+const { state, isLoading, isReady, execute } = useAsyncState(
+  RolexDataServices.getByCollection(currentRoute)
+    .then((d) => {
+      totalPages.value = Math.ceil(d.data.length / 6);
 
+      return d.data;
+    })
+    .catch((e) => {
+      console.log("error: ", e.message);
+    })
+);
+const itemsToShow = computed(() => {
+  return currentPage.value * itemsPerPage;
+});
 
-const itemsRange = {
-    0: 0,
-    1: 18,
-    2: 36,
-    3: 54,
-    4: 72
-}
-
-let { isLoading, state, isReady, execute } = useAsyncState(
-    RolexDataServices.getByCollection(currentRoute)
-        .then((d) => {
-            totalPages.value = Math.ceil(d.data.watches.length / 18)
-            const checkIfMobile = computed(() => {
-                if (state.collection.nombre == "ORO" || state.collection.nombre == "HOMBRES" || state.collection.nombre == "MUJERES") {
-                    return true
-                }
-                return false
-
-
-            })
-            return d.data
-        })
-
-)
-
-
-function changePage(page) {
-    currentPage.value = currentPage.value + page
-    router.push({ path: `/coleccion/${route.params.id}`, hash: '#rolex-container' })
-
-}
-
-watch(searchParams.value, () => {
-    for (const item of state.value) {
-        for (const key in searchParams.value) {
-            if (searchParams.value[key] !== "") {
-                if (searchParams.value[key] === item[key]) {
-                    if (!items.value.includes(item)) {
-                        items.value.push(item)
-                    }
-
-                } else {
-                    if (items.value.includes(item)) {
-                        items.value.splice(items.value.indexOf(item), 1)
-
-                    }
-                }
-            }
-        }
-
+function filterItems() {
+  let items = [];
+  for (let index = 0; index < state.value.length; index++) {
+    if (index < itemsToShow.value) {
+      items.push(state.value[index]);
     }
+  }
+  return items;
+}
 
-
-
-
-})
-
-
+function loadMore() {
+  currentPage.value = currentPage.value++;
+  if (currentPage.value < totalPages.value) {
+  }
+}
 </script>
 
 <template>
-    <div id="new-models">
-        <RolexTemplate>
-            <template #content>
-                <div v-if="isReady" class="mb-44">
-                    <div v-if="state">
-                        <img class="w-full hidden md:block " :src="state.collection[0].fileLandscape"
-                            :alt="state.collection[0].idName">
-                        <img class="w-full block md:hidden" :src="state.collection[0].fileMobile"
-                            :alt="state.collection[0].idName">
+  <RolexTemplate>
+    <template #content>
+      <PageBanner :type="`collections-${currentRoute}`" />
+      <RolexHeader color="bg-rolex-brown-light-2">
+        <template #sub>
+          {{ currentData.headerSection.sub }}
+        </template>
+        <template #title>
+          <span v-html="currentData.headerSection.title"></span>
+        </template>
+        <template #text>
+          <span v-html="currentData.headerSection.text"></span>
+        </template>
+      </RolexHeader>
 
+      <div
+        class="video-frame flex bg-rolex-brown-light-2 justify-center pb-[10vh]"
+      >
+        <div class="w-11/12 aspect-w-16 aspect-h-9">
+          <iframe
+            :src="currentData.mainSection.videoEmbed"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
 
+      <section :class="currentData.mainSection.backgroundColor">
+        <header
+          class="flex flex-col gap-8 justify-around items-center text-rolex-brown h-fit pb-[10vh]"
+        >
+          <h1
+            v-if="currentData.mainSection.title"
+            :class="
+              currentData.mainSection.type
+                ? 'font-georgia text-black '
+                : 'font-helvetica font-bold'
+            "
+            class="text-3xl md:text-5xl w-10/12 md:w-1/2"
+          >
+            <span v-html="currentData.mainSection.title"></span>
+          </h1>
 
+          <p
+            v-if="currentData.mainSection.text"
+            :class="
+              currentData.mainSection.type ? ' text-black' : 'text-rolex-brown'
+            "
+            class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left"
+          >
+            <span v-html="currentData.mainSection.text"></span>
+          </p>
+        </header>
+      </section>
 
-                        <header class="flex flex-col justify-center items-center text-neutral-700 h-fit mt-8 mb-6">
-                            <p>
-                                {{ state.collection[0].subHeader }}
+      <main>
+        <section v-for="(item, key, index) in currentData.sections" :key="item">
+          <div
+            v-if="item.hasVideo"
+            class="video-frame flex justify-center py-[10vh]"
+            :class="item.backgroundColor"
+          >
+            <div class="w-11/12 aspect-w-16 aspect-h-9">
+              <iframe
+                :src="item.videoEmbed"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
 
-                            </p>
-                            <h1 class="text-4xl text-center py-8 ">
-                                ROLEX {{ state.collection[0].nombre }}
+          <div
+            v-else
+            class="flex justify-center"
+            :class="[item.backgroundColor, item.imgSize == 'w-full'? 'pb-[10vh]':'py-[10vh]' ]"
+          >
+            <img
+              :src="`/assets/routes-assets/collections/${currentRoute}/collections-${currentRoute}-${
+                index + 1
+              }.webp`"
+              :alt="`collection-${currentRoute}-${index + 1}`"
+              class="hidden md:block"
+              :class="item.imgSize"
+            />
+            <img
+              :src="`/assets/routes-assets/collections/${currentRoute}/collections-${currentRoute}-${
+                index + 1
+              }-mobile.webp`"
+              :alt="`collection-${currentRoute}-${index + 1}`"
+              class="md:hidden block"
+              :class="item.imgSize"
+            />
+          </div>
 
-                            </h1>
-                            <p class="w-10/12 md:w-1/2 text-justify md:text-center font-normal">
-                                {{ state.collection[0].text }}
+          <section :class="item.backgroundColor">
+            <header
+              v-if="item.title || item.text"
+              class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit pb-[10vh]"
+            >
+              <h1
+                v-if="item.title"
+                class="text-3xl md:text-5xl w-10/12 md:w-1/2"
+              >
+                <span v-html="item.title"></span>
+              </h1>
 
-                            </p>
-                        </header>
-
-
-                        <div class="w-full h-[50vh] md:h-screen flex justify-center " v-if="state.collection[0].hasVideo">
-
-                            <div class="aspect-w-16 w-3/4  h-full md:h-full">
-                                <iframe :src="state.collection[0].video" title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-
-                        <main class="flex flex-col md:flex-row mt-8">
-                            <SearchBar v-model="searchParams" :args="state.collection[0].idName" />
-
-
-                            <section id="watch" class="flex flex-col  items-center w-full">
-                                <div id="rolex-container"
-                                    class="grid grid-cols-1 place-items-center gap-1 md:grid-cols-3 w-10/12">
-                                    <div v-for="(item, index) in items.length > 0 ? items : state.watches" id="card"
-                                        class="w-full border border-white hover:border-rolex-green" :key="index">
-
-                                        <RouterLink :to="{ name: 'relojes-rolex', params: { id: item.modelo } }"
-                                            v-if="itemsRange[currentPage] > index && index >= itemsRange[currentPage - 1]">
-
-                                            <img :src="item.img" :alt="item.modelo">
-                                            <h2 class="uppercase text-center ">Rolex</h2>
-                                            <h2 class="uppercase text-center font-bold">{{ item.nombre }}</h2>
-                                            <h2 class="text-center text-xs font-extralight">{{ item.cajaDelModelo }}</h2>
-
-                                        </RouterLink>
-
-                                    </div>
-                                </div>
-                                <div v-if="totalPages > 1" id="pagination" class="flex md:w-1/6 justify-between mt-4">
-                                    <button v-if="currentPage != 1" @click="changePage(-1)">
-                                        <font-awesome-icon :icon="['fas', 'chevron-left']"
-                                            class="text-rolex-green hover:text-black" />
-                                    </button>
-
-                                    <span v-else class="block w-4"></span>
-
-                                    <h2>Página {{ currentPage }}</h2>
-
-                                    <button v-if="currentPage != totalPages" @click="changePage(1)">
-                                        <font-awesome-icon :icon="['fas', 'chevron-right']"
-                                            class="text-rolex-green hover:text-black" />
-                                    </button>
-                                    <span v-else class="block w-4"></span>
-                                </div>
-
-
-
-                            </section>
-
-                        </main>
-                    </div>
-
-                    <ServerError v-else/>
-
+              <p
+                v-if="item.text"
+                class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left"
+              >
+                <span v-html="item.text"></span>
+              </p>
+            </header>
+          </section>
+        </section>
+        <section class="bg-rolex-brown-light-2 text-rolex-brown">
+          <div class="w-full flex justify-center">
+            <h1
+              class="text-3xl md:text-5xl font-helvetica font-bold text-center py-[10vh] w-10/12"
+            >
+              Rolex {{ currentData.name }} <br />
+              Una selección de modelos.
+            </h1>
+          </div>
+          <div class="flex justify-center">
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 place-items-center w-11/12  md:w-8/12 gap-4"
+            >
+                <div
+                  v-for="(item, key) in filterItems()"
+                  :key="key"
+                  class=" border h-[500px]"
+                  :class="key < itemsToShow ? 'h-[500px]' : 'h-0'"
+                >
+                  <WatchCard :item="item" :collection="currentRoute" />
                 </div>
-
-
-
-
-            </template>
-        </RolexTemplate>
-
-    </div>
+                
+            </div>
+          </div>
+          <div class="w-full flex justify-center py-[10vh]">
+            <button
+              v-if="currentPage < totalPages"
+              @click="currentPage++"
+              class="bg-rolex-green text-white border w-fit border-rolex-green px-4 py-2 font-helvetica font-bold rounded-3xl hover:bg-white hover:text-rolex-green duration-200"
+            >
+              Ver más
+            </button>
+          </div>
+        </section>
+      </main>
+    </template>
+  </RolexTemplate>
 </template>
-

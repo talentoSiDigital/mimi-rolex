@@ -6,7 +6,8 @@ export default defineConfig({
   
 
   build: {
-    assetsInlineLimit: 1024 // 1kb
+    assetsInlineLimit: 1024, // 1kb
+    outDir: '../server/app/views',
   },
   plugins: [vue({
     script: {

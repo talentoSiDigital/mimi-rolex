@@ -8,15 +8,7 @@ class MailSender {
   }
 
   rolexMail(data) {
-    // let formData = new FormData();
-
-    // formData.append("tto", data.tto)
-    // formData.append("nombre", data.nombre)
-    // formData.append("apellido", data.apellido)
-    // formData.append("email", data.email)
-    // formData.append("mensaje", data.mensaje)
-    // formData.append("direccion", data.direccion)
-    // formData.append("phone", data.phone) 
+  
     const dataToSend = {
       "tto": data.tto,
       "nombre": data.nombre,
@@ -32,6 +24,10 @@ class MailSender {
 
 
     return http.post("/email/rolex", dataToSend)
+  }
+  rolexNewMail(data){
+    
+    return http.post("/email/rolex-new/", data)
   }
 
 }

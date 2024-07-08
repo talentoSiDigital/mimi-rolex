@@ -21,7 +21,7 @@ const user = ref({
     "lastname": "",
     "age": 0,
     "phone": "",
-    "email": "",
+
 })
 
 const { isLoading, state, isReady, execute } = useAsyncState(
@@ -30,7 +30,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
             user.value.name= d.data[0].name
             user.value.lastname= d.data[0].lastName
             user.value.age= d.data[0].age
-            user.value.email= d.data[0].email
+      
             user.value.id = d.data[0].id
 
 
@@ -75,11 +75,7 @@ const schema = yup.object().shape({
         .required("Número obligatorio")
         .max(99999999999, "El número es muy largo!")
         .min(999, "El número es muy corto!"),
-    email: yup
-        .string()
-        .required("Email es obligatorio")
-        .email("Email invalido!")
-        .max(50, "Debe contener un maximo de 50 caracteres"),
+
    
 });
 
@@ -164,14 +160,7 @@ function handleRegister() {
                                 </div>
                             </div>
 
-                            <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
-                                <Field id="email" type="email" name="email"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                                    placeholder="nombre@example.com" v-model="user.email" />
-                                <ErrorMessage name="email" class="text-red-700" />
-                            </div>
-                      
+                          
 
                             <button
                                 class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">Actualizar</button>

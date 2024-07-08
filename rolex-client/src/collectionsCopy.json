@@ -1,0 +1,740 @@
+{
+    "1908": {
+        "name":"1908",
+        "headerSection":{
+            "title":"Rolex Perpetual 1908 <br> Clasicismo de vanguardia",
+            "text":"<strong>Elegante, clásico e incuestionablemente contemporáneo, el 1908 es una prolongación de la intrepidez original de Rolex.</strong> Heredero del patrimonio estético de la marca y de sus innumerables innovaciones en relojería, el reloj marca un nuevo hito en la búsqueda de la excelencia de la marca. Este buen ejemplo de la proeza relojera de Rolex, con la certificación de Cronómetro Superlativo, lleva el clasicismo al futuro."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/tG63s30B_z8?si=LLEXLLjnIvMloTby",
+            "title":false,
+            "text":"Desde la creación de la marca en 1908, Rolex ha mantenido la profunda convicción de su fundador, Hans Wilsdorf, para quien el futuro del reloj de pulsera era indisociable del rendimiento superlativo. El 1908 combina todos los atributos esenciales de un reloj de pulsera de cuerda automática según él: precisión cronométrica, hermeticidad, autonomía, confort y durabilidad.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Estilo clásico, perpetuamente reinventado",
+                "text":"Mientras que las innovaciones revolucionarias de Hans Wilsdorf se referían a las características técnicas del reloj de pulsera, también fueron fruto de una visión estética muy fuerte. La silueta de la caja de oro amarillo o blanco de 18 quilates, así como el diseño de la esfera del 1908 reinventan el espíritu clásico, pero muy moderno, de los relojes Oyster Perpetual originales. Como rasgo estilístico, su bisel sutilmente abombado y estriado atestigua la búsqueda de la delicadeza en todas sus formas.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section2":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12 ",
+                "title":"Un diseño elegante que vincula el pasado con el presente",
+                "text":"Con los números arábigos 3, 9 y 12 y su segundero pequeño a las 6 h, el reloj 1908 reformula el estilo de un Oyster Perpetual de 1931 y le confiere absoluta modernidad. La esfera es un ejemplo de elegancia y sofisticación: índices facetados y números en oro de 18 quilates sobre una esfera blanco intenso o negro intenso. Protegida por un cristal de zafiro abombado, presenta una escala de los minutos «ferrocarril» sobre el contorno de la esfera. El 1908 está equipado con unas agujas de estilos distintivos: el minutero tiene forma de espada de dos filos, mientras que una aguja con un círculo perforado marca las horas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Un fondo transparente para una revelación emocionante",
+                "text":"Al ofrecer un reloj que revela su movimiento a través de un fondo transparente, Rolex continúa innovando mientras mantiene su tradición relojera. El calibre 7140 cuenta con una masa oscilante recortada de oro de 18 quilates con tres brazos, grabada con las palabras «Chronometer Perpetual», y con un rodamiento de bolas optimizado. El movimiento posee acabados extraordinarios, incluida la exclusiva decoración Rolex Côtes de Genève: una célebre decoración relojera tradicional, reinterpretada con una ranura pulida entre cada franja. La ventana, hecha de de zafiro prácticamente imposible de rayar, demuestra que, para Rolex, la estética del movimiento es tan importante como su rendimiento.",
+                "backgroundColor":"bg-rolex-brown-light-2"   
+            },
+            "section5":{
+                "hasVideo":true,
+                "videoEmbed":"https://www.youtube.com/embed/BpmiJOA2hEw?si=iblI2_AAwmIM6ujP",
+                "title":"El calibre 7140: rendimiento y elegancia",
+                "text":"Para impulsar el 1908, los ingenieros de relojería de Rolex han desarrollado el calibre 7140, un movimiento de cuerda automática totalmente nuevo que visualiza la hora mediante dos agujas en el centro y un segundero pequeño en la posición de las 6 h. Se han presentado cinco patentes para este movimiento, que ha sido completamente desarrollado y manufacturado por Rolex. Su diseño vanguardista incorpora algunas innovaciones principales de la Manufactura para garantizar un rendimiento excepcional, incluyendo la espiral Syloxi de silicio, el escape Chronergy en una aleación de níquel fósforo, ambos resistentes a los campos magnéticos de alta intensidad, y los amortiguadores de golpes Paraflex que protegen al oscilador y a la rueda de escape de cualquier golpe que reciba el reloj.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            }
+
+        }
+      
+       
+       
+    },
+    "air-king": {
+        "name":"Air-King",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Air-King",
+            "text":"<strong>El Oyster Perpetual Air King celebra la herencia aeronáutica del Oyster original. Rinde homenaje a aquellos para los que el cielo era una nueva frontera de aventuras, exploración y logros innovadores, un trampolín para nuevos ideales.</strong> El Air-King atestigua la relación privilegiada entre Rolex y la aviación durante su edad de oro, en la década de 1930. Rinde homenaje a los pilotos de la época y al papel del Oyster en la gesta aérea."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/GAK4dWw0YSw?si=kpOSlQJ_L1UmMdP-",
+            "title":false,
+            "text":"La década de 1930 conoció una fulgurante evolución técnica de los aviones, lo que permitió inaugurar los vuelos de largo recorrido. Varios pilotos establecieron récords llevando un Oyster en la muñeca. Otros utilizaban un reloj Rolex como cronómetro de a bordo, siguiendo el ejemplo de Owen Cathcart Jones y Ken Waller que, en 1934, lograron completar un vuelo de ida y vuelta entre Londres (Gran Bretaña) y Melbourne (Australia) en un tiempo récord, a bordo de un bimotor De Havilland Comet.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Estética única",
+                "text":"El Air-King actual se distingue por su esfera negra que combina, para una lectura óptima de los tiempos de navegación, unos números de las horas —3, 6 y 9— de gran tamaño con una escala de los minutos especialmente visible. La simbólica corona de Rolex se muestra en amarillo en la esfera, mientras que el segundero y el nombre «Rolex» son verdes, en alusión al color emblemático de Rolex. Desde la presentación del reloj en 1958, la inscripción «Air King» está presente en caracteres que hacen que el modelo resulte fácilmente reconocible.<br><br>Desde 2022, su caja de 40 mm incorpora protectores de la corona y los flancos de la carrura son rectos, al igual que en la mayoría de los modelos de la categoría Profesional. También se ha reformulado la visualización del reloj, para un resultado perfectamente armonioso, con la introducción de un «0» delante del número 5 en la posición de la 1 h en la escala de los minutos. En lo sucesivo, cada intervalo de cinco minutos se marca mediante dos números. Los números 3, 6 y 9 del Air King ahora son también visibles en la oscuridad gracias a la visualización Chromalight.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section2":{
+                "imgSize":"w-full",
+                "title":"Fiabilidad y prestaciones",
+                "text":"La caja Oyster del Air King, ejemplo de robustez y fiabilidad, garantiza una hermeticidad de hasta 100 metros. Su carrura se trabaja a partir de un bloque macizo de acero Oystersteel, una aleación particularmente resistente a la corrosión. <br><br>El Air King está provisto de un brazalete Oyster de tres elementos en acero Oystersteel. Este brazalete está equipado con un cierre de seguridad Oysterlock, diseñado por Rolex y patentado, que previene cualquier apertura involuntaria. Dispone también del cómodo sistema de extensión rápida Easylink que permite ajustar fácilmente su longitud en torno a unos 5 mm.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12",
+                "title":false,
+                "text": "El Air King está equipado con el calibre 3230, un movimiento mecánico de cuerda automática completamente desarrollado y manufacturado por Rolex. Presenta un elevado rendimiento en materia de precisión, autonomía, resistencia a los golpes, comodidad de uso y fiabilidad. Este movimiento está equipado con la espiral Parachrom azul y cuentan también con el escape Chronergy patentado. Su reserva de marcha es de aproximadamente 70 horas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Certificación de Cronómetro Superlativo",
+                "text":"Como todos los relojes Rolex, el Air King cuenta con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-1"   
+            }
+        } 
+    },
+    "cosmograph-daytona": {
+        "name":"Cosmograph Daytona",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Cosmograph Daytona <br>  El triunfo de la resistencia",
+            "text":"<strong>Presentado en 1963, el Oyster Perpetual Cosmograph Daytona ha trascendido su estatus desde hace tiempo en el mundo de la relojería para convertirse en un icono. </strong> Su nombre, indisociable del famoso circuito de Daytona Beach en Florida, simboliza los lazos que unen a Rolex con el mundo de las carreras automovilísticas, especialmente con las grandes competiciones de velocidad. Su esfera, reconocible entre todas las demás por sus círculos en contraste, ha contribuido a hacer de él una leyenda. El Cosmograph Daytona, que con el paso del tiempo se perfecciona y se supera a sí mismo sin cesar, resulta un aliado tan fiable como preciso para quienes quieren vivir su destino según sus propias reglas."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/3sDWQXaZpAM?si=zApMdqTu5av0e91l",
+            "title":"El Cosmograph Daytona es emblemático de la experiencia de Rolex y destaca por su precisión cronométrica y su inquebrantable fiabilidad.",
+            "text":false,
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Un diseño legendario",
+                "text":"Bisel, escala de los minutos y tres contadores: esta iconografía característica de cinco círculos es emblemática del Cosmograph Daytona. Con el tiempo, el diseño de las esferas, el juego de colores y la arquitectura de las cajas se han retrabajado a menudo para reafirmar la elegancia del modelo.<br><br>Elemento esencial de la identidad del Cosmograph Daytona, la escala taquimétrica se encuentra en el bisel del reloj. Permite medir una velocidad media de hasta 400 kilómetros o millas por hora mediante un segundero central.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Calibre 4131: el movimiento cronógrafo más superlativo",
+                "text":"El Cosmograph Daytona está equipado con el calibre 4131. Este nuevo movimiento cronógrafo, íntegramente diseñado y manufacturado por Rolex, es el heredero del calibre 4130. Presentado en 2023, incorpora algunas de las principales innovaciones aportadas por la marca a sus movimientos: escape Chronergy, amortiguadores de golpes Paraflex y rodamiento de bolas optimizado.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-full",
+                "title":false,
+                "text": "Este calibre presenta además una estética inédita en Rolex: una masa oscilante calada y, sobre los puentes, un motivo decorativo exclusivo Côtes de Genève Rolex, reinterpretación de una decoración emblemática de la relojería suiza tradicional. <br><br> En la versión de platino 950, reconocible por su esfera azul glaciar, la masa oscilante es de oro amarillo de 18 quilates y queda a la vista del usuario gracias a un fondo transparente de zafiro.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Brazalete Oysterflex: confort total",
+                "text":"Además del brazalete Oyster, las versiones en oro de 18 quilates del Cosmograph Daytona con un bisel Cerachrom también están disponibles con un brazalete Oysterflex. Desarrollado por Rolex y patentado, combina de un modo único la robustez de un brazalete metálico con la comodidad de una correa de elastómero. Está equipado con un cierre desplegable Oysterlock que evita cualquier apertura accidental. Se puede ajustar su longitud mediante el ingenioso sistema de extensión Rolex Glidelock.",
+                "backgroundColor":"bg-rolex-brown-light-2"   
+            },
+            "section5":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"   
+            },
+            "section6":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Alejándose de la tradición",
+                "text":"Desde su lanzamiento, el Cosmograph Daytona ha sido el reloj de los amantes del automovilismo. Al igual que el experimentado piloto de carreras y pionero en el ámbito del emprendimiento social, Paul Newman; sir Jackie Stewart, figura emblemática de la Formula 1® y uno de los pilotos más aclamados de los últimos 50 años; Tom Kristensen, el piloto danés que ganó el récord de nueve carreras 24 Horas de Le Mans; y Jamie Chadwick, la joven piloto de carreras británica que se ha convertido en la nueva referencia femenina de los monoplazas, muchos han adoptado el reloj en su vida cotidiana más allá del circuito de carreras.",
+                "backgroundColor":"bg-rolex-brown-light-1"   
+            }
+        }
+    },
+    "datejust":  {
+        "name":"Datejust",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Datejust <br> Una fecha para recordar",
+            "text":"<strong>Hito de la historia de la relojería, el Oyster Perpetual Datejust fue el primer reloj de pulsera cronómetro, hermético y de cuerda automática que indicaba la fecha en una ventana en la esfera situada en la posición de las 3 h. </strong> Estos números son un recordatorio de que 24 horas no solo constituyen un día, sino que también marcan una fecha para recordar."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/kDaZ4AbWqng?si=02o13wL2VXfBt0BF",
+            "type":"quote",
+            "title":"«Es una obra maestra de la relojería. De hecho, concentra todos los descubrimientos realizados hasta el día de hoy».",
+            "text":"Hans Wilsdorf, 1945",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"La encarnación del <i>savoir-faire</i> de Rolex ",
+                "text":"Encarnación perfecta del reloj clásico de Rolex, el Datejust, lanzado en 1945, exhibía todos los grandes logros de la marca hasta ese momento, simbolizando la búsqueda de la excelencia preconizada por el fundador de Rolex, Hans Wilsdorf, que creía que el progreso relojero debía ponerse al servicio del progreso humano. En un periodo de grandes cambios, la relación de la gente con el tiempo estaba cambiando. La vida moderna se movía al ritmo del paso de los días y estaba menos ligada a las estaciones. El Datejust ofrece una mayor comodidad en términos de legibilidad y gestión diaria del tiempo.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section2":{
+                "hasVideo":true,
+                "videoEmbed":"https://www.youtube.com/embed/JgcLt9vYWAY?si=vC-8MvD2yBhhKMlo",
+                "title":"La lente cyclops: una lectura optimizada",
+                "text":"Creada para mejorar la legibilidad de la fecha, la lente Cyclops es a la vez un rasgo estético y técnico de la marca. Esta invención de Rolex fue patentada a principios de la década de 1950 y se presentó por primera vez en 1953 en un Datejust. Su efecto lupa facilita la lectura de la fecha. Aunque al principio estaba hecha en plexiglás, desde los años 1970 se fabrica en zafiro, al igual que el cristal del reloj.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-full",
+                "title":"El brazalete Jubilee: confort y elegancia",
+                "text": "Con ocasión del 40.° aniversario de Rolex en 1945, el brazalete Jubilee se diseñó especialmente para el Datejust. Fluido y cómodo, este brazalete metálico de eslabones de cinco elementos forma parte integral de la identidad del Datejust y realza la elegancia atemporal del modelo. El Datejust también está disponible con el brazalete Oyster o, en las versiones de metales preciosos, con el brazalete President.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Icono de la relojería en continua actualización",
+                "text":"El Datejust se reinventa constantemente. Sus numerosas reinterpretaciones ponen de manifiesto la excelencia de la manufactura Rolex. Con sus biseles, lisos, abombados, estriados o engastados con diamantes, el Datejust ha trascendido el paso de los años con estilo mientras se adaptaba a la personalidad de sus usuarios.",
+                "backgroundColor":"bg-rolex-brown-light-2"   
+            },
+
+            "section5":{
+                "imgSize":"w-10/12 ",
+                "title":"Una celebración de las citas con el destino",
+                "text":"El Datejust se ha convertido de forma natural en el reloj de nuestras citas con el destino. Día tras día, su esfera marca un punto de encuentro entre la trayectoria personal de cada usuario y el paso del tiempo. Visto en las muñecas de figuras importantes como Winston Churchill, Dwight D. Eisenhower y Martin Luther King, el Datejust ha surcado de los años sin perder su toque moderno.<br><br>Entre los Testimoniales Rolex asociados con el Datejust, homenajeamos al tenista suizo Roger Federer, la tenista polaca Iga Świątek, la esquiadora suiza Lara Gut Behrami y el cantante canadiense Michael Bublé.",
+                "backgroundColor":"bg-rolex-brown-light-1"   
+            }
+        }
+    },
+    "day-date": {
+        "name":"Day-Date",
+        
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Day-Date <br> La realización de un ideal",
+            "text":"<strong>Cuando la medianoche llega, el Oyster Perpetual Day-Date forma un puente entre el pasado y el futuro, entre lo que se ha logrado y lo que queda por vivir.</strong> Desde 1956, ha sido testigo de los momentos más importantes de la historia en la muñeca de visionarios, virtuosos y pioneros. Aquellos que hacen de cada día una promesa para el futuro."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/c0b2K2nrS3E?si=pWW5JtS16etF2uOO",
+            "title":"El Day-Date es el reloj de un mundo global, multicultural y en constante cambio.",
+            "text":"En su lanzamiento en 1956, el Day-Date supuso una gran innovación: fue el primer reloj de pulsera con calendario que indicaba, además de la fecha, el día de la semana escrito en su totalidad en una ventana en forma de arco a las 12 horas de la esfera, una proeza técnica en la época. Fabricado exclusivamente en metales preciosos -oro amarillo, blanco o Everose de 18 quilates o platino 950- y acompañado de su emblemático brazalete President, sus múltiples esferas lo convierten en el lienzo ideal para la autoexpresión.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-9/12",
+                "title":"El Day-Date habla el idioma de su portador ",
+                "text":"Aunque los días pueden ser los mismos en cualquier parte del mundo, se escriben de manera diferente según el idioma. Utilizando la mayoría de los sistemas de escritura (latín, árabe, cirílico, hebreo, japonés, ideogramas chinos e incluso el alfasilabario Ge'ez utilizado en el Cuerno de África), el Day-Date expresa la identidad cultural de su portador. Disponible en 26 idiomas, es un reloj verdaderamente internacional, universal y personal. ",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12",
+                "title":"El milagro de la medianoche <br>Un ideal de precisión",
+                "text":"Cuando llega la medianoche, el día y la fecha cambian simultáneamente en sus respectivas ventanas de la esfera. Esta hazaña relojera, el 'milagro de la medianoche', se basa en un mecanismo de disco. Es el fruto de muchos años de investigación: de 1950 a 1955, Rolex registró cuatro patentes de relojes con indicación de día y fecha. <br>Hoy en día, el Day-Date está equipado con el calibre 3255, un movimiento íntegramente desarrollado y fabricado por Rolex para un nivel de rendimiento superlativo.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"El brazalete President",
+                "text":"Creado especialmente para el lanzamiento del prestigioso Oyster Perpetual Day-Date y presentado en 1956 en el lanzamiento del modelo, el brazalete President de tres eslabones, realizado únicamente en oro de 18 quilates o platino 950, sigue estando reservado exclusivamente para las versiones Day-Date y de metales preciosos del Datejust.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section5":{
+                "imgSize":"w-10/12",
+                "title":"Un preciado aliado",
+                "text": "Llevado por muchas de las figuras políticas, directores y visionarios del mundo, el Day-Date es reconocible al instante, en particular gracias a su emblemático brazalete President, cuyo nombre evocador, junto con las eminentes figuras que lo han llevado, hizo que el Day-Date se conociera como el 'reloj de los presidentes'. <br><br>Las décadas van y vienen, pero el Day-Date permanece donde siempre ha estado: a la vanguardia de la modernidad. Reloj de prestigio y fruto de la experiencia relojera de Rolex, el Day-Date acompaña a las personalidades que dan forma al mundo en sus respectivas disciplinas a través de su compromiso, su calidad humana y su genio creativo. <br><br> Entre los testimonios de Rolex asociados con el Day-Date, la marca rinde homenaje a la esquiadora estadounidense Lindsey Vonn, al tenista suizo Roger Federer, al cineasta estadounidense Martin Scorsese y a los golfistas Arnold Palmer, Jack Nicklaus y Gary Player.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            
+            },
+            "section6":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            }
+        }
+    },
+    "deepsea": {
+        "name":"Deepsea",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Deepsea y Rolex Deepsea Challenge <br> Relojes extremos para buceadores.",
+            "text":"<strong>Los relojes de la gama Deepsea demuestran la experiencia única de Rolex en impermeabilidad y resistencia a la presión submarina. </strong> Símbolos de la larga historia compartida entre la marca y los exploradores de aguas profundas, el Oyster Perpetual Rolex Deepsea y el Oyster Perpetual Deepsea Challenge son relojes de buceo profesionales ultrarresistentes. Son impermeables hasta una profundidad de 3.900 metros (12.800 pies) para el Rolex Deepsea, lanzado en 2008, y de 11.000 metros (36.090 pies) para el Deepsea Challenge, presentado en 2022."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/Llfy8QHS1Ok?si=Y5DWRmokXLXG2Uqp",
+            "title":"Oyster Perpetual Rolex Deepsea",
+            "text":"El Rolex Deepsea cumple con los exigentes requisitos de los buceadores profesionales en términos de resistencia a la presión subacuática, precisión y fiabilidad, al tiempo que presenta el ADN estético y las características intrínsecas de los relojes profesionales de la colección Oyster Perpetual.<br><br>En su lanzamiento, este reloj de buceo de aguas profundas inauguró el sistema Ringlock, una arquitectura de caja única que le permite soportar la presión ejercida a esta profundidad extrema. Su caja Oyster de 44 mm está equipada con la válvula de escape de helio.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":false,
+                "text":"El Rolex Deepsea en Oystersteel viene con una esfera de color negro intenso o una esfera azul D. Cuenta con un bisel giratorio unidireccional con inserto graduado Cerachrom en cerámica negra. En 2024, la marca presentó una versión de oro amarillo de 18 quilates con esfera azul e inserto de bisel Cerachrom en cerámica azul.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12",
+                "title":"Desafío Oyster Perpetual en Aguas Profundas",
+                "text":"El Deepsea Challenge reafirma la legitimidad de Rolex como marca pionera en el mundo de los relojes para el buceo en aguas profundas y su experiencia en impermeabilidad y resistencia a la presión submarina.<br><br>Este reloj de 50 mm es una adaptación del Rolex Deepsea Challenge, el reloj experimental que acompañó al cineasta y explorador James Cameron a la Fosa de las Marianas en 2012, unido al exterior de su sumergible.<br><br>Fabricado en titanio RLX, el Deepsea Challenge está disponible con una esfera de color negro intenso y cuenta con un bisel giratorio unidireccional con inserto graduado de Cerachrom en cerámica negra.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Sistema Ringlock",
+                "text":"El sistema Ringlock patentado por Rolex equipa los relojes de buceo de la marca diseñados para profundidades extremas, el Rolex Deepsea y el Deepsea Challenge. Extensión de la investigación dedicada a la impermeabilidad del Oyster, este sistema es una arquitectura de caja reforzada compuesta por un cristal de zafiro grueso y ligeramente abovedado, un anillo de compresión de alto rendimiento y un fondo de caja de titanio RLX.<br><br>El anillo de compresión está fabricado con una aleación de nitrógeno en el Rolex Deepsea en Oystersteel y el Deepsea Challenge, mientras que está fabricado en una cerámica azul de alta tecnología, por primera vez para este componente, en la versión de oro amarillo de 18 quilates del Rolex Deepsea.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section5":{
+                "imgSize":"w-10/12",
+                "title":"Rigurosas pruebas de impermeabilidad",
+                "text":"En el buceo en aguas profundas, la fiabilidad y la seguridad absolutas son esenciales. La impermeabilidad de todos los relojes Rolex Deepsea y Deepsea Challenge se prueba con un margen de seguridad del 25 por ciento, de acuerdo con la norma vigente para los relojes de buceo.<br><br> El Rolex Deepsea, resistente al agua garantizado hasta una profundidad de 3.900 metros, se somete así eficazmente a la presión ejercida a 4.875 metros de profundidad, mientras que el Deepsea Challenge, resistente al agua hasta 11.000 metros, está sometido a la presión ejercida a 13.750 metros de profundidad.<br><br>Para estas rigurosas pruebas, la marca desarrolló un tanque hiperbárico especial para el Rolex Deepsea y un tanque de ultra alta presión (UHP) para el Deepsea Challenge en conjunto con Comex (Compagnie Maritime d'Expertises), la empresa francesa de renombre mundial especializada en ingeniería submarina y tecnologías hiperbáricas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            
+            },
+            "section6":{
+                "imgSize":"w-10/12",
+                "title":"Certificación Superlative Chronometer",
+                "text":"Al igual que todos los relojes Rolex, los relojes de la gama Deepsea están cubiertos por la certificación Superlative Chronometer. Esta designación atestigua que cada reloj que sale de los talleres de la marca ha sido sometido con éxito a una serie de pruebas realizadas por Rolex en sus propios laboratorios, de acuerdo con sus propios criterios. El estatus de Cronómetro Superlativo está simbolizado por un sello verde y se combina con un quinquenio internacional.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }
+        }
+    },
+    "explorer": {
+        "name":"Explorer",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Explorer <br> Aventurarse más allá de los límites",
+            "text":"<strong>La gama Explorer se amplía con un nuevo modelo de 40 mm de diámetro. Con una mayor legibilidad, conserva las cualidades que convirtieron al Explorer, uno de los primeros relojes-herramienta de Rolex, en una referencia a lo largo de los años.  </strong> Sencillo, robusto y resistente a la corrosión, el nuevo Explorer 40 está fabricado en acero Oystersteel, una aleación exclusiva de Rolex. Los acabados satinados de la carrura, el brazalete y el cierre y los reflejos de luz sobre los flancos de la carrura pulidos invitan a contemplar con nuevos ojos este reloj-herramienta icónico con su armonía discreta."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/9zj58htwY9I?si=0GhzhORKFzVK1zl9",
+            "title":"Legibles y duraderos, los relojes Explorer y Explorer II están diseñados para acompañar a quienes traspasan los límites del conocimiento humano.",
+            "text":"Desde los años 1930, Rolex comenzó a equipar con relojes Oyster Perpetual numerosas expediciones. Las valoraciones que ha recibido sirvieron para desarrollar lo que se conoce como la categoría de relojes Profesionales que podían ser utilizados como herramientas: modelos como el Explorer y el Explorer II. Los relojes Rolex han formado parte de algunas de las grandes aventuras de la humanidad. Una de esas aventuras fue la expedición al Everest en 1953, liderada por sir John Hunt, en la que sir Edmund Hillary y el sherpa Tenzing Norgay se convirtieron en los primeros en llegar a la cumbre de la montaña más alta del mundo. ",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Diseñado para la exploración",
+                "text":"Presentado en 1953, el Explorer destaca por su diseño sencillo y su fácilmente legible esfera negra con números 3, 6 y 9 característicos e indicadores de gran tamaño. Es un reloj-herramienta creado para marcar el tiempo bajo cualquier condición. Incluso en la oscuridad, su esfera permanece perfectamente legible gracias a la visualización Chromalight. Actualmente, el Explorer está disponible en 36 mm de diámetro —el mismo tamaño que el modelo original de 1953— así como en 40 mm de diámetro.<br><br>El Explorer II, lanzado en 1971, mantiene el mismo espíritu que el Explorer: perpetuar la privilegiada relación entre Rolex y la exploración. Gracias a su visualización 24 horas constituida por una aguja adicional naranja y un bisel grabado, el Explorer II permite distinguir sin equívoco las horas del día de las de la noche —una opción útil en lugares donde resulta difícil distinguir el día de la noche, como en las regiones polares en algunas épocas del año, o en las cuevas— o bien mostrar la hora de un segundo huso horario.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "hasVideo":true,
+                "videoEmbed":"https://www.youtube.com/embed/B6DCMuim6_s?si=95lUHh8AXAg2q7e4",
+                "title":"Soportar las condiciones más extremas",
+                "text":"Los relojes de la gama Explorer no han dejado de evolucionar para satisfacer de la mejor manera posible las necesidades de los exploradores. Cada vez más robustos. Cada vez más fiables. El Explorer 36 está disponible en acero Oystersteel o en versión Rolesor amarillo (combinación de acero Oystersteel y oro amarillo) mientras que el Explorer 40 y el Explorer II están fabricados exclusivamente en acero Oystersteel. Especialmente desarrollado para Rolex, el acero Oystersteel es una aleación única con excelentes propiedades anticorrosión.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":"Los tres modelos están equipados con un brazalete Oyster, un brazalete de tres elementos que destaca por su robustez. Equipado con un cierre de seguridad desplegable Oysterlock, diseñado y patentado por Rolex, que previene cualquier apertura involuntaria, también dispone del cómodo sistema de extensión rápida Easylink, desarrollado por la marca, que permite ajustar fácilmente su longitud en torno a unos 5 mm.<br><br>El Explorer 36 y el Explorer 40 están equipados con el calibre 3230 y el Explorer II presenta el calibre 3285. Ambos son movimientos mecánicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Poseen una reserva de marcha de aproximadamente 70 horas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12",
+                "title":"Certificación Superlative Chronometer",
+                "text":"Como todos los relojes Rolex, el Explorer y el Explorer II cuentan con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }
+            
+           
+        }
+    },
+    "gmt-master-ii": {
+        "name":"GMT-Master II",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":" GMT-Master II <br> El reloj cosmopolita.",
+            "text":"<strong> El Oyster Perpetual GMT Master II está diseñado para indicar la hora de dos husos horarios simultáneamente. Robusto y funcional, es el reloj ideal para quienes recorren el mundo.</strong> Presentado en 1955, el GMT Master ha sido testigo privilegiado del auge de los viajes intercontinentales desde la segunda mitad del siglo XX. Incluso se convirtió en reloj oficial de la Pan American World Airways, la principal y más importante aerolínea internacional estadounidense de la época."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/-Mw37ml-a7g?si=LiLVFrIdxNsIzvSQ",
+            "title":"Tanto en función como en nombre, el Oyster Perpetual GMT Master II evoca viajes de larga distancia a través de zonas horarias.",
+            "text":"Auténtico reloj herramienta, el GMT Master no ha dejado de evolucionar para ofrecer unas prestaciones cronométricas cada vez más punteras. En 1982, Rolex introduce un nuevo calibre que permite ajustar la aguja de las horas de forma independiente de la de los minutos y de la aguja 24 horas. Para marcar esta evolución, el modelo equipado con el movimiento optimizado se bautizó como GMT Master II.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Un único instrumento, varios husos horarios ",
+                "text":"El GMT Master II luce un diseño inmediatamente reconocible con un disco de bisel graduado disponible en diferentes versiones bicolor: la mitad inferior simboliza las horas del día y la superior, las de la noche. Con su visualización tradicional por medio de aguja de las horas, minutero y segundero, su aguja 24 horas rematada en un triángulo y su bisel giratorio bidireccional con disco Cerachrom graduado 24 horas, el GMT Master II permite leer de forma simultánea la hora de dos husos horarios: ya sea la hora local y la hora de referencia, o bien la hora local y la de otro huso horario. <br><br>El GMT Master II actual está equipado con el calibre 3285, un movimiento mecánico de cuerda automática completamente desarrollado y manufacturado por Rolex. Este movimiento, concentrado de tecnología, presenta un elevado rendimiento en materia de precisión, reserva de marcha, resistencia a los golpes, comodidad de uso y fiabilidad. Está equipado con la espiral Parachrom azul y cuenta también con el escape Chronergy patentado. La reserva de marcha del movimiento es de aproximadamente 70 horas.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12",
+                "title":"Cerámica de alta tecnología",
+                "text":"El disco de bisel Cerachrom fabricado por Rolex es de una sola pieza con cerámica extremadamente dura. Este material de alta tecnología es prácticamente imposible de rayar y mantiene sus colores vibrantes a través del tiempo. En 2013, Rolex desempeñó un papel pionero al presentar su primer disco de bisel bicolor de cerámica en una sola pieza, con una mitad azul y la otra negra.Un año más tarde, la marca presentó el disco Cerachrom bicolor en rojo y azul, los colores originales del GMT-Master. Rolex llevó a cabo investigaciones inéditas e innovadoras para desarrollar una cerámica roja que cumpliese sus criterios estéticos y de calidad.<br><br>A lo largo de los años, Rolex ha presentado otras combinaciones de colores, como marrón y negro (2018) y verde y negro (2022), en una versión con la corona y los protectores de la corona en el lado izquierdo de la caja y la indicación de la fecha en la posición de las 9 h. Su última innovación es un disco Cerachrom gris y negro, presentado en 2023 en una modalidad en versión Rolesor amarillo del GMT Master II, así como en una modalidad totalmente realizada en oro amarillo de 18 quilates.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Certificación Superlative Chronometer",
+                "text":"Al igual que todos los relojes Rolex, los relojes de la gama Deepsea están cubiertos por la certificación Superlative Chronometer. Esta designación atestigua que cada reloj que sale de los talleres de la marca ha sido sometido con éxito a una serie de pruebas realizadas por Rolex en sus propios laboratorios, de acuerdo con sus propios criterios. El estatus de Cronómetro Superlativo está simbolizado por un sello verde y se combina con un quinquenio internacional.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }
+        }
+    },
+    "lady-datejust": {
+        "name":"Lady Datejust",
+        
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Lady Datejust <br> El arrojo de la excelencia",
+            "text":"<strong>«Un reloj clásico para mujer». Así describen algunos a nuestro Oyster Perpetual Lady Datejust </strong> y puede que tengan razón. Desde comienzos del siglo XX, Rolex ha diseñado y fabricado relojes adecuados para todas las muñecas femeninas, con el mismo estándar de excelencia que todos los modelos que han forjado su leyenda. Si «clásico» significa buscar siempre llegar a lo más alto, si significa perpetuar las tradiciones al tiempo que combina elegancia con precisión, gracia con resistencia, belleza con rendimiento… Entonces el Lady Datejust es un reloj clásico para mujer."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/AXPgpxYrWRk?si=LIgiCgNsfsfKkKc2",
+            "title":"El reloj femenino clásico Rolex por excelencia. Con su glamour refinado, estilo y prestaciones técnicas.",
+            "text":false,
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Una piedra angular en la historia de Rolex. ",
+                "text":"Las mujeres pioneras siempre han sido una piedra angular en la historia de Rolex.Desde los inicios de la marca, ellas han inspirado la creación y el desarrollo de relojes especiales que apoyarían su búsqueda del empoderamiento. El Lady Datejust es una celebración de aquellas que se atreven a marcar el camino. Representa la precisión al tiempo que combina elegancia clásica con prestaciones técnicas.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Heredero del Datejust",
+                "text":"Presentado en 1957, el Lady Datejust concentra todos los atributos del Datejust, reloj emblemático de Rolex que impuso su estilo y sus prestaciones técnicas desde su lanzamiento en 1945. La versión para mujeres de este cronómetro con calendario, el Lady Datejust perpetúa la elegancia del Datejust en una caja más pequeña que se adapta a la perfección a las muñecas finas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12",
+                "title":"Una amplia variedad de versiones",
+                "text":"Desde esferas con acabado tipo sol hasta engastadas de diamantes o esferas de nácar, el Lady Datejust ofrece una amplia variedad de modalidades entre las que su portadora encontrará siempre la que refleje su personalidad. Según la modalidad, el Lady-Datejust se propone con bisel abombado, estriado o engastado de diamantes.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-full",
+                "title":"Materiales exclusivos",
+                "text":"El Lady Datejust está disponible en acero Oystersteel, oro amarillo, blanco o Everose de 18 quilates o en versión Rolesor que combina acero Oystersteel con una de las tres variedades de oro (blanco, amarillo y Everose). ",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section5":{
+                "imgSize":"w-10/12 ",
+                "title":"Caja oyster de 28 mm",
+                "text":"La caja Oyster de 28 mm del Lady Datejust es una perfecta combinación de proporciones, robustez y elegancia. Su distintiva carrura está tallada en un bloque macizo de acero Oystersteel altamente resistente a la corrosión u oro de 18 quilates. Garantiza una hermeticidad de hasta 100 metros. ",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section6":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Brazaletes emblemáticos",
+                "text":"El Lady Datejust luce, en función de la modalidad, un brazalete Oyster de tres elementos equipado con un cierre Oysterclasp, un brazalete Jubilee de cinco elementos creado en 1945 especialmente para el Datejust— o un brazalete President de tres elementos. Los brazaletes Jubilee y President están provistos de un cierre Crownclasp. Además, un sistema de fijación invisible ofrece una perfecta continuidad visual entre el brazalete y la caja.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section7":{
+                "imgSize":"w-10/12",
+                "title":"Calibre perpetual 2236",
+                "text":"El Lady Datejust está equipado con el calibre 2236, un movimiento mecánico de cuerda automática completamente desarrollado y manufacturado por Rolex. Su arquitectura le confiere una precisión y fiabilidad excepcionales. El calibre 2236 consta de la espiral Syloxi de silicio, patentada y manufacturada por Rolex. Resistente a los campos magnéticos, la espiral Syloxi ofrece una gran estabilidad frente a las variaciones de temperatura y es hasta diez veces más precisa que una espiral convencional en caso de golpes. Su geometría patentada garantiza su regularidad en todas las posiciones.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section8":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Cronómetro superlativo",
+                "text":"Como todos los relojes Rolex, el Lady Datejust cuenta con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            }
+            
+           
+        }
+
+    
+    },
+    "oyster-perpetual": {
+        "name":"Oyster Perpetual",
+        "headerSection":{
+            "title":"Rolex Oyster Perpetual <br> La quintaesencia del Oyster",
+            "text":"<strong>Los relojes de la gama Oyster Perpetual son símbolos de estilo clásico y universal, y ofrecen al que los lleva funciones útiles del día a día: visualización de las horas, minutos y segundos. </strong> Respetando la línea de los orígenes pioneros de Rolex, estos modelos encarnan la forma y función atemporales. Son la expresión de los relojes en su forma más pura."
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/TEi1lna1FcI?si=9fWin57FiUcIzy4r",
+            "title":"El Oyster Perpetual, es la más pura expresión del concepto Oyster.",
+            "text":"El Oyster Perpetual es el heredero directo del Oyster original, primer reloj de pulsera hermético del mundo, sobre el que Rolex ha construido su reputación desde 1926. Certificado como Cronómetro Superlativo, el Oyster Perpetual posee todos los atributos fundamentales de la colección Oyster Perpetual: la precisión cronométrica, la hermeticidad de la caja Oyster y la cuerda automática del movimiento por rotor Perpetual. Sobrio y estético, se distingue por su estilo sencillo y universal.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Dinámico y atemporal",
+                "text":"   El Oyster Perpetual proporciona una fiable y precisa visualización de las horas, los minutos y los segundos. Las diferentes modalidades del reloj se distinguen por sus esferas de colores sutiles —plateado, azul vivo o negro vivo con acabado tipo sol— o vibrantes, como el rosa candy, el azul turquesa o el verde lacado. El Oyster Perpetual está disponible en cinco tamaños de caja: 28 mm, 31 mm, 34 mm, 36 mm o 41 mm. Ofrece la mayor elección de diámetros para una gama de relojes Rolex.<br><br>Estos modelos están provistos de un brazalete Oyster de tres elementos, que garantiza seguridad y confort al usuario. Dicho brazalete está equipado con un cierre desplegable Oysterclasp y cuenta con el cómodo sistema de extensión rápida Easylink, desarrollado por la marca, que permite ajustar fácilmente su longitud en unos 5 mm. <br><br>El Oyster Perpetual es exclusivamente de acero Oystersteel. Especialmente desarrollado para Rolex, pertenece a la familia de los aceros 904L, las aleaciones más utilizadas en la tecnología punta. El acero Oystersteel es extremadamente resistente a la corrosión, ofrece un acabado excepcional tras el pulido y conserva su brillo con el paso del tiempo.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Fiabilidad y precisión",
+                "text":"La caja del Oyster Perpetual garantiza una hermeticidad de hasta 100 metros de profundidad. Su carrura se trabaja a partir de un bloque macizo de acero Oystersteel. Su fondo, con un fino sistema de acanalado, está herméticamente enroscado con ayuda de una herramienta especial; tan solo los relojeros autorizados por Rolex pueden acceder de este modo al movimiento. Otro componente principal de la estructura hermética es la corona Twinlock, provista de un sistema de doble hermeticidad y se enrosca sólidamente a la caja.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":"En función de su tamaño, el Oyster Perpetual está equipado con el calibre 2232 (para los modelos de 28 mm, 31 mm y 34 mm) o con el calibre 3230 (para los modelos de 36 mm y 41 mm), movimientos mecánicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en materia de precisión, autonomía, resistencia a los golpes, comodidad de uso y fiabilidad",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section5":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Caja oyster de 28 mm",
+                "text":"Como todos los relojes Rolex, los Oyster Perpetual cuentan con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos y con arreglo a sus propios criterios. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde que incluyen todos los relojes Rolex y que va acompañado de una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            } 
+        }
+
+    
+    },
+    "sea-dweller":{
+        "name":"Sea-Dweller",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Sea-Dweller <br> Sea-Dweller",
+            "text":"<strong>Rolex creó el Oyster Perpetual Sea-Dweller en 1967 para enfrentarse al desafío que presentan las misiones submarinas prolongadas.</strong> El Sea-Dweller está específicamente diseñado para el buceo de saturación. Gracias a su válvula de helio, puede soportar la descompresión durante el ascenso y controlar la vuelta a la superficie, la fase final de la exploración de aguas profundas."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/t5ctuodFNYg?si=w5rOp2GaeVkkPc4Y",
+            "title":false,
+            "text":"Con una hermeticidad garantizada hasta 610 metros de profundidad cuando se lanzó en 1967, luego a 1220 metros desde 1978, el Sea Dweller combina todos los atributos del reloj de submarinismo moderno.<br><br> El Sea-Dweller, puesto a prueba en condiciones reales como parte del programa Tektite iniciado en conjunto con la NASA, la Marina de los Estados Unidos y el gobierno estadounidense en 1969, se utilizó en los primeros experimentos importantes con hábitats submarinos.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"El nuevo rostro del submarinismo.",
+                "text":"En la década de 1960, el denominado buceo de «saturación» permitió permanecer a grandes profundidades durante largos periodos. Consiste en alojar a submarinistas en un hábitat de presurización, para así reproducir la presión que prevalece en su entorno de trabajo submarino. Así, no es necesario que se sometan más que a un único proceso de descompresión al concluir su misión.<br><br> Este proceso puede dañar el reloj. Los buzos respiran una mezcla de gases compuesta principalmente por helio, cuyos átomos son extremadamente finos y pueden penetrar la caja. De vuelta a la superficie, el helio atrapado dentro puede crear un fenómeno de exceso de presión interna responsable de comprometer su integridad. ",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Dominar la descompresión con la válvula de escape de helio",
+                "text":"Para superar este problema, Rolex presentó en 1967 el Sea Dweller, un reloj de submarinismo con válvula de helio. Enroscada a la caja, consiste en un cilindro hermético, un pistón y un muelle que actúan como válvula de seguridad. Se abre automáticamente cuando la presión interna de la caja es demasiado grande, lo que permite que los átomos de helio se liberen.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Una legibilidad multifunción",
+                "text":"La visualización Chromalight, exclusiva de Rolex, aporta al Sea Dweller una legibilidad óptima en cualquier circunstancia. Los índices, las agujas, el chatón y el bisel están rellenos o cubiertos a mano de un material luminiscente que, en la oscuridad, tiene un color de emisión azul que permanece hasta el doble de tiempo que los materiales fosforescentes clásicos.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            },
+            "section4":{
+                "imgSize":"w-10/12",
+                "title":"El reloj de los ciudadanos de los mares",
+                "text":"Los exploradores y oceanógrafos, como Sylvia Earle, y los fotógrafos submarinos, como David Doubilet, están comprometidos con la preservación del océano y saben que es nuestro recurso más preciado. Llevan un Sea-Dweller para reflejar su pasión y compromiso.<br><br>Rolex también colabora con Comex (Compagnie Maritime d’Expertises) desde 1971. Desde hace varias décadas, el Sea-Dweller equipa a los submarinistas de esta empresa francesa especialista en ingeniería, tecnología e intervención submarina",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            }
+           
+        }
+
+    
+    },
+    "sky-dweller": {
+        "name":"Sky-Dweller",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Sky-Dweller<br> El dominio de las diferencias horarias",
+            "text":"<strong>El Oyster Perpetual Sky Dweller, elegante y técnicamente sofisticado, se diseñó para quienes viajan constantemente por el mundo. </strong>Dotado del calendario anual Saros y del sistema Ring Command, indica simultáneamente dos husos horarios, así como la fecha y el mes, y permite ajustarlos con un simple gesto."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/5ZBOBs64rGQ?si=bs1k6MRdIsKCaVSx",
+            "title":"Inmensamente innovador, el Sky-Dweller combina la sofisticación mecánica con una pantalla original",
+            "text":"Desde su creación en 2012, el Sky Dweller se ha dirigido a quienes ven el mundo como un territorio único, sin fronteras. Permite a los viajeros evitar los obstáculos de las diferencias horarias e ir siempre un paso por delante.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Segundo huso horario con una simple ojeada",
+                "text":"El Sky Dweller muestra simultáneamente la hora en un segundo huso horario, así como la hora local, que se indica con las agujas centrales. Este segundo huso horario –u hora de referencia– se indica con un pequeño triángulo fácilmente legible con una silueta roja en un disco giratorio graduado 24 horas. Este disco excéntrico, un elemento característico del modelo, permite distinguir sin equívoco las horas del día de las de la noche: una ventaja valiosa para quienes viajan al otro lado del mundo.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Calendario anual innovador e intuitivo",
+                "text":"El calendario anual Saros patentado, especialmente desarrollado para el Sky Dweller, es un elemento clave en la identidad del modelo. El nombre de este mecanismo, con su innovador diseño, se inspira en el término griego que designa el ciclo de los eclipses lunar y solar. <br><br> El calendario Saros distingue automáticamente los meses de 30 días de los de 31 días. Por tanto, solo necesita un único ajuste manual de la fecha al año, en el paso de febrero a marzo. Es intuitivo y fácil de leer. El mes en curso se indica en rojo en una de las doce ventanas que marcan los índices sobre el contorno de la esfera. <br><br> La innovación en relojería se basa en dos relaciones de transmisión y solo cuatro trenes de ruedas añadidos al calendario de fecha instantánea de Rolex. Esta estructura elemental confiere al calendario anual Saros una excelente fiabilidad.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Sistema Ring Command: la hora bajo control",
+                "text":"El sistema Ring Command desarrollado por Rolex y patentado es un innovador mecanismo de interacción entre el bisel giratorio, la corona y el movimiento. Permite seleccionar las distintas funciones del Sky Dweller de forma fácil, rápida y segura, antes de ajustarlas con la corona.<br><br> Girando el bisel estriado en el sentido contrario a las agujas del reloj –cuyo perfil está acentuado para facilitar su manejo– el usuario elige la indicación que desea configurar. Primera muesca: fecha y mes. Segunda muesca: hora local. Tercera muesca: hora de referencia.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12",
+                "title":"Para el verdadero trotamundos",
+                "text":"Ya sea un golfista, un navegante o un jinete que da la vuelta al mundo, siempre debe estar preparado, sea cual sea el destino o la distancia recorrida.<br><br>El golfista español Jon Rahm, el capitán brasileño Robert Scheidt y el jinete de salto de obstáculos estadounidense Kent Farrington están entre los Testimoniales Rolex que han adoptado el Sky Dweller.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }         
+           
+        }
+
+    
+    },
+    "submariner": {
+        "name":"Submariner",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Submariner<br> El reloj de buceo de referencia",
+            "text":"<strong>Relojes de buceo por excelencia, el Oyster Perpetual Submariner y el Oyster Perpetual Submariner Date encarnan el vínculo histórico que une a Rolex con el universo de la exploración submarina.</strong>Presentado en 1953, el Submariner fue el primer reloj de pulsera hermético hasta 100 metros de profundidad. El Submariner Date, dotado de la función de fecha, se presentó en 1969. La hermeticidad de ambos modelos aumentó más tarde hasta 300 metros. Reconocidos por su robustez, conquistaron también la tierra firme y se convirtieron en los relojes predilectos para una gran variedad de actividades y deportes."
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/IjcvZ8GSl1M?si=WsMzlMA2Yj2Ch9rJ",
+            "title":false,
+            "text":false,
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"El diseño del reloj de submarinismo por excelencia",
+                "text":"El diseño del Submariner, herramienta de supervivencia bajo el mar, está completamente determinado por las necesidades prácticas de los buceadores. El modelo ha ido evolucionando mediante la incorporación de elementos que mejoran su funcionalidad. <br><br>Con su caja Oyster de 41 mm, su esfera dotada de índices y agujas luminiscentes de gran tamaño, su bisel giratorio unidireccional y su brazalete Oyster, el Submariner y el Submariner Date están entre los relojes más reconocibles jamás diseñados. Elemento clave de su funcionalidad, el disco de bisel Cerachrom graduado de cerámica de alta tecnología contribuye plenamente a su fortísima identidad. Su graduación de 60 minutos permite a los submarinistas controlar con precisión el tiempo de inmersión.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "hasVideo":true,
+                "videoEmbed":"https://www.youtube.com/embed/ojYMAVVDnW8?si=DOxntUeGgDYKVOpY",
+                "title":"Fiabilidad, robustez y funcionalidad",
+                "text":"La caja Oyster del Submariner y el Submariner Date garantiza una hermeticidad de hasta 300 metros de profundidad. La corona Triplock, provista de un sistema de triple hermeticidad, se enrosca sólidamente a la caja y garantiza una hermeticidad total.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":"Diseñado para ser a la vez robusto y confortable, el brazalete Oyster está equipado con un cierre de seguridad Oysterlock que evita cualquier apertura involuntaria, y con el sistema de extensión Rolex Glidelock, que permite un ajuste preciso de la longitud del brazalete sin necesidad de herramienta alguna.<br><br>El Submariner y el Submariner Date están equipados con el calibre 3230 y el calibre 3235 respectivamente, movimientos mecánicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Su arquitectura, la calidad de su fabricación y sus innovadoras características les confieren un excelente rendimiento en materia de precisión y fiabilidad. La reserva de marcha de ambos movimientos es de aproximadamente 70 horas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":"Certificación de Cronómetro Superlativo",
+                "text":"Como todos los relojes Rolex, el Submariner y Submariner Date cuentan con la certificación de Cronómetro Superlativo. Esta denominación atestigua que cada reloj que sale de los talleres de la marca ha superado con éxito una serie de pruebas llevadas a cabo por Rolex en sus laboratorios internos. El estatus de Cronómetro Superlativo se simboliza mediante el sello verde y va acompañado de una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },         
+            "section5":{
+                "imgSize":"w-10/12",
+                "title":"Llave a las profundidades",
+                "text":"Si bien el Submariner fue concebido para la exploración subacuática y el buceo, Recién salido de los talleres Rolex, el reloj tuvo un éxito inmediato y muchos profesionales de las profundidades marinas lo pusieron a prueba para la marca. Uno de estos pioneros fue Dimitri Rebikoff, un ingeniero y fotógrafo submarino francés. En su informe de 1953, Rebikoff escribió que el rendimiento del Submariner durante las pruebas había sido extraordinario: «Podemos confirmar que este reloj no solo ha resultado completamente satisfactorio en unas condiciones de inmersión extremadamente duras y especialmente fatales para el material utilizado, sino que además ha resultado ser una ayuda imprescindible para cualquier inmersión con escafandra autónoma».",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }    
+           
+        }
+
+    
+    } ,
+    "yacht-master": {
+        "name":"Yacht Master",
+
+        "headerSection":{
+            "sub":"Oyster Perpetual",
+            "title":"Rolex Yacht-Master <br> El dominio de la ligereza",
+            "text":"<strong>Lanzado en 1992, el Yacht-Master fue diseñado específicamente para navegantes y patrones. </strong>Este reloj de categoría profesional ofrece una combinación perfecta de funcionalidad y estilo náutico, lo que lo hace sentir como en casa tanto dentro como fuera del agua"
+            
+        },
+        "mainSection":{
+            "videoEmbed":"https://www.youtube.com/embed/b7FGQzjsPM8?si=5UFH7T2OlCthVQ-A",
+            "title":false,
+            "text":"El Oyster Perpetual Yacht-Master encarna los lazos privilegiados entre Rolex y el mundo de la vela que se remontan a la década de 1950. Especialmente diseñado para satisfacer las necesidades de los navegantes, es un reloj técnico, elegante y deportivo que es sobre todo un instrumento náutico útil y fiable.",
+            "backgroundColor":"bg-rolex-brown-light-2"
+
+        },
+        "sections":{
+            "section1":{
+                "imgSize":"w-10/12",
+                "title":"Un bisel inmediatamente reconocible",
+                "text":"El Yacht-Master es fácilmente reconocible por su bisel bidireccional giratorio graduado de 60 minutos, fabricado íntegramente en metal precioso (oro Everose o platino) o equipado con un inserto Cerachrom negro de cerámica de alta tecnología. Las graduaciones y los números pulidos en relieve destacan claramente sobre un fondo mate. Este bisel característico y funcional, que permite al usuario leer intervalos de tiempo, por ejemplo, el tiempo de navegación entre dos boyas, desempeña un papel importante en la creación de la identidad visual única del reloj.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+                
+            },
+            "section2":{
+                "imgSize":"w-10/12",
+                "title":"Materiales exclusivos",
+                "text":"   Robusto, preciso y perfectamente resistente al agua, el Yacht-Master es uno de los únicos relojes Rolex Professional que se ofrece en varios diámetros (37, 40 y 42 mm).<br><br>El Yacht-Master 37 y el Yacht-Master 40 están disponibles en una versión Rolesium (que combina acero Oystersteel y platino, exclusivo de la gama Yacht-Master) y en una versión Everose Rolesor (que combina acero Oystersteel y oro Everose) con bisel de metal precioso y equipado con un brazalete Oyster. Ambos modelos también se ofrecen en oro Everose de 18 quilates con un inserto de bisel Cerachrom en cerámica negra y un brazalete Oysterflex.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section3":{
+                "imgSize":"w-10/12 md:w-1/2",
+                "title":false,
+                "text":"El Yacht-Master 42 está disponible en oro amarillo o blanco de 18 quilates con brazalete Oysterflex y en titanio RLX, una aleación especialmente ligera con excelentes propiedades de resistencia a la corrosión y alta resistencia mecánica, con brazalete Oyster. Esta versión, presentada en 2023, destaca por su acabado técnico satinado, un acabado con vetas visibles.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section4":{
+                "imgSize":"w-full",
+                "title":false,
+                "text":false,
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },         
+            "section5":{
+                "imgSize":"w-10/12",
+                "title":"Calibres perpetuos 2236 y 3235",
+                "text":"Los modelos Yacht-Master están equipados con el calibre 2236 (Yacht-Master 37) o el calibre 3235 (Yacht-Master 40 y Yacht-Master 42), movimientos mecánicos automáticos desarrollados y fabricados íntegramente por Rolex. Ofrecen un rendimiento excepcional, especialmente en términos de precisión, reserva de marcha, comodidad y fiabilidad. La reserva de marcha de ambos movimientos es de aproximadamente 70 horas.",
+                "backgroundColor":"bg-rolex-brown-light-2"
+            },
+            "section6":{
+                "imgSize":"w-10/12",
+                "title":"Certificación de Cronómetro Superlativo",
+                "text":"Al igual que todos los relojes Rolex, el Yacht-Master está cubierto por la certificación Superlative Chronometer. Esta designación atestigua que cada reloj que sale de los talleres de la marca ha sido sometido con éxito a una serie de pruebas realizadas por Rolex en sus propios laboratorios, de acuerdo con sus propios criterios. El estatus de Cronómetro Superlativo está simbolizado por un sello verde y se combina con una garantía internacional de cinco años.",
+                "backgroundColor":"bg-rolex-brown-light-1"
+            }    
+           
+        }
+
+    
+    }
+}

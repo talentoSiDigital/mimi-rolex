@@ -1,3 +1,4 @@
+// LEGACY CODE
 module.exports = app =>{
     const rolex = require('../controllers/rolexController')
     var router = require("express").Router()

@@ -20,6 +20,12 @@ const phoneNumber = ref({
     "phone": 0,
     "code": 58
 })
+function randomStr() {
+    let ans = crypto.randomUUID()
+    let array = ans.split('-')
+    return array[array.length - 1].toUpperCase();
+}
+
 const user = ref({
 
     "name": "",
@@ -88,6 +94,7 @@ function handleRegister(user,phoneNumber) {
     // piniaStore.test()
     user.phone = "+"+ phoneNumber.code + phoneNumber.phone
     user.age = user.age.toString() 
+    user.referenceCode = randomStr()
     console.log(user)
     piniaStore.register(user).then(
         (data) => {

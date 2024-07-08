@@ -19,6 +19,7 @@ const code = ref(randomStr())
 const active = ref(false)
 const piniaStore = auth()
 const user = piniaStore.$state.user.id
+console.log(piniaStore.$state.user);
 
 const totalAmount = ref(0)
 const paymentStatus = ref("")
@@ -126,6 +127,7 @@ watch(checkResponse, () => {
     paymentDataServices.step2(dataObject.value, user).then((d) => {
     
         paymentStatus.value = d.data
+        console.log(d.data);
     
         if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
             challenge.value = true
@@ -134,19 +136,26 @@ watch(checkResponse, () => {
         }
         if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
 
+
             dataObject.value.transactionId = d.data.consumerAuthenticationInformation.authenticationTransactionId
             dataObject.value.signedPares = paymentStatus.value.consumerAuthenticationInformation.paresStatus
             dataObject.value.cavv = paymentStatus.value.consumerAuthenticationInformation.cavv
             dataObject.value.xid = paymentStatus.value.consumerAuthenticationInformation.xid
+            dataObject.value.eciRaw = paymentStatus.value.consumerAuthenticationInformation.eciRaw
             dataObject.value.ecommerceIndicator = paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator
             dataObject.value.ucafCollectionIndicator = paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator
             dataObject.value.ucafAuthenticationData = paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData
             dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
             dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
-
+            dataObject.value.transactionToken = paymentStatus.value.consumerAuthenticationInformation.token
+            console.log(dataObject.value);
+            // paymentDataServices.generateToken(dataObject.value).then((d)=>{
+            //     console.log(d.data);
+            // })
 
             paymentDataServices.payWithData(dataObject.value, user).then((d) => {
-                router.push(`/checkout/`)
+                // router.push(`/checkout/`)
+                console.log(d.data);
             })
         }
 

@@ -1,16 +1,16 @@
 <script setup>
+import { useAsyncState } from '@vueuse/core';
 import { ref } from 'vue';
-import { useAsyncState } from '@vueuse/core'
 
-import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue'
+import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
 
-import router from '../../router'
-import { RouterLink, useRoute, useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+import router from '../../router';
 
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 
-import StoreDataService from '../../services/storeDataService'
+import StoreDataService from '../../services/storeDataService';
 
 const route = useRoute()
 const useVueRouter = useRouter()

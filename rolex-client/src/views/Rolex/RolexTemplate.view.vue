@@ -1,7 +1,8 @@
 <script setup>
-import RolexFooter from '../../components/global-components/RolexFooter.vue'
-import RolexNavbar from '../../components/global-components/RolexNavbar.vue'
-import SliderNavigationRolex from '../../components/global-components/SliderNavigationRolex.vue'
+import RolexFooter from '../../components/navigation-components/RolexFooter.vue'
+import RolexNavbar from '../../components/navigation-components/RolexNavbar.vue'
+import SliderNavigationRolex from '../../components/navigation-components/SliderNavigationRolex.vue'
+import BreadCrumb from '../../components/navigation-components/BreadCrumb.vue';
 
 import { ref, watch } from 'vue'
 
@@ -13,6 +14,7 @@ import { ref, watch } from 'vue'
 <template>
     <div id="rolex-main-content">
         <RolexNavbar />
+        <BreadCrumb />
 
         <slot name="content">
 

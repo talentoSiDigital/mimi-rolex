@@ -1,66 +1,131 @@
 <script setup>
+import { ref, watch } from 'vue';
+import { RouterLink } from 'vue-router';
+
+import { useAsyncState } from '@vueuse/core'
+
+
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-import RolexNavbar from '../../components/global-components/RolexNavbar.vue'
-import PageBanner from '../../components/banners-components/PageBanner.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
-import NewModelsCard from '../../components/cards/NewModelsCard.vue'
+import PageBanner from '../../components/banners-components/PageBanner.vue'
+
+
+import ModelsCard from '../../components/cards/ModelsCard.vue';
+
+
+
+
+
+
+
 </script>
 
 <template>
-    <div id="new-models">
-        <RolexTemplate>
-            <template #content>
-
-                <PageBanner type="nuevos-modelos" />
-                <RolexHeader>
-                    <template #sub>
-                        Relojes Rolex
-                    </template>
-                    <template #title>
-                        NUEVOS MODELOS ROLEX 2023 <br> - MIMI JOYERÍA
-
-                    </template>
-                    <template #text>
-                        Con sus últimas creaciones, Rolex persiste en su perpetua búsqueda de excelencia. Un reto permanente
-                        que se
-                        expresa perfeccionando cada elemento, cuestionando cada logro y dominando cada
-                        <strong><i>savoir-faire</i></strong> . Los modelos presentados hacen patente una voluntad de
-                        reinventarse de
-                        forma continua, de innovar manteniendo el espíritu de la tradición y de poner la técnica al servicio
-                        de la
-                        audacia creativa. A costa de tales esfuerzos —nutridos de una exigencia «superlativa» que se
-                        manifiesta en
-                        cada etapa de fabricación, hasta el más mínimo detalle— se construyen y perpetúan las referencias
-                        relojeras.
-                        Esas que, con el tiempo, se convierten en iconos.
-                    </template>
-
-                </RolexHeader>
+    <RolexTemplate>
+        <template #content>
+            <PageBanner type="new-watches-2024" />
 
 
-                <div class="flex flex-col justify-center items-center w-full">
-                    <div id="rolex-container" class="grid grid-cols-1 place-items-center md:grid-cols-2 gap-2  ">
-                        <NewModelsCard name="cosmograph-daytona" />
-                        <NewModelsCard name="1908" />
-                        <NewModelsCard name="yacht-master-42" />
-                        <NewModelsCard name="sky-dweller" />
-                        <NewModelsCard name="gmt-master-ii" />
-                        <NewModelsCard name="explorer-40" />
-                        <NewModelsCard name="oyster-perpetual" />
-                        <NewModelsCard name="day-date-36" />
-                    </div>
+            <RolexHeader color="bg-rolex-brown-light-2">
+
+                <template #title>
+                    Nuevos Relojes Rolex - <br>
+                    Mimi Joyería
+                </template>
+                <template #text>
+                    <strong>
+                        Con sus últimas creaciones, Rolex arroja una nueva luz sobre algunos de sus modelos más emblemáticos. 
+                    </strong>
+                    
+                
+                    La colección 2024 ofrece armonías inéditas entre materiales, colores y texturas, lo que refleja la voluntad de renovar continuamente las emociones relojeras. Esta colección se distingue por una atención infinita al más mínimo detalle. Gracias a nuestro excelente savoir-faire, los nuevos modelos juegan con los contrastes.
+
+
+
+                </template>
+
+            </RolexHeader>
+
+           
+
+            <div class="flex flex-col justify-center items-center w-full text-rolex-brown bg-rolex-brown-light-2 pb-[10vh]">
+                <div id="rolex-container"
+                    class="grid grid-cols-1 place-items-center md:grid-cols-2 w-10/12 gap-x-2 gap-y-10">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-gmt-master-ii" link="/nuevos-modelos-2024/gmt-master-ii">
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            GMT Master II
+                        </template>
+
+
+                    </ModelsCard>
+
+
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-day-date" link="/nuevos-modelos-2024/day-date">
+
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            Day-Date
+                        </template>
+
+                    </ModelsCard>                 
+
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-1908" link="/nuevos-modelos-2024/1908">
+
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            1908
+                        </template>
+
+                    </ModelsCard>
+
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-deepsea" link="/nuevos-modelos-2024/deepsea">
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            Deepsea
+                        </template>
+
+                    </ModelsCard>
+
+                  
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-cosmograph-daytona" link="/nuevos-modelos-2024/cosmograph-daytona">
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            Cosmograph Daytona
+                        </template>
+
+
+                    </ModelsCard>
+
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-sky-dweller" link="/nuevos-modelos-2024/sky-dweller">
+                        <template #sub>
+                            Nuevos Relojes 2024
+                        </template>
+                        <template #title>
+                            Sky-Dweller
+                        </template>
+
+
+                    </ModelsCard>
                 </div>
 
-                <div id="footer-banner">
-                    <img src="/assets/routes-assets/banners/banner-2-nuevos-modelos.webp" alt="banner-rolex-oro" class="w-full">
-                </div>
+            </div>
 
 
-            </template>
-        </RolexTemplate>
+          
 
-    </div>
+
+
+        </template>
+    </RolexTemplate>
 </template>
-
-<style scoped></style>
-
