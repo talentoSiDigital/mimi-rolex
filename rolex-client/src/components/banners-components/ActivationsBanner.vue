@@ -18,17 +18,24 @@ const sliderItems = [
     alt: "Coleccion-Rolex-gmt-master-ii-banner",
     title: "Banner GMT Master II",
   },
+
   {
-    src: "lemans-rolex",
-    link: "/world-of-rolex/las-24-horas-de-le-mans",
-    alt: "cosmograph-daytona-lemans-rolex-banner",
-    title: "Cosmograph Daytona Lemans",
+    src: "the-open",
+    link: "/world-of-rolex/rolex-y-the-open",
+    alt: "the-open",
+    title: "Rolex y The Open",
   },
   {
     src: "wimbledon",
     link: "/world-of-rolex/rolex-y-the-championships-wimbledon",
     alt: "rolex-y-the-championships-wimbledon",
     title: "Rolex y The Championships, Wimbledon",
+  },
+  {
+    src: "lemans-rolex",
+    link: "/world-of-rolex/las-24-horas-de-le-mans",
+    alt: "cosmograph-daytona-lemans-rolex-banner",
+    title: "Cosmograph Daytona Lemans",
   },
 ];
 

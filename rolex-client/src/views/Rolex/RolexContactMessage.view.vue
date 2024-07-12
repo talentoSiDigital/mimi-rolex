@@ -97,7 +97,7 @@ function sendMessage() {
 
                         </section>
 
-                        <NewContactForm v-model="messageInfo" class="w-1/3" @get-back="moveForm" @send-mail="sendMessage"/>
+                        <NewContactForm -color="bg-rolex-brown-light-2" v-model="messageInfo" class="w-1/3" @get-back="moveForm" @send-mail="sendMessage"/>
 
                         <section class="border bg-rolex-brown-light-2 py-[10vh] w-1/3">
                             <header

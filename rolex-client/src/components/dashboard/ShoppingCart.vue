@@ -149,14 +149,21 @@ watch(checkResponse, () => {
             dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
             dataObject.value.transactionToken = paymentStatus.value.consumerAuthenticationInformation.token
             console.log(dataObject.value);
-            // paymentDataServices.generateToken(dataObject.value).then((d)=>{
+            paymentDataServices.generateToken(dataObject.value).then((d)=>{
+                console.log(d.data);
+                dataObject.value.customerTokenId= "1CC24E660B4F153DE063AF598E0AAD8A"
+                dataObject.value.customerShippingAddressId= "1CC25B61F55B3EE2E063AF598E0A0D0B"
+                dataObject.value.instrumentIdentifierId= "7032770000053652701"
+                dataObject.value.paymentInstrumentId= "1CC24E660B56153DE063AF598E0AAD8A"
+                paymentDataServices.payWithTokens(dataObject.value).then((d)=>{
+                    console.log(d.data);
+                })
+            })
+
+            // paymentDataServices.payWithData(dataObject.value, user).then((d) => {
+            //     // router.push(`/checkout/`)
             //     console.log(d.data);
             // })
-
-            paymentDataServices.payWithData(dataObject.value, user).then((d) => {
-                // router.push(`/checkout/`)
-                console.log(d.data);
-            })
         }
 
 
@@ -202,110 +209,140 @@ watch(challengeResponse, () => {
 </script>
 
 <template>
-    <section>
+  <section>
+    <noscript>
+      <iframe
+        style="
+          width: 100px;
+          height: 100px;
+          border: 0;
+          position: absolute;
+          top: -50000px;
+        "
+        :src="`https://h.onlinemetrix.net/fp/tags?org_id=${orgID}&session_id=${sessionID}`"
+      ></iframe>
+    </noscript>
 
-        <noscript>
-            <iframe style="width: 100px; height: 100px; border: 0; position:absolute; top:-50000px;"
-                :src="`https://h.onlinemetrix.net/fp/tags?org_id=${orgID}&session_id=${sessionID}`"></iframe>
-        </noscript>
+    <div>
+      <transition name="bounce">
+        <ConfirmationModal
+          v-if="active"
+          @activate-modal="activateModal"
+          v-model:data-object="dataObject"
+          @send-payment="sendPayment"
+          v-model:status="paymentStatus"
+        />
+      </transition>
 
-        <div>
-            <transition name="bounce">
+      <DDCIframe
+        v-if="checkStep"
+        :data="paymentStatus"
+        v-model="checkResponse"
+      />
 
-                <ConfirmationModal v-if="active" @activate-modal="activateModal" v-model:data-object="dataObject"
-                    @send-payment="sendPayment" v-model:status="paymentStatus" />
-            </transition>
+      <ChallengeAuth
+        v-if="challenge"
+        v-model="challengeResponse"
+        :data="paymentStatus"
+        :access-token="accessToken"
+      />
 
-            <DDCIframe v-if="checkStep" :data="paymentStatus" v-model="checkResponse" />
+      <transition
+        enter-active-class="duration-100 ease-in-out"
+        enter-from-class="transform opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="duration-700 ease-in-out"
+        leave-from-class="opacity-700"
+        leave-to-class="transform opacity-0"
+      >
+        <div
+          class="bg-[rgba(0,0,0,0.8)] z-30 fixed h-screen top-0 w-full"
+          v-if="active"
+        ></div>
+      </transition>
+    </div>
 
-            <ChallengeAuth v-if="challenge" v-model="challengeResponse" :data="paymentStatus"
-                :access-token="accessToken" />
+    <div
+      class="my-10 flex flex-col md:flex-row items-center justify-center w-full"
+    >
+      <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
+      <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-normal">
+        CARRITO DE COMPRAS
+      </h1>
 
-
-            <transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"
-                enter-to-class="opacity-100" leave-active-class="duration-700 ease-in-out"
-                leave-from-class="opacity-700" leave-to-class="transform opacity-0">
-                <div class="bg-[rgba(0,0,0,0.8)] z-30 fixed h-screen top-0 w-full" v-if="active">
-
+      <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
+    </div>
+    <div class="min-h-[95vh] mb-10">
+      <div
+        class="w-full h-full flex gap-4 lg:gap-0 flex-col lg:flex-row items-center lg:items-start justify-between px-20 mb-10"
+        v-if="isReady"
+      >
+        <div
+          :class="state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-full'"
+          class="h-[96vh] border-2 rounded-lg border-main-green p-6 lg:ml-5 -translate-x-1.5 -translate-y-1.5"
+        >
+          <h2 class="text-2xl pb-1">Resumen del pedido</h2>
+          <section class="h-[84%] overflow-y-scroll" v-if="isReady">
+            <div v-if="state.length > 0">
+              <div v-for="(product, key) in state" :key="key">
+                <div v-for="item in state[key].quantity" :key="item">
+                  <CartProductCard
+                    :product="product"
+                    @delete-item="deleteItemInCart"
+                  />
                 </div>
-            </transition>
-        </div>
-
-        <div class="my-10 flex flex-col md:flex-row items-center justify-center w-full">
-            <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
-            <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-normal">
-                CARRITO DE COMPRAS
-            </h1>
-
-            <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
-        </div>
-        <div class=" min-h-[95vh] mb-10">
-            <div class=" w-full h-full flex gap-4 lg:gap-0 flex-col lg:flex-row items-center lg:items-start justify-between px-20 mb-10"
-                v-if="isReady">
-
-                <div :class="state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-full'"
-                    class="h-[96vh] border-2 rounded-lg border-main-green  p-6 lg:ml-5 -translate-x-1.5 -translate-y-1.5">
-                    <h2 class="text-2xl pb-1">Resumen del pedido</h2>
-                    <section class="h-[84%] overflow-y-scroll" v-if="isReady">
-                        <div v-if="state.length > 0">
-                            <div v-for="(product, key) in state" :key="key">
-                                <div v-for="item in state[key].quantity" :key="item">
-
-                                    <CartProductCard :product="product" @delete-item="deleteItemInCart" />
-                                </div>
-
-                            </div>
-                        </div>
-                        <div v-else class="border h-[88%] flex items-center justify-center">
-                            <h2 class="text-4xl">No hay productos en tu carrito</h2>
-                        </div>
-                    </section>
-
-                    <hr class="mt-2">
-                    <section>
-                        <h2 v-if="isReady" class="text-2xl  text-right  py-2">
-                            Total: ${{ getPrice(state).toLocaleString('en-US') }}
-                        </h2>
-
-                    </section>
-
-                </div>
-
-                <DashboardCards class="w-[90vw] lg:w-2/5 h-full bg-white" v-if="state.length > 0">
-                    <div v-if="isReady" class="w-full h-full">
-
-                        <PayoutForm v-model="dataObject" :amount="getPrice(state)" @activate-modal="activateModal" />
-                    </div>
-                </DashboardCards>
-
+              </div>
             </div>
+            <div v-else class="border h-[88%] flex items-center justify-center">
+              <h2 class="text-4xl">No hay productos en tu carrito</h2>
+            </div>
+          </section>
+
+          <hr class="mt-2" />
+          <section>
+            <h2 v-if="isReady" class="text-2xl text-right py-2">
+              Total: ${{ getPrice(state).toLocaleString("en-US") }}
+            </h2>
+          </section>
         </div>
 
-
-    </section>
-
+        <DashboardCards
+          class="w-[90vw] lg:w-2/5 h-full bg-white"
+          v-if="state.length > 0"
+        >
+          <div v-if="isReady" class="w-full h-full">
+            <PayoutForm
+              v-model="dataObject"
+              :amount="getPrice(state)"
+              @activate-modal="activateModal"
+            />
+          </div>
+        </DashboardCards>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
 .bounce-enter-active {
-    animation: bounce-in 0.5s;
+  animation: bounce-in 0.5s;
 }
 
 .bounce-leave-active {
-    animation: bounce-in 0.5s reverse;
+  animation: bounce-in 0.5s reverse;
 }
 
 @keyframes bounce-in {
-    0% {
-        transform: scale(0);
-    }
+  0% {
+    transform: scale(0);
+  }
 
-    50% {
-        transform: scale(1.25);
-    }
+  50% {
+    transform: scale(1.25);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

@@ -192,6 +192,15 @@ const router = createRouter({
         title: "Rolex y The Amundi Evian Championship - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
+    {
+      path: "/world-of-rolex/rolex-y-the-open",
+      name: "world-of-rolex-article-7",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle7.view.vue"),
+      meta: {
+        title: "Rolex y The Open - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
+
 
  
   

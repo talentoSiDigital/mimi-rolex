@@ -31,13 +31,34 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         <div class="w-11/12">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-main"
+            link="/world-of-rolex/rolex-y-the-open"
+            class="w-full"
+          >
+            <template #sub>Publicado el 12 de Julio, 2024</template>
+            <template #title>Rolex y The Open: el major más antiguo del golf</template>
+            <template #description>
+              <h2 class="w-full md:w-1/2">
+                The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año. Asociado con esta competición desde 1981, Rolex es actualmente un socio privilegiado del mundo del golf.
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
+        </div>
+      </section>
+
+      <section
+        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
+      >
+        <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+          <SectionNavigationCard
+            img="world-of-rolex/world-of-rolex-admundi"
             link="/world-of-rolex/rolex-y-the-amundi-evian-championship"
             class="w-full"
           >
             <template #sub>Publicado el 4 de Julio, 2024</template>
             <template #title>Rolex y The Amundi Evian Championship</template>
             <template #description>
-              <h2 class="w-full md:w-1/2">
+              <h2 class="w-full ">
                 Rolex es Socio y Reloj Oficial del único <i>Major</i> de golf
                 que se celebra en Europa continental. The Amundi Evian
                 Championship se juega cada julio en el Evian Resort Golf Club en
@@ -49,17 +70,10 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-        </div>
-      </section>
-
-      <section
-        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
-      >
-        <div class="w-11/12 flex flex-col md:flex-row gap-2">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-wimbledon"
             link="/world-of-rolex/rolex-y-the-championships-wimbledon"
-            class="w-full md:w-1/2"
+            class="w-full "
           >
             <template #sub>Publicado el 1 de Junio, 2024</template>
             <template #title>Rolex y The Championship, Wimbledon</template>
@@ -80,7 +94,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-lemans"
             link="/world-of-rolex/las-24-horas-de-le-mans"
-            class="w-full md:w-1/2"
+            class="w-full"
           >
             <template #sub>Publicado el 21 de Junio, 2024</template>
             <template #title>Las 24 Horas de Le Mans</template>
@@ -94,16 +108,10 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-        </div>
-      </section>
-      <section
-        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
-      >
-        <div class="w-11/12 flex flex-col md:flex-row gap-2">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-beyond-rolex"
             link="/world-of-rolex/viaje-al-corazon-del-universo-rolex"
-            class="w-full md:w-1/2"
+            class="w-full"
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>Viaje al corazón del universo Rolex</template>
@@ -123,7 +131,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-sailgp"
             link="/world-of-rolex/sail-gp"
-            class="w-full md:w-1/2"
+            class="w-full "
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>SailGP</template>
@@ -138,16 +146,11 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-        </div>
-      </section>
-      <section
-        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
-      >
-        <div class="w-11/12 flex flex-col md:flex-row gap-2">
+
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-grand-slam"
             link="/world-of-rolex/rolex-grand-slam"
-            class="w-full md:w-1/2"
+            class="w-full "
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>Rolex Grand Slam of Show Jumping</template>
@@ -165,6 +168,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
         </div>
       </section>
+    
     </template>
   </RolexTemplate>
 </template>

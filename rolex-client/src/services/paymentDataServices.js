@@ -26,6 +26,9 @@ class MailSender {
   generateToken(data){
     return http.post("/generate-token",data)
   }
+  payWithTokens(data){
+    return http.post("/pay-with-token",data)
+  }
 
 }
 
