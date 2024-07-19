@@ -334,8 +334,8 @@ exports.tokenGeneration = async (req, res) => {
 
 
 		var buyerInformation = new cybersourceRestApi.Tmsv2customersBuyerInformation();
-		buyerInformation.merchantCustomerID = 'TestCustomer';
-		buyerInformation.email = 'test@cybs.com';
+		buyerInformation.merchantCustomerID = info.referenceCode;
+		buyerInformation.email = info.orderInformationBillToEmail;
 		requestObj.buyerInformation = buyerInformation;
 
 		var instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
@@ -1082,4 +1082,64 @@ exports.payWithToken = async (req, res) => {
 
 }
 
+exports.testing = async (req,res) => {
+	console.log("Comienzo de la ejecución")
+	if (!req.body) {
+		res.status(500).send('Debes enviar el pago')
+		return
+	}
 
+	try {
+		var configObject = new config();
+		var apiClient = new cybersourceRestApi.ApiClient();
+		var requestObj = new cybersourceRestApi.PostCustomerRequest();
+
+
+		var buyerInformation = new cybersourceRestApi.Tmsv2customersBuyerInformation();
+		buyerInformation.merchantCustomerID = 'SecondCustomer';
+		buyerInformation.email = 'test3@cybs.com';
+		requestObj.buyerInformation = buyerInformation;
+
+		var instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
+		var opts = [];
+
+		instance.postCustomer(requestObj, opts, function (error, data, response) {
+
+			if (error) {
+				console.log('\nError : ' + JSON.stringify(error));
+			}
+			else if (data) {
+				console.log('\nData : ' + JSON.stringify(data));
+			}
+
+			console.log('\nResponse : ' + JSON.stringify(response));
+			console.log('\nResponse Code of Retrieve a Customer : ' + JSON.stringify(response['status']));
+
+			// var customerToken = JSON.parse(response['text'])
+			// var customerTokenId = customerToken.id
+			var customerTokenId = '1D634C06E96F18E4E063AF598E0A6DEE'
+
+			instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
+			instance.getCustomer(customerTokenId, opts, function (error, data, response) {
+				if(error) {
+					console.log('\nError : ' + JSON.stringify(error));
+				}
+				else if (data) {
+					console.log('\nData : ' + JSON.stringify(data));
+				}
+				res.send(response)
+
+				});
+
+
+		});
+
+
+
+
+	}
+	catch (error) {
+		res.send("Ocurrio un error: " + error.message)
+	}
+
+}

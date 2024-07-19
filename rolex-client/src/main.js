@@ -86,5 +86,4 @@ createApp(App)
     .use(pinia)
 
     .use(vueCountryRegionSelect)
-    .component('vue-cookie-accept-decline', VueCookieAcceptDecline)
     .mount('#app')

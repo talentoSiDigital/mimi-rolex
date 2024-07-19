@@ -9,6 +9,11 @@
             "date": 1720461973937,
             "name": "log\\cybs-2024-07-08.log",
             "hash": "d8e4f2fcd09627a2c4c8b8e4f5b5b8f4b14aa252cd80631370afad228ca84238"
+        },
+        {
+            "date": 1721150257349,
+            "name": "log\\cybs-2024-07-16.log",
+            "hash": "41b41226b37b947e1f3113efafa217340113dfed1f10059f6a2dfdeaa53bea94"
         }
     ],
     "hashType": "sha256"

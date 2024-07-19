@@ -14,7 +14,6 @@ import DDCIframe from '../payout-components/DDCIframe.vue';
 import PayoutForm from '../payout-components/PayoutForm.vue';
 import { useRouter } from 'vue-router';
 
-
 const code = ref(randomStr())
 const active = ref(false)
 const piniaStore = auth()
@@ -148,13 +147,12 @@ watch(checkResponse, () => {
             dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
             dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
             dataObject.value.transactionToken = paymentStatus.value.consumerAuthenticationInformation.token
-            console.log(dataObject.value);
             paymentDataServices.generateToken(dataObject.value).then((d)=>{
-                console.log(d.data);
-                dataObject.value.customerTokenId= "1CC24E660B4F153DE063AF598E0AAD8A"
-                dataObject.value.customerShippingAddressId= "1CC25B61F55B3EE2E063AF598E0A0D0B"
-                dataObject.value.instrumentIdentifierId= "7032770000053652701"
-                dataObject.value.paymentInstrumentId= "1CC24E660B56153DE063AF598E0AAD8A"
+              dataObject.value.customerTokenId= "1CC24E660B4F153DE063AF598E0AAD8A"
+              dataObject.value.customerShippingAddressId= "1CC25B61F55B3EE2E063AF598E0A0D0B"
+              dataObject.value.instrumentIdentifierId= "7032770000053652701"
+              dataObject.value.paymentInstrumentId= "1CC24E660B56153DE063AF598E0AAD8A"
+              console.log(dataObject.value);
                 paymentDataServices.payWithTokens(dataObject.value).then((d)=>{
                     console.log(d.data);
                 })
