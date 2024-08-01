@@ -18,7 +18,6 @@ const code = ref(randomStr())
 const active = ref(false)
 const piniaStore = auth()
 const user = piniaStore.$state.user.id
-console.log(piniaStore.$state.user);
 
 const totalAmount = ref(0)
 const paymentStatus = ref("")
@@ -59,16 +58,16 @@ function randomStr() {
 
 const dataObject = ref({
     "total": "0",
-    "firstName": "Manuel",
-    "lastName": "Zorrilla",
+    "firstName": "",
+    "lastName": "",
     "email": piniaStore.$state.user.email,
     "phone": piniaStore.$state.user.phone,
-    "documentId": "27515094",
-    "address": "Ciudad Center, boleita",
+    "documentId": "",
+    "address": "",
     "country": "VE",
     "cardNumber": "",
-    "cardExpirationMonth": "12",
-    "cardExpirationYear": "2027",
+    "cardExpirationMonth": "",
+    "cardExpirationYear": "",
     "region": "",
     "code": code.value,
     "deviceFingerPrintID": code.value
@@ -126,7 +125,6 @@ watch(checkResponse, () => {
     paymentDataServices.step2(dataObject.value, user).then((d) => {
     
         paymentStatus.value = d.data
-        console.log(d.data);
     
         if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
             challenge.value = true
@@ -147,21 +145,24 @@ watch(checkResponse, () => {
             dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
             dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
             dataObject.value.transactionToken = paymentStatus.value.consumerAuthenticationInformation.token
+
+            
             paymentDataServices.generateToken(dataObject.value).then((d)=>{
               dataObject.value.customerTokenId= "1CC24E660B4F153DE063AF598E0AAD8A"
               dataObject.value.customerShippingAddressId= "1CC25B61F55B3EE2E063AF598E0A0D0B"
               dataObject.value.instrumentIdentifierId= "7032770000053652701"
               dataObject.value.paymentInstrumentId= "1CC24E660B56153DE063AF598E0AAD8A"
-              console.log(dataObject.value);
-                paymentDataServices.payWithTokens(dataObject.value).then((d)=>{
-                    console.log(d.data);
-                })
-            })
+              console.log(d.data);
 
-            // paymentDataServices.payWithData(dataObject.value, user).then((d) => {
-            //     // router.push(`/checkout/`)
-            //     console.log(d.data);
-            // })
+              // paymentDataServices.payWithTokens(dataObject.value,user).then((d)=>{
+              //     console.log(d.data);
+              //     active.value = false
+              //     router.push(`/checkout/`)
+              //   })  
+                
+              })
+              
+              
         }
 
 

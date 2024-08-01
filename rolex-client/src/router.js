@@ -237,6 +237,16 @@ const router = createRouter({
     // MIMI STATIC ROUTES
     ,
     {
+      path: "/tudor",
+      name: "tudor",
+      component: ()=>import("./views/Mimi/Tudor.view.vue"),
+      meta: {
+        title: "Tudor - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    }
+    ,
+    ,
+    {
       path: "/relojeria",
       name: "relojeria",
       component: ()=>import("./views/Mimi/Relojeria.view.vue"),
