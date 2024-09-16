@@ -2,7 +2,7 @@
 import Icons from './Icons.vue'
 import InputCard from './InputCard.vue'
 import SelectInput from './SelectInput.vue'
-import ConfirmationModal from '../global-components/ConfirmationModal.vue'
+import ConfirmationModal from '../modals/ConfirmationModal.vue'
 import { Form, Field, ErrorMessage } from "vee-validate";
 import { ref, watch } from 'vue';
 import * as yup from "yup";
@@ -51,6 +51,12 @@ const schema = yup.object().shape({
         .required("Debes colocar un número")
         .min(14, "Numero inválido: faltan datos")
         .max(19, "Numero inválido: sobran datos"),
+    cvn: yup
+        .string()
+        .test('Solo Números', 'Codigo Invalido', digitsOnly)
+        .required("El CVN es Obligatorio ")
+        .min(3, "Numero inválido: faltan datos")
+        .max(3, "Numero inválido: sobran datos"),
     month: yup
         .number("Debes colocar un número")
         .typeError('Debes colocar un número')
@@ -143,7 +149,7 @@ function handleRegister() {
     } else {
         regionWarn.value = false
         if (dataToSend.value.country == "US" || dataToSend.value.country == "CA") {
-            dataToSend.value.region = dataExtra.value.region
+           
             dataToSend.value.location = dataExtra.value.location
             dataToSend.value.zip = dataExtra.value.zip
             dataToSend.value.buildingNumber = dataExtra.value.buildingNumber
@@ -155,9 +161,6 @@ function handleRegister() {
 
     }
 }
-function debug(){
-    console.log(dataToSend.value);
-}
 
 </script>
 
@@ -166,7 +169,7 @@ function debug(){
 
 
     <div class="w-full  h-full ">
-        <h2 class="text-2xl pt-2" @click="debug()" >Resumen del pedido</h2>
+        <h2 class="text-2xl pt-2" >Resumen del pedido</h2>
         <p>*Todos los campos son obligatorios</p>
 
         <Icons />
@@ -216,21 +219,30 @@ function debug(){
 
                 </div>
                 <div>
-                    <label for="card" class="block mb-1 text-sm font-medium text-gray-900 ">Número de
+                  <div>
+                      <label for="card" class="block mb-1 text-sm font-medium text-gray-900 ">Número de
                         tarjeta</label>
                     <div class="flex items-start gap-2">
                         <InputCard v-model="card" />
                         <div class="w-[90%]  h-full">
                             <Field id="card" type="text" name="card" placeholder="1234569789"
-                                class="bg-white border border-gray-300 h-12 text-gray-900 sm:text-sm rounded-r-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                                class="bg-white border border-gray-300 h-12 text-gray-900 sm:text-sm  focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                 v-model="card" />
+                               
+                        </div>
+                        <div class="w-[10%]  h-full">
+                            <Field id="cvn" type="text" name="cvn" placeholder="CVN"
+                                    class="bg-white border border-gray-300 h-12 text-gray-900 sm:text-sm rounded-r-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                                    v-model="dataToSend.cvn" />
                         </div>
 
                     </div>
                     <div class=" h-6">
 
-                        <ErrorMessage name="card" class="text-red-700 text-sm" />
+                        <ErrorMessage name="card" class="text-red-700 text-sm pr-4" />
+                        <ErrorMessage name="cvn" class="text-red-700 text-sm" />
                     </div>
+                  </div>
 
                 </div>
 
@@ -293,7 +305,7 @@ function debug(){
                 
                 <div>
                     <h2 class="block mb-1 text-sm font-medium text-gray-900 ">Región</h2>
-                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataExtra.region" :regionName="true" :autocomplete="true"
+                    <region-select v-model="dataToSend.region" :country="dataToSend.country" :region="dataToSend.region" :regionName="true" 
                         class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " />
                     <div class=" h-6">
                         <h2 v-if="regionWarn" class="text-red-700 text-sm">Debes seleccionar una region</h2>

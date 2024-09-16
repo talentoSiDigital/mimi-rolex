@@ -1,3 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+LOCAL
+
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+#images and assets (PRODUCTION ONLY)
+
+src/assets
+
+
+
 #server
 server/node_modules
 server/.env
@@ -6,5 +39,7 @@ server/.env
 server/storage/
 server/app/views/
 
+
+rolex-client/public
 
 

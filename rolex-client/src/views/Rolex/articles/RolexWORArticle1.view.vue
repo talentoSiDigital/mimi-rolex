@@ -21,8 +21,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
 
                     <p class="w-10/12 md:w-1/2 text-xl md:text-2xl font-helvetica font-bold text-rolex-dark-grey text-left ">
-                        Hans Wilsdorf estaba firmemente convencido de la capacidad de una persona para innovar y luchar
-                        por la excelencia.
+                        Hans Wilsdorf estaba íntimamente convencido de la capacidad del ser humano para innovar con la excelencia como objetivo.
                     </p>
                     <p class="w-10/12 md:w-1/2 h-fit text-lg md:text-xl text-rolex-dark-grey">
                         Publicado el 9 de Abril, 2024
@@ -46,11 +45,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
-                        Casi 120 años después de la creación de la marca, la filosofía del fundador está más presente
-                        que nunca, desde la fabricación de los relojes de la empresa hasta sus compromisos en todo el
-                        mundo.
-                        Rolex es sede de una variedad de profesiones, a las que dan vida los empleados que son expertos
-                        en sus campos.
+                        Más de cien años después de la creación de la marca, el espíritu del fundador está más presente que nunca, tanto en lo que afecta a la fabricación de relojes como a los compromisos de Rolex en todo el mundo.
                     </p>
 
                 </header>
@@ -65,7 +60,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
 
                     <p class="w-10/12 md:w-1/2 text-3xl md:text-5xl font-georgia font-light text-left ">
-                        "La oposición que encontré me pareció insuperable".
+                        «En una primera impresión las dificultades parecían insalvables».
                     </p>
 
                 </header>
@@ -84,8 +79,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
-                        Desde el principio, la historia de Rolex se ha caracterizado por la búsqueda de la perfección y
-                        la ambición de superar los límites.
+                        Desde sus orígenes, la historia de Rolex ha estado marcada por el anhelo de perfección y el deseo de sobrepasar los límites del éxito.
 
                     </p>
 
@@ -103,12 +97,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit py-[10vh]">
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
-                        A principios del siglo XX, un emprendedor visionario con sede en Londres estaba al borde del
-                        éxito. ¿Su objetivo? Presentar al mundo relojero de hoy en día una firma de esfera aún
-                        desconocida: Rolex. Un nuevo nombre, inventado en 1908, se convertiría en una de las marcas más
-                        respetadas del mundo en el espacio de unas pocas décadas. Como relató Hans Wilsdorf en sus
-                        memorias de los primeros días de su empresa, la oposición a la que se enfrentó parecía
-                        insuperable al principio.
+                        A principios del siglo XX, un emprendedor visionario, entonces radicado en Londres, está a punto de triunfar con tan solo su voluntad por bandera. ¿Cuál es su empeño? Dar a conocer al mundo relojero de la época una firma todavía ignorada: Rolex. Un nombre inédito, inventado en 1908, que en pocos decenios acabaría por convertirse en una de las marcas más famosas del mundo. «En una primera impresión las dificultades parecían insalvables»: con estas palabras recordaba Hans Wilsdorf en sus memorias los orígenes de su empresa. 
 
                     </p>
 
@@ -126,12 +115,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-                        El emprendedor comenzó con muy poco, pero poseía cualidades invaluables: visión, perseverancia y
-                        una extraordinaria capacidad de trabajo. Huérfano a los 12 años, con nada más que su
-                        determinación de ayudarlo a superar los desafíos, Hans Wilsdorf inventó el primer reloj de
-                        pulsera automático resistente al agua del mundo con rotor perpetuo, un reloj que se ha
-                        convertido en un punto de referencia en términos de calidad y prestigio.
-
+                        En aquellos momentos, como empresario no poseía demasiados bienes, pero como hombre poseía algunas cualidades inestimables: visión, perseverancia y una capacidad de trabajo fuera de lo común. Huérfano desde los 12 años, sin nada de lo que echar mano que no fuera su determinación para superar todos los obstáculos, Hans Wilsdorf inventará el primer reloj de pulsera hermético de cuerda automática por rotor Perpetual del mundo. Un reloj que, a día de hoy, es una referencia en materia de calidad y de prestigio. 
                     </p>
 
                 </header>
@@ -147,13 +131,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit py-[10vh]">
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
-                        "Demasiado complicado, demasiado frágil, mal adaptado": el reloj de pulsera fue recibido con
-                        escepticismo. Sin embargo, apoyándose en sus firmes creencias, Hans Wilsdorf logró su audaz
-                        objetivo de establecer el reloj Rolex, el Oyster Perpetual, como el arquetipo del reloj de
-                        pulsera automático resistente al agua, un reloj robusto y preciso capaz de soportar todas las
-                        condiciones. Pero no fue simplemente un visionario que dotó a los relojes Rolex de sus
-                        características técnicas y estéticas fundamentales. Su constante búsqueda de la perfección iba
-                        acompañada de una profunda generosidad y una fe inquebrantable en el potencial humano.
+                        «Demasiado complicado, demasiado frágil, demasiado fuera de lugar», le habían repetido hasta la saciedad. Gracias a sus profundas convicciones, Hans Wilsdorf logró, con su audacia y pese a todo, imponer el reloj Rolex —el Oyster Perpetual— como el arquetipo del reloj hermético, preciso y robusto, capaz de resistir a cualquier situación. Pero él no fue tan solo el visionario que dio a los relojes Rolex sus características técnicas y estéticas fundamentales. A su constante búsqueda de la perfección se sumaban una gran generosidad y una fe inquebrantable en el potencial del ser humano. 
 
                     </p>
 
@@ -170,27 +148,18 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit py-[10vh]">
 
                     <h1 class="text-2xl md:text-5xl w-10/12 md:w-1/2">
-                        Uniendo conocimientos
+                        La suma de múltiples savoir-faire
                     </h1>
 
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-                        Rolex es una empresa integrada e independiente que cuenta con recursos de fabricación que
-                        abarcan una amplia gama de habilidades y conocimientos. Relojeros, ingenieros, diseñadores y
-                        otros especialistas trabajan en estrecha colaboración desde el diseño hasta la fabricación de
-                        los relojes. La cultura empresarial de Rolex se basa sobre todo en los valores humanos, que
-                        sitúan tanto la experiencia como las habilidades blandas en el centro de las diferentes
-                        actividades de la marca.
+                        Como manufactura independiente y vertical, Rolex dispone de un aparato industrial que agrupa un savoir faire incuantificable. Relojeros, ingenieros, diseñadores y otros especialistas colaboran estrechamente para concebir y, posteriormente, fabricar los relojes. La cultura de la empresa se basa, ante todo, en los valores humanos que ponen el savoir faire y las relaciones sociales en el centro de las diferentes actividades. 
 
                     </p>
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-
-                        Rolex es sede de una variedad de profesiones, a las que dan vida los empleados que son expertos
-                        en sus campos. La empresa diseña y fabrica la mayoría de los componentes de sus relojes, desde
-                        la fundición de aleaciones de oro hasta el mecanizado, la elaboración, el montaje y el acabado
-                        del movimiento, la caja, la esfera y el brazalete, así como el engastado de gemas
+                        Rolex representa numerosos oficios distintos, encarnados por hombres y mujeres especialistas en sus respectivos ámbitos. La marca controla la totalidad de los componentes esenciales… desde la fundición de las aleaciones de oro al ensamblaje de los elementos del movimiento, la caja, la esfera y el brazalete, pasando por el mecanizado, el acabado y el engaste. Además, pone a disposición del mundo entero sus diferentes savoir-faire gracias a una red y a un servicio posventa excepcionales. 
 
                     </p>
 
@@ -211,11 +180,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-                        Para garantizar que la experiencia de la marca exista en el futuro, Rolex cuenta con su propio
-                        Centro de Formación. Dedicado a la búsqueda de la excelencia y al desarrollo de sus empleados,
-                        el centro, situado en Ginebra, ofrece formación a los empleados e instruye a los aprendices. La
-                        empresa tiene como objetivo transmitir a las generaciones más jóvenes su orgullo por sus
-                        habilidades y el dominio de sus conocimientos.
+                        Para garantizar que ese savoir-faire no desaparezca nunca, Rolex dispone de su propio Centro de Formación, único en su género. Este centro, radicado en Ginebra y dedicado a la búsqueda de la excelencia y el desarrollo de sus empleados, ofrece formación continua a todos sus empleados y garantiza la formación de los aprendices. De este modo, la empresa cuenta con transmitir a las jóvenes generaciones su orgullo por sus habilidades y el dominio de sus conocimientos.
 
                     </p>
 
@@ -232,20 +197,13 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit py-[10vh]">
 
                     <h1 class="text-2xl md:text-5xl w-10/12 md:w-1/2">
-
-                        Un reloj diferente al resto
+                        Un reloj que no se parece a los demás
                     </h1>
 
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-                        La colección Oyster Perpetual se basó en el éxito de la Oyster original lanzada en 1926. Como el
-                        primer reloj de pulsera resistente al agua del mundo, con su arquitectura de caja patentada,
-                        desempeñó un papel pionero en el desarrollo del reloj moderno. A lo largo de los años, el Oyster
-                        se convirtió en el orgulloso portador de muchas otras innovaciones, como el autobobinado
-                        mediante el rotor Perpetual (1931), que definieron la identidad de los modelos de la colección y
-                        forjaron la reputación de excelencia de Rolex, de la que la precisión cronométrica y la
-                        fiabilidad se encuentran entre las piedras angulares.
+                        La colección Oyster Perpetual se ha construido a partir del éxito del modelo Oyster original, patentado y presentado en 1926. El Oyster, el primer reloj de pulsera hermético del mundo, desempeñó un papel pionero en la evolución del reloj de pulsera moderno. En el transcurso de los años, fue incorporando otras muchas innovaciones —por ejemplo, la cuerda automática por rotor Perpetual (1931)— que han definido la identidad de los modelos de la colección y han forjado la reputación de excelencia de Rolex que, entre otras cosas, se fundamenta en la precisión cronométrica de sus relojes y en su fiabilidad. 
 
                     </p>
 
@@ -267,19 +225,13 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
-                        El Oyster evolucionó gradualmente hasta convertirse en una colección de relojes que integraban
-                        nuevas funciones y tecnologías innovadoras. Todos los modelos comparten características
-                        fundamentales y una fuerte identidad visual. Hoy en día, la colección consta de 12 gamas,
-                        divididas en dos categorías: relojes clásicos, como el Datejust y el Day Date, y relojes
-                        profesionales, como el Explorer y el GMT-Master II.
+                        El Oyster ha ido incorporando gradualmente a su colección nuevas funcionalidades y tecnologías innovadoras. Los fundamentos de este arquetipo relojero se encuentran en todos los modelos, que comparten una identidad visual. La colección cuenta con doce gamas repartidas en dos categorías: relojes Clásicos como el Datejust y el Day Date, y relojes Profesionales como el Explorer y el GMT Master II. 
 
                     </p>
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
 
 
-                        Como pionera del reloj de pulsera moderno, la empresa está en el origen de numerosas
-                        innovaciones importantes en la industria relojera y ha presentado más de 600 patentes a lo largo
-                        de su historia.
+                        En tanto que marca pionera del reloj de pulsera, Rolex se encuentra en el origen de múltiples e importantes adelantos en el sector de la relojería y ha registrado más de 600 patentes en el transcurso de su historia.
                     </p>
 
                 </header>

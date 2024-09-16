@@ -21,9 +21,10 @@ class HeaderSlider {
       }
     })
   } 
-  clickBanner(){
+
+  clickBanner(source){
     
-    return http.post("/tudor-banner")
+    return http.post(`/tudor-banner/${source}`)
 
 }
 

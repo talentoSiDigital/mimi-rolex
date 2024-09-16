@@ -8,7 +8,7 @@ class MailSender {
   }
 
   rolexMail(data) {
-  
+
     const dataToSend = {
       "tto": data.tto,
       "nombre": data.nombre,
@@ -25,6 +25,7 @@ class MailSender {
 
     return http.post("/email/rolex", dataToSend)
   }
+  
   rolexNewMail(data){
     
     return http.post("/email/rolex-new/", data)

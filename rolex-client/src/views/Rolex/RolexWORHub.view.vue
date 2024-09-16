@@ -31,14 +31,14 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         <div class="w-11/12">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-main"
-            link="/world-of-rolex/rolex-y-the-open"
+            link="/world-of-rolex/rolex-y-the-us-open"
             class="w-full"
           >
-            <template #sub>Publicado el 12 de Julio, 2024</template>
-            <template #title>Rolex y The Open: el major más antiguo del golf</template>
+            <template #sub>Publicado el 23 de Agosto, 2024</template>
+            <template #title>Rolex y el US Open</template>
             <template #description>
               <h2 class="w-full md:w-1/2">
-                The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año. Asociado con esta competición desde 1981, Rolex es actualmente un socio privilegiado del mundo del golf.
+                El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.
               </h2>
             </template>
             <template #button>Más información</template>
@@ -49,7 +49,22 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
       <section
         class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
       >
-        <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+      <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+          <SectionNavigationCard
+            img="world-of-rolex/world-of-rolex-the-open"
+            link="/world-of-rolex/rolex-y-the-open"
+            class="w-full"
+          >
+            <template #sub>Publicado el 12 de Julio, 2024</template>
+            <template #title>Rolex y The Open: el major más antiguo del golf</template>
+            <template #description>
+              <h2 class="w-full ">
+                The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año. Asociado con esta competición desde 1981, Rolex es actualmente un socio privilegiado del mundo del golf.
+
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-admundi"
             link="/world-of-rolex/rolex-y-the-amundi-evian-championship"

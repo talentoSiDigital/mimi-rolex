@@ -1,210 +1,294 @@
 <script setup>
-import { useAsyncState } from '@vueuse/core';
+import {
+  useAsyncState,
+  useWindowSize,
+  useNavigatorLanguage,
+} from "@vueuse/core";
 import axios from "axios";
 import { ref, watch } from "vue";
-import router from '../../router';
-import paymentDataServices from '../../services/paymentDataServices';
-import StoreDataService from '../../services/storeDataService';
-import { auth } from '../../store/auth.module';
-import CartProductCard from '../cards/CartProductCard.vue';
-import DashboardCards from '../cards/DashboardCards.vue';
-import ConfirmationModal from '../global-components/ConfirmationModal.vue';
-import ChallengeAuth from '../payout-components/ChallengeAuth.vue';
-import DDCIframe from '../payout-components/DDCIframe.vue';
-import PayoutForm from '../payout-components/PayoutForm.vue';
-import { useRouter } from 'vue-router';
+import router from "../../router";
+import paymentDataServices from "../../services/paymentDataServices";
+import StoreDataService from "../../services/storeDataService";
+import { auth } from "../../store/auth.module";
+import CartProductCard from "../cards/CartProductCard.vue";
+import DashboardCards from "../cards/DashboardCards.vue";
+import ConfirmationModal from "../modals/ConfirmationModal.vue";
+import ChallengeAuth from "../payout-components/ChallengeAuth.vue";
+import DDCIframe from "../payout-components/DDCIframe.vue";
+import PayoutForm from "../payout-components/PayoutForm.vue";
+import { useRouter } from "vue-router";
+import uuid from "uuid-random";
+const { width, height } = useWindowSize();
+const { language } = useNavigatorLanguage();
+const code = ref(randomStr());
+const active = ref(false);
+const piniaStore = auth();
+const user = piniaStore.$state.user.id;
 
-const code = ref(randomStr())
-const active = ref(false)
-const piniaStore = auth()
-const user = piniaStore.$state.user.id
-
-const totalAmount = ref(0)
-const paymentStatus = ref("")
-const checkResponse = ref("")
-const challengeResponse = ref()
-const accessToken = ref("")
-const referenceId = ref()
-const checkStep = ref(false)
-const challenge = ref(false)
-const orgID = '1snn5n9w'
-
+const totalAmount = ref(0);
+const paymentStatus = ref("");
+const checkResponse = ref("");
+const challengeResponse = ref();
+const accessToken = ref("");
+const referenceId = ref();
+const checkStep = ref(false);
+const challenge = ref(false);
+const orgID = "k8vif92e";
+const ddci = ref(false);
 
 function getPrice(product) {
-    let total = 0
-    for (let index = 0; index < product.length; index++) {
-        let amount = String(product[index].precio)
-        amount = amount.replace('$', "")
-        amount = amount.replace(',', "")
-        amount = parseInt(amount) * product[index].quantity
-        total = total + amount
-    }
-    return total
+  let total = 0;
+  for (let index = 0; index < product.length; index++) {
+    let amount = String(product[index].precio);
+    amount = amount.replace("$", "");
+    amount = amount.replace(",", "");
+    amount = parseFloat(amount) * product[index].quantity;
+    total = total + amount;
+  }
+  return total;
 }
 
 const { state, isReady } = useAsyncState(
-    StoreDataService.getCartByUser(user)
-        .then(d => {
-            return d.data
-        })
-
-)
+  StoreDataService.getCartByUser(user).then((d) => {
+    return d.data;
+  })
+);
 
 function randomStr() {
-    let ans = crypto.randomUUID()
-    let array = ans.split('-')
-    return array[array.length - 1].toUpperCase();
+  let ans = uuid();
+  let array = ans.split("-");
+  return array[array.length - 1].toUpperCase();
 }
 
 const dataObject = ref({
-    "total": "0",
-    "firstName": "",
-    "lastName": "",
-    "email": piniaStore.$state.user.email,
-    "phone": piniaStore.$state.user.phone,
-    "documentId": "",
-    "address": "",
-    "country": "VE",
-    "cardNumber": "",
-    "cardExpirationMonth": "",
-    "cardExpirationYear": "",
-    "region": "",
-    "code": code.value,
-    "deviceFingerPrintID": code.value
+  total: "0",
+  firstName: "",
+  lastName: "",
+  email: piniaStore.$state.user.email,
+  phone: piniaStore.$state.user.phone,
+  documentId: "",
+  address: "",
+  country: "VE",
+  cardNumber: "",
+  cardExpirationMonth: "",
+  cardExpirationYear: "",
+  region: "",
+  cvn:"",
+  code: code.value,
+  deviceFingerPrintID: code.value,
+});
 
 
-})
+let externalScript = document.createElement("script");
+externalScript.setAttribute(
+  "src",
+  `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_5808459559${dataObject.value.deviceFingerPrintID}`
+);
 
+document.head.appendChild(externalScript);
 
-let externalScript = document.createElement('script')
-externalScript.setAttribute('src', `https://h.online-metrix.net/fp/tags.js?org_id=${orgID}&session_id=bc_5808459559${dataObject.value.deviceFingerPrintID}`)
+axios.get("https://api.ipify.org").then((response) => {
+  dataObject.value.ip = response.data;
+});
 
-document.head.appendChild(externalScript)
+function detectBrowser() {
+  var userAgent = navigator.userAgent;
+  if (userAgent.indexOf("Edg") > -1) {
+    return "Microsoft Edge";
+  } else if (userAgent.indexOf("Chrome") > -1) {
+    return "Chrome";
+  } else if (userAgent.indexOf("Firefox") > -1) {
+    return "Firefox";
+  } else if (userAgent.indexOf("Safari") > -1) {
+    return "Safari";
+  } else if (userAgent.indexOf("Opera") > -1) {
+    return "Opera";
+  } else if (
+    userAgent.indexOf("Trident") > -1 ||
+    userAgent.indexOf("MSIE") > -1
+  ) {
+    return "Internet Explorer";
+  }
 
-axios.get('https://api.ipify.org')
-    .then(response => {
-        dataObject.value.ip = response.data
-    })
+  return "Unknown";
+}
 
+function showOffset() {
+  // Date object
+  let date = new Date();
+
+  // Offset variable will store
+  // timezone offset between
+  // UTC and your local time
+  let offset = date.getTimezoneOffset();
+
+  return offset.toString();
+}
 
 function deleteItemInCart(id) {
-    StoreDataService.deleteProductInCart(id, user).then(
-        d => {
-            router.go()
-        }
-    )
+  StoreDataService.deleteProductInCart(id, user).then((d) => {
+    router.go();
+  });
 }
 
 function activateModal() {
-    paymentStatus.value = ""
-    dataObject.value.total = getPrice(state.value)
-    return active.value = !active.value
+  paymentStatus.value = "";
+  dataObject.value.total = getPrice(state.value);
+  return (active.value = !active.value);
 }
 
 function sendPayment() {
+  paymentDataServices
+    .step1(dataObject.value, user)
+    .then((d) => {
+      paymentStatus.value = d.data;
+      
 
+      referenceId.value =
+        paymentStatus.value.consumerAuthenticationInformation.referenceId;
+      accessToken.value =
+        paymentStatus.value.consumerAuthenticationInformation.accessToken;
 
-    paymentDataServices.step1(dataObject.value, user).then((d) => {
-        paymentStatus.value = d.data
-        referenceId.value = paymentStatus.value.consumerAuthenticationInformation.referenceId
-        accessToken.value = paymentStatus.value.consumerAuthenticationInformation.accessToken
-        if (paymentStatus.value.status == "COMPLETED") {
-
-            checkStep.value = true
-
-        }
-    }).catch((e) => {
+      if (paymentStatus.value.status == "COMPLETED") {
+        ddci.value = true;
+        checkStep.value = true;
+      } else {
+      }
     })
+    .catch((e) => {});
 }
 
+watch(checkStep, () => {
+  dataObject.value.referenceId = referenceId.value;
+  dataObject.value.clientId = user;
+  dataObject.value.userAgent = detectBrowser();
+  dataObject.value.timeDifference = showOffset();
+  dataObject.value.screenWidth = width.value;
+  dataObject.value.screenHeight = height.value;
+  dataObject.value.colorDepth = screen.colorDepth;
+  dataObject.value.browserLanguage = language.value;
 
-watch(checkResponse, () => {
-    dataObject.value.referenceId = referenceId.value
-    dataObject.value.clientId = user
+  paymentDataServices
+    .step2(dataObject.value, user)
+    .then((d) => {
+      paymentStatus.value = d.data;
 
-    paymentDataServices.step2(dataObject.value, user).then((d) => {
-    
-        paymentStatus.value = d.data
-    
-        if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
-            challenge.value = true
-            checkStep.value = false
-            return
-        }
-        if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+      if (paymentStatus.value.status == "PENDING_AUTHENTICATION") {
+        challenge.value = true;
+        return;
+      }
+      if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+        dataObject.value.transactionId =
+          d.data.consumerAuthenticationInformation.authenticationTransactionId;
+        dataObject.value.signedPares =
+          paymentStatus.value.consumerAuthenticationInformation.paresStatus;
+        dataObject.value.cavv =
+          paymentStatus.value.consumerAuthenticationInformation.cavv;
+        dataObject.value.xid =
+          paymentStatus.value.consumerAuthenticationInformation.xid;
+        dataObject.value.eciRaw =
+          paymentStatus.value.consumerAuthenticationInformation.eciRaw;
+        dataObject.value.ecommerceIndicator =
+          paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator;
+        dataObject.value.ucafCollectionIndicator =
+          paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator;
+        dataObject.value.ucafAuthenticationData =
+          paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData;
+        dataObject.value.veresEnrolled =
+          paymentStatus.value.consumerAuthenticationInformation.veresEnrolled;
+        dataObject.value.directoryServerTransactionId =
+          paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId;
+        dataObject.value.transactionToken =
+          paymentStatus.value.consumerAuthenticationInformation.token;
 
+        paymentDataServices.generateToken(dataObject.value).then((d) => {
+          dataObject.value.customerTokenId = d.data.customerTokenId;
+          dataObject.value.customerShippingAddressId =
+            d.data.customerShippingAddressId;
+          dataObject.value.instrumentIdentifierId =
+            d.data.instrumentIdentifierId;
+          dataObject.value.paymentInstrumentId = d.data.paymentInstrumentId;
 
-            dataObject.value.transactionId = d.data.consumerAuthenticationInformation.authenticationTransactionId
-            dataObject.value.signedPares = paymentStatus.value.consumerAuthenticationInformation.paresStatus
-            dataObject.value.cavv = paymentStatus.value.consumerAuthenticationInformation.cavv
-            dataObject.value.xid = paymentStatus.value.consumerAuthenticationInformation.xid
-            dataObject.value.eciRaw = paymentStatus.value.consumerAuthenticationInformation.eciRaw
-            dataObject.value.ecommerceIndicator = paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator
-            dataObject.value.ucafCollectionIndicator = paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator
-            dataObject.value.ucafAuthenticationData = paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData
-            dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
-            dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
-            dataObject.value.transactionToken = paymentStatus.value.consumerAuthenticationInformation.token
-
-            
-            paymentDataServices.generateToken(dataObject.value).then((d)=>{
-              dataObject.value.customerTokenId= "1CC24E660B4F153DE063AF598E0AAD8A"
-              dataObject.value.customerShippingAddressId= "1CC25B61F55B3EE2E063AF598E0A0D0B"
-              dataObject.value.instrumentIdentifierId= "7032770000053652701"
-              dataObject.value.paymentInstrumentId= "1CC24E660B56153DE063AF598E0AAD8A"
-              console.log(d.data);
-
-              // paymentDataServices.payWithTokens(dataObject.value,user).then((d)=>{
-              //     console.log(d.data);
-              //     active.value = false
-              //     router.push(`/checkout/`)
-              //   })  
-                
-              })
-              
-              
-        }
-
-
-    }).catch((e) => {
+          paymentDataServices
+            .payWithTokens(dataObject.value, user)
+            .then((d) => {
+              active.value = false;
+              router.push(`/checkout/`);
+            })
+            .catch((e) => {
+              ddci.value = false;
+              paymentStatus.value = {};
+              paymentStatus.value.status = "INVALID_REQUEST";
+              paymentStatus.value.errorInformation = {};
+              paymentStatus.value.errorInformation.reason = "Tarjeta no valida";
+              paymentStatus.value.errorInformation.message = e.message;
+            });
+        });
+      }
     })
-})
-
+    .catch((e) => {});
+});
 
 watch(challengeResponse, () => {
 
-    dataObject.value.authenticationTransactionId = challengeResponse.value
-    paymentDataServices.validation(dataObject.value, user).then((d) => {
-        paymentStatus.value = d.data
+  dataObject.value.authenticationTransactionId = challengeResponse.value;
+  paymentDataServices
+    .validation(dataObject.value, user)
+    .then((d) => {
+      paymentStatus.value = d.data;
 
+      if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+        dataObject.value.transactionId =
+          d.data.consumerAuthenticationInformation.authenticationTransactionId;
+        dataObject.value.signedPares =
+          paymentStatus.value.consumerAuthenticationInformation.paresStatus;
+        dataObject.value.cavv =
+          paymentStatus.value.consumerAuthenticationInformation.cavv;
+        dataObject.value.xid =
+          paymentStatus.value.consumerAuthenticationInformation.xid;
+        dataObject.value.eciRaw =
+          paymentStatus.value.consumerAuthenticationInformation.eciRaw;
+        dataObject.value.ecommerceIndicator =
+          paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator;
+        dataObject.value.ucafCollectionIndicator =
+          paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator;
+        dataObject.value.ucafAuthenticationData =
+          paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData;
+        dataObject.value.veresEnrolled =
+          paymentStatus.value.consumerAuthenticationInformation.veresEnrolled;
+        dataObject.value.directoryServerTransactionId =
+          paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId;
+        dataObject.value.transactionToken =
+          paymentStatus.value.consumerAuthenticationInformation.token;
 
-        if (paymentStatus.value.status == "AUTHENTICATION_SUCCESSFUL") {
+        paymentDataServices.generateToken(dataObject.value).then((d) => {
+          dataObject.value.customerTokenId = d.data.customerTokenId;
+          dataObject.value.customerShippingAddressId =
+            d.data.customerShippingAddressId;
+          dataObject.value.instrumentIdentifierId =
+            d.data.instrumentIdentifierId;
+          dataObject.value.paymentInstrumentId = d.data.paymentInstrumentId;
 
-            dataObject.value.transactionId = d.data.consumerAuthenticationInformation.authenticationTransactionId
-            dataObject.value.signedPares = paymentStatus.value.consumerAuthenticationInformation.paresStatus
-            dataObject.value.cavv = paymentStatus.value.consumerAuthenticationInformation.cavv
-            dataObject.value.xid = paymentStatus.value.consumerAuthenticationInformation.xid
-            dataObject.value.ecommerceIndicator = paymentStatus.value.consumerAuthenticationInformation.ecommerceIndicator
-            dataObject.value.ucafCollectionIndicator = paymentStatus.value.consumerAuthenticationInformation.ucafCollectionIndicator
-            dataObject.value.ucafAuthenticationData = paymentStatus.value.consumerAuthenticationInformation.ucafAuthenticationData
-            dataObject.value.veresEnrolled = paymentStatus.value.consumerAuthenticationInformation.veresEnrolled
-            dataObject.value.directoryServerTransactionId = paymentStatus.value.consumerAuthenticationInformation.directoryServerTransactionId
-
-
-            paymentDataServices.payWithData(dataObject.value, user).then((d) => {
-                paymentStatus.value = d.data
-                if (paymentStatus.value.status == "AUTHORIZED") {
-                    router.push(`/checkout/`)
-                }
+          paymentDataServices
+            .payWithTokens(dataObject.value, user)
+            .then((d) => {
+              active.value = false;
+              router.push(`/checkout/`);
             })
-        } else {
-
-        }
-    }).catch((e) => {
+            .catch((e) => {
+              ddci.value = false;
+              paymentStatus.value = {};
+              paymentStatus.value.status = "INVALID_REQUEST";
+              paymentStatus.value.errorInformation = {};
+              paymentStatus.value.errorInformation.reason = "Tarjeta no valida";
+              paymentStatus.value.errorInformation.message = e.message;
+            });
+        });
+      } else {
+      }
     })
-
-})
-
+    .catch((e) => {});
+});
 </script>
 
 <template>
@@ -227,17 +311,13 @@ watch(challengeResponse, () => {
         <ConfirmationModal
           v-if="active"
           @activate-modal="activateModal"
-          v-model:data-object="dataObject"
+          v-model="dataObject"
           @send-payment="sendPayment"
-          v-model:status="paymentStatus"
+          :status="paymentStatus"
         />
       </transition>
 
-      <DDCIframe
-        v-if="checkStep"
-        :data="paymentStatus"
-        v-model="checkResponse"
-      />
+      <DDCIframe v-if="ddci" :data="paymentStatus" v-model="checkResponse" />
 
       <ChallengeAuth
         v-if="challenge"

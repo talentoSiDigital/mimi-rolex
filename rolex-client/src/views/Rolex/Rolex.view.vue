@@ -16,9 +16,7 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
      
 
             <ActivationsBanner/>
-           
-
-
+        
             <RolexHeader color="bg-rolex-brown-light-2">
 
                 <template #title>

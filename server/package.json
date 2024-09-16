@@ -1,6 +1,6 @@
 {
   "name": "mimi-joyeria",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "\"Sistema personalizado para Mimi Joyeria\"",
   "main": "server.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "connect-history-api-fallback": "^2.0.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "cybersource-rest-client": "^0.0.54",
+    "cybersource-rest-client": "^0.0.60",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.10",
     "express": "^4.18.2",

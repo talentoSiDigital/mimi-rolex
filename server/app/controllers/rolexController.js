@@ -8,7 +8,7 @@ const storagePath = 'https://www.mimijoyeria.com/storage'
 function helper() {
   let a = Math.floor((Math.random() * 195) + 1)
   return [a, a + 5]
-} 
+}
 
 const mainVideos = {
   "1908": "https://www.youtube.com/embed/qtzBHB8fyF0?si=hkEK8DlpRzHxLp2v",
@@ -44,7 +44,7 @@ exports.showDisplay = (req, res) => {
         data[index].dataValues.file = `${storagePath}/rolex-relojes/${data[index].dataValues.watch}.avif`
         // console.log(data[index].dataValues.file)
       }
-     console.log(storagePath)
+      console.log(storagePath)
 
       res.send(data)
 
@@ -408,10 +408,10 @@ exports.showDisplayV2 = (req, res) => {
 
 // Show by especific collection
 exports.getCollectionDetailsV2 = (req, res) => {
-  
-   
-console.log(req.params.id);
- 
+
+
+  console.log(req.params.id);
+
 
 
   rolex.RolexCollections.findAll({
@@ -473,20 +473,21 @@ exports.getRolexDetailsV2 = async (req, res) => {
       modelo: req.params.id
     }
   })
-    console.log("Breakpoint 1")
-  let parsedName = findId[0]
+  console.log("Breakpoint 1")
+  let parsedName = findId[0].dataValues
+
   parsedName.showcaseIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}-showcase.webp`
   parsedName.boxIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box.webp`
   parsedName.boxIMGMobile = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box-mobile.webp`
-
-
+  
+  
   rolexResponseObject.getAll = parsedName
   
   const rolexId = parsedName.id
-    const collectionId =  parsedName.rolexCollectionId
+  const collectionId = parsedName.RolexCollectionId
 
   let findDetails = await rolex.RolexDetailsV2.findByPk(rolexId)
-console.log("Breakpoint 2")
+  console.log("Breakpoint 2")
   let detailsArray = []
   detailsArray.push(findDetails)
   detailsArray.push({})
@@ -519,10 +520,11 @@ console.log("Breakpoint 2")
   getHeaders.img = imgArray
 
   rolexResponseObject.headers = getHeaders
-    
-      console.log(collectionId)
+
+  console.log('asdasdasdasd:  ',collectionId)
+  
   const getCollection = await rolex.RolexCollections.findByPk(collectionId)
-      console.log("Breakpoint 5")
+  console.log("Breakpoint 5")
 
 
 

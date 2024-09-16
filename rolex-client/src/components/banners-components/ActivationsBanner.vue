@@ -1,22 +1,22 @@
-<script setup>
+4<script setup>
 import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 import { ref } from "vue";
 import { computed } from "vue";
 
 const sliderItems = [
+  
   {
     src: "new-models",
     link: "/nuevos-modelos-2024",
     alt: "nuevos-modelos-2024-banner",
     title: "Nuevos modelos rolex 2024",
   },
-
   {
-    src: "gmt-rolex",
-    link: "/coleccion-rolex/gmt-master-ii",
-    alt: "Coleccion-Rolex-gmt-master-ii-banner",
-    title: "Banner GMT Master II",
+    src: "us-open",
+    link: "/world-of-rolex/rolex-y-the-us-open",
+    alt: "us-open-banner",
+    title: "Rolex y el US Open",
   },
 
   {

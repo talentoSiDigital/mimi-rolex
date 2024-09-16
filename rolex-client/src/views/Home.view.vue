@@ -14,7 +14,7 @@ function checkClick(pos){
     console.log(pos);
     
     if(pos === 3){
-        headerSliderDataServices.clickBanner().then(()=>{
+        headerSliderDataServices.clickBanner("banner").then(()=>{
             router.push('/tudor')
             
         }).catch((e)=>{
@@ -51,10 +51,10 @@ const jewelSlideshow = [
     
         <div class="relative z-0 min-h-[650px] w-full">
 
-            <carousel :items-to-show="1" :autoplay="3000"  :wrap-around="true">
+            <carousel  v-if="!checkWindowSize" :items-to-show="1" :autoplay="3000"  :wrap-around="true">
 
                 <slide v-for="slide in 3"  :key="slide" class=" min-h-full w-full">
-                    <div  v-if="!checkWindowSize" class="h-[650px] w-full">
+                    <div  class="h-[650px] 3xl:h-[800px] w-full">
                         <div @click="checkClick(slide)" class="cursor-pointer">
                             <img rel="preload" class="hidden md:block"
                                 :src="`/assets/routes-assets/headers/${slide}-desktop.webp`"
@@ -62,15 +62,8 @@ const jewelSlideshow = [
                         </div>
                         
                     </div>
-                    <div  v-if="checkWindowSize" class="h-full w-full">
-                        <div @click="checkClick(slide)" class="cursor-pointer">
-                            <img rel="preload" class=" block"
-                                :src="`/assets/routes-assets/headers/${slide}-mobile.webp`"
-                                :alt="`headers-${slide}-mobile`" :fetchpriority="slide == 1 ? 'high' : ''">
-                        </div>
-               
-
-                    </div>
+                   
+                   
                 </slide>
 
                 <template #addons>
@@ -79,6 +72,9 @@ const jewelSlideshow = [
                     </div>
                 </template>
             </carousel>
+            <img v-if="checkWindowSize" rel="preload" class=" block"
+                        src="/assets/routes-assets/headers/1-mobile.webp"
+                        :alt="`headers-1-mobile`" fetchpriority="high">
         </div>
 
         <div id="joyeria"
@@ -157,7 +153,7 @@ const jewelSlideshow = [
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             </div>
 
-            <div class="flex flex-col md:flex-row w-full overflow-x-hidden  text-neutral-700 mb-10">
+            <div class="flex flex-col md:flex-row w-full md:justify-center overflow-x-hidden  text-neutral-700 mb-10">
                 <div class="flex flex-col items-center justify-center">
                     <router-link :to="{ name: 'reloj', params: { id: 'tudor' } }">
                         <img src="/assets/routes-assets/Home/TUDOR.webp" alt="tudor-black-bay-gmt"
@@ -174,14 +170,7 @@ const jewelSlideshow = [
                     <h3 class="text-xl font-light">Longines Hydroconquest</h3>
                     <h3 class="text-xl font-light">LONGINESS</h3>
                 </div>
-                <div class="flex flex-col items-center justify-center">
-                    <router-link :to="{ name: 'reloj', params: { id: 'tissot' } }">
-                        <img src="/assets/routes-assets/Home/TISSOT.webp" alt="tissot-seastar-gts"
-                            class="duration-500 hover:scale-110">
-                    </router-link>
-                    <h3 class="text-xl font-light">Tissot Seastar GTS</h3>
-                    <h3 class="text-xl font-light">TISSOT</h3>
-                </div>
+               
                 <div class="flex flex-col items-center justify-center">
                     <router-link :to="{ name: 'reloj', params: { id: 'victorinox' } }">
                         <img src="/assets/routes-assets/Home/VICTORINOX.webp" alt="victorinox-maverick-sport"

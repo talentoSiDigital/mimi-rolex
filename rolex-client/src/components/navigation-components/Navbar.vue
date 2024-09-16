@@ -41,7 +41,7 @@ function handleLogout() {
                 <img src="/assets/tudor-retailer.jpg" alt="tudor-retailer-badge" class="w-24 md:w-32">
             </router-link>
             <router-link to="/" class="w-fit">
-                <img src="/assets/mimi-logo-gray.svg" alt="mimi-joyeria-logo" class="w-24 md:w-full">
+                <img src="/assets/mimi-logo-gray.svg" alt="mimi-joyeria-logo" class="w-24 md:w-56">
             </router-link>
             <div class="relative items-center hidden md:flex">
                 <router-link to="/descubre-rolex" class=" cursor-pointer absolute z-10 block md:w-40 md:h-20">
@@ -88,10 +88,7 @@ function handleLogout() {
                         class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
                         <h2 class="my-1 uppercase">Tudor</h2>
                     </router-link>
-                    <router-link :to="{ name: 'reloj', params: { id: 'tissot' } }"
-                        class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
-                        <h2 class="my-1 uppercase">Tissot</h2>
-                    </router-link>
+                  
                     <router-link to="/relojeria/longines"
                         class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
                         <h2 class="my-1 uppercase">Longines</h2>
@@ -147,11 +144,7 @@ function handleLogout() {
                     <h2 class="uppercase">Tudor</h2>
 
                 </router-link>
-                <router-link @click="collapseNav" to="/relojeria/tissot"
-                    class=" tracking-widest border bg-neutral-400 px-6 py-2 text-xl font-normal font-montserrat text-white w-full text-center  ">
-                    <h2 class="uppercase">Tissot</h2>
-
-                </router-link>
+       
                 <router-link to="/relojeria/longines"
                     class=" tracking-widest border bg-neutral-400 px-6 py-2 text-xl font-normal font-montserrat text-white w-full  text-center  ">
                     <h2 class="uppercase">Longines</h2>

@@ -1,5 +1,5 @@
 <script setup>
-
+import { filename } from 'pathe/utils'
 const {name} = defineProps(["name"])
 
 

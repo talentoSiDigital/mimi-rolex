@@ -40,6 +40,9 @@ export default {
       },
       backgroundImage: {
         'rolex-gradient': "linear-gradient(90deg, rgba(12,66,41,1) 0%, rgba(25,111,73,1) 100%)",
+      },
+      screens:{
+        '3xl':'1700px'
       }
     }
   },

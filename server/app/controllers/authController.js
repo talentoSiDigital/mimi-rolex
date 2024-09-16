@@ -1,11 +1,7 @@
 const db = require("../models");
 const config = require("../config/auth.config");
-const configCybersource = require('../config/cybersource.config');
-const cybersourceRestApi = require('cybersource-rest-client');
-
 const User = db.user.User;
-const Role = db.user.Role;
-const Op = db.Sequelize.Op;
+
 const Store = db.store;
 
 
@@ -25,6 +21,7 @@ exports.signup = (req, res) => {
         age: req.body.age,
         phone: req.body.phone,
         email: req.body.email,
+        referenceCode: req.body.referenceCode,
         password: bcrypt.hashSync(req.body.password, 8),
  
     })

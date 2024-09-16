@@ -186,7 +186,7 @@ const router = createRouter({
     },
     {
       path: "/world-of-rolex/rolex-y-the-amundi-evian-championship",
-      name: "world-of-rolex-article-5",
+      name: "world-of-rolex-article-6",
       component:()=>import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
       meta: {
         title: "Rolex y The Amundi Evian Championship - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
@@ -200,7 +200,14 @@ const router = createRouter({
         title: "Rolex y The Open - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     },
-
+    {
+      path: "/world-of-rolex/rolex-y-the-us-open",
+      name: "world-of-rolex-article-8",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle8.view.vue"),
+      meta: {
+        title: "Rolex y The US Open - World Of Rolex - Mimi Joyería | Distribuidor Oficial Rolex"
+      }
+    },
 
  
   
@@ -235,16 +242,16 @@ const router = createRouter({
     // ****************
   
     // MIMI STATIC ROUTES
-    ,
-    {
+
+      {
       path: "/tudor",
       name: "tudor",
       component: ()=>import("./views/Mimi/Tudor.view.vue"),
       meta: {
-        title: "Tudor - Mimi Joyería | Distribuidor Oficial Rolex"
+        title: " Tudor - Mimi Joyería | Distribuidor Oficial Rolex" 
       }
     }
-    ,
+    
     ,
     {
       path: "/relojeria",
@@ -334,6 +341,16 @@ const router = createRouter({
       },
 
     }
+    ,
+    {
+      path: "/tudor-newsletter/:id",
+      name: "tudorNewsletter",
+      component: ()=>import("./views/Newsletter.vue"),
+      meta: {
+        title: "Tudor -  Mimi Joyería | Distribuidor Oficial Rolex"
+      },
+
+    },
     // ****************
     // AUTH AND USER ROUTES
     ,
@@ -382,15 +399,11 @@ const router = createRouter({
           name:"banner-edit",
           component: ()=>import("./components/dashboard/SliderChangeForm.vue")
         },
+       
         {
-          path:"agregar-joyeria",
-          name:"agregar-joyeria",
-          component: ()=>import("./components/dashboard/JoyeriaForm.vue")
-        },
-        {
-          path:"agregar-relojeria",
-          name:"agregar-relojeria",
-          component: ()=>import("./components/dashboard/RelojeriaForm.vue")
+          path:"actualizar-datos",
+          name:"actualizar-datos",
+          component: ()=>import("./components/dashboard/DataUpdate.vue")
         },
       ],
       meta: {
@@ -426,6 +439,34 @@ const router = createRouter({
       }
     }
     ,
+    
+    // {
+    //   path: "/carrito",
+    //   name: "carrito",
+    //   component: ()=>import('./components/dashboard/ShoppingCart.vue'),
+    //   meta: {
+    //     title: 'Carrito De Compras  - Mimi Joyería | Distribuidor Oficial Rolex'
+    //   }
+    // }
+    // ,
+    // {
+    //   path: "/checkout",
+    //   name: "checkout",
+    //   component: ()=>import('./components/dashboard/Checkout.vue'),
+    //   meta: {
+    //     title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
+    //   }
+    // }
+    // ,
+    // {
+    //   path: "/authorized",
+    //   name: "authorized",
+    //   component: ()=>import('./components/dashboard/Authorized.vue'),
+    //   meta: {
+    //     title: 'Compra exitosa  - Mimi Joyería | Distribuidor Oficial Rolex'
+    //   }
+    // }
+    // ,
     
     // {
     //   path: "/",

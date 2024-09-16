@@ -3655,7 +3655,7 @@ ${itemMailFrame}
   }
   const mailToAdmin = {
     from: 'pagosweb@mimijoyeria.com',
-    to: 'manuelzorrilladev@gmail.com',
+    to: 'sollydichi@gmail.com',
     subject: `Detalles de pago - Mimi Joyería`,
     html: htmlAdmin
 

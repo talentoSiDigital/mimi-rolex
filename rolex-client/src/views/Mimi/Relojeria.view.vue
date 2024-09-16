@@ -21,21 +21,9 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
             </template>
         </OverlaySection>
 
-        <OverlaySection img-src="relojeria/tissot" alt-text="reloj-tissot-rojo" type="reverse">
-            <template #title>
-                COLECCIÓN TISSOT
-            </template>
-            <template #text>
-                Tissot es una marca de espíritu innovador tanto en su tecnología como en el diseño de sus relojes.
-            </template>
-            <template #button>
-                <router-link to="/relojeria/tissot" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
-                    Ver más
-                </router-link>
-            </template>
-        </OverlaySection>
+     
 
-        <OverlaySection img-src="relojeria/victorinox" alt-text="reloj-victorinox-negro" type="normal">
+        <OverlaySection img-src="relojeria/victorinox" alt-text="reloj-victorinox-negro" type="reverse">
             <template #title>
                 COLECCIÓN VICTORINOX
             </template>

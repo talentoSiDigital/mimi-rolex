@@ -25,6 +25,7 @@
     "pinia": "^2.1.7",
     "qs": "^6.11.2",
     "universal-cookie": "^6.1.3",
+    "uuid-random": "^1.3.2",
     "vee-validate": "^4.12.4",
     "vue": "^3.3.4",
     "vue-cookie-accept-decline": "^6.1.0",

@@ -31,7 +31,7 @@ const isUserLogged = storeToRefs(piniaStore);
       v-if="route.path !== '/carrito' && isUserLogged.status.value.loggedIn"
     />
     <RouterView :key="route.fullPath" />
-    <div v-if="!checkLoad" class="h-[200vh] block "></div>
+    <div v-if="!checkLoad && route.path == '/'" class="h-[200vh] block "></div>
 
     <Footer />
   </div>

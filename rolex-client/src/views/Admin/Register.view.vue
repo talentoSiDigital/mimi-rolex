@@ -2,6 +2,7 @@
 import { ref, computed } from "vue";
 import { RouterLink } from 'vue-router';
 import router from '../../router'
+import uuid from 'uuid-random';
 
 import { auth } from '../../store/auth.module'
 import { Form, Field, ErrorMessage } from "vee-validate";
@@ -21,7 +22,7 @@ const phoneNumber = ref({
     "code": 58
 })
 function randomStr() {
-    let ans = crypto.randomUUID()
+    let ans = uuid()
     let array = ans.split('-')
     return array[array.length - 1].toUpperCase();
 }

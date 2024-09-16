@@ -36,8 +36,7 @@ const currentUser = computed(() => {
         </h2>
         </div>
 
-        <UserProfile v-if="currentUser.roles == 'ROLE_USER'" :info="currentUser.id"/>
-        <AdminProfile v-else :info="currentUser.id"/>
+        <UserProfile  :info="currentUser.id"/>
 
         
 

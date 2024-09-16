@@ -56,7 +56,6 @@ exports.paymentAuthenticationStep1 = async (req, res) => {
 			}
 			else if (data) {
 			}
-
 			var responseData = JSON.parse(response['text'])
 			res.send(responseData)
 		});
@@ -97,8 +96,13 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		"authenticationTransactionId": req.body.authenticationTransactionId,
 		"referenceId": req.body.referenceId,
 		"returnUrl": req.body.returnUrl,
-		"clientId": req.body.clientId
-
+		"clientId": req.body.clientId,
+		"userAgent": req.body.userAgent,
+		"timeDifference": req.body.timeDifference,
+		"screenWidth": req.body.screenWidth,
+		"screenHeight": req.body.screenHeight,
+		"colorDepth": req.body.colorDepth,
+		"browserLanguage": req.body.browserLanguage
 	}
 
 	if (req.body.country == 'US' || req.body.country == 'CA') {
@@ -170,8 +174,25 @@ exports.paymentAuthenticationStep2 = (req, res) => {
 		consumerAuthenticationInformation.transactionMode = 'S';
 		consumerAuthenticationInformation.referenceId = info.referenceId;
 		consumerAuthenticationInformation.returnUrl = process.env.RETURN_URL + '/validation-step/';
+		consumerAuthenticationInformation.deviceChannel = 'Browser'
+
 
 		requestObj.consumerAuthenticationInformation = consumerAuthenticationInformation;
+
+
+		var deviceInformation = new cybersourceRestApi.Riskv1decisionsDeviceInformation();
+		deviceInformation.httpBrowserScreenHeight = info.screenHeight;
+		deviceInformation.httpBrowserScreenWidth = info.screenWidth;
+		deviceInformation.httpBrowserColorDepth = info.colorDepth;
+		deviceInformation.httpBrowserLanguage = info.browserLanguage;
+		deviceInformation.userAgentBrowserValue = info.userAgent;
+		deviceInformation.httpBrowserJavaEnabled = false
+		deviceInformation.httpBrowserTimeDifference = info.timeDifference;
+		deviceInformation.httpAcceptBrowserValue = true
+		deviceInformation.httpAcceptContent = "Content-Type : multipart/form-data"
+		deviceInformation.httpBrowserJavaScriptEnabled = true
+		deviceInformation.ipAddress = info.ipAddress
+		requestObj.deviceInformation = deviceInformation;
 
 
 		var instance = new cybersourceRestApi.PayerAuthenticationApi(configObject, apiClient);
@@ -226,6 +247,7 @@ exports.validationReturn = (req, res) => {
 		"returnUrl": req.body.returnUrl,
 		"clientId": req.body.clientId,
 		"authenticationTransactionId": req.body.authenticationTransactionId,
+		"securityCode": req.body.cvn
 
 	}
 
@@ -262,6 +284,7 @@ exports.validationReturn = (req, res) => {
 		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
 		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
 		paymentInformationCard.number = info.paymentInformationCardNumber;
+		paymentInformationCard.securityCode = info.securityCode
 		paymentInformation.card = paymentInformationCard;
 
 		requestObj.paymentInformation = paymentInformation;
@@ -343,14 +366,10 @@ exports.tokenGeneration = async (req, res) => {
 		instance.postCustomer(requestObj, opts, function (error, data, response) {
 
 			if (error) {
-				console.log('\nError : ' + JSON.stringify(error));
 			}
 			else if (data) {
-				console.log('\nData(349) : ' + JSON.stringify(data));
 			}
 
-			console.log('\nResponse : ' + JSON.stringify(response));
-			console.log('\nResponse Code of Retrieve a Customer : ' + JSON.stringify(response['status']));
 			var customerToken = JSON.parse(response['text'])
 			var customerTokenId = customerToken.id
 
@@ -381,10 +400,8 @@ exports.tokenGeneration = async (req, res) => {
 
 			instance.postCustomerShippingAddress(customerTokenId, requestObj, opts, function (error, data, response) {
 				if (error) {
-					console.log('\nError : ' + JSON.stringify(error));
 				}
 				else if (data) {
-					console.log('\nData : ' + JSON.stringify(data));
 				}
 				const customerShippingAddress = JSON.parse(response['text'])
 				const customerShippingAddressId = customerShippingAddress.id
@@ -400,10 +417,8 @@ exports.tokenGeneration = async (req, res) => {
 
 				instance.postInstrumentIdentifier(requestObj, opts, function (error, data, response) {
 					if (error) {
-						console.log('\nError : ' + JSON.stringify(error));
 					}
 
-					console.log('\nData : ' + JSON.stringify(data));
 					const instrumentIdentifierResponse = JSON.parse(response['text']);
 					const instrumentIdentifierId = instrumentIdentifierResponse.id
 
@@ -442,13 +457,12 @@ exports.tokenGeneration = async (req, res) => {
 
 					instance.postCustomerPaymentInstrument(customerTokenId, requestObj, opts, function (error, data, response) {
 						if (error) {
-							console.log('\nError : ' + JSON.stringify(error));
 						}
 
 						const paymentInstrument = JSON.parse(response['text']);
 						const paymentInstrumentId = paymentInstrument.id
 
-						
+
 						res.send({
 							"customerTokenId": customerTokenId,
 							"customerShippingAddressId": customerShippingAddressId,
@@ -772,11 +786,8 @@ exports.payWithToken = async (req, res) => {
 		res.status(500).send('Debes enviar el pago')
 		return
 	}
-	console.log("comienza la ejecucion");
 	// user info setup
 	const userId = parseInt(req.params.id)
-	console.log(userId);
-	console.log("========PayStep 1==========");
 
 
 	let info = {
@@ -812,8 +823,9 @@ exports.payWithToken = async (req, res) => {
 		"transactionToken": req.body.transactionToken,
 		"instrument": req.body.instrument,
 		"referenceCode": req.body.referenceCode,
+		"securityCode": req.body.cvn
+
 	}
-	console.log(info);
 
 
 	if (req.body.country == 'US' || req.body.country == 'CA') {
@@ -849,7 +861,7 @@ exports.payWithToken = async (req, res) => {
 
 
 		// Card information setup
-		
+
 		// var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
 
 		// var paymentInformationCard = new cybersourceRestApi.Ptsv2paymentsPaymentInformationTokenizedCard();
@@ -863,7 +875,7 @@ exports.payWithToken = async (req, res) => {
 
 		var paymentInformation = new cybersourceRestApi.Ptsv2paymentsPaymentInformation();
 		var paymentInformationCustomer = new cybersourceRestApi.Ptsv2paymentsPaymentInformationCustomer();
-		paymentInformationCustomer.id =info.customerTokenId;
+		paymentInformationCustomer.id = info.customerTokenId;
 		paymentInformation.customer = paymentInformationCustomer;
 
 
@@ -871,14 +883,14 @@ exports.payWithToken = async (req, res) => {
 		paymentInformationCard.number = info.paymentInformationCardNumber;
 		paymentInformationCard.expirationMonth = info.paymentInformationCardExpirationMonth;
 		paymentInformationCard.expirationYear = info.paymentInformationCardExpirationYear;
+		paymentInformationCard.securityCode = info.securityCode
 		paymentInformation.card = paymentInformationCard;
-		console.log("========PayStep 2==========");
-		
+
 		var paymentInformationPaymentInstrument = new cybersourceRestApi.Ptsv2paymentsPaymentInformationPaymentInstrument();
 		paymentInformationPaymentInstrument.id = info.paymentInstrumentId;
 		paymentInformation.paymentInstrument = paymentInformationPaymentInstrument;
-		
-		
+
+
 		var paymentInformationShippingAddress = new cybersourceRestApi.Ptsv2paymentsPaymentInformationShippingAddress();
 		paymentInformationShippingAddress.id = info.customerShippingAddressId;
 		paymentInformation.shippingAddress = paymentInformationShippingAddress;
@@ -968,7 +980,7 @@ exports.payWithToken = async (req, res) => {
 
 		var merchantDefinedInformation8 = new cybersourceRestApi.Riskv1decisionsMerchantDefinedInformation();
 		merchantDefinedInformation8.key = '8';
-		merchantDefinedInformation8.value = 'NO'; 
+		merchantDefinedInformation8.value = 'NO';
 		merchantDefinedInformation.push(merchantDefinedInformation8);
 
 		requestObj.merchantDefinedInformation = merchantDefinedInformation;
@@ -993,86 +1005,91 @@ exports.payWithToken = async (req, res) => {
 		var instance2 = new cybersourceRestApi.PaymentsApi(configObject, apiClient);
 
 
-		instance2.createPayment(requestObj, async function (error, data, response) {
-			console.log("========PayStep 2==========");
+		instance2.createPayment(requestObj,  function (error, data, response) {
 			payStatus = JSON.parse(response['text'])
-			console.log("========PayStep 3==========");
-			console.log(payStatus);
-			
-			
+
+
 			if (payStatus.status == 'AUTHORIZED') {
-				
-				console.log("========PayStep 4==========");
 
-				const cartId = await Store.Cart.findAll({
-					where: {
-						ownerId: userId,
-					},
-					attributes: ['id']
-				})
+				instance2 = new cybersourceRestApi.CaptureApi(configObject, apiClient);
 
-				console.log("========PayStep 5==========");
-				
-				Store.CartProduct.findAll({
-					where: {
-						cartId: cartId[0].dataValues.id
+				instance2.capturePayment(requestObj, payStatus.id, async function (error, data, response) {
+
+
+					if (error) {
 					}
-				})
-				.then(async (d) => {
-						console.log("========PayStep 6==========");
-
-						const products = d
+					else if (data) {
+					}
 
 
-						const createBill = await Store.Bill.create({
-							codigo: info.clientReferenceInformationCode,
-							direccion: info.orderInformationBillToAddress,
-							pais: info.orderInformationBillToCountry,
-							ciudad: info.orderInformationBillToLocality,
-							total: `${info.orderInformationAmountTotal}`,
-							ownerId: userId
-						})
-						const data = []
-						for (let item = 0; item < products.length; item++) {
-							data.push({})
-							for (const key in products[item].dataValues) {
+					
+					const cartId = await Store.Cart.findAll({
+						where: {
+							ownerId: userId,
+						},
+						attributes: ['id']
+					})
 
-								if (key !== "cartId") {
-									data[data.length - 1][key] = products[item].dataValues[key]
-								} else {
-									data[data.length - 1]["billId"] = createBill.dataValues.id
+
+					Store.CartProduct.findAll({
+						where: {
+							cartId: cartId[0].dataValues.id
+						}
+					})
+						.then(async (d) => {
+
+							const products = d
+
+
+							const createBill = await Store.Bill.create({
+								codigo: info.clientReferenceInformationCode,
+								direccion: info.orderInformationBillToAddress,
+								pais: info.orderInformationBillToCountry,
+								ciudad: info.orderInformationBillToLocality,
+								total: `${info.orderInformationAmountTotal}`,
+								ownerId: userId
+							})
+							const data = []
+							for (let item = 0; item < products.length; item++) {
+								data.push({})
+								for (const key in products[item].dataValues) {
+
+									if (key !== "cartId") {
+										data[data.length - 1][key] = products[item].dataValues[key]
+									} else {
+										data[data.length - 1]["billId"] = createBill.dataValues.id
+									}
 								}
 							}
-						}
 
-						return data
-					})
-
-					.then((d) => {
-
-						Store.BillProduct.bulkCreate(d).then((result) => {
+							return data
 						})
-					})
-					.then((d) => {
 
-						Store.CartProduct.destroy({
-							where: {
-								cartId: cartId[0].dataValues.id
-							}
+						.then((d) => {
+
+							Store.BillProduct.bulkCreate(d).then((result) => {
+							})
 						})
-					})
-					.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
-					.catch((error) => {
+						.then((d) => {
 
-						res.sendStatus(500).send(error)
-					})
+							Store.CartProduct.destroy({
+								where: {
+									cartId: cartId[0].dataValues.id
+								}
+							})
+						})
+						.then(() => res.redirect("/api/paymail/" + info.clientReferenceInformationCode))
+						.catch((error) => {
+
+							res.sendStatus(500).send(error)
+						})
 
 
+				},false)
 
 			}
 			else {
-				console.log("FAILED");
-				res.sendStatus(400).send(error.message)
+				res.status(400).send(payStatus.status)
 			}
 
 
@@ -1088,14 +1105,11 @@ exports.payWithToken = async (req, res) => {
 
 	}
 	catch (error) {
-		console.log(error.message);
-		res.send(error.message)
 	}
 
 }
 
-exports.testing = async (req,res) => {
-	console.log("Comienzo de la ejecución")
+exports.testing = async (req, res) => {
 	if (!req.body) {
 		res.status(500).send('Debes enviar el pago')
 		return
@@ -1118,14 +1132,10 @@ exports.testing = async (req,res) => {
 		instance.postCustomer(requestObj, opts, function (error, data, response) {
 
 			if (error) {
-				console.log('\nError : ' + JSON.stringify(error));
 			}
 			else if (data) {
-				console.log('\nData (testing) : ' + JSON.stringify(data));
 			}
 
-			console.log('\nResponse : ' + JSON.stringify(response));
-			console.log('\nResponse Code of Retrieve a Customer : ' + JSON.stringify(response['status']));
 
 			// var customerToken = JSON.parse(response['text'])
 			// var customerTokenId = customerToken.id
@@ -1133,15 +1143,13 @@ exports.testing = async (req,res) => {
 
 			instance = new cybersourceRestApi.CustomerApi(configObject, apiClient);
 			instance.getCustomer(customerTokenId, opts, function (error, data, response) {
-				if(error) {
-					console.log('\nError : ' + JSON.stringify(error));
+				if (error) {
 				}
 				else if (data) {
-					console.log('\nData : ' + JSON.stringify(data));
 				}
 				res.send(response)
 
-				});
+			});
 
 
 		});

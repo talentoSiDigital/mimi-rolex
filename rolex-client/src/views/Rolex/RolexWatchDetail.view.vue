@@ -29,15 +29,16 @@ axios
   .then(function (response) {
     // handle success
     location.value = response.data.country;
+
   })
   .catch(function (error) {
     // handle error
     console.log(error);
   });
 const excludedCountries = ["US", "IN", "AU", "NZ", "JE", "GG", "CA"];
-
 const checkLocation = computed(() => {
-  return excludedCountries.includes(location.value);
+  return location.value != "VE";
+  
 });
 
 let { isLoading, state, isReady, execute } = useAsyncState(
@@ -136,7 +137,7 @@ function sendMessage() {
                   {{ state.getAll.nombre }}
                 </h2>
                 <h2 class="font-light">{{ state.getAll.cajaDelModelo }}</h2>
-                <div class="text-rolex-brown flex items-center gap-2">
+                <div v-if="!checkLocation" class="text-rolex-brown flex items-center gap-2">
                   <h2 class="font-light">
                     $ {{ addComma(state.details[0].precio) }}
                   </h2>
@@ -146,8 +147,8 @@ function sendMessage() {
                     class="text-sm cursor-pointer duration-200"
                   />
                 </div>
-                <Transition name="fade">
-                  <p
+                <Transition name="fade" >
+                  <p 
                     v-if="isHovered"
                     class="text-xs w-1/5 duration-200 absolute border-2 border-rolex-brown rounded p-4 bg-rolex-brown-light-1"
                   >
@@ -174,16 +175,18 @@ function sendMessage() {
                       <p>+58 212-3008742</p>
                     </a>
                     <a
-                      href="https://maps.app.goo.gl/EED9Kdco8zec8ygT8"
-                      class="flex items-center gap-4"
+                      href="https://wa.link/rwawyl"
                       target="_blank"
+                      class="flex items-center gap-4"
                     >
                       <font-awesome-icon
-                        :icon="['fas', 'location-arrow']"
+                      
+                      :icon="['fas', 'comment']"
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
-                      <p>Conseguir la dirección</p>
+                      <p>Chat</p>
                     </a>
+                   
                     <a
                       href="mailto:info@mimijoyeria.com"
                       class="flex items-center gap-4"
@@ -195,15 +198,15 @@ function sendMessage() {
                       <p>Envíenos un mensaje</p>
                     </a>
                     <a
-                      href="https://wa.link/rwawyl"
-                      target="_blank"
+                      href="https://maps.app.goo.gl/EED9Kdco8zec8ygT8"
                       class="flex items-center gap-4"
+                      target="_blank"
                     >
                       <font-awesome-icon
-                        :icon="['fab', 'whatsapp']"
+                        :icon="['fas', 'location-arrow']"
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
-                      <p>Enviar un Whatsapp</p>
+                      <p>Conseguir la dirección</p>
                     </a>
                   </div>
                 </div>

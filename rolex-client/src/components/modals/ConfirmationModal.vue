@@ -4,11 +4,11 @@ import { RouterLink } from "vue-router";
 import paymentDataServices from '../../services/paymentDataServices'
 import DashboardCards from '../cards/DashboardCards.vue'
 
-defineProps({
-    status: String
-})
+const {status} = defineProps(["status"])
+
 const  emit  = defineEmits(['activate-modal','send-payment'])
 const dataToSend = defineModel()
+console.log(dataToSend.value);
 const paymentProcess = ref(false)
 const nameTranslate = ref({
     "total": "Monto Total",
@@ -32,7 +32,7 @@ function payWithData() {
     emit('send-payment')
 }
 
-
+console.log(dataToSend.value);
 
 </script>
 
@@ -40,6 +40,7 @@ function payWithData() {
     <section class=" z-50 fixed h-screen top-0 w-full flex  items-center justify-center ">
         <div class="h-fit w-full flex items-center justify-center">
             <DashboardCards class="w-4/5 lg:w-3/5">
+                
 
                     <div class=" w-full h-full  flex flex-col justify-between items-center gap-4"
                         v-if="!paymentProcess">
@@ -82,7 +83,7 @@ function payWithData() {
                         </button>
                     </div>
 
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status == ''">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status == ''">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             style="background: none; display: block; shape-rendering: auto;" width="200px"
                             height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -96,12 +97,13 @@ function payWithData() {
                         <h2 class="text-3xl">Procesando Pago...</h2>
                     </div>
 
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'DECLINED'">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status != 'AUTHORIZED'">
                         <img src="/assets/mimi-logo.png" alt="logo-mimi">
                         <h2 class="text-xl">Pago Fallido</h2>
                         <font-awesome-icon v-if="!icon" :icon="['fas', 'circle-xmark']"
                             class="text-6xl text-red-500 py-8" />
-                      
+                        {{ status.status }} <br>
+                        {{ status.reason }} <br><br>
                         <button
                             class="uppercase border border-black py-4 px-10 text-neutral-600 bg-white hover:text-white hover:bg-neutral-600 duration-100 "
                             @click="$emit('activate-modal')">
@@ -110,7 +112,7 @@ function payWithData() {
                         </button>
                     </div>
 
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="status == 'AUTHORIZED'">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess &&status.status == 'AUTHORIZED'">
                         <img src="/assets/mimi-logo.png" alt="logo-mimi">
                         <h2 class="text-xl">Pago exitoso</h2>
                         <font-awesome-icon :icon="['fas', 'circle-check']" class="text-6xl text-green-500 py-8" />

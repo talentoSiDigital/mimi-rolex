@@ -5,9 +5,9 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
-import FinishedModal from '../../components/global-components/FinishedModal.vue';
-import RegisterModal from '../../components/global-components/RegisterModal.vue';
 import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
+import FinishedModal from '../../components/modals/FinishedModal.vue';
+import RegisterModal from '../../components/modals/RegisterModal.vue';
 import router from '../../router';
 import StoreDataService from '../../services/storeDataService';
 import { auth } from '../../store/auth.module';
@@ -150,7 +150,7 @@ function goBack() {
                         su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos
                     </h2>
 
-                   
+                    
                    
                     <button @click="addToCart(state[0].id)" v-if="state[0].coleccion == 'Tudor' && state[0].cantidad >0"
                         class="border border-black w-full mb-2 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Agregar

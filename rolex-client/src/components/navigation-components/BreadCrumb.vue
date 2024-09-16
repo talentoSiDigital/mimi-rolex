@@ -28,16 +28,13 @@ function sanitizeString(string, index) {
       const lowerCaseWord = word.toLowerCase();
       return lowerCaseWord.charAt(0).toUpperCase() + lowerCaseWord.slice(1);
     });
-
     // Une las palabras capitalizadas en una sola cadena
     let capitalizedString = capitalizedWords.join(" ");
     capitalizedString = capitalizedString.replace("rolex", "Rolex");
     if (index == 2) {
       capitalizedString = capitalizedString.replaceAll("-", " ");
-      
-    } else{
-
-        capitalizedString = capitalizedString.replace("-", " ");
+    } else {
+      capitalizedString = capitalizedString.replace("-", " ");
     }
 
     return capitalizedString;
