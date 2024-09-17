@@ -220,6 +220,7 @@ function handleLogout() {
                 <h2 class="uppercase">Iniciar Sesión</h2>
             </router-link>
 
+
             <div v-if="loggedIn" class="hidden md:block group relative">
 
                 <div
@@ -243,6 +244,12 @@ function handleLogout() {
 
                 </div>
 
+            </div>
+            <div v-if="loggedIn">
+                <router-link to="/carrito" class="border-b-2 md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center">
+                    <font-awesome-icon :icon="['fas', 'cart-shopping']"
+                    class="text-2xl text-rolex-green duration-200  group-hover:underline" />
+                </router-link>
             </div>
             <!-- LOGIN ATTEMPT END -->
 

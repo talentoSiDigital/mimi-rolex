@@ -83,7 +83,7 @@ function handleLogin(user) {
 
                             <button @click="handleLogin(user)"
                                 class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">Iniciar
-                                Sesión</button>
+                                sesión</button>
 
                         </div>
 
@@ -96,7 +96,7 @@ function handleLogin(user) {
                         </RouterLink>
                     </div>
                     <div class="flex">
-                        <p>No tienes una cuenta?</p>
+                        <p>¿No tienes una cuenta?</p>
                         <RouterLink to="/registrar"
                             class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
                             Registrar</RouterLink>

@@ -141,7 +141,7 @@ function handleRegister(user,phoneNumber) {
                         <div v-if="!successful" class="space-y-4 md:space-y-6">
                             <div>
                                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Nombre</label>
-                                <Field id="name" type="text" name="name" placeholder="John"
+                                <Field id="name" type="text" name="name" placeholder="Luis"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                     v-model="user.name" />
                              
@@ -150,7 +150,7 @@ function handleRegister(user,phoneNumber) {
                             <div>
                                 <label for="lastname"
                                     class="block mb-2 text-sm font-medium text-gray-900 ">Apellidos</label>
-                                <Field id="lastname" type="text" name="lastname" placeholder="Doe"
+                                <Field id="lastname" type="text" name="lastname" placeholder="García"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                     v-model="user.lastname" />
                                 <ErrorMessage name="lastname" class="text-red-700" />

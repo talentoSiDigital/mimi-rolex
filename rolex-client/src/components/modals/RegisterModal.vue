@@ -24,7 +24,7 @@ const { emit } = defineEmits(['activate-modal'])
                     </RouterLink>
                     <RouterLink to="/login"
                         class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
-                        Iniciar sesion
+                        Iniciar sesión
                     </RouterLink>
                     <button @click="$emit('activate-modal')"
                         class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">

@@ -16,7 +16,7 @@ defineProps({
             <DashboardCards class=" w-1/3">
                 <div class=" w-full h-full  flex flex-col justify-between items-center">
     
-                    <h2 class="text-3xl font-bold ">{{message}}</h2>
+                    <h2 class="text-2xl font-bold ">{{message}}</h2>
                     <font-awesome-icon v-if="icon" :icon="['fas', 'circle-check']" class="text-6xl text-main-green py-8"/>
                     <font-awesome-icon v-if="!icon" :icon="['fas', 'circle-xmark']" class="text-6xl text-red-500 py-8"/>
     

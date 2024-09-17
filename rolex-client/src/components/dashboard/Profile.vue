@@ -28,12 +28,10 @@ const currentUser = computed(() => {
 <template>
     <section>
         <div>
-            <h2 class="text-center text-3xl font-montserrat font-bold py-4 my-4">Bienvenido al panel de control,
+            <h2 class="text-center text-3xl font-montserrat font-bold py-4 my-20">Bienvenido al panel de control,
                 @{{ currentUser.username }}</h2>
                 
-                <h2 class="text-center text-4xl font-montserrat font-semibold py-4 my-4">
-            ¿Qué deseas hacer?
-        </h2>
+                
         </div>
 
         <UserProfile  :info="currentUser.id"/>
