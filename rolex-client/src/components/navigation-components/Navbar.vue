@@ -18,7 +18,6 @@ const loggedIn = computed(() => {
 const activate = ref('h-20')
 
 function collapseNav() {
-    console.log(windowWidth.value);
     if (windowWidth.value < 1023) {
         activate.value == 'h-20' ? activate.value = 'h-fit' : activate.value = 'h-20'
     }
