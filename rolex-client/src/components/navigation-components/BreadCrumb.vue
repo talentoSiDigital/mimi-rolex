@@ -3,13 +3,11 @@ import { ref } from "vue";
 import { routerKey, RouterLink, useRoute } from "vue-router";
 const route = useRoute();
 const routeArray = ref(route.fullPath.split("/"));
-console.log(route.path == "/descubre-rolex");
 function getLink(index) {
   let link = "";
   for (let i = 1; i <= index; i++) {
     link = `${link}/${routeArray.value[i]}`;
   }
-  console.log(link);
   return link;
 }
 
@@ -43,7 +41,6 @@ function sanitizeString(string, index) {
   return string;
 }
 
-// console.log(routeArray.findIndex(currentRoute));
 </script>
 
 <template>
