@@ -382,34 +382,7 @@ const router = createRouter({
         title: "Registrar  - Mimi Joyería | Distribuidor Oficial Rolex"
       }
     }
-    ,
     
-    {
-      path: "/dashboard/",
-      name: "dashboard",
-      component: ()=>import("./views/Admin/Dashboard.view.vue"),
-      children:[
-        {
-          path:"",
-          name:"main",
-          component: ()=>import("./components/dashboard/Profile.vue")
-        },
-        {
-          path:"banner-edit",
-          name:"banner-edit",
-          component: ()=>import("./components/dashboard/SliderChangeForm.vue")
-        },
-       
-        {
-          path:"actualizar-datos",
-          name:"actualizar-datos",
-          component: ()=>import("./components/dashboard/DataUpdate.vue")
-        },
-      ],
-      meta: {
-        title: "Panel de control  - Mimi Joyería | Distribuidor Oficial Rolex"
-      }
-    }
     ,
     
     {

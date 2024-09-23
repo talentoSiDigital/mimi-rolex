@@ -8,7 +8,8 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     username: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      unique: true
     },
     age: {
       type: Sequelize.STRING
@@ -17,7 +18,8 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     email: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      unique: true
     },
     password: {
       type: Sequelize.STRING

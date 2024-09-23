@@ -201,11 +201,7 @@ function handleLogout() {
                     <h2 class="uppercase">Perfil</h2>
                 </div>
 
-                <router-link @click="collapseNav" to="/dashboard"
-                    class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
-                    <h2 class="uppercase">Panel</h2>
-
-                </router-link>
+                
            
                 <button @click="collapseNav, handleLogout"
                     class=" tracking-widest border bg-neutral-500 px-6 py-2 text-xl font-normal font-montserrat text-slate-50 w-full text-center  ">
@@ -231,10 +227,7 @@ function handleLogout() {
 
                 <div
                     class="absolute z-50 border left-0 md:left-3 bg-[#637263] w-fit md:bg-main-green p-8 md:p-5 hidden group-hover:block ">
-                    <router-link to="/dashboard"
-                        class="text-xl whitespace-nowrap  font-normal font-montserrat text-green-900  md:hover:underline">
-                        <h2 class="my-1 uppercase">Perfil</h2>
-                    </router-link>
+              
                   
                     <a href="/logout"
                         class="text-xl font-normal whitespace-nowrap  font-montserrat text-green-900  md:hover:underline">
@@ -247,7 +240,7 @@ function handleLogout() {
             <div v-if="loggedIn">
                 <router-link to="/carrito" class="border-b-2 md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center">
                     <font-awesome-icon :icon="['fas', 'cart-shopping']"
-                    class="text-2xl text-rolex-green duration-200  group-hover:underline" />
+                    class="text-2xl text-rolex-green duration-200 py-2 group-hover:underline" />
                 </router-link>
             </div>
             <!-- LOGIN ATTEMPT END -->

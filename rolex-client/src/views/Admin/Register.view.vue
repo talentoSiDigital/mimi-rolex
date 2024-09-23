@@ -129,7 +129,7 @@ function handleRegister(user,phoneNumber) {
 
             <img src="/assets/mimi-logo.png" alt="logo">
 
-            <div class="w-1/2 bg-white rounded-lg shadow  md:mt-0 sm:max-w-md md:max-w-none  xl:p-0   ">
+            <div class="md:w-1/2 bg-white rounded-lg shadow  md:mt-0 sm:max-w-md md:max-w-none  xl:p-0   ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl">
                         Registrar
@@ -223,7 +223,7 @@ function handleRegister(user,phoneNumber) {
                         </RouterLink>
                     </div>
                     <div v-else class="flex">
-                        <p>Ya tienes una cuenta?</p>
+                        <p>¿Ya tienes una cuenta?</p>
                         <RouterLink to="/login"
                             class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
                             Iniciar sesion</RouterLink>

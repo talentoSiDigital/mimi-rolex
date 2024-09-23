@@ -38,7 +38,7 @@ function handleLogin(user) {
     piniaStore.login(user).then(
         () => {
             
-            router.push("/dashboard");
+            router.push("/carrito");
         },
         (error) => {
             loading.value = false;

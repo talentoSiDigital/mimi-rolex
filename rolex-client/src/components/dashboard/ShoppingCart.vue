@@ -353,11 +353,11 @@ watch(challengeResponse, () => {
     </div>
     <div class="min-h-[95vh] mb-10">
       <div
-        class="w-full h-full flex gap-4 lg:gap-0 flex-col lg:flex-row items-center lg:items-start justify-between px-20 mb-10"
+        class="w-screen h-full flex gap-4 lg:gap-0 flex-col lg:flex-row items-center lg:items-start justify-between px-20 mb-10"
         v-if="isReady"
       >
         <div
-          :class="state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-full'"
+          :class="state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-[90vw] md:w-full'"
           class="h-[96vh] border-2 rounded-lg border-main-green p-6 lg:ml-5 -translate-x-1.5 -translate-y-1.5"
         >
           <h2 class="text-2xl pb-1">Resumen del pedido</h2>

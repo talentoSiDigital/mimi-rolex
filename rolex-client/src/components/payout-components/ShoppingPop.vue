@@ -22,7 +22,7 @@ const { state, isReady } = useAsyncState(
 </script>
 
 <template>
-    <router-link v-if="state > 0" to="/carrito" class="fixed bottom-16 right-12 z-20 w-fit pt-2">
+    <router-link v-if="state > 0" to="/carrito" class="fixed bottom-48 md:bottom-16 right-12 z-20 w-fit pt-2">
         <span
             class="bg-red-600 absolute right-2 top-2 px-1 text-xs font-bold rounded-full text-white h-4 w-4 animate-ping"></span>
         <p class="bg-red-600 absolute right-2 top-2 px-1 text-xs font-bold rounded-full text-white h-4 w-4 ">{{ state }}
