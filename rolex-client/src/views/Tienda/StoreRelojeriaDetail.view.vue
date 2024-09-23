@@ -43,7 +43,13 @@ function activateModal() {
     return active.value = !active.value
 }
 function closeModal(){
-    return complete.value = !complete.value
+    if(complete.value ){
+        complete.value = !complete.value
+        router.go()
+    }else{
+
+        return complete.value = !complete.value
+    }
 }
 
 
@@ -60,6 +66,7 @@ function addToCart(id) {
             closeModalInfo.value.icon = d.data.icon
 
             closeModal()
+            
         })
     }
 }
@@ -105,7 +112,7 @@ function goBack() {
 
         <div v-if="isReady">
 
-            <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full h-32">
+            <div class="mb-4 flex flex-col md:flex-row items-center justify-center  w-full h-32">
                 <!-- The left line -->
                 <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
                 <!-- Your text here -->
@@ -120,7 +127,7 @@ function goBack() {
                 <div id="carousel" class="md:w-1/2 flex flex-col items-center gap-3">
                     <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                         <slide v-for="(slide, index) in state[0].cantidadImagenes + 1" :key="index">
-                            <img :src="state[0].img[index - 1]" :alt="slide.serie" class="w-1/2 md:w-3/4 bg-white">
+                            <img :src="state[0].img[index - 1]" :alt="slide.serie" class="md:w-3/4 bg-white">
                         </slide>
 
                     </carousel>
@@ -142,7 +149,7 @@ function goBack() {
 
                     </div>
                 </div>
-                <div id="info" class="mt-4 md:mt-0 md:w-1/3 flex flex-col">
+                <div id="info" class="mt-4 md:mt-0 w-full md:w-1/3 flex flex-col">
 
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
                     <h2 class="text-xl font-medium pb-3">MIMI JOYERÍA</h2>
@@ -158,10 +165,10 @@ function goBack() {
                     <a :href="sendMessage(state)" target="_blank"
                         class="border border-black w-full mb-6 py-2 text-center text-white bg-neutral-600 font-medium hover:bg-white hover:text-neutral-600 duration-100">Contactar </a>
                     <div v-for="item in getTableContent(state[0].contenidoTabla, ';')" :key="item"
-                        class="flex justify-center ">
+                        class="flex flex-col md:flex-row justify-center ">
 
 
-                        <div v-for="(item, index) in getTableContent(item, ':')" :key="item" class=" flex w-1/2 ">
+                        <div v-for="(item, index) in getTableContent(item, ':')" :key="item" class=" flex md:w-1/2 ">
                             <p v-if="item != ''" :class="[index === 0 ? 'font-bold h-full ' : 'font-normal']"
                                 class="border w-full  flex items-center p-4">
                                 {{ item }}
@@ -171,9 +178,9 @@ function goBack() {
                     </div>
                     <div id="socials">
                         <h2>Compartir en:</h2>
-                        <div class="flex items-center gap-4 mt-2">
-                            <ShareSocialsButton social="facebook" />
+                        <div class="flex flex-col md:flex-row md:items-center gap-4 mt-2">
                             <ShareSocialsButton social="x" />
+                            <ShareSocialsButton social="facebook" />
                             <ShareSocialsButton social="pinterest" />
                         </div>
                     </div>
