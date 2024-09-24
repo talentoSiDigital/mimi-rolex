@@ -6,7 +6,6 @@ import { useRoute } from 'vue-router';
 import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
-import FinishedModal from '../../components/modals/FinishedModal.vue';
 import RegisterModal from '../../components/modals/RegisterModal.vue';
 import router from '../../router';
 import StoreDataService from '../../services/storeDataService';
@@ -31,10 +30,6 @@ const { isLoading, state, isReady, execute } = useAsyncState(
         })
 )
 
-const closeModalInfo = ref({    
-    "message":"",
-    "icon": false 
-})
 
 function getTableContent(item, char) {
     return item.split(char)
@@ -42,18 +37,6 @@ function getTableContent(item, char) {
 function activateModal() {
     return active.value = !active.value
 }
-function closeModal(){
-    if(complete.value ){
-        complete.value = !complete.value
-        router.go()
-    }else{
-
-        return complete.value = !complete.value
-    }
-}
-
-
-
 
 function addToCart(id) {
     if (!isUserLogged.status.value.loggedIn) {
@@ -64,9 +47,7 @@ function addToCart(id) {
             console.log(id);
             closeModalInfo.value.message = d.data.message
             closeModalInfo.value.icon = d.data.icon
-
-            closeModal()
-            
+            router.push('/carrito') 
         })
     }
 }
@@ -78,9 +59,6 @@ function sendMessage(state) {
     return `https://wa.me/584122909996/?text=${message}`
 }
 
-function goBack() {
-    router.go()
-}
 
 </script>
 
@@ -90,10 +68,6 @@ function goBack() {
 
     <section class="bg-neutral-100 font-montserrat text-neutral-700 flex ">
         <div>
-            <transition name="bounce">
-
-                <FinishedModal v-if="complete" @activate-modal="closeModal" :message="closeModalInfo.message" :icon="closeModalInfo.icon" @go-back="goBack"/>
-            </transition>
           
 
             <transition name="bounce">
