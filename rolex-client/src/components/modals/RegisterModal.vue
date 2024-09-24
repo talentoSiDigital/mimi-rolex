@@ -9,7 +9,7 @@ const { emit } = defineEmits(['activate-modal'])
 <template>
     <section class=" z-50 fixed h-screen top-0 w-full flex  items-center justify-center ">
         <div class="h-fit w-full flex items-center justify-center">
-            <DashboardCards class=" w-1/3">
+            <DashboardCards class="w-11/12 md:w-1/3">
 
                 <h2 class="text-2xl font-bold ">Registrate</h2>
                 <h2 class="text-xl font-light ">Necesitas tener una cuenta para poder ordenar, registrate ahora o inicia

@@ -373,7 +373,7 @@ watch(challengeResponse, () => {
               </div>
             </div>
             <div v-else class="border h-[88%] flex items-center justify-center">
-              <h2 class="text-4xl">No hay productos en tu carrito</h2>
+              <h2 class="md:text-4xl">No hay productos en tu carrito</h2>
             </div>
           </section>
 
