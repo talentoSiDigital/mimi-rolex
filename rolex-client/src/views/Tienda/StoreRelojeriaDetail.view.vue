@@ -13,6 +13,7 @@ import { auth } from '../../store/auth.module';
 
 const route = useRoute()
 const currentSlide = ref(1)
+const closeModalInfo = ref({})
 
 const piniaStore = auth()
 const isUserLogged = storeToRefs(piniaStore)
@@ -44,10 +45,11 @@ function addToCart(id) {
     } else {
         console.log(user.id);
         StoreDataService.postAddToCart(id, user.id).then((d) => {
+            router.replace('/carrito')
+
             console.log(id);
-            closeModalInfo.value.message = d.data.message
-            closeModalInfo.value.icon = d.data.icon
-            router.push('/carrito') 
+            // closeModalInfo.value.message = d.data.message
+            // closeModalInfo.value.icon = d.data.icon
         })
     }
 }

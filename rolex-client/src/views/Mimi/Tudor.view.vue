@@ -7,6 +7,20 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 <template>
     <div id="main-container">
         <PageBanner type="tudor" />
+        <header
+                class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
+
+                <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
+                
+                <RouterLink to="/relojeria/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
+                </RouterLink>
+                <RouterLink to="/contactenos" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
+                </RouterLink>
+
+
+            </header>
 
 
         <header class="flex flex-col justify-center  items-center  h-fit py-10 bg-neutral-100">

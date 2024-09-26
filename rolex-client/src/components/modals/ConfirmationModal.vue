@@ -8,7 +8,7 @@ const {status} = defineProps(["status"])
 
 const  emit  = defineEmits(['activate-modal','send-payment'])
 const dataToSend = defineModel()
-console.log(dataToSend.value);
+const unavailable = ref(false)
 const paymentProcess = ref(false)
 const nameTranslate = ref({
     "total": "Monto Total",
@@ -29,7 +29,8 @@ const nameTranslate = ref({
 
 function payWithData() {
     paymentProcess.value = true
-    emit('send-payment')
+    unavailable.value = true
+    // emit('send-payment')
 }
 
 console.log(dataToSend.value);
@@ -83,7 +84,24 @@ console.log(dataToSend.value);
                         </button>
                     </div>
 
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status == ''">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="unavailable">
+                        <img src="/assets/mimi-logo.png" alt="logo-mimi">
+                        <h2 class="text-2xl ">Sistema en mantenimiento</h2>
+                        <p class="w-10/12 text-center text-lg">
+                            
+                            Pedimos disculpas por las molestias ocasionadas.
+
+                        </p>
+                        <!--  -->
+                        <button
+                            class="uppercase border border-black py-4 px-10 text-neutral-600 bg-white hover:text-white hover:bg-neutral-600 duration-100 mt-4 "
+                            @click="$emit('activate-modal')">
+                            <font-awesome-icon :icon="['fas', 'arrow-left']" />
+                            <span class="pl-2">Volver</span>
+                        </button>
+                    </div>
+
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status == '1'">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             style="background: none; display: block; shape-rendering: auto;" width="200px"
                             height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -96,8 +114,9 @@ console.log(dataToSend.value);
                         </svg>
                         <h2 class="text-3xl">Procesando Pago...</h2>
                     </div>
-
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status != 'AUTHORIZED'">
+                    
+                    
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess3 && status.status != 'AUTHORIZED'">
                         <img src="/assets/mimi-logo.png" alt="logo-mimi">
                         <h2 class="text-xl">Pago Fallido</h2>
                         <font-awesome-icon v-if="!icon" :icon="['fas', 'circle-xmark']"

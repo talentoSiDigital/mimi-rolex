@@ -62,7 +62,10 @@ module.exports = (sequelize, Sequelize) => {
     },
     cantidad:{
       type: Sequelize.INTEGER 
-    }
+    },
+    disponible:{
+      type: Sequelize.INTEGER
+    },
 
   }, {
     timestamps: false
