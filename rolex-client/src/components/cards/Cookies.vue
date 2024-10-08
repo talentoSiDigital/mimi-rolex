@@ -5,8 +5,12 @@ import { useRoute } from 'vue-router';
 import routerFile from '../../router';
 
 const router = useRoute()
+
 const cookies = useCookies()
-const checkOpen = ref(false)
+const checkOpen = computed(()=>{
+    return router.fullPath === "/" ? checkOpen.value = true: checkOpen.value = false
+})
+
 
 let externalScript = document.createElement('script')
 externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js')
@@ -21,6 +25,7 @@ function checkCookies() {
         document.head.appendChild(externalScript)
     }
 }
+checkCookies()
 
 const isOpenUp = computed(() => {
     return checkOpen.value ? "bottom-0" : "-bottom-2/3"
