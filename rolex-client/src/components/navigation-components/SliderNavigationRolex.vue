@@ -29,7 +29,7 @@ const breakpoints = {
 const sliderItems = [
     {
         "src": "descubre-rolex",
-        "link": "/rolex",
+        "link": "rolex",
         "alt": "descubre-rolex",
         "title": "Descubre Rolex"
 
@@ -37,35 +37,35 @@ const sliderItems = [
     
     {
         "src": "coleccion-rolex",
-        "link": "/coleccion-rolex",
+        "link": "coleccion-rolex",
         "alt": "Coleccion-Rolex",
         "title": "Colección Rolex"
 
     },
     {
         "src": "nuevos-modelos",
-        "link": "/nuevos-modelos-2024",
+        "link": "rolex-nuevos-modelos",
         "alt": "Rolex-nuevos-modelos",
         "title": "Nuevos modelos 2024"
 
     },
     {
         "src": "watchmaking",
-        "link": "/watchmaking",
+        "link": "rolex-watchmaking",
         "alt": "Rolex-watchmaking",
         "title": "Rolex Watchmaking"
 
     },
     {
         "src": "mantenimiento",
-        "link": "/mantenimiento-rolex",
+        "link": "mantenimiento-rolex",
         "alt": "Rolex-mantenimiento",
         "title": "Mantenimiento Rolex"
 
     },
     {
         "src": "world-of-rolex",
-        "link": "/world-of-rolex",
+        "link": "world-of-rolex-hub",
         "alt": "world-of-rolex",
         "title": "World of Rolex"
 
@@ -74,7 +74,7 @@ const sliderItems = [
 
     {
         "src": "contacto",
-        "link": "/contactenos",
+        "link": "rolex-contacto",
         "alt": "contacto-mimi-joyeria",
         "title": "Contacto"
 
@@ -94,7 +94,7 @@ const sliderItems = [
             
             <carousel :breakpoints="breakpoints" v-model="currentSlide" :wrapAround="true" :itemsToScroll="1" :autoplay="2000"  :transition="600" class="w-full">
                 <slide v-for="slide in sliderItems" :key="slide">
-                    <router-link :to="slide.link" class="mx-1 group ">
+                    <router-link :to="{name:slide.link}" class="mx-1 group ">
                         <img :src="`/assets/routes-assets/rolex-slider/${slide.src}.jpg`" :alt="slide.alt" class="w-full lg:w-full">
                         <h2 class="duration-200 group-hover:text-rolex-green-2 text-rolex-brown text-lg font-helvetica font-bold text-left">{{ slide.title }}</h2>
                     </router-link>

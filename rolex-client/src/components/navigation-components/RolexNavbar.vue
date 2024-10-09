@@ -30,40 +30,40 @@ function collapseNav() {
             <img src="/assets/rolex-retailer.webp" alt="rolex-retailer-badge" class="hidden lg:block w-28 duration-200">
 
 
-            <router-link to="/descubre-rolex"
+            <router-link :to="{name:'rolex'}"
                 class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6  hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center ">
                 <h2>Descubre Rolex</h2>
             </router-link>
 
-            <router-link to="/coleccion-rolex"
+            <router-link :to="{name:'coleccion-rolex'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6    hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>Colección Rolex</h2>
 
             </router-link>
             
-            <router-link to="/nuevos-modelos-2024"
+            <router-link :to="{name:'rolex-nuevos-modelos'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6  hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>Nuevos Modelos 2024</h2>
  
             </router-link>
 
-            <router-link to="/watchmaking"
+            <router-link :to="{name:'rolex-watchmaking'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6    hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>Rolex Watchmaking</h2>
 
             </router-link>
 
-            <router-link to="/mantenimiento-rolex"
+            <router-link :to="{name:'mantenimiento-rolex'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6    hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>Mantenimiento Rolex</h2>
 
             </router-link>
 
-            <router-link to="/world-of-rolex"
+            <router-link :to="{name:'world-of-rolex-hub'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6    hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>World of Rolex</h2>
@@ -72,7 +72,7 @@ function collapseNav() {
 
           
 
-            <router-link to="/contacto"
+            <router-link :to="{name:'rolex-contacto'}"
                 class="    pr-6 font-bold md:font-normal py-4 text-xl  md:text-sm pl-6 md:pl-16 lg:pl-6    hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center">
 
                 <h2>Contacto</h2>

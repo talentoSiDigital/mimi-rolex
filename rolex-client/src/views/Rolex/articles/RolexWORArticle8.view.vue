@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from "vue-router";
 import RolexTemplate from "../RolexTemplate.view.vue";
 import SectionNavigationCard from "../../../components/cards/SectionNavigationCard.vue";
 </script>

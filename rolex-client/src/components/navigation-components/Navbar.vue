@@ -42,8 +42,8 @@ function handleLogout() {
             <router-link to="/" class="w-fit">
                 <img src="/assets/mimi-logo-gray.svg" alt="mimi-joyeria-logo" class="w-24 md:w-56">
             </router-link>
-            <div class="relative items-center hidden md:flex">
-                <router-link to="/descubre-rolex" class=" cursor-pointer absolute z-10 block md:w-40 md:h-20">
+            <div class="relative items-center overflow-hidden">
+                <router-link :to="{name:'rolex'}" class=" cursor-pointer absolute z-10 block w-full h-[160px] md:w-40 md:h-20">
                 </router-link>
                 <iframe
                     src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
@@ -64,7 +64,7 @@ function handleLogout() {
                 </svg>
             </div>
 
-            <router-link @click="collapseNav" to="/descubre-rolex"
+            <router-link @click="collapseNav" :to="{name:'rolex'}"
                 class=" md:border-0 md:border-b-2  md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900  w-full md:w-fit text-center">
                 <h2 class="uppercase">Rolex</h2>
             </router-link>

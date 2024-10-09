@@ -13,7 +13,7 @@ const router = useRouter()
 function checkClick(pos){
     console.log(pos);
     
-    if(pos === 3){
+    if(pos === 2){
         headerSliderDataServices.clickBanner("banner").then(()=>{
             router.push('/tudor')
             
@@ -23,7 +23,7 @@ function checkClick(pos){
         
     }else{
 
-        router.push('/coleccion-rolex')
+        router.push('/descubre-rolex')
     }
 }
 
@@ -53,7 +53,7 @@ const jewelSlideshow = [
 
             <carousel  v-if="!checkWindowSize" :items-to-show="1" :autoplay="3000"  :wrap-around="true">
 
-                <slide v-for="slide in 3"  :key="slide" class=" min-h-full w-full">
+                <slide v-for="slide in 2"  :key="slide" class=" min-h-full w-full">
                     <div  class="h-[650px] 3xl:h-[800px] w-full">
                         <div @click="checkClick(slide)" class="cursor-pointer">
                             <img rel="preload" class="hidden md:block"

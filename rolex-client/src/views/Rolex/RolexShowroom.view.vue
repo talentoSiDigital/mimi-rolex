@@ -5,6 +5,7 @@ import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
 import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
+import router from '../../router';
 
 
 
@@ -138,10 +139,10 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                                 Como llegar
                             </a>
 
-                            <RouterLink class="hover:underline" to="/contactenos">
+                            <router-link class="hover:underline" :to="{name:'rolex-contacto'}">
                                 <font-awesome-icon :icon="['fas', 'circle-info']" />
                                 Más información
-                            </RouterLink>
+                            </router-link>
                         </div>
                     </template>
 

@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <router-link
-    :to="`/coleccion-rolex/${collection}/${item.modelo}`"
+    :to="{name:'relojes-rolex', params:{collectionName:collection,id:item.modelo}}"
     class="bg-rolex-brown-light-1 h-full flex flex-col items-center justify-center py-0 cursor-pointer group"
   >
     <img

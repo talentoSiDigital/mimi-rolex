@@ -1,7 +1,6 @@
 <script setup>
-import { routerKey, RouterLink, useRoute } from "vue-router";
+import {  useRoute } from "vue-router";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
-import SectionNavigationCard from "../../components/cards/SectionNavigationCard.vue";
 import RolexHeader from "../../components/RolexHeader.vue";
 import { useAsyncState } from "@vueuse/core";
 import WatchCard from "../../components/cards/WatchCard.vue";
@@ -9,7 +8,7 @@ import WatchCard from "../../components/cards/WatchCard.vue";
 import PageBanner from "../../components/banners-components/PageBanner.vue";
 import collectionsCopy from "../../collectionsCopy.json";
 import RolexDataServices from "../../services/rolexDataService";
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import { computed } from "vue";
 
 const route = useRoute();

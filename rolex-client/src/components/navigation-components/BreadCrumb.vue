@@ -45,14 +45,13 @@ function sanitizeString(string, index) {
 
 <template>
   <div
-    :class="route.path == '/descubre-rolex' ? 'hidden md:flex' : 'flex'"
-    class="h-12 items-center md:px-36 font-helvetica bg-rolex-gradient"
+    class="h-12 items-center md:px-36 font-helvetica bg-rolex-gradient flex"
   >
     <div
       class="hidden md:flex gap-4 pr-4"
-      v-if="routeArray[1] != 'descubre-rolex'"
+      v-if="routeArray[2] != 'descubre-rolex'"
     >
-      <router-link :to="'/descubre-rolex'" class="text-white hover:underline"
+      <router-link :to="'/rolex/descubre-rolex'" class="text-white hover:underline"
         >Descubre Rolex
       </router-link>
       <font-awesome-icon
@@ -61,17 +60,19 @@ function sanitizeString(string, index) {
       />
     </div>
 
-    <div v-if="routeArray.length == 2" class="md:hidden flex gap-4 px-6">
+
+    <div  v-if="routeArray[2] != 'descubre-rolex' && routeArray.length == 2" class="md:hidden flex gap-4 px-6">
       <font-awesome-icon
         :icon="['fas', 'chevron-left']"
         class="py-1 text-white"
       />
-      <router-link :to="'/descubre-rolex'" class="text-white hover:underline"
+      <router-link :to="'/rolex/descubre-rolex'" class="text-white hover:underline"
         >Descubre Rolex
       </router-link>
     </div>
+
     <div v-for="(item, index) in routeArray" :key="index">
-      <div v-if="index > 0" class="hidden md:flex gap-4 pr-4">
+      <div v-if="index > 1" class="hidden md:flex gap-4 pr-4">
         <router-link :to="getLink(index)" class="text-white hover:underline"
           >{{ sanitizeString(item, index) }}
         </router-link>
@@ -84,13 +85,9 @@ function sanitizeString(string, index) {
 
       <div
         v-if="index == routeArray.length - 2"
-        class="md:hidden flex gap-4 px-6"
+        class=" flex  md:hidden gap-4 px-6"
       >
-        <font-awesome-icon
-          v-if="index < routeArray.length - 1 && routeArray.length > 2"
-          :icon="['fas', 'chevron-left']"
-          class="py-1 text-white"
-        />
+    
         <router-link :to="getLink(index)" class="text-white hover:underline"
           >{{ sanitizeString(item, index) }}
         </router-link>
