@@ -17,7 +17,7 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
             <RolexHeader color="bg-rolex-brown-light-1">
 
                 <template #title>
-                    Descubra las colecciones Rolex
+                    Relojes Rolex en Mimi Joyería en Venezuela
                 </template>
                 <template #text>
                     <strong>Esta selección de modelos Rolex proviene del catálogo oficial y no representa las

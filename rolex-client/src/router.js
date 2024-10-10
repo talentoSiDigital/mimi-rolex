@@ -25,20 +25,22 @@ const router = createRouter({
     }, 
    
     {
-      path: "/rolex/mantenimiento-rolex",
+      path: "/rolex/mantenimiento",
       name: "mantenimiento-rolex",
       component:()=>import("./views/Rolex/RolexMantenimiento.view.vue"),
       meta: {
-        title: "Mantenimiento Rolex  | Mimi Joyería"
+        title: "Mantenimiento Rolex  | Mimi Joyería",
+        description:"Mimi Joyería se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de procedimiento de mantenimiento."
       }
 
     },
     {
-      path: "/rolex/mantenimiento-rolex/procedimiento",
+      path: "/rolex/procedimiento-mantenimiento",
       name: "mantenimiento-rolex-procedimiento",
       component:()=>import("./views/Rolex/RolexMantenimientoProcedimiento.view.vue") ,
       meta: {
-        title: "Procedimiento de mantenimiento Rolex | Mimi Joyería "
+        title: "Procedimiento de mantenimiento Rolex | Mimi Joyería ",
+        description:"Explore el procedimiento del mantenimiento Rolex en Mimi Joyería, su Distribuidor Oficial Rolex para el cuidado y el mantenimiento experto de su reloj Rolex."
       }
 
     },
@@ -56,7 +58,8 @@ const router = createRouter({
       name: "rolex-watchmaking",
       component:()=>import("./views/Rolex/RolexWatchmaking.view.vue"),
       meta: {
-        title: "Rolex Watchmaking  | Mimi Joyería "
+        title: "«Savoir-faire» relojero de Rolex | Mimi Joyería",
+        description: "Descubra el enfoque «superlative» de Rolex al «savoir-faire» relojero y conozca más acerca de la constante búsqueda de la excelencia de Rolex en Mimi Joyería en Venezuela."
       }
     }
     ,
@@ -65,16 +68,18 @@ const router = createRouter({
       name: "rolex-contacto",
       component:()=>import("./views/Rolex/RolexContacto.view.vue"),
       meta: {
-        title: "Contáctenos  | Mimi Joyería "
+        title: "Contacto Mimi Joyería en Venezuela - Distribuidor Oficial Rolex",
+        meta:"Póngase en contacto con Mimi Joyería y deje que le ayudemos a escoger un Rolex o a dar respuestas a sus consultas."
       }
     }
     ,
     {
-      path: "/rolex/contacto/enviar-mensaje",
+      path: "/rolex/formulario-contacto",
       name: "rolex-contacto-enviar-mensaje",
       component:()=>import("./views/Rolex/RolexContactMessage.view.vue"),
       meta: {
-        title: "Enviar mensaje | Mimi Joyería "
+        title: "Formulario de contacto | Mimi Joyería",
+        meta:"Póngase en contacto con su Distribuidor Oficial Rolex Mimi Joyería para obtener más información sobre nuestros servicios o cualquier consulta sobre Rolex que pueda tener"
       }
     },
   
@@ -84,7 +89,8 @@ const router = createRouter({
       name: "rolex-nuevos-modelos",
       component:()=>import("./views/Rolex/RolexNewModels.view.vue"),
       meta: {
-        title: "Nuevos Modelos Rolex 2024  | Mimi Joyería "
+        title: "Nuevos Modelos Rolex 2024  | Mimi Joyería ",
+        description:"Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex.Descubra las características únicas de los nuevos modelos de este año."
       }
     },
     {
@@ -142,7 +148,8 @@ const router = createRouter({
       name: "world-of-rolex-hub",
       component:()=>import("./views/Rolex/RolexWORHub.view.vue"),
       meta: {
-        title: "World Of Rolex  | Mimi Joyería "
+        title: "El mundo de Rolex | Mimi Joyería ",
+        description:"Explore el mundo de Rolex. Descubra datos y artículos que demuestran la esencia de Rolex y manténgase al día con las últimas noticias de Rolex | Mimi Joyería"
       }
     },
     {
@@ -216,29 +223,29 @@ const router = createRouter({
 
     // ROLEX WATCHES DYNAMIC ROUTES 
     {
-      path: "/rolex/coleccion-rolex",
+      path: "/rolex/relojes",
       name: "coleccion-rolex",
       component:()=>import("./views/Rolex/RolexWatches.view.vue"),
       meta: {
-        title: "Coleccion Rolex ",
+        title: "Relojes Rolex en Venezuela | Mimi Joyería",
         description: "Descubra los relojes Rolex en línea en Mimi Joyería, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer"
       }
     },
     
     {
-      path: "/rolex/coleccion-rolex/:id",
+      path: "/rolex/:id",
       name: "rolex-coleccion",
       component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
       meta: {
-        title: "Coleccion Rolex | Mimi Joyería "
+        title: " Mimi Joyería "
       }
     },
     {
-      path: "/rolex/coleccion-rolex/:collectionName/:id",
+      path: "/rolex/:collectionName-:id",
       name: "relojes-rolex",
       component:()=>import("./views/Rolex/RolexWatchDetail.view.vue") ,
       meta: {
-        title: "Modelos de Rolex | Mimi Joyería "
+        title: " Mimi Joyería "
       }
     },
     // ****************
@@ -475,6 +482,10 @@ const router = createRouter({
 
 
 router.beforeEach((to, from, next) => {
+  const description = to.meta.description
+  
+  
+
 
   // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
   // Get the page title from the route meta data that we have defined
@@ -482,6 +493,9 @@ router.beforeEach((to, from, next) => {
   const title = to.meta.title
   //Take the title from the parameters
   const titleFromParams = to.params.id;
+  const descriptionElement = document.querySelector('meta[name="description"]')
+  console.log(descriptionElement);
+
 
   // If the route has a title, set it as the page title of the document/page
   if (title) {
@@ -495,6 +509,8 @@ router.beforeEach((to, from, next) => {
     document.title = `${parsedTitleFromParams.replaceAll("-", " ")} - ${title}`;
   }
 
+
+  descriptionElement.setAttribute('content', description || "")
   // Continue resolving the route
   next()
 })

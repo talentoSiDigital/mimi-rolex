@@ -12,7 +12,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
       <PageBanner type="world-of-rolex" />
 
       <RolexHeader color="bg-rolex-brown-light-2">
-        <template #title> World of Rolex </template>
+        <template #title> El mundo de Rolex </template>
         <template #text>
           <strong
             >Durante casi un siglo, Rolex ha desarrollado colaboraciones con un

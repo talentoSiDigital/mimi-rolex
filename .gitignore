@@ -34,6 +34,7 @@ src/assets
 #server
 server/node_modules
 server/.env
+server/keys
 
 
 server/storage/

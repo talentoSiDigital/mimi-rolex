@@ -18,7 +18,7 @@ import Button from '../../components/global-components/Button.vue';
                 <RolexHeader color="bg-rolex-brown-light-2">
 
                     <template #title>
-                        Mantenimiento Rolex: las etapas de un servicio completo
+                        Procedimiento de mantenimiento de los relojes Rolex en Mimi Joyería.
                     </template>
                     <template #text>
                         Cualquier Distribuidor Oficial o filial de la marca puede hacerse cargo de su reloj Rolex para

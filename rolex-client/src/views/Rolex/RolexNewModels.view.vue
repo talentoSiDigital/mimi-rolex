@@ -29,7 +29,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
             <RolexHeader color="bg-rolex-brown-light-2">
 
                 <template #title>
-                    Nuevos Relojes Rolex - <br>
+                    Nuevos Relojes Rolex 2024- <br>
                     Mimi Joyería
                 </template>
                 <template #text>

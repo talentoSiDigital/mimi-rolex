@@ -1,6 +1,8 @@
 <script setup>
 import { useAsyncState } from "@vueuse/core";
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
+import { useHead } from "@unhead/vue";
+import { Head } from "@unhead/vue/components";
 
 import { useRoute } from "vue-router";
 
@@ -14,6 +16,9 @@ import RolexTemplate from "./RolexTemplate.view.vue";
 import axios from "axios";
 
 import { useElementHover } from "@vueuse/core";
+import Button from "../../components/global-components/Button.vue";
+import NewContactForm from "../../components/global-components/NewContactForm.vue";
+import mailDataService from "../../services/mailDataService";
 
 const myHoverableElement = ref();
 const isHovered = useElementHover(myHoverableElement);
@@ -24,12 +29,22 @@ const windowWidth = ref(window.innerWidth);
 const route = useRoute();
 const currentRoute = route.params.id;
 const location = ref(null);
+const name = ref(currentRoute);
+
+function getDiameter(text) {
+  const r = /\d+/;
+  return text.match(r)[0] + " mm";
+}
+function getMaterialName(text) {
+  let string = text.split(",");
+  return string[2];
+}
+
 axios
   .get("https://ipinfo.io/json?token=4ee0a261f56090")
   .then(function (response) {
     // handle success
     location.value = response.data.country;
-
   })
   .catch(function (error) {
     // handle error
@@ -38,12 +53,11 @@ axios
 const excludedCountries = ["US", "IN", "AU", "NZ", "JE", "GG", "CA"];
 const checkLocation = computed(() => {
   return location.value != "VE";
-  
 });
 
 let { isLoading, state, isReady, execute } = useAsyncState(
   RolexDataServices.getDetailedWatch(currentRoute).then((d) => {
-    console.log(d.data);
+  
     return d.data;
   })
 );
@@ -68,10 +82,6 @@ function capitalizeFirstLetter(inputString) {
 
   return capitalizedString;
 }
-
-import Button from "../../components/global-components/Button.vue";
-import NewContactForm from "../../components/global-components/NewContactForm.vue";
-import mailDataService from "../../services/mailDataService";
 
 const error = ref(false);
 const messageInfo = ref({
@@ -98,7 +108,8 @@ function moveForm(pos) {
   }
 }
 function sendMessage() {
-    messageInfo.value.message = messageInfo.value.message + ". Codigo de modelo: "+ currentRoute
+  messageInfo.value.message =
+    messageInfo.value.message + ". Codigo de modelo: " + currentRoute;
   mailDataService
     .rolexNewMail(messageInfo.value)
     .then((d) => {
@@ -113,6 +124,7 @@ function sendMessage() {
       moveForm(2);
     });
 }
+// nombre, get
 </script>
 
 <template>
@@ -120,6 +132,19 @@ function sendMessage() {
     <RolexTemplate>
       <template #content>
         <div v-if="isReady">
+          <Head>
+            <title>
+              Rolex {{ state.getAll.nombre }}
+              {{ getMaterialName(state.getAll.cajaDelModelo) }},
+              {{ state.getAll.modelo }}
+            </title>
+            <meta
+              name="description"
+              :content="`Descubra el reloj Rolex ${
+                state.getAll.nombre},  ${getDiameter(state.getAll.cajaDelModelo)}, de  ${getMaterialName(state.getAll.cajaDelModelo)} en Mimi Joyería, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex.`"
+            />
+          </Head>
+   
           <section class="bg-white relative md:h-[85vh]">
             <div class="flex items-center justify-center w-full">
               <img
@@ -132,12 +157,15 @@ function sendMessage() {
               class="md:absolute w-full h-full top-0 flex items-center pl-10 md:pl-24 pb-10 md:pb-0"
             >
               <div class="font-helvetica md:w-1/3">
-                <h2 class="font-bold text-rolex-brown text-2xl">Rolex</h2>
-                <h2 class="font-bold text-rolex-brown text-6xl">
+                <h1 class="font-bold text-rolex-brown text-2xl">Rolex</h1>
+                <h1 class="font-bold text-rolex-brown text-6xl">
                   {{ state.getAll.nombre }}
-                </h2>
-                <h2 class="font-light">{{ state.getAll.cajaDelModelo }}</h2>
-                <div v-if="!checkLocation" class="text-rolex-brown flex items-center gap-2">
+                </h1>
+                <h1 class="font-light">{{ state.getAll.cajaDelModelo }}</h1>
+                <div
+                  v-if="!checkLocation"
+                  class="text-rolex-brown flex items-center gap-2"
+                >
                   <h2 class="font-light">
                     $ {{ addComma(state.details[0].precio) }}
                   </h2>
@@ -147,8 +175,8 @@ function sendMessage() {
                     class="text-sm cursor-pointer duration-200"
                   />
                 </div>
-                <Transition name="fade" >
-                  <p 
+                <Transition name="fade">
+                  <p
                     v-if="isHovered"
                     class="text-xs w-1/5 duration-200 absolute border-2 border-rolex-brown rounded p-4 bg-rolex-brown-light-1"
                   >
@@ -180,13 +208,12 @@ function sendMessage() {
                       class="flex items-center gap-4"
                     >
                       <font-awesome-icon
-                      
-                      :icon="['fas', 'comment']"
+                        :icon="['fas', 'comment']"
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
                       <p>Chat</p>
                     </a>
-                   
+
                     <a
                       href="mailto:info@mimijoyeria.com"
                       class="flex items-center gap-4"
@@ -269,7 +296,7 @@ function sendMessage() {
                     >
                       Caja del modelo
                     </h2>
-                    <p class="font-light">{{ state.getAll.cajaDelModelo }}</p>
+                    <h1 class="font-light">{{ state.getAll.cajaDelModelo }}</h1>
                   </header>
                   <header>
                     <h2
@@ -536,14 +563,10 @@ function sendMessage() {
               <header
                 class="w-10/12 flex flex-col gap-4 font-helvetica font-bold justify-around items-start text-rolex-brown h-fit py-2"
               >
-                <h1 class="text-2xl md:text-5xl  w-full">
-                  Contáctanos
-                </h1>
-                <hr class="mt-4 mb-2 w-full " />
+                <h1 class="text-2xl md:text-5xl w-full">Contáctanos</h1>
+                <hr class="mt-4 mb-2 w-full" />
 
-                <h1 class="text-2xl md:text-3xl">
-                  Envíenos su mensaje
-                </h1>
+                <h1 class="text-2xl md:text-3xl">Envíenos su mensaje</h1>
               </header>
               <div class="relative w-10/12">
                 <img

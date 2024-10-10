@@ -1,5 +1,5 @@
 <script setup>
-import {  useRoute } from "vue-router";
+import { useRoute } from "vue-router";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 import RolexHeader from "../../components/RolexHeader.vue";
 import { useAsyncState } from "@vueuse/core";
@@ -10,11 +10,12 @@ import collectionsCopy from "../../collectionsCopy.json";
 import RolexDataServices from "../../services/rolexDataService";
 import { ref } from "vue";
 import { computed } from "vue";
+import { useHead } from "@unhead/vue";
+import { Head } from "@unhead/vue/components";
 
 const route = useRoute();
 const currentRoute = route.params.id;
 const currentData = collectionsCopy[currentRoute];
-console.log(currentRoute)
 
 const currentPage = ref(1);
 const totalPages = ref(1);
@@ -24,7 +25,6 @@ const { state, isLoading, isReady, execute } = useAsyncState(
   RolexDataServices.getByCollection(currentRoute)
     .then((d) => {
       totalPages.value = Math.ceil(d.data.length / 6);
-
       return d.data;
     })
     .catch((e) => {
@@ -50,10 +50,16 @@ function loadMore() {
   if (currentPage.value < totalPages.value) {
   }
 }
+
+
 </script>
 
 <template>
   <RolexTemplate>
+    <Head>
+      <title>Relojes Rolex {{currentData.name}} | Mimi Joyería</title>
+      <meta name="description" :content="`Descubra los relojes Rolex ${currentData.name} en línea en Mimi Joyería, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer. Descubra más en Mimi Joyería.`" />
+    </Head>
     <template #content>
       <PageBanner :type="`collections-${currentRoute}`" />
       <RolexHeader color="bg-rolex-brown-light-2">
@@ -61,7 +67,7 @@ function loadMore() {
           {{ currentData.headerSection.sub }}
         </template>
         <template #title>
-          <span v-html="currentData.headerSection.title"></span>
+          <span> Rolex {{ currentData.name }} </span>
         </template>
         <template #text>
           <span v-html="currentData.headerSection.text"></span>
@@ -131,7 +137,10 @@ function loadMore() {
           <div
             v-else
             class="flex justify-center"
-            :class="[item.backgroundColor, item.imgSize == 'w-full'? 'pb-[10vh]':'py-[10vh]' ]"
+            :class="[
+              item.backgroundColor,
+              item.imgSize == 'w-full' ? 'pb-[10vh]' : 'py-[10vh]',
+            ]"
           >
             <img
               :src="`/assets/routes-assets/collections/${currentRoute}/collections-${currentRoute}-${
@@ -183,17 +192,16 @@ function loadMore() {
           </div>
           <div class="flex justify-center">
             <div
-              class="grid grid-cols-2 md:grid-cols-3 place-items-center w-11/12  md:w-8/12 gap-4"
+              class="grid grid-cols-2 md:grid-cols-3 place-items-center w-11/12 md:w-8/12 gap-4"
             >
-                <div
-                  v-for="(item, key) in filterItems()"
-                  :key="key"
-                  class=" border h-[500px]"
-                  :class="key < itemsToShow ? 'h-[500px]' : 'h-0'"
-                >
-                  <WatchCard :item="item" :collection="currentRoute" />
-                </div>
-                
+              <div
+                v-for="(item, key) in filterItems()"
+                :key="key"
+                class="border h-[500px]"
+                :class="key < itemsToShow ? 'h-[500px]' : 'h-0'"
+              >
+                <WatchCard :item="item" :collection="currentRoute" />
+              </div>
             </div>
           </div>
           <div class="w-full flex justify-center py-[10vh]">
