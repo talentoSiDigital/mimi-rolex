@@ -1,23 +1,9 @@
 <script setup>
-import { ref, watch } from 'vue';
 import { RouterLink } from 'vue-router';
-
-import { useAsyncState } from '@vueuse/core'
-
-
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
-
-
 import ModelsCard from '../../components/cards/ModelsCard.vue';
-
-
-
-
-
-
-
 </script>
 
 <template>
@@ -51,7 +37,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
             <div class="flex flex-col justify-center items-center w-full text-rolex-brown bg-rolex-brown-light-2 pb-[10vh]">
                 <div id="rolex-container"
                     class="grid grid-cols-1 place-items-center md:grid-cols-2 w-10/12 gap-x-2 gap-y-10">
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-gmt-master-ii" link="/nuevos-modelos-2024/gmt-master-ii">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-gmt-master-ii" :link="{name:'rolex-nuevos-modelos-gmt-master-ii'}">
                         <template #sub>
                             Nuevos Relojes 2024
                         </template>
@@ -63,7 +49,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                     </ModelsCard>
 
 
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-day-date" link="/nuevos-modelos-2024/day-date">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-day-date" :link="{name:'rolex-nuevos-modelos-day-date'}">
 
                         <template #sub>
                             Nuevos Relojes 2024
@@ -74,7 +60,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
 
                     </ModelsCard>                 
 
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-1908" link="/nuevos-modelos-2024/1908">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-1908" :link="{name:'rolex-nuevos-modelos-1908'}">
 
                         <template #sub>
                             Nuevos Relojes 2024
@@ -85,7 +71,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
 
                     </ModelsCard>
 
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-deepsea" link="/nuevos-modelos-2024/deepsea">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-deepsea" :link="{name:'rolex-nuevos-modelos-deepsea'}">
                         <template #sub>
                             Nuevos Relojes 2024
                         </template>
@@ -96,7 +82,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                     </ModelsCard>
 
                   
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-cosmograph-daytona" link="/nuevos-modelos-2024/cosmograph-daytona">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-cosmograph-daytona" :link="{name:'rolex-nuevos-modelos-cosmograph-daytona'}">
                         <template #sub>
                             Nuevos Relojes 2024
                         </template>
@@ -107,7 +93,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
 
                     </ModelsCard>
 
-                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-sky-dweller" link="/nuevos-modelos-2024/sky-dweller">
+                    <ModelsCard img="new-watches/hub/rolex-new-watches-2024-sky-dweller" :link="{name:'rolex-nuevos-modelos-sky-dweller'}">
                         <template #sub>
                             Nuevos Relojes 2024
                         </template>

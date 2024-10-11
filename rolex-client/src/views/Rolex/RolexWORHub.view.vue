@@ -30,7 +30,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         <div class="w-11/12">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-main"
-            link="/world-of-rolex/rolex-y-the-us-open"
+            :link="{name:'world-of-rolex-article-8'}"
             class="w-full"
           >
             <template #sub>Publicado el 23 de Agosto, 2024</template>
@@ -51,7 +51,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
       <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-the-open"
-            link="/world-of-rolex/rolex-y-the-open"
+            :link="{name:'world-of-rolex-article-7'}"
+            
             class="w-full"
           >
             <template #sub>Publicado el 12 de Julio, 2024</template>
@@ -66,7 +67,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-admundi"
-            link="/world-of-rolex/rolex-y-the-amundi-evian-championship"
+            :link="{name:'world-of-rolex-article-6'}"
+            
             class="w-full"
           >
             <template #sub>Publicado el 4 de Julio, 2024</template>
@@ -86,7 +88,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-wimbledon"
-            link="/world-of-rolex/rolex-y-the-championships-wimbledon"
+            :link="{name:'world-of-rolex-article-5'}"
+            
             class="w-full "
           >
             <template #sub>Publicado el 1 de Junio, 2024</template>
@@ -107,7 +110,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
 
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-lemans"
-            link="/world-of-rolex/las-24-horas-de-le-mans"
+            :link="{name:'world-of-rolex-article-4'}"
+            
             class="w-full"
           >
             <template #sub>Publicado el 21 de Junio, 2024</template>
@@ -122,21 +126,23 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
+         
           <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-beyond-rolex"
-            link="/world-of-rolex/viaje-al-corazon-del-universo-rolex"
+            img="world-of-rolex/world-of-rolex-grand-slam"
+            :link="{name:'world-of-rolex-article-3'}"
+            
             class="w-full"
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
-            <template #title>Viaje al corazón del universo Rolex</template>
+            <template #title>Rolex Grand Slam of Show Jumping</template>
             <template #description>
               <h2 class="w-full">
-                Hans Wilsdorf estaba íntimamente convencido de la capacidad del
-                ser humano para innovar con la excelencia como objetivo. Casi
-                120 años después de la creación de la marca, el espíritu del
-                fundador está más presente que nunca, tanto en lo que afecta a
-                la fabricación de relojes como a los compromisos de Rolex en
-                todo el mundo.
+                Ampliamente considerado como el mayor desafío de la hípica, el
+                Rolex Grand Slam of Show Jumping recompensa al jinete que gane
+                el Grand Prix en tres de los cuatro Majors consecutivos de salto
+                de obstáculos: The Dutch Masters de ’s-Hertogenbosch, el CSIO
+                Spruce Meadows ‘Masters’ de Calgary, el CHIO Aachen y el
+                Concurso Hípico Internacional de Ginebra.
               </h2>
             </template>
             <template #button>Más información</template>
@@ -144,7 +150,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
 
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-sailgp"
-            link="/world-of-rolex/sail-gp"
+            :link="{name:'world-of-rolex-article-2'}"
+            
             class="w-full "
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
@@ -162,24 +169,26 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
 
           <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-grand-slam"
-            link="/world-of-rolex/rolex-grand-slam"
-            class="w-full "
+            img="world-of-rolex/world-of-rolex-beyond-rolex"
+            :link="{name:'world-of-rolex-article-1'}"
+            
+            class="w-full"
           >
             <template #sub>Publicado el 9 de Abril, 2024</template>
-            <template #title>Rolex Grand Slam of Show Jumping</template>
+            <template #title>Viaje al corazón del universo Rolex</template>
             <template #description>
               <h2 class="w-full">
-                Ampliamente considerado como el mayor desafío de la hípica, el
-                Rolex Grand Slam of Show Jumping recompensa al jinete que gane
-                el Grand Prix en tres de los cuatro Majors consecutivos de salto
-                de obstáculos: The Dutch Masters de ’s-Hertogenbosch, el CSIO
-                Spruce Meadows ‘Masters’ de Calgary, el CHIO Aachen y el
-                Concurso Hípico Internacional de Ginebra.
+                Hans Wilsdorf estaba íntimamente convencido de la capacidad del
+                ser humano para innovar con la excelencia como objetivo. Casi
+                120 años después de la creación de la marca, el espíritu del
+                fundador está más presente que nunca, tanto en lo que afecta a
+                la fabricación de relojes como a los compromisos de Rolex en
+                todo el mundo.
               </h2>
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
+          
         </div>
       </section>
     

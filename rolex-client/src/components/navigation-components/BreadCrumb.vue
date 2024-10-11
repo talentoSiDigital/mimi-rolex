@@ -1,96 +1,134 @@
 <script setup>
-import { ref } from "vue";
-import { routerKey, RouterLink, useRoute } from "vue-router";
+import { onMounted, ref } from "vue";
+import { routerKey, RouterLink, useRoute, useRouter } from "vue-router";
+import breadcrumb from "../../breadcrumb.json";
 const route = useRoute();
+const router = useRouter();
+const actual = ref(breadcrumb[route.name]);
+console.log(router.getRoutes());
 const routeArray = ref(route.fullPath.split("/"));
-function getLink(index) {
-  let link = "";
-  for (let i = 1; i <= index; i++) {
-    link = `${link}/${routeArray.value[i]}`;
+const parentRoutes = {
+  "Mantenimiento Rolex": "mantenimiento-rolex",
+  Contacto: "rolex-contacto",
+  "Nuevos Modelos": "rolex-nuevos-modelos",
+  "World Of Rolex": "world-of-rolex-hub",
+  "Colección Rolex": "coleccion-rolex",
+};
+function generateLink(pos) {
+  if (actual.value[pos] == actual.value[actual.value.length - 1]) {
+    router.go();
   }
-  return link;
+  if (actual.value[pos] == actual.value[0]) {
+    router.push({ name: parentRoutes[actual.value[0]] });
+  }
+  if (
+    actual.value.length == 3 &&
+    actual.value[pos] == actual.value[actual.value.length - 2]
+  ) {
+    router.go(-1);
+  }
 }
 
-function sanitizeString(string, index) {
-  if (string == "gmt-master-ii") {
-    return "GMT Master II";
+function capitalizeFirstLetterOfEachWord(string) {
+  return string.replace(/\b\w/g, (char) => char.toUpperCase());
+}
+function getModelName() {
+  if (route.name == "relojes-rolex") {
+    actual.value = [];
+    console.log(actual.value);
+    actual.value = breadcrumb[route.name];
+    let string = route.fullPath;
+    string = string.split("/");
+    string = string[string.length - 1].split("-");
+    let collection = string.slice(string.length - 2).join(" ");
+    collection = collection.replace(/\s/g, "-").toUpperCase();
+    string = capitalizeFirstLetterOfEachWord(
+      string.slice(string[0], string.length - 2).join(" ")
+    );
+
+    actual.value.push(string);
+    actual.value.push(collection);
   }
-  if (index != 3) {
-    let input = string;
-    input = input.replace("-", " ");
-
-    const words = input.split(" ");
-
-    // Capitaliza la primera letra de cada palabra
-    const capitalizedWords = words.map((word) => {
-      const lowerCaseWord = word.toLowerCase();
-      return lowerCaseWord.charAt(0).toUpperCase() + lowerCaseWord.slice(1);
-    });
-    // Une las palabras capitalizadas en una sola cadena
-    let capitalizedString = capitalizedWords.join(" ");
-    capitalizedString = capitalizedString.replace("rolex", "Rolex");
-    if (index == 2) {
-      capitalizedString = capitalizedString.replaceAll("-", " ");
-    } else {
-      capitalizedString = capitalizedString.replace("-", " ");
-    }
-
-    return capitalizedString;
-  }
-
-  return string;
 }
 
+function getCollectionName() {
+  if (route.name == "rolex-coleccion") {
+    actual.value = [];
+    console.log(actual.value);
+    actual.value = breadcrumb[route.name];
+    let string = route.fullPath;
+    string = string.split("/");
+
+    actual.value.push(
+      capitalizeFirstLetterOfEachWord(string[string.length - 1])
+    );
+  }
+}
+
+onMounted(() => {
+  console.log("isMounted");
+  getCollectionName();
+  getModelName();
+});
 </script>
 
 <template>
-  <div
-    class="h-12 items-center md:px-36 font-helvetica bg-rolex-gradient flex"
-  >
-    <div
-      class="hidden md:flex gap-4 pr-4"
-      v-if="routeArray[2] != 'descubre-rolex'"
-    >
-      <router-link :to="'/rolex/descubre-rolex'" class="text-white hover:underline"
-        >Descubre Rolex
-      </router-link>
-      <font-awesome-icon
-        :icon="['fas', 'chevron-right']"
-        class="py-1 text-white"
-      />
-    </div>
-
-
-    <div  v-if="routeArray[2] != 'descubre-rolex' && routeArray.length == 2" class="md:hidden flex gap-4 px-6">
-      <font-awesome-icon
-        :icon="['fas', 'chevron-left']"
-        class="py-1 text-white"
-      />
-      <router-link :to="'/rolex/descubre-rolex'" class="text-white hover:underline"
+  <div class="h-12 items-center md:px-36 font-helvetica bg-rolex-gradient flex">
+    <div class="hidden md:flex gap-4 pr-4">
+      <router-link :to="{ name: 'rolex' }" class="text-white hover:underline"
         >Descubre Rolex
       </router-link>
     </div>
 
-    <div v-for="(item, index) in routeArray" :key="index">
-      <div v-if="index > 1" class="hidden md:flex gap-4 pr-4">
-        <router-link :to="getLink(index)" class="text-white hover:underline"
-          >{{ sanitizeString(item, index) }}
-        </router-link>
+    <div v-for="(item, index) in actual" :key="index">
+      <div class="hidden md:flex gap-4 pr-4">
         <font-awesome-icon
-          v-if="index < routeArray.length - 1"
           :icon="['fas', 'chevron-right']"
           class="py-1 text-white"
         />
+
+        <div
+          @click="generateLink(index)"
+          class="text-white hover:underline cursor-pointer"
+        >
+          {{ item }}
+        </div>
       </div>
 
-      <div
-        v-if="index == routeArray.length - 2"
-        class=" flex  md:hidden gap-4 px-6"
-      >
-    
-        <router-link :to="getLink(index)" class="text-white hover:underline"
-          >{{ sanitizeString(item, index) }}
-        </router-link>
+      
+    </div>
+
+    <div
+      v-for="(item, index) in actual"
+      :key="index"
+      class="flex md:hidden  pr-4 pl-6"
+    >
+      <font-awesome-icon
+        v-if="!actual || actual.length == 1"
+        :icon="['fas', 'chevron-left']"
+        class="py-1 pr-2 text-white"
+      />
+      
+      <router-link
+        v-if="!actual || actual.length == 1"
+        :to="{ name: 'rolex' }"
+        class="text-white hover:underline"
+        >Descubre Rolex
+      </router-link>
+      
+      <div class="flex gap-4" v-else>
+        <font-awesome-icon
+         v-if="index == actual.length - 1"
+        :icon="['fas', 'chevron-left']"
+        class="py-1 text-white"
+      /> 
+        <div
+          v-if="index == actual.length - 1"
+          @click="generateLink(index-1)"
+          class="text-white hover:underline cursor-pointer"
+        >
+          {{ actual[index-1] }}
+        </div>
       </div>
     </div>
   </div>

@@ -1,17 +1,14 @@
 <script setup>
-import { useRoute } from "vue-router";
-import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
-import RolexHeader from "../../components/RolexHeader.vue";
-import { useAsyncState } from "@vueuse/core";
-import WatchCard from "../../components/cards/WatchCard.vue";
-
-import PageBanner from "../../components/banners-components/PageBanner.vue";
-import collectionsCopy from "../../collectionsCopy.json";
-import RolexDataServices from "../../services/rolexDataService";
-import { ref } from "vue";
-import { computed } from "vue";
-import { useHead } from "@unhead/vue";
 import { Head } from "@unhead/vue/components";
+import { useAsyncState } from "@vueuse/core";
+import { computed, ref } from "vue";
+import { useRoute } from "vue-router";
+import collectionsCopy from "../../collectionsCopy.json";
+import PageBanner from "../../components/banners-components/PageBanner.vue";
+import WatchCard from "../../components/cards/WatchCard.vue";
+import RolexHeader from "../../components/RolexHeader.vue";
+import RolexDataServices from "../../services/rolexDataService";
+import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 
 const route = useRoute();
 const currentRoute = route.params.id;
@@ -24,6 +21,7 @@ const itemsPerPage = 6;
 const { state, isLoading, isReady, execute } = useAsyncState(
   RolexDataServices.getByCollection(currentRoute)
     .then((d) => {
+      console.log(d.data);
       totalPages.value = Math.ceil(d.data.length / 6);
       return d.data;
     })
@@ -117,7 +115,7 @@ function loadMore() {
       </section>
 
       <main>
-        <section v-for="(item, key, index) in currentData.sections" :key="item">
+        <section v-for="(item, key, index) in currentData.sections" :key="key">
           <div
             v-if="item.hasVideo"
             class="video-frame flex justify-center py-[10vh]"

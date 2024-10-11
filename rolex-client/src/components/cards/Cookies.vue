@@ -8,7 +8,7 @@ const router = useRoute()
 
 const cookies = useCookies()
 const checkOpen = ref(false)
-
+console.log(router.name);
 
 let externalScript = document.createElement('script')
 // externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch-98ac5c6226e2-staging.min.js')
@@ -19,12 +19,12 @@ if (cookies.get('rlx-consent') === undefined) {
 }
 if( cookies.get('rlx-consent') === false ){
     checkOpen.value = true
-    console.log(router.name);
+    
 }
 
 
 function checkCookies() {
-    if (cookies.get('rlx-consent') && router.name.includes('rolex')) {
+    if (cookies.get('rlx-consent') && router.fullPath.includes('rolex')) {
         document.head.appendChild(externalScript)
     }
 }

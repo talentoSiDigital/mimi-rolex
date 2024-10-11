@@ -123,7 +123,7 @@ import Button from '../../components/global-components/Button.vue';
                             garantizar el
                             nivel de calidad y fiabilidad que se espera de un reloj Rolex.
                         </p>
-                        <Button class=" text-left" link="/mantenimiento-rolex/procedimiento">Descubrir</Button>
+                        <Button class=" text-left" :link="{name:'mantenimiento-rolex-procedimiento'}">Descubrir</Button>
                     </div>
 
 

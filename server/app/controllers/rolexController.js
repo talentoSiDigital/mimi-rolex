@@ -474,7 +474,9 @@ exports.getRolexDetailsV2 = async (req, res) => {
     }
   })
   console.log("Breakpoint 1")
+  console.log(findId);
   let parsedName = findId[0].dataValues
+ 
 
   parsedName.showcaseIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}-showcase.webp`
   parsedName.boxIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box.webp`
