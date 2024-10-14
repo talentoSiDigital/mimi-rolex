@@ -15,7 +15,7 @@ import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
                 <RolexHeader color="bg-rolex-brown-light-2">
 
                     <template #title>
-                        Rolex Watchmaking
+                        «Savoir-faire» relojero de Rolex
 
                     </template>
                     <template #text>

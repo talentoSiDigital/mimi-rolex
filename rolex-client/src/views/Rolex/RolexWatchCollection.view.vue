@@ -1,21 +1,18 @@
 <script setup>
-import { routerKey, RouterLink, useRoute } from "vue-router";
-import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
-import SectionNavigationCard from "../../components/cards/SectionNavigationCard.vue";
-import RolexHeader from "../../components/RolexHeader.vue";
+import { Head } from "@unhead/vue/components";
 import { useAsyncState } from "@vueuse/core";
-import WatchCard from "../../components/cards/WatchCard.vue";
-
-import PageBanner from "../../components/banners-components/PageBanner.vue";
+import { computed, ref } from "vue";
+import { useRoute } from "vue-router";
 import collectionsCopy from "../../collectionsCopy.json";
+import PageBanner from "../../components/banners-components/PageBanner.vue";
+import WatchCard from "../../components/cards/WatchCard.vue";
+import RolexHeader from "../../components/RolexHeader.vue";
 import RolexDataServices from "../../services/rolexDataService";
-import { ref, watch } from "vue";
-import { computed } from "vue";
+import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 
 const route = useRoute();
 const currentRoute = route.params.id;
 const currentData = collectionsCopy[currentRoute];
-console.log(currentRoute)
 
 const currentPage = ref(1);
 const totalPages = ref(1);
@@ -24,8 +21,8 @@ const itemsPerPage = 6;
 const { state, isLoading, isReady, execute } = useAsyncState(
   RolexDataServices.getByCollection(currentRoute)
     .then((d) => {
+      console.log(d.data);
       totalPages.value = Math.ceil(d.data.length / 6);
-
       return d.data;
     })
     .catch((e) => {
@@ -51,10 +48,16 @@ function loadMore() {
   if (currentPage.value < totalPages.value) {
   }
 }
+
+
 </script>
 
 <template>
   <RolexTemplate>
+    <Head>
+      <title>Relojes Rolex {{currentData.name}} | Mimi Joyería</title>
+      <meta name="description" :content="`Descubra los relojes Rolex ${currentData.name} en línea en Mimi Joyería, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer. Descubra más en Mimi Joyería.`" />
+    </Head>
     <template #content>
       <PageBanner :type="`collections-${currentRoute}`" />
       <RolexHeader color="bg-rolex-brown-light-2">
@@ -62,7 +65,7 @@ function loadMore() {
           {{ currentData.headerSection.sub }}
         </template>
         <template #title>
-          <span v-html="currentData.headerSection.title"></span>
+          <span> Rolex {{ currentData.name }} </span>
         </template>
         <template #text>
           <span v-html="currentData.headerSection.text"></span>
@@ -112,7 +115,7 @@ function loadMore() {
       </section>
 
       <main>
-        <section v-for="(item, key, index) in currentData.sections" :key="item">
+        <section v-for="(item, key, index) in currentData.sections" :key="key">
           <div
             v-if="item.hasVideo"
             class="video-frame flex justify-center py-[10vh]"
@@ -132,7 +135,10 @@ function loadMore() {
           <div
             v-else
             class="flex justify-center"
-            :class="[item.backgroundColor, item.imgSize == 'w-full'? 'pb-[10vh]':'py-[10vh]' ]"
+            :class="[
+              item.backgroundColor,
+              item.imgSize == 'w-full' ? 'pb-[10vh]' : 'py-[10vh]',
+            ]"
           >
             <img
               :src="`/assets/routes-assets/collections/${currentRoute}/collections-${currentRoute}-${
@@ -184,17 +190,16 @@ function loadMore() {
           </div>
           <div class="flex justify-center">
             <div
-              class="grid grid-cols-2 md:grid-cols-3 place-items-center w-11/12  md:w-8/12 gap-4"
+              class="grid grid-cols-2 md:grid-cols-3 place-items-center w-11/12 md:w-8/12 gap-4"
             >
-                <div
-                  v-for="(item, key) in filterItems()"
-                  :key="key"
-                  class=" border h-[500px]"
-                  :class="key < itemsToShow ? 'h-[500px]' : 'h-0'"
-                >
-                  <WatchCard :item="item" :collection="currentRoute" />
-                </div>
-                
+              <div
+                v-for="(item, key) in filterItems()"
+                :key="key"
+                class="border h-[500px]"
+                :class="key < itemsToShow ? 'h-[500px]' : 'h-0'"
+              >
+                <WatchCard :item="item" :collection="currentRoute" />
+              </div>
             </div>
           </div>
           <div class="w-full flex justify-center py-[10vh]">

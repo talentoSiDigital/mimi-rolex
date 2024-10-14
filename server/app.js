@@ -1,8 +1,10 @@
 require('dotenv').config();
 
 const express = require("express");
+const spdy = require('spdy');
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const fs = require('fs');
 
 const app = express();
 
@@ -32,15 +34,13 @@ db.sequelize.sync().then(() => {
 app.use('/storage', express.static('storage'));
 
 
-var corsOptions = {
-  origin: process.env.ROOTPATH_API
-};
+// var corsOptions = {
+//   origin: process.env.ROOTPATH_API
+// };
 
 // app.use(cors(corsOptions));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
 });
 
@@ -69,9 +69,9 @@ app.set("view engine", "ejs");
 var history = require('connect-history-api-fallback');
 const serveStatic = require("serve-static")
 
-// app.use(express.static(path)); 
-// app.use(history())
-// app.use(serveStatic(path));
+app.use(express.static(path)); 
+app.use(history())
+app.use(serveStatic(path));
 
 require("./app/api/slider.routes")(app);
 require("./app/api/rolex.routes")(app);
@@ -91,6 +91,16 @@ const LOCALPATH = process.env.LOCALPATH
 
 
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-}); 
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}.`);
+// }); 
+
+const server = spdy.createServer({
+  key:fs.readFileSync(__dirname + '/keys/localhost-key.pem'),
+  cert: fs.readFileSync(__dirname + '/keys/localhost.pem')
+}, app);
+
+server.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('SSL enabled');
+});

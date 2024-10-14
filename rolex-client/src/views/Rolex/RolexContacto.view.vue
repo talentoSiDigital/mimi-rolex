@@ -176,7 +176,7 @@ if (day == 7) {
                         Contáctanos
                     </h2>
                     <div class="w-11/12">
-                        <SectionNavigationCard img="contact-rolex/contact-2" link="/contacto/enviar-mensaje"
+                        <SectionNavigationCard img="contact-rolex/contact-2" :link="{name:'rolex-contacto-enviar-mensaje'}"
                             class=" w-full ">
                             <template #title>Envíanos tu mensaje</template>
 

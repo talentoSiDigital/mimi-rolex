@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
@@ -19,7 +18,7 @@ import Button from '../../components/global-components/Button.vue';
                 <RolexHeader color="bg-rolex-brown-light-2">
 
                     <template #title>
-                        Mantenimiento de relojes Rolex y Reparación en Mimi Joyería
+                        Mantenimiento y reparación de los relojes Rolex en Mimi Joyería
 
                     </template>
                     <template #text>
@@ -124,7 +123,7 @@ import Button from '../../components/global-components/Button.vue';
                             garantizar el
                             nivel de calidad y fiabilidad que se espera de un reloj Rolex.
                         </p>
-                        <Button class=" text-left" link="/mantenimiento-rolex/procedimiento">Descubrir</Button>
+                        <Button class=" text-left" :link="{name:'mantenimiento-rolex-procedimiento'}">Descubrir</Button>
                     </div>
 
 

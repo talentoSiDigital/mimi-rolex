@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createHead } from '@unhead/vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
@@ -45,7 +46,8 @@ import {
     faSortDown,
     faSortUp,
     faCartShopping,
-    faSpinner
+    faSpinner,
+    faComment
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -79,13 +81,16 @@ library.add(
     faSortDown,
     faSortUp,
     faCartShopping,
-    faSpinner
+    faSpinner,
+    faComment
 )
+
+const head = createHead()
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router) 
     .use(pinia)
-
+    .use(head)
     .use(vueCountryRegionSelect)
     .mount('#app')

@@ -14,6 +14,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@unhead/vue": "^1.11.7",
     "@vee-validate/rules": "^4.12.4",
     "@vueuse/core": "^10.7.1",
     "@vueuse/integrations": "^10.7.2",
@@ -42,6 +43,8 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vite-plugin-sitemap": "^0.7.1",
+    "vite-plugin-vue-devtools": "^7.4.6"
   }
 }

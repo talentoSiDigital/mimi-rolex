@@ -5,36 +5,50 @@ import { useRoute } from 'vue-router';
 import routerFile from '../../router';
 
 const router = useRoute()
+
 const cookies = useCookies()
 const checkOpen = ref(false)
 
 let externalScript = document.createElement('script')
-externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js')
+externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch384bfb3a027c.min.js')
+// externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch-98ac5c6226e2-staging.min.js')
 
 if (cookies.get('rlx-consent') === undefined) {
     cookies.set('rlx-consent', 'false')
 }
+if( cookies.get('rlx-consent') === false ){
+    checkOpen.value = true
+    
+}
 
 
 function checkCookies() {
-    if (cookies.get('rlx-consent') && router.name.includes('rolex')) {
+    if (cookies.get('rlx-consent') && router.fullPath.includes('rolex')) {
         document.head.appendChild(externalScript)
     }
 }
+checkCookies()
 
 const isOpenUp = computed(() => {
     return checkOpen.value ? "bottom-0" : "-bottom-2/3"
 })
 
-function openUp() { checkOpen.value = !checkOpen.value }
+function openUp() { 
+    checkOpen.value = !checkOpen.value 
+}
 
 function changeCookie(value) {
-    cookies.set('rlx-consent', value)
-    openUp()
-    checkCookies()
-    if (!cookies.get('rlx-consent')) {
-        routerFile.go()
+    if(cookies.get('rlx-consent') === value ){
+        checkOpen.value = false
+    }else{
+        cookies.set('rlx-consent', value)
+        openUp()
+        checkCookies()
+        if (!cookies.get('rlx-consent')) {
+            routerFile.go()
+        }
     }
+    
 }
 
 watchEffect(() => {
@@ -57,7 +71,7 @@ watchEffect(() => {
             <div id="content"
                 class="border-2 bg-white border-rolex-green h-full w-full relative flex flex-col md:flex-row items-center">
                 <div
-                    class="md:w-2/3 overflow-y-scroll md:overflow-y-hidden border h-3/5 md:h-full flex flex-col justify-start md:justify-center items-center">
+                    class="md:w-2/3 overflow-y-scroll md:overflow-y-hidden h-3/5 md:h-full flex flex-col justify-start md:justify-center items-center">
                     <img src="/assets/mimi-logo.png" alt="Logo mimi joyeria" class="w-32">
                     <h2 class="w-10/12 text-justify text-xs md:text-sm">Para brindar las mejores experiencias,
                         utilizamos tecnologías como cookies para almacenar y/o

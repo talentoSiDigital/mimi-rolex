@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 
 defineProps({
   img: String,
-  link: String,
+  link: Object,
 });
 </script>
 

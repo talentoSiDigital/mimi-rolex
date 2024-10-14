@@ -13,7 +13,7 @@ const router = useRouter()
 function checkClick(pos){
     console.log(pos);
     
-    if(pos === 3){
+    if(pos === 2){
         headerSliderDataServices.clickBanner("banner").then(()=>{
             router.push('/tudor')
             
@@ -23,7 +23,7 @@ function checkClick(pos){
         
     }else{
 
-        router.push('/coleccion-rolex')
+        router.push('/descubre-rolex')
     }
 }
 
@@ -51,14 +51,17 @@ const jewelSlideshow = [
     
         <div class="relative z-0 min-h-[650px] w-full">
 
-            <carousel  v-if="!checkWindowSize" :items-to-show="1" :autoplay="3000"  :wrap-around="true">
+            <carousel   :items-to-show="1" :autoplay="3000"  :wrap-around="true">
 
-                <slide v-for="slide in 3"  :key="slide" class=" min-h-full w-full">
+                <slide v-for="slide in 2"  :key="slide" class=" min-h-full w-full">
                     <div  class="h-[650px] 3xl:h-[800px] w-full">
                         <div @click="checkClick(slide)" class="cursor-pointer">
                             <img rel="preload" class="hidden md:block"
                                 :src="`/assets/routes-assets/headers/${slide}-desktop.webp`"
                                 :alt="`headers-${slide}-desktop`" :fetchpriority="slide == 1 ? 'high' : ''">
+                            <img rel="preload" class="block md:hidden"
+                                :src="`/assets/routes-assets/headers/${slide}-mobile.webp`"
+                                :alt="`headers-${slide}-mobile`" :fetchpriority="slide == 1 ? 'high' : ''">
                         </div>
                         
                     </div>
@@ -72,9 +75,7 @@ const jewelSlideshow = [
                     </div>
                 </template>
             </carousel>
-            <img v-if="checkWindowSize" rel="preload" class=" block"
-                        src="/assets/routes-assets/headers/1-mobile.webp"
-                        :alt="`headers-1-mobile`" fetchpriority="high">
+
         </div>
 
         <div id="joyeria"
