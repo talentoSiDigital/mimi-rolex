@@ -5,11 +5,10 @@ import breadcrumb from "../../breadcrumb.json";
 const route = useRoute();
 const router = useRouter();
 const actual = ref(breadcrumb[route.name]);
-console.log(router.getRoutes());
 const routeArray = ref(route.fullPath.split("/"));
 const parentRoutes = {
   "Mantenimiento Rolex": "mantenimiento-rolex",
-  Contacto: "rolex-contacto",
+  "Contacto": "rolex-contacto",
   "Nuevos Modelos": "rolex-nuevos-modelos",
   "World Of Rolex": "world-of-rolex-hub",
   "Colección Rolex": "coleccion-rolex",
@@ -35,7 +34,6 @@ function capitalizeFirstLetterOfEachWord(string) {
 function getModelName() {
   if (route.name == "relojes-rolex") {
     actual.value = [];
-    console.log(actual.value);
     actual.value = breadcrumb[route.name];
     let string = route.fullPath;
     string = string.split("/");
@@ -54,7 +52,6 @@ function getModelName() {
 function getCollectionName() {
   if (route.name == "rolex-coleccion") {
     actual.value = [];
-    console.log(actual.value);
     actual.value = breadcrumb[route.name];
     let string = route.fullPath;
     string = string.split("/");
@@ -66,7 +63,6 @@ function getCollectionName() {
 }
 
 onMounted(() => {
-  console.log("isMounted");
   getCollectionName();
   getModelName();
 });

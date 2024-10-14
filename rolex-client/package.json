@@ -44,6 +44,7 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "vite": "^5.0.8",
+    "vite-plugin-sitemap": "^0.7.1",
     "vite-plugin-vue-devtools": "^7.4.6"
   }
 }
