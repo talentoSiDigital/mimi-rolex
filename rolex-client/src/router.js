@@ -488,9 +488,9 @@ const router = createRouter({
     // ,
     
     // {
-    //   path: "/",
+    //   path: "/test",
     //   name: "",
-    //   component: ()=>import("./views/.vue"),
+    //   component: ()=>import("./views/Testing.vue"),
     //   meta: {
     //     title: "  | Mimi Joyería "
     //   }

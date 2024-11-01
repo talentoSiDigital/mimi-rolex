@@ -4,11 +4,6 @@ import RolexNavbar from '../../components/navigation-components/RolexNavbar.vue'
 import SliderNavigationRolex from '../../components/navigation-components/SliderNavigationRolex.vue'
 import BreadCrumb from '../../components/navigation-components/BreadCrumb.vue';
 
-import { ref, watch } from 'vue'
-
-
-
-
 </script>
 
 <template>

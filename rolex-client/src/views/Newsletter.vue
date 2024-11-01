@@ -3,7 +3,6 @@ import headerSliderDataServices from '../services/headerSliderDataServices'
 import { useRouter, useRoute } from 'vue-router';
 const router = useRouter()
 const route = useRoute();
-console.log(route.params.id);
 
 headerSliderDataServices.clickBanner("newsletter").then(()=>{
     if(route.params.id == "pelagos-fxd"){

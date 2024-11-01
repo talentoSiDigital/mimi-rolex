@@ -61,7 +61,7 @@
             
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/GAK4dWw0YSw?si=NESGsyM6_RrgKJ2o",
+            "videoEmbed":"https://www.youtube.com/embed/tNhe3eDbWqA?si=NOuBNiitAbHelxAc",
             "title":false,
             "text":"La década de 1930 conoció una fulgurante evolución técnica de los aviones, lo que permitió inaugurar los vuelos de largo recorrido. Varios pilotos establecieron récords llevando un Oyster en la muñeca. Otros utilizaban un reloj Rolex como cronómetro de a bordo, siguiendo el ejemplo de Owen Cathcart Jones y Ken Waller que, en 1934, lograron completar un vuelo de ida y vuelta entre Londres (Gran Bretaña) y Melbourne (Australia) en un tiempo récord, a bordo de un bimotor De Havilland Comet.",
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -319,6 +319,7 @@
         }
     },
     "explorer": {
+
         "name":"Explorer",
 
         "headerSection":{
@@ -328,7 +329,7 @@
             
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/rrIJ_4sd71Y?si=d4bXhTjsBfT2kfcf",
+            "videoEmbed":"https://www.youtube.com/embed/9zj58htwY9I?si=jyj1daALnK84QL68",
             "title":"Legibles y duraderos, los relojes Explorer y Explorer II están diseñados para acompañar a quienes traspasan los límites del conocimiento humano.",
             "text":"Desde los años 1930, Rolex comenzó a equipar con relojes Oyster Perpetual numerosas expediciones. Las valoraciones que ha recibido sirvieron para desarrollar lo que se conoce como la categoría de relojes Profesionales que podían ser utilizados como herramientas: modelos como el Explorer y el Explorer II. Los relojes Rolex han formado parte de algunas de las grandes aventuras de la humanidad. Una de esas aventuras fue la expedición al Everest en 1953, liderada por sir John Hunt, en la que sir Edmund Hillary y el sherpa Tenzing Norgay se convirtieron en los primeros en llegar a la cumbre de la montaña más alta del mundo. ",
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -410,6 +411,7 @@
         }
     },
     "lady-datejust": {
+
         "name":"Lady Datejust",
         
         "headerSection":{
@@ -419,7 +421,7 @@
             
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/svMtgNaAGMo?si=7HI7b9mG19pr-SRM",
+            "videoEmbed":"https://www.youtube.com/embed/UdGQYjhA_fU?si=l91UUeSxZeShbiy8",
             "title":"El reloj femenino clásico Rolex por excelencia. Con su glamour refinado, estilo y prestaciones técnicas.",
             "text":false,
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -482,13 +484,14 @@
     
     },
     "oyster-perpetual": {
+
         "name":"Oyster Perpetual",
         "headerSection":{
             "title":"Rolex Oyster Perpetual <br> La quintaesencia del Oyster",
             "text":"<strong>Los relojes de la gama Oyster Perpetual son símbolos de estilo clásico y universal, y ofrecen al que los lleva funciones útiles del día a día: visualización de las horas, minutos y segundos. </strong> Respetando la línea de los orígenes pioneros de Rolex, estos modelos encarnan la forma y función atemporales. Son la expresión de los relojes en su forma más pura."
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/TEi1lna1FcI?si=9fWin57FiUcIzy4r",
+            "videoEmbed":"https://www.youtube.com/embed/TEi1lna1FcI?si=F-GF48CG2xVJyakL",
             "title":"El Oyster Perpetual, es la más pura expresión del concepto Oyster.",
             "text":"El Oyster Perpetual es el heredero directo del Oyster original, primer reloj de pulsera hermético del mundo, sobre el que Rolex ha construido su reputación desde 1926. Certificado como Cronómetro Superlativo, el Oyster Perpetual posee todos los atributos fundamentales de la colección Oyster Perpetual: la precisión cronométrica, la hermeticidad de la caja Oyster y la cuerda automática del movimiento por rotor Perpetual. Sobrio y estético, se distingue por su estilo sencillo y universal.",
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -531,6 +534,7 @@
     
     },
     "sea-dweller":{
+
         "name":"Sea-Dweller",
 
         "headerSection":{
@@ -540,7 +544,7 @@
             
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/qoMqgoryfno?si=ODNTTunqIlqxTjHe",
+            "videoEmbed":"https://www.youtube.com/embed/t5ctuodFNYg?si=wZ64R7eVQRc25P3n",
             "title":false,
             "text":"Con una hermeticidad garantizada hasta 610 metros de profundidad cuando se lanzó en 1967, luego a 1220 metros desde 1978, el Sea Dweller combina todos los atributos del reloj de submarinismo moderno.<br><br> El Sea-Dweller, puesto a prueba en condiciones reales como parte del programa Tektite iniciado en conjunto con la NASA, la Marina de los Estados Unidos y el gobierno estadounidense en 1969, se utilizó en los primeros experimentos importantes con hábitats submarinos.",
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -625,6 +629,7 @@
     
     },
     "submariner": {
+
         "name":"Submariner",
 
         "headerSection":{
@@ -634,7 +639,7 @@
             
         },
         "mainSection":{
-            "videoEmbed":"https://www.youtube.com/embed/H5AQl9A7LnU?si=x3dbAKG8OSN-L--E",
+            "videoEmbed":"https://www.youtube.com/embed/ojYMAVVDnW8?si=3jEsaDFm5peSrxiS",
             "title":false,
             "text":false,
             "backgroundColor":"bg-rolex-brown-light-2"
@@ -723,7 +728,7 @@
             "section5":{
                 "imgSize":"w-10/12",
                 "title":"Calibres perpetuos 2236 y 3235",
-                "text":"Los modelos Yacht-Master están equipados con el calibre 2236 (Yacht-Master 37) o el calibre 3235 (Yacht-Master 40 y Yacht-Master 42), movimientos mecánicos automáticos desarrollados y fabricados íntegramente por Rolex. Ofrecen un rendimiento excepcional, especialmente en términos de precisión, reserva de marcha, comodidad y fiabilidad. La reserva de marcha de ambos movimientos es de aproximadamente 70 horas.",
+                "text":"Los modelos Yacht-Master están equipados con el calibre 2236 (Yacht Master 37) o con el calibre 3235 (Yacht Master 40 y Yacht Master 42), movimientos mecánicos de cuerda automática completamente desarrollados y manufacturados por Rolex. Presentan un elevado rendimiento en términos de precisión, autonomía, comodidad de uso y fiabilidad. El calibre 2236 cuenta con una reserva de marcha de aproximadamente 55 horas, y el calibre 3235 de aproximadamente 70 horas.",
                 "backgroundColor":"bg-rolex-brown-light-2"
             },
             "section6":{

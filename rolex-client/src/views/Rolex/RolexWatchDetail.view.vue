@@ -17,7 +17,7 @@ import axios from "axios";
 
 import { useElementHover } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
-import NewContactForm from "../../components/global-components/NewContactForm.vue";
+import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
 
 const myHoverableElement = ref();

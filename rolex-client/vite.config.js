@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import viteCompression from 'vite-plugin-compression';
 // import vueDevTools from 'vite-plugin-vue-devtools'
 // import Sitemap from 'vite-plugin-sitemap'
 
@@ -9,7 +10,8 @@ export default defineConfig({
   
 
   build: {
-    assetsInlineLimit: 1024, // 1kb
+    assetsInlineLimit: 1024,
+    minify:'esbuild' // 1kb
     // outDir: '../server/app/views',
 
   },
@@ -18,6 +20,9 @@ export default defineConfig({
       defineModel: true
     }
   }),
+  // viteCompression({
+  //   algorithm:'gzip'
+  // })
   // ,
   //  vueDevTools({
   //   launchEditor: 'code',

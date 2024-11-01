@@ -4,6 +4,7 @@ const model = defineModel()
 
 <template>
     <select name="pais" v-model="model">
+        <option value="" default>--Escoja una opción--</option>
         <option value="AF">Afganistán</option>
         <option value="AL">Albania</option>
         <option value="DE">Alemania</option>
@@ -12,7 +13,6 @@ const model = defineModel()
         <option value="AI">Anguilla</option>
         <option value="AQ">Antártida</option>
         <option value="AG">Antigua y Barbuda</option>
-        <option value="AN">Antillas Holandesas</option>
         <option value="SA">Arabia Saudí</option>
         <option value="DZ">Argelia</option>
         <option value="AR">Argentina</option>
@@ -242,4 +242,3 @@ const model = defineModel()
 
 </template>
 
-<style scoped></style>

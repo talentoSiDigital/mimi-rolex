@@ -33,8 +33,6 @@ const isUserLogged = storeToRefs(piniaStore);
     <RouterView :key="route.fullPath" />
     <div v-if="!checkLoad && route.path == '/'" class="h-[200vh] block "></div>
 
-    <Footer />
+    <Footer v-once/>
   </div>
 </template>
-
-<style scoped></style>

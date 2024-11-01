@@ -42,13 +42,13 @@ function handleLogout() {
             <router-link to="/" class="w-fit">
                 <img src="/assets/mimi-logo-gray.svg" alt="mimi-joyeria-logo" class="w-24 md:w-56">
             </router-link>
-            <div class="relative items-center overflow-hidden">
+            <!-- <div class="relative items-center overflow-hidden">
                 <router-link :to="{name:'rolex'}" class=" cursor-pointer absolute z-10 block w-full h-[160px] md:w-40 md:h-20">
                 </router-link>
                 <iframe
                     src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
                     frameborder="0" class="  w-40 h-[5.5rem]  cursor-pointer"></iframe>
-            </div>
+            </div> -->
 
         </div>
 

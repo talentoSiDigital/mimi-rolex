@@ -72,7 +72,7 @@ watchEffect(() => {
                 class="border-2 bg-white border-rolex-green h-full w-full relative flex flex-col md:flex-row items-center">
                 <div
                     class="md:w-2/3 overflow-y-scroll md:overflow-y-hidden h-3/5 md:h-full flex flex-col justify-start md:justify-center items-center">
-                    <img src="/assets/mimi-logo.png" alt="Logo mimi joyeria" class="w-32">
+                    <img src="/assets/mimi-logo-gray.svg" alt="Logo mimi joyeria" class="w-32">
                     <h2 class="w-10/12 text-justify text-xs md:text-sm">Para brindar las mejores experiencias,
                         utilizamos tecnologías como cookies para almacenar y/o
                         acceder a información del dispositivo. Dar su consentimiento a estas tecnologías nos permitirá

@@ -33,7 +33,6 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 <template>
     <main class="bg-neutral-100 font-montserrat ">
         <OverlayBanner :type="name" />
-        <!-- <OverlayBanner :type="`${name}-landscape`"/> -->
         
 
         <section>

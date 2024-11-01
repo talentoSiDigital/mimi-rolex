@@ -6,23 +6,22 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require('fs');
 
-const app = express();
+const http2Express = require('http2-express-bridge')
+const http2 = require('node:http2');
+const app = http2Express(express);
+  const compression = require('compression')
+  app.use(compression())
+
+
+
+const options = {
+  key: fs.readFileSync(__dirname + '/keys/mimi-key.pem'),
+  cert: fs.readFileSync(__dirname + '/keys/mimi.pem'),
+  allowHTTP1: true
+};
+
 
 const db = require("./app/models");
-
-function initial() {
-
-  db.user.Role.create({
-    id: 1,
-    name: "user"
-  });
-
-  db.user.Role.create({
-    id: 2,
-    name: "admin"
-  });
-
-}
 
 db.sequelize.sync().then(() => {
   console.log("Drop and re-sync db.");
@@ -69,7 +68,7 @@ app.set("view engine", "ejs");
 var history = require('connect-history-api-fallback');
 const serveStatic = require("serve-static")
 
-app.use(express.static(path)); 
+app.use(express.static(path));
 app.use(history())
 app.use(serveStatic(path));
 
@@ -90,17 +89,23 @@ const PORT = process.env.PORT || 3000;
 const LOCALPATH = process.env.LOCALPATH
 
 
-
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}.`);
-// }); 
-
-const server = spdy.createServer({
-  key:fs.readFileSync(__dirname + '/keys/localhost-key.pem'),
-  cert: fs.readFileSync(__dirname + '/keys/localhost.pem')
-}, app);
-
-server.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('SSL enabled');
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
+
+// const server = spdy.createServer({
+//   key:fs.readFileSync(__dirname + '/keys/mimi-key.pem'),
+//   cert: fs.readFileSync(__dirname + '/keys/mimi.pem')
+// }, app);
+
+// server.listen(PORT, () => {
+//   console.log(`App listening on port ${PORT}`);
+//   console.log('SSL enabled');
+// });
+
+
+// const server = http2.createSecureServer(options, app)
+
+// server.listen(3000, () => {
+//   console.log(`listening on port 3000`)
+// })

@@ -1,15 +1,15 @@
 <script setup>
-import { useAsyncState } from '@vueuse/core';
-import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
+import { storeToRefs } from 'pinia';
 import { useRoute } from 'vue-router';
+import { useAsyncState } from '@vueuse/core';
 import { Carousel, Slide } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
+import { auth } from '../../store/auth.module';
 import ShareSocialsButton from '../../components/global-components/ShareSocialsButton.vue';
 import RegisterModal from '../../components/modals/RegisterModal.vue';
 import router from '../../router';
 import StoreDataService from '../../services/storeDataService';
-import { auth } from '../../store/auth.module';
+import 'vue3-carousel/dist/carousel.css';
 
 const route = useRoute()
 const currentSlide = ref(1)
@@ -47,13 +47,14 @@ function addToCart(id) {
         StoreDataService.postAddToCart(id, user.id).then((d) => {
             router.replace('/carrito')
 
-            console.log(id);
-            // closeModalInfo.value.message = d.data.message
-            // closeModalInfo.value.icon = d.data.icon
+
         })
     }
 }
 
+function goBack() {
+    router.go(-1)
+}
 
 
 function sendMessage(state) {
