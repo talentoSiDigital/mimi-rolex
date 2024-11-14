@@ -8,9 +8,15 @@ const sliderItems = [
   
   {
     src: "1908",
-    link: "/rolex/coleccion-rolex/1908",
+    link: "/rolex/1908",
     alt: "coleccion-1908-banner",
     title: "Coleccion 1908",
+  },
+  {
+    src: "sky-dweller",
+    link: "/rolex/sky-dweller",
+    alt: "sky-dweller-banner",
+    title: "Sky Dweller Banner",
   },
   {
     src: "watchmaking",

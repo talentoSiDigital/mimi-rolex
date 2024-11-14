@@ -25,7 +25,7 @@ const isUserLogged = storeToRefs(piniaStore);
 <template>
   <div id="app-main">
     <Navbar />
-
+    
     <Cookies />
     <ShoppingPop
       v-if="route.path !== '/carrito' && isUserLogged.status.value.loggedIn"

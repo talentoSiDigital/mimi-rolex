@@ -13,6 +13,10 @@ headerSliderDataServices.clickBanner("newsletter").then(()=>{
 
         router.push('/relojeria/tudor/tudor-pelagos-fxd-chrono')
     }
+    if(route.params.id == "pelagos-fxd-gmt"){
+
+        router.push('/relojeria/tudor/tudor-pelagos-fxd-gmt')
+    }
     if(route.params.id == "tudor"){
 
         router.push('/tudor')

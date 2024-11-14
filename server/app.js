@@ -6,19 +6,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const fs = require('fs');
 
-const http2Express = require('http2-express-bridge')
-const http2 = require('node:http2');
-const app = http2Express(express);
-  const compression = require('compression')
-  app.use(compression())
+const app = express();
 
 
 
-const options = {
-  key: fs.readFileSync(__dirname + '/keys/mimi-key.pem'),
-  cert: fs.readFileSync(__dirname + '/keys/mimi.pem'),
-  allowHTTP1: true
-};
 
 
 const db = require("./app/models");
@@ -68,9 +59,9 @@ app.set("view engine", "ejs");
 var history = require('connect-history-api-fallback');
 const serveStatic = require("serve-static")
 
-app.use(express.static(path));
-app.use(history())
-app.use(serveStatic(path));
+// app.use(express.static(path));
+// app.use(history())
+// app.use(serveStatic(path));
 
 require("./app/api/slider.routes")(app);
 require("./app/api/rolex.routes")(app);
@@ -93,19 +84,3 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-// const server = spdy.createServer({
-//   key:fs.readFileSync(__dirname + '/keys/mimi-key.pem'),
-//   cert: fs.readFileSync(__dirname + '/keys/mimi.pem')
-// }, app);
-
-// server.listen(PORT, () => {
-//   console.log(`App listening on port ${PORT}`);
-//   console.log('SSL enabled');
-// });
-
-
-// const server = http2.createSecureServer(options, app)
-
-// server.listen(3000, () => {
-//   console.log(`listening on port 3000`)
-// })
