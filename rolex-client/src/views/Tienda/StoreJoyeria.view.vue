@@ -9,8 +9,6 @@ import StoreDataService from '../../services/storeDataService';
 const route = useRoute()
 const name = route.params.id
 
-
-
 const { isLoading, state, isReady, execute } = useAsyncState(
     StoreDataService.getJoyeria(name)
         .then(d => {
@@ -20,7 +18,6 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 
 
 )
-
 
 </script>
 

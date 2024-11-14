@@ -10,10 +10,8 @@ module.exports = app =>{
     router.get("/send-newsletter", mailController.sendNewsletter)
     router.post("/email/rolex",uploadFiles.any() ,mailController.rolexContact)
     router.post("/email/rolex-new",uploadFiles.any() ,mailController.rolexNewContact)
-
-
-
-    
+    router.post("/email/contacto",uploadFiles.any() ,mailController.contact)
+        
     app.use('/api',router) 
 
 

@@ -6,7 +6,7 @@ import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
 import SectionNavigationCard from '../../components/cards/SectionNavigationCard.vue'
-import NewContactForm from '../../components/global-components/NewContactForm.vue'
+import NewContactForm from '../../components/form-components/NewContactForm.vue'
 import Button from '../../components/global-components/Button.vue';
 import mailDataService from '../../services/mailDataService'
 

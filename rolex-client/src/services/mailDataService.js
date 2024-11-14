@@ -30,6 +30,9 @@ class MailSender {
     
     return http.post("/email/rolex-new/", data)
   }
+  contact(data){
+    return http.post("/email/contacto", data)
+  }
 
 }
 

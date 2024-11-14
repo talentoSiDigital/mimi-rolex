@@ -4,10 +4,8 @@ import './style.css'
 import App from './App.vue'
 import router from './router'
 
+import VueLazyLoad from 'vue3-lazyload' 
 import {createPinia} from 'pinia'
-import vueCountryRegionSelect from 'vue3-country-region-select'
-
-
 
 // Defining pinia
 const pinia = createPinia()
@@ -92,5 +90,5 @@ createApp(App)
     .use(router) 
     .use(pinia)
     .use(head)
-    .use(vueCountryRegionSelect)
+    .use(VueLazyLoad)
     .mount('#app')

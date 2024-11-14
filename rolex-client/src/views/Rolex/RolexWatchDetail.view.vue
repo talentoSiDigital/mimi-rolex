@@ -17,7 +17,7 @@ import axios from "axios";
 
 import { useElementHover } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
-import NewContactForm from "../../components/global-components/NewContactForm.vue";
+import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
 
 const myHoverableElement = ref();
@@ -677,10 +677,8 @@ function sendMessage() {
           >
             <div class="w-10/12">
               <SectionNavigationCard
-                :img="`banners/new-banner-collections-${route.params.colectionName}`"
-                :link="`../${state.collection.nombre
-                  .toLowerCase()
-                  .replace(' ', '-')}`"
+                :img="`banners/new-banner-collections-${state.collection.idName}`"
+                :link="{name:'rolex-coleccion', params:{id: state.collection.idName}}"
                 class="w-full"
               >
                 <template #sub
