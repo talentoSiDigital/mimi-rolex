@@ -130,10 +130,7 @@ function sendMessage(state) {
 
                     <h2 class="text-3xl font-semibold uppercase pb-6">{{ state[0].nombre }}</h2>
                     <h2 class="text-xl font-medium pb-3">MIMI JOYERÍA</h2>
-                    <h2 class="text-md font-medium pb-3 text-[#c40f0f]">Disponible
-                        su venta únicamente en tienda física. En caso de su interés en compra, favor de contactarnos
-                    </h2>
-
+                   
                     
                    
                     <button @click="addToCart(state[0].id)" v-if="state[0].coleccion == 'Tudor' && state[0].cantidad >0"

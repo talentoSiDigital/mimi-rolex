@@ -40,11 +40,10 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                 <div v-if="state.length == 0" class="flex justify-center items-center h-52">
                     <h1 class="font-semibold">Lo sentimos, no hay productos que coincidan con su búsqueda.</h1>
                 </div>
-                <div v-else id="store-container" class="w-full flex items-center justify-center">
+                <div v-else id="store-container" class="w-full flex items-center justify-center pb-16">
                     <div class="grid grid-cols-1 place-items-center gap-2 md:grid-cols-4 w-10/12">
                       
                         <div v-for="(items, key) in state" :key="key" >
-
                             <RouterLink 
                                 :to="{name: 'relojProducto', params:{serie:name, id:items.serie}}" 
                                 
@@ -58,7 +57,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                                    
                                 </h2>
                                 <h2 v-else class="mt-4 font-bold">{{ items.nombre }}</h2>
-                                <h2  class="mb-4 font-bold">{{ items.precio }}</h2>
+                                <h2 v-if="items.coleccion != 'Tudor'" class="mb-4 font-bold">{{ items.precio }}</h2>
                             </RouterLink>
                         </div>
 

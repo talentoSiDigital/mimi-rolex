@@ -33,7 +33,11 @@
       onload="this.media='all'"
     />
 
-    <link rel="preload" as="image" href="/assets/routes-assets/headers/1-mobile.webp">
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/routes-assets/headers/1-mobile.webp"
+    />
     <link rel="canonical" href="/" />
 
     <title>
@@ -1289,13 +1293,13 @@
 
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org", 
+        "@context": "https://schema.org",
         "@type": "JewelryStore",
         "name": "Mimi Joyería C.A.",
         "image": "https://www.mimijoyeria.com/assets/rolex-retailer.webp",
-        "@id":"",
+        "@id": "",
         "url": "https://www.mimijoyeria.com/contacto",
-        "telephone":"+58 212-3008742",
+        "telephone": "+58 212-3008742",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "C.C. Tolón Fashion Mall Piso 1",
@@ -1303,27 +1307,59 @@
           "postalCode": "1080",
           "addressCountry": "VE"
         },
-        "openingHoursSpecification": [{
-          "@type": "Opening HoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "10:00",
-          "closes": "20:00"
-          },{
+        "openingHoursSpecification": [
+          {
             "@type": "Opening HoursSpecification",
-            "dayOfWeek":"Sunday",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "Opening HoursSpecification",
+            "dayOfWeek": "Sunday",
             "opens": "12:00",
             "closes": "19:00"
           }
         ]
       }
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2263587587354905");
+      fbq("track", "PageView");
+    </script>
+    
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <div id="app"></div>

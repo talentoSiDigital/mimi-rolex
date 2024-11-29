@@ -51,13 +51,13 @@ console.log(dataToSend.value);
 
 
                         <div class="relative overflow-y-scroll h-64 w-full ">
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
 
                                 <tbody>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                                    <tr class="bg-white border-b "
                                         v-for="(item, index) in dataToSend" :key="index">
                                         <th scope="row" v-if="index != 'region'"
-                                            class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
                                             {{ nameTranslate[index] }}
                                         </th>
                                         <td class="px-6 py-2" v-if="index != 'region'">
