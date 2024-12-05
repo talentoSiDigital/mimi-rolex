@@ -249,6 +249,15 @@ const router = createRouter({
         breadcrumb:"WorldOfRolex/RolexYTheUSOpen"
       }
     },
+    {
+      path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+      name: "world-of-rolex-article-9",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
+      meta: {
+        title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
+        breadcrumb:"WorldOfRolex/RolexYTheUSOpen"
+      }
+    },
 
  
   

@@ -29,7 +29,7 @@ const router = useRouter();
 function checkClick(pos) {
   console.log(pos);
 
-  if (pos === 2) {
+  if (pos === 3) {
     headerSliderDataServices
       .clickBanner("banner")
       .then(() => {
@@ -53,7 +53,7 @@ const jewelSlideshow = [
 ];
 onMounted(() => {
   setInterval(() => {
-    if (counter.value == 1) {
+    if (counter.value == 2) {
       counter.value = 0;
     } else {
       counter.value++;
@@ -66,7 +66,7 @@ onMounted(() => {
   <div id="main-content" class="font-montserrat">
     <div class="relative z-0 min-h-[650px] w-full">
       <div v-if="!checkWindowSize" class="overflow-hidden">
-        <div class="duration-500 flex" :class="classes[counter]">
+        <div class="duration-500 flex cursor-pointer" :class="classes[counter]">
           <img
             @click="checkClick(counter)"
             rel="preload" fetchpriority="high" as="image"
@@ -77,6 +77,12 @@ onMounted(() => {
             @click="checkClick(counter)"
             rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp"
+            alt="headers-2-desktop"
+          />
+          <img
+            @click="checkClick(counter)"
+            rel="preload" fetchpriority="low" as="image"
+            src="/assets/routes-assets/headers/3-desktop.webp"
             alt="headers-2-desktop"
           />
         </div>
@@ -94,6 +100,13 @@ onMounted(() => {
             @click="checkClick(counter)"
             rel="preload"
             src="/assets/routes-assets/headers/2-mobile.webp"
+            alt="headers-2-mobile"
+            fetchpriority="high"
+          />
+          <img
+            @click="checkClick(counter)"
+            rel="preload"
+            src="/assets/routes-assets/headers/3-mobile.webp"
             alt="headers-2-mobile"
             fetchpriority="high"
           />

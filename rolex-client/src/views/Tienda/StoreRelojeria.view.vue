@@ -57,7 +57,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                                    
                                 </h2>
                                 <h2 v-else class="mt-4 font-bold">{{ items.nombre }}</h2>
-                                <h2 v-if="items.coleccion != 'Tudor'" class="mb-4 font-bold">{{ items.precio }}</h2>
+                                <h2  class="mb-4 font-bold">{{ items.precio }}</h2>
                             </RouterLink>
                         </div>
 

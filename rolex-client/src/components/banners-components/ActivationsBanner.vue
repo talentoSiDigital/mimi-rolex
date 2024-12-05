@@ -7,10 +7,22 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
+    src: "vienna",
+    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    alt: "rolex-y-la-filarmonica-de-viena-banner",
+    title: "Filarmonica de Viena Banner",
+  },
+  {
     src: "1908",
     link: "/rolex/1908",
     alt: "coleccion-1908-banner",
     title: "Coleccion 1908",
+  },
+  {
+    src: "sail-gp",
+    link: "/rolex/world-of-rolex/sail-gp",
+    alt: "sail-gp-banner",
+    title: "Sail gp article Banner",
   },
   {
     src: "sky-dweller",
@@ -23,20 +35,6 @@ const sliderItems = [
     link: "/rolex/watchmaking",
     alt: "watchmaking-banner",
     title: "Watchmaking",
-  },
-  {
-    src: "new-models",
-    link: "/rolex/nuevos-relojes",
-    alt: "nuevos-modelos-2024-banner",
-    title: "Nuevos modelos rolex 2024",
-  },
-
-
-  {
-    src: "the-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-open",
-    alt: "the-open",
-    title: "Rolex y The Open",
   },
   {
     src: "wimbledon",
