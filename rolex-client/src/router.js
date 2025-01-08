@@ -524,7 +524,7 @@ const router = createRouter({
 
 
 router.beforeEach((to, from, next) => {
-  const link = "https://www.mimijoyeria.com"
+  const link = "https://mimijoyeria.com"
   const description = to.meta.description
   const canonical = document.querySelector("link[rel='canonical']")
   canonical.setAttribute('href', `${link}${to.fullPath}`);

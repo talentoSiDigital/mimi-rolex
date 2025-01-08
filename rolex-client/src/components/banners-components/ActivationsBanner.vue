@@ -6,17 +6,18 @@ import { computed } from "vue";
 
 const sliderItems = [
   
-  {
-    src: "vienna",
-    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-    alt: "rolex-y-la-filarmonica-de-viena-banner",
-    title: "Filarmonica de Viena Banner",
-  },
+  
   {
     src: "1908",
     link: "/rolex/1908",
     alt: "coleccion-1908-banner",
     title: "Coleccion 1908",
+  },
+  {
+    src: "viena",
+    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    alt: "rolex-y-la-filarmonica-de-viena-banner",
+    title: "Filarmonica de Viena Banner",
   },
   {
     src: "sail-gp",
