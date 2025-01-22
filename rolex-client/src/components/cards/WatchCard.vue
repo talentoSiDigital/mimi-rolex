@@ -12,8 +12,9 @@ defineProps({
     :to="{name:'relojes-rolex', params:{collectionName:collection,id:item.modelo}}"
     class="bg-rolex-brown-light-1 h-full flex flex-col items-center justify-center py-0 cursor-pointer group"
   >
+
     <img
-      :src="item.img"
+      :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${item.modelo}-showcase.webp`"
       :alt="item.modelo"
       class="w-[100%] md:w-1/2 lg:w-[55%] xl:w-[60%] duration-200 ease-in-out group-hover:scale-110"
     />

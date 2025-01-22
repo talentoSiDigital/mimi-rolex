@@ -57,8 +57,10 @@ const checkLocation = computed(() => {
 
 let { isLoading, state, isReady, execute } = useAsyncState(
   RolexDataServices.getDetailedWatch(currentRoute).then((d) => {
-  
+    
     return d.data;
+  }).catch((e) => {
+    console.log(e.error)
   })
 );
 
@@ -148,7 +150,7 @@ function sendMessage() {
           <section class="bg-white relative md:h-[85vh]">
             <div class="flex items-center justify-center w-full">
               <img
-                :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}-showcase.webp`"
+                :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}-showcase.webp`"
                 :alt="`${state.getAll.nombre}-main-image`"
                 class="w-1/2 md:w-1/4"
               />
@@ -214,8 +216,8 @@ function sendMessage() {
                       <p>Chat</p>
                     </a>
 
-                    <a
-                      href="mailto:info@mimijoyeria.com"
+                    <router-link
+                      :to="{name:'rolex-contacto-enviar-mensaje',query:{'id':currentRoute}}"
                       class="flex items-center gap-4"
                     >
                       <font-awesome-icon
@@ -223,7 +225,7 @@ function sendMessage() {
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
                       <p>Envíenos un mensaje</p>
-                    </a>
+                    </router-link>
                     <a
                       href="https://maps.app.goo.gl/EED9Kdco8zec8ygT8"
                       class="flex items-center gap-4"
@@ -436,12 +438,12 @@ function sendMessage() {
               </header>
               <section class="w-10/12 md:w-1/2">
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}.webp`"
                   alt="heading-img-1"
                   class="hidden md:block"
                 />
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}-mobile.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}-mobile.webp`"
                   alt="heading-img-1-mobile"
                   class="block md:hidden w-full"
                 />
@@ -466,12 +468,12 @@ function sendMessage() {
               </header>
               <section class="w-10/12 md:w-1/2">
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}.webp`"
                   alt="heading-img-2"
                   class="hidden md:block"
                 />
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}-mobile.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}-mobile.webp`"
                   alt="heading-img-2-mobile"
                   class="block md:hidden w-full"
                 />
@@ -496,12 +498,12 @@ function sendMessage() {
               </header>
               <section class="w-10/12">
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`"
                   alt="heading-img-3"
                   class="hidden md:block"
                 />
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`"
                   alt="heading-img-3-mobile"
                   class="block md:hidden w-full"
                 />
@@ -548,7 +550,7 @@ function sendMessage() {
                   relojes Rolex.
                 </p>
                 <img
-                  :src="`https://www.mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}_presentation-box.webp`"
+                  :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}_presentation-box.webp`"
                   alt="box-presentation-img"
                   class="w-1/2"
                 />
@@ -678,7 +680,7 @@ function sendMessage() {
             <div class="w-10/12">
               <SectionNavigationCard
                 :img="`banners/new-banner-collections-${state.collection.idName}`"
-                :link="{name:'rolex-coleccion', params:{id: state.collection.idName}}"
+                :link="{name:`rolex-coleccion-${state.collection.idName}`}"
                 class="w-full"
               >
                 <template #sub

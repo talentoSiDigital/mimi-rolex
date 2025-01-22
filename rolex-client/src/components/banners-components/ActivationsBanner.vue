@@ -7,16 +7,23 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
-    src: "1908",
-    link: "/rolex/1908",
-    alt: "coleccion-1908-banner",
-    title: "Coleccion 1908",
+    src: "datejust",
+    link: "/rolex/datejust",
+    alt: "coleccion-datejust-banner",
+    title: "Coleccion Datejust",
   },
   {
+<<<<<<< Updated upstream
     src: "sky-dweller",
     link: "/rolex/sky-dweller",
     alt: "sky-dweller-banner",
     title: "Sky Dweller Banner",
+=======
+    src: "viena",
+    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    alt: "rolex-y-la-filarmonica-de-viena-banner",
+    title: "Filarmonica de Viena Banner",
+>>>>>>> Stashed changes
   },
   {
     src: "watchmaking",
@@ -27,6 +34,7 @@ const sliderItems = [
   {
     src: "new-models",
     link: "/rolex/nuevos-relojes",
+<<<<<<< Updated upstream
     alt: "nuevos-modelos-2024-banner",
     title: "Nuevos modelos rolex 2024",
   },
@@ -43,13 +51,25 @@ const sliderItems = [
     link: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
     alt: "rolex-y-the-championships-wimbledon",
     title: "Rolex y The Championships, Wimbledon",
+=======
+    alt: "nuevos-modelos-banner",
+    title: "Nuevos modelos",
+>>>>>>> Stashed changes
   },
   {
-    src: "lemans-rolex",
-    link: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
-    alt: "cosmograph-daytona-lemans-rolex-banner",
-    title: "Cosmograph Daytona Lemans",
+    src: "us-open",
+    link: "/rolex/world-of-rolex/rolex-y-the-us-open",
+    alt: "us-open-banner",
+    title: "US Open",
   },
+  {
+    src: "the-open",
+    link: "/rolex/world-of-rolex/rolex-y-the-open",
+    alt: "the-open-banner", 
+    title: "The Open",
+  },
+ 
+
 ];
 
 const currentSlide = ref(0);

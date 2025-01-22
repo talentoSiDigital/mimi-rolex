@@ -6,7 +6,6 @@ import { auth } from '../../store/auth.module'
 import router from '../../router'
 
 
-
 const windowWidth = ref(window.innerWidth)
 const piniaStore = auth()
 const IsLogged = storeToRefs(piniaStore)
@@ -73,32 +72,32 @@ function handleLogout() {
                 class="md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900  w-full md:w-fit text-center">
                 <h2 class="uppercase">Tudor</h2>
             </router-link>
-            <div class="hidden md:block group relative">
-                <router-link to="/relojeria"
-                    class=" tracking-widest hover:bg-neutral-200 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center flex items-center ">
-                    <h2 class="uppercase">Relojería</h2>
-                    <font-awesome-icon :icon="['fas', 'angle-down']" class="text-sm pt-1" />
+                <!-- <div class="hidden md:block group relative">
+                    <router-link to="/relojeria"
+                        class=" tracking-widest hover:bg-neutral-200 md:hover:bg-transparent px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center flex items-center ">
+                        <h2 class="uppercase">Relojería</h2>
+                        <font-awesome-icon :icon="['fas', 'angle-down']" class="text-sm pt-1" />
 
-                </router-link>
+                    </router-link>
 
-                <div
-                    class="absolute z-50 border left-0 md:left-3 bg-[#637263]  md:bg-main-green p-8 md:p-5 hidden group-hover:block ">
-                    <router-link :to="{ name: 'reloj', params: { id: 'tudor' } }"
-                        class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
-                        <h2 class="my-1 uppercase">Tudor</h2>
-                    </router-link>
-                  
-                    <router-link to="/relojeria/longines"
-                        class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
-                        <h2 class="my-1 uppercase">Longines</h2>
-                    </router-link>
-                    <router-link to="/relojeria/victorinox"
-                        class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
-                        <h2 class="my-1 uppercase">Victorinox</h2>
-                    </router-link>
-                </div>
+                    <div
+                        class="absolute z-50 border left-0 md:left-3 bg-[#637263]  md:bg-main-green p-8 md:p-5 hidden group-hover:block ">
+                        <router-link :to="{ name: 'reloj', params: { id: 'tudor' } }"
+                            class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
+                            <h2 class="my-1 uppercase">Tudor</h2>
+                        </router-link>
+                    
+                        <router-link to="/relojeria/longines"
+                            class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
+                            <h2 class="my-1 uppercase">Longines</h2>
+                        </router-link>
+                        <router-link to="/relojeria/victorinox"
+                            class="text-xl font-normal font-montserrat text-green-900 md:hover:underline">
+                            <h2 class="my-1 uppercase">Victorinox</h2>
+                        </router-link>
+                    </div>
 
-            </div>
+                </div> -->
 
             <div class="hidden md:block group relative">
 
@@ -133,27 +132,7 @@ function handleLogout() {
 
             <!-- ##MOBILE NAV -->
             <div class=" md:hidden w-full flex flex-col items-center">
-                <router-link @click="collapseNav" to="/relojeria"
-                    class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center">
-                    <h2 class="uppercase">Relojería</h2>
-                </router-link>
-
-                <router-link @click="collapseNav" to="/relojeria/tudor"
-                    class=" tracking-widest border bg-neutral-400 px-6 py-2 text-xl font-normal font-montserrat text-white w-full text-center  ">
-                    <h2 class="uppercase">Tudor</h2>
-
-                </router-link>
-       
-                <router-link to="/relojeria/longines"
-                    class=" tracking-widest border bg-neutral-400 px-6 py-2 text-xl font-normal font-montserrat text-white w-full  text-center  ">
-                    <h2 class="uppercase">Longines</h2>
-
-                </router-link>
-                <router-link @click="collapseNav" to="/relojeria/victorinox"
-                    class=" tracking-widest border bg-neutral-400 md:hover:bg-transparent px-6 py-2 text-xl font-normal font-montserrat text-white w-full md:w-fit text-center  ">
-                    <h2 class="uppercase">Victorinox</h2>
-
-                </router-link>
+                
 
                 <router-link @click="collapseNav" to="/joyeria"
                     class="border md:border-0 md:border-b-2 md:border-transparent tracking-widest hover:bg-neutral-200 md:hover:bg-transparent md:hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-full md:w-fit text-center">

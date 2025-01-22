@@ -7,13 +7,14 @@ import StoreDataService from '../../services/storeDataService';
 
 
 const route = useRoute()
-const name = route.params.id
+
 
 
 
 const { isLoading, state, isReady, execute } = useAsyncState(
-    StoreDataService.getRelojeria(name)
+    StoreDataService.getRelojeria("tudor")
         .then(d => {
+            console.log(d.data)
             let items = []
             for (const item of d.data) {
                 if(item.disponible == 1){
@@ -32,7 +33,7 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 
 <template>
     <main class="bg-neutral-100 font-montserrat ">
-        <OverlayBanner :type="name" />
+        <OverlayBanner type="tudor" />
         
 
         <section>

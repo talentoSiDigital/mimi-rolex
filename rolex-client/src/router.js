@@ -90,7 +90,8 @@ const router = createRouter({
         title: "Formulario de contacto | Mimi Joyería",
         meta:"Póngase en contacto con su Distribuidor Oficial Rolex Mimi Joyería para obtener más información sobre nuestros servicios o cualquier consulta sobre Rolex que pueda tener",
         breadcrumb:"FormularioContacto"
-      }
+      },
+      props: true
     },
   
     // ----NEW MODELS ROLEX SECTION------
@@ -267,14 +268,138 @@ const router = createRouter({
     },
     
     {
-      path: "/rolex/:id",
-      name: "rolex-coleccion",
+      path: "/rolex/cosmograph-daytona",
+      name: "rolex-coleccion-cosmograph-daytona",
       component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
       meta: {
-        title: " Mimi Joyería ",
+        title: "Mimi Joyería ",
         breadcrumb:"ColeccionRolex"
       }
     },
+  
+  {
+      path: "/rolex/1908",
+      name: "rolex-coleccion-1908",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/yacht-master",
+      name: "rolex-coleccion-yacht-master",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/sky-dweller",
+      name: "rolex-coleccion-sky-dweller",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/gmt-master-ii",
+      name: "rolex-coleccion-gmt-master-ii",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/explorer",
+      name: "rolex-coleccion-explorer",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/oyster-perpetual",
+      name: "rolex-coleccion-oyster-perpetual",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/day-date",
+      name: "rolex-coleccion-day-date",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/datejust",
+      name: "rolex-coleccion-datejust",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/lady-datejust",
+      name: "rolex-coleccion-lady-datejust",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/air-king",
+      name: "rolex-coleccion-air-king",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/submariner",
+      name: "rolex-coleccion-submariner",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  {
+      path: "/rolex/sea-dweller",
+      name: "rolex-coleccion-sea-dweller",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    },
+  
+  {
+      path: "/rolex/deepsea",
+      name: "rolex-coleccion-deepsea",
+      component:()=>import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb:"ColeccionRolex"
+      }
+    }, 
     {
       path: "/rolex/:collectionName-:id",
       name: "relojes-rolex",
@@ -349,7 +474,7 @@ const router = createRouter({
 
     ,
     {
-      path: "/relojeria/:id",
+      path: "/relojeria/tudor",
       name: "reloj",
       component: ()=>import("./views/Tienda/StoreRelojeria.view.vue"),
       meta: {
@@ -359,7 +484,7 @@ const router = createRouter({
     }
     ,
     {
-      path: "/relojeria/:serie/:id",
+      path: "/relojeria/tudor/:id",
       name: "relojProducto",
       component: ()=>import("./views/Tienda/StoreRelojeriaDetail.view.vue"),
       meta: {
@@ -379,7 +504,7 @@ const router = createRouter({
     }
     ,
     {
-      path: "/:notFound",
+      path: "/:pathMatch(.*)*",
       name: "notFound",
       component: ()=>import("./views/404.view.vue"),
       meta: {

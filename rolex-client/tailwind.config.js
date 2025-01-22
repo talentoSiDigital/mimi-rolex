@@ -14,6 +14,7 @@ export default {
         'secondary-green': '#adbaad',
 
         'rolex-green': '#01603a',
+        'rolex-green-2':'#29684b',
         'gray-button': '#767676',
         'rolex-green-2':'#127849',
         'rolex-green-3':'#61bc93',
