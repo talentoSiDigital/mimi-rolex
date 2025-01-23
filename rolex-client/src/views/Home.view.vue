@@ -29,7 +29,7 @@ const router = useRouter();
 function checkClick(pos) {
   console.log(pos);
 
-  if (pos === 2) {
+  if (pos === 1) {
     headerSliderDataServices
       .clickBanner("banner")
       .then(() => {
@@ -79,12 +79,7 @@ onMounted(() => {
             src="/assets/routes-assets/headers/2-desktop.webp"
             alt="headers-2-desktop"
           />
-          <img
-            @click="checkClick(counter)"
-            rel="preload" fetchpriority="low" as="image"
-            src="/assets/routes-assets/headers/3-desktop.webp"
-            alt="headers-2-desktop"
-          />
+         
         </div>
       </div>
       <div v-else class="overflow-hidden">
@@ -103,13 +98,7 @@ onMounted(() => {
             alt="headers-2-mobile"
             fetchpriority="high"
           />
-          <img
-            @click="checkClick(counter)"
-            rel="preload"
-            src="/assets/routes-assets/headers/3-mobile.webp"
-            alt="headers-2-mobile"
-            fetchpriority="high"
-          />
+         
         </div>
       </div>
     </div>

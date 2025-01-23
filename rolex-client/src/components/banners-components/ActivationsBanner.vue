@@ -13,12 +13,10 @@ const sliderItems = [
     title: "Coleccion Datejust",
   },
   {
-<<<<<<< Updated upstream
     src: "sky-dweller",
     link: "/rolex/sky-dweller",
     alt: "sky-dweller-banner",
     title: "Sky Dweller Banner",
-=======
     src: "viena",
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
     alt: "rolex-y-la-filarmonica-de-viena-banner",
@@ -45,7 +43,6 @@ const sliderItems = [
   {
     src: "new-models",
     link: "/rolex/nuevos-relojes",
-<<<<<<< Updated upstream
     alt: "nuevos-modelos-2024-banner",
     title: "Nuevos modelos rolex 2024",
   },

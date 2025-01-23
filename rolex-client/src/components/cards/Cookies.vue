@@ -6,20 +6,8 @@ import routerFile from '../../router';
 
 const router = useRoute()
 
-<<<<<<< Updated upstream
 const cookies = useCookies()
 const checkOpen = ref(false)
-=======
-const cookies = useCookies();
-const checkOpen = ref(false);
-const cookieLog = ref(false);
-
-let externalScript = document.createElement("script");
-externalScript.setAttribute(
-  "src",
-  "//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js"
-);
->>>>>>> Stashed changes
 
 let externalScript = document.createElement('script')
 externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch384bfb3a027c.min.js')
