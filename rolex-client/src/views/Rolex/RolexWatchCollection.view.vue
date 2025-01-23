@@ -11,7 +11,7 @@ import RolexDataServices from "../../services/rolexDataService";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 
 const route = useRoute();
-const currentRoute = route.params.id;
+const currentRoute = route.fullPath.substring(7);
 const currentData = collectionsCopy[currentRoute];
 
 const currentPage = ref(1);
@@ -21,7 +21,6 @@ const itemsPerPage = 6;
 const { state, isLoading, isReady, execute } = useAsyncState(
   RolexDataServices.getByCollection(currentRoute)
     .then((d) => {
-      console.log(d.data);
       totalPages.value = Math.ceil(d.data.length / 6);
       return d.data;
     })

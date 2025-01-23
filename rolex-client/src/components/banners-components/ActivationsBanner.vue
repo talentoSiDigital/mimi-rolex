@@ -7,10 +7,26 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
-    src: "1908",
-    link: "/rolex/1908",
-    alt: "coleccion-1908-banner",
-    title: "Coleccion 1908",
+    src: "datejust",
+    link: "/rolex/datejust",
+    alt: "coleccion-datejust-banner",
+    title: "Coleccion Datejust",
+  },
+  {
+    src: "sky-dweller",
+    link: "/rolex/sky-dweller",
+    alt: "sky-dweller-banner",
+    title: "Sky Dweller Banner",
+    src: "viena",
+    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    alt: "rolex-y-la-filarmonica-de-viena-banner",
+    title: "Filarmonica de Viena Banner",
+  },
+  {
+    src: "sail-gp",
+    link: "/rolex/world-of-rolex/sail-gp",
+    alt: "sail-gp-banner",
+    title: "Sail gp article Banner",
   },
   {
     src: "sky-dweller",
@@ -50,6 +66,8 @@ const sliderItems = [
     alt: "cosmograph-daytona-lemans-rolex-banner",
     title: "Cosmograph Daytona Lemans",
   },
+ 
+
 ];
 
 const currentSlide = ref(0);

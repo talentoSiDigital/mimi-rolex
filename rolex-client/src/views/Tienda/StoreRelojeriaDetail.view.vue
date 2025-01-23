@@ -27,6 +27,7 @@ const complete = ref(false)
 const { isLoading, state, isReady, execute } = useAsyncState(
     StoreDataService.getRelojeriaDetails(route.params.id)
         .then(d => {
+         
             return d.data
         })
 )
@@ -61,6 +62,7 @@ function sendMessage(state) {
     const message = `Quisiera saber mas informacion acerca del modelo ${state[0].nombre} de la colección ${state[0].coleccion}, por favor.`
     return `https://wa.me/584122909996/?text=${message}`
 }
+
 
 
 </script>

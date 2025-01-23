@@ -29,7 +29,7 @@ const router = useRouter();
 function checkClick(pos) {
   console.log(pos);
 
-  if (pos === 2) {
+  if (pos === 1) {
     headerSliderDataServices
       .clickBanner("banner")
       .then(() => {
@@ -39,7 +39,7 @@ function checkClick(pos) {
         console.log(e);
       });
   } else {
-    router.push("/rolex/descubre-rolex");
+    router.push("/rolex/datejust");
   }
 }
 
@@ -79,6 +79,7 @@ onMounted(() => {
             src="/assets/routes-assets/headers/2-desktop.webp"
             alt="headers-2-desktop"
           />
+         
         </div>
       </div>
       <div v-else class="overflow-hidden">
@@ -97,6 +98,7 @@ onMounted(() => {
             alt="headers-2-mobile"
             fetchpriority="high"
           />
+         
         </div>
       </div>
     </div>
