@@ -419,17 +419,6 @@ const router = createRouter({
 
       }
     },
-    {
-      path: "/rolex/busqueda",
-      name: "relojes-rolex",
-      component:()=>import("./views/Rolex/RolexSearch.view.vue") ,
-      meta: {
-        title: "Busqueda | Mimi Joyería ",
-        breadcrumb:"Busqueda"
-
-      },
-      props: route => ({ query: route.query.q })
-    },
     // ****************
   
     // MIMI STATIC ROUTES

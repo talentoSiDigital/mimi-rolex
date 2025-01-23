@@ -16,27 +16,20 @@ function collapseNav() {
 const search = ref("h-0")
 const activeSearch = ref(false)
 function activateSearch(){
-    activeSearch.value = !activeSearch.value
-
-    if(activeSearch.value== true){
+    if(activeSearch.value){
         search.value = "h-44" 
     }else{
         search.value = "h-0"
     }
-
-    
+    activeSearch.value = !activeSearch.value
 }
-
-const input = ref("")
-
-
 </script>
 
 <template>
   <nav class="relative">
     <div :class="search" class="absolute duration-200 w-full overflow-hidden z-50 top-full bg-rolex-green border-t border-white text-white ">
-          <form action="/rolex/busqueda" class="w-full flex items-center justify-center h-20">
-            <input v-model="input" type="text" placeholder="Buscar" name="search" id="" class="w-11/12 h-1/2 rounded-full bg-rolex-green-2  px-6 placeholder:text-white/75">
+          <form class="w-full flex items-center justify-center h-20">
+            <input type="text" placeholder="Buscar" name="search" id="" class="w-11/12 h-1/2 rounded-full bg-rolex-green-2  px-6 placeholder:text-white/75">
             <button>
                 <font-awesome-icon
                 :icon="['fas', 'arrow-right']"
@@ -45,13 +38,10 @@ const input = ref("")
             </button>
           </form>
           <div id="results" class="w-full flex flex-col items-center">
-                
               <h2 class="w-11/12">Resultados:</h2>
-              <h2 v-if="input.length < 3" class="text-center w-full">Comienza a buscar</h2>
-              <h2 v-else class="text-center w-full">No hay resultados</h2>
+              <h2 class="text-center w-full">No hay resultados de tu busqueda</h2>
 
           </div>
-          
       </div>
     <div
       id="navigation-bar"
@@ -72,7 +62,7 @@ const input = ref("")
                 <font-awesome-icon
                 :icon="['fas', 'magnifying-glass']"
                 class="duration-200 cursor-pointer"
-                @click="activateSearch()"
+                @click="activateSearch"
               />
             </div>            
             <div
@@ -94,7 +84,7 @@ const input = ref("")
       
       
       <!-- Navigation -->
-      <div class="w-full px-4 flex flex-col lg:flex-row lg:justify-center items-start lg:items-center">
+      <div class="w-full px-4 flex-col lg:flex-row lg:justify-center items-start lg:items-center">
         <img
         src="/assets/rolex-retailer.webp"
         alt="rolex-retailer-badge"
