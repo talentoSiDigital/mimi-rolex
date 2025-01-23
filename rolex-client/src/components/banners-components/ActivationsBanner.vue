@@ -23,7 +23,18 @@ const sliderItems = [
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
     alt: "rolex-y-la-filarmonica-de-viena-banner",
     title: "Filarmonica de Viena Banner",
->>>>>>> Stashed changes
+  },
+  {
+    src: "sail-gp",
+    link: "/rolex/world-of-rolex/sail-gp",
+    alt: "sail-gp-banner",
+    title: "Sail gp article Banner",
+  },
+  {
+    src: "sky-dweller",
+    link: "/rolex/sky-dweller",
+    alt: "sky-dweller-banner",
+    title: "Sky Dweller Banner",
   },
   {
     src: "watchmaking",
@@ -51,22 +62,12 @@ const sliderItems = [
     link: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
     alt: "rolex-y-the-championships-wimbledon",
     title: "Rolex y The Championships, Wimbledon",
-=======
-    alt: "nuevos-modelos-banner",
-    title: "Nuevos modelos",
->>>>>>> Stashed changes
   },
   {
-    src: "us-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-us-open",
-    alt: "us-open-banner",
-    title: "US Open",
-  },
-  {
-    src: "the-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-open",
-    alt: "the-open-banner", 
-    title: "The Open",
+    src: "lemans-rolex",
+    link: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
+    alt: "cosmograph-daytona-lemans-rolex-banner",
+    title: "Cosmograph Daytona Lemans",
   },
  
 
