@@ -1,7 +1,8 @@
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink,useRoute } from "vue-router";
 
 import { ref, computed } from "vue";
+const route = useRoute()
 
 const activate = ref("h-20");
 const button = computed(() => {
@@ -68,7 +69,7 @@ const input = ref("")
           class="w-20 md:w-24 lg:w-0"
         />
         <div class="flex items-center gap-4">
-            <div>
+            <div v-if="route.name != 'busqueda'">
                 <font-awesome-icon
                 :icon="['fas', 'magnifying-glass']"
                 class="duration-200 cursor-pointer"

@@ -1,1432 +1,2255 @@
 {
-    "1":{
+    "1": {
         "title": "Descubre Rolex",
-        "link": "https://mimijoyeria.com/rolex/descubre-rolex",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/descubre-rolex.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Descubre",
+            "Rolex"
+        ],
+        "description": "Mimi Joyería se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex.",
+        "link": "/rolex/descubre-rolex",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/descubre-rolex.jpg",
+        "type": "pagina"
     },
-    "2":{
+    "2": {
         "title": "Mantenimiento",
-        "link": "https://mimijoyeria.com/rolex/mantenimiento",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/mantenimiento.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Mantenimiento"
+        ],
+        "description": "Mantenimiento y reparación de los relojes Rolex en Mimi Joyería",
+        "link": "/rolex/mantenimiento",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/mantenimiento.jpg",
+        "type": "pagina"
     },
-    "3":{
+    "3": {
         "title": "Procedimiento mantenimiento",
-        "link": "https://mimijoyeria.com/rolex/procedimiento-mantenimiento",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-mantenimiento-2-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Procedimiento",
+            "mantenimiento"
+        ],
+        "description": "Procedimiento de mantenimiento de los relojes Rolex en Mimi Joyería.",
+        "link": "/rolex/procedimiento-mantenimiento",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-mantenimiento-2-mobile.webp",
+        "type": "pagina"
     },
-    
-    "4":{
+    "4": {
         "title": "Watchmaking",
-        "link": "https://mimijoyeria.com/rolex/watchmaking",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/watchmaking.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Watchmaking"
+        ],
+        "description": "«Savoir-faire» relojero de Rolex",
+        "link": "/rolex/watchmaking",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/watchmaking.jpg",
+        "type": "pagina"
     },
-    "5":{
+    "5": {
         "title": "Contacto",
-        "link": "https://mimijoyeria.com/rolex/contacto",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/contacto.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Contacto"
+        ],
+        "description": "Póngase en contacto con nosotros",
+        "link": "/rolex/contacto",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/contacto.jpg",
+        "type": "pagina"
     },
-    "6":{
+    "6": {
         "title": "Formulario contacto",
-        "link": "https://mimijoyeria.com/rolex/formulario-contacto",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/contacto.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Formulario",
+            "contacto"
+        ],
+        "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
+        "link": "/rolex/formulario-contacto",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/contacto.jpg",
+        "type": "pagina"
     },
-    "7":{
+    "7": {
         "title": "Nuevos relojes",
-        "link": "https://mimijoyeria.com/rolex/nuevos-relojes",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/nuevos-modelos.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "relojes"
+        ],
+        "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
+        "link": "/rolex/nuevos-relojes",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/nuevos-modelos.jpg",
+        "type": "pagina"
     },
-    "8":{
+    "8": {
         "title": "Nuevos modelos 2024 - 1908",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/1908",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-1908-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "1908"
+        ],
+        "description": "Rolex 1908 | Elegancia en movimiento",
+        "link": "/rolex/nuevos-modelos-2024/1908",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-1908-mobile.webp",
+        "type": "pagina"
     },
-    "9":{
+    "9": {
         "title": "Nuevos modelos 2024 - Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/cosmograph-daytona",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-cosmograph-daytona-mobile.webp ",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Cosmograph Daytona - Un icono que no deja de reinventarse",
+        "link": "/rolex/nuevos-modelos-2024/cosmograph-daytona",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-cosmograph-daytona-mobile.webp ",
+        "type": "pagina"
     },
-    "10":{
+    "10": {
         "title": "Nuevos modelos 2024 - Day-Date",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/day-date",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-day-date-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "Day-Date"
+        ],
+        "description": "Day Date | La armonía de las variaciones",
+        "link": "/rolex/nuevos-modelos-2024/day-date",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-day-date-mobile.webp",
+        "type": "pagina"
     },
-    "11":{
+    "11": {
         "title": "Nuevos modelos 2024 - Deepsea",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/deepsea",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-deepsea-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "Deepsea"
+        ],
+        "description": "Rolex Deepsea | La luz de las profundidades",
+        "link": "/rolex/nuevos-modelos-2024/deepsea",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-deepsea-mobile.webp",
+        "type": "pagina"
     },
-    "12":{
+    "12": {
         "title": "Nuevos modelos 2024 - GMT-Master II",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/gmt-master-ii",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-gmt-master-ii-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "GMT-Master",
+            "II"
+        ],
+        "description": "GMT-Master II | El eco de las emociones",
+        "link": "/rolex/nuevos-modelos-2024/gmt-master-ii",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-gmt-master-ii-mobile.webp",
+        "type": "pagina"
     },
-    "13":{
+    "13": {
         "title": "Nuevos modelos 2024 - Sky Dweller",
-        "link": "https://mimijoyeria.com/rolex/nuevos-modelos-2024/sky-dweller",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/new-watches/hub/rolex-new-watches-2024-sky-dweller-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Nuevos",
+            "modelos",
+            "2024",
+            "-",
+            "Sky",
+            "Dweller"
+        ],
+        "description": "Rolex Sky-Dweller | La sinfonía de los reflejos",
+        "link": "/rolex/nuevos-modelos-2024/sky-dweller",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-sky-dweller-mobile.webp",
+        "type": "pagina"
     },
-    "14":{
+    "14": {
         "title": "World of Rolex",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/world-of-rolex.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "World",
+            "of",
+            "Rolex"
+        ],
+        "description": "Durante casi un siglo, Rolex ha desarrollado colaboraciones con un grupo diverso y extraordinario de talentos de una miríada de disciplinas.",
+        "link": "/rolex/world-of-rolex",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/world-of-rolex.jpg",
+        "type": "pagina"
     },
-    "15":{
+    "15": {
         "title": "Viaje al corazon del universo Rolex",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/viaje-al-corazon-del-universo-rolex",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-beyond-rolex-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Viaje",
+            "al",
+            "corazon",
+            "del",
+            "universo",
+            "Rolex"
+        ],
+        "description": "Hans Wilsdorf estaba íntimamente convencido de la capacidad del ser humano para innovar con la excelencia como objetivo.",
+        "link": "/rolex/world-of-rolex/viaje-al-corazon-del-universo-rolex",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-beyond-rolex-mobile.webp",
+        "type": "articulo"
     },
-    "16":{
+    "16": {
         "title": "SailGP",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/sail-gp",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-sail-gp-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "SailGP"
+        ],
+        "description": "Rolex es Title Partner y Reloj Oficial exclusivo del Rolex SailGP Championship",
+        "link": "/rolex/world-of-rolex/sail-gp",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-sail-gp-mobile.webp",
+        "type": "articulo"
     },
-    "17":{
+    "17": {
         "title": "Rolex Grand Slam",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/rolex-grand-slam",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-grand-slam-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Rolex",
+            "Grand",
+            "Slam"
+        ],
+        "description": "Considerado el mayor desafío de la equitación, el Rolex Grand Slam de Salto de Obstáculos recompensa al jinete que gana, consecutivamente, el Grand Prix en tres de los cuatro Majors de salto",
+        "link": "/rolex/world-of-rolex/rolex-grand-slam",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-grand-slam-mobile.webp",
+        "type": "articulo"
     },
-    "18":{
+    "18": {
         "title": "Las 24 Horas de LeMans",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/las-24-horas-de-le-mans",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-lemans-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Las",
+            "24",
+            "Horas",
+            "de",
+            "LeMans"
+        ],
+        "description": "La 92.a edición de las 24 Horas de Le Mans, carrera que celebra la resistencia y la excelencia del automovilismo, se celebra los días 15 y 16 de junio de 2024.",
+        "link": "/rolex/world-of-rolex/las-24-horas-de-le-mans",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-lemans-mobile.webp",
+        "type": "articulo"
     },
-    "19":{
+    "19": {
         "title": "Rolex y The Championships Wimbledon",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-wimbledon-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Rolex",
+            "y",
+            "The",
+            "Championships",
+            "Wimbledon"
+        ],
+        "description": "Rolex colaboró por primera vez con Wimbledon en 1978. El torneo de tenis más antiguo del mundo es el templo del tenis sobre hierba y del deporte original.",
+        "link": "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-wimbledon-mobile.webp",
+        "type": "articulo"
     },
-    "20":{
+    "20": {
         "title": "Rolex y The Amundi Evian Championship",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-admundi-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Rolex",
+            "y",
+            "The",
+            "Amundi",
+            "Evian",
+            "Championship"
+        ],
+        "description": "Rolex es Socio y Reloj Oficial del único Major de golf que se celebra en Europa continental.",
+        "link": "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-admundi-mobile.webp",
+        "type": "articulo"
     },
-    "21":{
+    "21": {
         "title": "Rolex y The Open",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/rolex-y-the-open",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-open-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Rolex",
+            "y",
+            "The",
+            "Open"
+        ],
+        "description": "The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año.",
+        "link": "/rolex/world-of-rolex/rolex-y-the-open",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-open-mobile.webp",
+        "type": "articulo"
     },
-    "22":{
+    "22": {
         "title": "Rolex y The US Open",
-        "link": "https://mimijoyeria.com/rolex/world-of-rolex/rolex-y-the-us-open",
-        "thumbnail":"https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-us-open-mobile.webp",
-        "type":"articulo"
-
+        "keywords": [
+            "Rolex",
+            "y",
+            "The",
+            "US",
+            "Open"
+        ],
+        "description": "El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.",
+        "link": "/rolex/world-of-rolex/rolex-y-the-us-open",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-us-open-mobile.webp",
+        "type": "articulo"
     },
-    "23":{
+    "23": {
         "title": "Relojes Rolex",
-        "link": "https://mimijoyeria.com/rolex/relojes",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/rolex-slider/coleccion-rolex.jpg",
-        "type":"pagina"
-
+        "keywords": [
+            "Relojes",
+            "Rolex"
+        ],
+        "description": "Esta selección de modelos Rolex proviene del catálogo oficial y no representa las existencias disponibles en la joyería.",
+        "link": "/rolex/relojes",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/coleccion-rolex.jpg",
+        "type": "pagina"
     },
-    "24":{
+    "24": {
         "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-cosmograph-daytona-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Colección Rolex Cosmograph Daytona",
+        "link": "/rolex/cosmograph-daytona",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-cosmograph-daytona-mobile.webp",
+        "type": "pagina"
     },
-    "25":{
+    "25": {
         "title": "1908",
-        "link": "https://mimijoyeria.com/rolex/1908",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-1908-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "1908"
+        ],
+        "description": "Colección Rolex 1908 ",
+        "link": "/rolex/1908",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-1908-mobile.webp",
+        "type": "pagina"
     },
-    "26":{
+    "26": {
         "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-yacht-master-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Yacht-Master"
+        ],
+        "description": "Colección Rolex Yacht-Master ",
+        "link": "/rolex/yacht-master",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-yacht-master-mobile.webp",
+        "type": "pagina"
     },
-    "27":{
+    "27": {
         "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-sky-dweller-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "sky",
+            "dweller"
+        ],
+        "description": "Colección Rolex sky dweller ",
+        "link": "/rolex/sky-dweller",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-sky-dweller-mobile.webp",
+        "type": "pagina"
     },
-    "28":{
+    "28": {
         "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-gmt-master-ii-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "gmt",
+            "master-ii"
+        ],
+        "description": "Colección Rolex gmt master-ii ",
+        "link": "/rolex/gmt-master-ii",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-gmt-master-ii-mobile.webp",
+        "type": "pagina"
     },
-    "29":{
+    "29": {
         "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-explorer-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "explorer"
+        ],
+        "description": "Colección Rolex explorer ",
+        "link": "/rolex/explorer",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-explorer-mobile.webp",
+        "type": "pagina"
     },
-    "30":{
+    "30": {
         "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-oyster-perpetual-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Oyster",
+            "Perpetual"
+        ],
+        "description": "Colección Rolex Oyster Perpetual ",
+        "link": "/rolex/oyster-perpetual",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-oyster-perpetual-mobile.webp",
+        "type": "pagina"
     },
-    "31":{
+    "31": {
         "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-day-date-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Day-Date"
+        ],
+        "description": "Colección Rolex Day-Date ",
+        "link": "/rolex/day-date",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-day-date-mobile.webp",
+        "type": "pagina"
     },
-    "32":{
+    "32": {
         "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-datejust-mobile.webp",
-        "type":"pagina"
-
+        "keywords": [
+            "Datejust"
+        ],
+        "description": "Colección Rolex Datejust ",
+        "link": "/rolex/datejust",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-datejust-mobile.webp",
+        "type": "pagina"
     },
-    "33":{
+    "33": {
         "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-lady-datejust-mobile.webp",
-        "type":"pagina"
-
-    },
-    "34":{
-        "title": "air king",
-        "link": "https://mimijoyeria.com/rolex/air-king",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-air-king-mobile.webp",
-        "type":"pagina"
-
-    },
-    "35":{
-        "title": "submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections-submariner-mobile.webp",
-        "type":"pagina"
-
-    },
-    "36":{
-        "title": "sea dweller",
-        "link": "https://mimijoyeria.com/rolex/sea-dweller",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections--mobile.webp",
-        "type":"pagina"
-
-    },
-    "37":{
-        "title": "Deepsea",
-        "link": "https://mimijoyeria.com/rolex/deepsea",
-        "thumbnail":"https://mimijoyeria.com/assets/route-assets/banners/new-banner-collections--mobile.webp",
-        "type":"pagina"
-
-    },
-    "38":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126506-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126506-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "39":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126515ln-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126515ln-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "40":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126500ln-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126500ln-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "41":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126503-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126503-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "42":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126505-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126505-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "43":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126508-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126508-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "44":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126519ln-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126519ln-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "45":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126509-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126509-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "46":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126518ln-0012",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126518ln-0012-showcase.webp",
-        "type":"reloj"
-
-    },
-    "47":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126535tbr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126535tbr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "48":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126538tbr-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126538tbr-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "49":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126539tbr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126539tbr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "50":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126579rbr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126579rbr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "51":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126589rbr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126589rbr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "52":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126595tbr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126595tbr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "53":{
-        "title": "Cosmograph Daytona",
-        "link": "https://mimijoyeria.com/rolex/cosmograph-daytona-m126598tbr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126598tbr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "54":{
-        "title": "1908",
-        "link": "https://mimijoyeria.com/rolex/1908-m52508-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m52508-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "55":{
-        "title": "1908",
-        "link": "https://mimijoyeria.com/rolex/1908-m52506-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m52506-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "56":{
-        "title": "1908",
-        "link": "https://mimijoyeria.com/rolex/1908-m52509-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m52509-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-  
-    "57":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m226627-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m226627-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "58":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m226658-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m226658-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "59":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m126622-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126622-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "60":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m126655-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126655-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "61":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m268655-0019",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m268655-0019-showcase.webp",
-        "type":"reloj"
-
-    },
-    "62":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m268622-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m268622-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "63":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m226659-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m226659-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "64":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m126621-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126621-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "65":{
-        "title": "Yacht-Master",
-        "link": "https://mimijoyeria.com/rolex/yacht-master-m268621-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m268621-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "66":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336239-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336239-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "67":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336934-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "68":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336238-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336238-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "69":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336935-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "70":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336235-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336235-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "71":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336933-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "72":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336934-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "73":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336933-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "74":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336935-0008",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0008-showcase.webp",
-        "type":"reloj"
-
-    },
-    "75":{
-        "title": "sky dweller",
-        "link": "https://mimijoyeria.com/rolex/sky-dweller-m336938-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m336938-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "76":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126713grnr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126713grnr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "77":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126718grnr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126718grnr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "78":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126715chnr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126715chnr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "79":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126719blro-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126719blro-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "80":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126720vtnr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126720vtnr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "81":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126711chnr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126711chnr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "82":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126710blnr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126710blnr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "83":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126710grnr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "84":{
-        "title": "gmt master-ii",
-        "link": "https://mimijoyeria.com/rolex/gmt-master-ii-m126710grnr-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "85":{
-        "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer-m124273-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124273-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "86":{
-        "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer-m224270-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m224270-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "87":{
-        "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer-m226570-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "88":{
-        "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer-m226570-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "89":{
-        "title": "explorer",
-        "link": "https://mimijoyeria.com/rolex/explorer-m124270-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124270-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "90":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m126000-0009",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0009-showcase.webp",
-        "type":"reloj"
-
-    },
-    "91":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m124200-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124200-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "92":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m124300-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "93":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m124300-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0005-showcase.webp",
-        "type":"reloj"
-
-    },
-    "94":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m276200-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m276200-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "95":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m126000-0008",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0008-showcase.webp",
-        "type":"reloj"
-
-    },
-    "96":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m277200-0007",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0007-showcase.webp",
-        "type":"reloj"
-
-    },
-    "97":{
-        "title": "Oyster Perpetual",
-        "link": "https://mimijoyeria.com/rolex/oyster-perpetual-m277200-0010",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0010-showcase.webp",
-        "type":"reloj"
-
-    },
-    "98":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228236-0012",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228236-0012-showcase.webp",
-        "type":"reloj"
-
-    },
-    "99":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128345rbr-0068",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128345rbr-0068-showcase.webp",
-        "type":"reloj"
-
-    },
-    "100":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128349rbr-0031",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128349rbr-0031-showcase.webp",
-        "type":"reloj"
-
-    },
-    "101":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128348rbr-0049",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128348rbr-0049-showcase.webp",
-        "type":"reloj"
-
-    },
-    "102":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128239-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0005-showcase.webp",
-        "type":"reloj"
-
-    },
-    "103":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128396tbr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128396tbr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "104":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128235-0009",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0009-showcase.webp",
-        "type":"reloj"
-
-    },
-    "105":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228238-0042",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0042-showcase.webp",
-        "type":"reloj"
-
-    },
-    "106":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228349rbr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "107":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228396tbr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228396tbr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "108":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228345rbr-0016",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228345rbr-0016-showcase.webp",
-        "type":"reloj"
-
-    },
-    "109":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228349rbr-0040",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0040-showcase.webp",
-        "type":"reloj"
-
-    },
-    "110":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228238-0059",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0059-showcase.webp",
-        "type":"reloj"
-
-    },
-    "111":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228239-0033",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0033-showcase.webp",
-        "type":"reloj"
-
-    },
-    "112":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228348rbr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228348rbr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "113":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228398tbr-0036",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228398tbr-0036-showcase.webp",
-        "type":"reloj"
-
-    },
-    "114":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128235-0037",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0037-showcase.webp",
-        "type":"reloj"
-
-    },
-    "115":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128235-0070",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0070-showcase.webp",
-        "type":"reloj"
-
-    },
-    "116":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128235-0078",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0078-showcase.webp",
-        "type":"reloj"
-
-    },
-    "117":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128236-0018",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128236-0018-showcase.webp",
-        "type":"reloj"
-
-    },
-    "118":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128238-0022",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0022-showcase.webp",
-        "type":"reloj"
-
-    },
-    "119":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128238-0045",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0045-showcase.webp",
-        "type":"reloj"
-
-    },
-    "120":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128238-0113",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0113-showcase.webp",
-        "type":"reloj"
-
-    },
-    "121":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128238-0118",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0118-showcase.webp",
-        "type":"reloj"
-
-    },
-    "122":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128239-0063",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0063-showcase.webp",
-        "type":"reloj"
-
-    },
-    "123":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128239-0065",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0065-showcase.webp",
-        "type":"reloj"
-
-    },
-    "124":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128395tbr-0032",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128395tbr-0032-showcase.webp",
-        "type":"reloj"
-
-    },
-    "125":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128398tbr-0035",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0035-showcase.webp",
-        "type":"reloj"
-
-    },
-    "126":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128398tbr-0037",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0037-showcase.webp",
-        "type":"reloj"
-
-    },
-    "127":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m128399tbr-0029",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m128399tbr-0029-showcase.webp",
-        "type":"reloj"
-
-    },
-    "128":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228235-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "129":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228235-0055",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0055-showcase.webp",
-        "type":"reloj"
-
-    },
-    "130":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228235-0056",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0056-showcase.webp",
-        "type":"reloj"
-
-    },
-    "131":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228238-0069",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0069-showcase.webp",
-        "type":"reloj"
-
-    },
-    "132":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228238-0071",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0071-showcase.webp",
-        "type":"reloj"
-
-    },
-    "133":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228239-0076",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0076-showcase.webp",
-        "type":"reloj"
-
-    },
-    "134":{
-        "title": "Day-Date",
-        "link": "https://mimijoyeria.com/rolex/day-date-m228239-0078",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0078-showcase.webp",
-        "type":"reloj"
-
-    },
-    "135":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126234-0051",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0051-showcase.webp",
-        "type":"reloj"
-
-    },
-    "136":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126333-0019",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0019-showcase.webp",
-        "type":"reloj"
-
-    },
-    "137":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126300-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126300-0005-showcase.webp",
-        "type":"reloj"
-
-    },
-    "138":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126333-0010",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0010-showcase.webp",
-        "type":"reloj"
-
-    },
-    "139":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126333-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0005-showcase.webp",
-        "type":"reloj"
-
-    },
-    "140":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126284rbr-0011",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126284rbr-0011-showcase.webp",
-        "type":"reloj"
-
-    },
-    "141":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126303-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126303-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "142":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126283rbr-0012",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126283rbr-0012-showcase.webp",
-        "type":"reloj"
-
-    },
-    "143":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278289rbr-0019",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278289rbr-0019-showcase.webp",
-        "type":"reloj"
-
-    },
-    "144":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278384rbr-0008",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278384rbr-0008-showcase.webp",
-        "type":"reloj"
-
-    },
-    "145":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278273-0019",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278273-0019-showcase.webp",
-        "type":"reloj"
-
-    },
-    "146":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278274-0018",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278274-0018-showcase.webp",
-        "type":"reloj"
-
-    },
-    "147":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126233-0018",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0018-showcase.webp",
-        "type":"reloj"
-
-    },
-    "148":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278288rbr-0038",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0038-showcase.webp",
-        "type":"reloj"
-
-    },
-    "149":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278288rbr-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "150":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278343rbr-0016",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278343rbr-0016-showcase.webp",
-        "type":"reloj"
-
-    },
-    "151":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126331-0016",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0016-showcase.webp",
-        "type":"reloj"
-
-    },
-    "152":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278285rbr-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278285rbr-0005-showcase.webp",
-        "type":"reloj"
-
-    },
-    "153":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126233-0035",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0035-showcase.webp",
-        "type":"reloj"
-
-    },
-    "154":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278275-0029",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278275-0029-showcase.webp",
-        "type":"reloj"
-
-    },
-    "155":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126331-0007",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0007-showcase.webp",
-        "type":"reloj"
-
-    },
-    "156":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126334-0006",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0006-showcase.webp",
-        "type":"reloj"
-
-    },
-    "157":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126067-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126067-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "158":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126200-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126200-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "159":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126201-0013",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126201-0013-showcase.webp",
-        "type":"reloj"
-
-    },
-    "160":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126203-0020",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126203-0020-showcase.webp",
-        "type":"reloj"
-
-    },
-    "161":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126231-0016",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0016-showcase.webp",
-        "type":"reloj"
-
-    },
-    "162":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126231-0020",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0020-showcase.webp",
-        "type":"reloj"
-
-    },
-    "163":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126234-0037",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0037-showcase.webp",
-        "type":"reloj"
-
-    },
-    "164":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126281rbr-0016",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126281rbr-0016-showcase.webp",
-        "type":"reloj"
-
-    },
-    "165":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126331-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "166":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m126334-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "167":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278240-0018",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278240-0018-showcase.webp",
-        "type":"reloj"
-
-    },
-    "168":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278241-0018",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278241-0018-showcase.webp",
-        "type":"reloj"
-
-    },
-    "169":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278271-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278271-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "170":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278278-0032",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278278-0032-showcase.webp",
-        "type":"reloj"
-
-    },
-    "171":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278341rbr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278341rbr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "172":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278344rbr-0021",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278344rbr-0021-showcase.webp",
-        "type":"reloj"
-
-    },
-    "173":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278381rbr-0023",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278381rbr-0023-showcase.webp",
-        "type":"reloj"
-
-    },
-    "174":{
-        "title": "Datejust",
-        "link": "https://mimijoyeria.com/rolex/datejust-m278383rbr-0025",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m278383rbr-0025-showcase.webp",
-        "type":"reloj"
-
-    },
-    "175":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279174-0020",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0020-showcase.webp",
-        "type":"reloj"
-
-    },
-    "176":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279174-0015",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0015-showcase.webp",
-        "type":"reloj"
-
-    },
-    "177":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279384rbr-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "178":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279173-0012",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279173-0012-showcase.webp",
-        "type":"reloj"
-
-    },
-    "179":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279139rbr-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279139rbr-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "180":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279171-0007",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279171-0007-showcase.webp",
-        "type":"reloj"
-
-    },
-    "181":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279138rbr-0015",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279138rbr-0015-showcase.webp",
-        "type":"reloj"
-
-    },
-    "182":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279381rbr-0013",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0013-showcase.webp",
-        "type":"reloj"
-
-    },
-    "183":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279458rbr-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279458rbr-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "184":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279135rbr-0021",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279135rbr-0021-showcase.webp",
-        "type":"reloj"
-
-    },
-    "185":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279163-0023",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279163-0023-showcase.webp",
-        "type":"reloj"
-
-    },
-    "186":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279175-0020",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279175-0020-showcase.webp",
-        "type":"reloj"
-
-    },
-    "187":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279178-0013",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279178-0013-showcase.webp",
-        "type":"reloj"
-
-    },
-    "188":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279381rbr-0004",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0004-showcase.webp",
-        "type":"reloj"
-
-    },
-    "189":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279383rbr-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279383rbr-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "190":{
-        "title": "Lady Datejust",
-        "link": "https://mimijoyeria.com/rolex/lady-datejust-m279384rbr-0011",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0011-showcase.webp",
-        "type":"reloj"
-
-    },
-    "191":{
+        "keywords": [
+            "Lady",
+            "Datejust"
+        ],
+        "description": "Colección Rolex Lady Datejust ",
+        "link": "/rolex/lady-datejust",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-lady-datejust-mobile.webp",
+        "type": "pagina"
+    },
+    "34": {
         "title": "Air-King",
-        "link": "https://mimijoyeria.com/rolex/air-king-m126900-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126900-0001-showcase.webp",
-        "type":"reloj"
-
+        "keywords": [
+            "air",
+            "king"
+        ],
+        "description": "Colección Rolex Air-King ",
+        "link": "/rolex/air-king",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-air-king-mobile.webp",
+        "type": "pagina"
     },
-    "192":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m124060-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m124060-0001-showcase.webp",
-        "type":"reloj"
-
+    "35": {
+        "title": "submariner",
+        "keywords": [
+            "submariner"
+        ],
+        "description": "Colección Rolex Submariner ",
+        "link": "/rolex/submariner",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-submariner-mobile.webp",
+        "type": "pagina"
     },
-    "193":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126610lv-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126610lv-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "194":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126613lb-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126613lb-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "195":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126610ln-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126610ln-0001-showcase.webp",
-        "type":"reloj"
-
-    },
-    "196":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126618lb-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126618lb-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "197":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126613ln-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126613ln-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "198":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126618ln-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126618ln-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "199":{
-        "title": "Submariner",
-        "link": "https://mimijoyeria.com/rolex/submariner-m126619lb-0003",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126619lb-0003-showcase.webp",
-        "type":"reloj"
-
-    },
-    "200":{
+    "36": {
         "title": "Sea-Dweller",
-        "link": "https://mimijoyeria.com/rolex/sea-dweller-m126603-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126603-0001-showcase.webp",
-        "type":"reloj"
-
+        "keywords": [
+            "sea",
+            "dweller"
+        ],
+        "description": "Colección Rolex Sea-Dweller ",
+        "link": "/rolex/sea-dweller",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-sea-dweller-mobile.webp",
+        "type": "pagina"
     },
-    "201":{
-        "title": "Sea-Dweller",
-        "link": "https://mimijoyeria.com/rolex/sea-dweller-m126600-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m126600-0002-showcase.webp",
-        "type":"reloj"
-
-    },
-    "202":{
+    "37": {
         "title": "Deepsea",
-        "link": "https://mimijoyeria.com/rolex/deepsea-m136660-0005",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m136660-0005-showcase.webp",
-        "type":"reloj"
-
+        "keywords": [
+            "Deepsea"
+        ],
+        "description": "Colección Rolex Deepsea ",
+        "link": "/rolex/deepsea",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-deepsea-mobile.webp",
+        "type": "pagina"
     },
-    "203":{
-        "title": "Deepsea",
-        "link": "https://mimijoyeria.com/rolex/deepsea-m136668lb-0001",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m136668lb-0001-showcase.webp",
-        "type":"reloj"
-
+    "38": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, platino",
+        "link": "/rolex/cosmograph-daytona-m126506-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126506-0001-showcase.webp",
+        "type": "reloj"
     },
-    "204":{
+    "39": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/cosmograph-daytona-m126515ln-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126515ln-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "40": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/cosmograph-daytona-m126500ln-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126500ln-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "41": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/cosmograph-daytona-m126503-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126503-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "42": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/cosmograph-daytona-m126505-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126505-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "43": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo",
+        "link": "/rolex/cosmograph-daytona-m126508-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126508-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "44": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro blanco",
+        "link": "/rolex/cosmograph-daytona-m126519ln-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126519ln-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "45": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro blanco",
+        "link": "/rolex/cosmograph-daytona-m126509-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126509-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "46": {
+        "title": "Cosmograph daytona",
+        "keywords": [
+            "Cosmograph",
+            "daytona"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo",
+        "link": "/rolex/cosmograph-daytona-m126518ln-0012",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126518ln-0012-showcase.webp",
+        "type": "reloj"
+    },
+    "47": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro Everose y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126535tbr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126535tbr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "48": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126538tbr-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126538tbr-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "49": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro blanco y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126539tbr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126539tbr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "50": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro blanco y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126579rbr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126579rbr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "51": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro blanco y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126589rbr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126589rbr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "52": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro Everose y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126595tbr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126595tbr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "53": {
+        "title": "Cosmograph Daytona",
+        "keywords": [
+            "Cosmograph",
+            "Daytona"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo y diamantes",
+        "link": "/rolex/cosmograph-daytona-m126598tbr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126598tbr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "54": {
         "title": "1908",
-        "link": "https://mimijoyeria.com/rolex/1908-m52509-0002",
-        "thumbnail":"https://mimijoyeria.com/storage/rolex-relojes-new/m52509-0002-showcase.webp",
-        "type":"reloj"
-
+        "keywords": [
+            "1908"
+        ],
+        "description": "39 mm, oro amarillo de 18 quilates, acabado pulido",
+        "link": "/rolex/1908-m52508-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52508-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "55": {
+        "title": "1908",
+        "keywords": [
+            "1908"
+        ],
+        "description": "39 mm, platino, acabado pulido",
+        "link": "/rolex/1908-m52506-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52506-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "56": {
+        "title": "1908",
+        "keywords": [
+            "1908"
+        ],
+        "description": "39 mm, oro blanco de 18 quilates, acabado pulido",
+        "link": "/rolex/1908-m52509-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52509-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "57": {
+        "title": "Yacht-Master 42",
+        "keywords": [
+            "Yacht-Master",
+            "42"
+        ],
+        "description": "Oyster, 42 mm, titanio RLX",
+        "link": "/rolex/yacht-master-m226627-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226627-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "58": {
+        "title": "Yacht-Master 42",
+        "keywords": [
+            "Yacht-Master",
+            "42"
+        ],
+        "description": "Oyster, 42 mm, Oro amarillo",
+        "link": "/rolex/yacht-master-m226658-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226658-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "59": {
+        "title": "Yacht-Master 40",
+        "keywords": [
+            "Yacht-Master",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel y Platino",
+        "link": "/rolex/yacht-master-m126622-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126622-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "60": {
+        "title": "Yacht-Master 40",
+        "keywords": [
+            "Yacht-Master",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/yacht-master-m126655-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126655-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "61": {
+        "title": "Yacht-Master 37",
+        "keywords": [
+            "Yacht-Master",
+            "37"
+        ],
+        "description": "Oyster, 37 mm, oro Everose",
+        "link": "/rolex/yacht-master-m268655-0019",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268655-0019-showcase.webp",
+        "type": "reloj"
+    },
+    "62": {
+        "title": "Yacht-Master 37",
+        "keywords": [
+            "Yacht-Master",
+            "37"
+        ],
+        "description": "Oyster, 37 mm, acero Oystersteel y Platino",
+        "link": "/rolex/yacht-master-m268622-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268622-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "63": {
+        "title": "Yacht-Master 42",
+        "keywords": [
+            "Yacht-Master",
+            "42"
+        ],
+        "description": "Oyster, 42 mm, Oro blanco",
+        "link": "/rolex/yacht-master-m226659-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226659-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "64": {
+        "title": "Yacht-Master 40",
+        "keywords": [
+            "Yacht-Master",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/yacht-master-m126621-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126621-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "65": {
+        "title": "Yacht-Master 37",
+        "keywords": [
+            "Yacht-Master",
+            "37"
+        ],
+        "description": "Oyster, 37 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/yacht-master-m268621-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268621-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "66": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, Oro blanco",
+        "link": "/rolex/sky-dweller-m336239-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336239-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "67": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel y oro blanco ",
+        "link": "/rolex/sky-dweller-m336934-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "68": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, Oro Amarillo",
+        "link": "/rolex/sky-dweller-m336238-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336238-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "69": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, oro Everose",
+        "link": "/rolex/sky-dweller-m336935-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "70": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, oro Everose",
+        "link": "/rolex/sky-dweller-m336235-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336235-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "71": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/sky-dweller-m336933-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "72": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/sky-dweller-m336934-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "73": {
+        "title": "SKY-DWELLER",
+        "keywords": [
+            "SKY-DWELLER"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/sky-dweller-m336933-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "74": {
+        "title": "Sky-Dweller",
+        "keywords": [
+            "Sky-Dweller"
+        ],
+        "description": "Oyster, 42 mm, oro Everose",
+        "link": "/rolex/sky-dweller-m336935-0008",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0008-showcase.webp",
+        "type": "reloj"
+    },
+    "75": {
+        "title": "Sky-Dweller",
+        "keywords": [
+            "Sky-Dweller"
+        ],
+        "description": "Oyster, 42 mm, oro amarillo",
+        "link": "/rolex/sky-dweller-m336938-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336938-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "76": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/gmt-master-ii-m126713grnr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126713grnr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "77": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo",
+        "link": "/rolex/gmt-master-ii-m126718grnr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126718grnr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "78": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/gmt-master-ii-m126715chnr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126715chnr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "79": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, oro blanco",
+        "link": "/rolex/gmt-master-ii-m126719blro-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126719blro-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "80": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/gmt-master-ii-m126720vtnr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126720vtnr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "81": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel y oro everose",
+        "link": "/rolex/gmt-master-ii-m126711chnr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126711chnr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "82": {
+        "title": "GMT Master-II",
+        "keywords": [
+            "GMT",
+            "Master-II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/gmt-master-ii-m126710blnr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710blnr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "83": {
+        "title": "GMT-Master II",
+        "keywords": [
+            "GMT-Master",
+            "II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/gmt-master-ii-m126710grnr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "84": {
+        "title": "GMT-Master II",
+        "keywords": [
+            "GMT-Master",
+            "II"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/gmt-master-ii-m126710grnr-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "85": {
+        "title": "Explorer 36",
+        "keywords": [
+            "Explorer",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/explorer-m124273-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124273-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "86": {
+        "title": "Explorer 40",
+        "keywords": [
+            "Explorer",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel ",
+        "link": "/rolex/explorer-m224270-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m224270-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "87": {
+        "title": "Explorer II",
+        "keywords": [
+            "Explorer",
+            "II"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel",
+        "link": "/rolex/explorer-m226570-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "88": {
+        "title": "Explorer II",
+        "keywords": [
+            "Explorer",
+            "II"
+        ],
+        "description": "Oyster, 42 mm, acero Oystersteel",
+        "link": "/rolex/explorer-m226570-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "89": {
+        "title": "Explorer 36",
+        "keywords": [
+            "Explorer",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel",
+        "link": "/rolex/explorer-m124270-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124270-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "90": {
+        "title": "Oyster Perpetual 36",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m126000-0009",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0009-showcase.webp",
+        "type": "reloj"
+    },
+    "91": {
+        "title": "Oyster Perpetual 34",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "34"
+        ],
+        "description": "Oyster, 34 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m124200-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124200-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "92": {
+        "title": "Oyster Perpetual 41",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m124300-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "93": {
+        "title": "Oyster Perpetual 41",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m124300-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "94": {
+        "title": "Oyster Perpetual 28",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "28"
+        ],
+        "description": "Oyster, 28 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m276200-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m276200-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "95": {
+        "title": "Oyster Perpetual 36",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m126000-0008",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0008-showcase.webp",
+        "type": "reloj"
+    },
+    "96": {
+        "title": "Oyster Perpetual 31",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m277200-0007",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0007-showcase.webp",
+        "type": "reloj"
+    },
+    "97": {
+        "title": "Oyster Perpetual 31",
+        "keywords": [
+            "Oyster",
+            "Perpetual",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel",
+        "link": "/rolex/oyster-perpetual-m277200-0010",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0010-showcase.webp",
+        "type": "reloj"
+    },
+    "98": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, platino",
+        "link": "/rolex/day-date-m228236-0012",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228236-0012-showcase.webp",
+        "type": "reloj"
+    },
+    "99": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose y diamantes",
+        "link": "/rolex/day-date-m128345rbr-0068",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128345rbr-0068-showcase.webp",
+        "type": "reloj"
+    },
+    "100": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro blanco y diamantes",
+        "link": "/rolex/day-date-m128349rbr-0031",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128349rbr-0031-showcase.webp",
+        "type": "reloj"
+    },
+    "101": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo y diamantes",
+        "link": "/rolex/day-date-m128348rbr-0049",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128348rbr-0049-showcase.webp",
+        "type": "reloj"
+    },
+    "102": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro blanco ",
+        "link": "/rolex/day-date-m128239-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "103": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, platino y diamantes",
+        "link": "/rolex/day-date-m128396tbr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128396tbr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "104": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose",
+        "link": "/rolex/day-date-m128235-0009",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0009-showcase.webp",
+        "type": "reloj"
+    },
+    "105": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo ",
+        "link": "/rolex/day-date-m228238-0042",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0042-showcase.webp",
+        "type": "reloj"
+    },
+    "106": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro blanco y diamantes",
+        "link": "/rolex/day-date-m228349rbr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "107": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 36 mm, platino y diamantes",
+        "link": "/rolex/day-date-m228396tbr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228396tbr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "108": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 36 mm, oro Everose y diamantes",
+        "link": "/rolex/day-date-m228345rbr-0016",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228345rbr-0016-showcase.webp",
+        "type": "reloj"
+    },
+    "109": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro blanco y diamantes",
+        "link": "/rolex/day-date-m228349rbr-0040",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0040-showcase.webp",
+        "type": "reloj"
+    },
+    "110": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo ",
+        "link": "/rolex/day-date-m228238-0059",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0059-showcase.webp",
+        "type": "reloj"
+    },
+    "111": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro blanco ",
+        "link": "/rolex/day-date-m228239-0033",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0033-showcase.webp",
+        "type": "reloj"
+    },
+    "112": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo y diamantes",
+        "link": "/rolex/day-date-m228348rbr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228348rbr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "113": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo y diamantes",
+        "link": "/rolex/day-date-m228398tbr-0036",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228398tbr-0036-showcase.webp",
+        "type": "reloj"
+    },
+    "114": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose",
+        "link": "/rolex/day-date-m128235-0037",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0037-showcase.webp",
+        "type": "reloj"
+    },
+    "115": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose",
+        "link": "/rolex/day-date-m128235-0070",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0070-showcase.webp",
+        "type": "reloj"
+    },
+    "116": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose",
+        "link": "/rolex/day-date-m128235-0078",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0078-showcase.webp",
+        "type": "reloj"
+    },
+    "117": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, platino",
+        "link": "/rolex/day-date-m128236-0018",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128236-0018-showcase.webp",
+        "type": "reloj"
+    },
+    "118": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo",
+        "link": "/rolex/day-date-m128238-0022",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0022-showcase.webp",
+        "type": "reloj"
+    },
+    "119": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo",
+        "link": "/rolex/day-date-m128238-0045",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0045-showcase.webp",
+        "type": "reloj"
+    },
+    "120": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo",
+        "link": "/rolex/day-date-m128238-0113",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0113-showcase.webp",
+        "type": "reloj"
+    },
+    "121": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo",
+        "link": "/rolex/day-date-m128238-0118",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0118-showcase.webp",
+        "type": "reloj"
+    },
+    "122": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro blanco",
+        "link": "/rolex/day-date-m128239-0063",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0063-showcase.webp",
+        "type": "reloj"
+    },
+    "123": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro blanco",
+        "link": "/rolex/day-date-m128239-0065",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0065-showcase.webp",
+        "type": "reloj"
+    },
+    "124": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro Everose y diamantes",
+        "link": "/rolex/day-date-m128395tbr-0032",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128395tbr-0032-showcase.webp",
+        "type": "reloj"
+    },
+    "125": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo y diamantes",
+        "link": "/rolex/day-date-m128398tbr-0035",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0035-showcase.webp",
+        "type": "reloj"
+    },
+    "126": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro amarillo y diamantes",
+        "link": "/rolex/day-date-m128398tbr-0037",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0037-showcase.webp",
+        "type": "reloj"
+    },
+    "127": {
+        "title": "Day-Date 36",
+        "keywords": [
+            "Day-Date",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, oro blanco y diamantes",
+        "link": "/rolex/day-date-m128399tbr-0029",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128399tbr-0029-showcase.webp",
+        "type": "reloj"
+    },
+    "128": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/day-date-m228235-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "129": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/day-date-m228235-0055",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0055-showcase.webp",
+        "type": "reloj"
+    },
+    "130": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro Everose",
+        "link": "/rolex/day-date-m228235-0056",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0056-showcase.webp",
+        "type": "reloj"
+    },
+    "131": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo",
+        "link": "/rolex/day-date-m228238-0069",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0069-showcase.webp",
+        "type": "reloj"
+    },
+    "132": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro amarillo",
+        "link": "/rolex/day-date-m228238-0071",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0071-showcase.webp",
+        "type": "reloj"
+    },
+    "133": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro blanco",
+        "link": "/rolex/day-date-m228239-0076",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0076-showcase.webp",
+        "type": "reloj"
+    },
+    "134": {
+        "title": "Day-Date 40",
+        "keywords": [
+            "Day-Date",
+            "40"
+        ],
+        "description": "Oyster, 40 mm, oro blanco",
+        "link": "/rolex/day-date-m228239-0078",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0078-showcase.webp",
+        "type": "reloj"
+    },
+    "135": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/datejust-m126234-0051",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0051-showcase.webp",
+        "type": "reloj"
+    },
+    "136": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/datejust-m126333-0019",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0019-showcase.webp",
+        "type": "reloj"
+    },
+    "137": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/datejust-m126300-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126300-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "138": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/datejust-m126333-0010",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0010-showcase.webp",
+        "type": "reloj"
+    },
+    "139": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/datejust-m126333-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "140": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel, oro blanco y diamantes",
+        "link": "/rolex/datejust-m126284rbr-0011",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126284rbr-0011-showcase.webp",
+        "type": "reloj"
+    },
+    "141": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/datejust-m126303-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126303-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "142": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel, oro amarillo y diamantes",
+        "link": "/rolex/datejust-m126283rbr-0012",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126283rbr-0012-showcase.webp",
+        "type": "reloj"
+    },
+    "143": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro blanco y diamantes",
+        "link": "/rolex/datejust-m278289rbr-0019",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278289rbr-0019-showcase.webp",
+        "type": "reloj"
+    },
+    "144": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
+        "link": "/rolex/datejust-m278384rbr-0008",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278384rbr-0008-showcase.webp",
+        "type": "reloj"
+    },
+    "145": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel y oro amarillo ",
+        "link": "/rolex/datejust-m278273-0019",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278273-0019-showcase.webp",
+        "type": "reloj"
+    },
+    "146": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/datejust-m278274-0018",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278274-0018-showcase.webp",
+        "type": "reloj"
+    },
+    "147": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
+        "link": "/rolex/datejust-m126233-0018",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0018-showcase.webp",
+        "type": "reloj"
+    },
+    "148": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro amarillo ",
+        "link": "/rolex/datejust-m278288rbr-0038",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0038-showcase.webp",
+        "type": "reloj"
+    },
+    "149": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro amarillo y diamantes",
+        "link": "/rolex/datejust-m278288rbr-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "150": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes ",
+        "link": "/rolex/datejust-m278343rbr-0016",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278343rbr-0016-showcase.webp",
+        "type": "reloj"
+    },
+    "151": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro Everose ",
+        "link": "/rolex/datejust-m126331-0016",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0016-showcase.webp",
+        "type": "reloj"
+    },
+    "152": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro Everose y diamantes",
+        "link": "/rolex/datejust-m278285rbr-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278285rbr-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "153": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
+        "link": "/rolex/datejust-m126233-0035",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0035-showcase.webp",
+        "type": "reloj"
+    },
+    "154": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro Everose",
+        "link": "/rolex/datejust-m278275-0029",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278275-0029-showcase.webp",
+        "type": "reloj"
+    },
+    "155": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m126331-0007",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0007-showcase.webp",
+        "type": "reloj"
+    },
+    "156": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/datejust-m126334-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0006-showcase.webp",
+        "type": "reloj"
+    },
+    "157": {
+        "title": "Deepsea Challenge",
+        "keywords": [
+            "Deepsea",
+            "Challenge"
+        ],
+        "description": "Oyster, 50 mm, titanio RLX",
+        "link": "/rolex/datejust-m126067-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126067-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "158": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel",
+        "link": "/rolex/datejust-m126200-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126200-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "159": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m126201-0013",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126201-0013-showcase.webp",
+        "type": "reloj"
+    },
+    "160": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/datejust-m126203-0020",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126203-0020-showcase.webp",
+        "type": "reloj"
+    },
+    "161": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m126231-0016",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0016-showcase.webp",
+        "type": "reloj"
+    },
+    "162": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m126231-0020",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0020-showcase.webp",
+        "type": "reloj"
+    },
+    "163": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/datejust-m126234-0037",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0037-showcase.webp",
+        "type": "reloj"
+    },
+    "164": {
+        "title": "Datejust 36",
+        "keywords": [
+            "Datejust",
+            "36"
+        ],
+        "description": "Oyster, 36 mm, acero Oystersteel, oro Everose y diamantes",
+        "link": "/rolex/datejust-m126281rbr-0016",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126281rbr-0016-showcase.webp",
+        "type": "reloj"
+    },
+    "165": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m126331-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "166": {
+        "title": "Datejust 41",
+        "keywords": [
+            "Datejust",
+            "41"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
+        "link": "/rolex/datejust-m126334-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "167": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel",
+        "link": "/rolex/datejust-m278240-0018",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278240-0018-showcase.webp",
+        "type": "reloj"
+    },
+    "168": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m278241-0018",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278241-0018-showcase.webp",
+        "type": "reloj"
+    },
+    "169": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
+        "link": "/rolex/datejust-m278271-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278271-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "170": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, oro amarillo",
+        "link": "/rolex/datejust-m278278-0032",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278278-0032-showcase.webp",
+        "type": "reloj"
+    },
+    "171": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
+        "link": "/rolex/datejust-m278341rbr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278341rbr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "172": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
+        "link": "/rolex/datejust-m278344rbr-0021",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278344rbr-0021-showcase.webp",
+        "type": "reloj"
+    },
+    "173": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
+        "link": "/rolex/datejust-m278381rbr-0023",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278381rbr-0023-showcase.webp",
+        "type": "reloj"
+    },
+    "174": {
+        "title": "Datejust 31",
+        "keywords": [
+            "Datejust",
+            "31"
+        ],
+        "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes",
+        "link": "/rolex/datejust-m278383rbr-0025",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278383rbr-0025-showcase.webp",
+        "type": "reloj"
+    },
+    "175": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
+        "link": "/rolex/lady-datejust-m279174-0020",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0020-showcase.webp",
+        "type": "reloj"
+    },
+    "176": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
+        "link": "/rolex/lady-datejust-m279174-0015",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0015-showcase.webp",
+        "type": "reloj"
+    },
+    "177": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel, oro blanco y diamantes",
+        "link": "/rolex/lady-datejust-m279384rbr-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "178": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel y oro amarillo",
+        "link": "/rolex/lady-datejust-m279173-0012",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279173-0012-showcase.webp",
+        "type": "reloj"
+    },
+    "179": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro blanco y diamantes",
+        "link": "/rolex/lady-datejust-m279139rbr-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279139rbr-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "180": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel y oro Everose",
+        "link": "/rolex/lady-datejust-m279171-0007",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279171-0007-showcase.webp",
+        "type": "reloj"
+    },
+    "181": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro amarillo y diamantes",
+        "link": "/rolex/lady-datejust-m279138rbr-0015",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279138rbr-0015-showcase.webp",
+        "type": "reloj"
+    },
+    "182": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, Acero Oystersteel, oro Everose y diamantes",
+        "link": "/rolex/lady-datejust-m279381rbr-0013",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0013-showcase.webp",
+        "type": "reloj"
+    },
+    "183": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro amarillo y diamantes",
+        "link": "/rolex/lady-datejust-m279458rbr-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279458rbr-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "184": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro Everose y diamantes",
+        "link": "/rolex/lady-datejust-m279135rbr-0021",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279135rbr-0021-showcase.webp",
+        "type": "reloj"
+    },
+    "185": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/lady-datejust-m279163-0023",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279163-0023-showcase.webp",
+        "type": "reloj"
+    },
+    "186": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro Everose",
+        "link": "/rolex/lady-datejust-m279175-0020",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279175-0020-showcase.webp",
+        "type": "reloj"
+    },
+    "187": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, oro amarillo",
+        "link": "/rolex/lady-datejust-m279178-0013",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279178-0013-showcase.webp",
+        "type": "reloj"
+    },
+    "188": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, acero Oystersteel, oro Everose y diamantes",
+        "link": "/rolex/lady-datejust-m279381rbr-0004",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0004-showcase.webp",
+        "type": "reloj"
+    },
+    "189": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, acero Oystersteel, oro amarillo y diamantes",
+        "link": "/rolex/lady-datejust-m279383rbr-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279383rbr-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "190": {
+        "title": "Lady-Datejust",
+        "keywords": [
+            "Lady-Datejust"
+        ],
+        "description": "Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes",
+        "link": "/rolex/lady-datejust-m279384rbr-0011",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0011-showcase.webp",
+        "type": "reloj"
+    },
+    "191": {
+        "title": "Air-king",
+        "keywords": [
+            "Air-king"
+        ],
+        "description": "Oyster, 40 mm, acero Oystersteel",
+        "link": "/rolex/air-king-m126900-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126900-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "192": {
+        "title": "Submariner",
+        "keywords": [
+            "Submariner"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/submariner-m124060-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124060-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "193": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/submariner-m126610lv-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126610lv-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "194": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/submariner-m126613lb-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126613lb-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "195": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel",
+        "link": "/rolex/submariner-m126610ln-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126610ln-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "196": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, oro amarillo",
+        "link": "/rolex/submariner-m126618lb-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126618lb-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "197": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/submariner-m126613ln-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126613ln-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "198": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, oro amarillo",
+        "link": "/rolex/submariner-m126618ln-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126618ln-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "199": {
+        "title": "Submariner Date",
+        "keywords": [
+            "Submariner",
+            "Date"
+        ],
+        "description": "Oyster, 41 mm, oro blanco",
+        "link": "/rolex/submariner-m126619lb-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126619lb-0003-showcase.webp",
+        "type": "reloj"
+    },
+    "200": {
+        "title": "Rolex Sea-Dweller",
+        "keywords": [
+            "Rolex",
+            "Sea-Dweller"
+        ],
+        "description": "Oyster, 43 mm, acero Oystersteel y oro amarillo",
+        "link": "/rolex/sea-dweller-m126603-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126603-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "201": {
+        "title": "Rolex Sea-Dweller",
+        "keywords": [
+            "Rolex",
+            "Sea-Dweller"
+        ],
+        "description": "Oyster, 43 mm, acero Oystersteel ",
+        "link": "/rolex/sea-dweller-m126600-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126600-0002-showcase.webp",
+        "type": "reloj"
+    },
+    "202": {
+        "title": "Rolex Deepsea",
+        "keywords": [
+            "Rolex",
+            "Deepsea"
+        ],
+        "description": "Oyster, 44 mm, acero Oystersteel",
+        "link": "/rolex/deepsea-m136660-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m136660-0005-showcase.webp",
+        "type": "reloj"
+    },
+    "203": {
+        "title": "Rolex Deepsea",
+        "keywords": [
+            "Rolex",
+            "Deepsea"
+        ],
+        "description": "Oyster, 44 mm, oro amarillo",
+        "link": "/rolex/deepsea-m136668lb-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m136668lb-0001-showcase.webp",
+        "type": "reloj"
+    },
+    "204": {
+        "title": "Rolex y la Filarmónica de Viena",
+        "keywords": [
+            "rolex",
+            "filarmonica",
+            "viena"
+        ],
+        "description": "Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009, Patrocinador Exclusivo del Concierto de Año Nuevo.",
+        "link": "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-viena-mobile.webp",
+        "type": "articulo"
     }
 }

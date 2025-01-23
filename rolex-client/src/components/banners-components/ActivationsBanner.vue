@@ -13,40 +13,21 @@ const sliderItems = [
     alt: "coleccion-datejust-banner",
     title: "Coleccion Datejust",
   },
-  {
-    src: "sky-dweller",
-    link: "/rolex/sky-dweller",
-    alt: "sky-dweller-banner",
-    title: "Sky Dweller Banner",
-    src: "viena",
-    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-    alt: "rolex-y-la-filarmonica-de-viena-banner",
-    title: "Filarmonica de Viena Banner",
-  },
-  {
-    src: "sail-gp",
-    link: "/rolex/world-of-rolex/sail-gp",
-    alt: "sail-gp-banner",
-    title: "Sail gp article Banner",
-  },
+ 
+  
   {
     src: "viena",
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
     alt: "rolex-y-la-filarmonica-de-viena-banner",
     title: "Filarmonica de Viena Banner",
   },
-  {
-    src: "sail-gp",
-    link: "/rolex/world-of-rolex/sail-gp",
-    alt: "sail-gp-banner",
-    title: "Sail gp article Banner",
-  },
-  {
-    src: "sky-dweller",
-    link: "/rolex/sky-dweller",
-    alt: "sky-dweller-banner",
-    title: "Sky Dweller Banner",
-  },
+  // {
+  //   src: "sail-gp",
+  //   link: "/rolex/world-of-rolex/sail-gp",
+  //   alt: "sail-gp-banner",
+  //   title: "Sail gp article Banner",
+  // },
+  
   {
     src: "watchmaking",
     link: "/rolex/watchmaking",
@@ -54,17 +35,25 @@ const sliderItems = [
     title: "Watchmaking",
   },
   {
-    src: "wimbledon",
-    link: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
-    alt: "rolex-y-the-championships-wimbledon",
-    title: "Rolex y The Championships, Wimbledon",
+    src: "new-models",
+    link: "/rolex/nuevos-relojes",
+    alt: "nuevos-modelos-banner",
+    title: "Nuevos Modelos",
   },
   {
-    src: "lemans-rolex",
-    link: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
-    alt: "cosmograph-daytona-lemans-rolex-banner",
-    title: "Cosmograph Daytona Lemans",
+    src: "us-open",
+    link: "/rolex/world-of-rolex/rolex-y-the-us-open",
+    alt: "rolex-y-the-us-open",
+    title: "Rolex y The Us Open",
   },
+
+  {
+    src: "the-open",
+    link: "/rolex/world-of-rolex/rolex-y-the-open",
+    alt: "rolex-y-the-open",
+    title: "Rolex y The Open",
+  },
+
  
 
 ];
