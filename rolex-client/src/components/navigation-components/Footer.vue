@@ -55,16 +55,16 @@ import { RouterLink } from "vue-router";
           <h3 class="text-sm text-white sm:text-center ">© 2023 Mimi Joyería™. Todos los derechos reservados.
           </h3>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
-              <a href="https://www.facebook.com/inversionesmimijoyeria/" class="text-white hover:text-gray-900 dark:hover:text-white">
+              <a href="https://www.facebook.com/inversionesmimijoyeria/" class="text-white hover:text-gray-900 ">
                 <font-awesome-icon :icon="['fab', 'facebook-f']" />
                   <span class="sr-only">Facebook</span>
               </a>
-              <a href="https://www.instagram.com/mimijoyeria/?hl=es" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+              <a href="https://www.instagram.com/mimijoyeria/?hl=es" class="text-white hover:text-gray-900  ms-5">
                 <font-awesome-icon :icon="['fab', 'instagram']" />
                   
                   <span class="sr-only">Instagram</span>
               </a>
-              <a href="https://wa.me/584143092501" target="_blank" class="text-white hover:text-gray-900 dark:hover:text-white ms-5">
+              <a href="https://wa.me/584143092501" target="_blank" class="text-white hover:text-gray-900  ms-5">
                 <font-awesome-icon :icon="['fab', 'whatsapp']" />  
                 <span class="sr-only">Whatsapp</span>
               </a>

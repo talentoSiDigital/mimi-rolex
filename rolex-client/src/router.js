@@ -250,6 +250,15 @@ const router = createRouter({
         breadcrumb:"WorldOfRolex/RolexYTheUSOpen"
       }
     },
+    {
+      path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+      name: "world-of-rolex-article-9",
+      component:()=>import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
+      meta: {
+        title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
+        breadcrumb:"WorldOfRolex/RolexYTheUSOpen"
+      }
+    },
 
  
   
@@ -409,6 +418,17 @@ const router = createRouter({
         breadcrumb:"Modelo"
 
       }
+    },
+    {
+      path: "/rolex/busqueda",
+      name: "relojes-rolex",
+      component:()=>import("./views/Rolex/RolexSearch.view.vue") ,
+      meta: {
+        title: "Busqueda | Mimi Joyería ",
+        breadcrumb:"Busqueda"
+
+      },
+      props: route => ({ query: route.query.q })
     },
     // ****************
   
@@ -640,7 +660,7 @@ const router = createRouter({
 
 
 router.beforeEach((to, from, next) => {
-  const link = "https://www.mimijoyeria.com"
+  const link = "https://mimijoyeria.com"
   const description = to.meta.description
   const canonical = document.querySelector("link[rel='canonical']")
   canonical.setAttribute('href', `${link}${to.fullPath}`);

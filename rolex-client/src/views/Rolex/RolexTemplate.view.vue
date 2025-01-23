@@ -11,14 +11,10 @@ import BreadCrumb from '../../components/navigation-components/BreadCrumb.vue';
         <RolexNavbar />
         <BreadCrumb />
 
-        <slot name="content">
+        <slot name="content"></slot>
 
-
-        </slot>
         <SliderNavigationRolex />
         <RolexFooter />
-
-
 
     </div>
 </template>

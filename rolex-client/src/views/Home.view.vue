@@ -53,7 +53,7 @@ const jewelSlideshow = [
 ];
 onMounted(() => {
   setInterval(() => {
-    if (counter.value == 1) {
+    if (counter.value == 2) {
       counter.value = 0;
     } else {
       counter.value++;
@@ -66,7 +66,7 @@ onMounted(() => {
   <div id="main-content" class="font-montserrat">
     <div class="relative z-0 min-h-[650px] w-full">
       <div v-if="!checkWindowSize" class="overflow-hidden">
-        <div class="duration-500 flex" :class="classes[counter]">
+        <div class="duration-500 flex cursor-pointer" :class="classes[counter]">
           <img
             @click="checkClick(counter)"
             rel="preload" fetchpriority="high" as="image"

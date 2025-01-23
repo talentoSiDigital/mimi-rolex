@@ -33,7 +33,6 @@ exports.signup = (req, res) => {
         })
         .then(() => { return res.send({ message: "El usuario ha sido registrado exitosamente" }) })
         .catch(err => {
-            console.log("Error: 1")
             return res.status(400).send({ message: err.message })
         });
 };
@@ -41,7 +40,7 @@ exports.signup = (req, res) => {
 exports.signin = (req, res) => {
     User.findOne({
         where: {
-            username: req.body.username
+            email: req.body.email
         }
     }).then(user => {
         if (!user) {

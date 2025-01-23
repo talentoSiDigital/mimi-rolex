@@ -30,14 +30,16 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         <div class="w-11/12">
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-main"
-            :link="{name:'world-of-rolex-article-8'}"
+            :link="{name:'world-of-rolex-article-9'}"
             class="w-full"
           >
-            <template #sub>Publicado el 23 de Agosto, 2024</template>
-            <template #title>Rolex y el US Open</template>
+            <template #sub>Publicado el 5 de Diciembre, 2024</template>
+            <template #title>Rolex y la Filarmónica de Viena</template>
             <template #description>
               <h2 class="w-full md:w-1/2">
-                El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.
+                
+Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009, Patrocinador Exclusivo del Concierto de Año Nuevo.
+
               </h2>
             </template>
             <template #button>Más información</template>
@@ -49,6 +51,20 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
       >
       <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+        <SectionNavigationCard
+            img="world-of-rolex/world-of-rolex-us-open"
+            :link="{name:'world-of-rolex-article-8'}"
+            class="w-full"
+          >
+            <template #sub>Publicado el 23 de Agosto, 2024</template>
+            <template #title>Rolex y el US Open</template>
+            <template #description>
+              <h2 class="w-full ">
+                El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
           <SectionNavigationCard
             img="world-of-rolex/world-of-rolex-the-open"
             :link="{name:'world-of-rolex-article-7'}"
