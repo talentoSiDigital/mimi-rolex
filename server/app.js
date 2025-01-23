@@ -64,7 +64,6 @@ const serveStatic = require("serve-static")
 // app.use(serveStatic(path));
 
 require("./app/api/slider.routes")(app);
-require("./app/api/rolex.routes")(app);
 require("./app/api/store.routes")(app);
 require("./app/api/rolexV2.routes")(app);
 

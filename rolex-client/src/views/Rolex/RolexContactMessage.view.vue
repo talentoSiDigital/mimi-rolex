@@ -9,8 +9,10 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
 import NewContactForm from '../../components/form-components/NewContactForm.vue'
 import Button from '../../components/global-components/Button.vue';
 import mailDataService from '../../services/mailDataService'
-
-
+import {useRoute} from 'vue-router';
+const query = computed(()=>{
+    return useRoute().query.id? useRoute().query.id: null
+})
 const error = ref(false)
 const messageInfo = ref({
     "tto": "Sr",
@@ -23,6 +25,9 @@ const messageInfo = ref({
     "conditions": false,
     "message": "",
 })
+if(query.value != null){
+    messageInfo.value.message = `Hola. Estoy interesado en el Rolex ${query.value}`
+}
 
 
 const position = ref("-translate-x-0")
@@ -60,7 +65,6 @@ function sendMessage() {
             <template #content>
 
                 <PageBanner type="rolex-contact" />
-
                 <main class="w-full overflow-hidden ">
                     <div :class="position" class="flex w-[300%] duration-300">
                         <section class=" bg-rolex-brown-light-2 py-[10vh] w-1/3">

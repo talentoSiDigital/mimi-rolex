@@ -16,7 +16,7 @@ import { RouterLink } from "vue-router";
             </RouterLink>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 ">
                 <li>
-                    <RouterLink to="/rolex" class="hover:underline me-4 md:me-6">
+                    <RouterLink to="/rolex/descubre-rolex" class="hover:underline me-4 md:me-6">
                         Rolex       
                     </RouterLink>
                 </li>
