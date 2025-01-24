@@ -1,31 +1,55 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 import allRoutes from "../../allRoutes.json";
-import { useRoute,RouterLink } from "vue-router";
-const params = useRoute().query.search;
+import { useRoute, RouterLink } from "vue-router";
+let query = useRoute().query.search;
+const checkQuery = computed(() => {
+  return query == "" ? true : false;
+});
+
 const input = ref("");
-const searchResults = ref([]);
-const moveResults = ref("translate-x-0")
-const moveMeasures = ['translate-x-0', '-translate-x-1/3', '-translate-x-2/3']
 
-for (const [key, value] of Object.entries(allRoutes)) {
-  searchResults.value.push(value);
+const moveResults = ref("translate-x-0");
+const moveMeasures = ["translate-x-0", "-translate-x-1/3", "-translate-x-2/3"];
+
+const activeButton = ref(0);
+
+function changeClick(num) {
+  activeButton.value = num;
+  moveResults.value = moveMeasures[num];
 }
-const activeButton = ref(0)
-function changeClick(num){
-    activeButton.value = num;
-    moveResults.value = moveMeasures[num]
-    
-}
-function checkClick(num){
-    return num == activeButton.value ? "underline":"" 
+function checkClick(num) {
+  return num == activeButton.value ? "underline" : "";
 }
 
+const resultsPage = ref([]);
+const resultsWatch = ref([]);
+const resultsArticle = ref([]);
+if (query != "") {
+  query = query.toLowerCase();
+  query = query.trim();
+  query = query.split(" ");
+  console.log(query);
+  for (const [key, value] of Object.entries(allRoutes)) {
+    for (let i = 0; i < value.keywords.length; i++) {
+      const element = value.keywords[i];
 
-
-const debugObject = allRoutes["1"];
-
+      if (element.includes(query)) {
+        if (value.type == "pagina") {
+          resultsPage.value.push(value);
+        }
+        if (value.type == "reloj") {
+          resultsWatch.value.push(value);
+        }
+        if (value.type == "articulo") {
+          resultsArticle.value.push(value);
+        }
+        break;
+      }
+    }
+  }
+}
 </script>
 
 <template>
@@ -58,52 +82,163 @@ const debugObject = allRoutes["1"];
       <div
         class="h-12 duration-200 w-full overflow-hidden z-50 top-full bg-rolex-green border-t border-white text-white"
       >
-        <button class="w-1/3 border-l h-full hover:underline active:underline" :class="checkClick(0)" @click="changeClick(0)">Pagínas</button>
-        <button class="w-1/3 border-l h-full hover:underline active:underline" :class="checkClick(1)" @click="changeClick(1)">Relojes</button>
-        <button class="w-1/3 border-l h-full hover:underline active:underline" :class="checkClick(2)" @click="changeClick(2)">Artículos</button>
+        <button
+          class="w-1/3 border-l h-full hover:underline active:underline"
+          :class="checkClick(0)"
+          @click="changeClick(0)"
+        >
+          Páginas
+        </button>
+        <button
+          class="w-1/3 border-l h-full hover:underline active:underline"
+          :class="checkClick(1)"
+          @click="changeClick(1)"
+        >
+          Relojes
+        </button>
+        <button
+          class="w-1/3 border-l h-full hover:underline active:underline"
+          :class="checkClick(2)"
+          @click="changeClick(2)"
+        >
+          Artículos
+        </button>
       </div>
-      <main class=" w-full overflow-hidden">
+      <h2>{{ searchResults }}</h2>
+
+      <div
+        v-if="checkQuery"
+        class="bg-rolex-brown-light-1 h-56 flex items-center justify-center text-2xl font-bold text-rolex-brown"
+      >
+        <h2>No hubo resultados de tu busqueda</h2>
+      </div>
+      <main v-else class="w-full overflow-hidden">
         <div class="w-[300%] flex duration-200" :class="moveResults">
-            <div class="w-1/3 bg-rolex-brown-light-1 pl-8">
-                <header class="text-rolex-brown w-10/12 py-4">
+          <div class="w-1/3 bg-rolex-brown-light-1 pl-8">
+            <header class="text-rolex-brown w-10/12 py-4">
+              <h2 class="text-3xl font-bold">Páginas</h2>
+              <h3>Estas son las páginas relacionadas con tu búsqueda:</h3>
+            </header>
+            <section v-if="resultsPage.length == 0" >
+              <h2 class="text-rolex-brown text-2xl font-bold pb-8">
+                No se encontraron resultados
+              </h2>
+            </section>
+            <section v-else>
+              <div class="pb-10 flex flex-col gap-4" v-if="activeButton ==0">
+                <a
+                  v-for="item in resultsPage"
+                  :key="item"
+                  :href="item.link"
+                  class="rounded-xl flex flex-col xs:flex-row items-center border w-11/12 bg-rolex-brown-light-2 shadow-md p-4"
+                >
+                  <img
+                    :src="item.thumbnail"
+                    :alt="item.title"
+                    class="w-36 rounded-xl"
+                  />
+                  <header class="py-4 px-4 w-full">
+                    <h2>{{ item.title }}</h2>
+                    <h2 class="text-sm">{{ item.description }}</h2>
 
-                    <h2 class="text-3xl font-bold ">Pagínas</h2>
-                    <h3>Estas son las pagínas relacionadas con tu busqueda:</h3>
-                </header>
-                <section class="pb-10">
-                    <router-link :to="debugObject.link" class="flex flex-col xs:flex-row items-center border w-11/12 bg-rolex-brown-light-2 shadow-md">
-                        <img :src="debugObject.thumbnail" :alt="debugObject.title" class="w-36">
-                        <header class="py-4 pl-4">
-                            <h2>{{ debugObject.title }}</h2>
-                            <h2 class="text-sm">{{ debugObject.description }}</h2>
-                            
-                        </header>
-                    </router-link>
-                </section>
-            </div>
+                    <div class="text-right pr-0 xs:pr-4 w-full">
+                      <font-awesome-icon
+                        :icon="['fas', 'arrow-right']"
+                        class="duration-200 text-rolex-green text-xl"
+                      />
+                    </div>
+                  </header>
+                </a>
+              </div>
+            </section>
+          </div>
 
+          <div class="w-1/3 bg-rolex-brown-light-1">
+            <header class="text-rolex-brown pl-8 py-4">
+              <h2 class="text-3xl font-bold">Relojes</h2>
+              <h3>Estos son los relojes relacionados con tu búsqueda:</h3>
+            </header>
+            <section v-if="resultsWatch.length == 0" class="pl-8">
+              <h2 class="text-rolex-brown text-2xl font-bold pb-8">
+                No se encontraron resultados
+              </h2>
+            </section>
 
+            <section v-else >
+                <div class="pl-8 pb-10 flex flex-col gap-4" v-if="activeButton ==1">
+                    <a
+                      v-for="item in resultsWatch"
+                      :key="item"
+                      :href="item.link"
+                      class="rounded-xl flex flex-col xs:flex-row items-center border w-11/12 bg-rolex-brown-light-2 shadow-md p-4"
+                    >
+                      <img
+                        :src="item.thumbnail"
+                        :alt="item.title"
+                        class="w-36 rounded-xl"
+                      />
+                      <header class="py-4 px-4 w-full">
+                        <h2 class="text-xl font-bold text-rolex-brown">
+                          {{ item.title }}
+                        </h2>
+                        <h2 class="text-sm">{{ item.description }}</h2>
+      
+                        <div class="text-right pr-0 xs:pr-4 mt-10 w-full">
+                          <font-awesome-icon
+                            :icon="['fas', 'arrow-right']"
+                            class="duration-200 text-rolex-green text-xl"
+                          />
+                        </div>
+                      </header>
+                    </a>
 
-            <div class="w-1/3 bg-rolex-brown-light-1">
-                <header class="text-rolex-brown pl-10 py-4">
+                </div>
+            </section>
+          </div>
 
-                    <h2 class="text-3xl font-bold ">Relojes</h2>
-                    <h3>Estas son los relojes relacionados con tu busqueda:</h3>
-                </header>
-            </div>
-            <div class="w-1/3 bg-rolex-brown-light-1">
-                <header class="text-rolex-brown pl-10 py-4">
-                    
-                    <h2 class="text-3xl font-bold ">Artículos</h2>
-                    <h3>Estas son los artículos relacionados con tu busqueda:</h3>
-                </header>
-            </div>
-            
+          <div class="w-1/3 bg-rolex-brown-light-1">
+            <header class="text-rolex-brown pl-8 py-4">
+              <h2 class="text-3xl font-bold">Artículos</h2>
+              <h3>Estos son los artículos relacionados con tu búsqueda:</h3>
+            </header>
+            <section v-if="resultsArticle.length == 0" class="text pl-8">
+              <h2 class="text-rolex-brown pb-8 text-2xl font-bold">
+                No se encontraron resultados
+              </h2>
+            </section>
 
+            <section v-else >
+                <div class="pb-10 pl-8 flex flex-col gap-4" v-if="activeButton ==2">
+
+                    <a
+                      v-for="item in resultsArticle"
+                      :key="item"
+                      :href="item.link"
+                      class="rounded-xl flex flex-col xs:flex-row items-center border w-11/12 bg-rolex-brown-light-2 shadow-md p-4"
+                    >
+                      <img
+                        :src="item.thumbnail"
+                        :alt="item.title"
+                        class="w-36 rounded-xl"
+                      />
+                      <header class="py-4 px-4">
+                        <h2>{{ item.title }}</h2>
+                        <h2 class="text-sm">{{ item.description }}</h2>
+      
+                        <div class="text-right pr-0 xs:pr-4">
+                          <font-awesome-icon
+                            :icon="['fas', 'arrow-right']"
+                            class="duration-200 text-rolex-green text-xl"
+                          />
+                        </div>
+                      </header>
+                    </a>
+
+                </div>
+            </section>
+          </div>
         </div>
-
       </main>
-      <!-- <h2>Busqueda: {{ debugObject }}</h2> -->
     </template>
   </RolexTemplate>
 </template>

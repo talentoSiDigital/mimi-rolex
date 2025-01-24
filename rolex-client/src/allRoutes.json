@@ -2,8 +2,8 @@
     "1": {
         "title": "Descubre Rolex",
         "keywords": [
-            "Descubre",
-            "Rolex"
+            "descubre",
+            "rolex"
         ],
         "description": "Mimi Joyería se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex.",
         "link": "/rolex/descubre-rolex",
@@ -13,7 +13,7 @@
     "2": {
         "title": "Mantenimiento",
         "keywords": [
-            "Mantenimiento"
+            "mantenimiento"
         ],
         "description": "Mantenimiento y reparación de los relojes Rolex en Mimi Joyería",
         "link": "/rolex/mantenimiento",
@@ -23,7 +23,7 @@
     "3": {
         "title": "Procedimiento mantenimiento",
         "keywords": [
-            "Procedimiento",
+            "procedimiento",
             "mantenimiento"
         ],
         "description": "Procedimiento de mantenimiento de los relojes Rolex en Mimi Joyería.",
@@ -34,7 +34,7 @@
     "4": {
         "title": "Watchmaking",
         "keywords": [
-            "Watchmaking"
+            "watchmaking"
         ],
         "description": "«Savoir-faire» relojero de Rolex",
         "link": "/rolex/watchmaking",
@@ -44,7 +44,7 @@
     "5": {
         "title": "Contacto",
         "keywords": [
-            "Contacto"
+            "contacto"
         ],
         "description": "Póngase en contacto con nosotros",
         "link": "/rolex/contacto",
@@ -54,7 +54,7 @@
     "6": {
         "title": "Formulario contacto",
         "keywords": [
-            "Formulario",
+            "formulario",
             "contacto"
         ],
         "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
@@ -65,7 +65,7 @@
     "7": {
         "title": "Nuevos relojes",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "relojes"
         ],
         "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
@@ -76,10 +76,10 @@
     "8": {
         "title": "Nuevos modelos 2024 - 1908",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
+            
             "1908"
         ],
         "description": "Rolex 1908 | Elegancia en movimiento",
@@ -90,12 +90,12 @@
     "9": {
         "title": "Nuevos modelos 2024 - Cosmograph Daytona",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
-            "Cosmograph",
-            "Daytona"
+            
+            "cosmograph",
+            "daytona"
         ],
         "description": "Cosmograph Daytona - Un icono que no deja de reinventarse",
         "link": "/rolex/nuevos-modelos-2024/cosmograph-daytona",
@@ -105,11 +105,11 @@
     "10": {
         "title": "Nuevos modelos 2024 - Day-Date",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
-            "Day-Date"
+            "day","date",
+            "day-date"
         ],
         "description": "Day Date | La armonía de las variaciones",
         "link": "/rolex/nuevos-modelos-2024/day-date",
@@ -119,11 +119,11 @@
     "11": {
         "title": "Nuevos modelos 2024 - Deepsea",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
-            "Deepsea"
+            
+            "deepsea"
         ],
         "description": "Rolex Deepsea | La luz de las profundidades",
         "link": "/rolex/nuevos-modelos-2024/deepsea",
@@ -133,12 +133,14 @@
     "12": {
         "title": "Nuevos modelos 2024 - GMT-Master II",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
-            "GMT-Master",
-            "II"
+            
+            "gmt-master",
+            "gmt",
+            "master",
+            "ii"
         ],
         "description": "GMT-Master II | El eco de las emociones",
         "link": "/rolex/nuevos-modelos-2024/gmt-master-ii",
@@ -148,12 +150,13 @@
     "13": {
         "title": "Nuevos modelos 2024 - Sky Dweller",
         "keywords": [
-            "Nuevos",
+            "nuevos",
             "modelos",
             "2024",
-            "-",
-            "Sky",
-            "Dweller"
+            
+            "sky",
+            "sky-dweller",
+            "dweller"
         ],
         "description": "Rolex Sky-Dweller | La sinfonía de los reflejos",
         "link": "/rolex/nuevos-modelos-2024/sky-dweller",
@@ -163,9 +166,9 @@
     "14": {
         "title": "World of Rolex",
         "keywords": [
-            "World",
+            "world",
             "of",
-            "Rolex"
+            "rolex"
         ],
         "description": "Durante casi un siglo, Rolex ha desarrollado colaboraciones con un grupo diverso y extraordinario de talentos de una miríada de disciplinas.",
         "link": "/rolex/world-of-rolex",
@@ -175,115 +178,115 @@
     "15": {
         "title": "Viaje al corazon del universo Rolex",
         "keywords": [
-            "Viaje",
+            "viaje",
             "al",
             "corazon",
             "del",
             "universo",
-            "Rolex"
+            "rolex"
         ],
         "description": "Hans Wilsdorf estaba íntimamente convencido de la capacidad del ser humano para innovar con la excelencia como objetivo.",
         "link": "/rolex/world-of-rolex/viaje-al-corazon-del-universo-rolex",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-beyond-rolex-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/world-of-rolex/world-of-rolex-beyond-rolex-mobile.webp",
         "type": "articulo"
     },
     "16": {
         "title": "SailGP",
         "keywords": [
-            "SailGP"
+            "sailgp",
+            "sail",
+            "gp"
         ],
         "description": "Rolex es Title Partner y Reloj Oficial exclusivo del Rolex SailGP Championship",
         "link": "/rolex/world-of-rolex/sail-gp",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-sail-gp-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-sail-gp-mobile.webp",
         "type": "articulo"
     },
     "17": {
         "title": "Rolex Grand Slam",
         "keywords": [
-            "Rolex",
-            "Grand",
-            "Slam"
+            "rolex",
+            "grand",
+            "slam"
         ],
         "description": "Considerado el mayor desafío de la equitación, el Rolex Grand Slam de Salto de Obstáculos recompensa al jinete que gana, consecutivamente, el Grand Prix en tres de los cuatro Majors de salto",
         "link": "/rolex/world-of-rolex/rolex-grand-slam",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-grand-slam-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-grand-slam-mobile.webp",
         "type": "articulo"
     },
     "18": {
         "title": "Las 24 Horas de LeMans",
         "keywords": [
-            "Las",
+            "las",
             "24",
-            "Horas",
+            "horas",
             "de",
-            "LeMans"
+            "lemans",   
+            "le",
+            "mans"
         ],
         "description": "La 92.a edición de las 24 Horas de Le Mans, carrera que celebra la resistencia y la excelencia del automovilismo, se celebra los días 15 y 16 de junio de 2024.",
         "link": "/rolex/world-of-rolex/las-24-horas-de-le-mans",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-lemans-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-lemans-mobile.webp",
         "type": "articulo"
     },
     "19": {
         "title": "Rolex y The Championships Wimbledon",
         "keywords": [
-            "Rolex",
-            "y",
-            "The",
-            "Championships",
-            "Wimbledon"
+            "rolex",
+            "the",
+            "championships",
+            "wimbledon"
         ],
         "description": "Rolex colaboró por primera vez con Wimbledon en 1978. El torneo de tenis más antiguo del mundo es el templo del tenis sobre hierba y del deporte original.",
         "link": "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-wimbledon-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-wimbledon-mobile.webp",
         "type": "articulo"
     },
     "20": {
         "title": "Rolex y The Amundi Evian Championship",
         "keywords": [
-            "Rolex",
-            "y",
-            "The",
-            "Amundi",
-            "Evian",
-            "Championship"
+            "rolex",
+            "the",
+            "amundi",
+            "evian",
+            "championship"
         ],
         "description": "Rolex es Socio y Reloj Oficial del único Major de golf que se celebra en Europa continental.",
         "link": "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-admundi-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-admundi-mobile.webp",
         "type": "articulo"
     },
     "21": {
         "title": "Rolex y The Open",
         "keywords": [
-            "Rolex",
-            "y",
-            "The",
-            "Open"
+            "rolex",
+            "the",
+            "open"
         ],
         "description": "The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año.",
         "link": "/rolex/world-of-rolex/rolex-y-the-open",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-open-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-the-open-mobile.webp",
         "type": "articulo"
     },
     "22": {
         "title": "Rolex y The US Open",
         "keywords": [
-            "Rolex",
-            "y",
-            "The",
-            "US",
-            "Open"
+            "rolex",
+            "the",
+            "us",
+            "open"
         ],
         "description": "El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.",
         "link": "/rolex/world-of-rolex/rolex-y-the-us-open",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-the-us-open-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-the-us-open-mobile.webp",
         "type": "articulo"
     },
     "23": {
         "title": "Relojes Rolex",
         "keywords": [
-            "Relojes",
-            "Rolex"
+            "relojes",
+            "rolex"
         ],
         "description": "Esta selección de modelos Rolex proviene del catálogo oficial y no representa las existencias disponibles en la joyería.",
         "link": "/rolex/relojes",
@@ -293,8 +296,8 @@
     "24": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona"
         ],
         "description": "Colección Rolex Cosmograph Daytona",
         "link": "/rolex/cosmograph-daytona",
@@ -314,7 +317,7 @@
     "26": {
         "title": "Yacht-Master",
         "keywords": [
-            "Yacht-Master"
+            "yacht-master"
         ],
         "description": "Colección Rolex Yacht-Master ",
         "link": "/rolex/yacht-master",
@@ -325,6 +328,7 @@
         "title": "sky dweller",
         "keywords": [
             "sky",
+            "sky-dweller",
             "dweller"
         ],
         "description": "Colección Rolex sky dweller ",
@@ -356,8 +360,8 @@
     "30": {
         "title": "Oyster Perpetual",
         "keywords": [
-            "Oyster",
-            "Perpetual"
+            "oyster",
+            "perpetual"
         ],
         "description": "Colección Rolex Oyster Perpetual ",
         "link": "/rolex/oyster-perpetual",
@@ -367,7 +371,7 @@
     "31": {
         "title": "Day-Date",
         "keywords": [
-            "Day-Date"
+            "day-date"
         ],
         "description": "Colección Rolex Day-Date ",
         "link": "/rolex/day-date",
@@ -377,7 +381,7 @@
     "32": {
         "title": "Datejust",
         "keywords": [
-            "Datejust"
+            "datejust"
         ],
         "description": "Colección Rolex Datejust ",
         "link": "/rolex/datejust",
@@ -387,8 +391,9 @@
     "33": {
         "title": "Lady Datejust",
         "keywords": [
-            "Lady",
-            "Datejust"
+            "lady",
+            "datejust",
+            "lady-datejust"
         ],
         "description": "Colección Rolex Lady Datejust ",
         "link": "/rolex/lady-datejust",
@@ -418,9 +423,11 @@
     },
     "36": {
         "title": "Sea-Dweller",
+       
         "keywords": [
             "sea",
-            "dweller"
+            "dweller",
+            "sea-dweller"
         ],
         "description": "Colección Rolex Sea-Dweller ",
         "link": "/rolex/sea-dweller",
@@ -430,7 +437,7 @@
     "37": {
         "title": "Deepsea",
         "keywords": [
-            "Deepsea"
+            "deepsea"
         ],
         "description": "Colección Rolex Deepsea ",
         "link": "/rolex/deepsea",
@@ -440,8 +447,9 @@
     "38": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126506-0001"
         ],
         "description": "Oyster, 40 mm, platino",
         "link": "/rolex/cosmograph-daytona-m126506-0001",
@@ -451,8 +459,9 @@
     "39": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126515ln-0006"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/cosmograph-daytona-m126515ln-0006",
@@ -462,8 +471,9 @@
     "40": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126500ln-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/cosmograph-daytona-m126500ln-0001",
@@ -473,8 +483,9 @@
     "41": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126503-0003"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126503-0003",
@@ -484,8 +495,9 @@
     "42": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126505-0001"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/cosmograph-daytona-m126505-0001",
@@ -495,8 +507,9 @@
     "43": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126508-0003"
         ],
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126508-0003",
@@ -506,8 +519,9 @@
     "44": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126519ln-0006"
         ],
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/cosmograph-daytona-m126519ln-0006",
@@ -517,8 +531,9 @@
     "45": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126509-0001"
         ],
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/cosmograph-daytona-m126509-0001",
@@ -528,8 +543,9 @@
     "46": {
         "title": "Cosmograph daytona",
         "keywords": [
-            "Cosmograph",
-            "daytona"
+            "cosmograph",
+            "daytona",
+            "m126518ln-0012"
         ],
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126518ln-0012",
@@ -539,8 +555,9 @@
     "47": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126535tbr-0002"
         ],
         "description": "Oyster, 40 mm, oro Everose y diamantes",
         "link": "/rolex/cosmograph-daytona-m126535tbr-0002",
@@ -550,8 +567,9 @@
     "48": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126538tbr-0004"
         ],
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/cosmograph-daytona-m126538tbr-0004",
@@ -561,8 +579,9 @@
     "49": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126539tbr-0002"
         ],
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126539tbr-0002",
@@ -572,8 +591,9 @@
     "50": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126579rbr-0001"
         ],
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126579rbr-0001",
@@ -583,8 +603,9 @@
     "51": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126589rbr-0001"
         ],
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126589rbr-0001",
@@ -594,8 +615,9 @@
     "52": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126595tbr-0001"
         ],
         "description": "Oyster, 40 mm, oro Everose y diamantes",
         "link": "/rolex/cosmograph-daytona-m126595tbr-0001",
@@ -605,8 +627,9 @@
     "53": {
         "title": "Cosmograph Daytona",
         "keywords": [
-            "Cosmograph",
-            "Daytona"
+            "cosmograph",
+            "daytona",
+            "m126598tbr-0001"
         ],
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/cosmograph-daytona-m126598tbr-0001",
@@ -616,7 +639,8 @@
     "54": {
         "title": "1908",
         "keywords": [
-            "1908"
+            "1908",
+            "m52508-0006"
         ],
         "description": "39 mm, oro amarillo de 18 quilates, acabado pulido",
         "link": "/rolex/1908-m52508-0006",
@@ -626,7 +650,8 @@
     "55": {
         "title": "1908",
         "keywords": [
-            "1908"
+            "1908",
+            "m52506-0002"
         ],
         "description": "39 mm, platino, acabado pulido",
         "link": "/rolex/1908-m52506-0002",
@@ -636,7 +661,8 @@
     "56": {
         "title": "1908",
         "keywords": [
-            "1908"
+            "1908",
+            "m52509-0002"
         ],
         "description": "39 mm, oro blanco de 18 quilates, acabado pulido",
         "link": "/rolex/1908-m52509-0002",
@@ -646,8 +672,9 @@
     "57": {
         "title": "Yacht-Master 42",
         "keywords": [
-            "Yacht-Master",
-            "42"
+            "yacht-master",
+            "42",
+            "m226627-0001"
         ],
         "description": "Oyster, 42 mm, titanio RLX",
         "link": "/rolex/yacht-master-m226627-0001",
@@ -657,8 +684,9 @@
     "58": {
         "title": "Yacht-Master 42",
         "keywords": [
-            "Yacht-Master",
-            "42"
+            "yacht-master",
+            "42",
+            "m226658-0001"
         ],
         "description": "Oyster, 42 mm, Oro amarillo",
         "link": "/rolex/yacht-master-m226658-0001",
@@ -668,8 +696,9 @@
     "59": {
         "title": "Yacht-Master 40",
         "keywords": [
-            "Yacht-Master",
-            "40"
+            "yacht-master",
+            "40",
+            "m126622-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel y Platino",
         "link": "/rolex/yacht-master-m126622-0001",
@@ -679,8 +708,9 @@
     "60": {
         "title": "Yacht-Master 40",
         "keywords": [
-            "Yacht-Master",
-            "40"
+            "yacht-master",
+            "40",
+            "m126655-0002"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/yacht-master-m126655-0002",
@@ -690,8 +720,9 @@
     "61": {
         "title": "Yacht-Master 37",
         "keywords": [
-            "Yacht-Master",
-            "37"
+            "yacht-master",
+            "37",
+            "m268655-0019"
         ],
         "description": "Oyster, 37 mm, oro Everose",
         "link": "/rolex/yacht-master-m268655-0019",
@@ -701,8 +732,9 @@
     "62": {
         "title": "Yacht-Master 37",
         "keywords": [
-            "Yacht-Master",
-            "37"
+            "yacht-master",
+            "37",
+            "m268622-0002"
         ],
         "description": "Oyster, 37 mm, acero Oystersteel y Platino",
         "link": "/rolex/yacht-master-m268622-0002",
@@ -712,8 +744,9 @@
     "63": {
         "title": "Yacht-Master 42",
         "keywords": [
-            "Yacht-Master",
-            "42"
+            "yacht-master",
+            "42",
+            "m226659-0002"
         ],
         "description": "Oyster, 42 mm, Oro blanco",
         "link": "/rolex/yacht-master-m226659-0002",
@@ -723,8 +756,9 @@
     "64": {
         "title": "Yacht-Master 40",
         "keywords": [
-            "Yacht-Master",
-            "40"
+            "yacht-master",
+            "40",
+            "m126621-0002"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/yacht-master-m126621-0002",
@@ -734,8 +768,9 @@
     "65": {
         "title": "Yacht-Master 37",
         "keywords": [
-            "Yacht-Master",
-            "37"
+            "yacht-master",
+            "37",
+            "m268621-0003"
         ],
         "description": "Oyster, 37 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/yacht-master-m268621-0003",
@@ -745,7 +780,8 @@
     "66": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336239-0002"
         ],
         "description": "Oyster, 42 mm, Oro blanco",
         "link": "/rolex/sky-dweller-m336239-0002",
@@ -755,7 +791,8 @@
     "67": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336934-0001"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel y oro blanco ",
         "link": "/rolex/sky-dweller-m336934-0001",
@@ -765,7 +802,8 @@
     "68": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336238-0002"
         ],
         "description": "Oyster, 42 mm, Oro Amarillo",
         "link": "/rolex/sky-dweller-m336238-0002",
@@ -775,7 +813,8 @@
     "69": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336935-0001"
         ],
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336935-0001",
@@ -785,7 +824,8 @@
     "70": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336235-0003"
         ],
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336235-0003",
@@ -795,7 +835,8 @@
     "71": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336933-0004"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sky-dweller-m336933-0004",
@@ -805,7 +846,8 @@
     "72": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336934-0004"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/sky-dweller-m336934-0004",
@@ -815,7 +857,8 @@
     "73": {
         "title": "SKY-DWELLER",
         "keywords": [
-            "SKY-DWELLER"
+            "sky-dweller",
+            "m336933-0001"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sky-dweller-m336933-0001",
@@ -825,7 +868,8 @@
     "74": {
         "title": "Sky-Dweller",
         "keywords": [
-            "Sky-Dweller"
+            "sky-dweller",
+            "m336935-0008"
         ],
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336935-0008",
@@ -835,7 +879,8 @@
     "75": {
         "title": "Sky-Dweller",
         "keywords": [
-            "Sky-Dweller"
+            "sky-dweller",
+            "m336938-0006"
         ],
         "description": "Oyster, 42 mm, oro amarillo",
         "link": "/rolex/sky-dweller-m336938-0006",
@@ -845,8 +890,9 @@
     "76": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126713grnr-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/gmt-master-ii-m126713grnr-0001",
@@ -856,8 +902,9 @@
     "77": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126718grnr-0001"
         ],
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/gmt-master-ii-m126718grnr-0001",
@@ -867,8 +914,9 @@
     "78": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126715chnr-0001"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/gmt-master-ii-m126715chnr-0001",
@@ -878,8 +926,9 @@
     "79": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126719blro-0002"
         ],
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/gmt-master-ii-m126719blro-0002",
@@ -889,8 +938,9 @@
     "80": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126720vtnr-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126720vtnr-0001",
@@ -900,8 +950,9 @@
     "81": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126711chnr-0002"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel y oro everose",
         "link": "/rolex/gmt-master-ii-m126711chnr-0002",
@@ -911,8 +962,9 @@
     "82": {
         "title": "GMT Master-II",
         "keywords": [
-            "GMT",
-            "Master-II"
+            "gmt",
+            "master-ii",
+            "m126710blnr-0003"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710blnr-0003",
@@ -922,8 +974,11 @@
     "83": {
         "title": "GMT-Master II",
         "keywords": [
-            "GMT-Master",
-            "II"
+            "gmt-master",
+            "gmt",
+            "master",
+            "ii",
+            "m126710grnr-0003"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710grnr-0003",
@@ -933,8 +988,11 @@
     "84": {
         "title": "GMT-Master II",
         "keywords": [
-            "GMT-Master",
-            "II"
+            "gmt-master",
+            "gmt",
+            "master",
+            "ii",
+            "m126710grnr-0004"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710grnr-0004",
@@ -944,8 +1002,9 @@
     "85": {
         "title": "Explorer 36",
         "keywords": [
-            "Explorer",
-            "36"
+            "explorer",
+            "36",
+            "m124273-0001"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/explorer-m124273-0001",
@@ -955,8 +1014,9 @@
     "86": {
         "title": "Explorer 40",
         "keywords": [
-            "Explorer",
-            "40"
+            "explorer",
+            "40",
+            "m224270-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel ",
         "link": "/rolex/explorer-m224270-0001",
@@ -966,8 +1026,9 @@
     "87": {
         "title": "Explorer II",
         "keywords": [
-            "Explorer",
-            "II"
+            "explorer",
+            "ii",
+            "m226570-0001"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel",
         "link": "/rolex/explorer-m226570-0001",
@@ -977,8 +1038,9 @@
     "88": {
         "title": "Explorer II",
         "keywords": [
-            "Explorer",
-            "II"
+            "explorer",
+            "ii",
+            "m226570-0002"
         ],
         "description": "Oyster, 42 mm, acero Oystersteel",
         "link": "/rolex/explorer-m226570-0002",
@@ -988,8 +1050,9 @@
     "89": {
         "title": "Explorer 36",
         "keywords": [
-            "Explorer",
-            "36"
+            "explorer",
+            "36",
+            "m124270-0001"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/explorer-m124270-0001",
@@ -999,9 +1062,10 @@
     "90": {
         "title": "Oyster Perpetual 36",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "36"
+            "oyster",
+            "perpetual",
+            "36",
+            "m126000-0009"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m126000-0009",
@@ -1011,9 +1075,10 @@
     "91": {
         "title": "Oyster Perpetual 34",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "34"
+            "oyster",
+            "perpetual",
+            "34",
+            "m124200-0003"
         ],
         "description": "Oyster, 34 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124200-0003",
@@ -1023,9 +1088,10 @@
     "92": {
         "title": "Oyster Perpetual 41",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "41"
+            "oyster",
+            "perpetual",
+            "41",
+            "m124300-0002"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124300-0002",
@@ -1035,9 +1101,10 @@
     "93": {
         "title": "Oyster Perpetual 41",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "41"
+            "oyster",
+            "perpetual",
+            "41",
+            "m124300-0005"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124300-0005",
@@ -1047,9 +1114,10 @@
     "94": {
         "title": "Oyster Perpetual 28",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "28"
+            "oyster",
+            "perpetual",
+            "28",
+            "m276200-0001"
         ],
         "description": "Oyster, 28 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m276200-0001",
@@ -1059,9 +1127,10 @@
     "95": {
         "title": "Oyster Perpetual 36",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "36"
+            "oyster",
+            "perpetual",
+            "36",
+            "m126000-0008"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m126000-0008",
@@ -1071,9 +1140,10 @@
     "96": {
         "title": "Oyster Perpetual 31",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "31"
+            "oyster",
+            "perpetual",
+            "31",
+            "m277200-0007"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m277200-0007",
@@ -1083,9 +1153,10 @@
     "97": {
         "title": "Oyster Perpetual 31",
         "keywords": [
-            "Oyster",
-            "Perpetual",
-            "31"
+            "oyster",
+            "perpetual",
+            "31",
+            "m277200-0010"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m277200-0010",
@@ -1095,8 +1166,9 @@
     "98": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228236-0012"
         ],
         "description": "Oyster, 40 mm, platino",
         "link": "/rolex/day-date-m228236-0012",
@@ -1106,8 +1178,9 @@
     "99": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128345rbr-0068"
         ],
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m128345rbr-0068",
@@ -1117,8 +1190,9 @@
     "100": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128349rbr-0031"
         ],
         "description": "Oyster, 36 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m128349rbr-0031",
@@ -1128,8 +1202,9 @@
     "101": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128348rbr-0049"
         ],
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128348rbr-0049",
@@ -1139,8 +1214,9 @@
     "102": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128239-0005"
         ],
         "description": "Oyster, 36 mm, oro blanco ",
         "link": "/rolex/day-date-m128239-0005",
@@ -1150,8 +1226,9 @@
     "103": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128396tbr-0003"
         ],
         "description": "Oyster, 36 mm, platino y diamantes",
         "link": "/rolex/day-date-m128396tbr-0003",
@@ -1161,8 +1238,9 @@
     "104": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128235-0009"
         ],
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0009",
@@ -1172,8 +1250,9 @@
     "105": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228238-0042"
         ],
         "description": "Oyster, 40 mm, oro amarillo ",
         "link": "/rolex/day-date-m228238-0042",
@@ -1183,8 +1262,9 @@
     "106": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228349rbr-0003"
         ],
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m228349rbr-0003",
@@ -1194,8 +1274,9 @@
     "107": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228396tbr-0002"
         ],
         "description": "Oyster, 36 mm, platino y diamantes",
         "link": "/rolex/day-date-m228396tbr-0002",
@@ -1205,8 +1286,9 @@
     "108": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228345rbr-0016"
         ],
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m228345rbr-0016",
@@ -1216,8 +1298,9 @@
     "109": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228349rbr-0040"
         ],
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m228349rbr-0040",
@@ -1227,8 +1310,9 @@
     "110": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228238-0059"
         ],
         "description": "Oyster, 40 mm, oro amarillo ",
         "link": "/rolex/day-date-m228238-0059",
@@ -1238,8 +1322,9 @@
     "111": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228239-0033"
         ],
         "description": "Oyster, 40 mm, oro blanco ",
         "link": "/rolex/day-date-m228239-0033",
@@ -1249,8 +1334,9 @@
     "112": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228348rbr-0002"
         ],
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m228348rbr-0002",
@@ -1260,8 +1346,9 @@
     "113": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228398tbr-0036"
         ],
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m228398tbr-0036",
@@ -1271,8 +1358,9 @@
     "114": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128235-0037"
         ],
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0037",
@@ -1282,8 +1370,9 @@
     "115": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128235-0070"
         ],
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0070",
@@ -1293,8 +1382,9 @@
     "116": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128235-0078"
         ],
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0078",
@@ -1304,8 +1394,9 @@
     "117": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128236-0018"
         ],
         "description": "Oyster, 36 mm, platino",
         "link": "/rolex/day-date-m128236-0018",
@@ -1315,8 +1406,9 @@
     "118": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128238-0022"
         ],
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0022",
@@ -1326,8 +1418,9 @@
     "119": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128238-0045"
         ],
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0045",
@@ -1337,8 +1430,9 @@
     "120": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128238-0113"
         ],
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0113",
@@ -1348,8 +1442,9 @@
     "121": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128238-0118"
         ],
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0118",
@@ -1359,8 +1454,9 @@
     "122": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128239-0063"
         ],
         "description": "Oyster, 36 mm, oro blanco",
         "link": "/rolex/day-date-m128239-0063",
@@ -1370,8 +1466,9 @@
     "123": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128239-0065"
         ],
         "description": "Oyster, 36 mm, oro blanco",
         "link": "/rolex/day-date-m128239-0065",
@@ -1381,8 +1478,9 @@
     "124": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128395tbr-0032"
         ],
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m128395tbr-0032",
@@ -1392,8 +1490,9 @@
     "125": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128398tbr-0035"
         ],
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128398tbr-0035",
@@ -1403,8 +1502,9 @@
     "126": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128398tbr-0037"
         ],
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128398tbr-0037",
@@ -1414,8 +1514,9 @@
     "127": {
         "title": "Day-Date 36",
         "keywords": [
-            "Day-Date",
-            "36"
+            "day-date",
+            "36",
+            "m128399tbr-0029"
         ],
         "description": "Oyster, 36 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m128399tbr-0029",
@@ -1425,8 +1526,9 @@
     "128": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228235-0001"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0001",
@@ -1436,8 +1538,9 @@
     "129": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228235-0055"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0055",
@@ -1447,8 +1550,9 @@
     "130": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228235-0056"
         ],
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0056",
@@ -1458,8 +1562,9 @@
     "131": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228238-0069"
         ],
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/day-date-m228238-0069",
@@ -1469,8 +1574,9 @@
     "132": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228238-0071"
         ],
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/day-date-m228238-0071",
@@ -1480,8 +1586,9 @@
     "133": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228239-0076"
         ],
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/day-date-m228239-0076",
@@ -1491,8 +1598,9 @@
     "134": {
         "title": "Day-Date 40",
         "keywords": [
-            "Day-Date",
-            "40"
+            "day-date",
+            "40",
+            "m228239-0078"
         ],
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/day-date-m228239-0078",
@@ -1502,8 +1610,9 @@
     "135": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126234-0051"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126234-0051",
@@ -1513,8 +1622,9 @@
     "136": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126333-0019"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0019",
@@ -1524,8 +1634,9 @@
     "137": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126300-0005"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/datejust-m126300-0005",
@@ -1535,8 +1646,9 @@
     "138": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126333-0010"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0010",
@@ -1546,8 +1658,9 @@
     "139": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126333-0005"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0005",
@@ -1557,8 +1670,9 @@
     "140": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126284rbr-0011"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m126284rbr-0011",
@@ -1568,8 +1682,9 @@
     "141": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126303-0001"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126303-0001",
@@ -1579,8 +1694,9 @@
     "142": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126283rbr-0012"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/datejust-m126283rbr-0012",
@@ -1590,8 +1706,9 @@
     "143": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278289rbr-0019"
         ],
         "description": "Oyster, 31 mm, oro blanco y diamantes",
         "link": "/rolex/datejust-m278289rbr-0019",
@@ -1601,8 +1718,9 @@
     "144": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278384rbr-0008"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m278384rbr-0008",
@@ -1612,8 +1730,9 @@
     "145": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278273-0019"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m278273-0019",
@@ -1623,8 +1742,9 @@
     "146": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278274-0018"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m278274-0018",
@@ -1634,8 +1754,9 @@
     "147": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126233-0018"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m126233-0018",
@@ -1645,8 +1766,9 @@
     "148": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278288rbr-0038"
         ],
         "description": "Oyster, 31 mm, oro amarillo ",
         "link": "/rolex/datejust-m278288rbr-0038",
@@ -1656,8 +1778,9 @@
     "149": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278288rbr-0006"
         ],
         "description": "Oyster, 31 mm, oro amarillo y diamantes",
         "link": "/rolex/datejust-m278288rbr-0006",
@@ -1667,8 +1790,9 @@
     "150": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278343rbr-0016"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes ",
         "link": "/rolex/datejust-m278343rbr-0016",
@@ -1678,8 +1802,9 @@
     "151": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126331-0016"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose ",
         "link": "/rolex/datejust-m126331-0016",
@@ -1689,8 +1814,9 @@
     "152": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278285rbr-0005"
         ],
         "description": "Oyster, 31 mm, oro Everose y diamantes",
         "link": "/rolex/datejust-m278285rbr-0005",
@@ -1700,8 +1826,9 @@
     "153": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126233-0035"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m126233-0035",
@@ -1711,8 +1838,9 @@
     "154": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278275-0029"
         ],
         "description": "Oyster, 31 mm, oro Everose",
         "link": "/rolex/datejust-m278275-0029",
@@ -1722,8 +1850,9 @@
     "155": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126331-0007"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126331-0007",
@@ -1733,8 +1862,9 @@
     "156": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126334-0006"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126334-0006",
@@ -1744,8 +1874,9 @@
     "157": {
         "title": "Deepsea Challenge",
         "keywords": [
-            "Deepsea",
-            "Challenge"
+            "deepsea",
+            "challenge",
+            "m126067-0001"
         ],
         "description": "Oyster, 50 mm, titanio RLX",
         "link": "/rolex/datejust-m126067-0001",
@@ -1755,8 +1886,9 @@
     "158": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126200-0002"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/datejust-m126200-0002",
@@ -1766,8 +1898,9 @@
     "159": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126201-0013"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126201-0013",
@@ -1777,8 +1910,9 @@
     "160": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126203-0020"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126203-0020",
@@ -1788,8 +1922,9 @@
     "161": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126231-0016"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126231-0016",
@@ -1799,8 +1934,9 @@
     "162": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126231-0020"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126231-0020",
@@ -1810,8 +1946,9 @@
     "163": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126234-0037"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126234-0037",
@@ -1821,8 +1958,9 @@
     "164": {
         "title": "Datejust 36",
         "keywords": [
-            "Datejust",
-            "36"
+            "datejust",
+            "36",
+            "m126281rbr-0016"
         ],
         "description": "Oyster, 36 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m126281rbr-0016",
@@ -1832,8 +1970,9 @@
     "165": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126331-0001"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126331-0001",
@@ -1843,8 +1982,9 @@
     "166": {
         "title": "Datejust 41",
         "keywords": [
-            "Datejust",
-            "41"
+            "datejust",
+            "41",
+            "m126334-0002"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126334-0002",
@@ -1854,8 +1994,9 @@
     "167": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278240-0018"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/datejust-m278240-0018",
@@ -1865,8 +2006,9 @@
     "168": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278241-0018"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m278241-0018",
@@ -1876,8 +2018,9 @@
     "169": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278271-0002"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m278271-0002",
@@ -1887,8 +2030,9 @@
     "170": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278278-0032"
         ],
         "description": "Oyster, 31 mm, oro amarillo",
         "link": "/rolex/datejust-m278278-0032",
@@ -1898,8 +2042,9 @@
     "171": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278341rbr-0003"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m278341rbr-0003",
@@ -1909,8 +2054,9 @@
     "172": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278344rbr-0021"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m278344rbr-0021",
@@ -1920,8 +2066,9 @@
     "173": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278381rbr-0023"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m278381rbr-0023",
@@ -1931,8 +2078,9 @@
     "174": {
         "title": "Datejust 31",
         "keywords": [
-            "Datejust",
-            "31"
+            "datejust",
+            "31",
+            "m278383rbr-0025"
         ],
         "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/datejust-m278383rbr-0025",
@@ -1942,7 +2090,10 @@
     "175": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279174-0020"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
         "link": "/rolex/lady-datejust-m279174-0020",
@@ -1952,7 +2103,10 @@
     "176": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279174-0015"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
         "link": "/rolex/lady-datejust-m279174-0015",
@@ -1962,7 +2116,10 @@
     "177": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279384rbr-0004"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279384rbr-0004",
@@ -1972,7 +2129,10 @@
     "178": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279173-0012"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel y oro amarillo",
         "link": "/rolex/lady-datejust-m279173-0012",
@@ -1982,7 +2142,10 @@
     "179": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279139rbr-0002"
         ],
         "description": "Oyster, 28 mm, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279139rbr-0002",
@@ -1992,7 +2155,10 @@
     "180": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279171-0007"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel y oro Everose",
         "link": "/rolex/lady-datejust-m279171-0007",
@@ -2002,7 +2168,10 @@
     "181": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279138rbr-0015"
         ],
         "description": "Oyster, 28 mm, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279138rbr-0015",
@@ -2012,7 +2181,10 @@
     "182": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279381rbr-0013"
         ],
         "description": "Oyster, 28 mm, Acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279381rbr-0013",
@@ -2022,7 +2194,10 @@
     "183": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279458rbr-0001"
         ],
         "description": "Oyster, 28 mm, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279458rbr-0001",
@@ -2032,7 +2207,10 @@
     "184": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279135rbr-0021"
         ],
         "description": "Oyster, 28 mm, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279135rbr-0021",
@@ -2042,7 +2220,10 @@
     "185": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279163-0023"
         ],
         "description": "Oyster, 28 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/lady-datejust-m279163-0023",
@@ -2052,7 +2233,10 @@
     "186": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279175-0020"
         ],
         "description": "Oyster, 28 mm, oro Everose",
         "link": "/rolex/lady-datejust-m279175-0020",
@@ -2062,7 +2246,10 @@
     "187": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279178-0013"
         ],
         "description": "Oyster, 28 mm, oro amarillo",
         "link": "/rolex/lady-datejust-m279178-0013",
@@ -2072,7 +2259,10 @@
     "188": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279381rbr-0004"
         ],
         "description": "Oyster, 28 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279381rbr-0004",
@@ -2082,7 +2272,10 @@
     "189": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279383rbr-0003"
         ],
         "description": "Oyster, 28 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279383rbr-0003",
@@ -2092,7 +2285,10 @@
     "190": {
         "title": "Lady-Datejust",
         "keywords": [
-            "Lady-Datejust"
+            "lady-datejust",
+            "lady",
+            "datejust",
+            "m279384rbr-0011"
         ],
         "description": "Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279384rbr-0011",
@@ -2102,7 +2298,8 @@
     "191": {
         "title": "Air-king",
         "keywords": [
-            "Air-king"
+            "air-king",
+            "m126900-0001"
         ],
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/air-king-m126900-0001",
@@ -2112,7 +2309,8 @@
     "192": {
         "title": "Submariner",
         "keywords": [
-            "Submariner"
+            "submariner",
+            "m124060-0001"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m124060-0001",
@@ -2122,8 +2320,9 @@
     "193": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126610lv-0002"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m126610lv-0002",
@@ -2133,8 +2332,9 @@
     "194": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126613lb-0002"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/submariner-m126613lb-0002",
@@ -2144,8 +2344,9 @@
     "195": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126610ln-0001"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m126610ln-0001",
@@ -2155,8 +2356,9 @@
     "196": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126618lb-0002"
         ],
         "description": "Oyster, 41 mm, oro amarillo",
         "link": "/rolex/submariner-m126618lb-0002",
@@ -2166,8 +2368,9 @@
     "197": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126613ln-0002"
         ],
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/submariner-m126613ln-0002",
@@ -2177,8 +2380,9 @@
     "198": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126618ln-0002"
         ],
         "description": "Oyster, 41 mm, oro amarillo",
         "link": "/rolex/submariner-m126618ln-0002",
@@ -2188,8 +2392,9 @@
     "199": {
         "title": "Submariner Date",
         "keywords": [
-            "Submariner",
-            "Date"
+            "submariner",
+            "date",
+            "m126619lb-0003"
         ],
         "description": "Oyster, 41 mm, oro blanco",
         "link": "/rolex/submariner-m126619lb-0003",
@@ -2199,8 +2404,10 @@
     "200": {
         "title": "Rolex Sea-Dweller",
         "keywords": [
-            "Rolex",
-            "Sea-Dweller"
+            "rolex",
+            "sea-dweller",
+            "sea","dweller",
+            "m126603-0001"
         ],
         "description": "Oyster, 43 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sea-dweller-m126603-0001",
@@ -2210,8 +2417,10 @@
     "201": {
         "title": "Rolex Sea-Dweller",
         "keywords": [
-            "Rolex",
-            "Sea-Dweller"
+            "rolex",
+            "sea-dweller",
+            "sea","dweller",
+            "m126600-0002"
         ],
         "description": "Oyster, 43 mm, acero Oystersteel ",
         "link": "/rolex/sea-dweller-m126600-0002",
@@ -2221,8 +2430,9 @@
     "202": {
         "title": "Rolex Deepsea",
         "keywords": [
-            "Rolex",
-            "Deepsea"
+            "rolex",
+            "deepsea",
+            "m136660-0005"
         ],
         "description": "Oyster, 44 mm, acero Oystersteel",
         "link": "/rolex/deepsea-m136660-0005",
@@ -2232,8 +2442,9 @@
     "203": {
         "title": "Rolex Deepsea",
         "keywords": [
-            "Rolex",
-            "Deepsea"
+            "rolex",
+            "deepsea",
+            "m136668lb-0001"
         ],
         "description": "Oyster, 44 mm, oro amarillo",
         "link": "/rolex/deepsea-m136668lb-0001",
@@ -2249,7 +2460,7 @@
         ],
         "description": "Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009, Patrocinador Exclusivo del Concierto de Año Nuevo.",
         "link": "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-        "thumbnail": "https://mimijoyeria.com/world-of-rolex/world-of-rolex-viena-mobile.webp",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-main-mobile.webp",
         "type": "articulo"
     }
 }

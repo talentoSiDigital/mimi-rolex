@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import BreadCrumb from "./components/navigation-components/BreadCrumb.vue"
-
+import {useLoaderStore} from './store/loaderState';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -660,12 +660,14 @@ const router = createRouter({
 
 
 router.beforeEach((to, from, next) => {
+  const store = useLoaderStore()
+  console.log(store.$state.loader)
   const link = "https://mimijoyeria.com"
   const description = to.meta.description
   const canonical = document.querySelector("link[rel='canonical']")
   canonical.setAttribute('href', `${link}${to.fullPath}`);
 
-
+  store.change()
   
   
 
@@ -692,7 +694,15 @@ router.beforeEach((to, from, next) => {
   }
 
 
-  descriptionElement.setAttribute('content', description || "")
+
+  // Continue resolving the route
+  next()
+})
+router.afterEach((to, from, next) => {
+  const store = useLoaderStore()
+    store.change()
+
+
   // Continue resolving the route
   next()
 })
