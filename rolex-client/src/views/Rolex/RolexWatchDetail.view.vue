@@ -24,6 +24,75 @@ const myHoverableElement = ref();
 const isHovered = useElementHover(myHoverableElement);
 const myHoverableElement2 = ref();
 const isHovered2 = useElementHover(myHoverableElement2);
+const collections = {
+  1: {
+    nombre: "COSMOGRAPH DAYTONA",
+    subHeader: "Un icono que desafía al tiempo",
+    idName: "cosmograph-daytona",
+  },
+  2: {
+    nombre: "1908",
+    subHeader: "El nuevo rostro de la excelencia",
+    idName: "1908",
+  },
+  3: {
+    nombre: "YACHT‑MASTER",
+    subHeader: "El dominio de la ligereza",
+    idName: "yacht-master",
+  },
+  4: {
+    nombre: "SKY‑DWELLER",
+    subHeader: "Rumbo a lo ideal y más allá",
+    idName: "sky-dweller",
+  },
+  5: {
+    nombre: "GMT-MASTER II",
+    subHeader: "Ilumina nuestros vínculos con el mundo",
+    idName: "gmt-master-ii",
+  },
+  6: {
+    nombre: "EXPLORER",
+    subHeader: "La grandeza de la aventura",
+    idName: "explorer",
+  },
+  7: {
+    nombre: "OYSTER PERPETUAL",
+    subHeader: "La efervescencia de la excelencia",
+    idName: "oyster-perpetual",
+  },
+  8: {
+    nombre: "DAY‑DATE",
+    subHeader: "Cada esfera, un descubrimiento",
+    idName: "day-date",
+  },
+  9: {
+    nombre: "DATEJUST",
+    subHeader: "Una fecha para recordar",
+    idName: "datejust",
+  },
+  10: {
+    nombre: "LADY‑DATEJUST",
+    subHeader: "Elegancia en femenino",
+    idName: "lady-datejust",
+  },
+  11: {
+    nombre: "AIR-KING",
+    subHeader: "Llevarlo al cielo",
+    idName: "air-king",
+  },
+  12: {
+    nombre: "SUBMARINER",
+    subHeader: "Conexión profunda",
+    idName: "submariner",
+  },
+  13: {
+    nombre: "SEA-DWELLER",
+    subHeader: "Ciudadano de las profundidades",
+    idName: "sea-dweller",
+  },
+};
+
+
 
 const windowWidth = ref(window.innerWidth);
 const route = useRoute();
@@ -56,12 +125,14 @@ const checkLocation = computed(() => {
 });
 
 let { isLoading, state, isReady, execute } = useAsyncState(
-  RolexDataServices.getDetailedWatch(currentRoute).then((d) => {
-    
-    return d.data;
-  }).catch((e) => {
-    console.log(e.error)
-  })
+  RolexDataServices.getDetailedWatch(currentRoute)
+    .then((d) => {
+      console.log(d.data);
+      return d.data;
+    })
+    .catch((e) => {
+      console.log(e.error);
+    })
 );
 
 function addComma(price) {
@@ -143,10 +214,15 @@ function sendMessage() {
             <meta
               name="description"
               :content="`Descubra el reloj Rolex ${
-                state.getAll.nombre},  ${getDiameter(state.getAll.cajaDelModelo)}, de  ${getMaterialName(state.getAll.cajaDelModelo)} en Mimi Joyería, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex.`"
+                state.getAll.nombre
+              },  ${getDiameter(
+                state.getAll.cajaDelModelo
+              )}, de  ${getMaterialName(
+                state.getAll.cajaDelModelo
+              )} en Mimi Joyería, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex.`"
             />
           </Head>
-   
+
           <section class="bg-white relative md:h-[85vh]">
             <div class="flex items-center justify-center w-full">
               <img
@@ -217,7 +293,10 @@ function sendMessage() {
                     </a>
 
                     <router-link
-                      :to="{name:'rolex-contacto-enviar-mensaje',query:{'id':currentRoute}}"
+                      :to="{
+                        name: 'rolex-contacto-enviar-mensaje',
+                        query: { id: currentRoute },
+                      }"
                       class="flex items-center gap-4"
                     >
                       <font-awesome-icon
@@ -679,15 +758,15 @@ function sendMessage() {
           >
             <div class="w-10/12">
               <SectionNavigationCard
-                :img="`banners/new-banner-collections-${state.collection.idName}`"
-                :link="{name:`rolex-coleccion-${state.collection.idName}`}"
+                :img="`banners/new-banner-collections-${collections[state.getAll.rolexCollectionId].idName}`"
+                :link="{ name: `rolex-coleccion-${collections[state.getAll.rolexCollectionId].idName}` }"
                 class="w-full"
               >
                 <template #sub
                   >Rolex
-                  {{ capitalizeFirstLetter(state.collection.nombre) }}</template
+                  {{ capitalizeFirstLetter(collections[state.getAll.rolexCollectionId].nombre) }}</template
                 >
-                <template #title>{{ state.collection.subHeader }}</template>
+                <template #title>{{ collections[state.getAll.rolexCollectionId].subHeader }}</template>
 
                 <template #button>Más información</template>
               </SectionNavigationCard>

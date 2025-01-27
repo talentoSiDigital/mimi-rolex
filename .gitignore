@@ -9,14 +9,13 @@ lerna-debug.log*
 
 node_modules
 dist
-public
 dist-ssr
 *.local
 LOCAL
 
 
 # Editor directories and files
-.vscode
+.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -35,13 +34,12 @@ src/assets
 #server
 server/node_modules
 server/.env
-server/log
+server/keys
 
 
 server/storage/
 server/app/views/
 
 
-rolex-client/public
 
 
