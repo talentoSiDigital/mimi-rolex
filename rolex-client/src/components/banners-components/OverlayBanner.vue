@@ -1,6 +1,6 @@
 <script setup>
 import {filename} from 'pathe/utils'
-import storeCopy from '../../storeCopy.json'
+import storeCopy from '../../data/storeCopy.json'
 
 const { type } = defineProps(["type"])
 

@@ -3,7 +3,7 @@ import { Head } from "@unhead/vue/components";
 import { useAsyncState } from "@vueuse/core";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import collectionsCopy from "../../collectionsCopy.json";
+import collectionsCopy from "../../data/collectionsCopy.json";
 import PageBanner from "../../components/banners-components/PageBanner.vue";
 import WatchCard from "../../components/cards/WatchCard.vue";
 import RolexHeader from "../../components/RolexHeader.vue";
