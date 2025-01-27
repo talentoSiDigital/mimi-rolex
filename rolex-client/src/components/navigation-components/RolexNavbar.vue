@@ -300,7 +300,7 @@ watch(input, () => {
   <nav class="relative">
     <div
       :class="search"
-      class="absolute duration-200 w-full overflow-hidden z-50 top-full bg-rolex-green border-t border-white text-white"
+      class="absolute duration-200 w-full overflow-hidden z-40 top-full bg-rolex-green border-t border-white text-white"
     >
       <form
         action="/rolex/busqueda"

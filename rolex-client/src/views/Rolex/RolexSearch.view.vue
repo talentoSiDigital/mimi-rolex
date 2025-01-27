@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from "vue";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
-import allRoutes from "../../allRoutes.json";
+import allRoutes from "../../data/allRoutes.json";
 import { useRoute, RouterLink } from "vue-router";
 let query = useRoute().query.search;
 const checkQuery = computed(() => {
@@ -27,14 +27,14 @@ const resultsPage = ref([]);
 const resultsWatch = ref([]);
 const resultsArticle = ref([]);
 if (query != "") {
+  
   query = query.toLowerCase();
   query = query.trim();
   query = query.split(" ");
-  console.log(query);
   for (const [key, value] of Object.entries(allRoutes)) {
     for (let i = 0; i < value.keywords.length; i++) {
       const element = value.keywords[i];
-
+      
       if (element.includes(query)) {
         if (value.type == "pagina") {
           resultsPage.value.push(value);

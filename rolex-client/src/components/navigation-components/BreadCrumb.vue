@@ -1,7 +1,8 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { routerKey, RouterLink, useRoute, useRouter } from "vue-router";
-import breadcrumb from "../../breadcrumb.json";
+import breadcrumb from "../../data/breadcrumb.json";
+
 const route = useRoute();
 const router = useRouter();
 const actual = ref(breadcrumb[route.name]);
