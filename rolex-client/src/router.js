@@ -704,7 +704,6 @@ router.afterEach((to, from, next) => {
 
 
   // Continue resolving the route
-  next()
 })
 
 export default router

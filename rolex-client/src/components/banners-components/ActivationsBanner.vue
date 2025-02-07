@@ -8,6 +8,12 @@ const sliderItems = [
   
   
   {
+    src: "explorer",
+    link: "/rolex/explorer",
+    alt: "coleccion-explorer-ii-banner",
+    title: "Coleccion Explorer II",
+  },
+  {
     src: "datejust",
     link: "/rolex/datejust",
     alt: "coleccion-datejust-banner",

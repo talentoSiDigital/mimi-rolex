@@ -45,7 +45,6 @@ function moveForm(pos) {
 
 function sendMessage() {
     mailDataService.rolexNewMail(messageInfo.value).then((d)=>{
-        console.log(d.data);
         statusMessage.value = "Su mensaje ha sido enviado con éxito al equipo de Rolex en Mimi Joyería"
         moveForm(2)
     }).catch(()=>{

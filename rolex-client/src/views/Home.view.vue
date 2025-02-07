@@ -27,7 +27,6 @@ const checkWindowSize = computed(() => {
 const router = useRouter();
 
 function checkClick(pos) {
-  console.log(pos);
 
   if (pos === 1) {
     headerSliderDataServices
@@ -39,7 +38,7 @@ function checkClick(pos) {
         console.log(e);
       });
   } else {
-    router.push("/rolex/datejust");
+    router.push("/rolex/explorer");
   }
 }
 
@@ -53,7 +52,7 @@ const jewelSlideshow = [
 ];
 onMounted(() => {
   setInterval(() => {
-    if (counter.value == 2) {
+    if (counter.value == 1) {
       counter.value = 0;
     } else {
       counter.value++;

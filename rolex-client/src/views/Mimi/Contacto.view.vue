@@ -34,7 +34,6 @@ function sendValue(value) {
   mailDataService
     .contact(value)
     .then((d) => {
-      console.log(d.data);
       router.go();
     })
     .catch(() => {

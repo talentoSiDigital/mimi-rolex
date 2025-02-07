@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 1024,
     minify:'esbuild' // 1kb
-    // outDir: '../server/app/views',
+    
 
   },
   plugins: [vue({
@@ -20,12 +20,6 @@ export default defineConfig({
       defineModel: true
     }
   }),
-  // viteCompression({
-  //   algorithm:'gzip'
-  // })
-  // ,
-  //  vueDevTools({
-  //   launchEditor: 'code',
-  // })
+ 
   ],
 })

@@ -15,7 +15,6 @@ import ServerError from '../../components/cards/ServerError.vue'
 
 const route = useRoute()
 const currentRoute = route.params.id
-console.log(currentRoute)
 
 const currentPage = ref(1)
 const totalPages = ref(1)

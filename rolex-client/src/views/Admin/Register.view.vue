@@ -96,10 +96,8 @@ function handleRegister(user,phoneNumber) {
     user.phone = "+"+ phoneNumber.code + phoneNumber.phone
     user.age = user.age.toString() 
     user.referenceCode = randomStr()
-    console.log(user)
     piniaStore.register(user).then(
         (data) => {
-            console.log("Successfully registered")
             message.value = data.message;
             successful.value = true;
             loading.value = false;

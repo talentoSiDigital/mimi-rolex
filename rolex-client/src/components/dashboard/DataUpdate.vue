@@ -110,7 +110,7 @@ function handleRegister() {
                         Actualizar datos
                         <!-- {{ state }} -->
                     </h1>
-                    <p @click="console.log(phoneNumber)">*Todos los campos son obligatorios</p>
+                    <p >*Todos los campos son obligatorios</p>
 
 
                     <Form :validation-schema="schema" @submit="handleRegister(user,phoneNumber)">

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://www.mimijoyeria.com/api/auth/';
+const API_URL = 'https://mimijoyeria.com/api/auth/';
 // const API_URL = "http://localhost:3000/api/auth/";
 
 
@@ -13,7 +13,6 @@ class AuthService {
     if (response.data.accessToken) {
       localStorage.setItem('user', JSON.stringify(response.data));
     }
-    console.log(response.data)
     return response.data;
   }
 

@@ -29,11 +29,18 @@ const nameTranslate = ref({
 
 function payWithData() {
     paymentProcess.value = true
-    unavailable.value = true
-    // emit('send-payment')
+    // unavailable.value = true
+    emit('send-payment')
 }
 
-console.log(dataToSend.value);
+function checkError(status){
+    if(status === 'INVALID_ACCOUNT'){
+        return 'Tarjeta no valida'
+    }
+    return status
+    
+}
+
 
 </script>
 
@@ -41,8 +48,7 @@ console.log(dataToSend.value);
     <section class=" z-50 fixed h-screen top-0 w-full flex  items-center justify-center ">
         <div class="h-fit w-full flex items-center justify-center">
             <DashboardCards class="w-4/5 lg:w-3/5">
-                
-
+                {{ }}
                     <div class=" w-full h-full  flex flex-col justify-between items-center gap-4"
                         v-if="!paymentProcess">
 
@@ -54,13 +60,13 @@ console.log(dataToSend.value);
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
 
                                 <tbody>
-                                    <tr class="bg-white border-b "
+                                    <tr class="bg-white border-b flex flex-col sm:flex-row justify-between"
                                         v-for="(item, index) in dataToSend" :key="index">
-                                        <th scope="row" v-if="index != 'region'"
+                                        <th scope="row" v-if="index != 'region' && nameTranslate[index]"
                                             class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
                                             {{ nameTranslate[index] }}
                                         </th>
-                                        <td class="px-6 py-2" v-if="index != 'region'">
+                                        <td class="px-6 py-2" v-if="index != 'region' && nameTranslate[index]">
                                             <h2 v-if="index == 'total'">${{ item }}</h2>
                                             <h2 v-else>{{ item }}</h2>
                                         </td>
@@ -101,7 +107,7 @@ console.log(dataToSend.value);
                         </button>
                     </div>
 
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status == '1'">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status  == undefined">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             style="background: none; display: block; shape-rendering: auto;" width="200px"
                             height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -116,13 +122,13 @@ console.log(dataToSend.value);
                     </div>
                     
                     
-                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess3 && status.status != 'AUTHORIZED'">
+                    <div class=" flex flex-col items-center justify-center h-[80vh]" v-if="paymentProcess && status.status != 'AUTHORIZED' && status.status != undefined">
                         <img src="/assets/mimi-logo.png" alt="logo-mimi">
                         <h2 class="text-xl">Pago Fallido</h2>
                         <font-awesome-icon v-if="!icon" :icon="['fas', 'circle-xmark']"
                             class="text-6xl text-red-500 py-8" />
-                        {{ status.status }} <br>
-                        {{ status.reason }} <br><br>
+                        <!-- {{ checkError(status.status )}} <br> -->
+                        {{ checkError(status.reason) }} <br><br>
                         <button
                             class="uppercase border border-black py-4 px-10 text-neutral-600 bg-white hover:text-white hover:bg-neutral-600 duration-100 "
                             @click="$emit('activate-modal')">

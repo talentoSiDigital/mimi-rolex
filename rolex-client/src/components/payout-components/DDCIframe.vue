@@ -5,16 +5,13 @@ const { data } = defineProps(['data'])
 const checkResponse = defineModel()
 const input = ref(null)
 
-console.log(data);
-console.log(data.consumerAuthenticationInformation);
-console.log(data.consumerAuthenticationInformation.deviceDataCollectionUrl);
+
 
 onMounted(() => {
     input.value.click()
     window.addEventListener("message", function (event) {
         if (event.origin === "https://centinelapi.cardinalcommerce.com") {
             checkResponse.value = event.data
-            console.log(event.data);
         }
     }, false);
 })

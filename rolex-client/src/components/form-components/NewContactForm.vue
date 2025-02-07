@@ -1,5 +1,5 @@
 <script setup>
-import {  ref, watch } from "vue";
+import { ref, watch } from "vue";
 import Terms from "../global-components/Terms.vue";
 import RegionsInput from "../../components/form-components/RegionsInput.vue";
 
@@ -36,8 +36,6 @@ const schema = yup.object().shape({
     .oneOf([true], "Debes aceptar los terminos y condiciones"),
 });
 
-
-
 const phoneNumber = ref({
   phone: 0,
   code: 58,
@@ -52,8 +50,6 @@ const terms = ref(false);
 const showTerms = () => {
   terms.value = !terms.value;
 };
-
-
 
 function sendMail() {
   activateLoader.value = !activateLoader.value;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './authHeader';
 
-const API_URL = 'http://localhost:3000/api/user/';
+const API_URL = 'https://mimijoyeria.com/api/auth/';
 
 class UserService {
   getPublicContent() {
@@ -34,7 +34,6 @@ class UserService {
       "email": data.email
       
     }
-    console.log(dataToSend);
     return axios.post(API_URL +"update", dataToSend);
 
   }

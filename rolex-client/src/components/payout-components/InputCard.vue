@@ -55,7 +55,7 @@ watch(model, () => {
     <section class="h-12 ">
 
         <div class="h-full w-16 flex bg-white p-1 items-center justify-center rounded-l-lg border border-gray-300 "
-            @click="console.log(model);">
+            >
 
             <div class=" relative  h-full w-full flex justify-center">
                 <transition name="appear">

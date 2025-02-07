@@ -14,7 +14,7 @@ const {emit} = defineEmits(['delete-item'])
         <img :src="product.img" :alt="product.serie"
             class="w-1/5 border bg-white rounded-md">
         <header class=" h-24 w-1/3 ml-5 flex flex-col justify-center ">
-            <h3 class="text-xl">{{ product.nombre }} {{ product.id }}</h3>
+            <h3 class="text-xl">{{ product.nombre }}</h3>
             <h3 class="text-lg">{{ product.coleccion }}</h3>
             <h3 class="text-xl font-bold">{{product.precio}}</h3>
         </header>

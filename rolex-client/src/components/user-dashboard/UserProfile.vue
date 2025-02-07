@@ -15,7 +15,6 @@ const props = defineProps({
 
 const { isLoading, state, isReady, execute } = useAsyncState(
   userService.getUserData(props.info).then((d) => {
-    console.log(d);
     return d.data;
   })
 );

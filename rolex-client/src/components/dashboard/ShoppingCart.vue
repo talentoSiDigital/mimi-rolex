@@ -40,9 +40,13 @@ function getPrice(product) {
   let total = 0;
   for (let index = 0; index < product.length; index++) {
     let amount = String(product[index].precio);
+    console.log(amount)
     amount = amount.replace("$", "");
-    amount = amount.replace(",", "");
+    console.log(amount)
+    amount = amount.replace(".", "");
+    console.log(amount)
     amount = parseFloat(amount) * product[index].quantity;
+    console.log(amount)
     total = total + amount;
   }
   return total;
