@@ -3,12 +3,6 @@ import { computed, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { useWindowSize } from "@vueuse/core";
 import headerSliderDataServices from "../services/headerSliderDataServices";
-import { useHead } from "@unhead/vue";
-
-useHead({
-  
-})
-
 const counter = ref(0);
 const classes = ref([
   "translate-x-0",
@@ -63,6 +57,7 @@ onMounted(() => {
 
 <template>
   <div id="main-content" class="font-montserrat">
+   
     <div class="relative z-0 min-h-[650px] w-full">
       <div v-if="!checkWindowSize" class="overflow-hidden">
         <div class="duration-500 flex cursor-pointer" :class="classes[counter]">

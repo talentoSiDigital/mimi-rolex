@@ -1,7 +1,7 @@
 {
   "name": "rolex-client",
   "private": true,
-  "version": "2.1.0",
+  "version": "2.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",

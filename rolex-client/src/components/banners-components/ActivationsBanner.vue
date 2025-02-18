@@ -19,8 +19,6 @@ const sliderItems = [
     alt: "coleccion-datejust-banner",
     title: "Coleccion Datejust",
   },
- 
-  
   {
     src: "viena",
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",

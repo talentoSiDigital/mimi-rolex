@@ -73,6 +73,7 @@ require('./app/api/auth.routes')(app);
 require('./app/api/user.routes')(app);
 require('./app/api/mail.routes')(app);
 require('./app/api/payment.routes')(app);
+require('./app/api/routes.routes')(app);
 
 
 

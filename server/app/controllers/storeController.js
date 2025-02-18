@@ -81,7 +81,7 @@ exports.findJ = (req, res) => {
 
     Store.Jeweler.findAll({
         where: {
-            coleccion: { [Op.substring]: req.params.id }
+            nombre: { [Op.substring]: req.params.id }
         }
     })
         .then(data => {

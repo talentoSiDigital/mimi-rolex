@@ -1,5 +1,5 @@
 <script setup>
-import regions from "./regions.json";
+import regions from "../../data/regions.json";
 const props = defineProps(["country"]);
 const region = defineModel();
 </script>

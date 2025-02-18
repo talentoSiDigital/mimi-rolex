@@ -282,7 +282,7 @@ function sendMessage() {
                       class="flex items-center gap-4"
                     >
                       <font-awesome-icon
-                        :icon="['fas', 'comment']"
+                        :icon="['fab', 'whatsapp']"
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
                       <p>Chat</p>
