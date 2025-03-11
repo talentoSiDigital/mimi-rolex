@@ -19,11 +19,13 @@ import { useElementHover } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
 import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
+import digitalDataLayer from "../../utils/digitalDataLayer";
 
 const myHoverableElement = ref();
 const isHovered = useElementHover(myHoverableElement);
 const myHoverableElement2 = ref();
 const isHovered2 = useElementHover(myHoverableElement2);
+
 const collections = {
   1: {
     nombre: "COSMOGRAPH DAYTONA",
@@ -90,6 +92,11 @@ const collections = {
     subHeader: "Ciudadano de las profundidades",
     idName: "sea-dweller",
   },
+  14: {
+    nombre: "DEEPSEA",
+    subHeader: "Relojes de submarinismo extremos",
+    idName: "deepsea",
+  },
 };
 
 
@@ -127,6 +134,12 @@ const checkLocation = computed(() => {
 let { isLoading, state, isReady, execute } = useAsyncState(
   RolexDataServices.getDetailedWatch(currentRoute)
     .then((d) => {
+      console.log(d.data)
+      const family= collections[d.data.getAll.rolexCollectionId].idName
+      const rmc= d.data.getAll.modelo
+      useHead({
+        script: [`var digitalDataLayer = ${JSON.stringify(digitalDataLayer(family, rmc))}; `]
+      })
       return d.data;
     })
     .catch((e) => {
@@ -753,7 +766,7 @@ function sendMessage() {
             class="bg-rolex-brown-light-2 flex flex-col justify-center items-center py-[10vh]"
           >
             <div class="w-10/12">
-              <SectionNavigationCard
+                <SectionNavigationCard
                 :img="`banners/new-banner-collections-${collections[state.getAll.rolexCollectionId].idName}`"
                 :link="{ name: `rolex-coleccion-${collections[state.getAll.rolexCollectionId].idName}` }"
                 class="w-full"

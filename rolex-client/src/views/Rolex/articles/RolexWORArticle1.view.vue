@@ -246,7 +246,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
             </section>
 
             <section class="flex justify-center w-full bg-rolex-brown-light-1 pb-[10vh]">
-                <SectionNavigationCard img="world-of-rolex/articles/article-1/article-10" link="/coleccion-rolex/datejust"
+                <SectionNavigationCard img="world-of-rolex/articles/article-1/article-10" :link="{name: 'rolex-coleccion-datejust'}"
                     class="w-10/12  ">
                     <template #sub>Rolex Datejust</template>
                     <template #title>Una fecha para recordar</template>

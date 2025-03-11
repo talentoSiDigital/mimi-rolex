@@ -5,7 +5,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 
 <template>
     <div id="joyeria">
-        <PageBanner type="joyeria"/>
+        <!-- <PageBanner type="joyeria"/> -->
 
         <OverlaySection img-src="joyeria/joyeria-1" alt-text="nacimiento" type="normal">
             <template #title>

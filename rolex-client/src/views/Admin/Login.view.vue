@@ -7,6 +7,7 @@ import { auth } from "../../store/auth.module";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import Loading from "../../components/global-components/Loading.vue";
 import * as yup from "yup";
+import { Head } from "@unhead/vue/components";
 const piniaStore = auth();
 
 const message = ref("");
@@ -45,7 +46,11 @@ function onSubmit(user) {
 </script>
 
 <template>
+  
   <section class="bg-gray-50">
+    <Head>
+      <meta name="robots" content="noindex">
+    </Head>
     <div
       class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
     >

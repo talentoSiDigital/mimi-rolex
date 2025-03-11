@@ -35,7 +35,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
             <div class="video-frame flex bg-rolex-brown-light-1 justify-center pb-[10vh]">
                 <div class="w-11/12  aspect-w-16 aspect-h-9 ">
-                    <iframe src="https://www.youtube.com/embed/mQH9rFo0kpc?si=g4BAbRvDhkm075JE"
+                    <iframe src="https://www.youtube.com/embed/4jkucsV3IHo?si=-PAOG4D5mXX4i3cl"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>

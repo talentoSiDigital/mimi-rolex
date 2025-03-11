@@ -19,7 +19,7 @@ const { imgSrc, altText, type,imgSize } = defineProps(['imgSize', 'imgSrc', 'alt
                 </h1>
                 
 
-                <p class="w-10/12 md:w-1/2 text-justify md:text-left font-normal">
+                <p class="w-10/12 md:w-1/2 text-justify md:text-left font-light">
                     <slot name="text"></slot>
                 </p>
                 <p class="w-10/12 md:w-1/2 h-fit">

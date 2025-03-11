@@ -18,13 +18,19 @@ import DDCIframe from "../payout-components/DDCIframe.vue";
 import PayoutForm from "../payout-components/PayoutForm.vue";
 import { useRouter } from "vue-router";
 import uuid from "uuid-random";
+import { Head } from "@unhead/vue/components";
+
+const piniaStore = auth();
+if(piniaStore.$state.status.loggedIn == false){
+  window.location.href = "/login";
+}
+
 const { width, height } = useWindowSize();
 const { language } = useNavigatorLanguage();
 const code = ref(randomStr());
 const active = ref(false);
-const piniaStore = auth();
-const user = piniaStore.$state.user.id;
 
+const user = piniaStore.$state.user.id;
 const totalAmount = ref(0);
 const paymentStatus = ref("");
 const checkResponse = ref("");
@@ -40,13 +46,13 @@ function getPrice(product) {
   let total = 0;
   for (let index = 0; index < product.length; index++) {
     let amount = String(product[index].precio);
-    console.log(amount)
+    console.log(amount);
     amount = amount.replace("$", "");
-    console.log(amount)
+    console.log(amount);
     amount = amount.replace(".", "");
-    console.log(amount)
+    console.log(amount);
     amount = parseFloat(amount) * product[index].quantity;
-    console.log(amount)
+    console.log(amount);
     total = total + amount;
   }
   return total;
@@ -77,11 +83,10 @@ const dataObject = ref({
   cardExpirationMonth: "",
   cardExpirationYear: "",
   region: "",
-  cvn:"",
+  cvn: "",
   code: code.value,
   deviceFingerPrintID: code.value,
 });
-
 
 let externalScript = document.createElement("script");
 externalScript.setAttribute(
@@ -146,7 +151,6 @@ function sendPayment() {
     .step1(dataObject.value, user)
     .then((d) => {
       paymentStatus.value = d.data;
-      
 
       referenceId.value =
         paymentStatus.value.consumerAuthenticationInformation.referenceId;
@@ -234,7 +238,6 @@ watch(checkStep, () => {
 });
 
 watch(challengeResponse, () => {
-
   dataObject.value.authenticationTransactionId = challengeResponse.value;
   paymentDataServices
     .validation(dataObject.value, user)
@@ -297,6 +300,9 @@ watch(challengeResponse, () => {
 
 <template>
   <section>
+    <Head>
+      <meta name="robots" content="noindex" />
+    </Head>
     <noscript>
       <iframe
         style="
@@ -361,7 +367,9 @@ watch(challengeResponse, () => {
         v-if="isReady"
       >
         <div
-          :class="state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-[90vw] md:w-full'"
+          :class="
+            state.length > 0 ? 'w-[90vw] lg:w-[55%]' : 'w-[90vw] md:w-full'
+          "
           class="h-[96vh] border-2 rounded-lg border-main-green p-6 lg:ml-5 -translate-x-1.5 -translate-y-1.5"
         >
           <h2 class="text-2xl pb-1">Resumen del pedido</h2>

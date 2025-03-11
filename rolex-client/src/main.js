@@ -46,7 +46,8 @@ import {
     faCartShopping,
     faSpinner,
     faComment,
-    faMagnifyingGlass
+    faMagnifyingGlass,
+    faXmark
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -82,7 +83,8 @@ library.add(
     faCartShopping,
     faSpinner,
     faComment,
-    faMagnifyingGlass
+    faMagnifyingGlass,
+    faXmark
 )
 
 const head = createHead()
