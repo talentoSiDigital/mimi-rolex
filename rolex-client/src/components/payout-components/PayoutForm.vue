@@ -2,6 +2,7 @@
 import Icons from "./Icons.vue";
 import InputCard from "./InputCard.vue";
 import SelectInput from "../form-components/SelectInput.vue";
+import RegionsInput from "../form-components/RegionsInput.vue";
 import ConfirmationModal from "../modals/ConfirmationModal.vue";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import { ref, watch } from "vue";
@@ -229,7 +230,7 @@ function handleRegister() {
             >
             <div class="flex items-start gap-2">
               <InputCard v-model="card" />
-              <div class="w-[90%] h-full">
+              <div class="w-[70%] md:w-[90%] h-full">
                 <Field
                   id="card"
                   type="text"
@@ -239,7 +240,7 @@ function handleRegister() {
                   v-model="card"
                 />
               </div>
-              <div class="w-[10%] h-full">
+              <div class="w-[30%] md:w-[10%] h-full">
                 <Field
                   id="cvn"
                   type="text"

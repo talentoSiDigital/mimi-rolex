@@ -23,7 +23,7 @@ export default {
         'rolex-grey-light':'#d4d4d4',
         'rolex-brown-light-1':'#f5efea',
         'rolex-brown-light-2':'#f9f7f3',
-
+      
 
         'opaco':'rgba(0, 0, 0, 0.5)'
       },
@@ -45,7 +45,8 @@ export default {
       screens:{
         '3xl':'1700px',
         'xs':'500px'
-      }
+      },
+     
     }
   },
   plugins: [

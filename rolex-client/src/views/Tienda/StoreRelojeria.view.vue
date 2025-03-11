@@ -14,7 +14,6 @@ const route = useRoute()
 const { isLoading, state, isReady, execute } = useAsyncState(
     StoreDataService.getRelojeria("tudor")
         .then(d => {
-            console.log(d.data)
             let items = []
             for (const item of d.data) {
                 if(item.disponible == 1){

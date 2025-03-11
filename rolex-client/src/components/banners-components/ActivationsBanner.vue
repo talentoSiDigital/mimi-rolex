@@ -8,13 +8,12 @@ const sliderItems = [
   
   
   {
-    src: "datejust",
-    link: "/rolex/datejust",
-    alt: "coleccion-datejust-banner",
-    title: "Coleccion Datejust",
+    src: "sea-dweller",
+    link: "/rolex/sea-dweller",
+    alt: "coleccion-sea-dweller",
+    title: "Coleccion Sea Dweller",
   },
- 
-  
+
   {
     src: "viena",
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
@@ -34,18 +33,8 @@ const sliderItems = [
     alt: "watchmaking-banner",
     title: "Watchmaking",
   },
-  {
-    src: "new-models",
-    link: "/rolex/nuevos-relojes",
-    alt: "nuevos-modelos-banner",
-    title: "Nuevos Modelos",
-  },
-  {
-    src: "us-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-us-open",
-    alt: "rolex-y-the-us-open",
-    title: "Rolex y The Us Open",
-  },
+
+
 
   {
     src: "the-open",

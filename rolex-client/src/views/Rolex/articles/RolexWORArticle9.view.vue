@@ -232,6 +232,16 @@ import SectionNavigationCard from "../../../components/cards/SectionNavigationCa
 
         
       </section>
+      <section class="flex justify-center w-full bg-rolex-brown-light-1 pb-[10vh]">
+                <SectionNavigationCard img="world-of-rolex/articles/article-10/article-6" :link="{name: 'rolex-coleccion-day-date'}"
+                    class="w-10/12  ">
+                    <template #sub>Rolex Day-Date</template>
+                    <template #title>Logros ejemplares</template>
+
+                    <template #button>Más información</template>
+
+                </SectionNavigationCard>
+            </section>
 
      
     </template>

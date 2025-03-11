@@ -44,8 +44,8 @@ function moveForm(pos) {
 }
 
 function sendMessage() {
+   
     mailDataService.rolexNewMail(messageInfo.value).then((d)=>{
-        console.log(d.data);
         statusMessage.value = "Su mensaje ha sido enviado con éxito al equipo de Rolex en Mimi Joyería"
         moveForm(2)
     }).catch(()=>{
@@ -66,6 +66,8 @@ function sendMessage() {
 
                 <PageBanner type="rolex-contact" />
                 <main class="w-full overflow-hidden ">
+                   
+
                     <div :class="position" class="flex w-[300%] duration-300">
                         <section class=" bg-rolex-brown-light-2 py-[10vh] w-1/3">
                             <header

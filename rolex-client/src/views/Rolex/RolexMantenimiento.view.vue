@@ -48,7 +48,7 @@ import Button from '../../components/global-components/Button.vue';
 
                             </h1>
 
-                            <p class="w-10/12 md:w-1/2 text-justify md:text-left font-normal">
+                            <p class="w-10/12 md:w-1/2 text-justify md:text-left font-light">
                                 Al pasar muchos años entre un mantenimiento y otro, su reloj merece la mayor de las
                                 atenciones.
                                 Como
@@ -86,12 +86,7 @@ import Button from '../../components/global-components/Button.vue';
 
                 <TwoSectionCard img-src="mantenimiento/mantenimiento-3" alt-text="mantenimiento-rolex-1" type="reverse"
                     img-size="w-10/12">
-                    <template #optional>
-                        <div class="w-full flex justify-start">
-                            <img src="/assets/routes-assets/mantenimiento/Rolex-service-plaque.webp"
-                                alt="rolex-service-plaque" class="w-36 mb-8">
-                        </div>
-                    </template>
+                  
                     <template #title>
                         Su centro de servicio autorizado
                     </template>
@@ -111,7 +106,7 @@ import Button from '../../components/global-components/Button.vue';
                         Procedimiento del servicio Rolex
                     </h1>
 
-                    <div class="w-10/12 md:w-1/2 text-justify md:text-left font-normal space-y-4">
+                    <div class="w-10/12 md:w-1/2 text-justify md:text-left font-light space-y-4">
                         <p class="pb-10">
                             El procedimiento del servicio Rolex está diseñado para asegurar que todas y cada una de las
                             piezas que
@@ -123,7 +118,6 @@ import Button from '../../components/global-components/Button.vue';
                             garantizar el
                             nivel de calidad y fiabilidad que se espera de un reloj Rolex.
                         </p>
-                        <Button class=" text-left" :link="{name:'mantenimiento-rolex-procedimiento'}">Descubrir</Button>
                     </div>
 
 

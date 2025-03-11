@@ -1,10 +1,10 @@
 <script setup>
 
-import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-import RolexHeader from '../../components/RolexHeader.vue'
-import PageBanner from '../../components/banners-components/PageBanner.vue'
-import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
-import Button from '../../components/global-components/Button.vue';
+import RolexTemplate from '../RolexTemplate.view.vue'
+import RolexHeader from '../../../components/RolexHeader.vue'
+import PageBanner from '../../../components/banners-components/PageBanner.vue'
+import TwoSectionCard from '../../../components/cards/TwoSectionCard.vue'
+import Button from '../../../components/global-components/Button.vue';
 
 
 </script>

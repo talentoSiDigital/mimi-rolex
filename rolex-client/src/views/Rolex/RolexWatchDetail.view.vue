@@ -19,11 +19,13 @@ import { useElementHover } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
 import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
+import digitalDataLayer from "../../utils/digitalDataLayer";
 
 const myHoverableElement = ref();
 const isHovered = useElementHover(myHoverableElement);
 const myHoverableElement2 = ref();
 const isHovered2 = useElementHover(myHoverableElement2);
+
 const collections = {
   1: {
     nombre: "COSMOGRAPH DAYTONA",
@@ -90,6 +92,11 @@ const collections = {
     subHeader: "Ciudadano de las profundidades",
     idName: "sea-dweller",
   },
+  14: {
+    nombre: "DEEPSEA",
+    subHeader: "Relojes de submarinismo extremos",
+    idName: "deepsea",
+  },
 };
 
 
@@ -127,7 +134,12 @@ const checkLocation = computed(() => {
 let { isLoading, state, isReady, execute } = useAsyncState(
   RolexDataServices.getDetailedWatch(currentRoute)
     .then((d) => {
-      console.log(d.data);
+      console.log(d.data)
+      const family= collections[d.data.getAll.rolexCollectionId].idName
+      const rmc= d.data.getAll.modelo
+      useHead({
+        script: [`var digitalDataLayer = ${JSON.stringify(digitalDataLayer(family, rmc))}; `]
+      })
       return d.data;
     })
     .catch((e) => {
@@ -170,8 +182,7 @@ const messageInfo = ref({
 });
 
 const position = ref("-translate-x-0");
-const statusMessage = ref("asdasdasd");
-// const position = ref("translate-x-0")
+const statusMessage = ref("");
 let positionArray = ["translate-x-0", "-translate-x-1/3", "-translate-x-2/3"];
 function moveForm(pos) {
   if (messageInfo.value.message == "") {
@@ -186,7 +197,6 @@ function sendMessage() {
   mailDataService
     .rolexNewMail(messageInfo.value)
     .then((d) => {
-      console.log(d.data);
       statusMessage.value =
         "Su mensaje ha sido enviado con éxito al equipo de Rolex en Mimi Joyería";
       moveForm(2);
@@ -222,7 +232,6 @@ function sendMessage() {
               )} en Mimi Joyería, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex.`"
             />
           </Head>
-
           <section class="bg-white relative md:h-[85vh]">
             <div class="flex items-center justify-center w-full">
               <img
@@ -286,7 +295,7 @@ function sendMessage() {
                       class="flex items-center gap-4"
                     >
                       <font-awesome-icon
-                        :icon="['fas', 'comment']"
+                        :icon="['fab', 'whatsapp']"
                         class="text-md bg-rolex-brown-light-1 hover:bg-rolex-brown hover:text-white duration-200 cursor-pointer p-3 rounded-full"
                       />
                       <p>Chat</p>
@@ -757,7 +766,7 @@ function sendMessage() {
             class="bg-rolex-brown-light-2 flex flex-col justify-center items-center py-[10vh]"
           >
             <div class="w-10/12">
-              <SectionNavigationCard
+                <SectionNavigationCard
                 :img="`banners/new-banner-collections-${collections[state.getAll.rolexCollectionId].idName}`"
                 :link="{ name: `rolex-coleccion-${collections[state.getAll.rolexCollectionId].idName}` }"
                 class="w-full"

@@ -13,7 +13,7 @@ const cookieLog = ref(false);
 let externalScript = document.createElement("script");
 externalScript.setAttribute(
   "src",
-  "//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch-384bfb3a027c.min.js"
+  "//assets.adobedtm.com/7e3b3fa0902e/7ba12da1470f/launch-5de25e657d80.min.js"
 );
 
 // externalScript.setAttribute('src', '//assets.adobedtm.com/7e3b3fa0902e/db4a1bdd4eaa/launch-98ac5c6226e2-staging.min.js')

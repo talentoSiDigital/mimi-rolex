@@ -44,7 +44,6 @@ function addToCart(id) {
     if (!isUserLogged.status.value.loggedIn) {
         activateModal()
     } else {
-        console.log(user.id);
         StoreDataService.postAddToCart(id, user.id).then((d) => {
             router.replace('/carrito')
 

@@ -18,6 +18,7 @@ db.headerSlider = require("./headerSlider.model")(sequelize, Sequelize);
 db.rolex = require("./rolex.model")(sequelize, Sequelize)
 db.store = require("./store.model")(sequelize, Sequelize)
 db.user = require("./user.model")(sequelize, Sequelize)
+db.routes = require("./routes.model")(sequelize, Sequelize)
 
 const Cart = db.store.Cart;
 const CartProduct = db.store.CartProduct;

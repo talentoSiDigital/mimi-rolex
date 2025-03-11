@@ -31,6 +31,8 @@ app.use('/storage', express.static('storage'));
 // app.use(cors(corsOptions));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
 });
 
@@ -71,6 +73,7 @@ require('./app/api/auth.routes')(app);
 require('./app/api/user.routes')(app);
 require('./app/api/mail.routes')(app);
 require('./app/api/payment.routes')(app);
+require('./app/api/routes.routes')(app);
 
 
 

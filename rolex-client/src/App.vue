@@ -11,18 +11,17 @@ import PageLoader from "./components/global-components/PageLoader.vue";
 
 import { auth } from "./store/auth.module";
 import { useLoaderStore } from "./store/loaderState";
+import router from "./router";
 
 const route = useRoute()
 const { y} = useWindowScroll()
 const checkLoad = computed(()=>{
-  return y.value > 800? true : false
+  return y.value > 700? true : false
 })
-
 
 const piniaStore = auth();
 const loader = useLoaderStore()
 const isUserLogged = storeToRefs(piniaStore);
-
 
 </script>   
 

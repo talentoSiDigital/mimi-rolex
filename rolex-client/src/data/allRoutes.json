@@ -8,7 +8,8 @@
         "description": "Mimi Joyería se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex.",
         "link": "/rolex/descubre-rolex",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/descubre-rolex.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "2": {
         "title": "Mantenimiento",
@@ -18,7 +19,8 @@
         "description": "Mantenimiento y reparación de los relojes Rolex en Mimi Joyería",
         "link": "/rolex/mantenimiento",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/mantenimiento.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "3": {
         "title": "Procedimiento mantenimiento",
@@ -29,7 +31,8 @@
         "description": "Procedimiento de mantenimiento de los relojes Rolex en Mimi Joyería.",
         "link": "/rolex/procedimiento-mantenimiento",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-mantenimiento-2-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "4": {
         "title": "Watchmaking",
@@ -39,7 +42,8 @@
         "description": "«Savoir-faire» relojero de Rolex",
         "link": "/rolex/watchmaking",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/watchmaking.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "5": {
         "title": "Contacto",
@@ -49,7 +53,8 @@
         "description": "Póngase en contacto con nosotros",
         "link": "/rolex/contacto",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/contacto.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "6": {
         "title": "Formulario contacto",
@@ -60,7 +65,8 @@
         "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
         "link": "/rolex/formulario-contacto",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/contacto.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "7": {
         "title": "Nuevos relojes",
@@ -71,7 +77,8 @@
         "description": "Gracias por su interés en los relojes Rolex. Por favor, introduzca su mensaje a continuación y estaremos encantados de ayudarle.",
         "link": "/rolex/nuevos-relojes",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/nuevos-modelos.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "8": {
         "title": "Nuevos modelos 2024 - 1908",
@@ -85,7 +92,8 @@
         "description": "Rolex 1908 | Elegancia en movimiento",
         "link": "/rolex/nuevos-modelos-2024/1908",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-1908-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "9": {
         "title": "Nuevos modelos 2024 - Cosmograph Daytona",
@@ -100,7 +108,8 @@
         "description": "Cosmograph Daytona - Un icono que no deja de reinventarse",
         "link": "/rolex/nuevos-modelos-2024/cosmograph-daytona",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-cosmograph-daytona-mobile.webp ",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "10": {
         "title": "Nuevos modelos 2024 - Day-Date",
@@ -114,7 +123,8 @@
         "description": "Day Date | La armonía de las variaciones",
         "link": "/rolex/nuevos-modelos-2024/day-date",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-day-date-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "11": {
         "title": "Nuevos modelos 2024 - Deepsea",
@@ -128,7 +138,8 @@
         "description": "Rolex Deepsea | La luz de las profundidades",
         "link": "/rolex/nuevos-modelos-2024/deepsea",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-deepsea-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "12": {
         "title": "Nuevos modelos 2024 - GMT-Master II",
@@ -145,7 +156,8 @@
         "description": "GMT-Master II | El eco de las emociones",
         "link": "/rolex/nuevos-modelos-2024/gmt-master-ii",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-gmt-master-ii-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "13": {
         "title": "Nuevos modelos 2024 - Sky Dweller",
@@ -161,7 +173,8 @@
         "description": "Rolex Sky-Dweller | La sinfonía de los reflejos",
         "link": "/rolex/nuevos-modelos-2024/sky-dweller",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/new-watches/hub/rolex-new-watches-2024-sky-dweller-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "14": {
         "title": "World of Rolex",
@@ -173,7 +186,8 @@
         "description": "Durante casi un siglo, Rolex ha desarrollado colaboraciones con un grupo diverso y extraordinario de talentos de una miríada de disciplinas.",
         "link": "/rolex/world-of-rolex",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/world-of-rolex.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "15": {
         "title": "Viaje al corazon del universo Rolex",
@@ -188,7 +202,8 @@
         "description": "Hans Wilsdorf estaba íntimamente convencido de la capacidad del ser humano para innovar con la excelencia como objetivo.",
         "link": "/rolex/world-of-rolex/viaje-al-corazon-del-universo-rolex",
         "thumbnail": "https://mimijoyeria.com/assets/world-of-rolex/world-of-rolex-beyond-rolex-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "16": {
         "title": "SailGP",
@@ -200,7 +215,8 @@
         "description": "Rolex es Title Partner y Reloj Oficial exclusivo del Rolex SailGP Championship",
         "link": "/rolex/world-of-rolex/sail-gp",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-sail-gp-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "17": {
         "title": "Rolex Grand Slam",
@@ -212,7 +228,8 @@
         "description": "Considerado el mayor desafío de la equitación, el Rolex Grand Slam de Salto de Obstáculos recompensa al jinete que gana, consecutivamente, el Grand Prix en tres de los cuatro Majors de salto",
         "link": "/rolex/world-of-rolex/rolex-grand-slam",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-grand-slam-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "18": {
         "title": "Las 24 Horas de LeMans",
@@ -228,7 +245,8 @@
         "description": "La 92.a edición de las 24 Horas de Le Mans, carrera que celebra la resistencia y la excelencia del automovilismo, se celebra los días 15 y 16 de junio de 2024.",
         "link": "/rolex/world-of-rolex/las-24-horas-de-le-mans",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-lemans-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "19": {
         "title": "Rolex y The Championships Wimbledon",
@@ -241,7 +259,8 @@
         "description": "Rolex colaboró por primera vez con Wimbledon en 1978. El torneo de tenis más antiguo del mundo es el templo del tenis sobre hierba y del deporte original.",
         "link": "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-wimbledon-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "20": {
         "title": "Rolex y The Amundi Evian Championship",
@@ -255,7 +274,8 @@
         "description": "Rolex es Socio y Reloj Oficial del único Major de golf que se celebra en Europa continental.",
         "link": "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-admundi-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "21": {
         "title": "Rolex y The Open",
@@ -267,7 +287,8 @@
         "description": "The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año.",
         "link": "/rolex/world-of-rolex/rolex-y-the-open",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-the-open-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "22": {
         "title": "Rolex y The US Open",
@@ -280,7 +301,8 @@
         "description": "El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.",
         "link": "/rolex/world-of-rolex/rolex-y-the-us-open",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-the-us-open-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
     },
     "23": {
         "title": "Relojes Rolex",
@@ -291,7 +313,8 @@
         "description": "Esta selección de modelos Rolex proviene del catálogo oficial y no representa las existencias disponibles en la joyería.",
         "link": "/rolex/relojes",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/rolex-slider/coleccion-rolex.jpg",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "24": {
         "title": "Cosmograph Daytona",
@@ -302,7 +325,8 @@
         "description": "Colección Rolex Cosmograph Daytona",
         "link": "/rolex/cosmograph-daytona",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-cosmograph-daytona-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "25": {
         "title": "1908",
@@ -312,7 +336,8 @@
         "description": "Colección Rolex 1908 ",
         "link": "/rolex/1908",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-1908-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "26": {
         "title": "Yacht-Master",
@@ -322,7 +347,8 @@
         "description": "Colección Rolex Yacht-Master ",
         "link": "/rolex/yacht-master",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-yacht-master-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "27": {
         "title": "sky dweller",
@@ -334,7 +360,8 @@
         "description": "Colección Rolex sky dweller ",
         "link": "/rolex/sky-dweller",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-sky-dweller-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "28": {
         "title": "gmt master-ii",
@@ -345,7 +372,8 @@
         "description": "Colección Rolex gmt master-ii ",
         "link": "/rolex/gmt-master-ii",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-gmt-master-ii-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "29": {
         "title": "explorer",
@@ -355,7 +383,8 @@
         "description": "Colección Rolex explorer ",
         "link": "/rolex/explorer",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-explorer-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "30": {
         "title": "Oyster Perpetual",
@@ -366,7 +395,8 @@
         "description": "Colección Rolex Oyster Perpetual ",
         "link": "/rolex/oyster-perpetual",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-oyster-perpetual-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "31": {
         "title": "Day-Date",
@@ -376,7 +406,8 @@
         "description": "Colección Rolex Day-Date ",
         "link": "/rolex/day-date",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-day-date-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "32": {
         "title": "Datejust",
@@ -386,7 +417,8 @@
         "description": "Colección Rolex Datejust ",
         "link": "/rolex/datejust",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-datejust-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "33": {
         "title": "Lady Datejust",
@@ -398,7 +430,8 @@
         "description": "Colección Rolex Lady Datejust ",
         "link": "/rolex/lady-datejust",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-lady-datejust-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "34": {
         "title": "Air-King",
@@ -409,7 +442,8 @@
         "description": "Colección Rolex Air-King ",
         "link": "/rolex/air-king",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-air-king-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "35": {
         "title": "submariner",
@@ -419,7 +453,8 @@
         "description": "Colección Rolex Submariner ",
         "link": "/rolex/submariner",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-submariner-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "36": {
         "title": "Sea-Dweller",
@@ -432,7 +467,8 @@
         "description": "Colección Rolex Sea-Dweller ",
         "link": "/rolex/sea-dweller",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-sea-dweller-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "37": {
         "title": "Deepsea",
@@ -442,7 +478,8 @@
         "description": "Colección Rolex Deepsea ",
         "link": "/rolex/deepsea",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-collections-deepsea-mobile.webp",
-        "type": "pagina"
+        "type": "pagina",
+        "brand":"rolex"
     },
     "38": {
         "title": "Cosmograph daytona",
@@ -454,7 +491,8 @@
         "description": "Oyster, 40 mm, platino",
         "link": "/rolex/cosmograph-daytona-m126506-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126506-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "39": {
         "title": "Cosmograph daytona",
@@ -466,7 +504,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/cosmograph-daytona-m126515ln-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126515ln-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "40": {
         "title": "Cosmograph daytona",
@@ -478,7 +517,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/cosmograph-daytona-m126500ln-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126500ln-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "41": {
         "title": "Cosmograph daytona",
@@ -490,7 +530,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126503-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126503-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "42": {
         "title": "Cosmograph daytona",
@@ -502,7 +543,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/cosmograph-daytona-m126505-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126505-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "43": {
         "title": "Cosmograph daytona",
@@ -514,7 +556,8 @@
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126508-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126508-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "44": {
         "title": "Cosmograph daytona",
@@ -526,7 +569,8 @@
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/cosmograph-daytona-m126519ln-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126519ln-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "45": {
         "title": "Cosmograph daytona",
@@ -538,7 +582,8 @@
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/cosmograph-daytona-m126509-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126509-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "46": {
         "title": "Cosmograph daytona",
@@ -550,7 +595,8 @@
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/cosmograph-daytona-m126518ln-0012",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126518ln-0012-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "47": {
         "title": "Cosmograph Daytona",
@@ -562,7 +608,8 @@
         "description": "Oyster, 40 mm, oro Everose y diamantes",
         "link": "/rolex/cosmograph-daytona-m126535tbr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126535tbr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "48": {
         "title": "Cosmograph Daytona",
@@ -574,7 +621,8 @@
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/cosmograph-daytona-m126538tbr-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126538tbr-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "49": {
         "title": "Cosmograph Daytona",
@@ -586,7 +634,8 @@
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126539tbr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126539tbr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "50": {
         "title": "Cosmograph Daytona",
@@ -598,7 +647,8 @@
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126579rbr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126579rbr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "51": {
         "title": "Cosmograph Daytona",
@@ -610,7 +660,8 @@
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/cosmograph-daytona-m126589rbr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126589rbr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "52": {
         "title": "Cosmograph Daytona",
@@ -622,7 +673,8 @@
         "description": "Oyster, 40 mm, oro Everose y diamantes",
         "link": "/rolex/cosmograph-daytona-m126595tbr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126595tbr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "53": {
         "title": "Cosmograph Daytona",
@@ -634,7 +686,8 @@
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/cosmograph-daytona-m126598tbr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126598tbr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "54": {
         "title": "1908",
@@ -645,7 +698,8 @@
         "description": "39 mm, oro amarillo de 18 quilates, acabado pulido",
         "link": "/rolex/1908-m52508-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52508-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "55": {
         "title": "1908",
@@ -656,7 +710,8 @@
         "description": "39 mm, platino, acabado pulido",
         "link": "/rolex/1908-m52506-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52506-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "56": {
         "title": "1908",
@@ -667,7 +722,8 @@
         "description": "39 mm, oro blanco de 18 quilates, acabado pulido",
         "link": "/rolex/1908-m52509-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m52509-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "57": {
         "title": "Yacht-Master 42",
@@ -679,7 +735,8 @@
         "description": "Oyster, 42 mm, titanio RLX",
         "link": "/rolex/yacht-master-m226627-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226627-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "58": {
         "title": "Yacht-Master 42",
@@ -691,7 +748,8 @@
         "description": "Oyster, 42 mm, Oro amarillo",
         "link": "/rolex/yacht-master-m226658-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226658-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "59": {
         "title": "Yacht-Master 40",
@@ -703,7 +761,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel y Platino",
         "link": "/rolex/yacht-master-m126622-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126622-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "60": {
         "title": "Yacht-Master 40",
@@ -715,7 +774,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/yacht-master-m126655-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126655-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "61": {
         "title": "Yacht-Master 37",
@@ -727,7 +787,8 @@
         "description": "Oyster, 37 mm, oro Everose",
         "link": "/rolex/yacht-master-m268655-0019",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268655-0019-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "62": {
         "title": "Yacht-Master 37",
@@ -739,7 +800,8 @@
         "description": "Oyster, 37 mm, acero Oystersteel y Platino",
         "link": "/rolex/yacht-master-m268622-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268622-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "63": {
         "title": "Yacht-Master 42",
@@ -751,7 +813,8 @@
         "description": "Oyster, 42 mm, Oro blanco",
         "link": "/rolex/yacht-master-m226659-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226659-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "64": {
         "title": "Yacht-Master 40",
@@ -763,7 +826,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/yacht-master-m126621-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126621-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "65": {
         "title": "Yacht-Master 37",
@@ -775,7 +839,8 @@
         "description": "Oyster, 37 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/yacht-master-m268621-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m268621-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "66": {
         "title": "SKY-DWELLER",
@@ -786,7 +851,8 @@
         "description": "Oyster, 42 mm, Oro blanco",
         "link": "/rolex/sky-dweller-m336239-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336239-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "67": {
         "title": "SKY-DWELLER",
@@ -797,7 +863,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel y oro blanco ",
         "link": "/rolex/sky-dweller-m336934-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "68": {
         "title": "SKY-DWELLER",
@@ -808,7 +875,8 @@
         "description": "Oyster, 42 mm, Oro Amarillo",
         "link": "/rolex/sky-dweller-m336238-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336238-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "69": {
         "title": "SKY-DWELLER",
@@ -819,7 +887,8 @@
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336935-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "70": {
         "title": "SKY-DWELLER",
@@ -830,7 +899,8 @@
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336235-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336235-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "71": {
         "title": "SKY-DWELLER",
@@ -841,7 +911,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sky-dweller-m336933-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "72": {
         "title": "SKY-DWELLER",
@@ -852,7 +923,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/sky-dweller-m336934-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336934-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "73": {
         "title": "SKY-DWELLER",
@@ -863,7 +935,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sky-dweller-m336933-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336933-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "74": {
         "title": "Sky-Dweller",
@@ -874,7 +947,8 @@
         "description": "Oyster, 42 mm, oro Everose",
         "link": "/rolex/sky-dweller-m336935-0008",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336935-0008-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "75": {
         "title": "Sky-Dweller",
@@ -885,7 +959,8 @@
         "description": "Oyster, 42 mm, oro amarillo",
         "link": "/rolex/sky-dweller-m336938-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m336938-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "76": {
         "title": "GMT Master-II",
@@ -897,7 +972,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/gmt-master-ii-m126713grnr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126713grnr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "77": {
         "title": "GMT Master-II",
@@ -909,7 +985,8 @@
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/gmt-master-ii-m126718grnr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126718grnr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "78": {
         "title": "GMT Master-II",
@@ -921,7 +998,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/gmt-master-ii-m126715chnr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126715chnr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "79": {
         "title": "GMT Master-II",
@@ -933,7 +1011,8 @@
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/gmt-master-ii-m126719blro-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126719blro-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "80": {
         "title": "GMT Master-II",
@@ -945,7 +1024,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126720vtnr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126720vtnr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "81": {
         "title": "GMT Master-II",
@@ -957,7 +1037,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel y oro everose",
         "link": "/rolex/gmt-master-ii-m126711chnr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126711chnr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "82": {
         "title": "GMT Master-II",
@@ -969,7 +1050,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710blnr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710blnr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "83": {
         "title": "GMT-Master II",
@@ -983,7 +1065,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710grnr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "84": {
         "title": "GMT-Master II",
@@ -997,7 +1080,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/gmt-master-ii-m126710grnr-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126710grnr-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "85": {
         "title": "Explorer 36",
@@ -1009,7 +1093,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/explorer-m124273-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124273-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "86": {
         "title": "Explorer 40",
@@ -1021,7 +1106,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel ",
         "link": "/rolex/explorer-m224270-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m224270-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "87": {
         "title": "Explorer II",
@@ -1033,7 +1119,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel",
         "link": "/rolex/explorer-m226570-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "88": {
         "title": "Explorer II",
@@ -1045,7 +1132,8 @@
         "description": "Oyster, 42 mm, acero Oystersteel",
         "link": "/rolex/explorer-m226570-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m226570-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "89": {
         "title": "Explorer 36",
@@ -1057,7 +1145,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/explorer-m124270-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124270-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "90": {
         "title": "Oyster Perpetual 36",
@@ -1070,7 +1159,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m126000-0009",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0009-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "91": {
         "title": "Oyster Perpetual 34",
@@ -1083,7 +1173,8 @@
         "description": "Oyster, 34 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124200-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124200-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "92": {
         "title": "Oyster Perpetual 41",
@@ -1096,7 +1187,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124300-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "93": {
         "title": "Oyster Perpetual 41",
@@ -1109,7 +1201,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m124300-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124300-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "94": {
         "title": "Oyster Perpetual 28",
@@ -1122,7 +1215,8 @@
         "description": "Oyster, 28 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m276200-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m276200-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "95": {
         "title": "Oyster Perpetual 36",
@@ -1135,7 +1229,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m126000-0008",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126000-0008-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "96": {
         "title": "Oyster Perpetual 31",
@@ -1148,7 +1243,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m277200-0007",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0007-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "97": {
         "title": "Oyster Perpetual 31",
@@ -1161,7 +1257,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/oyster-perpetual-m277200-0010",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m277200-0010-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "98": {
         "title": "Day-Date 40",
@@ -1173,7 +1270,8 @@
         "description": "Oyster, 40 mm, platino",
         "link": "/rolex/day-date-m228236-0012",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228236-0012-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "99": {
         "title": "Day-Date 36",
@@ -1185,7 +1283,8 @@
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m128345rbr-0068",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128345rbr-0068-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "100": {
         "title": "Day-Date 36",
@@ -1197,7 +1296,8 @@
         "description": "Oyster, 36 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m128349rbr-0031",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128349rbr-0031-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "101": {
         "title": "Day-Date 36",
@@ -1209,7 +1309,8 @@
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128348rbr-0049",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128348rbr-0049-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "102": {
         "title": "Day-Date 36",
@@ -1221,7 +1322,8 @@
         "description": "Oyster, 36 mm, oro blanco ",
         "link": "/rolex/day-date-m128239-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "103": {
         "title": "Day-Date 36",
@@ -1233,7 +1335,8 @@
         "description": "Oyster, 36 mm, platino y diamantes",
         "link": "/rolex/day-date-m128396tbr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128396tbr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "104": {
         "title": "Day-Date 36",
@@ -1245,7 +1348,8 @@
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0009",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0009-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "105": {
         "title": "Day-Date 40",
@@ -1257,7 +1361,8 @@
         "description": "Oyster, 40 mm, oro amarillo ",
         "link": "/rolex/day-date-m228238-0042",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0042-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "106": {
         "title": "Day-Date 40",
@@ -1269,7 +1374,8 @@
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m228349rbr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "107": {
         "title": "Day-Date 40",
@@ -1281,7 +1387,8 @@
         "description": "Oyster, 36 mm, platino y diamantes",
         "link": "/rolex/day-date-m228396tbr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228396tbr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "108": {
         "title": "Day-Date 40",
@@ -1293,7 +1400,8 @@
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m228345rbr-0016",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228345rbr-0016-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "109": {
         "title": "Day-Date 40",
@@ -1305,7 +1413,8 @@
         "description": "Oyster, 40 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m228349rbr-0040",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228349rbr-0040-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "110": {
         "title": "Day-Date 40",
@@ -1317,7 +1426,8 @@
         "description": "Oyster, 40 mm, oro amarillo ",
         "link": "/rolex/day-date-m228238-0059",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0059-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "111": {
         "title": "Day-Date 40",
@@ -1329,7 +1439,8 @@
         "description": "Oyster, 40 mm, oro blanco ",
         "link": "/rolex/day-date-m228239-0033",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0033-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "112": {
         "title": "Day-Date 40",
@@ -1341,7 +1452,8 @@
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m228348rbr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228348rbr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "113": {
         "title": "Day-Date 40",
@@ -1353,7 +1465,8 @@
         "description": "Oyster, 40 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m228398tbr-0036",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228398tbr-0036-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "114": {
         "title": "Day-Date 36",
@@ -1365,7 +1478,8 @@
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0037",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0037-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "115": {
         "title": "Day-Date 36",
@@ -1377,7 +1491,8 @@
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0070",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0070-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "116": {
         "title": "Day-Date 36",
@@ -1389,7 +1504,8 @@
         "description": "Oyster, 36 mm, oro Everose",
         "link": "/rolex/day-date-m128235-0078",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128235-0078-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "117": {
         "title": "Day-Date 36",
@@ -1401,7 +1517,8 @@
         "description": "Oyster, 36 mm, platino",
         "link": "/rolex/day-date-m128236-0018",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128236-0018-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "118": {
         "title": "Day-Date 36",
@@ -1413,7 +1530,8 @@
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0022",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0022-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "119": {
         "title": "Day-Date 36",
@@ -1425,7 +1543,8 @@
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0045",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0045-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "120": {
         "title": "Day-Date 36",
@@ -1437,7 +1556,8 @@
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0113",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0113-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "121": {
         "title": "Day-Date 36",
@@ -1449,7 +1569,8 @@
         "description": "Oyster, 36 mm, oro amarillo",
         "link": "/rolex/day-date-m128238-0118",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128238-0118-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "122": {
         "title": "Day-Date 36",
@@ -1461,7 +1582,8 @@
         "description": "Oyster, 36 mm, oro blanco",
         "link": "/rolex/day-date-m128239-0063",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0063-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "123": {
         "title": "Day-Date 36",
@@ -1473,7 +1595,8 @@
         "description": "Oyster, 36 mm, oro blanco",
         "link": "/rolex/day-date-m128239-0065",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128239-0065-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "124": {
         "title": "Day-Date 36",
@@ -1485,7 +1608,8 @@
         "description": "Oyster, 36 mm, oro Everose y diamantes",
         "link": "/rolex/day-date-m128395tbr-0032",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128395tbr-0032-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "125": {
         "title": "Day-Date 36",
@@ -1497,7 +1621,8 @@
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128398tbr-0035",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0035-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "126": {
         "title": "Day-Date 36",
@@ -1509,7 +1634,8 @@
         "description": "Oyster, 36 mm, oro amarillo y diamantes",
         "link": "/rolex/day-date-m128398tbr-0037",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128398tbr-0037-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "127": {
         "title": "Day-Date 36",
@@ -1521,7 +1647,8 @@
         "description": "Oyster, 36 mm, oro blanco y diamantes",
         "link": "/rolex/day-date-m128399tbr-0029",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m128399tbr-0029-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "128": {
         "title": "Day-Date 40",
@@ -1533,7 +1660,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "129": {
         "title": "Day-Date 40",
@@ -1545,7 +1673,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0055",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0055-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "130": {
         "title": "Day-Date 40",
@@ -1557,7 +1686,8 @@
         "description": "Oyster, 40 mm, oro Everose",
         "link": "/rolex/day-date-m228235-0056",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228235-0056-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "131": {
         "title": "Day-Date 40",
@@ -1569,7 +1699,8 @@
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/day-date-m228238-0069",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0069-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "132": {
         "title": "Day-Date 40",
@@ -1581,7 +1712,8 @@
         "description": "Oyster, 40 mm, oro amarillo",
         "link": "/rolex/day-date-m228238-0071",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228238-0071-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "133": {
         "title": "Day-Date 40",
@@ -1593,7 +1725,8 @@
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/day-date-m228239-0076",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0076-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "134": {
         "title": "Day-Date 40",
@@ -1605,7 +1738,8 @@
         "description": "Oyster, 40 mm, oro blanco",
         "link": "/rolex/day-date-m228239-0078",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m228239-0078-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "135": {
         "title": "Datejust 36",
@@ -1617,7 +1751,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126234-0051",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0051-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "136": {
         "title": "Datejust 41",
@@ -1629,7 +1764,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0019",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0019-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "137": {
         "title": "Datejust 41",
@@ -1641,7 +1777,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/datejust-m126300-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126300-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "138": {
         "title": "Datejust 41",
@@ -1653,7 +1790,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0010",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0010-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "139": {
         "title": "Datejust 41",
@@ -1665,7 +1803,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126333-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126333-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "140": {
         "title": "Datejust 36",
@@ -1677,7 +1816,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m126284rbr-0011",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126284rbr-0011-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "141": {
         "title": "Datejust 41",
@@ -1689,7 +1829,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126303-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126303-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "142": {
         "title": "Datejust 36",
@@ -1701,7 +1842,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/datejust-m126283rbr-0012",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126283rbr-0012-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "143": {
         "title": "Datejust 31",
@@ -1713,7 +1855,8 @@
         "description": "Oyster, 31 mm, oro blanco y diamantes",
         "link": "/rolex/datejust-m278289rbr-0019",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278289rbr-0019-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "144": {
         "title": "Datejust 31",
@@ -1725,7 +1868,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m278384rbr-0008",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278384rbr-0008-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "145": {
         "title": "Datejust 31",
@@ -1737,7 +1881,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m278273-0019",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278273-0019-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "146": {
         "title": "Datejust 31",
@@ -1749,7 +1894,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m278274-0018",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278274-0018-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "147": {
         "title": "Datejust 36",
@@ -1761,7 +1907,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m126233-0018",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0018-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "148": {
         "title": "Datejust 31",
@@ -1773,7 +1920,8 @@
         "description": "Oyster, 31 mm, oro amarillo ",
         "link": "/rolex/datejust-m278288rbr-0038",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0038-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "149": {
         "title": "Datejust 31",
@@ -1785,7 +1933,8 @@
         "description": "Oyster, 31 mm, oro amarillo y diamantes",
         "link": "/rolex/datejust-m278288rbr-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278288rbr-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "150": {
         "title": "Datejust 31",
@@ -1797,7 +1946,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes ",
         "link": "/rolex/datejust-m278343rbr-0016",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278343rbr-0016-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "151": {
         "title": "Datejust 41",
@@ -1809,7 +1959,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose ",
         "link": "/rolex/datejust-m126331-0016",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0016-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "152": {
         "title": "Datejust 31",
@@ -1821,7 +1972,8 @@
         "description": "Oyster, 31 mm, oro Everose y diamantes",
         "link": "/rolex/datejust-m278285rbr-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278285rbr-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "153": {
         "title": "Datejust 36",
@@ -1833,7 +1985,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo ",
         "link": "/rolex/datejust-m126233-0035",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126233-0035-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "154": {
         "title": "Datejust 31",
@@ -1845,7 +1998,8 @@
         "description": "Oyster, 31 mm, oro Everose",
         "link": "/rolex/datejust-m278275-0029",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278275-0029-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "155": {
         "title": "Datejust 41",
@@ -1857,7 +2011,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126331-0007",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0007-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "156": {
         "title": "Datejust 41",
@@ -1869,7 +2024,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126334-0006",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0006-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "157": {
         "title": "Deepsea Challenge",
@@ -1881,7 +2037,8 @@
         "description": "Oyster, 50 mm, titanio RLX",
         "link": "/rolex/datejust-m126067-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126067-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "158": {
         "title": "Datejust 36",
@@ -1893,7 +2050,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel",
         "link": "/rolex/datejust-m126200-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126200-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "159": {
         "title": "Datejust 36",
@@ -1905,7 +2063,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126201-0013",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126201-0013-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "160": {
         "title": "Datejust 36",
@@ -1917,7 +2076,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/datejust-m126203-0020",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126203-0020-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "161": {
         "title": "Datejust 36",
@@ -1929,7 +2089,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126231-0016",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0016-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "162": {
         "title": "Datejust 36",
@@ -1941,7 +2102,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126231-0020",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126231-0020-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "163": {
         "title": "Datejust 36",
@@ -1953,7 +2115,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126234-0037",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126234-0037-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "164": {
         "title": "Datejust 36",
@@ -1965,7 +2128,8 @@
         "description": "Oyster, 36 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m126281rbr-0016",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126281rbr-0016-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "165": {
         "title": "Datejust 41",
@@ -1977,7 +2141,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m126331-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126331-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "166": {
         "title": "Datejust 41",
@@ -1989,7 +2154,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro blanco",
         "link": "/rolex/datejust-m126334-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126334-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "167": {
         "title": "Datejust 31",
@@ -2001,7 +2167,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel",
         "link": "/rolex/datejust-m278240-0018",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278240-0018-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "168": {
         "title": "Datejust 31",
@@ -2013,7 +2180,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m278241-0018",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278241-0018-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "169": {
         "title": "Datejust 31",
@@ -2025,7 +2193,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel y oro Everose",
         "link": "/rolex/datejust-m278271-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278271-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "170": {
         "title": "Datejust 31",
@@ -2037,7 +2206,8 @@
         "description": "Oyster, 31 mm, oro amarillo",
         "link": "/rolex/datejust-m278278-0032",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278278-0032-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "171": {
         "title": "Datejust 31",
@@ -2049,7 +2219,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m278341rbr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278341rbr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "172": {
         "title": "Datejust 31",
@@ -2061,7 +2232,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/datejust-m278344rbr-0021",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278344rbr-0021-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "173": {
         "title": "Datejust 31",
@@ -2073,7 +2245,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/datejust-m278381rbr-0023",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278381rbr-0023-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "174": {
         "title": "Datejust 31",
@@ -2085,7 +2258,8 @@
         "description": "Oyster, 31 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/datejust-m278383rbr-0025",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m278383rbr-0025-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "175": {
         "title": "Lady-Datejust",
@@ -2098,7 +2272,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
         "link": "/rolex/lady-datejust-m279174-0020",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0020-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "176": {
         "title": "Lady-Datejust",
@@ -2111,7 +2286,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel y oro blanco",
         "link": "/rolex/lady-datejust-m279174-0015",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279174-0015-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "177": {
         "title": "Lady-Datejust",
@@ -2124,7 +2300,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279384rbr-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "178": {
         "title": "Lady-Datejust",
@@ -2137,7 +2314,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel y oro amarillo",
         "link": "/rolex/lady-datejust-m279173-0012",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279173-0012-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "179": {
         "title": "Lady-Datejust",
@@ -2150,7 +2328,8 @@
         "description": "Oyster, 28 mm, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279139rbr-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279139rbr-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "180": {
         "title": "Lady-Datejust",
@@ -2163,7 +2342,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel y oro Everose",
         "link": "/rolex/lady-datejust-m279171-0007",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279171-0007-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "181": {
         "title": "Lady-Datejust",
@@ -2176,7 +2356,8 @@
         "description": "Oyster, 28 mm, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279138rbr-0015",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279138rbr-0015-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "182": {
         "title": "Lady-Datejust",
@@ -2189,7 +2370,8 @@
         "description": "Oyster, 28 mm, Acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279381rbr-0013",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0013-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "183": {
         "title": "Lady-Datejust",
@@ -2202,7 +2384,8 @@
         "description": "Oyster, 28 mm, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279458rbr-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279458rbr-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "184": {
         "title": "Lady-Datejust",
@@ -2215,7 +2398,8 @@
         "description": "Oyster, 28 mm, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279135rbr-0021",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279135rbr-0021-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "185": {
         "title": "Lady-Datejust",
@@ -2228,7 +2412,8 @@
         "description": "Oyster, 28 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/lady-datejust-m279163-0023",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279163-0023-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "186": {
         "title": "Lady-Datejust",
@@ -2241,7 +2426,8 @@
         "description": "Oyster, 28 mm, oro Everose",
         "link": "/rolex/lady-datejust-m279175-0020",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279175-0020-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "187": {
         "title": "Lady-Datejust",
@@ -2254,7 +2440,8 @@
         "description": "Oyster, 28 mm, oro amarillo",
         "link": "/rolex/lady-datejust-m279178-0013",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279178-0013-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "188": {
         "title": "Lady-Datejust",
@@ -2267,7 +2454,8 @@
         "description": "Oyster, 28 mm, acero Oystersteel, oro Everose y diamantes",
         "link": "/rolex/lady-datejust-m279381rbr-0004",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279381rbr-0004-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "189": {
         "title": "Lady-Datejust",
@@ -2280,7 +2468,8 @@
         "description": "Oyster, 28 mm, acero Oystersteel, oro amarillo y diamantes",
         "link": "/rolex/lady-datejust-m279383rbr-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279383rbr-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "190": {
         "title": "Lady-Datejust",
@@ -2293,7 +2482,8 @@
         "description": "Oyster, 28 mm, acero Oystersteel, oro blanco y diamantes",
         "link": "/rolex/lady-datejust-m279384rbr-0011",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m279384rbr-0011-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "191": {
         "title": "Air-king",
@@ -2304,7 +2494,8 @@
         "description": "Oyster, 40 mm, acero Oystersteel",
         "link": "/rolex/air-king-m126900-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126900-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "192": {
         "title": "Submariner",
@@ -2315,7 +2506,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m124060-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m124060-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "193": {
         "title": "Submariner Date",
@@ -2327,7 +2519,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m126610lv-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126610lv-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "194": {
         "title": "Submariner Date",
@@ -2339,7 +2532,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/submariner-m126613lb-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126613lb-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "195": {
         "title": "Submariner Date",
@@ -2351,7 +2545,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel",
         "link": "/rolex/submariner-m126610ln-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126610ln-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "196": {
         "title": "Submariner Date",
@@ -2363,7 +2558,8 @@
         "description": "Oyster, 41 mm, oro amarillo",
         "link": "/rolex/submariner-m126618lb-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126618lb-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "197": {
         "title": "Submariner Date",
@@ -2375,7 +2571,8 @@
         "description": "Oyster, 41 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/submariner-m126613ln-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126613ln-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "198": {
         "title": "Submariner Date",
@@ -2387,7 +2584,8 @@
         "description": "Oyster, 41 mm, oro amarillo",
         "link": "/rolex/submariner-m126618ln-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126618ln-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "199": {
         "title": "Submariner Date",
@@ -2399,7 +2597,8 @@
         "description": "Oyster, 41 mm, oro blanco",
         "link": "/rolex/submariner-m126619lb-0003",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126619lb-0003-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "200": {
         "title": "Rolex Sea-Dweller",
@@ -2412,7 +2611,8 @@
         "description": "Oyster, 43 mm, acero Oystersteel y oro amarillo",
         "link": "/rolex/sea-dweller-m126603-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126603-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "201": {
         "title": "Rolex Sea-Dweller",
@@ -2425,7 +2625,8 @@
         "description": "Oyster, 43 mm, acero Oystersteel ",
         "link": "/rolex/sea-dweller-m126600-0002",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m126600-0002-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "202": {
         "title": "Rolex Deepsea",
@@ -2437,7 +2638,8 @@
         "description": "Oyster, 44 mm, acero Oystersteel",
         "link": "/rolex/deepsea-m136660-0005",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m136660-0005-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "203": {
         "title": "Rolex Deepsea",
@@ -2449,7 +2651,8 @@
         "description": "Oyster, 44 mm, oro amarillo",
         "link": "/rolex/deepsea-m136668lb-0001",
         "thumbnail": "https://mimijoyeria.com/storage/rolex-relojes-new/m136668lb-0001-showcase.webp",
-        "type": "reloj"
+        "type": "reloj",
+        "brand":"rolex"
     },
     "204": {
         "title": "Rolex y la Filarmónica de Viena",
@@ -2461,6 +2664,900 @@
         "description": "Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009, Patrocinador Exclusivo del Concierto de Año Nuevo.",
         "link": "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
         "thumbnail": "https://mimijoyeria.com/assets/routes-assets/world-of-rolex/world-of-rolex-main-mobile.webp",
-        "type": "articulo"
+        "type": "articulo",
+        "brand":"rolex"
+    },
+    "205": {
+        "title": "Joyería",
+        "keywords": [
+            "joyería"
+        ],
+        "description": "Descubre un mundo de opciones en joyería para ti.",
+        "link": "https://mimijoyeria.com/joyeria",
+        "thumbnail": "https://mimijoyeria.com/",
+        "type": "page"
+    },
+    "206": {
+        "title": "Nacimiento",
+        "keywords": [
+            "nacimiento"
+        ],
+        "description": "Nos sumamos a la enorme felicidad de recibir una nueva vida y te acompañamos en este momento tan especial.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/joyeria/joyeria-1.webp",
+        "type": "page"
+    },
+    "207": {
+        "title": "Compromiso",
+        "keywords": [
+            "compromiso"
+        ],
+        "description": "El inicio de una nueva etapa juntos.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/joyeria/joyeria-4.webp",
+        "type": "page"
+    },
+    "208": {
+        "title": "Graduacion",
+        "keywords": [
+            "graduacion"
+        ],
+        "description": "El éxito en la vida no se mide por lo que logras, sino por los obstáculos que superas, es por eso que queremos acompañarte en este momento tan valioso.",
+        "link": "https://mimijoyeria.com/joyeria/graduacion",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/joyeria/joyeria-3.webp",
+        "type": "page"
+    },
+    "209": {
+        "title": "Regalos",
+        "keywords": [
+            "regalos"
+        ],
+        "description": "Complementa tu brillo con joyas únicas y especiales que resalten tu lado más elegante.",
+        "link": "https://mimijoyeria.com/joyeria/regalos",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/joyeria/joyeria-6.webp",
+        "type": "page"
+    },
+    "210": {
+        "title": "Anillo 22206",
+        "keywords": [
+            "anillo",
+            "22206"
+        ],
+        "description": "Aros Matrimoniales (El Par) en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio/anillo-8357",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/anillo-8357-1.webp",
+        "type": "article"
+    },
+    "211": {
+        "title": "Anillo 22190",
+        "keywords": [
+            "anillo",
+            "22190"
+        ],
+        "description": "Anillo Solitario en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio/anillo-8358",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/anillo-8358-1.webp",
+        "type": "article"
+    },
+    "212": {
+        "title": "Anillo 8361",
+        "keywords": [
+            "anillo",
+            "8361"
+        ],
+        "description": "Anillo Solitario en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio/anillo-8361",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/anillo-8361-1.webp",
+        "type": "article"
+    },
+    "213": {
+        "title": "Anillo 8362",
+        "keywords": [
+            "anillo",
+            "8362"
+        ],
+        "description": "Anillos solitarios en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio/anillo-8362",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/anillo-8362-1.webp",
+        "type": "article"
+    },
+    "214": {
+        "title": "Anillo 22198",
+        "keywords": [
+            "anillo",
+            "22198"
+        ],
+        "description": "Aros Matrimoniales Anatomicos  en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/compromiso-y-matrimonio/anillo-8439",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/anillo-8439-1.webp",
+        "type": "article"
+    },
+    "215": {
+        "title": "Argolla 1098",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "1098"
+        ],
+        "description": "Argollas en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-1098",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-1098-1.webp",
+        "type": "article"
+    },
+    "216": {
+        "title": "Argolla 1099",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "1099"
+        ],
+        "description": "Argollas Bicolor en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-1099",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-1099-1.webp",
+        "type": "article"
+    },
+    "217": {
+        "title": "Argolla 1100",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "1100"
+        ],
+        "description": "Argolla Oro Amarillo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-1100",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-1100-1.webp",
+        "type": "article"
+    },
+    "218": {
+        "title": "Argolla 8400",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8400"
+        ],
+        "description": "Argollas Entorchadas en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8300",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8300-1.webp",
+        "type": "article"
+    },
+    "219": {
+        "title": "Argolla 8387",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8387"
+        ],
+        "description": "Argollas Diamantadas Oro Amarillo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8387",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8387-1.webp",
+        "type": "article"
+    },
+    "220": {
+        "title": "Argolla 8388",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8388"
+        ],
+        "description": "Argollas Especiales en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8388",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8388-1.webp",
+        "type": "article"
+    },
+    "221": {
+        "title": "Argolla 8389",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8389"
+        ],
+        "description": "Argollas en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8389",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8389-1.webp",
+        "type": "article"
+    },
+    "222": {
+        "title": "Argolla 8391",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8391"
+        ],
+        "description": "Huggies 3 Colores en Oro 18 Kilates",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8391",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8391-1.webp",
+        "type": "article"
+    },
+    "223": {
+        "title": "Argolla 8395",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8395"
+        ],
+        "description": "Argollas Ovaldas en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8395",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8395-1.webp",
+        "type": "article"
+    },
+    "224": {
+        "title": "Argolla 8408",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8408"
+        ],
+        "description": "Argollas Entorchadas en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8408",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8408-1.webp",
+        "type": "article"
+    },
+    "225": {
+        "title": "Argolla 8418",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8418"
+        ],
+        "description": "Argollas con Turquesa en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8418",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8418-1.webp",
+        "type": "article"
+    },
+    "226": {
+        "title": "Argolla 8419",
+        "keywords": [
+            "argolla",
+            "argollas",
+            "8419"
+        ],
+        "description": "Argollas con Coral en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/argolla-8419",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/argolla-8419-1.webp",
+        "type": "article"
+    },
+    "227": {
+        "title": "Rosario 8341",
+        "keywords": [
+            "rosario",
+            "8341"
+        ],
+        "description": "Rosario en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/copia-de-rosario-8341",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/copia-de-rosario-8341-1.webp",
+        "type": "article"
+    },
+    "228": {
+        "title": "Dije 8245",
+        "keywords": [
+            "dije",
+            "8245"
+        ],
+        "description": "Medalla Virgen del Valle en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/dije-8245",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/dije-8245-1.webp",
+        "type": "article"
+    },
+    "229": {
+        "title": "Nacimiento 8273",
+        "keywords": [
+            "nacimiento",
+            "8273"
+        ],
+        "description": "Oro 18K.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/nacimiento-8273",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/nacimiento-8273-1.webp",
+        "type": "article"
+    },
+    "230": {
+        "title": "Nacimiento 8311",
+        "keywords": [
+            "nacimiento",
+            "8311"
+        ],
+        "description": "Oro 18K",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/nacimiento-8311",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/nacimiento-8311-1.webp",
+        "type": "article"
+    },
+    "231": {
+        "title": "Nacimiento 8321",
+        "keywords": [
+            "nacimiento",
+            "8321"
+        ],
+        "description": "Oro 18K.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/nacimiento-8321",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/nacimiento-8321-1.webp",
+        "type": "article"
+    },
+    "232": {
+        "title": "Nacimiento 8324",
+        "keywords": [
+            "nacimiento",
+            "8324"
+        ],
+        "description": "Oro 18K.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/nacimiento-8324",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/nacimiento-8324-1.webp",
+        "type": "article"
+    },
+    "233": {
+        "title": "Nacimiento 8326",
+        "keywords": [
+            "nacimiento",
+            "8326"
+        ],
+        "description": "Oro 18K.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/nacimiento-8326",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/nacimiento-8326-1.webp",
+        "type": "article"
+    },
+    "234": {
+        "title": "Pulsera 1089",
+        "keywords": [
+            "pulsera",
+            "1089"
+        ],
+        "description": "Pulsera Tipo Rosario 3 Colores en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/pulsera-1089",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/pulsera-1089-1.webp",
+        "type": "article"
+    },
+    "235": {
+        "title": "Pulsera 1091",
+        "keywords": [
+            "pulsera",
+            "1091"
+        ],
+        "description": "Pulsera Neopreno Oro Amarillo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/pulsera-1092",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/pulsera-1092-1.webp",
+        "type": "article"
+    },
+    "236": {
+        "title": "Pulsera 1094",
+        "keywords": [
+            "pulsera",
+            "1094"
+        ],
+        "description": "Pulsera Bicolor en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/pulsera-1094",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/pulsera-1094-1.webp",
+        "type": "article"
+    },
+    "237": {
+        "title": "Pulsera 8335",
+        "keywords": [
+            "pulsera",
+            "8335"
+        ],
+        "description": "Pulsera con Bolitas y Corazon en Oro 18 kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/pulsera-8335",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/pulsera-8335-1.webp",
+        "type": "article"
+    },
+    "238": {
+        "title": "Pulsera 8336",
+        "keywords": [
+            "pulsera",
+            "8336"
+        ],
+        "description": "Pulsera de Corazones con  3 Colores en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/pulsera-8336",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/pulsera-8336-1.webp",
+        "type": "article"
+    },
+    "239": {
+        "title": "Rosario 1093",
+        "keywords": [
+            "rosario",
+            "1093"
+        ],
+        "description": "Rosario de 3 Colores en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/rosario-1093",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/rosario-1093-1.webp",
+        "type": "article"
+    },
+    "240": {
+        "title": "Rosario 1111",
+        "keywords": [
+            "rosario",
+            "1111"
+        ],
+        "description": "Rosario de oro 18k.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/rosario-1111",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/rosario-1111-1.webp",
+        "type": "article"
+    },
+    "241": {
+        "title": "Rosario 8340",
+        "keywords": [
+            "rosario",
+            "8340"
+        ],
+        "description": "Rosario 3 Colores en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/rosario-8340",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/rosario-8340-1.webp",
+        "type": "article"
+    },
+    "242": {
+        "title": "Rosario 8342",
+        "keywords": [
+            "rosario",
+            "8342"
+        ],
+        "description": "Rosario Oro Amarillo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/regalos/rosario-8342",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/rosario-8342-1.webp",
+        "type": "article"
+    },
+    "243": {
+        "title": "Zarcillo 8294",
+        "keywords": [
+            "zarcillo",
+            "8294"
+        ],
+        "description": "Abridores de Mariposa 2 Colores en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8294",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8294-1.webp",
+        "type": "article"
+    },
+    "244": {
+        "title": "Zarcillo 8296",
+        "keywords": [
+            "zarcillo",
+            "8296"
+        ],
+        "description": "Abridor Tipo Clavo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8296",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8296-1.webp",
+        "type": "article"
+    },
+    "245": {
+        "title": "Zarcillo 8301",
+        "keywords": [
+            "zarcillo",
+            "8301"
+        ],
+        "description": "Abridor con Perla en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8301",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8301-1.webp",
+        "type": "article"
+    },
+    "246": {
+        "title": "Zarcillo 8425",
+        "keywords": [
+            "zarcillo",
+            "8425"
+        ],
+        "description": "Zarcillos de Bolita en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8425",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8425-1.webp",
+        "type": "article"
+    },
+    "247": {
+        "title": "Zarcillo 8427",
+        "keywords": [
+            "zarcillo",
+            "8427"
+        ],
+        "description": "Zarcillos Media Bola Diamantada en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8427",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8427-1.webp",
+        "type": "article"
+    },
+    "248": {
+        "title": "Zarcillo 8429",
+        "keywords": [
+            "zarcillo",
+            "8429"
+        ],
+        "description": "Zarcillos Corazon Oro Amarillo en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8429",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8429-1.webp",
+        "type": "article"
+    },
+    "249": {
+        "title": "Zarcillo 8433",
+        "keywords": [
+            "zarcillo",
+            "8433"
+        ],
+        "description": "Zarcillos de Estrellas en 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8433",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8433-1.webp",
+        "type": "article"
+    },
+    "250": {
+        "title": "Zarcillo 8437",
+        "keywords": [
+            "zarcillo",
+            "8437"
+        ],
+        "description": "Zarcillos con Delfin en Oro 18 Kilates.",
+        "link": "https://mimijoyeria.com/joyeria/nacimiento-y-bautizos/zarcillo-8437",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/zarcillo-8437-1.webp",
+        "type": "article"
+    },
+    "251": {
+        "title": "Sobre Mimi",
+        "keywords": [
+            "sobre",
+            "mimi"
+        ],
+        "description": "Mimi Joyería nace en la ciudad de Caracas el 23 de marzo de 1982, con la firme intención de estar siempre presente en los momentos especiales",
+        "link": "https://mimijoyeria.com/sobre-mimi",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/sobre-mimi.webp",
+        "type": "page"
+    },
+    "252": {
+        "title": "Contacto",
+        "keywords": [
+            "contacto"
+        ],
+        "description": "",
+        "link": "https://mimijoyeria.com/contactenos",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/historia/historia-1.webp",
+        "type": "page"
+    },
+    "253": {
+        "title": "Iniciar sesión",
+        "keywords": [
+            "iniciar",
+            "sesión"
+        ],
+        "description": "Inicia sesíon con tu cuenta",
+        "link": "https://mimijoyeria.com/login",
+        "thumbnail": "https://mimijoyeria.com/assets/mimi-logo-gray.svg",
+        "type": "page"
+    },
+    "254": {
+        "title": "Registrar",
+        "keywords": [
+            "registrar"
+        ],
+        "description": "Registrate para acceder a nuestras compras en línea",
+        "link": "https://mimijoyeria.com/registrar",
+        "thumbnail": "https://mimijoyeria.com/assets/mimi-logo-gray.svg",
+        "type": "page"
+    },
+    "255": {
+        "title": "Carrito",
+        "keywords": [
+            "carrito"
+        ],
+        "description": "Chequea tu carrito de compras",
+        "link": "https://mimijoyeria.com/carrito",
+        "thumbnail": "https://mimijoyeria.com/assets/mimi-logo-gray.svg",
+        "type": "page"
+    },
+    "256": {
+        "title": "Tudor",
+        "keywords": [
+            "tudor"
+        ],
+        "description": "Tudor es una marca de relojería suiza que ofrece relojes mecánicos con un estilo sofisticado, y una fiabilidad probada.",
+        "link": "https://mimijoyeria.com/tudor",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-tudor-mobile.webp",
+        "type": "page"
+    },
+    "257": {
+        "title": "Relojes Tudor",
+        "keywords": [
+            "relojes",
+            "tudor"
+        ],
+        "description": "Descubre la coleccíon de relojes Tudor que tenemos disponibles para ti.",
+        "link": "https://mimijoyeria.com/tudor",
+        "thumbnail": "https://mimijoyeria.com/assets/routes-assets/banners/new-banner-tudor-mobile.webp",
+        "type": "page"
+    },
+    "258": {
+        "title": "Black Bay Bronze 43mm",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "bronze",
+            "43mm",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Bronze 43mm de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79250ba-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79250ba-0002-1.webp",
+        "type": "tudor"
+    },
+    "259": {
+        "title": "Black Bay Fifty-Eight",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "fifty-eight",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Fifty-Eight de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79030n-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79030n-0001-1.webp",
+        "type": "tudor"
+    },
+    "260": {
+        "title": "Black Bay P01",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "p01",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay P01 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m70150-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m70150-0001-1.webp",
+        "type": "tudor"
+    },
+    "261": {
+        "title": "Pelagos",
+        "keywords": [
+            "pelagos",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Pelagos de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m25600tb-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m25600tb-0001-1.webp",
+        "type": "tudor"
+    },
+    "262": {
+        "title": "Pelagos FXD",
+        "keywords": [
+            "pelagos",
+            "fxd",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Pelagos FXD de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m25707b-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m25707b-0001-1.webp",
+        "type": "tudor"
+    },
+    "263": {
+        "title": "Black Bay 58 18K",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "58 ",
+            "18k",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay 58 18K de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79018v-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79018v-0001-1.webp",
+        "type": "tudor"
+    },
+    "264": {
+        "title": "Ranger",
+        "keywords": [
+            "ranger",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Ranger de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79950-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79950-0003-1.webp",
+        "type": "tudor"
+    },
+    "265": {
+        "title": "Black Bay Chrono",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "chrono",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Chrono de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79360n-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79360n-0002-1.webp",
+        "type": "tudor"
+    },
+    "266": {
+        "title": "Pelagos 39",
+        "keywords": [
+            "pelagos",
+            "39",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Pelagos 39 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m25407n-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m25407n-0001-1.webp",
+        "type": "tudor"
+    },
+    "267": {
+        "title": "Black Bay 54",
+        "keywords": [
+            "black",
+            "bay 54",
+            "black-bay",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay 54 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79000n-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79000n-0001-1.webp",
+        "type": "tudor"
+    },
+    "268": {
+        "title": "Black Bay 54",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "54",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay 54 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79000n-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79000n-0002-1.webp",
+        "type": "tudor"
+    },
+    "269": {
+        "title": "Black Bay 39",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "39",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay 39 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79660-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79660-0002-1.webp",
+        "type": "tudor"
+    },
+    "270": {
+        "title": "Black Bay Chrono",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "chrono",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Chrono de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79360n-0006",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79360n-0006-1.webp",
+        "type": "tudor"
+    },
+    "271": {
+        "title": "Black Bay Chrono",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "chrono",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Chrono de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79360n-0008",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79360n-0008-1.webp",
+        "type": "tudor"
+    },
+    "272": {
+        "title": "Black Bay Pro",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "pro",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Pro de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79470-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79470-0001-1.webp",
+        "type": "tudor"
+    },
+    "273": {
+        "title": "Black Bay Pro",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "pro",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Pro de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79470-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79470-0002-1.webp",
+        "type": "tudor"
+    },
+    "274": {
+        "title": "Black Bay Pro",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "pro",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Pro de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79470-0003",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79470-0003-1.webp",
+        "type": "tudor"
+    },
+    "275": {
+        "title": "Clair de Rose",
+        "keywords": [
+            "clair",
+            "de",
+            "rose",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Clair de Rose de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m35800-0009",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m35800-0009-1.webp",
+        "type": "tudor"
+    },
+    "276": {
+        "title": "Pelagos FXD",
+        "keywords": [
+            "pelagos",
+            "fxd",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Pelagos FXD de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m25717n-0001",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m25717n-0001-1.webp",
+        "type": "tudor"
+    },
+    "277": {
+        "title": "Black Bay 41",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "41",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay 41 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79680-0002",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79680-0002-1.webp",
+        "type": "tudor"
+    },
+    "278": {
+        "title": "Black Bay Chrono",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "chrono",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Chrono de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79360n-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79360n-0005-1.webp",
+        "type": "tudor"
+    },
+    "279": {
+        "title": "Black Bay Chrono",
+        "keywords": [
+            "black",
+            "bay",
+            "black-bay",
+            "chrono",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo Black Bay Chrono de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m79360n-0007",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m79360n-0007-1.webp",
+        "type": "tudor"
+    },
+    "280": {
+        "title": "1926",
+        "keywords": [
+            "1926",
+            "tudor"
+        ],
+        "description": "Descubre más acerca del modelo 1926 de Tudor",
+        "link": "https://mimijoyeria.com/relojeria/tudor/m91450-0005",
+        "thumbnail": "https://mimijoyeria.com/storage/store-products/m91450-0005-1.webp",
+        "type": "tudor"
     }
 }

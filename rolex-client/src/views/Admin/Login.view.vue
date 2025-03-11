@@ -7,6 +7,7 @@ import { auth } from "../../store/auth.module";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import Loading from "../../components/global-components/Loading.vue";
 import * as yup from "yup";
+import { Head } from "@unhead/vue/components";
 const piniaStore = auth();
 
 const message = ref("");
@@ -23,13 +24,11 @@ const errorList = {
   "Invalid Password!": "Clave inválida",
 };
 
-function handleLogin(user) {
-  console.log("user: ", user.email);
+function onSubmit(user) {
   if (user.email != "" && user.password != "") {
     loading.value = true;
     piniaStore.login(user).then(
       (data) => {
-        console.log(data);
         router.push("/");
       },
       (error) => {
@@ -47,7 +46,11 @@ function handleLogin(user) {
 </script>
 
 <template>
+  
   <section class="bg-gray-50">
+    <Head>
+      <meta name="robots" content="noindex">
+    </Head>
     <div
       class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
     >
@@ -59,7 +62,7 @@ function handleLogin(user) {
           >
             Iniciar sesión
           </h1>
-          <Form :validation-schema="schema">
+          <Form @submit="onSubmit" :validation-schema="schema">
             <div v-if="!successful" class="space-y-4 md:space-y-6">
               <div>
                 <label
@@ -92,7 +95,7 @@ function handleLogin(user) {
               </div>
 
               <button
-                @click="handleLogin(user)"
+                @click="onSubmit(user)"
                 class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0"
               >
                 Iniciar sesión

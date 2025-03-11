@@ -43,7 +43,7 @@ import { RouterLink } from "vue-router";
 
                 
                 <li>
-                    <RouterLink to="/contacto" class="hover:underline ">
+                    <RouterLink to="/contactenos" class="hover:underline ">
                         Contacto
                     </RouterLink>
                 </li>
