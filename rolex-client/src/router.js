@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router"
 import BreadCrumb from "./components/navigation-components/BreadCrumb.vue"
 import { useLoaderStore } from './store/loaderState';
-
+import {usePostHog} from './utils/posthog'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -98,10 +98,10 @@ const router = createRouter({
     {
       path: "/rolex/nuevos-relojes",
       name: "rolex-nuevos-modelos",
-      component: () => import("./views/Rolex/RolexNewModels.view.vue"),
+      component: () => import("./views/Rolex/RolexNewModelsTemporary.view.vue"),
       meta: {
-        title: "Nuevos Modelos Rolex 2024  | Mimi Joyería ",
-        description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex.Descubra las características únicas de los nuevos modelos de este año.",
+        title: "Nuevos Modelos Rolex 2025  | Mimi Joyería ",
+        description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año.",
         breadcrumb: "NuevosModelos",
         pageType:"new watches page"
 
@@ -677,6 +677,9 @@ const router = createRouter({
 
 })
 
+const { posthog } = usePostHog()
+
+
 
 router.beforeEach((to, from, next) => {
   const store = useLoaderStore()
@@ -695,7 +698,9 @@ router.beforeEach((to, from, next) => {
   if(pageFamily){
     document.pageFamily = pageFamily
   }
-
+  if (from.path !== to.path) {
+    posthog.capture('$pageleave')
+  }
 
 
   // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
@@ -730,7 +735,7 @@ router.afterEach((to, from, next) => {
     store.change()
 
   }
-
+  posthog.capture('$pageview')
 
 
   // Continue resolving the route

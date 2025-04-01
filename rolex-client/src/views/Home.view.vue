@@ -4,13 +4,17 @@ import { useRouter } from "vue-router";
 import { useElementVisibility, useWindowSize } from "@vueuse/core";
 import headerSliderDataServices from "../services/headerSliderDataServices";
 import POSBanner from '../components/banners-components/POSBanner.vue';
+import { usePostHog } from "../utils/posthog";
 const counter = ref(0);
 const classes = ref([
   "translate-x-0",
   "-translate-x-[100%]",
   "-translate-x-[200%]",
 ]);
-
+const { posthog } = usePostHog()
+const handleClick = (locate) => {
+  posthog.capture('button_clicked', { location: locate })
+}
 const { width } = useWindowSize();
 const target = useTemplateRef("target")
 const targetIsVisible = useElementVisibility(target)
@@ -25,16 +29,13 @@ const router = useRouter();
 
 function checkClick(pos) {
   if (pos === 1) {
-    headerSliderDataServices
-      .clickBanner("banner")
-      .then(() => {
-        router.push("/tudor");
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    handleClick("tudor-banner")
+    router.push("/tudor");
+    
+    
   } else {
-    router.push("/rolex/explorer");
+    handleClick("rolex-banner")
+    router.push("/rolex/sea-dweller");
   }
 }
 

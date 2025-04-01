@@ -5,15 +5,18 @@ import { ref } from "vue";
 import { computed } from "vue";
 
 const sliderItems = [
-  
-  
   {
     src: "sea-dweller",
     link: "/rolex/sea-dweller",
     alt: "coleccion-sea-dweller",
     title: "Coleccion Sea Dweller",
   },
-
+  {
+    src: "rolex-grand-slam",
+    link: "/rolex/world-of-rolex/rolex-grand-slam",
+    alt: "rolex-grand-slam",
+    title: "Rolex Grand Slam - World Of Rolex",
+  },
   {
     src: "viena",
     link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
@@ -33,18 +36,12 @@ const sliderItems = [
     alt: "watchmaking-banner",
     title: "Watchmaking",
   },
-
-
-
   {
     src: "the-open",
     link: "/rolex/world-of-rolex/rolex-y-the-open",
     alt: "rolex-y-the-open",
     title: "Rolex y The Open",
-  },
-
- 
-
+  }, 
 ];
 
 const currentSlide = ref(0);

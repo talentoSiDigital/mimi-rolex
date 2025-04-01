@@ -1,14 +1,13 @@
 import { createApp } from 'vue'
-import { createHead } from '@unhead/vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
 
 import VueLazyLoad from 'vue3-lazyload' 
 import {createPinia} from 'pinia'
+import { createHead } from '@unhead/vue/client'
 
-// Defining pinia
-const pinia = createPinia()
+
 
 
 /* import router from './router' */
@@ -86,7 +85,8 @@ library.add(
     faMagnifyingGlass,
     faXmark
 )
-
+// Defining pinia
+const pinia = createPinia()
 const head = createHead()
 
 createApp(App)

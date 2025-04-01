@@ -8,7 +8,6 @@ import viteCompression from 'vite-plugin-compression';
 // https://vitejs.dev/config/
 export default defineConfig({
   
-
   build: {
     assetsInlineLimit: 1024,
     minify:'esbuild' // 1kb
