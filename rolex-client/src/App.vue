@@ -22,7 +22,6 @@ const checkLoad = computed(()=>{
 const piniaStore = auth();
 const loader = useLoaderStore()
 const isUserLogged = storeToRefs(piniaStore);
-
 </script>   
 
 <template>
@@ -35,7 +34,7 @@ const isUserLogged = storeToRefs(piniaStore);
       v-if="route.path !== '/carrito' && isUserLogged.status.value.loggedIn"
     />
     <RouterView :key="route.fullPath" />
-    <div v-if="!checkLoad && route.path == '/'" class="h-[200vh] block "></div>
+    <div v-if="!checkLoad && route.name == 'Home'" class="h-[200vh] block "></div>
 
     <Footer v-once/>
   </div>

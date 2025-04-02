@@ -98,7 +98,7 @@ const router = createRouter({
     {
       path: "/rolex/nuevos-relojes",
       name: "rolex-nuevos-modelos",
-      component: () => import("./views/Rolex/RolexNewModelsTemporary.view.vue"),
+      component: () => import("./views/Rolex/RolexNewModels.view.vue"),
       meta: {
         title: "Nuevos Modelos Rolex 2025  | Mimi Joyería ",
         description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año.",
@@ -108,71 +108,17 @@ const router = createRouter({
       }
     },
     {
-      path: "/rolex/nuevos-modelos-2024/1908",
-      name: "rolex-nuevos-modelos-1908",
-      component: () => import("./views/Rolex/new-models/New1908.view.vue"),
+      path: "/rolex/nuevos-modelos-2025/:id",
+      name: "rolex-nuevos-relojes-2025",
+      component: () => import("./views/Rolex/NewModelCollection.view.vue"),
       meta: {
-        title: "1908 | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/1908",
-        pageType:"family page 2024"
+        title: " Nuevos Modelos 2024  | Mimi Joyería ",
+        breadcrumb: "NuevosModelos",
+        pageType:"family page 2025"
 
       }
     },
-    {
-      path: "/rolex/nuevos-modelos-2024/cosmograph-daytona",
-      name: "rolex-nuevos-modelos-cosmograph-daytona",
-      component: () => import("./views/Rolex/new-models/NewCosmograph.view.vue"),
-      meta: {
-        title: "Cosmograph Daytona | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/CosmographDaytona",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/day-date",
-      name: "rolex-nuevos-modelos-day-date",
-      component: () => import("./views/Rolex/new-models/NewDayDate.view.vue"),
-      meta: {
-        title: "DayDate | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/DayDate",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/deepsea",
-      name: "rolex-nuevos-modelos-deepsea",
-      component: () => import("./views/Rolex/new-models/NewDeepsea.view.vue"),
-      meta: {
-        title: "Deepsea | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/Deepsea",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/gmt-master-ii",
-      name: "rolex-nuevos-modelos-gmt-master-ii",
-      component: () => import("./views/Rolex/new-models/NewGMT.view.vue"),
-      meta: {
-        title: "GMT Master II | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/GMTMaster",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/sky-dweller",
-      name: "rolex-nuevos-modelos-sky-dweller",
-      component: () => import("./views/Rolex/new-models/NewSkyDweller.view.vue"),
-      meta: {
-        title: "Sky Dweller | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/SkyDweller",
-        pageType:"family page 2024"
-
-      }
-    },
+   
 
     // ---------WORLD OF ROLEX SECTION ROUTES------------
     {
@@ -418,6 +364,17 @@ const router = createRouter({
         breadcrumb: "ColeccionRolex",
         pageType:"family page",
         pageFamily:"air-king"
+      }
+    },
+    {
+      path: "/rolex/land-dweller",
+      name: "rolex-coleccion-land-dweller",
+      component: () => import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb: "ColeccionRolex",
+        pageType:"family page",
+        pageFamily:"land-dweller"
       }
     },
 

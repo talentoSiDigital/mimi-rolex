@@ -46,7 +46,7 @@ const sliderItems = [
         "src": "nuevos-modelos",
         "link": "rolex-nuevos-modelos",
         "alt": "Rolex-nuevos-modelos",
-        "title": "Nuevos modelos 2024"
+        "title": "Nuevos modelos 2025"
 
     },
     {

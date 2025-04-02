@@ -33,11 +33,11 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
 
             <section class="bg-rolex-brown-light-1 flex flex-col justify-center items-center pb-[10vh]">
                 <div class="w-10/12">
-                    <SectionNavigationCard img="watches/banner-button" :link="{name:'rolex-nuevos-modelos'}"
+                    <SectionNavigationCard img="watches/banner-button" :link="{ name: 'rolex-nuevos-modelos' }"
                         class="w-full ">
-                        <template #sub>Nuevos relojes 2024</template>
-                        <template #title>La armonía de los contrastes</template>
-                        
+                        <template #sub>Nuevos modelos 2025</template>
+                        <template #title>Expandiendo nuevos horizontes.</template>
+
                         <template #button>Más información</template>
 
                     </SectionNavigationCard>
@@ -47,43 +47,56 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
 
             <div class="flex flex-col justify-center items-center w-full text-rolex-brown bg-rolex-brown-light-1">
                 <h2 class="w-10/12 pt-[10vh] pb-4 font-helvetica font-bold text-4xl">Relojes Clásicos</h2>
-                <div id="rolex-container" class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
-                    <ModelsCard img="watches/rolex-watches-day-date" :link="{name:'rolex-coleccion-day-date'}"  >
+                <div id="rolex-container"
+                    class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
+                    <ModelsCard img="watches/rolex-watches-land-dweller" :link="{ name: 'rolex-coleccion-land-dweller' }">
+                        <template #title>
+                            Land-Dweller
+                        </template>
+
+
+                    </ModelsCard>
+                    <ModelsCard img="watches/rolex-watches-day-date" :link="{ name: 'rolex-coleccion-day-date' }">
                         <template #title>
                             Day-Date
                         </template>
 
 
                     </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-datejust" :link="{name:'rolex-coleccion-datejust'}"  >
-                        <template #title>
-                            Datejust
-                        </template>
 
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-lady-datejust" :link="{name:'rolex-coleccion-lady-datejust'}"  >
-                        <template #title>
-                            Lady-Datejust
-                        </template>
-
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-sky-dweller" :link="{name:'rolex-coleccion-sky-dweller'}"  >
+                    <ModelsCard img="watches/rolex-watches-sky-dweller" :link="{ name: 'rolex-coleccion-sky-dweller' }">
                         <template #title>
                             Sky-Dweller
                         </template>
 
 
                     </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-oyster-perpetual" :link="{name:'rolex-coleccion-oyster-perpetual'} " >
+
+                    <ModelsCard img="watches/rolex-watches-lady-datejust"
+                        :link="{ name: 'rolex-coleccion-lady-datejust' }">
+                        <template #title>
+                            Lady-Datejust
+                        </template>
+
+
+                    </ModelsCard>
+                    <ModelsCard img="watches/rolex-watches-datejust" :link="{ name: 'rolex-coleccion-datejust' }">
+                        <template #title>
+                            Datejust
+                        </template>
+
+
+                    </ModelsCard>
+
+                    <ModelsCard img="watches/rolex-watches-oyster-perpetual"
+                        :link="{ name: 'rolex-coleccion-oyster-perpetual' }">
                         <template #title>
                             Oyster Perpetual
                         </template>
 
 
                     </ModelsCard>
-                  
+
                 </div>
 
             </div>
@@ -91,67 +104,72 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
 
             <div class="flex flex-col justify-start items-center w-full text-rolex-brown bg-rolex-brown-light-1">
                 <h2 class="w-10/12 pt-[10vh] pb-4 font-helvetica font-bold text-4xl">Relojes Profesionales</h2>
-                <div id="rolex-container" class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
-                    <ModelsCard img="watches/rolex-watches-air-king" :link="{name:'rolex-coleccion-air-king'}"  >
-                        <template #title>
-                            Air-King
-                        </template>
-
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-gmt-master-ii" :link="{name:'rolex-coleccion-gmt-master-ii'}"  >
-                        <template #title>
-                            GMT-Master II
-                        </template>
-
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-sea-dweller" :link="{name:'rolex-coleccion-sea-dweller'}"  >
-                        <template #title>
-                            Sea-Dweller
-                        </template>
-
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-submariner" :link="{name:'rolex-coleccion-submariner'}"  >
-                        <template #title>
-                            Submariner
-                        </template>
-
-
-                    </ModelsCard>
-                    <ModelsCard img="watches/rolex-watches-cosmograph-daytona" :link="{name:'rolex-coleccion-cosmograph-daytona'}"  >
+                <div id="rolex-container"
+                    class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
+                    <ModelsCard img="watches/rolex-watches-cosmograph-daytona"
+                        :link="{ name: 'rolex-coleccion-cosmograph-daytona' }">
                         <template #title>
                             Cosmograph Daytona
                         </template>
 
 
                     </ModelsCard>
-               
-                    <ModelsCard img="watches/rolex-watches-yatch-master" :link="{name:'rolex-coleccion-yacht-master'}"  >
+                    <ModelsCard img="watches/rolex-watches-submariner" :link="{ name: 'rolex-coleccion-submariner' }">
                         <template #title>
-                            Yacht-Master
+                            Submariner
                         </template>
 
 
                     </ModelsCard>
-                  
-                    <ModelsCard img="watches/rolex-watches-explorer" :link="{name:'rolex-coleccion-explorer'}"  >
+                    <ModelsCard img="watches/rolex-watches-sea-dweller" :link="{ name: 'rolex-coleccion-sea-dweller' }">
                         <template #title>
-                            Explorer
+                            Sea-Dweller
                         </template>
 
 
                     </ModelsCard>
-                  
-                    <ModelsCard img="watches/rolex-watches-deepsea" :link="{name:'rolex-coleccion-deepsea'}"  >
+                    <ModelsCard img="watches/rolex-watches-deepsea" :link="{ name: 'rolex-coleccion-deepsea' }">
                         <template #title>
                             Deepsea
                         </template>
 
 
                     </ModelsCard>
-                  
+                    <ModelsCard img="watches/rolex-watches-gmt-master-ii"
+                        :link="{ name: 'rolex-coleccion-gmt-master-ii' }">
+                        <template #title>
+                            GMT-Master II
+                        </template>
+
+
+                    </ModelsCard>
+
+
+
+                    <ModelsCard img="watches/rolex-watches-yatch-master" :link="{ name: 'rolex-coleccion-yacht-master' }">
+                        <template #title>
+                            Yacht-Master
+                        </template>
+
+
+                    </ModelsCard>
+
+                    <ModelsCard img="watches/rolex-watches-explorer" :link="{ name: 'rolex-coleccion-explorer' }">
+                        <template #title>
+                            Explorer
+                        </template>
+
+
+                    </ModelsCard>
+
+
+                    <ModelsCard img="watches/rolex-watches-air-king" :link="{ name: 'rolex-coleccion-air-king' }">
+                        <template #title>
+                            Air-King
+                        </template>
+
+
+                    </ModelsCard>
                 </div>
 
             </div>
@@ -159,23 +177,24 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
 
             <div class="flex flex-col justify-center items-center w-full text-rolex-brown bg-rolex-brown-light-1">
                 <h2 class="w-10/12 pt-[10vh] pb-4 font-helvetica font-bold text-4xl">Relojes Perpetual</h2>
-                <div id="rolex-container" class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
-                    <ModelsCard img="watches/rolex-watches-1908" :link="{name:'rolex-coleccion-1908'}"  >
+                <div id="rolex-container"
+                    class="grid grid-cols-2 place-items-center md:grid-cols-3 w-10/12 gap-x-2 gap-y-10">
+                    <ModelsCard img="watches/rolex-watches-1908" :link="{ name: 'rolex-coleccion-1908' }">
                         <template #title>
                             1908
                         </template>
 
 
                     </ModelsCard>
-                    
-                  
+
+
                 </div>
 
             </div>
 
 
 
-           
+
         </template>
     </RolexTemplate>
 </template>

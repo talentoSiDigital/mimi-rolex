@@ -6,39 +6,33 @@ import { computed } from "vue";
 
 const sliderItems = [
   {
+    src: "nuevos-modelos-2025",
+    link: {name:'rolex-nuevos-modelos'},
+    alt: "nuevos-modelos-2025",
+    title: "Nuevos modelos 2025",
+  },
+  {
     src: "sea-dweller",
-    link: "/rolex/sea-dweller",
+    link: {name:'rolex-coleccion-sea-dweller'},
     alt: "coleccion-sea-dweller",
     title: "Coleccion Sea Dweller",
   },
-  {
-    src: "rolex-grand-slam",
-    link: "/rolex/world-of-rolex/rolex-grand-slam",
-    alt: "rolex-grand-slam",
-    title: "Rolex Grand Slam - World Of Rolex",
-  },
+
   {
     src: "viena",
-    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    link: {name:'world-of-rolex-article-9'},
     alt: "rolex-y-la-filarmonica-de-viena-banner",
     title: "Filarmonica de Viena Banner",
-  },
-  // {
-  //   src: "sail-gp",
-  //   link: "/rolex/world-of-rolex/sail-gp",
-  //   alt: "sail-gp-banner",
-  //   title: "Sail gp article Banner",
-  // },
-  
+  },  
   {
     src: "watchmaking",
-    link: "/rolex/watchmaking",
+    link: {name:'rolex-watchmaking'},
     alt: "watchmaking-banner",
     title: "Watchmaking",
   },
   {
     src: "the-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-open",
+    link: {name:'world-of-rolex-article-7'},
     alt: "rolex-y-the-open",
     title: "Rolex y The Open",
   }, 
