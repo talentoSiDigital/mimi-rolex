@@ -1,10 +1,11 @@
 <script setup>
-import { computed, onMounted, ref ,useTemplateRef} from "vue";
+import { computed, onMounted, ref, useTemplateRef } from "vue";
 import { useRouter } from "vue-router";
 import { useElementVisibility, useWindowSize } from "@vueuse/core";
-import headerSliderDataServices from "../services/headerSliderDataServices";
 import POSBanner from '../components/banners-components/POSBanner.vue';
 import { usePostHog } from "../utils/posthog";
+import axios from "axios";
+
 const counter = ref(0);
 const classes = ref([
   "translate-x-0",
@@ -31,11 +32,10 @@ function checkClick(pos) {
   if (pos === 1) {
     handleClick("tudor-banner")
     router.push("/tudor");
-    
-    
+
   } else {
     handleClick("rolex-banner")
-    router.push("/rolex/sea-dweller");
+    router.push("/rolex/nuevos-relojes");
   }
 }
 
@@ -49,6 +49,23 @@ onMounted(() => {
   }, 5000);
 });
 
+function changeCounter(direction){
+  if(direction == 'r'){
+    if(counter.value == 1){
+      counter.value = 0
+    }else{
+       counter.value++
+    }
+  }else{
+    if(counter.value == 0){
+      counter.value = 1
+    }else{
+       counter.value--
+    }
+    
+  }
+}
+
 </script>
 
 <template>
@@ -57,58 +74,35 @@ onMounted(() => {
     <div class="relative z-0 min-h-[650px] w-full pb-20">
       <div v-if="!checkWindowSize" class="overflow-hidden">
         <div class="duration-500 flex cursor-pointer" :class="classes[counter]">
-          <img
-            @click="checkClick(counter)"
-            rel="preload"
-            fetchpriority="high"
-            as="image"
-            src="/assets/routes-assets/headers/1-desktop.webp"
-            alt="headers-1-desktop"
-          />
-          <img
-            @click="checkClick(counter)"
-            rel="preload"
-            fetchpriority="low"
-            as="image"
-            src="/assets/routes-assets/headers/2-desktop.webp"
-            alt="headers-2-desktop"
-          />
+          <img @click="checkClick(counter)" rel="preload" fetchpriority="high" as="image"
+            src="/assets/routes-assets/headers/1-desktop.webp" alt="headers-1-desktop" />
+          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
+            src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
         </div>
       </div>
       <div v-else class="overflow-hidden">
         <div class="duration-500 flex" :class="classes[counter]">
-          <img
-            @click="checkClick(counter)"
-            rel="preload"
-            src="/assets/routes-assets/headers/1-mobile.webp"
-            alt="headers-1-mobile"
-            fetchpriority="high"
-          />
-          <img
-            @click="checkClick(counter)"
-            rel="preload"
-            src="/assets/routes-assets/headers/2-mobile.webp"
-            alt="headers-2-mobile"
-            fetchpriority="high"
-          />
+          <img @click="checkClick(counter)" rel="preload" src="/assets/routes-assets/headers/1-mobile.webp"
+            alt="headers-1-mobile" fetchpriority="high" />
+          <img @click="checkClick(counter)" rel="preload" src="/assets/routes-assets/headers/2-mobile.webp"
+            alt="headers-2-mobile" fetchpriority="high" />
         </div>
       </div>
+      <button class="absolute top-[45%] left-10 bg-main-green w-8 h-8 rounded-full border border-main-green hover:bg-white duration-200 " @click="changeCounter('l')">
+        <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green"/>
+      </button>
+      <button class="absolute top-[45%] right-10 bg-main-green w-8 h-8 rounded-full border border-main-green hover:bg-white duration-200 " @click="changeCounter('r')">
+        <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-rolex-green"/>
+      </button>
     </div>
     <main ref="target" class=" pt-14">
-      <section v-if="targetIsVisible" >
-        <div
-          id="joyeria"
-          class="md:h-64 mt-8 flex flex-col items-center justify-start pt-10 mb-20 text-neutral-600"
-        >
-          <div
-            class="mb-4 flex flex-col md:flex-row items-center justify-center w-full"
-          >
+      <section v-if="targetIsVisible">
+        <div id="joyeria" class="md:h-64 mt-8 flex flex-col items-center justify-start pt-10 mb-20 text-neutral-600">
+          <div class="mb-4 flex flex-col md:flex-row items-center justify-center w-full">
             <!-- The left line -->
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             <!-- Your text here -->
-            <h1
-              class="text-center text-3xl tracking-widest mx-4 my-4 font-medium"
-            >
+            <h1 class="text-center text-3xl tracking-widest mx-4 my-4 font-medium">
               PRESENTE EN TUS MOMENTOS ESPECIALES
             </h1>
 
@@ -117,41 +111,28 @@ onMounted(() => {
           </div>
         </div>
 
-        <div
-          id="home-section"
-          class="flex flex-col  md:flex-row items-center justify-evenly gap-10 text-neutral-700 w-full "
-        >
+        <div id="home-section"
+          class="flex flex-col  md:flex-row items-center justify-evenly gap-10 text-neutral-700 w-full ">
           <div class="w-3/4 md:w-1/3 ">
-            <img
-              class="w-full duration-500 hover:scale-105"
-              v-lazy="'/assets/routes-assets/Home/home-1.webp'"
-              alt="mujer-gargantilla"
-            />
+            <img class="w-full duration-500 hover:scale-105" v-lazy="'/assets/routes-assets/Home/home-1.webp'"
+              alt="mujer-gargantilla" />
           </div>
           <div class="w-3/4 md:w-1/3 text-center">
             <h2 class="my-4 text-3xl">UNA JOYA QUE TE COMPLEMENTA</h2>
             <p class="mb-8 text-xl">
               Descubre un mundo de opciones en joyería para ti.
             </p>
-            <router-link
-              to="/joyeria"
-              class="bg-neutral-500 px-6 py-4 my-4 rounded-lg text-white shadow-2xl hover:bg-neutral-600"
-              >DESCUBRIR</router-link
-            >
+            <router-link to="/joyeria"
+              class="bg-neutral-500 px-6 py-4 my-4 rounded-lg text-white shadow-2xl hover:bg-neutral-600">DESCUBRIR</router-link>
           </div>
         </div>
 
-        <POSBanner class="mt-36 mb-10  md:mb-0"/>
-        
-        <div
-          id="home-section-2"
-          class="flex flex-col md:flex-row-reverse items-center justify-evenly gap-8 h-screen text-neutral-700"
-        >
-          <img
-            class="w-3/4 md:w-1/3 duration-500 hover:scale-110"
-            v-lazy="'/assets/routes-assets/Home/home-2.webp'"
-            alt="brazaletes-oro"
-          />
+        <POSBanner class="mt-36 mb-10  md:mb-0" />
+
+        <div id="home-section-2"
+          class="flex flex-col md:flex-row-reverse items-center justify-evenly gap-8 h-screen text-neutral-700">
+          <img class="w-3/4 md:w-1/3 duration-500 hover:scale-110" v-lazy="'/assets/routes-assets/Home/home-2.webp'"
+            alt="brazaletes-oro" />
           <div class="w-3/4 md:w-1/3 text-center">
             <h2 class="text-3xl">NUEVA COLECCIÓN</h2>
             <p class="my-6 text-xl">
@@ -162,15 +143,11 @@ onMounted(() => {
         </div>
 
         <div id="relojes">
-          <div
-            class="flex flex-col md:flex-row items-center justify-center w-full"
-          >
+          <div class="flex flex-col md:flex-row items-center justify-center w-full">
             <!-- The left line -->
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
             <!-- Your text here -->
-            <h1
-              class="text-center text-3xl tracking-widest mx-4 font-medium text-neutral-700"
-            >
+            <h1 class="text-center text-3xl tracking-widest mx-4 font-medium text-neutral-700">
               PRESENTE EN TUS MOMENTOS ESPECIALES
             </h1>
 
@@ -178,41 +155,28 @@ onMounted(() => {
             <span class="block h-px w-1/3 md:w-1/6 bg-neutral-300"></span>
           </div>
 
-          <div
-            class="flex flex-col md:flex-row w-full md:justify-center overflow-x-hidden text-neutral-700 mb-10"
-          >
+          <div class="flex flex-col md:flex-row w-full md:justify-center overflow-x-hidden text-neutral-700 mb-10">
             <div class="flex flex-col items-center justify-center">
               <router-link :to="{ name: 'reloj', params: { id: 'tudor' } }">
-                <img
-                  v-lazy="'/assets/routes-assets/Home/tudor-1.webp'"
-                  alt="tudor-black-bay-gmt"
-                  class="duration-500 hover:scale-110 w-96 pb-4"
-                />
+                <img v-lazy="'/assets/routes-assets/Home/tudor-1.webp'" alt="tudor-black-bay-gmt"
+                  class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
               <h3 class="text-xl font-light">1926</h3>
               <h3 class="text-xl font-light">TUDOR</h3>
             </div>
             <div class="flex flex-col items-center justify-center">
               <router-link :to="{ name: 'reloj', params: { id: 'longines' } }">
-                <img
-                  v-lazy="'/assets/routes-assets/Home/tudor-2.webp'"
-                  alt="longiness-hydrocontest"
-                  class="duration-500 hover:scale-110 w-96 pb-4"
-                />
+                <img v-lazy="'/assets/routes-assets/Home/tudor-2.webp'" alt="longiness-hydrocontest"
+                  class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
               <h3 class="text-xl font-light">Black Bay 58 18K</h3>
               <h3 class="text-xl font-light">TUDOR</h3>
             </div>
 
             <div class="flex flex-col items-center justify-center">
-              <router-link
-                :to="{ name: 'reloj', params: { id: 'victorinox' } }"
-              >
-                <img
-                  v-lazy="'/assets/routes-assets/Home/tudor-3.webp'"
-                  alt="victorinox-maverick-sport"
-                  class="duration-500 hover:scale-110 w-96 pb-4"
-                />
+              <router-link :to="{ name: 'reloj', params: { id: 'victorinox' } }">
+                <img v-lazy="'/assets/routes-assets/Home/tudor-3.webp'" alt="victorinox-maverick-sport"
+                  class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
               <h3 class="text-xl font-light">Pelagos FXD</h3>
               <h3 class="text-xl font-light">TUDOR</h3>
@@ -222,18 +186,14 @@ onMounted(() => {
         </div>
 
         <div class="py-10 w-full flex justify-center">
-          <router-link :to="{name:'world-of-rolex-hub'}" class="w-[90%]">
+          <router-link :to="{ name: 'world-of-rolex-hub' }" class="w-[90%]">
 
             <img src="/assets/routes-assets/activations/viena-banner-desktop.webp" alt="" v-if="!checkWindowSize">
-            <img src="/assets/routes-assets/activations/viena-banner-mobile.webp" alt="" v-else >
+            <img src="/assets/routes-assets/activations/viena-banner-mobile.webp" alt="" v-else>
           </router-link>
         </div>
 
-        <img
-          v-if="!checkWindowSize"
-          src="/assets/routes-assets/Home/banner-graduate.webp"
-          alt="banner-graduacion"
-        />
+        <img v-if="!checkWindowSize" src="/assets/routes-assets/Home/banner-graduate.webp" alt="banner-graduacion" />
       </section>
     </main>
   </div>

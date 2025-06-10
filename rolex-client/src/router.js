@@ -6,6 +6,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     // Main Route
+
     {
       path: "/",
       name: "Home",
@@ -471,6 +472,15 @@ const router = createRouter({
         title: " Tudor | Mimi Joyería "
       }
     }
+    // ,
+    // {
+    //   path: "/relojeria/novedades/tudor",
+    //   name: "relojeria",
+    //   component: () => import("./views/Mimi/NovedadesTudor.view.vue"),
+    //   meta: {
+    //     title: " Novedades Tudor 2025 | Mimi Joyería "
+    //   }
+    // }
 
     ,
     {
@@ -517,6 +527,16 @@ const router = createRouter({
       path: "/relojeria/tudor",
       name: "reloj",
       component: () => import("./views/Tienda/StoreRelojeria.view.vue"),
+      meta: {
+        title: "  Mimi Joyería "
+      },
+
+    }
+    ,
+    {
+      path: "/novedades/tudor",
+      name: "novedades",
+      component: () => import("./views/Tienda/NovedadesRelojeria.view.vue"),
       meta: {
         title: "  Mimi Joyería "
       },

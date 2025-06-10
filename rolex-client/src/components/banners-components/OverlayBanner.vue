@@ -54,11 +54,7 @@ function parseString(str) {
                 <img class="w-full" :src="`/assets/routes-assets/banners/banner-${type}.webp`" :alt="type">
             </div>
         </div>
-        <div class="flex items-center justify-center py-20">
-            <h2 class="w-3/4 text-center text-xl">
-               {{ storeCopy[type] }}
-            </h2>
-        </div>
+   
     </section>
 </template>
 

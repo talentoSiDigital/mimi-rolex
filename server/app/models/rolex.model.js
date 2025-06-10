@@ -91,7 +91,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     texto1: {
-      type: Sequelize.TEXT 
+      type: Sequelize.TEXT('medium')
     },
     header2: {
       type: Sequelize.STRING
@@ -100,7 +100,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     texto2: {
-      type: Sequelize.TEXT 
+      type: Sequelize.TEXT('medium') 
     },
     header3: {
       type: Sequelize.STRING
@@ -109,7 +109,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     texto3: {
-      type: Sequelize.TEXT 
+      type: Sequelize.TEXT('medium') 
     },
 
   },{

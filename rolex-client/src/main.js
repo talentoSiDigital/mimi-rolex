@@ -46,7 +46,9 @@ import {
     faSpinner,
     faComment,
     faMagnifyingGlass,
-    faXmark
+    faXmark,
+    faMinus,
+    faPlus
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -83,7 +85,9 @@ library.add(
     faSpinner,
     faComment,
     faMagnifyingGlass,
-    faXmark
+    faXmark,
+    faMinus,
+    faPlus
 )
 // Defining pinia
 const pinia = createPinia()

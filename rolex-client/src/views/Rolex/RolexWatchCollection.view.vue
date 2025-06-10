@@ -13,7 +13,7 @@ import PageLoader from '../../components/global-components/PageLoader.vue';
 const route = useRoute();
 const currentRoute = route.fullPath.substring(7);
 const currentData = collectionsCopy[currentRoute];
-
+console.log(currentRoute);
 const currentPage = ref(1);
 const totalPages = ref(1);
 const itemsPerPage = 6;
@@ -21,6 +21,7 @@ const itemsPerPage = 6;
 const { state, isLoading, isReady, execute } = useAsyncState(
   RolexDataServices.getByCollection(currentRoute)
     .then((d) => {
+      console.log(d.data);
       totalPages.value = Math.ceil(d.data.length / 6);
       return d.data;
     })
@@ -42,11 +43,6 @@ function filterItems() {
   return items;
 }
 
-function loadMore() {
-  currentPage.value = currentPage.value++;
-  if (currentPage.value < totalPages.value) {
-  }
-}
 
 
 </script>

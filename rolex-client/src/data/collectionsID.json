@@ -1,0 +1,141 @@
+{
+	"table": "rolex-collections",
+	"rows":
+	[
+		{
+			"id": 1,
+			"nombre": "COSMOGRAPH DAYTONA",
+			"text": "Reloj icónico por excelencia, el Oyster Perpetual Cosmograph Daytona se ha consolidado mucho más allá de los circuitos automovilísticos por su estética emblemática y su desempeño superlativo. Con ocasión de los 60 años del modelo, Rolex perpetúa el mito de su cronógrafo revisitando toda la gama. Un trabajo de gran precisión que se centra tanto en la caja como en el movimiento. Todos estos cambios y evoluciones nos recuerdan que la búsqueda de la excelencia es una carrera que no conoce fin.",
+			"subHeader": "Un icono que desafía al tiempo",
+			"watch": "m126506-0001",
+			"idName": "cosmograph-daytona",
+			"hasVideo": 1
+		},
+		{
+			"id": 2,
+			"nombre": "1908",
+			"text": "Elegante, clásico e incuestionablemente contemporáneo, el Perpetual 1908 es una prolongación de la intrepidez original de Rolex. Al heredar los códigos históricos de la marca y sus innumerables innovaciones en relojería, el reloj marca un nuevo hito en la búsqueda de la excelencia de la marca. El diseño y la creación de este nuevo modelo ponen de manifiesto el dominio interno de todo el savoir‑faire necesario de la marca. Inspirado en un Oyster Perpetual de 1931, este modelo completamente nuevo responde al desafío de un reloj más fino según los cánones de Rolex y anuncia la llegada de la colección Perpetual, que redefine el reloj de pulsera tradicional en el espíritu vanguardista de la marca. El nombre «1908» hace referencia al año en que se registró oficialmente la marca en Suiza. Una promesa de rendimiento superlativo, el 1908 se impone como un Rolex que reivindica su clasicismo al tiempo que su modernidad.",
+			"subHeader": "El nuevo rostro de la excelencia",
+			"watch": "m52508-0006",
+			"idName": "1908",
+			"hasVideo": 1
+		},
+		{
+			"id": 3,
+			"nombre": "YACHT‑MASTER",
+			"text": "Ligero y robusto, el nuevo Oyster Perpetual Yacht-Master 42 de titanio RLX se consolida como aliado de quienes buscan la libertad de movimiento. Especialmente adaptado a las exigencias y limitaciones de la vela deportiva, pone la excelencia al servicio del rendimiento. El Yacht-Master 42, segundo reloj propuesto por Rolex en titanio RLX tras el Oyster Perpetual Deepsea Challenge, demuestra que la ligereza es un asunto serio.",
+			"subHeader": "El dominio de la ligereza",
+			"watch": "m136660-0004",
+			"idName": "yacht-master",
+			"hasVideo": 1
+		},
+		{
+			"id": 4,
+			"nombre": "SKY‑DWELLER",
+			"text": "Con sus dos husos horarios y su calendario anual, el Sky‑Dweller es un elegante y precioso aliado para quienes recorren el mundo. La gama se renueva mediante numerosos avances que recuerdan que, para Rolex, la excelencia reside hasta en el menor de los detalles. Empezando por una evolución estética, con nuevas modalidades que vienen a ampliar la gama. Siguiendo con una evolución técnica, con la introducción de un movimiento que cuenta con los últimos avances tecnológicos de Rolex.",
+			"subHeader": "Rumbo a lo ideal y más allá",
+			"watch": "m336239-0002",
+			"idName": "sky-dweller",
+			"hasVideo": 1
+		},
+		{
+			"id": 5,
+			"nombre": "GMT-MASTER II",
+			"text": "El GMT‑Master II, que permite a su usuario monitorizar la hora en otro huso horario, ilumina nuestros vínculos con el mundo. Está disponible ahora en dos nuevas versiones —oro amarillo de 18 quilates y Rolesor amarillo— con un disco Cerachrom de cerámica gris y negra, una combinación de colores nunca vista. La elección de materiales, la precisión de los acabados y la excelencia del savoir‑faire han permitido sublimar la materia para que libere mejor la luz. El armonioso contraste entre el brillo dorado del brazalete Jubilee y el bisel bicolor en tonos oscuros y sobrios evoca tanto el curso del sol como la alternancia del día y la noche.",
+			"subHeader": "Ilumina nuestros vínculos con el mundo",
+			"watch": "m126713grnr-0001",
+			"idName": "gmt-master-ii",
+			"hasVideo": 1
+		},
+		{
+			"id": 6,
+			"nombre": "EXPLORER",
+			"text": "La gama Explorer se amplía con un nuevo modelo de 40 mm de diámetro. Con una mayor legibilidad, conserva las cualidades que convirtieron al Explorer, uno de los primeros relojes-herramienta de Rolex, en una referencia a lo largo de los años. Sencillo, robusto y resistente a la corrosión, el nuevo Explorer 40 está fabricado en acero Oystersteel, una aleación exclusiva de Rolex. Los acabados satinados de la carrura, el brazalete y el cierre y los reflejos de luz sobre los flancos de la carrura pulidos invitan a contemplar con nuevos ojos este reloj-herramienta icónico con su armonía discreta.",
+			"subHeader": "La grandeza de la aventura",
+			"watch": "m124273-0001",
+			"idName": "explorer",
+			"hasVideo": 1
+		},
+		{
+			"id": 7,
+			"nombre": "OYSTER PERPETUAL",
+			"text": "Un crepitar de colores, una estética pop, una emoción en movimiento. Con sus nuevas esferas salpicadas de burbujas multicolor, los Oyster Perpetual 31, 36 y 41 presentan un aspecto alegre y optimista que reúne los cinco colores introducidos en la gama en 2020. Una efervescencia cromática y una euforia gráfica que son posibles gracias a la maestría y al dominio técnico. Realizada en condiciones muy estrictas para evitar la contaminación por polvo, la producción de la esfera exige meticulosidad en todas sus fases para hacer de cada color algo maravilloso.",
+			"subHeader": "La efervescencia de la excelencia",
+			"watch": "m124300-0008",
+			"idName": "oyster-perpetual",
+			"hasVideo": 1
+		},
+		{
+			"id": 8,
+			"nombre": "DAY‑DATE",
+			"text": "Los nuevos Oyster Perpetual Day‑Date 36 presentan esferas en piedras ornamentales cuyas tonalidades tornasoladas evocan la atmósfera de las costas mediterráneas. La venturina verde, la cornalina y la turquesa se asocian respectivamente con las modalidades en oro Everose, amarillo o blanco de 18 quilates. Expresión de la excelencia del savoir‑faire de la manufactura en materia de esferas, estos nuevos Day‑Date 36 atestiguan asimismo el perfecto dominio del arte del engaste. Esta asociación entre piedras excepcionales, gemas y metales preciosos acentúa la distinción y la elegancia de este prestigioso modelo.",
+			"subHeader": "Cada esfera, un descubrimiento",
+			"watch": "m228396tbr-0002",
+			"idName": "day-date",
+			"hasVideo": 1
+		},
+		{
+			"id": 9,
+			"nombre": "DATEJUST",
+			"text": "Cualquier día puede impactar nuestras vidas para siempre y allanar el camino para nuevas aspiraciones. Desde su creación en 1945, el Datejust continúa reinventándose al tiempo que simboliza la definición de Rolex de elegancia clásica. Un hito en la historia de la relojería, fue el primer reloj de pulsera cronómetro, automático y hermético en indicar la fecha en una ventana. Destacados por la lente Cyclops, estos números son un recordatorio de que 24 horas no solo constituyen un día, sino que también marcan una fecha para recordar.",
+			"subHeader": "Una fecha para recordar",
+			"watch": "m278274-0018",
+			"idName": "datejust",
+			"hasVideo": 1
+		},
+		{
+			"id": 10,
+			"nombre": "LADY‑DATEJUST",
+			"text": "«Un reloj clásico para mujer». Así describen algunos a nuestro Oyster Perpetual LadyDatejust. Y puede que tengan razón. Desde comienzos del siglo XX, Rolex ha diseñado y fabricado relojes adecuados para todas las muñecas femeninas, con el mismo estándar de excelencia que todos los modelos que han forjado su leyenda. Si «clásico» significa buscar siempre llegar a lo más alto, si significa perpetuar las tradiciones al tiempo que combina elegancia con precisión, gracia con resistencia, belleza con rendimiento… Entonces el Lady‑Datejust es un reloj clásico para mujer.",
+			"subHeader": "Elegancia en femenino",
+			"watch": "m279135rbr-0001",
+			"idName": "lady-datejust",
+			"hasVideo": 1
+		},
+		{
+			"id": 11,
+			"nombre": "AIR-KING",
+			"text": "Inmediatamente reconocible por su esfera negra equipada con unos índices de las horas —3, 6 y 9— de gran tamaño con una escala de los minutos especialmente visible, el Air‑King continúa con la larga colaboración de Rolex con la aviación que se remonta a los años treinta. Más que un homenaje, este reloj robusto y deportivo, dotado de una caja de 40 mm de acero Oystersteel, simboliza la valentía de los pioneros de la aviación. Nos motiva a liberar y elevar nuestro espíritu aventurero.",
+			"subHeader": "Llevarlo al cielo",
+			"watch": "m126900-0001",
+			"idName": "air-king",
+			"hasVideo": 1
+		},
+		{
+			"id": 12,
+			"nombre": "SUBMARINER",
+			"text": "Presentado en 1953, el Rolex Submariner fue el primer reloj de pulsera de submarinismo hermético hasta 100 metros de profundidad y ahora hasta 300 metros. Sus características principales, como el bisel giratorio graduado, la visualización luminiscente, las agujas e índices de las horas de gran tamaño, han sido una fuerza motriz en la creación de una gran gama de relojes de submarinismo Rolex que le siguieron. El Submariner es un reloj emblemático cuyo renombre se extiende más allá del mundo profesional para el que fue diseñado en un primer momento. Submariner, el estándar por excelencia.",
+			"subHeader": "Conexión profunda",
+			"watch": "m136660-0004",
+			"idName": "submariner",
+			"hasVideo": 1
+		},
+		{
+			"id": 13,
+			"nombre": "SEA-DWELLER",
+			"text": "Rolex creó el Oyster Perpetual Sea-Dweller en 1967 para enfrentarse al desafío de misiones submarinas prolongadas. Posteriormente se mejoró en colaboración con los profesionales de Comex. En la actualidad es hermético hasta 1220 metros. El Sea-Dweller está específicamente diseñado para el buceo de saturación. Gracias a su válvula de helio, puede soportar la descompresión durante el ascenso y controlar la vuelta a la superficie ―la fase final de la exploración de aguas profundas.",
+			"subHeader": "Ciudadano de las profundidades",
+			"watch": "m126613ln-0002",
+			"idName": "sea-dweller",
+			"hasVideo": 0
+		},
+		{
+			"id": 14,
+			"nombre": "DEEPSEA",
+			"text": "Símbolos de la larga historia compartida entre Rolex y los exploradores de las profundidades, los modelos Oyster Perpetual Rolex Deepsea y Oyster Perpetual Deepsea Challenge son relojes de submarinismo profesionales altamente resistentes. Herméticos hasta una profundidad de 3900 metros en el Rolex Deepsea, lanzado en 2008, y 11 000 metros en el Deepsea Challenge, presentado en 2022.",
+			"subHeader": "Relojes de submarinismo extremos",
+			"watch": "m136660-0003",
+			"idName": "deepsea",
+			"hasVideo": 0
+		},
+		{
+			"id": 15,
+			"nombre": "LAND-DWELLER",
+			"text": null,
+			"subHeader": "Ampliar horizontes",
+			"watch": null,
+			"idName": "land-dweller",
+			"hasVideo": null
+		}
+	]
+}

@@ -5,37 +5,25 @@ import { ref } from "vue";
 import { computed } from "vue";
 
 const sliderItems = [
+  
   {
-    src: "nuevos-modelos-2025",
-    link: {name:'rolex-nuevos-modelos'},
-    alt: "nuevos-modelos-2025",
-    title: "Nuevos modelos 2025",
-  },
+    src: "oyster-perpetual",
+    link: {name:'rolex-coleccion-oyster-perpetual'},
+    alt: "oyster-perpetual-banner",
+    title: "Oyster Perpetual Banner",
+  },  
   {
-    src: "sea-dweller",
-    link: {name:'rolex-coleccion-sea-dweller'},
-    alt: "coleccion-sea-dweller",
-    title: "Coleccion Sea Dweller",
-  },
-
-  {
-    src: "viena",
-    link: {name:'world-of-rolex-article-9'},
-    alt: "rolex-y-la-filarmonica-de-viena-banner",
-    title: "Filarmonica de Viena Banner",
+    src: "rolex-grand-slam",
+    link: {name:'world-of-rolex-article-3'},
+    alt: "rolex-grand-slam",
+    title: "Grand Slam Banner",
   },  
   {
     src: "watchmaking",
     link: {name:'rolex-watchmaking'},
     alt: "watchmaking-banner",
     title: "Watchmaking",
-  },
-  {
-    src: "the-open",
-    link: {name:'world-of-rolex-article-7'},
-    alt: "rolex-y-the-open",
-    title: "Rolex y The Open",
-  }, 
+  }
 ];
 
 const currentSlide = ref(0);
