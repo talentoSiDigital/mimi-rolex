@@ -223,6 +223,16 @@ const router = createRouter({
         pageType:"article page"
       }
     },
+    {
+      path: "/rolex/world-of-rolex/resistencia",
+      name: "world-of-rolex-article-10",
+      component: () => import("./views/Rolex/articles/RolexWORArticle10.view.vue"),
+      meta: {
+        title: "Resistencia - World Of Rolex | Mimi Joyería ",
+        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+        pageType:"article page"
+      }
+    },
 
 
 

@@ -1,10 +1,8 @@
 <script setup>
+import { useElementVisibility, useWindowSize } from "@vueuse/core";
 import { computed, onMounted, ref, useTemplateRef } from "vue";
 import { useRouter } from "vue-router";
-import { useElementVisibility, useWindowSize } from "@vueuse/core";
 import POSBanner from '../components/banners-components/POSBanner.vue';
-import { usePostHog } from "../utils/posthog";
-import axios from "axios";
 
 const counter = ref(0);
 const classes = ref([
@@ -12,10 +10,7 @@ const classes = ref([
   "-translate-x-[100%]",
   "-translate-x-[200%]",
 ]);
-const { posthog } = usePostHog()
-const handleClick = (locate) => {
-  posthog.capture('button_clicked', { location: locate })
-}
+
 const { width } = useWindowSize();
 const target = useTemplateRef("target")
 const targetIsVisible = useElementVisibility(target)
@@ -27,21 +22,18 @@ const checkWindowSize = computed(() => {
 });
 
 const router = useRouter();
-
+const links = [
+  "/rolex/oyster-perpetual",
+  "/rolex/world-of-rolex/resistencia",
+  "/tudor",
+]
 function checkClick(pos) {
-  if (pos === 1) {
-    handleClick("tudor-banner")
-    router.push("/tudor");
-
-  } else {
-    handleClick("rolex-banner")
-    router.push("/rolex/nuevos-relojes");
-  }
+  router.push(links[pos]);
 }
 
 onMounted(() => {
   setInterval(() => {
-    if (counter.value == 1) {
+    if (counter.value == 2) {
       counter.value = 0;
     } else {
       counter.value++;
@@ -51,14 +43,14 @@ onMounted(() => {
 
 function changeCounter(direction){
   if(direction == 'r'){
-    if(counter.value == 1){
+    if(counter.value == 2){
       counter.value = 0
     }else{
        counter.value++
     }
   }else{
     if(counter.value == 0){
-      counter.value = 1
+      counter.value = 2
     }else{
        counter.value--
     }
@@ -78,16 +70,23 @@ function changeCounter(direction){
             src="/assets/routes-assets/headers/1-desktop.webp" alt="headers-1-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
+          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
+            src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-2-desktop" />
         </div>
       </div>
       <div v-else class="overflow-hidden">
         <div class="duration-500 flex" :class="classes[counter]">
-          <img @click="checkClick(counter)" rel="preload" src="/assets/routes-assets/headers/1-mobile.webp"
-            alt="headers-1-mobile" fetchpriority="high" />
-          <img @click="checkClick(counter)" rel="preload" src="/assets/routes-assets/headers/2-mobile.webp"
-            alt="headers-2-mobile" fetchpriority="high" />
+          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/1-mobile.webp"
+            alt="headers-1-mobile"  />
+          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/2-mobile.webp"
+            alt="headers-2-mobile"  />
+          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/3-mobile.webp"
+            alt="headers-2-mobile"  />
         </div>
       </div>
+
+
+
       <button class="absolute top-[45%] left-10 bg-main-green w-8 h-8 rounded-full border border-main-green hover:bg-white duration-200 " @click="changeCounter('l')">
         <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green"/>
       </button>

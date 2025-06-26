@@ -7,16 +7,16 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
-    src: "oyster-perpetual",
-    link: {name:'rolex-coleccion-oyster-perpetual'},
-    alt: "oyster-perpetual-banner",
-    title: "Oyster Perpetual Banner",
+    src: "cosmograph-daytona",
+    link: {name:'rolex-coleccion-cosmograph-daytona'},
+    alt: "cosmograph-daytona-banner",
+    title: "Cosmograph Daytona Banner",
   },  
   {
-    src: "rolex-grand-slam",
-    link: {name:'world-of-rolex-article-3'},
-    alt: "rolex-grand-slam",
-    title: "Grand Slam Banner",
+    src: "endurance",
+    link: {name:'world-of-rolex-article-10'},
+    alt: "endurance",
+    title: "Endurance Banner",
   },  
   {
     src: "watchmaking",
