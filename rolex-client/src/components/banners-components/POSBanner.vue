@@ -82,7 +82,7 @@ function highlightDay(pos) {
 
 <template>
   <div class="h-[65vh]  flex justify-center">
-    <div class="w-[90%] flex flex-col-reverse sm:flex-row h-full relative">
+    <div class="w-full flex flex-col-reverse sm:flex-row h-full relative">
       <div class="bg-[#0b3e27] sm:w-[400px] h-[65vh]">
         <div
           class="flex flex-col items-center justify-evenly font-montserrat font-bold text-white text-sm h-full -translate-y-12 sm:-translate-y-0"
@@ -200,15 +200,19 @@ function highlightDay(pos) {
           </div>
         </div>
       </div>
+      <router-link
+            :to="{ name: 'rolex' }" class="w-full sm:w-[80%]">
 
-      <div
-        class="h-fit sm:h-full bg-rolex-green w-full sm:w-[80%] bg-center bg-cover bg-[url(/assets/routes-assets/banners/new-banner-contact-location.jpg)]"
-      >
-      <span class="opacity-0 h-[100px] sm:h-0 block">
+            <div
+              class="h-fit sm:h-full bg-rolex-green  bg-center bg-cover bg-[url(/assets/routes-assets/banners/new-banner-contact-location.jpg)]"
+            >
+            <span class="opacity-0 h-[100px] sm:h-0 block">
+      
+              mimijoyeria
+            </span>
+          </div>
 
-        mimijoyeria
-      </span>
-    </div>
+          </router-link>
     </div>
   </div>
 </template>
