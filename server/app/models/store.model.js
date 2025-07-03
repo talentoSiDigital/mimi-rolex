@@ -113,6 +113,20 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
+  const TudorCollection = sequelize.define("tudor_collection",{
+    nombre:{
+      type: Sequelize.STRING
+    },
+    code:{
+      type: Sequelize.STRING
+    },
+    description:{
+      type: Sequelize.TEXT
+    }
+    
+  },{
+    timestamps: false
+  })
   
 
 
@@ -122,6 +136,7 @@ module.exports = (sequelize, Sequelize) => {
     Cart,
     Bill,
     CartProduct,
-    BillProduct
+    BillProduct,
+    TudorCollection
   };
 };

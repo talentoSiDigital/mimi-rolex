@@ -13,6 +13,8 @@ module.exports = app => {
 
 
     //Relojeria
+    router.get("/relojeria-slider", store.findRSlider)
+    router.get("/relojeria-tudor", store.findRMain)
     router.get("/relojeria/:id", store.findR)
     router.get("/relojeria/producto/:id", store.findDetailR)
     router.post("/relojeria/producto/create", uploadFiles.any(), store.createR)

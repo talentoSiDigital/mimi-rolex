@@ -26,6 +26,7 @@ const Watchmaking = db.store.Watchmaking;
 const User = db.user.User;
 const Bill = db.store.Bill;
 const BillProduct = db.store.BillProduct;
+const TudorCollection = db.store.TudorCollection;
 
 
 Cart.belongsTo(User, { as: 'owner' })
@@ -37,6 +38,7 @@ CartProduct.belongsTo(Watchmaking)
 Cart.hasMany(CartProduct)
 Watchmaking.hasMany(CartProduct)
 
+
 Bill.belongsTo(User, { as: 'owner' })
 
 Watchmaking.belongsToMany(Bill , {through: BillProduct})
@@ -46,6 +48,9 @@ BillProduct.belongsTo(Bill)
 Watchmaking.hasMany(BillProduct)
 BillProduct.belongsTo(Watchmaking)
 
+
+Watchmaking.belongsTo(TudorCollection)
+TudorCollection.hasMany(Watchmaking)
 
 
 
