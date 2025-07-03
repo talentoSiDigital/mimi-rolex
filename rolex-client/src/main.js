@@ -48,7 +48,8 @@ import {
     faMagnifyingGlass,
     faXmark,
     faMinus,
-    faPlus
+    faPlus,
+    faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -87,7 +88,8 @@ library.add(
     faMagnifyingGlass,
     faXmark,
     faMinus,
-    faPlus
+    faPlus,
+    faArrowUpRightFromSquare
 )
 // Defining pinia
 const pinia = createPinia()

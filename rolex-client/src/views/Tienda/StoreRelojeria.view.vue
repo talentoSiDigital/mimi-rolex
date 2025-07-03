@@ -4,7 +4,7 @@ import { RouterLink, useRoute } from 'vue-router';
 
 import OverlayBanner from '../../components/banners-components/OverlayBanner.vue';
 import StoreDataService from '../../services/storeDataService';
-
+import TudorShowcaseCard from '../../components/cards/TudorShowcaseCard.vue';
 
 const route = useRoute()
 
@@ -66,14 +66,8 @@ const { isLoading, state, isReady, execute } = useAsyncState(
                     <div class="grid grid-cols-1 place-items-center gap-2 md:grid-cols-4 w-10/12">
 
                         <div v-for="(items, key) in state" :key="key">
-                            <RouterLink :to="{ name: 'relojProducto', params: { id: items.serie } }"
-                                class="w-10/12 my-2 hover:underline">
-                                <img :src="items.img" :alt="items.serie">
-
-
-                                <h2 class="mt-4 font-bold">{{ items.nombre }}</h2>
-                                <h2 class="mb-4 font-bold">{{ items.precio }}</h2>
-                            </RouterLink>
+                            <TudorShowcaseCard :items="items" />
+                         
                         </div>
 
                     </div>

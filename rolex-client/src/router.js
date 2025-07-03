@@ -564,6 +564,16 @@ const router = createRouter({
     }
     ,
     {
+      path: "/testing/relojeria/tudor/",
+      name: "relojProducto",
+      component: () => import("./views/Tienda/Testing.view.vue"),
+      meta: {
+        title: "  Mimi Joyería "
+      },
+
+    }
+    ,
+    {
       path: "/joyeria/:serie/:id",
       name: "joyeriaProducto",
       component: () => import("./views/Tienda/StoreJoyeriaDetail.view.vue"),

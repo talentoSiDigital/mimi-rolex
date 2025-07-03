@@ -1,174 +1,175 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
-
+import TudorWatchesSlider from '../../components/cards/TudorWatchesSlider.vue';
+import TudorHomepageSlider from '../../components/cards/TudorHomepageSlider.vue';
 </script>
 
 <template>
     <div id="main-container">
-        <PageBanner type="tudor" />
         <header
-                class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
+            class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
 
-                <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
-                
-                <RouterLink to="/novedades/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
-                    <h1 class="font-tudor tracking-tighter ">NOVEDADES 2025</h1>
-                </RouterLink>
-                <RouterLink to="/relojeria/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
-                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
-                </RouterLink>
-                <RouterLink to="/contactenos" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
-                    <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
-                </RouterLink>
+            <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
 
-
-            </header>
+            <RouterLink to="/novedades/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                <h1 class="font-tudor tracking-tighter ">NOVEDADES 2025</h1>
+            </RouterLink>
+            <RouterLink to="/relojeria/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
+            </RouterLink>
+            <RouterLink to="/contactenos" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
+            </RouterLink>
 
 
-        <header class="flex flex-col justify-center  items-center  h-fit py-10 bg-neutral-100">
-            <p class="font-tudor tracking-tighter text-xl text-red-700 stroke-black">
-                ADÉNTRESE EN TUDOR
-            </p>
-            <h1 class="font-tudor tracking-tighter text-4xl text-center py-4 ">
-                NACIMIENTO DE LA MARCA
+        </header>
+        <PageBanner type="tudor-main" />
+
+
+        <header class="flex flex-col justify-center  items-center  h-fit py-10 gap-2">
+            <h1 class="font-tudor-title font-black  text-4xl text-center  ">
+                RELOJES TUDOR
 
             </h1>
-            <p class="w-3/4 text-center font-normal mb-14 font-sans">
+            <p class="font-tudor-title  font-black  text-tudor-red stroke-black">
+                UNA SELECCIÓN DE DISEÑOS AUDACES
+            </p>
+            <p class="w-10/12 md:w-3/4 text-center text-gray-900 mb-14 font-sans">
 
-                En febrero de 1926, Hans Wilsdorf registra la marca «The TUDOR» y comienza a fabricar relojes que llevan esa
-                mención en la esfera. Recién terminada la Segunda Guerra Mundial, Hans Wilsdorf supo que había llegado el
-                momento de expandirse y dotar a la marca de una identidad propia. El 6 de marzo de 1946, creó «Montres
-                TUDOR S.A.», especializada en modelos tanto para hombre como para mujer. Rolex garantizaría las
-                características técnicas, estéticas y funcionales, además de la distribución y el servicio postventa.
+                TUDOR es una marca galardonada de relojería suiza que ofrece relojes con un diseño refinado, fiabilidad
+                probada y una exclusiva relación calidad-precio. Los orígenes de TUDOR se remontan a 1926, cuando «The
+                Tudor» fue registrada por primera vez en nombre del fundador de Rolex, Hans Wilsdorf. En 1946 creó la
+                empresa «Montres TUDOR S.A.» para ofrecer relojes con la calidad y confianza de un Rolex a un precio más
+                asequible. Conocidos por su robustez y asequibilidad, a lo largo de su historia, los relojes TUDOR han
+                acompañado a audaces aventureros en travesías submarinas, terrestres y glaciales. Hoy en día, la
+                colección TUDOR incluye modelos emblemáticos como el Black Bay, Pelagos, 1926 y TUDOR Royal. Desde 2015,
+                TUDOR también ofrece Calibres mecánicos de Manufactura con numerosas funciones y rendimiento
+                excepcional.
 
             </p>
-            <div id="button" class="relative  py-2 px-14 bg-red-700">
-                <div class="py-4 px-6 border"></div>
-                <router-link to="/relojeria/tudor"
-                    class="w-full h-full inset-0 absolute flex items-center justify-center gap-1  border bg-white border-red-700 hover:-translate-x-1 hover:-translate-y-1 duration-200">
-                    <p class="text-sm font-tudor tracking-tighter  ">VER COLECCIÓN</p>
-                    <font-awesome-icon :icon="['fas', 'arrow-right']" />
-                </router-link>
-            </div>
+
         </header>
 
+
+        <TudorWatchesSlider />
+
+        <div id="button" class="my-10 flex justify-center">
+            <router-link :to="{ name: 'reloj' }"
+                class=" duration-200 rounded-full text-sm bg-tudor-red border border-tudor-red text-white hover:bg-white hover:text-tudor-red p-3 uppercase font-bold">
+                Explorar todos los relojes TUDOR
+            </router-link>
+        </div>
+
         <section class=" flex flex-col items-center justify-center py-10  ">
-            <p class="font-tudor tracking-tighter  text-xl text-red-700 stroke-black">
-                HISTORIA DE TUDOR
-            </p>
-            <h1 class="text-4xl py-4 text-center font-tudor tracking-tighter ">
-                INTUICIÓN DE HANS WILSDORF
+            <div>
+                <img src="/assets/routes-assets/tudor/tudor-main.webp" alt="">
+            </div>
+
+            <h1 class="text-4xl py-4 text-center font-tudor-title ">
+                EL MUNDO DE TUDOR
             </h1>
-            <img class="mb-4 w-1/2" src="/assets/routes-assets/tudor/tudor-1.webp" alt="tudor-mosaico">
-            <p class="w-3/4 text-center">«Llevaba muchos años considerando la idea de crear relojes que nuestros
-                distribuidores pudieran vender a un precio un poco más bajo que el de nuestros Rolex, pero alcanzando los
-                mismos niveles de confianza por los que Rolex es reconocido en todo el mundo. Por eso decidí fundar una
-                empresa específicamente dedicada a la fabricación y venta de estos nuevos relojes. Esta empresa se llama
-                Montres TUDOR S.A.».
-                <br>
-                <br>
-                -H. Wilsdorf
+            <p class="w-3/4 text-center">En 2017, TUDOR lanzó una nueva campaña con el lema «Born To Dare». Refleja
+                tanto la historia de la marca como lo que es hoy en día. Cuenta las aventuras de personas que han
+                logrado lo extraordinario en tierra firme, sobre hielo, por aire o bajo el agua con un reloj TUDOR en
+                sus muñecas. El lema también hace referencia a la visión de Hans Wilsdorf, fundador de TUDOR, quien
+                fabricó relojes TUDOR diseñados para resistir las condiciones más extremas y concebidos para los estilos
+                de vida más audaces. Es el testimonio del singular enfoque sobre la relojería por el que TUDOR es
+                conocida en la actualidad. Sus innovaciones, pioneras en el sector de la relojería, se han convertido en
+                toda una referencia hoy en día. El espíritu «Born To Dare» de TUDOR cuenta con el apoyo de embajadores
+                ilustres por todo el mundo, cuyos logros son consecuencia de un estilo de vida desafiante
             </p>
 
         </section>
 
-        <section class="flex flex-col md:flex-row w-full h-fit mb-14 bg-[#1a1a18]">
-            <div class="md:w-1/2 py-10 flex flex-col justify-center items-center text-white ">
+        <TudorHomepageSlider />
 
-                <p class="font-tudor tracking-tighter  text-xl w-5/6">
-                    HISTORIA DE TUDOR
-                </p>
-                <h1 class="text-4xl py-4 font-tudor tracking-tighter  w-5/6">
-                    EL ARTE DEL MONTAJE
+        <div id="button" class="my-10 flex justify-center">
+            <a href="https://www.tudorwatch.com/es" target="_blank"
+                class=" duration-200 rounded-full text-sm hover:bg-tudor-red border  border-tudor-red hover:text-white bg-white text-tudor-red p-3 uppercase font-bold ">
+                Descubre más en tudorwatch.com
+                <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
+            </a>
+        </div>
+
+
+
+        <section class="flex flex-col  justify-around items-center  w-full">
+            <div>
+                <img src="/assets/routes-assets/tudor/tudor-about-banner.webp" alt="">
+            </div>
+            <header class="flex flex-col justify-center  items-center  h-fit py-10 gap-2">
+                <h1 class="font-tudor-title font-black  text-4xl text-center  ">
+                    ACERCA DE TUDOR
+
 
                 </h1>
-                <p class=" text-justify  w-5/6">
-
-                    Un reloj TUDOR vive, vibra, y le lleva al mundo de la micro precisión. Todos sus componentes técnicos se
-                    han puesto a prueba hasta el mínimo detalle. Hasta la obsesión. Sumérjase en el movimiento. Estética y
-                    funcionamiento tienen en cuenta los imperativos para conseguir un producto dedicado a los más exigentes,
-                    diseñado para resistir y para disfrutar. La vista se guía por la mente y por el corazón, el tiempo no
-                    debe hacer mella en esta mecánica de precisión. Materiales de excepción, resistencia y fuerza de diseño
-                    hacen de cada reloj una pieza única.
-
+                <p class="font-tudor-title  font-black  text-tudor-red stroke-black">
+                    RELOJES FIABLES Y ROBUSTOS DESDE 1926
                 </p>
+               
 
+            </header>
+            <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 place-content-center gap-10">
+                <div class="w-[300px]">
 
-            </div>
-            <div class="md:w-1/2  flex flex-col justify-center">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="https://www.youtube.com/embed/t0ZU3FoQ0Io?si=eTA7KBN88LYBD1gx" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>/assets/routes-assets
+                    <img src="/assets/routes-assets/tudor/tudor-about-1.webp" alt="" class="">
+                    <header class="flex flex-col items-center">
+                        <h2 class="py-2 font-tudor-title ">MANUFACTURA </h2>
+                        <p class="text-xs font-light text-center w-11/12">
+                            Cada reloj TUDOR está ensamblado y completamente puesto a prueba siguiendo los estándares
+                            superiores de TUDOR en la Manufactura relojera de la marca ubicada en Le Locle, Suiza. Esta
+                            nueva instalación de vanguardia, que reúne el savoir-faire de los relojeros con lo mejor de
+                            la gestión de producción y de los sistemas de certificación automatizados, se completó en
+                            2021 tras tres años de construcción.
+                        </p>
+                    </header>
+                </div>
+                <div class="w-[300px]">
+
+                    <img src="/assets/routes-assets/tudor/tudor-about-2.webp" alt="" class="">
+                    <header class="flex flex-col items-center">
+                        <h2 class="py-2 font-tudor-title "> MOVIMIENTOS </h2>
+                        <p class="text-xs font-light text-center w-11/12">
+                            En 2015, TUDOR anunció el primer Calibre de Manufactura de su historia. Con un Calibre de
+                            alto rendimiento y excelente precisión, además de probada resistencia, ofrece una reserva de
+                            marcha de 70 horas. Esto quiere decir que el portador del reloj puede quitárselo un viernes
+                            por la tarde y volver a ponérselo el lunes por la mañana sin tener que darle cuerda.
+                        </p>
+                    </header>
+                </div>
+                <div class="w-[300px]">
+
+                    <img src="/assets/routes-assets/tudor/tudor-about-3.webp" alt="" class="">
+                    <header class="flex flex-col items-center">
+                        <h2 class="py-2 font-tudor-title ">HISTORIA</h2>
+                        <p class="text-xs font-light text-center w-11/12">
+                            Hans Wilsdorf creó TUDOR en 1926 para fabricar los mejores relojes al mejor precio. Casi un
+                            siglo después, TUDOR está haciendo exactamente eso: crea relojes robustos y fiables a
+                            precios asequibles.
+                        </p>
+                    </header>
                 </div>
             </div>
 
-
-        </section>
-
-        <section class="flex flex-col md:flex-row-reverse justify-around items-center p-10 w-full">
-            <img src="/assets/routes-assets/tudor/tudor-2.webp" alt="david-beckham">
-            <header class="md:w-[40%]">
-                <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
-                <h1 class="text-4xl py-4 font-tudor tracking-tighter ">DAVID BECKHAM</h1>
-                <p class=" text-justify">De niño, David Beckham tenía un sueño. Cada vez que le preguntaban qué quería ser
-                    de mayor, él respondía siempre jugador de fútbol. Esto lo llevó pronto a convertirse en uno de los
-                    jugadores más aclamados, queridos y de mayor éxito de la historia del deporte. Dejó su marca en el
-                    fútbol moderno con tres clubes importantes y 115 partidos con la selección inglesa de fútbol, 59 de
-                    ellos como capitán: 6 títulos de Premier League inglesa, 2 copas de Major League Soccer estadounidense,
-                    1 Liga española y 1 UEFA Champions League.</p>
-            </header>
-        </section>
-
-        <section class="flex flex-col md:flex-row justify-around items-center p-10 w-full">
-            <img src="/assets/routes-assets/tudor/tudor-3.webp" alt="jay-chou">
-            <header class="md:w-[40%]">
-                <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
-                <h1 class="text-4xl py-4 font-tudor tracking-tighter ">JAY CHOU</h1>
-                <p class=" text-justify">Jay Chou creció en el seno de una familia de maestros en Taiwán y, en vista de su
-                    precoz talento para la música, empezó a familiarizarse con el piano a los cuatro años. Posteriormente,
-                    aprendió a tocar el violonchelo y, hoy en día, Chopin sigue siendo su compositor favorito. Músico.
-                    Actor. Director. Icono. Durante más de una década, el «rey del pop asiático» ha desafiado los límites
-                    por todo el mundo. Desde Taipéi a Hollywood, Jay Chou siempre está dispuesto a embarcarse en el próximo
-                    reto.</p>
-            </header>
-        </section>
-
-        <section class=" h-[300px] w-full overflow-hidden bg-black relative">
-            <img src="/assets/routes-assets/tudor/tudor-overlay.webp" alt="tudor-banner" class="h-full w-full">
-            <header
-                class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
-
-                <h1 class="text-xl md:text-4xl  text-center  py-4 w-3/4 font-arial-bold">
-                    «CONSERVAMOS LO MEJOR DEL PASADO: LOS MEJORES MÉTODOS DE RELOJERÍA, EL MEJOR DISEÑO»
-                </h1>
-
-            </header>
-
-        </section>
-
-        <section class="pb-16 w-full overflow-hidden gap-6 bg-black relative flex flex-col justify-center items-center">
-            <img src="/assets/tudor-logo.webp" alt="tudor-logo" class="w-32">
-            <header
-                class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-black bg-opacity-40 ">
-
-                <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
-                
-                <RouterLink to="/relojeria/tudor" class=" hover:text-red-700 duration-200 p-4 md:p-6">
-                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
-                </RouterLink>
-                <RouterLink to="/contactenos" class=" hover:text-red-700 duration-200 p-4 md:p-6">
-                    <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
-                </RouterLink>
-
-
-            </header>
-            <a href="#top-bar" class=" w-10 text-center">
-                <font-awesome-icon :icon="['fas', 'angle-up']" class="text-white" />
-
+            <a href="https://www.tudorwatch.com/es" target="_blank"
+                class=" duration-200 rounded-full text-sm hover:bg-tudor-red border  border-tudor-red hover:text-white bg-white text-tudor-red p-3 uppercase font-bold mt-10">
+                Descubre más en tudorwatch.com
+                <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
             </a>
+        </section>
+
+
+
+
+
+
+
+        <section class="pb-4 mt-8 w-full overflow-hidden  bg-black relative flex flex-col justify-center items-center">
+            <img src="/assets/tudor-logo.webp" alt="tudor-logo" class="w-32">
+            <a href="https://www.tudorwatch.com/es" target="_blank"
+                class="text-white uppercase text-sm ">tudorwatch.com</a>
+
 
         </section>
 
@@ -178,6 +179,3 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
 
     </div>
 </template>
-
-
-

@@ -1,0 +1,297 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+import PageBanner from '../../components/banners-components/PageBanner.vue'
+
+</script>
+
+<template>
+    <div id="main-container">
+        <PageBanner type="tudor-main" />
+        <header
+                class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
+
+                <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
+                
+                <RouterLink to="/novedades/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">NOVEDADES 2025</h1>
+                </RouterLink>
+                <RouterLink to="/relojeria/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
+                </RouterLink>
+                <RouterLink to="/contactenos" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
+                </RouterLink>
+
+
+            </header>
+
+
+        <header class="flex flex-col justify-center  items-center  h-fit py-10 bg-neutral-100">
+            <p class="font-tudor tracking-tighter text-xl text-red-700 stroke-black">
+                ADÉNTRESE EN TUDOR
+            </p>
+            <h1 class="font-tudor tracking-tighter text-4xl text-center py-4 ">
+                NACIMIENTO DE LA MARCA
+
+            </h1>
+            <p class="w-3/4 text-center font-normal mb-14 font-sans">
+
+                En febrero de 1926, Hans Wilsdorf registra la marca «The TUDOR» y comienza a fabricar relojes que llevan esa
+                mención en la esfera. Recién terminada la Segunda Guerra Mundial, Hans Wilsdorf supo que había llegado el
+                momento de expandirse y dotar a la marca de una identidad propia. El 6 de marzo de 1946, creó «Montres
+                TUDOR S.A.», especializada en modelos tanto para hombre como para mujer. Rolex garantizaría las
+                características técnicas, estéticas y funcionales, además de la distribución y el servicio postventa.
+
+            </p>
+            <div id="button" class="relative  py-2 px-14 bg-red-700">
+                <div class="py-4 px-6 border"></div>
+                <router-link to="/relojeria/tudor"
+                    class="w-full h-full inset-0 absolute flex items-center justify-center gap-1  border bg-white border-red-700 hover:-translate-x-1 hover:-translate-y-1 duration-200">
+                    <p class="text-sm font-tudor tracking-tighter  ">VER COLECCIÓN</p>
+                    <font-awesome-icon :icon="['fas', 'arrow-right']" />
+                </router-link>
+            </div>
+        </header>
+
+        <section class=" flex flex-col items-center justify-center py-10  ">
+            <p class="font-tudor tracking-tighter  text-xl text-red-700 stroke-black">
+                HISTORIA DE TUDOR
+            </p>
+            <h1 class="text-4xl py-4 text-center font-tudor tracking-tighter ">
+                INTUICIÓN DE HANS WILSDORF
+            </h1>
+            <!-- <img class="mb-4 w-1/2" src="/assets/routes-assets/tudor/tudor-1.webp" alt="tudor-mosaico"> -->
+            <p class="w-3/4 text-center">«Llevaba muchos años considerando la idea de crear relojes que nuestros
+                distribuidores pudieran vender a un precio un poco más bajo que el de nuestros Rolex, pero alcanzando los
+                mismos niveles de confianza por los que Rolex es reconocido en todo el mundo. Por eso decidí fundar una
+                empresa específicamente dedicada a la fabricación y venta de estos nuevos relojes. Esta empresa se llama
+                Montres TUDOR S.A.».
+                <br>
+                <br>
+                -H. Wilsdorf
+            </p>
+
+        </section>
+
+        <section class="flex flex-col md:flex-row w-full h-fit mb-14 bg-[#1a1a18]">
+            <div class="md:w-1/2 py-10 flex flex-col justify-center items-center text-white ">
+
+                <p class="font-tudor tracking-tighter  text-xl w-5/6">
+                    HISTORIA DE TUDOR
+                </p>
+                <h1 class="text-4xl py-4 font-tudor tracking-tighter  w-5/6">
+                    EL ARTE DEL MONTAJE
+
+                </h1>
+                <p class=" text-justify  w-5/6">
+
+                    Un reloj TUDOR vive, vibra, y le lleva al mundo de la micro precisión. Todos sus componentes técnicos se
+                    han puesto a prueba hasta el mínimo detalle. Hasta la obsesión. Sumérjase en el movimiento. Estética y
+                    funcionamiento tienen en cuenta los imperativos para conseguir un producto dedicado a los más exigentes,
+                    diseñado para resistir y para disfrutar. La vista se guía por la mente y por el corazón, el tiempo no
+                    debe hacer mella en esta mecánica de precisión. Materiales de excepción, resistencia y fuerza de diseño
+                    hacen de cada reloj una pieza única.
+
+                </p>
+
+
+            </div>
+            <div class="md:w-1/2  flex flex-col justify-center">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/t0ZU3FoQ0Io?si=eTA7KBN88LYBD1gx" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>/assets/routes-assets
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="flex flex-col md:flex-row-reverse justify-around items-center p-10 w-full">
+            <!-- <img src="/assets/routes-assets/tudor/tudor-2.webp" alt="david-beckham"> -->
+            <header class="md:w-[40%]">
+                <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
+                <h1 class="text-4xl py-4 font-tudor tracking-tighter ">DAVID BECKHAM</h1>
+                <p class=" text-justify">De niño, David Beckham tenía un sueño. Cada vez que le preguntaban qué quería ser
+                    de mayor, él respondía siempre jugador de fútbol. Esto lo llevó pronto a convertirse en uno de los
+                    jugadores más aclamados, queridos y de mayor éxito de la historia del deporte. Dejó su marca en el
+                    fútbol moderno con tres clubes importantes y 115 partidos con la selección inglesa de fútbol, 59 de
+                    ellos como capitán: 6 títulos de Premier League inglesa, 2 copas de Major League Soccer estadounidense,
+                    1 Liga española y 1 UEFA Champions League.</p>
+            </header>
+        </section>
+
+        <section class="flex flex-col md:flex-row justify-around items-center p-10 w-full">
+            <!-- <img src="/assets/routes-assets/tudor/tudor-3.webp" alt="jay-chou"> -->
+            <header class="md:w-[40%]">
+                <h3 class="font-tudor tracking-tighter  text-xl text-red-700">EMBAJADOR TUDOR</h3>
+                <h1 class="text-4xl py-4 font-tudor tracking-tighter ">JAY CHOU</h1>
+                <p class=" text-justify">Jay Chou creció en el seno de una familia de maestros en Taiwán y, en vista de su
+                    precoz talento para la música, empezó a familiarizarse con el piano a los cuatro años. Posteriormente,
+                    aprendió a tocar el violonchelo y, hoy en día, Chopin sigue siendo su compositor favorito. Músico.
+                    Actor. Director. Icono. Durante más de una década, el «rey del pop asiático» ha desafiado los límites
+                    por todo el mundo. Desde Taipéi a Hollywood, Jay Chou siempre está dispuesto a embarcarse en el próximo
+                    reto.</p>
+            </header>
+        </section>
+
+        <section class=" h-[300px] w-full overflow-hidden bg-black relative">
+            <!-- <img src="/assets/routes-assets/tudor/tudor-overlay.webp" alt="tudor-banner" class="h-full w-full"> -->
+            <header
+                class="absolute h-full bottom-0 left-0 right-0 flex flex-col items-center justify-center  text-white bg-black bg-opacity-40 font-bold">
+
+                <h1 class="text-xl md:text-4xl  text-center  py-4 w-3/4 font-arial-bold">
+                    «CONSERVAMOS LO MEJOR DEL PASADO: LOS MEJORES MÉTODOS DE RELOJERÍA, EL MEJOR DISEÑO»
+                </h1>
+
+            </header>
+
+        </section>
+
+        <section class="pb-16 w-full overflow-hidden gap-6 bg-black relative flex flex-col justify-center items-center">
+            <!-- <img src="/assets/tudor-logo.webp" alt="tudor-logo" class="w-32"> -->
+            <header
+                class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-black bg-opacity-40 ">
+
+                <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
+                
+                <RouterLink to="/relojeria/tudor" class=" hover:text-red-700 duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">QUIERO UN TUDOR</h1>
+                </RouterLink>
+                <RouterLink to="/contactenos" class=" hover:text-red-700 duration-200 p-4 md:p-6">
+                    <h1 class="font-tudor tracking-tighter ">CONTACTA CON NOSOTROS</h1>
+                </RouterLink>
+
+
+            </header>
+            <a href="#top-bar" class=" w-10 text-center">
+                <font-awesome-icon :icon="['fas', 'angle-up']" class="text-white" />
+
+            </a>
+
+        </section>
+
+
+
+
+
+    </div>
+</template>
+
+
+
+
+
+-- INSERT COLLECTIONS
+
+
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('1', 'Black Bay', 'black-bay', 'La línea Black Bay es el resultado de la sutil combinación de estética tradicional y relojería contemporánea. Aúna los más de 60 años de historia de los relojes de submarinismo TUDOR, al tiempo que se mantienen plenamente actuales.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('2', 'Pelagos', 'pelagos', 'La colección TUDOR Pelagos representa algunos de los relojes de buceo, mecánicos y tradicionales más completos que se encuentran hoy en día. Provistos de los Calibres de Manufactura TUDOR, que garantizan fiabilidad robusta y precisión en condiciones extremadamente duras, los relojes son magníficos ejemplos de relojes‑herramienta y símbolos de aventura.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('3', '1926', '1926', 'TUDOR rinde homenaje a sus orígenes con su línea 1926, una gama de relojes mecánicos atemporales y elegantes. El TUDOR 1926 es un reloj clásico para hombre y mujer, disponible en cuatro tamaños con múltiples opciones para la esfera.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('4', 'Ranger', 'ranger', 'En 2022, con motivo del 70.º aniversario de la «British North Greenland Expedition», TUDOR presenta el modelo Ranger, un reloj herramienta que celebra el espíritu de esta audaz aventura, con un Calibre de Manufactura MT5402, una caja de 39 milímetros y un cierre con sistema de ajuste rápido.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('5', 'Tudor Royal', 'tudor-royal', 'Con su brazalete integrado de metal, bisel con muescas o engastado, y movimiento automático, la línea TUDOR Royal es la máxima representación de la versatilidad, la elegancia y la deportividad asequibles.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('6', 'Clair De Rose', 'clair-de-rose', 'Clair de Rose es una línea clásica de TUDOR cuyo nombre se refiere de forma poética tanto a clair de lune, «luz de la luna» en francés, como al logo histórico de la marca, una rosa, combinando ambos de forma divertida.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('7', 'Black Bay 58', 'black-bay 58', 'El Black Bay 58 recibe su nombre del año en el que se presentó el primer reloj de submarinismo TUDOR hermético hasta 200 metros. Entre otras alusiones estéticas a este famoso reloj histórico, este modelo incorpora una caja de 39 mm de diámetro fiel a las proporciones características de la década de 1950.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('8', 'Daring Watches', 'daring-watches', 'La colección Daring Watches de TUDOR es una cuidada selección de relojes exclusivos diseñados para romper tradiciones.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('9', 'Pelagos FXD', 'pelagos-fxd', 'Desde los años 50 y desde la creación por parte de TUDOR de uno de los primeros relojes de buceo profesionales modernos hasta los años 80, la marca ha sido un proveedor habitual de la Marina Nacional francesa. Con el modelo Pelagos FXD, donde FXD hace referencia a las barras de correa fijas extrarobustas de la caja, TUDOR revive esta histórica colaboración.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('10', 'Black Bay Pro', 'black-bay-pro', 'TUDOR presenta un modelo técnico bautizado como Black Bay Pro. Tiene un diámetro de 39 mm, un bisel fijo de acero y un Calibre de Manufactura con función GMT integrada.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('11', 'Black Bay Chrono', 'black-bay-chrono', 'Desde 1970, cuando la marca presentó su primer cronógrafo, TUDOR siempre ha fabricado relojes estrechamente vinculados con el mundo de los deportes de motor. El modelo Black Bay Chrono combina este legado en un cronógrafo elegante y deportivo, con subcontadores en contraste y Calibre de Manufactura automático, con rueda de pilares y un embrague vertical de alto rendimiento.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('12', 'Black Bay 68', 'black-bay-68', 'El Black Bay 68 se encuentra entre los modelos Black Bay más grandes, de 43 mm, y satisface las necesidades de varios tamaños de caja adaptados a todas las muñecas. El tamaño del reloj también combina con la certificación del movimiento Master Chronometer otorgada por el METAS.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('13', 'Black Bay GMT', 'black-bay-gmt', 'El famoso reloj de submarinismo Black Bay de TUDOR está disponible ahora con una función GMT que indica, además de la hora local, la hora en otras dos zonas horarias. Provisto del Calibre de Manufactura MT5652, el Black Bay GMT incorpora un bisel giratorio graduado 24 horas con dos colores.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('14', 'Black Bay One', 'black-bay-one', 'Los modelos Black Bay One aportan una estética única a la línea Black Bay. Sus cajas curvadas ofrecen, junto al espíritu original de reloj herramienta, una imagen sofisticada, versátil y unisex chic.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('15', 'Black Bay 54', 'black-bay 54', 'TUDOR presenta un nuevo miembro de la línea Black Bay que encarna la expresión más pura y moderna del primer reloj de submarinismo de la marca. En 1954 se presentó la referencia 7922. Hoy, el Black Bay 54 recuerda este modelo con una caja de 37 mm y un Calibre de Manufactura.');
+INSERT INTO `tudor_collections` (`id`, `nombre`, `code`, `description`) VALUES ('16', 'Black Bay Bronze', 'black-bay-bronze', 'El Black Bay Bronze es un reloj de submarinismo de 43 mm que hace referencia a la historia naval de la marca y equipado con el Calibre de Manufactura MT5601 de TUDOR.');
+
+
+
+
+
+-- DELETE DISCONTINUED
+
+DELETE * FROM `watchmakings` WHERE `id`=133;
+
+
+-- UPDATE WATCHMAKINGS
+
+
+UPDATE `watchmakings` SET `precio`='$2,350', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=124;
+UPDATE `watchmakings` SET `precio`='$2.270', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=125;
+UPDATE `watchmakings` SET `precio`='$2,270', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=132;
+UPDATE `watchmakings` SET `precio`='$2.270', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=136;
+UPDATE `watchmakings` SET `precio`='$2,350', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=137;
+UPDATE `watchmakings` SET `precio`='$2,410', `cantidadImagenes`=5,  `tudorCollectionId`=3 WHERE `id`=138;
+UPDATE `watchmakings` SET `precio`='$5,100', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=50;
+UPDATE `watchmakings` SET `precio`='$4,700', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=135;
+UPDATE `watchmakings` SET `precio`='$4,950', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=158;
+UPDATE `watchmakings` SET `precio`='$3,900', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=159;
+UPDATE `watchmakings` SET `precio`='$4,610', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=90;
+UPDATE `watchmakings` SET `precio`='$4,340', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=105;
+UPDATE `watchmakings` SET `precio`='$4,770', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=91;
+UPDATE `watchmakings` SET `precio`='$4,610', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=106;
+UPDATE `watchmakings` SET `precio`='$4,450', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=120;
+UPDATE `watchmakings` SET `precio`='$5,160', `cantidadImagenes`=5,  `tudorCollectionId`=15 WHERE `id`=104;
+UPDATE `watchmakings` SET `precio`='$5,700', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=54;
+UPDATE `watchmakings` SET `precio`='$4,510', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=128;
+UPDATE `watchmakings` SET `precio`='$4,900', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=157;
+UPDATE `watchmakings` SET `precio`='$5,050', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=162;
+UPDATE `watchmakings` SET `precio`='$4,730', `cantidadImagenes`=5,  `tudorCollectionId`=12 WHERE `id`=163;
+UPDATE `watchmakings` SET `precio`='$5,040', `cantidadImagenes`=5,  `tudorCollectionId`=16 WHERE `id`=52;
+UPDATE `watchmakings` SET `precio`='$6,250', `cantidadImagenes`=5,  `tudorCollectionId`=16 WHERE `id`=2;
+UPDATE `watchmakings` SET `precio`='$5,700', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=131;
+UPDATE `watchmakings` SET `precio`='$4,250', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=155;
+UPDATE `watchmakings` SET `precio`='$5.890', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=98;
+UPDATE `watchmakings` SET `precio`='$6,250', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=107;
+UPDATE `watchmakings` SET `precio`='$5.890', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=108;
+UPDATE `watchmakings` SET `precio`='$6,350', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=109;
+UPDATE `watchmakings` SET `precio`='$5,890', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=122;
+UPDATE `watchmakings` SET `precio`='$5,890', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=123;
+UPDATE `watchmakings` SET `precio`='$6,350', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=151;
+UPDATE `watchmakings` SET `precio`='$4,970', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=152;
+UPDATE `watchmakings` SET `precio`='$7,340', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=154;
+UPDATE `watchmakings` SET `precio`='$7,950', `cantidadImagenes`=5,  `tudorCollectionId`=11 WHERE `id`=89;
+UPDATE `watchmakings` SET `precio`='$4,150', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=53;
+UPDATE `watchmakings` SET `precio`='$5,160', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=55;
+UPDATE `watchmakings` SET `precio`='$20,350', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=56;
+UPDATE `watchmakings` SET `precio`='$4,920', `cantidadImagenes`=5,  `tudorCollectionId`=13 WHERE `id`=57;
+UPDATE `watchmakings` SET `precio`='$6,970', `cantidadImagenes`=5,  `tudorCollectionId`=13 WHERE `id`=92;
+UPDATE `watchmakings` SET `precio`='$4,730', `cantidadImagenes`=5,  `tudorCollectionId`=13 WHERE `id`=110;
+UPDATE `watchmakings` SET `precio`='$4,380', `cantidadImagenes`=5,  `tudorCollectionId`=13 WHERE `id`=111;
+UPDATE `watchmakings` SET `precio`='$3,760', `cantidadImagenes`=5,  `tudorCollectionId`=13 WHERE `id`=58;
+UPDATE `watchmakings` SET `precio`='$4,380', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=59;
+UPDATE `watchmakings` SET `precio`='$4,370', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=112;
+UPDATE `watchmakings` SET `precio`='$4,370', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=113;
+UPDATE `watchmakings` SET `precio`='$4,730', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=114;
+UPDATE `watchmakings` SET `precio`='$4,370', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=150;
+UPDATE `watchmakings` SET `precio`='$4,370', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=160;
+UPDATE `watchmakings` SET `precio`='$4,480', `cantidadImagenes`=5,  `tudorCollectionId`=10 WHERE `id`=161;
+UPDATE `watchmakings` SET `precio`='$4,920', `cantidadImagenes`=5,  `tudorCollectionId`=1 WHERE `id`=61;
+UPDATE `watchmakings` SET `precio`='$4,130', `cantidadImagenes`=5,  `tudorCollectionId`=15 WHERE `id`=103;
+UPDATE `watchmakings` SET `precio`='$4,150', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=88;
+UPDATE `watchmakings` SET `precio`='$4.150', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=130;
+UPDATE `watchmakings` SET `precio`='$5,150', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=142;
+UPDATE `watchmakings` SET `precio`='$4,320', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=87;
+UPDATE `watchmakings` SET `precio`='$5,100', `cantidadImagenes`=5,  `tudorCollectionId`=12 WHERE `id`=143;
+UPDATE `watchmakings` SET `precio`='$3,080', `cantidadImagenes`=5,  `tudorCollectionId`=6 WHERE `id`=115;
+UPDATE `watchmakings` SET `precio`='$3,080', `cantidadImagenes`=5,  `tudorCollectionId`=6 WHERE `id`=116;
+UPDATE `watchmakings` SET `precio`='$2.970', `cantidadImagenes`=5,  `tudorCollectionId`=6 WHERE `id`=127;
+UPDATE `watchmakings` SET `precio`='$5,600', `cantidadImagenes`=5,  `tudorCollectionId`=2 WHERE `id`=62;
+UPDATE `watchmakings` SET `precio`='$5,260', `cantidadImagenes`=5,  `tudorCollectionId`=2 WHERE `id`=99;
+UPDATE `watchmakings` SET `precio`='$4,690', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=63;
+UPDATE `watchmakings` SET `precio`='$4,320', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=97;
+UPDATE `watchmakings` SET `precio`='$4,690', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=117;
+UPDATE `watchmakings` SET `precio`='$5,890', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=84;
+UPDATE `watchmakings` SET `precio`='$5,890', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=118;
+UPDATE `watchmakings` SET `precio`='$4,160', `cantidadImagenes`=5,  `tudorCollectionId`=9 WHERE `id`=96;
+UPDATE `watchmakings` SET `precio`='$5,600', `cantidadImagenes`=5,  `tudorCollectionId`=2 WHERE `id`=85;
+UPDATE `watchmakings` SET `precio`='$6,410', `cantidadImagenes`=5,  `tudorCollectionId`=2 WHERE `id`=140;
+UPDATE `watchmakings` SET `precio`='$3,400', `cantidadImagenes`=5,  `tudorCollectionId`=4 WHERE `id`=93;
+UPDATE `watchmakings` SET `precio`='$2,270', `cantidadImagenes`=5,  `tudorCollectionId`=4 WHERE `id`=94;
+UPDATE `watchmakings` SET `precio`='$4,270', `cantidadImagenes`=5,  `tudorCollectionId`=5 WHERE `id`=64;
+UPDATE `watchmakings` SET `precio`='$5,890', `cantidadImagenes`=5,  `tudorCollectionId`=5 WHERE `id`=65;
+UPDATE `watchmakings` SET `precio`='$3,430', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=86;
+UPDATE `watchmakings` SET `precio`='$2.910', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=126;
+UPDATE `watchmakings` SET `precio`='$2,910', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=129;
+UPDATE `watchmakings` SET `precio`='$5,600', `cantidadImagenes`=5,  `tudorCollectionId`=2 WHERE `id`=156;
+UPDATE `watchmakings` SET `precio`='$2,620', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=119;
+UPDATE `watchmakings` SET `precio`='$2,810', `cantidadImagenes`=5,  `tudorCollectionId`=7 WHERE `id`=134;
