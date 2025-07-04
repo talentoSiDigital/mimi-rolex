@@ -9,7 +9,7 @@ import SectionNavigationCard from "../../../components/cards/SectionNavigationCa
     <template #content>
       <section class="py-[10vh] bg-rolex-brown-light-1">
         <header
-          class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit pb-[10vh]"
+          class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit "
         >
           <h1 class="text-3xl md:text-5xl w-10/12 md:w-1/2">
             Rolex y The Championships, Wimbledon
@@ -30,14 +30,18 @@ import SectionNavigationCard from "../../../components/cards/SectionNavigationCa
       <div
         class="video-frame flex bg-rolex-brown-light-1 justify-center pb-[10vh]"
       >
-        <div class="w-11/12 aspect-w-16 aspect-h-9">
-          <iframe
-            src="https://www.youtube.com/embed/8bEdzkZ45pw?si=V6LCGjGW0FJIspDj"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      
+        <div class="flex justify-center ">
+          <img
+            src="/assets/routes-assets/world-of-rolex/articles/article-5/article-frame.webp"
+            alt="article-1"
+            class="hidden md:block w-11/12"
+          />
+          <img
+            src="/assets/routes-assets/world-of-rolex/articles/article-5/article-frame-mobile.webp"
+            alt="article-1-mobile"
+            class="md:hidden block w-10/12"
+          />
         </div>
       </div>
 

@@ -8,4 +8,5 @@ DEBIDO A QUE CADA ARTICULO DE ROLEX ES MANTENIDO DE VEZ EN CUANDO Y QUE CADA UNO
 7-Rolex y The Open: el major más antiguo del golf
 8-Rolex y el US Open
 9-Rolex y la Filarmónica de Viena
+9-Resistencia
 

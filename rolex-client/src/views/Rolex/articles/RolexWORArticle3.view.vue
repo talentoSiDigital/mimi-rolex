@@ -10,7 +10,7 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 <template>
     <RolexTemplate>
         <template #content>
-            <section class="py-[10vh] bg-rolex-brown-light-1">
+            <section class="pt-[10vh] bg-rolex-brown-light-1">
                 <header
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit pb-[10vh]">
 
@@ -20,7 +20,8 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     </h1>
 
 
-                    <p class="w-10/12 md:w-1/2 text-xl md:text-2xl font-helvetica font-bold text-rolex-dark-grey text-justify md:text-left  ">
+                    <p
+                        class="w-10/12 md:w-1/2 text-xl md:text-2xl font-helvetica font-bold text-rolex-dark-grey text-justify md:text-left  ">
                         Considerado el mayor desafío de la equitación, el Rolex Grand Slam de Salto de Obstáculos
                         recompensa al jinete que gana, consecutivamente, el Grand Prix en tres de los cuatro Majors de
                         salto, a saber, el Dutch Masters en 's-Hertogenbosch, el CSIO Spruce Meadows 'Masters'
@@ -33,18 +34,16 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                 </header>
             </section>
 
-            <div class="video-frame flex bg-rolex-brown-light-1 justify-center pb-[10vh]">
-                <div class="w-11/12  aspect-w-16 aspect-h-9 ">
-                    <iframe src="https://www.youtube.com/embed/4jkucsV3IHo?si=-PAOG4D5mXX4i3cl"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
 
-            </div>
 
 
             <section class=" bg-rolex-brown-light-1 pb-[10vh]">
+                <div class="flex justify-center pb-[10vh]">
+                    <img src="/assets/routes-assets/world-of-rolex/articles/article-3/article-0.webp" alt="article-0"
+                        class="hidden md:block w-10/12" />
+                    <img src="/assets/routes-assets/world-of-rolex/articles/article-3/article-0-mobile.webp"
+                        alt="article-0-mobile" class="md:hidden block w-10/12" />
+                </div>
                 <header
                     class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center  text-rolex-brown h-fit pb-[10vh]">
 
@@ -213,7 +212,11 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
                     </h1>
 
                     <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light text-justify md:text-left ">
-                        Generar confianza, nunca romper el pacto íntimo que une al jinete y al caballo. Enfrentando todos los obstáculos, conduciendo con precisión y apuntando a la excelencia, juntos como uno solo. El espíritu mismo de este deporte ha definido los fuertes lazos entre Rolex y la equitación. Al asociarse con las competiciones más prestigiosas, Rolex apoya a los jinetes que escriben continuamente la historia de la disciplina.
+                        Generar confianza, nunca romper el pacto íntimo que une al jinete y al caballo. Enfrentando
+                        todos los obstáculos, conduciendo con precisión y apuntando a la excelencia, juntos como uno
+                        solo. El espíritu mismo de este deporte ha definido los fuertes lazos entre Rolex y la
+                        equitación. Al asociarse con las competiciones más prestigiosas, Rolex apoya a los jinetes que
+                        escriben continuamente la historia de la disciplina.
                     </p>
 
                 </header>
@@ -232,8 +235,8 @@ import SectionNavigationCard from '../../../components/cards/SectionNavigationCa
 
 
             <section class="flex justify-center w-full bg-rolex-brown-light-1 pb-[10vh]">
-                <SectionNavigationCard img="world-of-rolex/articles/article-1/article-10" link="/coleccion-rolex/datejust"
-                    class="w-10/12  ">
+                <SectionNavigationCard img="world-of-rolex/articles/article-1/article-10"
+                    link="/coleccion-rolex/datejust" class="w-10/12  ">
                     <template #sub>Rolex Datejust</template>
                     <template #title>Una fecha para recordar</template>
 

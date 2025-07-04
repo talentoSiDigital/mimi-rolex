@@ -7,7 +7,7 @@ import SectionNavigationCard from "../../../components/cards/SectionNavigationCa
 <template>
   <RolexTemplate>
     <template #content>
-      <section class="py-[10vh] bg-rolex-brown-light-1">
+      <section class="pt-[10vh] bg-rolex-brown-light-1">
         <header
           class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit pb-[10vh]"
         >
@@ -31,21 +31,14 @@ import SectionNavigationCard from "../../../components/cards/SectionNavigationCa
         </header>
       </section>
 
-      <div
-        class="video-frame flex bg-rolex-brown-light-1 justify-center pb-[10vh]"
-      >
-        <div class="w-11/12 aspect-w-16 aspect-h-9">
-          <iframe
-            src="https://www.youtube.com/embed/a9eG-6w67xg?si=r5jBN7Ucr-WrheRO"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
 
       <section class="bg-rolex-brown-light-1 pb-[10vh]">
+        <div class="flex justify-center pb-[10vh]">
+          <img src="/assets/routes-assets/world-of-rolex/articles/article-7/article-0.webp" alt="article-0"
+            class="hidden md:block w-10/12" />
+          <img src="/assets/routes-assets/world-of-rolex/articles/article-7/article-0-mobile.webp"
+            alt="article-0-mobile" class="md:hidden block w-10/12" />
+        </div>
         <header
           class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit pb-[10vh]"
         >

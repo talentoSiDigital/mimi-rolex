@@ -111,7 +111,7 @@ watch(input, () => {
           :to="{ name: 'rolex-nuevos-modelos' }"
           class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
-          <h2>Nuevos Modelos 2024</h2>
+          <h2>Nuevos Modelos 2025</h2>
         </router-link>
 
         <router-link

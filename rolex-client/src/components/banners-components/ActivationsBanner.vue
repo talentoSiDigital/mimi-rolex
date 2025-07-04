@@ -6,45 +6,24 @@ import { computed } from "vue";
 
 const sliderItems = [
   
-  
   {
-    src: "sea-dweller",
-    link: "/rolex/sea-dweller",
-    alt: "coleccion-sea-dweller",
-    title: "Coleccion Sea Dweller",
-  },
-
+    src: "land-dweller",
+    link: {name:'rolex-coleccion-land-dweller'},
+    alt: "land-dweller-banner",
+    title: "Land dweller Banner",
+  },  
   {
-    src: "viena",
-    link: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-    alt: "rolex-y-la-filarmonica-de-viena-banner",
-    title: "Filarmonica de Viena Banner",
-  },
-  // {
-  //   src: "sail-gp",
-  //   link: "/rolex/world-of-rolex/sail-gp",
-  //   alt: "sail-gp-banner",
-  //   title: "Sail gp article Banner",
-  // },
-  
+    src: "endurance",
+    link: {name:'world-of-rolex-article-10'},
+    alt: "endurance",
+    title: "Endurance Banner",
+  },  
   {
     src: "watchmaking",
-    link: "/rolex/watchmaking",
+    link: {name:'rolex-watchmaking'},
     alt: "watchmaking-banner",
     title: "Watchmaking",
-  },
-
-
-
-  {
-    src: "the-open",
-    link: "/rolex/world-of-rolex/rolex-y-the-open",
-    alt: "rolex-y-the-open",
-    title: "Rolex y The Open",
-  },
-
- 
-
+  }
 ];
 
 const currentSlide = ref(0);

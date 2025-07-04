@@ -14,6 +14,903 @@ const mailOptions = {
 
 
 // Test route.
+exports.sendNewsletter2 = (req, res) => {
+  const mailOptions = {
+    from: 'info@mimijoyeria.com',
+    to: 'manueldavidzorrilla@gmail.com',
+    subject: 'Mensaje de prueba',
+    html:`<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="line-height: inherit;"><head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="x-apple-disable-message-reformatting"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title></title>
+
+  <style type="text/css">
+@media only screen and (min-width: 620px) {
+  .u-row {
+    width: 600px !important;
+  }
+
+  .u-row .u-col {
+    vertical-align: top;
+  }
+
+  .u-row .u-col-100 {
+    width: 600px !important;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .u-row {
+    width: 100% !important;
+  }
+
+  .u-row .u-col {
+    display: block !important;
+    width: 100% !important;
+    min-width: 320px !important;
+    max-width: 100% !important;
+  }
+
+  .u-row .u-col>div {
+    margin: 0 auto;
+  }
+
+  .u-row .u-col img {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 480px) {
+  #u_content_heading_3 .v-container-padding-padding {
+    padding: 20px !important;
+  }
+
+  #u_content_text_5 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_heading_11 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_text_18 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_image_13 .v-src-width {
+    width: 95% !important;
+  }
+
+  #u_content_image_13 .v-src-max-width {
+    max-width: 95% !important;
+  }
+
+  #u_content_heading_13 .v-container-padding-padding {
+    padding: 10px 20px 20px !important;
+  }
+
+  #u_content_text_20 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_image_15 .v-src-width {
+    width: 95% !important;
+  }
+
+  #u_content_image_15 .v-src-max-width {
+    max-width: 95% !important;
+  }
+
+  #u_content_heading_14 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_text_21 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_heading_15 .v-container-padding-padding {
+    padding: 20px !important;
+  }
+
+  #u_content_text_22 .v-container-padding-padding {
+    padding: 0px 20px 10px !important;
+  }
+
+  #u_content_text_24 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_heading_18 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_text_25 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_image_19 .v-src-width {
+    width: 89% !important;
+  }
+
+  #u_content_image_19 .v-src-max-width {
+    max-width: 89% !important;
+  }
+
+  #u_content_heading_19 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_text_26 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_image_20 .v-src-width {
+    width: 87% !important;
+  }
+
+  #u_content_image_20 .v-src-max-width {
+    max-width: 87% !important;
+  }
+
+  #u_content_heading_20 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+
+  #u_content_heading_20 .v-line-height {
+    line-height: 110% !important;
+  }
+
+  #u_content_text_27 .v-container-padding-padding {
+    padding: 0px 20px 20px !important;
+  }
+}
+</style>
+
+
+
+</head>
+
+<body class="clean-body u_body" style="line-height: inherit; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #ffffff; color: #000000;">
+  
+  
+  <table role="presentation" style="line-height: inherit; color: #000000; border-collapse: collapse; table-layout: fixed; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; vertical-align: top; min-width: 320px; Margin: 0 auto; background-color: #ffffff; width: 100%;" cellpadding="0" cellspacing="0" width="100%" valign="top" bgcolor="#ffffff">
+    <tbody style="line-height: inherit;">
+      <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+        <td style="line-height: inherit; color: #000000; word-break: break-word; vertical-align: top; border-collapse: collapse;" valign="top">
+          
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent;">
+
+                      <table style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 23px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/mimi-logo-newsletter.png" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 57%; max-width: 315.78px; display: inline-block;" width="315.78" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" aria-label="divider" height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height: inherit; color: #000000; border-collapse: collapse; table-layout: fixed; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; vertical-align: top; border-top: 1px solid #BBBBBB; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top">
+                                <tbody style="line-height: inherit;">
+                                  <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                    <td style="color: #000000; word-break: break-word; vertical-align: top; font-size: 0px; line-height: 0px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse;" valign="top">
+                                      <span style="line-height: inherit;"> </span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_3" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px 60px 10px 100px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-family: helvetica,sans-serif; font-size: 22px; font-weight: 700;"><span style="line-height: inherit;">Superar los límites</span>
+                                <div style="line-height: inherit;">Hasta el último segundo</div>
+                              </h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_5" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 14px; font-weight: 700; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="text-align: justify; line-height: 140%; margin: 0cm;"><strong style="line-height: inherit;"><span style="line-height: 19.6px;">Dominar el poder de la mecánica para desafiar las leyes del tiempo. Controlar el riesgo para determinar la trayectoria ideal. Hasta la victoria. Rolex es un ilustre socio de los legendarios campeonatos de resistencia, los eventos más emblemáticos y los nombres más destacados del automovilismo.</span></strong></p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px 10px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-1.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 93%; max-width: 539.4px; display: inline-block;" width="539.4" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_11" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">Las 24 Horas de Le Mans, la carrera de resistencia más antigua de automovilismo</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_18" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Las 24 Horas de Le Mans celebran la resistencia y la excelencia del automovilismo. A medida que cae la noche en el icónico Circuit de la Sarthe, la carrera va más allá de la habilidad y la resiliencia de cada piloto. Inaugurada en 1923, en su primera edición participaron 33 equipos de dos pilotos. En la actualidad, más de 60 coches con tres pilotos se esfuerzan por alcanzar el ascenso, mientras los grandes fabricantes y equipos privados muestran su pericia tecnológica. Desde 2001, Rolex es el ilustre Patrocinador Exclusivo y Reloj Oficial de este impresionante reto, que celebra los esfuerzos de los pilotos en su búsqueda del logro supremo que es terminar primero.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_image_13" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-2.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 80%; max-width: 464px; display: inline-block;" width="464" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_13" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-family: helvetica,sans-serif; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">Rolex 24 At DAYTONA, circuito legendario, carrera épica</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_20" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-family: helvetica,sans-serif; font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">En el Daytona International Speedway de 5,73 kilómetros en Florida, los mejores pilotos y equipos de resistencia compiten durante 24 horas. Solo los temperamentos más fuertes y las mejores prestaciones mecánicas y técnicas pueden prevalecer. Las clasificaciones se basan en la distancia recorrida dentro del tiempo asignado. Rolex es Sponsor Oficial y Reloj Oficial del evento desde 1992.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_image_15" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 10px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-3.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 70%; max-width: 406px; display: inline-block;" width="406" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_14" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">Las 12 Horas de Sebring, rendimiento bajo presión</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_21" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Creada en Estados Unidos en 1952, las 12 Horas de Sebring tiene la reputación de ser una de las carreras de resistencia más desafiantes del mundo. Con su superficie irregular, Sebring International Raceway es una verdadera prueba de fiabilidad de los coches. Es aquí, en marzo, donde muchos competidores de las 24 Horas de Le Mans vienen a probar la resistencia mecánica de sus coches. Rolex es Reloj Oficial de la competición.</p>
+                                <p style="line-height: 140%; margin: 0px;"> </p>
+                                <p style="line-height: 140%; margin: 0px;">La marca entrega un Cosmograph Daytona a los ganadores de cada uno de estos tres eventos emblemáticos, que constituyen la triple corona de las carreras de resistencia.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-4.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 100%; max-width: 600px; display: inline-block;" width="600" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_15" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 20px 100px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">Fiabilidad a lo largo del tiempo</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_text_22" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 10px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Rolex mantiene colaboraciones con las organizaciones más importantes de las carreras de resistencia. Desde 2001, la marca apoya al Automobile Club de l'Ouest (ACO), que organiza las 24 Horas de Le Mans y supervisa el Campeonato Mundial de Resistencia de la FIA (WEC), la mayor serie de competiciones internacionales de coches deportivos.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_text_24" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Hacerlo mejor con menos. Este es el doble desafío deportivo y medioambiental al que los equipos de carreras y los fabricantes se enfrentan hoy en día: lograr rendimiento energético superando aún más los límites del rendimiento. Rolex siempre se ha comprometido con la dinámica del progreso y apoya al automovilismo en esta profunda transformación.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_18" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">La mecánica del progreso</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_25" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Hacerlo mejor con menos. Este es el doble desafío deportivo y medioambiental al que los equipos de carreras y los fabricantes se enfrentan hoy en día: lograr rendimiento energético superando aún más los límites del rendimiento. Rolex siempre se ha comprometido con la dinámica del progreso y apoya al automovilismo en esta profunda transformación.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_image_19" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 0px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-5.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 80%; max-width: 480px; display: inline-block;" width="480" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_19" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h1 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 22px; font-weight: 700;"><strong style="line-height: inherit;">Tom Kristensen, «Monsieur Le Mans»</strong></h1>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_26" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Con nueve victorias en las 24 Horas de Le Mans, Tom Kristensen, Testimonial Rolex desde 2010, es el piloto con más éxito de la historia de la carrera. Triunfó en su primera aparición en 1997 y reinó de 2000 a 2005. El danés añadió dos victorias más, en 2008 y 2013. En 18 participaciones, Kristensen logró subirse al podio 15 veces. Su trayectoria también incluye un título del Campeonato Mundial de Resistencia de la FIA (WEC) en 2013 y seis victorias en las 12 Horas de Sebring.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_image_20" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 0px 40px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000;" valign="top">
+                                <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                                  <td style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; padding-right: 0px; padding-left: 0px;" align="center" valign="top">
+
+                                    <img align="center" border="0" src="https://mimijoyeria.com/storage/mail-assets/rolex-newsletter-assets/rolex-endurance-6.jpg" alt title style="line-height: inherit; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both; border: none; height: auto; float: none; width: 66%; max-width: 396px; display: inline-block;" width="396" class="v-src-width v-src-max-width" height="auto">
+
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="u-row-container" style="line-height: inherit; padding: 0px; background-color: transparent;">
+            <div class="u-row" style="line-height: inherit; margin: 0 auto; min-width: 320px; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; background-color: transparent;">
+              <div style="line-height: inherit; border-collapse: collapse; display: table; width: 100%; height: 100%; background-color: transparent;">
+                
+
+                
+                <div class="u-col u-col-100" style="line-height: inherit; max-width: 320px; min-width: 600px; display: table-cell; vertical-align: top;">
+                  <div style="line-height: inherit; background-color: #f8f7f3; height: 100%; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; width: 100%;">
+                    
+                    <div style="line-height: inherit; box-sizing: border-box; height: 100%; padding: 0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px;">
+
+                      <table id="u_content_heading_20" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              
+                              <h2 class="v-line-height" style="margin: 0px; color: #472c20; line-height: 180%; text-align: left; word-wrap: break-word; font-family: helvetica,sans-serif; font-size: 22px; font-weight: 700;"><span style="line-height: 24.2px;">Jamie Chadwick, piloto del futuro</span></h2>
+                              
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table id="u_content_text_27" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; font-family: helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0" valign="top">
+                        <tbody style="line-height: inherit;">
+                          <tr style="line-height: inherit; border-collapse: collapse; vertical-align: top;" valign="top">
+                            <td class="v-container-padding-padding" style="line-height: inherit; border-collapse: collapse; vertical-align: top; color: #000000; overflow-wrap: break-word; word-break: break-word; padding: 0px 100px 20px; font-family: helvetica,sans-serif;" align="left" valign="top">
+
+                              <div class="v-line-height" style="font-size: 12px; color: #472c20; line-height: 140%; text-align: left; word-wrap: break-word;">
+                                <p style="line-height: 140%; margin: 0px;">Jamie Chadwick no había cumplido aún los 16 años cuando se proclamó vencedora de las 24 Horas de Silverstone en 2015. Primera campeona del British GT Championship y tres veces campeona de la W Series para mujeres (Formula 3), Chadwick representa el futuro del automovilismo. Testimonial Rolex desde 2022, alcanzó sus victorias en la carrera en su primera temporada compitiendo en la European Le Mans Series de 2025.</p>
+                              </div>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+
+
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</body>
+
+</html>`
+  }
+
+  transport.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      res.status(500).json({
+
+        message:
+          error.message || "Some error occurred sending de email."
+
+      });
+    } else {
+      res.status(200).send('Message sended successfully: ' + info)
+
+    }
+  })
+
+};
+
 exports.sendNewsletter = (req, res) => {
   const mailOptions = {
     from: 'mzorrilla.sidigital@gmail.com',

@@ -21,8 +21,8 @@ export default {
         'rolex-brown':'#472c20',
         'rolex-dark-grey':'#212121',
         'rolex-grey-light':'#d4d4d4',
-        'rolex-brown-light-1':'#f5efea',
-        'rolex-brown-light-2':'#f9f7f3',
+        'rolex-brown-light-1':'#f5efea', //dark
+        'rolex-brown-light-2':'#f9f7f3', //light
       
 
         'opaco':'rgba(0, 0, 0, 0.5)'

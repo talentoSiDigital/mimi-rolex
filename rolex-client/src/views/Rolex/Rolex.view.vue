@@ -1,11 +1,8 @@
 <script setup>
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
-import PageBanner from '../../components/banners-components/PageBanner.vue'
 import ActivationsBanner from '../../components/banners-components/ActivationsBanner.vue'
-import Button from '../../components/global-components/Button.vue'
 import SectionNavigationCard from '../../components/cards/SectionNavigationCard.vue'
-import POSBanner from '../../components/banners-components/POSBanner.vue';
 
 </script>
 
@@ -56,10 +53,7 @@ import POSBanner from '../../components/banners-components/POSBanner.vue';
                 </div>
             </section>
 
-            <section class="bg-rolex-brown-light-2  pb-10 w-full">
-                <POSBanner/>
-            </section>
-
+       
 
             <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-10">
                 <h2 class="w-11/12 pb-4 font-helvetica font-bold text-rolex-brown text-4xl">Descubre Rolex</h2>

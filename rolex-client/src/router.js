@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router"
 import BreadCrumb from "./components/navigation-components/BreadCrumb.vue"
 import { useLoaderStore } from './store/loaderState';
-
+import {usePostHog} from './utils/posthog'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     // Main Route
+
     {
       path: "/",
       name: "Home",
@@ -100,79 +101,25 @@ const router = createRouter({
       name: "rolex-nuevos-modelos",
       component: () => import("./views/Rolex/RolexNewModels.view.vue"),
       meta: {
-        title: "Nuevos Modelos Rolex 2024  | Mimi Joyería ",
-        description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex.Descubra las características únicas de los nuevos modelos de este año.",
+        title: "Nuevos Modelos Rolex 2025  | Mimi Joyería ",
+        description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año.",
         breadcrumb: "NuevosModelos",
         pageType:"new watches page"
 
       }
     },
     {
-      path: "/rolex/nuevos-modelos-2024/1908",
-      name: "rolex-nuevos-modelos-1908",
-      component: () => import("./views/Rolex/new-models/New1908.view.vue"),
+      path: "/rolex/nuevos-modelos-2025/:id",
+      name: "rolex-nuevos-relojes-2025",
+      component: () => import("./views/Rolex/NewModelCollection.view.vue"),
       meta: {
-        title: "1908 | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/1908",
-        pageType:"family page 2024"
+        title: " Nuevos Modelos 2024  | Mimi Joyería ",
+        breadcrumb: "NuevosModelos",
+        pageType:"family page 2025"
 
       }
     },
-    {
-      path: "/rolex/nuevos-modelos-2024/cosmograph-daytona",
-      name: "rolex-nuevos-modelos-cosmograph-daytona",
-      component: () => import("./views/Rolex/new-models/NewCosmograph.view.vue"),
-      meta: {
-        title: "Cosmograph Daytona | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/CosmographDaytona",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/day-date",
-      name: "rolex-nuevos-modelos-day-date",
-      component: () => import("./views/Rolex/new-models/NewDayDate.view.vue"),
-      meta: {
-        title: "DayDate | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/DayDate",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/deepsea",
-      name: "rolex-nuevos-modelos-deepsea",
-      component: () => import("./views/Rolex/new-models/NewDeepsea.view.vue"),
-      meta: {
-        title: "Deepsea | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/Deepsea",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/gmt-master-ii",
-      name: "rolex-nuevos-modelos-gmt-master-ii",
-      component: () => import("./views/Rolex/new-models/NewGMT.view.vue"),
-      meta: {
-        title: "GMT Master II | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/GMTMaster",
-        pageType:"family page 2024"
-
-      }
-    },
-    {
-      path: "/rolex/nuevos-modelos-2024/sky-dweller",
-      name: "rolex-nuevos-modelos-sky-dweller",
-      component: () => import("./views/Rolex/new-models/NewSkyDweller.view.vue"),
-      meta: {
-        title: "Sky Dweller | Nuevos Modelos 2024  | Mimi Joyería ",
-        breadcrumb: "NuevosModelos/SkyDweller",
-        pageType:"family page 2024"
-
-      }
-    },
+   
 
     // ---------WORLD OF ROLEX SECTION ROUTES------------
     {
@@ -272,6 +219,16 @@ const router = createRouter({
       component: () => import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
       meta: {
         title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
+        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+        pageType:"article page"
+      }
+    },
+    {
+      path: "/rolex/world-of-rolex/resistencia",
+      name: "world-of-rolex-article-10",
+      component: () => import("./views/Rolex/articles/RolexWORArticle10.view.vue"),
+      meta: {
+        title: "Resistencia - World Of Rolex | Mimi Joyería ",
         breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
         pageType:"article page"
       }
@@ -420,6 +377,17 @@ const router = createRouter({
         pageFamily:"air-king"
       }
     },
+    {
+      path: "/rolex/land-dweller",
+      name: "rolex-coleccion-land-dweller",
+      component: () => import("./views/Rolex/RolexWatchCollection.view.vue"),
+      meta: {
+        title: "Mimi Joyería ",
+        breadcrumb: "ColeccionRolex",
+        pageType:"family page",
+        pageFamily:"land-dweller"
+      }
+    },
 
     {
       path: "/rolex/submariner",
@@ -514,6 +482,15 @@ const router = createRouter({
         title: " Tudor | Mimi Joyería "
       }
     }
+    // ,
+    // {
+    //   path: "/relojeria/novedades/tudor",
+    //   name: "relojeria",
+    //   component: () => import("./views/Mimi/NovedadesTudor.view.vue"),
+    //   meta: {
+    //     title: " Novedades Tudor 2025 | Mimi Joyería "
+    //   }
+    // }
 
     ,
     {
@@ -560,6 +537,16 @@ const router = createRouter({
       path: "/relojeria/tudor",
       name: "reloj",
       component: () => import("./views/Tienda/StoreRelojeria.view.vue"),
+      meta: {
+        title: "  Mimi Joyería "
+      },
+
+    }
+    ,
+    {
+      path: "/novedades/tudor",
+      name: "novedades",
+      component: () => import("./views/Tienda/NovedadesRelojeria.view.vue"),
       meta: {
         title: "  Mimi Joyería "
       },
@@ -677,6 +664,9 @@ const router = createRouter({
 
 })
 
+const { posthog } = usePostHog()
+
+
 
 router.beforeEach((to, from, next) => {
   const store = useLoaderStore()
@@ -695,7 +685,9 @@ router.beforeEach((to, from, next) => {
   if(pageFamily){
     document.pageFamily = pageFamily
   }
-
+  if (from.path !== to.path) {
+    posthog.capture('$pageleave')
+  }
 
 
   // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
@@ -730,7 +722,7 @@ router.afterEach((to, from, next) => {
     store.change()
 
   }
-
+  posthog.capture('$pageview')
 
 
   // Continue resolving the route

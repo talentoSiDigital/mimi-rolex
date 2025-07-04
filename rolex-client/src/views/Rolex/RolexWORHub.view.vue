@@ -14,8 +14,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
       <RolexHeader color="bg-rolex-brown-light-2">
         <template #title> El mundo de Rolex </template>
         <template #text>
-          <strong
-            >Durante casi un siglo, Rolex ha desarrollado colaboraciones con un
+          <strong>Durante casi un siglo, Rolex ha desarrollado colaboraciones con un
             grupo diverso y extraordinario de talentos de una miríada de
             disciplinas.
           </strong>
@@ -24,21 +23,16 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
         </template>
       </RolexHeader>
 
-      <section
-        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
-      >
+      <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
         <div class="w-11/12">
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-main"
-            :link="{name:'world-of-rolex-article-9'}"
-            class="w-full"
-          >
-            <template #sub>Publicado el 5 de Diciembre, 2024</template>
-            <template #title>Rolex y la Filarmónica de Viena</template>
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-main" :link="{ name: 'world-of-rolex-article-10' }"
+            class="w-full">
+            <template #sub>Publicado el 10 de Junio, 2024</template>
+            <template #title>Resistencia</template>
             <template #description>
               <h2 class="w-full md:w-1/2">
-                
-Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009, Patrocinador Exclusivo del Concierto de Año Nuevo.
+
+                Dominar el poder de la mecánica para desafiar las leyes del tiempo. Controlar el riesgo para determinar la trayectoria ideal. Hasta la victoria. Rolex es un ilustre socio de los legendarios campeonatos de resistencia, los eventos más emblemáticos y los nombres más destacados del automovilismo.
 
               </h2>
             </template>
@@ -47,46 +41,54 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
         </div>
       </section>
 
-      <section
-        class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]"
-      >
-      <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
-        <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-us-open"
-            :link="{name:'world-of-rolex-article-8'}"
-            class="w-full"
-          >
-            <template #sub>Publicado el 23 de Agosto, 2024</template>
-            <template #title>Rolex y el US Open</template>
+      <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
+        <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-viena" :link="{ name: 'world-of-rolex-article-9' }"
+            class="w-full">
+           <template #sub>Publicado el 5 de Diciembre, 2024</template>
+            <template #title>Rolex y la Filarmónica de Viena</template>
             <template #description>
-              <h2 class="w-full ">
-                El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.
-              </h2>
-            </template>
-            <template #button>Más información</template>
-          </SectionNavigationCard>
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-the-open"
-            :link="{name:'world-of-rolex-article-7'}"
-            
-            class="w-full"
-          >
-            <template #sub>Publicado el 12 de Julio, 2024</template>
-            <template #title>Rolex y The Open: el major más antiguo del golf</template>
-            <template #description>
-              <h2 class="w-full ">
-                The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto y último major masculino del año. Asociado con esta competición desde 1981, Rolex es actualmente un socio privilegiado del mundo del golf.
+              <h2 class="w-full md:w-1/2">
+
+                Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009,
+                Patrocinador Exclusivo del Concierto de Año Nuevo.
 
               </h2>
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-admundi"
-            :link="{name:'world-of-rolex-article-6'}"
-            
-            class="w-full"
-          >
+
+
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-us-open" :link="{ name: 'world-of-rolex-article-8' }"
+            class="w-full">
+            <template #sub>Publicado el 23 de Agosto, 2024</template>
+            <template #title>Rolex y el US Open</template>
+            <template #description>
+              <h2 class="w-full ">
+                El US Open es el último torneo de Grand Slam® de la temporada del tenis. Como socio privilegiado del
+                deporte a nivel internacional durante casi 50 años, Rolex es el Reloj Oficial del evento desde 2018.
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
+
+
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-the-open" :link="{ name: 'world-of-rolex-article-7' }"
+            class="w-full">
+            <template #sub>Publicado el 12 de Julio, 2024</template>
+            <template #title>Rolex y The Open: el major más antiguo del golf</template>
+            <template #description>
+              <h2 class="w-full ">
+                The Open, tradicionalmente celebrado en el Reino Unido durante la tercera semana de julio, es el cuarto
+                y último major masculino del año. Asociado con esta competición desde 1981, Rolex es actualmente un
+                socio privilegiado del mundo del golf.
+
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-admundi" :link="{ name: 'world-of-rolex-article-6' }"
+            class="w-full">
             <template #sub>Publicado el 4 de Julio, 2024</template>
             <template #title>Rolex y The Amundi Evian Championship</template>
             <template #description>
@@ -102,12 +104,8 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-wimbledon"
-            :link="{name:'world-of-rolex-article-5'}"
-            
-            class="w-full "
-          >
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-wimbledon" :link="{ name: 'world-of-rolex-article-5' }"
+            class="w-full ">
             <template #sub>Publicado el 1 de Junio, 2024</template>
             <template #title>Rolex y The Championship, Wimbledon</template>
             <template #description>
@@ -124,12 +122,8 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             <template #button>Más información</template>
           </SectionNavigationCard>
 
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-lemans"
-            :link="{name:'world-of-rolex-article-4'}"
-            
-            class="w-full"
-          >
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-lemans" :link="{ name: 'world-of-rolex-article-4' }"
+            class="w-full">
             <template #sub>Publicado el 21 de Junio, 2024</template>
             <template #title>Las 24 Horas de Le Mans</template>
             <template #description>
@@ -142,13 +136,9 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-         
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-grand-slam"
-            :link="{name:'world-of-rolex-article-3'}"
-            
-            class="w-full"
-          >
+
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-grand-slam"
+            :link="{ name: 'world-of-rolex-article-3' }" class="w-full">
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>Rolex Grand Slam of Show Jumping</template>
             <template #description>
@@ -164,12 +154,8 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             <template #button>Más información</template>
           </SectionNavigationCard>
 
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-sailgp"
-            :link="{name:'world-of-rolex-article-2'}"
-            
-            class="w-full "
-          >
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-sailgp" :link="{ name: 'world-of-rolex-article-2' }"
+            class="w-full ">
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>SailGP</template>
             <template #description>
@@ -184,12 +170,8 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             <template #button>Más información</template>
           </SectionNavigationCard>
 
-          <SectionNavigationCard
-            img="world-of-rolex/world-of-rolex-beyond-rolex"
-            :link="{name:'world-of-rolex-article-1'}"
-            
-            class="w-full"
-          >
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-beyond-rolex"
+            :link="{ name: 'world-of-rolex-article-1' }" class="w-full">
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>Viaje al corazón del universo Rolex</template>
             <template #description>
@@ -204,10 +186,10 @@ Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-          
+
         </div>
       </section>
-    
+
     </template>
   </RolexTemplate>
 </template>

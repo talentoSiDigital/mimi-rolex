@@ -1,17 +1,16 @@
 import { createApp } from 'vue'
-import { createHead } from '@unhead/vue'
+
 import './style.css'
 import App from './App.vue'
 import router from './router'
 
 import VueLazyLoad from 'vue3-lazyload' 
 import {createPinia} from 'pinia'
-
-// Defining pinia
-const pinia = createPinia()
+import { createHead } from '@unhead/vue/client'
 
 
-/* import router from './router' */
+
+
 
 
 /* import the fontawesome core */
@@ -47,7 +46,9 @@ import {
     faSpinner,
     faComment,
     faMagnifyingGlass,
-    faXmark
+    faXmark,
+    faMinus,
+    faPlus
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons'
@@ -84,9 +85,12 @@ library.add(
     faSpinner,
     faComment,
     faMagnifyingGlass,
-    faXmark
+    faXmark,
+    faMinus,
+    faPlus
 )
-
+// Defining pinia
+const pinia = createPinia()
 const head = createHead()
 
 createApp(App)
