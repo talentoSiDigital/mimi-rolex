@@ -321,9 +321,11 @@ exports.findR = (req, res) => {
             coleccion: req.params.id,
             disponible: 1
         },
-        order: [['id', 'DESC']]
+        order: [['id', 'DESC']],
+       
     })
         .then(data => {
+            
             for (let index = 0; index < data.length; index++) {
                 data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }

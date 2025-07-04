@@ -1,42 +1,80 @@
 <script setup>
-import { useAsyncState } from '@vueuse/core';
-import { RouterLink, useRoute } from 'vue-router';
+import { get, useAsyncState } from '@vueuse/core';
+import { routerKey, RouterLink, useRoute, useRouter } from 'vue-router';
 
 import OverlayBanner from '../../components/banners-components/OverlayBanner.vue';
+
 import StoreDataService from '../../services/storeDataService';
 import TudorShowcaseCard from '../../components/cards/TudorShowcaseCard.vue';
+import PageBanner from '../../components/banners-components/PageBanner.vue';
+import { onMounted, ref } from 'vue';
 
 const route = useRoute()
 
 console.log(route.name);
+const elementCount = ref(0)
+const elementPerPage = ref(16)
+const pages = ref(1)
+const actualPage = ref(0)
+const isReady = ref(false)
+const state = ref([])
 
-
-const { isLoading, state, isReady, execute } = useAsyncState(
-    StoreDataService.getRelojeria("Tudor")
+function getResultsByPage() {
+    StoreDataService.getRelojeria("Tudor", actualPage.value)
         .then(d => {
-            let items = []
-            for (const item of d.data) {
-                if (item.disponible == 1) {
-                    items.push(item)
 
-                }
-            }
-            return items
+            state.value = d.data
+            isReady.value = true
         })
+}
+function updatePage(item) {
+    if (item >= 0 && item <= pages.value - 1) {
+        window.location.href = '#tudor'
+        actualPage.value = item
+        getResultsByPage()
+    }
+}
+
+function getPages() {
+    return Math.ceil(elementCount.value / elementPerPage.value)
+}
+
+function reverseArray(){
+    return state.value.reverse()
+}
+onMounted(() => {
+    getResultsByPage()
+
+})
+
+// const { isLoading, state, isReady, execute } = useAsyncState(
+//     StoreDataService.getRelojeria("Tudor")
+//         .then(d => {
+//             elementCount.value = d.data.count
+//             // let items = []
+//             // for (const item of d.data) {
+//             //     if (item.disponible == 1) {
+//             //         items.push(item)
+
+//             //     }
+//             // }
+//             // return items
+//             return d.data.rows
+//         })
 
 
-)
+// )
 
 
 </script>
 
 <template>
-    <main class="bg-neutral-100 font-montserrat ">
-        <OverlayBanner type="tudor" />
+    <main class=" font-montserrat ">
+        <!-- <OverlayBanner type="tudor" /> -->
         <header
             class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
 
-      
+
             <RouterLink to="/relojeria/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
                 <h1 class="font-tudor tracking-tighter ">TUDOR EN MIMI JOYERÍA</h1>
             </RouterLink>
@@ -52,30 +90,51 @@ const { isLoading, state, isReady, execute } = useAsyncState(
 
 
         </header>
-        <div class="w-full flex justify-center text-center text-xl py-10 ">
+        <PageBanner type="tudor" @click="reverseArray()"/>
 
-            <h2 class="w-10/12">Tudor es una marca de relojería suiza que ofrece relojes mecánicos con un estilo sofisticado, y una fiabilidad probada. Los orígenes de Tudor se remontan a 1926, cuando «The Tudor» fue registrada por primera vez en nombre del fundador de Rolex, Hans Wilsdorf. A lo largo de su historia, los relojes Tudor han sido elegidos por los aventureros más audaces y por los profesionales más veteranos.</h2>
-        </div>
+        <section class="w-full flex justify-center text-center text-xl  ">
+            <div class="w-11/12 flex justify-between items-center py-10">
+                <h2 class="">Selección oficial de Tudor.</h2>
+                <div>
+                    <button>
+                        <p>Ordenar por:</p>
+                        <font-awesome-icon :icon="['fas', 'filter']" />
+                        <p>Recientes</p>
+
+                    </button>
+                </div>
+            </div>
+           
+        </section>
 
         <section>
             <div v-if="isReady">
                 <div v-if="state.length == 0" class="flex justify-center items-center h-52">
                     <h1 class="font-semibold">Lo sentimos, no hay productos que coincidan con su búsqueda.</h1>
                 </div>
-                <div v-else id="store-container" class="w-full flex items-center justify-center pb-16">
-                    <div class="grid grid-cols-1 place-items-center gap-2 md:grid-cols-4 w-10/12">
+                <div v-else id="tudor" class="w-full flex items-center justify-center pb-16">
+                    <div class="grid grid-cols-2 place-items-center gap-2 md:gap-6 md:grid-cols-4 w-11/12">
+                        <TransitionGroup name="list" >
 
-                        <div v-for="(items, key) in state" :key="key">
-                            <TudorShowcaseCard :items="items" />
-                         
-                        </div>
+                            <TudorShowcaseCard v-for="(items, key) in state" :key="key" :items="items" />
+                        </TransitionGroup>
+
 
                     </div>
                 </div>
 
+
             </div>
         </section>
+        <section class="pb-4 mt-8 w-full overflow-hidden  bg-black relative flex flex-col justify-center items-center">
+            <img src="/assets/tudor-logo.webp" alt="tudor-logo" class="w-32">
+            <a href="https://www.tudorwatch.com/es" target="_blank"
+                class="text-white uppercase text-sm ">tudorwatch.com</a>
 
+
+        </section>
 
     </main>
 </template>
+
+<style scoped></style>

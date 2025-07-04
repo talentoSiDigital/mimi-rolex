@@ -75,7 +75,7 @@ function move(dir) {
             <font-awesome-icon :icon="['fas', 'chevron-right']" />
         </button>
     </div>
-
+ 
 </template>
 
 <style scoped>
