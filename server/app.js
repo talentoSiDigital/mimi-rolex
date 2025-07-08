@@ -14,9 +14,14 @@ const app = express();
 
 const db = require("./app/models");
 
-db.sequelize.sync().then(() => {
-  console.log("Drop and re-sync db.");
-});
+// db.sequelize.sync({ alter: true }).then(() => {
+  
+//   console.log("Drop and re-sync db.");
+// });
+  db.sequelize.sync().then(() => {
+    
+    console.log("Drop and re-sync db.");
+  });
 
 
 

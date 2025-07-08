@@ -12,7 +12,7 @@ export default {
         // 'main-green': '#E9EDE9',
         'main-green': '#ADBAAD',
         'secondary-green': '#adbaad',
-
+        'tudor-red':'#be0100',
         'rolex-green': '#01603a',
         'rolex-green-2':'#29684b',
         'gray-button': '#767676',
@@ -32,6 +32,7 @@ export default {
         tudor: ["Meta", "sans-serif"],
         montserrat : ["Montserrat","sans-serif"],
         'arial-light': ['Arial Light', 'sans-serif'],
+        'tudor-title': ['Headline-tudor', 'sans-serif'],
         'arial-bold': ['Arial MT', 'sans-serif'],
         'helvetica-bold':['Helvetica-Neue-Bold', 'sans-serif'],
         'helvetica-light':['Helvetica-Light', 'sans-serif'],

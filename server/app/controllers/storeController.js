@@ -8,6 +8,18 @@ const storagePath = process.env.IMGPATH
 
 
 function truncExtension(text) { return text.split('.')[0] }
+function getRandomIntInclusive(array, maximum) {
+
+    const min = Math.ceil(1); // Ensure min is an integer (optional, but good practice)
+    const max = Math.floor(maximum); // Ensure max is an integer (optional, but good practice)
+    const number = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (array.includes(number)) {
+        return getRandomIntInclusive(array)
+    } else {
+        return number
+    }
+}
+
 
 // JEWELS
 
@@ -199,7 +211,101 @@ exports.createR = (req, res) => {
 
 };
 
+
+
+
 // Retrieve WATCH by collection.
+exports.findRSlider = (req, res) => {
+
+
+    Store.Watchmaking.findAll({
+        where: {
+            coleccion: 'Tudor',
+            disponible: 1
+        },
+        orderBy: ['id']
+    })
+        .then(data => {
+
+            for (let index = 0; index < data.length; index++) {
+
+                data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
+
+
+            }
+
+            const shuffled = data.slice();
+            let i = data.length;
+            let temp;
+            let randomIndex;
+
+            // While there remain elements to shuffle...
+            while (i--) {
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * (i + 1));
+
+                // And swap it with the current element.
+                temp = shuffled[i];
+                shuffled[i] = shuffled[randomIndex];
+                shuffled[randomIndex] = temp;
+            }
+            res.send(shuffled.slice(0, 4))
+
+
+
+
+
+
+        })
+        .catch(err => {
+
+            res.status(500).json({
+
+                message:
+                    err.message || "Some error occurred while retrieving tutorials."
+
+            });
+        });
+};
+// Retrieve WATCH by collection.
+exports.findRMain = (req, res) => {
+    // Validate request
+
+
+    Store.Watchmaking.findAll({
+        where: {
+            coleccion: 'Tudor',
+            disponible: 1
+        },
+        order: [['id', 'DESC']],
+        attributes: [
+            'id',
+            'precio',
+            'serie',
+            'nombre'
+        ]
+    })
+        .then(data => {
+            let toSend = []
+            for (let index = 0; index < 4; index++) {
+                data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
+                toSend.push(data[index])
+            }
+            res.send(toSend)
+
+        })
+        .catch(err => {
+
+            res.status(500).json({
+
+                message:
+                    err.message || "Some error occurred while retrieving tutorials."
+
+            });
+        });
+};
+
+
 exports.findR = (req, res) => {
     // Validate request
     if (!req.params.id) {
@@ -208,15 +314,19 @@ exports.findR = (req, res) => {
         });
         return;
     }
-    console.log(req.params.id)
-
+    const field = req.body.field
+    const order = req.body.order
+    // res.send(req.body)
     Store.Watchmaking.findAll({
         where: {
-            coleccion: req.params.id
+            coleccion: req.params.id,
+            disponible: 1
         },
-        order: ['nombre']
+        order: [[field, order]],
+
     })
         .then(data => {
+
             for (let index = 0; index < data.length; index++) {
                 data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }
@@ -248,7 +358,8 @@ exports.findDetailR = (req, res) => {
     Store.Watchmaking.findAll({
         where: {
             serie: req.params.id
-        }
+        },
+        include:Store.TudorCollection
     })
         .then(data => {
             data[0].dataValues.img = []
@@ -291,7 +402,7 @@ exports.addWatchToCart = async (req, res) => {
     const userId = parseInt(req.params.user)
 
 
-    
+
     const item = await Store.Cart.findOrCreate({ where: { ownerId: userId } })
 
     const findItem = await Store.CartProduct.findAll({
@@ -299,10 +410,10 @@ exports.addWatchToCart = async (req, res) => {
             "watchmakingId": itemId,
             "cartId": item[0].dataValues.id,
         }
-        
+
     })
     console.log(findItem);
-    
+
     if (findItem.length == 0) {
         console.log(item[0].dataValues.id);
         await Store.CartProduct.create({
@@ -433,11 +544,11 @@ exports.getBillsByOwner = (req, res) => {
         }
 
     }).then((d) => {
-        if(d.length == 0){
+        if (d.length == 0) {
             res.status(200).send('No hay registros que mostrar')
-            
-        } else{
-            
+
+        } else {
+
             res.status(200).send(d)
         }
 

@@ -45,6 +45,10 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.TEXT
     }
     ,
+    descripcion: {
+      type: Sequelize.TEXT
+    }
+    ,
     contenidoTabla: {
       type: Sequelize.TEXT
     }
@@ -54,7 +58,7 @@ module.exports = (sequelize, Sequelize) => {
     }
     ,
     precio: {
-      type: Sequelize.STRING
+      type: Sequelize.INTEGER
     }
     ,
     cantidadImagenes: {
@@ -113,6 +117,20 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
+  const TudorCollection = sequelize.define("tudor_collection",{
+    nombre:{
+      type: Sequelize.STRING
+    },
+    code:{
+      type: Sequelize.STRING
+    },
+    description:{
+      type: Sequelize.TEXT
+    }
+    
+  },{
+    timestamps: false
+  })
   
 
 
@@ -122,6 +140,7 @@ module.exports = (sequelize, Sequelize) => {
     Cart,
     Bill,
     CartProduct,
-    BillProduct
+    BillProduct,
+    TudorCollection
   };
 };
