@@ -565,7 +565,7 @@ const router = createRouter({
     ,
     {
       path: "/testing/relojeria/tudor/",
-      name: "relojProducto",
+      name: "relojProductoasd",
       component: () => import("./views/Tienda/Testing.view.vue"),
       meta: {
         title: "  Mimi Joyería "

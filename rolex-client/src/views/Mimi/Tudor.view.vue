@@ -10,8 +10,11 @@ import TudorHomepageSlider from '../../components/cards/TudorHomepageSlider.vue'
         <header
             class="font-tudor tracking-tighter  h-full flex flex-col  md:flex-row items-center justify-center  text-white bg-neutral-100 ">
 
-            <h1 class="font-tudor tracking-tighter  text-red-700 p-4 md:p-6">TUDOR EN MIMI JOYERÍA</h1>
+            
 
+            <RouterLink to="/tudor" class="text-red-700 duration-200 p-4 md:p-6">
+                <h1 class="font-tudor tracking-tighter ">TUDOR EN MIMI JOYERÍA</h1>
+            </RouterLink>
             <RouterLink to="/novedades/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
                 <h1 class="font-tudor tracking-tighter ">NOVEDADES 2025</h1>
             </RouterLink>

@@ -249,7 +249,7 @@ exports.findRSlider = (req, res) => {
                 shuffled[i] = shuffled[randomIndex];
                 shuffled[randomIndex] = temp;
             }
-            res.send(shuffled.slice(0, 6))
+            res.send(shuffled.slice(0, 4))
 
 
 
@@ -278,7 +278,7 @@ exports.findRMain = (req, res) => {
             disponible: 1
         },
         order: [['id', 'DESC']],
-        attributes:[
+        attributes: [
             'id',
             'precio',
             'serie',
@@ -314,18 +314,19 @@ exports.findR = (req, res) => {
         });
         return;
     }
-    console.log(req.params.id)
-
+    const field = req.body.field
+    const order = req.body.order
+    // res.send(req.body)
     Store.Watchmaking.findAll({
         where: {
             coleccion: req.params.id,
             disponible: 1
         },
-        order: [['id', 'DESC']],
-       
+        order: [[field, order]],
+
     })
         .then(data => {
-            
+
             for (let index = 0; index < data.length; index++) {
                 data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }
@@ -357,7 +358,8 @@ exports.findDetailR = (req, res) => {
     Store.Watchmaking.findAll({
         where: {
             serie: req.params.id
-        }
+        },
+        include:Store.TudorCollection
     })
         .then(data => {
             data[0].dataValues.img = []

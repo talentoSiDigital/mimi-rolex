@@ -18,10 +18,10 @@ const db = require("./app/models");
   
 //   console.log("Drop and re-sync db.");
 // });
-db.sequelize.sync().then(() => {
-  
-  console.log("Drop and re-sync db.");
-});
+  db.sequelize.sync().then(() => {
+    
+    console.log("Drop and re-sync db.");
+  });
 
 
 
