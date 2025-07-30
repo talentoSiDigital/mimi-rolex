@@ -63,7 +63,7 @@ function changeCounter(direction){
 <template>
   <div id="main-content" class="font-montserrat">
 
-    <div class="relative z-0 min-h-[650px] w-full pb-20">
+    <div class="relative z-0 h-[300px] md:h-[650px] w-full pb-20">
       <div v-if="!checkWindowSize" class="overflow-hidden">
         <div class="duration-500 flex cursor-pointer" :class="classes[counter]">
           <img @click="checkClick(counter)" rel="preload" fetchpriority="high" as="image"
@@ -87,10 +87,10 @@ function changeCounter(direction){
 
 
 
-      <button class="absolute top-[45%] left-10 bg-main-green w-8 h-8 rounded-full border border-main-green hover:bg-white duration-200 " @click="changeCounter('l')">
+      <button class="absolute top-[45%] md:left-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('l')">
         <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green"/>
       </button>
-      <button class="absolute top-[45%] right-10 bg-main-green w-8 h-8 rounded-full border border-main-green hover:bg-white duration-200 " @click="changeCounter('r')">
+      <button class="absolute top-[45%] right-0 md:right-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('r')">
         <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-rolex-green"/>
       </button>
     </div>

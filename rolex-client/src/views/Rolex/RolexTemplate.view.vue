@@ -54,8 +54,10 @@ if(checkIfModel.value==false){
     <div>
       <RolexNavbar />
       <BreadCrumb v-if="route.name != 'busqueda'" />
+      <main>
+        <slot name="content"></slot>
 
-      <slot name="content"></slot>
+      </main>
 
       <SliderNavigationRolex />
       <RolexFooter />

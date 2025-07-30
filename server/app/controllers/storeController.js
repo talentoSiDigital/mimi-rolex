@@ -4,7 +4,8 @@ const User = db.user.User;
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
-const storagePath = process.env.IMGPATH
+const storagePath = 'https://mimijoyeria.com/storage'
+// const storagePath = 'https://localhost:3000/storage'
 
 
 function truncExtension(text) { return text.split('.')[0] }
