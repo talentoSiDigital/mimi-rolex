@@ -2,7 +2,7 @@ const db = require("../models");
 const rolex = db.rolex;
 // const storagePath = 'https://localhost:3000/storage'
 const storagePath = 'https://mimijoyeria.com/storage'
-const collectionsArray = ["item","cosmograph-daytona", "1908", "yacht-master", "sky-dweller", "gmt-master-ii", "explorer", "oyster-perpetual", "day-date", "datejust", "lady-datejust", "air-king", "submariner", "sea-dweller", "deepsea", "land-dweller"]
+const collectionsArray = ["item", "cosmograph-daytona", "1908", "yacht-master", "sky-dweller", "gmt-master-ii", "explorer", "oyster-perpetual", "day-date", "datejust", "lady-datejust", "air-king", "submariner", "sea-dweller", "deepsea", "land-dweller"]
 
 
 function contarGuiones(cadena) {
@@ -29,32 +29,32 @@ exports.getCollectionDetailsV2 = (req, res) => {
 
     }
   })
-    .then((data) => {res.send(data)})
+    .then((data) => { res.send(data) })
 
 }
 
 exports.getRolexDetailsV2 = async (req, res) => {
 
   let rolexResponseObject = {}
-  let modelName=req.params.id.toString()
-  const numbers =contarGuiones(modelName)
+  let modelName = req.params.id.toString()
+  const numbers = contarGuiones(modelName)
 
-  if(numbers>1){
-    for(let i=1; i<numbers; i++){
-      const position = modelName.indexOf("-")+1
-      modelName = modelName.substring(position,modelName.length)
+  if (numbers > 1) {
+    for (let i = 1; i < numbers; i++) {
+      const position = modelName.indexOf("-") + 1
+      modelName = modelName.substring(position, modelName.length)
     }
   }
-  
-  
+
+
   const findId = await rolex.RolexGetAllV2.findOne({
     where: {
       modelo: modelName
-    } 
-  })    
-  
+    }
+  })
+
   let parsedName = findId
-  
+
 
   parsedName.showcaseIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}-showcase.webp`
   parsedName.boxIMG = `${storagePath}/rolex-relojes-new/${parsedName.modelo}_presentation-box.webp`
@@ -77,7 +77,7 @@ exports.getRolexDetailsV2 = async (req, res) => {
 
   rolexResponseObject.details = detailsArray
 
-   
+
   let getHeaders = await rolex.RolexHeadersV2.findByPk(rolexId)
 
   let imgArray = []
@@ -99,7 +99,7 @@ exports.getRolexDetailsV2 = async (req, res) => {
 
   rolexResponseObject.headers = getHeaders
 
-  
+
   const getCollection = await rolex.RolexCollections.findByPk(collectionId)
 
   rolexResponseObject.collection = getCollection

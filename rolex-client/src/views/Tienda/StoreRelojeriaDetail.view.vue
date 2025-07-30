@@ -160,10 +160,10 @@ onMounted(() => {
 
                     <button @click="addToCart(state[0].id)"
                         v-if="state[0].coleccion == 'Tudor' && state[0].cantidad > 0"
-                        class="duration-200 rounded-full text-sm bg-tudor-red border border-tudor-red text-white hover:bg-white hover:text-tudor-red p-3 uppercase font-bold w-full">Agregar
+                        class="duration-200 rounded-full text-sm bg-tudor-red border border-tudor-red text-white hover:bg-white hover:text-tudor-red p-3 uppercase font-bold w-1/2">Agregar
                         al carrito</button>
                     <a :href="sendMessage(state)" target="_blank"
-                        class="duration-200 rounded-full text-sm bg-tudor-red border border-tudor-red text-white hover:bg-white hover:text-tudor-red p-3 uppercase font-bold text-center w-full">Contactar
+                        class="duration-200 rounded-full text-sm bg-tudor-red border border-tudor-red text-white hover:bg-white hover:text-tudor-red p-3 uppercase font-bold text-center w-1/2">Contactar
                     </a>
 
                     <h2 class="font-tudor-title text-lg font-medium ">Acerca del {{ state[0].tudor_collection.nombre }}
@@ -172,7 +172,7 @@ onMounted(() => {
                     <p>{{ state[0].tudor_collection.description }}</p>
 
                     <button @click="descriptionModal = true"
-                        v-if="state[0].coleccion == 'Tudor' && state[0].cantidad > 0"
+                        
                         class="duration-200 rounded-full text-sm bg-white border border-tudor-red text-tudor-red hover:bg-tudor-red hover:text-white py-1 px-3 font-bold w-fit letter-spacing-4">
                         + Especificaciones</button>
                     <Transition name="scale">

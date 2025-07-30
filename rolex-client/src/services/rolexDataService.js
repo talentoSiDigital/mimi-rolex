@@ -8,6 +8,7 @@ class Rolex {
     return http.get(`/v2/collection/${id}/`);
   }
 
+
  
   getDetailedWatch(id) {
     // getRolexDetailsV2

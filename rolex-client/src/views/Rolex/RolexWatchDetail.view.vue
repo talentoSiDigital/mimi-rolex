@@ -535,7 +535,7 @@ watch(isReady, () => {
                   {{ state.headers.texto3 }}
                 </p>
               </header>
-              <section class="w-10/12">
+              <section class="w-10/12 md:w-1/2">
                 <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`"
                   alt="heading-img-3" class="hidden md:block" />
                 <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`"

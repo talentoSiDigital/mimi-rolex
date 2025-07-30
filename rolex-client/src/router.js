@@ -562,16 +562,16 @@ const router = createRouter({
       },
 
     }
-    ,
-    {
-      path: "/testing/relojeria/tudor/",
-      name: "relojProductoasd",
-      component: () => import("./views/Tienda/Testing.view.vue"),
-      meta: {
-        title: "  Mimi Joyería "
-      },
+    // ,
+    // {
+    //   path: "/testing/",
+    //   name: "relojProductoasd",
+    //   component: () => import("./views/Rolex/Testing.view.vue"),
+    //   meta: {
+    //     title: "  Mimi Joyería "
+    //   },
 
-    }
+    // }
     ,
     {
       path: "/joyeria/:serie/:id",
