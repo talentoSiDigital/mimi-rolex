@@ -1,18 +1,20 @@
 <script setup>
-import { RouterLink } from "vue-router";
 
 defineProps({
   item: Object,
   collection: String,
 });
+
+
+// {name:'relojes-rolex', params:{collectionName:collection,id:item.modelo}}
 </script>
 
 <template>
-  <router-link
-    :to="{name:'relojes-rolex', params:{collectionName:collection,id:item.modelo}}"
-    class="bg-rolex-brown-light-1 h-full flex flex-col items-center justify-center py-0 cursor-pointer group"
+  <a
+    :href="`/rolex/${collection}-${item.modelo}`"
+    class="/bg-rolex-brown-light-1 h-full flex flex-col items-center justify-center py-0 cursor-pointer group"
   >
-
+  
     <img
       :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${item.modelo}-showcase.webp`"
       :alt="item.modelo"
@@ -25,7 +27,7 @@ defineProps({
         {{ item.cajaDelModelo }}
       </p>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <style scoped></style>

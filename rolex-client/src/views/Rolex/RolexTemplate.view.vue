@@ -5,9 +5,10 @@ import RolexNavbar from "../../components/navigation-components/RolexNavbar.vue"
 import SliderNavigationRolex from "../../components/navigation-components/SliderNavigationRolex.vue";
 import BreadCrumb from "../../components/navigation-components/BreadCrumb.vue";
 import { useLoaderStore } from "../../store/loaderState";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useHead } from '@unhead/vue'
 const route = useRoute();
+console.log(route);
 const loader = useLoaderStore();
 const checkIfFamily = computed(() => {
   return route.meta.pageFamily ? true : false;
@@ -15,7 +16,7 @@ const checkIfFamily = computed(() => {
 const checkIfModel = computed(() => {
   return route.meta.pageType === "model page" ? true : false;
 });
-
+const breadcrumbValidator = ref(false)
 const digitalDataLayerTemplate = {
   environment: {
     environmentVersion: "V7",
@@ -27,7 +28,7 @@ const digitalDataLayerTemplate = {
 };
 
 const digitalDataLayerFamily = ref(digitalDataLayerTemplate);
-digitalDataLayerFamily.value.page.pageFamilyName = route.meta.pageFamily;
+digitalDataLayerFamily.value.page.pageFamilyName = route.params.id;
 
 const digitalDataLayer = computed(()=>{
   if(checkIfFamily.value==true){
@@ -46,6 +47,10 @@ if(checkIfModel.value==false){
     script:[`var digitalDataLayer = ${JSON.stringify(digitalDataLayer.value)}; `]
   })
 }
+
+onMounted(()=>{
+  breadcrumbValidator.value = true
+})
 </script>
 
 <template>
@@ -53,7 +58,7 @@ if(checkIfModel.value==false){
    
     <div>
       <RolexNavbar />
-      <BreadCrumb v-if="route.name != 'busqueda'" />
+      <BreadCrumb v-if="route.name != 'busqueda' && breadcrumbValidator" />
       <main>
         <slot name="content"></slot>
 

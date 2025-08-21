@@ -6,6 +6,8 @@ import breadcrumb from "../../data/breadcrumb.json";
 const route = useRoute();
 const router = useRouter();
 const actual = ref(breadcrumb[route.name]);
+console.log(route.name );
+console.log(breadcrumb[route.name] );
 const routeArray = ref(route.fullPath.split("/"));
 const parentRoutes = {
   "Mantenimiento Rolex": "mantenimiento-rolex",
@@ -63,9 +65,19 @@ function getCollectionName() {
   }
 }
 
+
+function filterBreadcrumb(){
+
+  const breadcrumbArray = actual.value
+  console.log(breadcrumbArray);
+   breadcrumbArray.filter((value, index, self) => self.indexOf(value) === index)
+   return breadcrumbArray
+}
+
 onMounted(() => {
   getCollectionName();
   getModelName();
+  filterBreadcrumb(); 
 });
 </script>
 

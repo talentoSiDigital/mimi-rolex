@@ -2,8 +2,9 @@
     "1908": {
         "name": "1908",
         "headerSection": {
+            "sub": "Nuevos relojes 2025",
             "title": "Rolex 1908 <br> La geometría de la elegancia",
-            "text": "<strong>El Perpetual 1908 en oro amarillo de 18 quilates se propone en lo sucesivo con un brazalete íntegramente fabricado en este metal precioso.</strong> Heredero del patrimonio estético de la marca y de sus innumerables innovaciones en relojería, el reloj marca un nuevo hito en la búsqueda de la excelencia de la marca. Este buen ejemplo de la proeza relojera de Rolex, con la certificación de Cronómetro Superlativo, lleva el clasicismo al futuro."
+            "text": "<strong>El Perpetual 1908 en oro amarillo de 18 quilates se propone en lo sucesivo con un brazalete íntegramente fabricado en este metal precioso.</strong> Gracias a su original geometría, este brazalete de siete elementos aúna delicadeza y comodidad con total elegancia."
         },
         "mainSection": {
             "videoEmbed": "https://www.youtube.com/embed/fgwPCURYDjw?si=TGiNPM-gEcyvRBCu",
@@ -66,6 +67,7 @@
     "datejust": {
         "name": "Datejust",
         "headerSection": {  
+            "sub": "Nuevos relojes 2025",
             "title": "Rolex Datejust <br> Luces y sombras",
             "text": "<strong>Como un sol cuyos rayos iluminan el crepúsculo, la esfera del nuevo Oyster Perpetual Datejust 31 regala a la vista una comunión entre luces y sombras. </strong> Esta esfera rojo sombreado presenta una sutil transición entre el fuego del centro y la negra noche del contorno. Un juego de claroscuros realzado por el brillo de los diamantes engastados en el bisel y la esfera."
         },
@@ -84,39 +86,33 @@
             },
             "section2": {
                 "imgSize": "w-full",
-                "title": false,
-                "text": false,
-                "backgroundColor": "bg-rolex-brown-light-2"
-            },
-            "section3": {
-                "imgSize": false,
                 "title": "Un estilo atemporal",
                 "text": "El Datejust es el arquetipo del reloj clásico según Rolex, tanto por su estética atemporal como por sus funcionalidades. Cuando se presenta en 1945, es el primer reloj de pulsera cronómetro, automático y hermético que indica la fecha en una ventana insertada en la esfera situada en la posición de las 3 h, lo que cristaliza todas las innovaciones principales aportadas hasta ahora por Rolex al reloj de pulsera moderno. Si bien el Datejust ha trascendido el paso de los años con sus códigos inmutables y definitivamente reconocibles, evoluciona sin cesar al ritmo de los avances técnicos y estéticos desarrollados por Rolex.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section4": {
+            "section3": {
                 "imgSize": "w-10/12 ",
                 "title": "Caja Oyster, símbolo de hermeticidad",
                 "text": "Ejemplo de solidez y elegancia, la caja Oyster del Datejust 31, de 31 mm de diámetro, garantiza una hermeticidad de hasta 100 metros de profundidad. La carrura de la modalidad presentada se trabaja a partir de un bloque macizo de acero amarillo de 18 quilates. La corona de cuerda Twinlock, provista de un sistema de doble hermeticidad, se enrosca sólidamente a la caja. El cristal, coronado por la lente Cyclops en la posición de las 3 h para facilitar la lectura de la fecha, está realizado en zafiro prácticamente imposible de rayar y presenta un tratamiento antirreflejos. Totalmente hermética, la caja Oyster protege de forma óptima el movimiento que alberga en su interior.",
                 "backgroundColor": "bg-rolex-brown-light-1"
             },
-            "section5": {
-                "imgSize": "w-10/12 md:w-1/2",
+            "section4": {
+                "imgSize": "w-10/12 md:w-1/2 ",
                 "title": "Calibre 2236",
                 "text": "El Datejust 31 está equipado con el calibre 2236, un movimiento completamente desarrollado y manufacturado por Rolex. Concentrado de tecnología, este movimiento mecánico de cuerda automática ofrece un elevado rendimiento, especialmente en materia de precisión, autonomía, comodidad de uso y fiabilidad.<br><br>El calibre 2236 lleva un sistema de cuerda automática por rotor Perpetual y cuenta con una reserva de marcha de aproximadamente 55 horas.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section6": {
+            "section5": {
                 "imgSize": "w-10/12 ",
                 "title": "Brazalete President",
                 "text": "La nueva modalidad del Datejust 31, fabricada en oro amarillo de 18 quilates, luce un brazalete President. Creado especialmente para el lanzamiento del prestigioso Oyster Perpetual Day Date en 1956, este brazalete de tres elementos, fabricado exclusivamente en oro de 18 quilates o en platino 950, todavía hoy se reserva al Day Date, así como al Datejust en metal precioso.<br><br>El brazalete President, dotado de un elegante cierre desplegable invisible Crownclasp, incorpora en el interior de sus eslabones inserciones de cerámica —diseñadas por Rolex y patentadas— para aumentar su fluidez de uso y su longevidad.",
-                "backgroundColor": "bg-rolex-brown-light-1"
+                "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section7": {
-                "imgSize": "w-full ",
+            "section6": {
+                "imgSize": "w-full",
                 "title": false,
-                "text":false,
-                "backgroundColor": "bg-rolex-brown-light-1"
+                "text": false,
+                "backgroundColor": "bg-rolex-brown-light-2"
             },
             "finalSection": {
                 "imgSize": "w-10/12 md:w-1/2",
@@ -129,6 +125,7 @@
     "gmt-master-ii": {
         "name": "GMT-Master II",
         "headerSection": {
+            "sub": "Nuevos relojes 2025",
             "title": "Rolex GMT-Master II <br> Perfecta armonía",
             "text": "<strong> Rolex estrena su primera esfera de cerámica en el Oyster Perpetual GMT Master II, en este caso en una modalidad en oro blanco de 18 quilates</strong> Mismo material, mismo tono verde, mismo lustre, la esfera Cerachrom armoniza de maravilla con la parte diurna del disco de bisel verde y negro."
         },
@@ -148,7 +145,7 @@
             "section2": {
                 "imgSize": "w-10/12 md:w-1/2 ",
                 "title": "Cerámica de alta tecnología",
-                "text": "Rolex ha desempeñado un papel pionero en el desarrollo de cerámicas especiales para la fabricación de algunos elementos externos. Particularmente resistentes a las rayaduras, estos materiales presentan colores inalterables y de una intensidad poco común. Además, por la naturaleza de su composición química, estas cerámicas de alta tecnología son inertes y resisten a la corrosión. La marca ha desarrollado un savoir faire y unos métodos de fabricación exclusivos e innovadores que le permiten producir estos componentes de cerámica con total independencia.<br><br>En la nueva modalidad del GMT Master II, el bisel giratorio bidireccional está dotado de un disco Cerachrom graduado 24 horas bicolor de cerámica verde y negra. Las graduaciones y los números, moldeados en hueco, se colorean depositando platino mediante una técnica PVD (Physical Vapour Deposition, depósito físico de vapor). Gracias a las muescas de su contorno, que ofrecen un excelente agarre, el bisel puede manipularse cómodamente.",
+                "text": "Rolex ha desempeñado un papel pionero en el desarrollo de cerámicas especiales para la fabricación de algunos elementos externos. Particularmente resistentes a las rayaduras, estos materiales presentan colores inalterables y de una intensidad poco común. Además, por la naturaleza de su composición química, estas cerámicas de alta tecnología son inertes y resisten a la corrosión. La marca ha desarrollado un savoir faire y unos métodos de fabricación exclusivos e innovadores que le permiten producir estos componentes de cerámica con total independencia.<br><br>En la nueva modalidad del GMT Master II, el bisel giratorio bidireccional está dotado de un disco Cerachrom graduado 24 horas bicolor de cerámica verde y negra. Las graduaciones y los números, moldeados en hueco, se colorean depositando platino mediante una técnica PVD (<i>Physical Vapour Deposition</i>, depósito físico de vapor). Gracias a las muescas de su contorno, que ofrecen un excelente agarre, el bisel puede manipularse cómodamente.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
            
@@ -193,12 +190,13 @@
     "land-dweller": {
         "name": "Land-Dweller",
         "headerSection": {
+            "sub": "Nuevos relojes 2025",
             "title": "Rolex Land-Dweller <br> Ampliar horizontes",
             "text": "<strong>Con el Oyster Perpetual Land Dweller, Rolex inaugura un nuevo capítulo de su historia.</strong> Este reloj contemporáneo representa el punto culminante del savoir faire de la marca a día de hoy, resultado de un siglo de maestría relojera. Está pensado para aquellos hombres y mujeres que ocupan su lugar en el mundo y forjan su propio destino transformando cada instante en una oportunidad."
         },
         "mainSection": {
             "videoEmbed": "https://www.youtube.com/embed/Xo9ZabYdCFQ?si=YlWt6oFX0h9ezt2l",
-            "title": "Rolex presenta el Oyster Perpetual Land-Dweller, un nuevo reloj que se distingue por su audacia estética y técnica.",
+            "title": "Rolex presenta el Oyster Perpetual Land‑Dweller, un nuevo reloj que se distingue por su audacia estética y técnica.",
             "text": "Propuesto en dos tamaños —36 mm y 40 mm de diámetro—, simboliza la excelencia relojera propia de la marca y ha sido concebido para ofrecer un rendimiento superlativo en cualquier circunstancia.",
             "backgroundColor": "bg-rolex-brown-light-2"
         },
@@ -230,7 +228,7 @@
             "section5": {
                 "imgSize": "w-10/12 md:w-1/2 ",
                 "title": "La osadía de imaginar el mañana",
-                "text": "El Land Dweller, impregnado de audacia y con la vista puesta en el futuro, redefine los parámetros de la perfección relojera según Rolex. Encarna la filosofía de abrazar el momento presente al tiempo que se construye el futuro. El mensaje que transmite es sencillo pero potente: estar en sintonía con su tiempo, con su entorno, para construir el mundo del mañana. Demuestra, además, la capacidad de la marca para perfeccionar su savoir faire de forma perpetua.",
+                "text": "El Land Dweller, impregnado de audacia y con la vista puesta en el futuro, redefine los parámetros de la perfección relojera según Rolex. Encarna la filosofía de abrazar el momento presente al tiempo que se construye el futuro. El mensaje que transmite es sencillo pero potente: estar en sintonía con su tiempo, con su entorno, para construir el mundo del mañana. Demuestra, además, la capacidad de la marca para perfeccionar su <i>savoir faire</i> de forma perpetua.",
                 "backgroundColor": "bg-rolex-brown-light-1"
             },
             "section6": {
@@ -301,8 +299,9 @@
     "oyster-perpetual": {
         "name": "Oyster Perpetual",
         "headerSection": {
+            "sub": "Nuevos relojes 2025",
             "title": "Rolex Oyster Perpetual <br> Frescura de una nueva imagen",
-            "text": "<strong>La suavidad de un tono lavanda, la calidez de un beis arena, la frescura de un verde pistacho. </strong> . El Oyster Perpetual está disponible en toda una variedad de matices que colorean un nuevo surtido de esferas. Son semblantes que celebran la unión entre las tonalidades pastel, la intensidad de la laca y el aterciopelado de un acabado mate."
+            "text": "<strong>La suavidad de un tono lavanda, la calidez de un beis arena, la frescura de un verde pistacho. </strong>El Oyster Perpetual está disponible en toda una variedad de matices que colorean un nuevo surtido de esferas. Son semblantes que celebran la unión entre las tonalidades pastel, la intensidad de la laca y el aterciopelado de un acabado mate."
         },
         "mainSection": {
             "videoEmbed": "https://www.youtube.com/embed/sR_KNO6mey8?si=NsIXtepyWg1a07oL",
@@ -314,52 +313,56 @@
             "section1": {
                 "imgSize": "w-10/12 ",
                 "title": false,
-                "text": "«Lavender», beis o «pistachio», estas nuevas esferas lacadas se distinguen además por su acabado mate, una combinación que no figura en el actual catálogo de la marca.",
+                "text": "<i>Lavender</i>, beis o <i>pistachio</i>, estas nuevas esferas lacadas se distinguen además por su acabado mate, una combinación que no figura en el actual catálogo de la marca.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
             "section2": {
+                "imgSize": "w-10/12 md:w-1/2",
+                "title": false,
+                "text": "La esfera lacada mate <i>lavender</i> se presenta en el Oyster Perpetual 28 y la esfera lacada mate beis, en el Oyster Perpetual 36. En cuanto a la esfera lacada mate <i>pistachio</i>, viste principalmente el Oyster Perpetual 41 que, por otra parte, ha evolucionado gracias a una caja Oyster rediseñada y a un cierre Oysterclasp cuyo grosor se ha reducido.<br><br>El Oyster Perpetual 28 está equipado con el calibre 2232, mientras que el Oyster Perpetual 36 y el Oyster Perpetual 41, por su parte, están dotados con el calibre 3230. Estos dos movimientos a la vanguardia de la tecnología relojera ofrecen las funciones esenciales: horas, minutos y segundos.",
+                "backgroundColor": "bg-rolex-brown-light-2"
+            },
+            "section3": {
                 "imgSize": "w-10/12",
                 "title": "La quintaesencia del Oyster",
                 "text": "El Oyster Perpetual es el heredero directo del Oyster original, primer reloj de pulsera hermético del mundo, sobre el que Rolex ha construido su reputación desde 1926. Estos relojes poseen todos los atributos fundamentales de la colección Oyster Perpetual, a saber, precisión cronométrica, hermeticidad de la caja Oyster y cuerda automática del movimiento por rotor Perpetual. Están fabricados exclusivamente en acero Oystersteel y presentan acabados cuidados: son la forma más depurada del cronómetro de muñeca. Estos relojes en esencia atemporales se reinventan constantemente y han ido incorporando de forma gradual las innovaciones técnicas de la marca. Gracias a sus colores y al diseño de su esfera, que varían y evolucionan, presumen de estar siempre de rabiosa actualidad.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section3": {
+            "section4": {
                 "imgSize": "w-full",
                 "title": false,
                 "text": false,
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section4": {
+            "section5": {
                 "imgSize": "w-10/12",
                 "title": "Caja Oyster, símbolo de hermeticidad",
                 "text": "Ejemplo de solidez y elegancia, la caja Oyster del Oyster Perpetual 28, el Oyster Perpetual 36 y el Oyster Perpetual 41, de un diámetro de 28 mm, de 36 mm y de 41 mm respectivamente, garantiza una hermeticidad de hasta 100 metros de profundidad. La carrura se trabaja a partir de un bloque macizo de acero Oystersteel y está coronada por un bisel abombado y pulido. La corona de cuerda Twinlock, provista de un sistema de doble hermeticidad, se enrosca sólidamente a la caja. El cristal está realizado en zafiro prácticamente imposible de rayar y presenta un tratamiento antirreflejos. Totalmente hermética, la caja Oyster protege de forma óptima el movimiento que alberga en su interior.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section5": {
+            "section6": {
                 "imgSize": "w-10/12 md:w-1/2",
                 "title": "Calibres 2232 y 3230",
                 "text": "El Oyster Perpetual 28 está equipado con el calibre 2232, y el Oyster Perpetual 36, así como el Oyster Perpetual 41, están dotados con el calibre 3230. Concentrados de tecnología, estos movimientos mecánicos de cuerda automática —completamente desarrollados y manufacturados por Rolex— presentan un elevado rendimiento, especialmente en materia de precisión, autonomía, comodidad de uso y fiabilidad.<br><br>Los calibres 2232 y 3230 llevan un mecanismo de cuerda automática por rotor Perpetual. El primero garantiza una reserva de marcha de aproximadamente 55 horas. En cuanto al segundo, posee una reserva de marcha de aproximadamente 70 horas gracias a la arquitectura de su barrilete y al rendimiento superior de su escape.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section6": {
-                "imgSize": "w-full",
+            "section7": {
+                "imgSize": "w-full ",
                 "title": false,
                 "text": false,
                 "backgroundColor": "bg-rolex-brown-light-2"
-              
             },
-            "section7": {
-                "imgSize": "w-10/12 ",
+            "section8": {
+                "imgSize": "w-10/12",
                 "title": "Brazalete Oyster",
                 "text": "Los relojes de la gama Oyster Perpetual están dotados de un brazalete Oyster. Este brazalete metálico de tres elementos, desarrollado a finales de la década de 1930, destaca por su solidez.<br><br>En estos relojes, el brazalete está fabricado en acero Oystersteel y provisto de un cierre desplegable Oysterclasp. Dispone del cómodo sistema de extensión rápida Easylink, desarrollado por Rolex, que permite ajustar fácilmente su longitud en torno a unos 5 mm.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
-            "section8": {
+            "section9": {
                 "imgSize": "w-full",
                 "title": false,
                 "text": false,
                 "backgroundColor": "bg-rolex-brown-light-2"
-              
             },
              "finalSection": {
                 "imgSize": "w-10/12 md:w-1/2",
@@ -372,6 +375,7 @@
     "esferas-ineditas": {
         "name": "Esferas inéditas",
         "headerSection": {
+            "sub": "Nuevos relojes 2025",
             "title": "Esferas inéditas <br> El brillo de lo inesperado",
             "text": "<strong>Modelos de osadas configuraciones. Originales combinaciones de colores y materiales que provocan emociones inusitadas.</strong> Los Oyster Perpetual Cosmograph Daytona, GMT-Master II y Sky-Dweller se visten con nuevas esferas que reafirman su aura."
         },
@@ -391,27 +395,27 @@
             "section2": {
                 "imgSize": "w-full",
                 "title": false,
-                "text": "El Oyster Perpetual Sky Dweller acompaña a los grandes viajeros a cualquier latitud. El brazalete Jubilee con cierre Oysterclasp le aporta un toque adicional de exquisitez.",
+                "text": "El Oyster Perpetual Sky Dweller acompaña a los grandes viajeros a cualquier latitud. Este año, una versión en oro amarillo de 18 quilates se viste con una esfera verde vivo con acabado tipo sol, una tonalidad intensa que combina a las mil maravillas con el color del reloj. El brazalete Jubilee, igualmente en oro amarillo de 18 quilates y con cierre Oysterclasp, le aporta un toque adicional de exquisitez.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
             "section3": {
                 "imgSize": "w-10/12",
                 "title": "Cerámica de alta tecnología",
-                "text": "Rolex ha desempeñado un papel pionero en el desarrollo de cerámicas especiales para la fabricación de algunos elementos externos. Particularmente resistentes a las rayaduras, estos materiales presentan colores inalterables y de una intensidad poco común. La marca ha desarrollado un savoir faire y unos métodos de fabricación exclusivos e innovadores que le permiten producir estos componentes de cerámica con total independencia.<br><br>El Cosmograph Daytona en oro amarillo de 18 quilates con esfera lacada azul turquesa está provisto de un bisel Cerachrom monobloque de cerámica negra. En el GMT Master II en oro Everose de 18 quilates con esfera de ojo de hierro, el bisel giratorio bidireccional está dotado de un disco Cerachrom graduado 24 horas bicolor de cerámica marrón y negra.",
+                "text": "Rolex ha desempeñado un papel pionero en el desarrollo de cerámicas especiales para la fabricación de algunos elementos externos. Particularmente resistentes a las rayaduras, estos materiales presentan colores inalterables y de una intensidad poco común. Además, por la naturaleza de su composición química, estas cerámicas de alta tecnología son inertes y resisten a la corrosión. La marca ha desarrollado un savoir faire y unos métodos de fabricación exclusivos e innovadores que le permiten producir estos componentes de cerámica con total independencia.<br><br>El Cosmograph Daytona en oro amarillo de 18 quilates con esfera lacada azul turquesa está provisto de un bisel Cerachrom monobloque de cerámica negra. En el GMT Master II en oro Everose de 18 quilates con esfera de ojo de hierro, el bisel giratorio bidireccional está dotado de un disco Cerachrom graduado 24 horas bicolor de cerámica marrón y negra.",
                 "backgroundColor": "bg-rolex-brown-light-1"
             },
             "section4": {
                 "imgSize": "w-10/12 md:w-1/2",
-                "title": "El bisel estriado, un distintivo estético",
-                "text": "El bisel estriado, propuesto para determinados modelos Clásicos de la colección Oyster Perpetual, existe desde la invención del Oyster en 1926. En aquel momento las estrías servían para enroscar el bisel a la carrura y, por tanto, contribuían directamente a garantizar la hermeticidad de la caja. En la actualidad su papel es esencialmente estético.<br><br>Exclusivamente fabricado en oro de 18 quilates o en platino 950, el bisel estriado es fruto de un savoir faire único y se considera uno de los pilares del patrimonio estilístico de Rolex.",
+                "title": "El bisel estriado, una característica distintiva",
+                "text": "El bisel estriado, propuesto para muchos modelos Clásicos de la colección Oyster Perpetual, existe desde la invención del Oyster en 1926. En aquel momento las estrías servían para enroscar el bisel a la carrura y, por tanto, contribuían directamente a garantizar la hermeticidad. En la actualidad su papel es esencialmente estético. Exclusivamente fabricado en oro de 18 quilates o en platino 950, el bisel estriado es fruto de un savoir faire único y se considera uno de los pilares del patrimonio estilístico de Rolex.<br><br>El bisel estriado del Sky-Dweller con esfera verde vivo está fabricado en oro amarillo de 18 quilates, esto es, en el mismo material que su caja Oyster y su brazalete Jubilee.",
                 "backgroundColor": "bg-rolex-brown-light-2"
             },
             "section5": {
                
-                "imgSize": "w-10/12 md:w-1/2",
+                "imgSize": "w-10/12",
                 "title": "Caja Oyster, símbolo de hermeticidad",
-                "text": "Ejemplos de solidez, fiabilidad y elegancia, la caja Oyster del Cosmograph Daytona y la del GMT Master II ―ambas de 40 mm de diámetro―, así como la del Sky Dweller ―de un diámetro de 42 mm―, garantizan una hermeticidad de hasta 100 metros de profundidad. La carrura de las modalidades presentadas se trabaja a partir de un bloque macizo de oro amarillo o Everose de 18 quilates.<br>La corona de cuerda Triplock, provista de un sistema de triple hermeticidad y de protectores tallados en la carrura, o la corona Twinlock, con sistema de doble hermeticidad, se enrosca firmemente a la caja, al igual que los pulsadores de cronógrafo en el Cosmograph Daytona. El cristal ―coronado, en los modelos con función de fecha, por la lente Cyclops en la posición de las 3 h para una mejor lectura del día del mes― está realizado en zafiro prácticamente imposible de rayar y presenta un tratamiento antirreflejos.",
-                "backgroundColor": "bg-rolex-brown-light-1"
+                "text": "Ejemplos de solidez, fiabilidad y elegancia, la caja Oyster del Cosmograph Daytona y la del GMT Master II ―ambas de 40 mm de diámetro―, así como la del Sky Dweller ―de un diámetro de 42 mm―, garantizan una hermeticidad de hasta 100 metros de profundidad. La carrura de las modalidades presentadas se trabaja a partir de un bloque macizo de oro amarillo o Everose de 18 quilates. La corona de cuerda Triplock, provista de un sistema de triple hermeticidad y de protectores tallados en la carrura, o la corona Twinlock, con sistema de doble hermeticidad, se enrosca firmemente a la caja, al igual que los pulsadores de cronógrafo en el Cosmograph Daytona. El cristal ―coronado, en los modelos con función de fecha, por la lente Cyclops en la posición de las 3 h para una mejor lectura del día del mes― está realizado en zafiro prácticamente imposible de rayar y presenta un tratamiento antirreflejos.",
+                "backgroundColor": "bg-rolex-brown-light-2"
             },
             "section6": {
                 "imgSize": "w-full",

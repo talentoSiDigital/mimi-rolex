@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
 import RolexHeader from '../../components/RolexHeader.vue'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
