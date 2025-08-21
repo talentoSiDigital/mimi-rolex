@@ -68,7 +68,6 @@ function getResultsByPage() {
         order: searchOrder.value
     })
         .then(d => {
-
             state.value = d.data
             isReady.value = true
         })

@@ -23,7 +23,7 @@ const checkWindowSize = computed(() => {
 
 const router = useRouter();
 const links = [
-  "/rolex/oyster-perpetual",
+  "/rolex/sky-dweller",
   "/rolex/world-of-rolex/resistencia",
   "/tudor",
 ]
@@ -71,26 +71,26 @@ function changeCounter(direction){
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
-            src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-2-desktop" />
+            src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-3-desktop" />
         </div>
       </div>
       <div v-else class="overflow-hidden">
         <div class="duration-500 flex" :class="classes[counter]">
           <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/1-mobile.webp"
-            alt="headers-1-mobile"  />
+            alt="headers-1-mobile" />
           <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/2-mobile.webp"
             alt="headers-2-mobile"  />
           <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/3-mobile.webp"
-            alt="headers-2-mobile"  />
+            alt="headers-3-mobile"  />
         </div>
       </div>
 
 
 
-      <button class="absolute top-[45%] md:left-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('l')">
+      <button aria-label="Previous" class="absolute top-[45%] md:left-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('l')">
         <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green"/>
       </button>
-      <button class="absolute top-[45%] right-0 md:right-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('r')">
+      <button aria-label="Next" class="absolute top-[45%] right-0 md:right-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('r')">
         <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-rolex-green"/>
       </button>
     </div>
@@ -160,16 +160,16 @@ function changeCounter(direction){
                 <img v-lazy="'/assets/routes-assets/Home/tudor-1.webp'" alt="tudor-black-bay-gmt"
                   class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
-              <h3 class="text-xl font-light">1926</h3>
-              <h3 class="text-xl font-light">TUDOR</h3>
+              <h2 class="text-xl font-light">1926</h2>
+              <h2 class="text-xl font-light">TUDOR</h2>
             </div>
             <div class="flex flex-col items-center justify-center">
               <router-link :to="{ name: 'reloj', params: { id: 'longines' } }">
                 <img v-lazy="'/assets/routes-assets/Home/tudor-2.webp'" alt="longiness-hydrocontest"
                   class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
-              <h3 class="text-xl font-light">Black Bay 58 18K</h3>
-              <h3 class="text-xl font-light">TUDOR</h3>
+              <h2 class="text-xl font-light">Black Bay 58 18K</h2>
+              <h2 class="text-xl font-light">TUDOR</h2>
             </div>
 
             <div class="flex flex-col items-center justify-center">
@@ -177,18 +177,18 @@ function changeCounter(direction){
                 <img v-lazy="'/assets/routes-assets/Home/tudor-3.webp'" alt="victorinox-maverick-sport"
                   class="duration-500 hover:scale-110 w-96 pb-4" />
               </router-link>
-              <h3 class="text-xl font-light">Pelagos FXD</h3>
-              <h3 class="text-xl font-light">TUDOR</h3>
+              <h2 class="text-xl font-light">Pelagos FXD</h2>
+              <h2 class="text-xl font-light">TUDOR</h2>
 
             </div>
           </div>
         </div>
 
         <div class="py-10 w-full flex justify-center">
-          <router-link :to="{ name: 'world-of-rolex-hub' }" class="w-[90%]">
+          <router-link :to="{ name: 'world-of-rolex-article-10' }" class="w-[90%]" aria-label="World of Rolex">
 
-            <img src="/assets/routes-assets/activations/viena-banner-desktop.webp" alt="" v-if="!checkWindowSize">
-            <img src="/assets/routes-assets/activations/viena-banner-mobile.webp" alt="" v-else>
+            <img src="/assets/routes-assets/activations/endurance-banner-desktop.webp" alt="" v-if="!checkWindowSize">
+            <img src="/assets/routes-assets/activations/endurance-banner-mobile.webp" alt="" v-else>
           </router-link>
         </div>
 

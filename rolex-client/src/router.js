@@ -115,7 +115,8 @@ const router = createRouter({
       meta: {
         title: " Nuevos Modelos 2024  | Mimi Joyería ",
         breadcrumb: "NuevosModelos",
-        pageType:"family page 2025"
+        pageType:"family page 2025",
+        pageFamily:true
 
       }
     },
@@ -248,6 +249,20 @@ const router = createRouter({
         description: "Descubra los relojes Rolex en línea en Mimi Joyería, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer",
         breadcrumb: "Relojes",
         pageType:"collection page"
+      }
+    },
+
+      {
+      path: "/rolex/:collectionName-:id",
+      name: "relojes-rolex",
+      component: () => import("./views/Rolex/RolexWatchDetail.view.vue"),
+      meta: {
+        title: " Mimi Joyería ",
+        breadcrumb: "Modelo",
+        pageType:"model page",
+        pageFamily:"",
+        productRMC:""
+
       }
     },
 
@@ -423,19 +438,7 @@ const router = createRouter({
         pageFamily:"deepsea"
       }
     },
-    {
-      path: "/rolex/:collectionName-:id",
-      name: "relojes-rolex",
-      component: () => import("./views/Rolex/RolexWatchDetail.view.vue"),
-      meta: {
-        title: " Mimi Joyería ",
-        breadcrumb: "Modelo",
-        pageType:"model page",
-        pageFamily:"",
-        productRMC:""
-
-      }
-    },
+  
     {
       path: "/rolex/busqueda",
       name: "rolex-busqueda",

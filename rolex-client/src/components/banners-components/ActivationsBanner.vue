@@ -1,4 +1,4 @@
-4<script setup>
+<script setup>
 import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 import { ref } from "vue";
@@ -7,10 +7,10 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
-    src: "land-dweller",
-    link: {name:'rolex-coleccion-land-dweller'},
-    alt: "land-dweller-banner",
-    title: "Land dweller Banner",
+    src: "sky-dweller",
+    link: {name:'rolex-coleccion-sky-dweller'},
+    alt: "sky-dweller-banner",
+    title: "Sky dweller Banner",
   },  
   {
     src: "endurance",

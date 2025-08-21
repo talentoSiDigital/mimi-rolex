@@ -1,19 +1,18 @@
 <script setup>
 
-import { computed, ref, watch } from 'vue'
+import { computed, ref, useTemplateRef } from 'vue'
 import RolexTemplate from '../Rolex/RolexTemplate.view.vue'
-
-import RolexHeader from '../../components/RolexHeader.vue'
+import { useElementVisibility } from '@vueuse/core'
+import { useRoute } from 'vue-router'
 import PageBanner from '../../components/banners-components/PageBanner.vue'
-import SectionNavigationCard from '../../components/cards/SectionNavigationCard.vue'
 import NewContactForm from '../../components/form-components/NewContactForm.vue'
-import Button from '../../components/global-components/Button.vue';
+import Button from '../../components/global-components/Button.vue'
 import mailDataService from '../../services/mailDataService'
-import {useRoute} from 'vue-router';
-const query = computed(()=>{
-    return useRoute().query.id? useRoute().query.id: null
+const query = computed(() => {
+    return useRoute().query.id ? useRoute().query.id : null
 })
 const error = ref(false)
+const sliderCount = ref(0)
 const messageInfo = ref({
     "tto": "Sr",
     "name": "",
@@ -25,11 +24,16 @@ const messageInfo = ref({
     "conditions": false,
     "message": "",
 })
-if(query.value != null){
+
+if (query.value != null) {
     messageInfo.value.message = `Hola. Estoy interesado en el Rolex ${query.value}`
 }
 
+const target = useTemplateRef('target')
+const targetIsVisible = useElementVisibility(target)
 
+
+// const position = ref("-translate-x-2/3")
 const position = ref("-translate-x-0")
 const statusMessage = ref("")
 // const position = ref("translate-x-0")
@@ -39,23 +43,37 @@ function moveForm(pos) {
     if (messageInfo.value.message == "") {
         error.value = true
     } else {
-        position.value = positionArray[pos]
+        // position.value = positionArray[pos] 
+        sliderCount.value = pos
     }
 }
 
 function sendMessage() {
-   
-    mailDataService.rolexNewMail(messageInfo.value).then((d)=>{
+
+    mailDataService.rolexNewMail(messageInfo.value).then((d) => {
         statusMessage.value = "Su mensaje ha sido enviado con éxito al equipo de Rolex en Mimi Joyería"
         moveForm(2)
-    }).catch(()=>{
+    }).catch(() => {
         statusMessage.value = "Hubo un error al enviar su mensaje, intente de nuevo más tarde."
         moveForm(2)
 
     })
 }
 
-
+function resetForm() {
+    messageInfo.value = {
+        "tto": "Sr",
+        "name": "",
+        "lastName": "",
+        "email": "",
+        "phone": "",
+        "country": "VE",
+        "region": "",
+        "conditions": false,
+        "message": "",
+    };
+    sliderCount.value = 0
+}
 
 </script>
 
@@ -66,12 +84,13 @@ function sendMessage() {
 
                 <PageBanner type="rolex-contact" />
                 <main class="w-full overflow-hidden ">
-                   
 
-                    <div :class="position" class="flex w-[300%] duration-300">
-                        <section class=" bg-rolex-brown-light-2 py-[10vh] w-1/3">
+
+                    <div :class="position" class="flex w-[300%] duration-300 ">
+                        <section ref="target" v-if="sliderCount === 0"
+                            class=" bg-rolex-brown-light-2 py-[10vh] w-1/3 max-h-fit">
                             <header
-                                class="flex flex-col gap-4 font-helvetica font-bold text-center justify-around items-center  text-rolex-brown h-fit ">
+                                class="flex flex-col gap-4 font-helvetica w-full font-bold text-center justify-around items-center  text-rolex-brown  ">
 
                                 <p class="w-10/12 md:w-1/2 text-xl font-helvetica  ">
                                     Enviar un mensaje
@@ -103,46 +122,58 @@ function sendMessage() {
 
                         </section>
 
-                        <NewContactForm -color="bg-rolex-brown-light-2" v-model="messageInfo" class="w-1/3" @get-back="moveForm" @send-mail="sendMessage"/>
-
-                        <section class="border bg-rolex-brown-light-2 py-[10vh] w-1/3">
-                            <header
-                                class="flex flex-col gap-4 font-helvetica font-bold text-center justify-around items-center  text-rolex-brown h-fit ">
-
-                                <p class="w-10/12 md:w-1/2 text-xl font-helvetica  ">
-                                    Enviar un mensaje
-                                </p>
-
-                                <h1 class="text-2xl md:text-5xl w-10/12 md:w-1/2">
-                                    Gracias
-                                </h1>
-
-                                <p class="w-10/12 md:w-1/2 text-xl text-black font-helvetica font-bold ">
-                                    {{statusMessage}}
-                                </p>
-                                <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light  ">
-
-                                    Uno de nuestros asesores de ventas de Rolex revisará su solicitud y responderá lo
-                                    antes posible.
+                        <NewContactForm v-if="sliderCount === 1" -color="bg-rolex-brown-light-2" v-model="messageInfo"
+                            class="w-1/3" @get-back="moveForm" @send-mail="sendMessage" />
 
 
-                                </p>
+                        <section v-if="sliderCount === 2" class="border bg-rolex-brown-light-2 pt-[10vh] w-1/3">
+                            <div>
+                                <header
+                                    class="flex flex-col gap-4 font-helvetica font-bold text-center justify-around items-center  text-rolex-brown h-fit ">
+
+                                    <p class="w-10/12 md:w-1/2 text-xl font-helvetica  ">
+                                        Enviar un mensaje
+                                    </p>
+
+                                    <h1 class="text-2xl md:text-5xl w-10/12 md:w-1/2">
+                                        Gracias
+                                    </h1>
+
+                                    <p class="w-10/12 md:w-1/2 text-xl text-black font-helvetica font-bold ">
+                                        {{ statusMessage }}
+                                    </p>
+                                    <p class="w-10/12 md:w-1/2 text-xl font-helvetica font-light  ">
+
+                                        Uno de nuestros asesores de ventas de Rolex revisará su solicitud y responderá
+                                        lo
+                                        antes posible.
 
 
+                                    </p>
 
-                                <Button to="/rolex">Volver</Button>
+                                    <button @click="resetForm"
+                                        class="bg-rolex-green text-white border w-fit border-rolex-green px-4 py-2 font-helvetica font-bold  rounded-3xl hover:bg-white hover:text-rolex-green duration-200">
+                                        Volver
+                                        <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-xs pl-2" />
 
-                            </header>
+                                    </button>
 
-                            <div class="flex justify-center py-[10vh]">
-                                <img src="/assets/routes-assets/contact-rolex/contact-1.webp" alt="contact-rolex-center"
-                                    class="hidden md:block  w-10/12 md:w-1/2">
-                                <img src="/assets/routes-assets/contact-rolex/contact-1-mobile.webp"
-                                    alt="contact-rolex-center-mobile" class="md:hidden block w-10/12 md:w-1/2">
+
+                                </header>
+
+                                <div class="flex justify-center py-[10vh]">
+                                    <img src="/assets/routes-assets/contact-rolex/contact-1.webp"
+                                        alt="contact-rolex-center" class="hidden md:block  w-10/12 md:w-1/2">
+                                    <img src="/assets/routes-assets/contact-rolex/contact-1-mobile.webp"
+                                        alt="contact-rolex-center-mobile" class="md:hidden block w-10/12 md:w-1/2">
+                                </div>
+
+
                             </div>
 
 
                         </section>
+
                     </div>
                 </main>
 

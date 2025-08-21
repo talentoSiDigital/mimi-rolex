@@ -71,12 +71,14 @@ function activateSearch() {
         <router-link
           :to="{ name: 'rolex' }"
           class="cursor-pointer absolute z-10 block w-full h-[160px] md:w-40 md:h-20"
+          aria-label="Rolex"
         >
         </router-link>
         <iframe
           src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
           frameborder="0"
           class="w-40 h-[5.5rem] cursor-pointer"
+          title="Distribuidor oficial: Mimi Joyería"
         ></iframe>
       </div>
     </div>
@@ -190,6 +192,7 @@ function activateSearch() {
           <a
             href="/logout"
             class="text-xl font-normal whitespace-nowrap font-montserrat text-green-900 hover:underline"
+            aria-label="Logout"
           >
             <h2 class="my-1 uppercase">Cerrar sesión</h2>
           </a>

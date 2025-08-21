@@ -32,7 +32,7 @@ console.log(currentData);
             {{ currentData.headerSection.sub }}
           </template>
           <template #title>
-            <span> Rolex {{ currentData.name }} </span>
+            <span v-html="currentData.headerSection.title">  </span>
           </template>
           <template #text>
             <span v-html="currentData.headerSection.text"></span>

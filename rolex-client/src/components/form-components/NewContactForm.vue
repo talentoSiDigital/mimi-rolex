@@ -62,16 +62,16 @@ function sendMail() {
   <div
     id="main-contact"
     :class="Color"
-    class="py-10 flex flex-col items-center"
+    class="py-10 flex flex-col items-center  max-h-fit"
   >
     <Form
-      class="flex flex-col w-11/12 md:w-1/2"
+      class="flex flex-col w-11/12 md:w-1/2 "
       :validation-schema="schema"
       @submit="sendMail"
       v-if="!activateLoader"
     >
-      <div id="row" class="py-2 flex flex-col gap-2 md:flex-row w-full">
-        <div class="flex flex-col w-full text-rolex-brown">
+      <div id="row" class="py-2 flex flex-col gap-2 md:flex-row w-full ">
+        <div class="flex flex-col w-full text-rolex-brown ">
           <label for="tto" class="text-[#ad988e] font-helvetica font-bold"
             >Tto:</label
           >

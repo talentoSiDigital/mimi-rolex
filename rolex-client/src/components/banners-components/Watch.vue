@@ -22,8 +22,7 @@ function hours(){
 </script>
 
 <template>
-  <router-link :to="{ name: 'rolex-contacto' }" class=" relative " :class="width">
-   
+  <router-link :to="{ name: 'rolex-contacto' }" class=" relative " :class="width" aria-label="Rolex Contact">
     <div class="absolute z-10" >
       <img src="/assets/watch.png" alt="" class="w-full">
     </div>
