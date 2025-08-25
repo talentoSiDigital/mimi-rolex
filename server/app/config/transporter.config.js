@@ -3,13 +3,9 @@ const { createTransport } = require('nodemailer')
 
 module.exports = createTransport({
   host: "live.smtp.mailtrap.io",
-  port: 587,
+  port: 2525,
   auth: {
     user: "api",
-    pass: "519634a5dbb21b7241ade5c3427285ef"
+    pass: "e76a54b096492edc2c1b115b81c1c407"
   }
 });
-
-
-
-

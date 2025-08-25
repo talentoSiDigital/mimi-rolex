@@ -25,6 +25,14 @@ class MailSender {
 
     return http.post("/email/rolex", dataToSend)
   }
+
+  rolexMailTrack(data){
+    
+    
+
+
+    return http.post("/email/rolex-tracking/", data)
+  }
   
   rolexNewMail(data){
     
@@ -33,6 +41,11 @@ class MailSender {
   contact(data){
     return http.post("/email/contacto", data)
   }
+  contactTrack(data){
+    return http.post("/email/contacto-tracking/", data)
+  }
+
+  
 
 }
 

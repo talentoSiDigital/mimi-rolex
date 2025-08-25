@@ -7,8 +7,6 @@ module.exports = app =>{
     
     // Routes
     router.get("/paymail/:codigo", mailController.payMail)
-    router.get("/send-newsletter", mailController.sendNewsletter)
-    router.get("/send-newsletter2", mailController.sendNewsletter2)
     router.post("/email/rolex",uploadFiles.any() ,mailController.rolexContact)
     router.post("/email/rolex-new",uploadFiles.any() ,mailController.rolexNewContact)
     router.post("/email/contacto",uploadFiles.any() ,mailController.contact)
