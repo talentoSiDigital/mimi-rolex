@@ -23,7 +23,7 @@ const checkWindowSize = computed(() => {
 
 const router = useRouter();
 const links = [
-  "/rolex/sky-dweller",
+  "/rolex/yacht-master",
   "/rolex/world-of-rolex/resistencia",
   "/tudor",
 ]
