@@ -234,6 +234,16 @@ const router = createRouter({
         pageType:"article page"
       }
     },
+    {
+      path: "/rolex/world-of-rolex/sailgp-championship",
+      name: "world-of-rolex-article-11",
+      component: () => import("./views/Rolex/articles/RolexWORArticle11.view.vue"),
+      meta: {
+        title: "Rolex SailGP Championship - World Of Rolex | Mimi Joyería ",
+        breadcrumb: "WorldOfRolex/SailGP",
+        pageType:"article page"
+      }
+    },
 
 
 
