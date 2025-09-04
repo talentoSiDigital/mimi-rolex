@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useRoute } from 'vue-router';
 import { Carousel, Slide } from 'vue3-carousel';
@@ -11,6 +11,7 @@ import StoreDataService from '../../services/storeDataService';
 import 'vue3-carousel/dist/carousel.css';
 import PageBanner from '../../components/banners-components/PageBanner.vue';
 import TudorShowcaseCard from '../../components/cards/TudorShowcaseCard.vue';
+import { useHead } from '@unhead/vue';
 const route = useRoute()
 const currentSlide = ref(1)
 const descriptionModal = ref(false)
@@ -64,7 +65,14 @@ onMounted(() => {
         .then(d => {
             state.value = d.data
 
+            console.log(state.value[0]);
+            if(state.value[0].disponible == 0){
+                window.location.href = '/404'
+            }
             isReady.value = true
+        }).catch(e => {
+            console.log(e);
+            window.location.href = '/404'
         })
 
     StoreDataService.getRelojeriaSlider()
@@ -73,10 +81,63 @@ onMounted(() => {
             isRecommendReady.value = true
         })
 })
+const headMeta = useHead({
+    title: 'Cargando... | Mimi Joyería',
+    meta: [
+        {
+            name: 'description',
+            content: 'Cargando...'
+        },
+        {
+            property: 'og:title',
+            content: 'Cargando... | Mimi Joyería'
+        },
+        {
+            property: 'og:description',
+            content: 'Cargando...'
+        },
+        {
+            property: 'og:image',
+            content: '/assets/mimi-logo.png'
+        },
+        {
+            property: 'og:type',
+            content: 'website'
+        }
+    ]
+})
+
+watch(isReady, () => {
+    headMeta.patch({
+        title:  state.value[0].nombre + ' | Mimi Joyería' ,
+        meta: [
+            {
+                name: 'description',
+                content:  state.value[0].descripcion
+            },
+
+            {
+                property: 'og:title',
+                content: state.value[0].nombre + ' | Mimi Joyería' 
+            },
+            {
+                property: 'og:description',
+                content: state.value[0].descripcion
+            },
+            {
+                property: 'og:image',
+                content: state.value[0].img 
+            },
+       
+        ]
+    })
+})
+
 
 </script>
 
 <template>
+
 
     <section class="flex w-full justify-center border-b bg-white border-tudor-red">
         <RouterLink to="/tudor" class="hover:text-red-700 text-black duration-200 p-4 md:p-6">
@@ -172,7 +233,6 @@ onMounted(() => {
                     <p>{{ state[0].tudor_collection.description }}</p>
 
                     <button @click="descriptionModal = true"
-                        
                         class="duration-200 rounded-full text-sm bg-white border border-tudor-red text-tudor-red hover:bg-tudor-red hover:text-white py-1 px-3 font-bold w-fit letter-spacing-4">
                         + Especificaciones</button>
                     <Transition name="scale">

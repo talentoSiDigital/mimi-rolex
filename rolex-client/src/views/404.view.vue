@@ -2,7 +2,7 @@
 import router from '../router'
 
 function goBack() {
-    router.go(-1)
+   window.location.href = '/'
 }
 
 </script>
