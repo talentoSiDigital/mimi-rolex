@@ -2,7 +2,6 @@
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 import RolexHeader from "../../components/RolexHeader.vue";
 import PageBanner from "../../components/banners-components/PageBanner.vue";
-import Button from "../../components/global-components/Button.vue";
 import SectionNavigationCard from "../../components/cards/SectionNavigationCard.vue";
 </script>
 
@@ -25,15 +24,16 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
 
       <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
         <div class="w-11/12">
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-main" :link="{ name: 'world-of-rolex-article-10' }"
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-main" :link="{ name: 'world-of-rolex-article-11' }"
             class="w-full">
-            <template #sub>Publicado el 10 de Junio, 2024</template>
-            <template #title>Resistencia</template>
+            <template #sub>Publicado el 4 de Septiembre, 2025</template>
+            <template #title>Rolex SailGP Championship</template>
             <template #description>
               <h2 class="w-full md:w-1/2">
-
-                Dominar el poder de la mecánica para desafiar las leyes del tiempo. Controlar el riesgo para determinar la trayectoria ideal. Hasta la victoria. Rolex es un ilustre socio de los legendarios campeonatos de resistencia, los eventos más emblemáticos y los nombres más destacados del automovilismo.
-
+                Catamaranes aerodinámicos ultraligeros. Regatas espectaculares en los mares a través de cinco
+                continentes. Una experiencia única para el público. El Rolex SailGP Championship, con Rolex como Title
+                Partner y Reloj Oficial, ha revolucionado las regatas y ha impulsado la vela de competición hacia el
+                futuro.
               </h2>
             </template>
             <template #button>Más información</template>
@@ -43,12 +43,26 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
 
       <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
         <div class="w-11/12 grid grid-cols-1  md:grid-cols-2  gap-2">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-endurance"
+            :link="{ name: 'world-of-rolex-article-10' }" class="w-full">
+            <template #sub>Publicado el 10 de Junio, 2025</template>
+            <template #title>Resistencia</template>
+            <template #description>
+              <h2 class="w-full ">
+                Dominar el poder de la mecánica para desafiar las leyes del tiempo. Controlar el riesgo para determinar
+                la trayectoria ideal. Hasta la victoria. Rolex es un ilustre socio de los legendarios campeonatos de
+                resistencia, los eventos más emblemáticos y los nombres más destacados del automovilismo.
+              </h2>
+            </template>
+            <template #button>Más información</template>
+          </SectionNavigationCard>
+
           <SectionNavigationCard img="world-of-rolex/world-of-rolex-viena" :link="{ name: 'world-of-rolex-article-9' }"
             class="w-full">
-           <template #sub>Publicado el 5 de Diciembre, 2024</template>
+            <template #sub>Publicado el 5 de Diciembre, 2025</template>
             <template #title>Rolex y la Filarmónica de Viena</template>
             <template #description>
-              <h2 class="w-full md:w-1/2">
+              <h2 class="w-full">
 
                 Rolex es Socio Exclusivo de la Filarmónica de Viena desde el año 2008 y, desde enero de 2009,
                 Patrocinador Exclusivo del Concierto de Año Nuevo.
@@ -59,8 +73,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
 
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-us-open" :link="{ name: 'world-of-rolex-article-8' }"
-            class="w-full">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-us-open"
+            :link="{ name: 'world-of-rolex-article-8' }" class="w-full">
             <template #sub>Publicado el 23 de Agosto, 2024</template>
             <template #title>Rolex y el US Open</template>
             <template #description>
@@ -73,8 +87,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
           </SectionNavigationCard>
 
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-the-open" :link="{ name: 'world-of-rolex-article-7' }"
-            class="w-full">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-the-open"
+            :link="{ name: 'world-of-rolex-article-7' }" class="w-full">
             <template #sub>Publicado el 12 de Julio, 2024</template>
             <template #title>Rolex y The Open: el major más antiguo del golf</template>
             <template #description>
@@ -87,8 +101,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-admundi" :link="{ name: 'world-of-rolex-article-6' }"
-            class="w-full">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-admundi"
+            :link="{ name: 'world-of-rolex-article-6' }" class="w-full">
             <template #sub>Publicado el 4 de Julio, 2024</template>
             <template #title>Rolex y The Amundi Evian Championship</template>
             <template #description>
@@ -104,8 +118,8 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             </template>
             <template #button>Más información</template>
           </SectionNavigationCard>
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-wimbledon" :link="{ name: 'world-of-rolex-article-5' }"
-            class="w-full ">
+          <SectionNavigationCard img="world-of-rolex/world-of-rolex-wimbledon"
+            :link="{ name: 'world-of-rolex-article-5' }" class="w-full ">
             <template #sub>Publicado el 1 de Junio, 2024</template>
             <template #title>Rolex y The Championship, Wimbledon</template>
             <template #description>

@@ -4,12 +4,6 @@ import { computed, onMounted, ref, useTemplateRef } from "vue";
 import { useRouter } from "vue-router";
 import POSBanner from '../components/banners-components/POSBanner.vue';
 
-const counter = ref(0);
-const classes = ref([
-  "translate-x-0",
-  "-translate-x-[100%]",
-  "-translate-x-[200%]",
-]);
 
 const { width } = useWindowSize();
 const target = useTemplateRef("target")
@@ -24,33 +18,57 @@ const checkWindowSize = computed(() => {
 const router = useRouter();
 const links = [
   "/rolex/yacht-master",
-  "/rolex/world-of-rolex/resistencia",
+  "/rolex",
+  "/rolex/world-of-rolex/sailgp-championship",
   "/tudor",
 ]
 function checkClick(pos) {
   router.push(links[pos]);
 }
 
-onMounted(() => {
-  setInterval(() => {
-    if (counter.value == 2) {
+// Carousel Logic
+const counter = ref(0);
+const classes = ref([
+  "translate-x-0",
+  "-translate-x-[100%]",
+  "-translate-x-[200%]",
+  "-translate-x-[300%]",
+]);
+
+
+let carouselInterval;
+const IMAGE_QUANTITY = 4
+
+function startCarousel(){
+  if(carouselInterval) clearInterval(carouselInterval)  
+
+  carouselInterval = setInterval(()=>{
+    if (counter.value == IMAGE_QUANTITY) {
       counter.value = 0;
     } else {
       counter.value++;
     }
-  }, 5000);
+  },5000)
+}
+function stopCarousel(){
+  clearInterval(carouselInterval)
+}
+
+
+onMounted(() => {
+  startCarousel()
 });
 
 function changeCounter(direction){
   if(direction == 'r'){
-    if(counter.value == 2){
+    if(counter.value == IMAGE_QUANTITY-1){
       counter.value = 0
     }else{
        counter.value++
     }
   }else{
     if(counter.value == 0){
-      counter.value = 2
+      counter.value = IMAGE_QUANTITY-1
     }else{
        counter.value--
     }
@@ -65,13 +83,15 @@ function changeCounter(direction){
 
     <div class="relative z-0 h-[300px] md:h-[650px] w-full pb-20">
       <div v-if="!checkWindowSize" class="overflow-hidden">
-        <div class="duration-500 flex cursor-pointer" :class="classes[counter]">
+        <div class="duration-500 flex cursor-pointer" :class="classes[counter]" @mouseenter="stopCarousel" @mouseleave="startCarousel">
           <img @click="checkClick(counter)" rel="preload" fetchpriority="high" as="image"
             src="/assets/routes-assets/headers/1-desktop.webp" alt="headers-1-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-3-desktop" />
+          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
+            src="/assets/routes-assets/headers/4-desktop.webp" alt="headers-4-desktop" />
         </div>
       </div>
       <div v-else class="overflow-hidden">
@@ -82,6 +102,8 @@ function changeCounter(direction){
             alt="headers-2-mobile"  />
           <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/3-mobile.webp"
             alt="headers-3-mobile"  />
+          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/4-mobile.webp"
+            alt="headers-4-mobile"  />
         </div>
       </div>
 
@@ -185,10 +207,10 @@ function changeCounter(direction){
         </div>
 
         <div class="py-10 w-full flex justify-center">
-          <router-link :to="{ name: 'world-of-rolex-article-10' }" class="w-[90%]" aria-label="World of Rolex">
+          <router-link :to="{ name: 'world-of-rolex-article-11' }" class="w-[90%]" aria-label="World of Rolex">
 
-            <img src="/assets/routes-assets/activations/endurance-banner-desktop.webp" alt="" v-if="!checkWindowSize">
-            <img src="/assets/routes-assets/activations/endurance-banner-mobile.webp" alt="" v-else>
+            <img src="/assets/routes-assets/activations/sailgp-championship-banner-desktop.webp" alt="" v-if="!checkWindowSize">
+            <img src="/assets/routes-assets/activations/sailgp-championship-banner-mobile.webp" alt="" v-else>
           </router-link>
         </div>
 

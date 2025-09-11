@@ -13,10 +13,10 @@ const sliderItems = [
     title: "Yacht Master Banner",
   },  
   {
-    src: "endurance",
-    link: {name:'world-of-rolex-article-10'},
-    alt: "endurance",
-    title: "Endurance Banner",
+    src: "sailgp-championship",
+    link: {name:'world-of-rolex-article-11'},
+    alt: "sailgp-championship",
+    title: "Sail GP Championship Banner",
   },  
   {
     src: "watchmaking",
