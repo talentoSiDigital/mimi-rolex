@@ -1,11 +1,11 @@
 <script setup>
 
-import RolexTemplate from '../RolexTemplate.view.vue'
-import RolexHeader from '../../../components/RolexHeader.vue'
-import PageBanner from '../../../components/banners-components/PageBanner.vue'
-import TwoSectionCard from '../../../components/cards/TwoSectionCard.vue'
-import Button from '../../../components/global-components/Button.vue';
-
+// import RolexTemplate from '../RolexTemplate.view.vue'
+import RolexHeader from '../../components/RolexHeader.vue'
+import PageBanner from '../../components/banners-components/PageBanner.vue'
+import TwoSectionCard from '../../components/cards/TwoSectionCard.vue'
+import Button from '../../components/global-components/Button.vue';
+import RolexTemplate from './RolexTemplate.view.vue';
 
 </script>
 
@@ -74,8 +74,7 @@ import Button from '../../../components/global-components/Button.vue';
                     </template>
                     <template #text>
                         El movimiento se desmonta por completo y todos los componentes se examinan con el mayor de los
-                        cuidados. Los que no cumplen con los criterios de Rolex se sustituyen siste-máticamente.cio de
-                        mantenimiento.
+                        cuidados. Los que no cumplen con los criterios de Rolex se sustituyen sistemáticamente.
                     </template>
                 </TwoSectionCard>
 
@@ -97,7 +96,7 @@ import Button from '../../../components/global-components/Button.vue';
                         Montaje del movimiento y lubricación
                     </template>
                     <template #text>
-                        Los componentes se secan y, a continuación, el movimiento se vuelve a montar por com-pleto y se
+                        Los componentes se secan y, a continuación, el movimiento se vuelve a montar por completo y se
                         lubrica.
                         El relojero ajusta una primera vez el movimiento de acuerdo con los criterios de la marca.
 
@@ -113,7 +112,7 @@ import Button from '../../../components/global-components/Button.vue';
                     <template #text>
                         La caja se desmonta por completo y la carrura, el bisel, el fondo y el brazalete se pulen o
                         satinan, en función del acabado original. Estas sutiles operaciones exigen destreza y
-                        deli-cadeza.
+                        delicadeza.
                     </template>
                 </TwoSectionCard>
 
@@ -195,7 +194,7 @@ import Button from '../../../components/global-components/Button.vue';
                         Un servicio de primer nivel
                     </template>
                     <template #text>
-                        Rolex se compromete plenamente a ofrecerles a sus clientes un servicio posventa de pri-mer nivel. Gracias a la exigencia y al savoir faire de nuestros relojeros, su reloj Rolex pue-de mantenerse en el tiempo conservando una excelente fiabilidad y, al mismo tiempo, un brillo irreprochable.
+                        Rolex se compromete plenamente a ofrecerles a sus clientes un servicio posventa de primer nivel. Gracias a la exigencia y al savoir faire de nuestros relojeros, su reloj Rolex puede mantenerse en el tiempo conservando una excelente fiabilidad y, al mismo tiempo, un brillo irreprochable.
                     </template>
                 </TwoSectionCard>
 

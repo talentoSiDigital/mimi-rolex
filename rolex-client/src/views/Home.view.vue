@@ -17,10 +17,9 @@ const checkWindowSize = computed(() => {
 
 const router = useRouter();
 const links = [
-  "/rolex/yacht-master",
-  "/rolex",
+  "/rolex/1908",
   "/rolex/world-of-rolex/sailgp-championship",
-  "/tudor",
+  "/novedades/tudor",
 ]
 function checkClick(pos) {
   router.push(links[pos]);
@@ -37,13 +36,13 @@ const classes = ref([
 
 
 let carouselInterval;
-const IMAGE_QUANTITY = 4
+const IMAGE_QUANTITY = 3
 
 function startCarousel(){
   if(carouselInterval) clearInterval(carouselInterval)  
 
   carouselInterval = setInterval(()=>{
-    if (counter.value == IMAGE_QUANTITY) {
+    if (counter.value == IMAGE_QUANTITY -1) {
       counter.value = 0;
     } else {
       counter.value++;
@@ -90,8 +89,7 @@ function changeCounter(direction){
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-3-desktop" />
-          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
-            src="/assets/routes-assets/headers/4-desktop.webp" alt="headers-4-desktop" />
+          
         </div>
       </div>
       <div v-else class="overflow-hidden">
@@ -102,8 +100,7 @@ function changeCounter(direction){
             alt="headers-2-mobile"  />
           <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/3-mobile.webp"
             alt="headers-3-mobile"  />
-          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/4-mobile.webp"
-            alt="headers-4-mobile"  />
+          
         </div>
       </div>
 
