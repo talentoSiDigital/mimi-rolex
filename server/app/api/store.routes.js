@@ -4,6 +4,7 @@ const existenceMiddleware = require("../middleware/verifyExistence")
 
 module.exports = app => {
     const store = require('../controllers/storeController')
+    const update = require('../controllers/storeUpdateController')
     var router = require("express").Router()
 
     // Joyeria
@@ -31,6 +32,14 @@ module.exports = app => {
 
     //billing 
     router.get("/bill/:user", store.getBillsByOwner)
+
+
+
+    //update
+
+    router.post("/update/store-analytics", uploadFiles.any(), update.getStoreAnalytics)
+    router.post("/update/store-availability", uploadFiles.any(), update.updateStoreAvailability)
+    
 
     app.use('/api', router)
 
