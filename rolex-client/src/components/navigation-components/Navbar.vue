@@ -8,16 +8,16 @@ import { auth } from "../../store/auth.module";
 import SearchBar from "../form-components/SearchBar.vue";
 import MobileNavbar from "./MobileNavbar.vue";
 
-
-
-const route = useRoute()
 const { width } = useWindowSize();
 const piniaStore = auth();
 const IsLogged = storeToRefs(piniaStore);
-
 const loggedIn = computed(() => {
   return IsLogged.status.value.loggedIn;
 });
+
+const userRole = computed(()=>{
+  return IsLogged.user.value.roles[0]
+})
 const activate = ref("h-20");
 
 function collapseNav() {
@@ -28,14 +28,12 @@ function collapseNav() {
   }
 }
 
-function handleLogout() {
-  logginOut.value = true;
-  piniaStore.logout();
-  router.push("/");
-}
+
 
 const search = ref("h-0");
 const activeSearch = ref(false);
+
+
 function activateSearch() {
   if(router != 'busqueda'){
     activeSearch.value = !activeSearch.value;
@@ -167,6 +165,7 @@ function activateSearch() {
       </router-link>
 
       <router-link
+      v-if="!loggedIn"
         to="/login"
         class="border-0 border-b-2 border-transparent tracking-widest hover:bg-neutral-600 hover:bg-transparent hover:border-white px-6 py-2 text-lg font-normal font-montserrat text-green-900 w-fit text-center"
       >
@@ -189,6 +188,14 @@ function activateSearch() {
         <div
           class="absolute z-50 border left-3 w-fit bg-main-green p-5 hidden group-hover:block"
         >
+
+          <a v-if="userRole == 'ROLE_ADMIN'"
+            href="/dashboard"
+            class="text-xl font-normal whitespace-nowrap font-montserrat text-green-900 hover:underline"
+            aria-label="Logout"
+          >
+            <h2 class="my-1 uppercase">Panel de control</h2>
+          </a>
           <a
             href="/logout"
             class="text-xl font-normal whitespace-nowrap font-montserrat text-green-900 hover:underline"

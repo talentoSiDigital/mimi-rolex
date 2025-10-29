@@ -59,7 +59,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div :class="isOpenUp" class="fixed z-30 h-fit duration-500">
+  <div :class="isOpenUp" class="fixed z-30 h-fit duration-500" v-if="router.path != '/dashboard'">
     <div
       :class="checkOpen ? 'bottom-[70%] md:bottom-1/2' : 'bottom-0'"
       class="h-[10vh] duration-500 flex justify-end fixed z-20 left-[98%] right-4 mr-16 border"

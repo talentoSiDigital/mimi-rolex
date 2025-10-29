@@ -13,12 +13,12 @@ import RolexDataServices from "../../services/rolexDataService";
 import RolexTemplate from "./RolexTemplate.view.vue";
 import router from '../../router'
 import axios from "axios";
-
 import { useElementHover, useWindowSize } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
 import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
 import digitalDataLayer from "../../utils/digitalDataLayer";
+import GLOBAL_OBJECT from "../../utils/globaj";
 const { width, height } = useWindowSize()
 const isDesktop = computed(() => width.value > 768)
 const currentSlide = ref(0);
@@ -42,7 +42,7 @@ function isVisible(item) {
   return false
 }
 
-const storageRoute = ref("https://mimijoyeria.com/storage/rolex-relojes-new/");
+const storageRoute = ref(GLOBAL_OBJECT.STORAGE_URL+'rolex-relojes-new');
 // const storageRoute = ref("http://localhost:3000/storage/rolex-relojes-new/");
 
 const route = useRoute();
@@ -191,7 +191,7 @@ watch(isReady, () => {
           </Head>
           <section class=" relative md:h-[85vh]">
             <div v-if="isDesktop" class="flex items-center justify-center w-full">
-              <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}-showcase.webp`"
+              <img :src="`${storageRoute}/${state.getAll.modelo}-showcase.webp`"
                 :alt="`${state.getAll.nombre}-main-image`" class="w-1/2 md:w-[30%]" />
             </div>
             <div v-else>
@@ -498,9 +498,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen1}.webp`"
                   alt="heading-img-1" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen1}-mobile.webp`"
                   alt="heading-img-1-mobile" class="block md:hidden w-full" />
               </section>
             </div>
@@ -517,9 +517,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen2}.webp`"
                   alt="heading-img-2" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen2}-mobile.webp`"
                   alt="heading-img-2-mobile" class="block md:hidden w-full" />
               </section>
             </div>
@@ -536,9 +536,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen3}.webp`"
                   alt="heading-img-3" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen3}-mobile.webp`"
                   alt="heading-img-3-mobile" class="block md:hidden w-full" />
               </section>
             </div>
