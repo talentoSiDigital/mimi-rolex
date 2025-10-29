@@ -18,7 +18,6 @@ const checkWindowSize = computed(() => {
 const router = useRouter();
 const links = [
   "/rolex/1908",
-  "/rolex/1908",
   "/rolex/world-of-rolex/sailgp-championship",
   "/novedades/tudor",
 ]
