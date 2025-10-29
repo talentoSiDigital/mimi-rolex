@@ -18,8 +18,9 @@ const checkWindowSize = computed(() => {
 const router = useRouter();
 const links = [
   "/rolex/1908",
+  "/rolex/1908",
   "/rolex/world-of-rolex/sailgp-championship",
-  "/tudor",
+  "/novedades/tudor",
 ]
 function checkClick(pos) {
   router.push(links[pos]);
@@ -36,12 +37,13 @@ const classes = ref([
 
 let carouselInterval;
 const IMAGE_QUANTITY = 3
+const IMAGE_QUANTITY = 3
 
 function startCarousel(){
   if(carouselInterval) clearInterval(carouselInterval)  
 
   carouselInterval = setInterval(()=>{
-    if (counter.value == IMAGE_QUANTITY) {
+    if (counter.value == IMAGE_QUANTITY -1) {
       counter.value = 0;
     } else {
       counter.value++;

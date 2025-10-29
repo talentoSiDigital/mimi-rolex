@@ -43,6 +43,18 @@ const router = createRouter({
       }
 
     },
+    {
+      path: "/rolex/mantenimiento-procedimiento",
+      name: "mantenimiento-procedimiento-rolex",
+      component: () => import("./views/Rolex/RolexMantenimientoProcedimiento.view.vue"),
+      meta: {
+        title: "Procedimiento de mantenimiento Rolex | Mimi Joyería",
+        description: "Explore el procedimiento del mantenimiento Rolex en Mimi Joyería, su Distribuidor Oficial Rolex para el cuidado y el mantenimiento experto de su reloj Rolex.",
+        breadcrumb: "Mantenimiento",
+        pageType: "servicing your rolex page"
+      }
+
+    },
 
     {
       path: "/rolex/historia",

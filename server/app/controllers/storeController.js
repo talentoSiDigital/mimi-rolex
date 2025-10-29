@@ -90,15 +90,13 @@ exports.findJ = (req, res) => {
         });
         return;
     }
-    console.log(req.params.id)
 
     Store.Jeweler.findAll({
         where: {
-            nombre: { [Op.substring]: req.params.id }
+            coleccion: { [Op.substring]: req.params.id }
         }
     })
-        .then(data => {
-
+        .then((data) => {
             for (let index = 0; index < data.length; index++) {
                 data[index].dataValues.img = `${storagePath}/store-products/${data[index].dataValues.serie}-1.webp`
             }
@@ -563,8 +561,6 @@ exports.getBillsByOwner = (req, res) => {
 
 
 };
-
-
 
 exports.testRoute = async (req, res) => {
 
