@@ -686,7 +686,7 @@ const router = createRouter({
         {
           path:'/agregar-reloj',
           name:'agregar-reloj',
-          component:()=>import("./views/Admin/nested/MainDashboard.view.vue")
+          component:()=>import("./views/Admin/nested/AddWatch.view.vue")
         },
 
       ]
@@ -732,7 +732,7 @@ const router = createRouter({
 
 })
 
-const { posthog } = usePostHog()
+// const { posthog } = usePostHog()
 
 
 
@@ -753,9 +753,9 @@ router.beforeEach((to, from, next) => {
   if (pageFamily) {
     document.pageFamily = pageFamily
   }
-  if (from.path !== to.path) {
-    posthog.capture('$pageleave')
-  }
+  // if (from.path !== to.path) {
+  //   posthog.capture('$pageleave')
+  // }
 
 
   // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
@@ -790,7 +790,7 @@ router.afterEach((to, from, next) => {
     store.change()
 
   }
-  posthog.capture('$pageview')
+  // posthog.capture('$pageview')
 
 
   // Continue resolving the route

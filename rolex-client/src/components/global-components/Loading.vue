@@ -1,6 +1,4 @@
-<script setup>
 
-</script>
 
 <template>
     <div class="mt-10 flex flex-col items-center justify-center">

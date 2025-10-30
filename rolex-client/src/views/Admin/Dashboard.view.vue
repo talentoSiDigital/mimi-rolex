@@ -24,15 +24,15 @@ if (isAdmin.value == false) {
 </script>
 
 <template>
-     <header class="py-2 border font-montserrat text-center">
-            <h2 class="font-bold text-2xl">Bienvenido al panel de control</h2>
-            <p class="text-xl">Que deseas hacer?</p>
-        </header>
-    <main class="flex">
-
+    <section class="bg-[url(/assets/routes-assets/admin-bg.webp)] bg-cover bg-fixed">
         
-        <router-view />
-    </main>
+        <main class="flex">
+    
+    
+            <router-view />
+        </main>
+
+    </section>
 
 </template>
 

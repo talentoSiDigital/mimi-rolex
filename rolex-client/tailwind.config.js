@@ -13,6 +13,7 @@ export default {
         'main-green': '#ADBAAD',
         'secondary-green': '#adbaad',
         'dashboard-green':'#c2e2c2',
+        'dark-green':'#01311e',
         'tudor-red':'#be0100',
         'rolex-green': '#01603a',
         'rolex-green-2':'#29684b',

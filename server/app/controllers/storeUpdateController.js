@@ -14,7 +14,6 @@ const storagePath = 'https://mimijoyeria.com/storage'
 // GET WATCHES ANALYTICS
 exports.getStoreAnalytics = async (req, res) => {
     try {
-
         if (!req.body.values) {
             return res.status(400).send({ message: "Faltan los datos de los relojes" })
         }
@@ -31,14 +30,17 @@ exports.getStoreAnalytics = async (req, res) => {
 
         const existingValues = search.map(item => item.serie)
         const nonExistingValues = valuesArray.filter(item => !existingValues.includes(item));
-        if(nonExistingValues.length===0)  return res.send("Todos los relojes ya están en la base de datos")
-        res.send("\n\n Relojes por agregar: \n " + nonExistingValues.join("\n "))
-        return nonExistingValues
+        
+        return res.send({
+            existing:existingValues,
+            nonExisting:nonExistingValues
+        })
+         
 
     } catch (error) {
 
         res.status(500).send({
-            message: error.message || "Some error occurred while retrieving tutorials."
+            message: error.message || "Ocurrio un error al chequear"
         })
 
 
@@ -62,7 +64,7 @@ exports.updateStoreAvailability = async (req, res) => {
 
         await Store.Watchmaking.update(
             { disponible: 0 },
-            { where: { disponible: 1 ,coleccion:"Tudor"} }
+            { where: { disponible: 1, coleccion: "Tudor" } }
         );
 
 
@@ -77,6 +79,43 @@ exports.updateStoreAvailability = async (req, res) => {
             }
         );
 
+        res.status(200).send("Disponibilidad actualizada correctamente");
+
+
+    } catch (error) {
+        res.status(500).send({
+            message: error.message || "Ocurrió un error al actualizar la disponibilidad."
+        });
+    }
+
+
+}
+
+
+//TOGGLE SPECIFIC WATCH AVAILABILITY
+exports.updateSingleAvailability = async (req, res) => {
+
+    try {
+        //handle
+        if (!req.body.values) {
+            return res.status(400).send({ message: "Faltan los datos del Reloj" })
+        }
+
+
+
+        const serial = req.body.serial
+        const action = req.body.action
+
+        await Store.Watchmaking.update(
+            { disponible: action },
+            {
+                where: {
+                    serie: serial
+                }
+            }
+        );
+
+
         res.send("Disponibilidad actualizada correctamente");
 
 
@@ -88,3 +127,10 @@ exports.updateStoreAvailability = async (req, res) => {
 
 
 }
+
+
+//UPDATE WATCH
+
+
+//CREATE WATCH
+

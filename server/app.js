@@ -74,6 +74,7 @@ require("./app/api/slider.routes")(app);
 require("./app/api/store.routes")(app);
 require("./app/api/rolexV2.routes")(app);
 
+require('./app/api/admin.routes')(app);
 require('./app/api/auth.routes')(app);
 require('./app/api/user.routes')(app);
 require('./app/api/mail.routes')(app);

@@ -36,7 +36,6 @@ const classes = ref([
 
 let carouselInterval;
 const IMAGE_QUANTITY = 3
-const IMAGE_QUANTITY = 3
 
 function startCarousel(){
   if(carouselInterval) clearInterval(carouselInterval)  
