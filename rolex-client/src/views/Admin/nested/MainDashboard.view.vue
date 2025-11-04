@@ -7,13 +7,16 @@ import WatchesAvailability from '../../../components/dashboard/admin/WatchesAvai
 import Loading from '../../../components/global-components/Loading.vue';
 import WatchForm from '../../../components/form-components/WatchForm.vue';
 import RelojeriaForm from '../../../components/dashboard/RelojeriaForm.vue';
+import { auth } from '../../../store/auth.module';
+
+const piniaStore = auth()
 const errorHandlerMessage = ref({
     messagesError: '',
     rolexMessageError: '',
     watchesError: ''
 })
 
-
+const user = piniaStore.$state.user
 const allWatches = ref([])
 const messages = ref({
     messages: [],
@@ -34,7 +37,7 @@ const modal = ref(false)
 function getAllWatches() {
     allWatches.value=[]
     displayWatches.value=[]
-    adminDataServices.getAllWatches()
+    adminDataServices.getAllWatches(user)
         .then((data) => {
             allWatches.value = data.data
             displayWatches.value = data.data
@@ -71,7 +74,7 @@ function sortByParam(param, number) {
 }
 
 function getMessages() {
-    adminDataServices.getAllMessages()
+    adminDataServices.getAllMessages(user)
         .then((d) => {
             messages.value.messages = d.data
         }).catch(e => {
@@ -82,7 +85,7 @@ function getMessages() {
 }
 
 function getRolexMessages() {
-    adminDataServices.getAllRolexMessages()
+    adminDataServices.getAllRolexMessages(user)
         .then((d) => {
             messages.value.rolexMessages = d.data
         }).catch(e => {

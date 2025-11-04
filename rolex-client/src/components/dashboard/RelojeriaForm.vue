@@ -17,7 +17,7 @@ import InputField from "../form-components/InputField.vue";
 defineRule('integer', integer);
 
 const loadingState = ref(false)
-
+const checkFromParent = defineModel()
 const collections = ref([])
 const isReady = ref(false)
 
@@ -110,14 +110,15 @@ function formatTableInput(input) {
 function onSubmit(values) {
     values.newTableContent = formatTableInput(values.tableContent);
     values.imageCount = values.imagenes.length
-    values.user = piniaStore.$state.user.email
+    values.user = piniaStore.$state.user
     console.log(values);
-
 
 }
 
 
+
 onMounted(() => {
+    
     storeDataService.getTudorCollections().then((response) => {
         collections.value = response.data
     }).catch((error) => {

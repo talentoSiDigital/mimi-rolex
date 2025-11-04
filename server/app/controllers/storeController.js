@@ -279,19 +279,6 @@ exports.findDetailR = (req, res) => {
 // ===============
 
 
-// ADMIN CONTROLLERS
-
-
-exports.createStoreProduct = async(req,res)=>{
-    try{
-        
-    }catch(err){
-        res.status(500).send({message: err.message || "Some error occurred while creating the Store Product."})
-    }
-}
-
-// ===============
-
 
 // SHOPPING CART 
 

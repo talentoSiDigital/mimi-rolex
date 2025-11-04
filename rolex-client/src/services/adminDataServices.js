@@ -3,31 +3,40 @@ import http from '../http-commons'
 
 
 class AdminData {
-  getAllWatches() {
-    return http.get("/admin/get-all");
+  getAllWatches(user) {
+    return http.post("/admin/get-all",{user:user});
   }
-  getAllMessages() {
-    return http.get("/admin/messages/get-all");
+  getAllMessages(user) {
+    return http.post("/admin/messages/get-all",{user:user});
   }
-  getAllRolexMessages() {
-    return http.get("/admin/messages/rolex-get-all");
+  getAllRolexMessages(user) {
+    return http.post("/admin/messages/rolex-get-all",{user:user});
   }
 
-  checkAvailability(list) {
+  checkAvailability(list,user) {
 
 
     return http.post("/admin/update/store-analytics", {
-      values: list
+      values: list,
+      user:user
     })
   }
 
-  updateAvailability(list) {
+  updateAvailability(list,user) {
 
     return http.post("/admin/update/store-availability", {
-      values: list
+      values: list,
+      user:user
     })
   }
 
+
+  createWatch(data,user){
+    return http.post("/admin/create/store-product",{
+      user:user,
+      data:data
+    })
+  }
 
 
   updateSingleWatch() {

@@ -1,157 +1,33 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue';
-import { RouterLink } from 'vue-router';
-import DashboardCard from '../../../components/dashboard/admin/DashboardCard.vue';
-import adminDataServices from '../../../services/adminDataServices';
-import WatchesAvailability from '../../../components/dashboard/admin/WatchesAvailability.vue';
-import Loading from '../../../components/global-components/Loading.vue';
-import WatchForm from '../../../components/form-components/WatchForm.vue';
+import { ref } from 'vue';
 import RelojeriaForm from '../../../components/dashboard/RelojeriaForm.vue';
-const errorHandlerMessage = ref({
-    messagesError: '',
-    rolexMessageError: '',
-    watchesError: ''
-})
-
-
-const allWatches = ref([])
-const messages = ref({
-    messages: [],
-    rolexMessages: [],
-    activeMessage: {}
-})
-const displayWatches = ref([])
-const searchParam = ref('')
-
-const messageToggle = ref(false)
-const notification = ref(false)
-
-const icon = ref(['fas', 'magnifying-glass'])
-const sortingIndicator = ref(0)
-
-const modal = ref(false)
-
-function getAllWatches() {
-    allWatches.value = []
-    displayWatches.value = []
-    adminDataServices.getAllWatches()
-        .then((data) => {
-            allWatches.value = data.data
-            displayWatches.value = data.data
-        }).catch((e) => {
-            console.log(e);
-            errorHandlerMessage.value.watchesError = 'Hubo un error obteniendo los relojes'
-        })
-}
-
-
-function deleteParams() {
-    searchParam.value = ''
-}
-
-function filterWatches() {
-    displayWatches.value = displayWatches.value.filter(e => e.serie.includes(searchParam.value))
-}
-
-function sortByParam(param, number) {
-
-    const isDescending = number === sortingIndicator.value;
-
-    const direction = isDescending ? -1 : 1;
-
-    const sortComparison = (a, b) => {
-        if (param === 'precio' || param === 'disponible') {
-            return (a[param] - b[param]) * direction;
-        } else {
-            return a[param].localeCompare(b[param]) * direction;
-        }
-    };
-    displayWatches.value.sort(sortComparison);
-    sortingIndicator.value = isDescending ? 0 : number;
-}
-
-function getMessages() {
-    adminDataServices.getAllMessages()
-        .then((d) => {
-            messages.value.messages = d.data
-        }).catch(e => {
-            console.log(e);
-            errorHandlerMessage.value.messagesError = 'Hubo un error obteniendo los mensajes'
-
-        })
-}
-
-function getRolexMessages() {
-    adminDataServices.getAllRolexMessages()
-        .then((d) => {
-            messages.value.rolexMessages = d.data
-        }).catch(e => {
-            console.log(e);
-            errorHandlerMessage.value.rolexMessageError = 'Hubo un error obteniendo los mensajes del formulario de Rolex'
-
-        })
-}
-
-function activateMessageToggle(index, type) {
-    if (index) {
-        messages.value.activeMessage = messages.value[type][index]
-    } else {
-        messages.value.activeMessage = {}
-    }
-    messageToggle.value = !messageToggle.value
-}
-
-function getFormattedDate(ISODate) {
-    if (typeof ISODate !== 'string' || !ISODate.includes('T')) {
-        return "Formato de fecha inválido";
-    }
-
-
-    const parts = ISODate.split('T');
-    const date = parts[0];
-
-    const formattedDate = date.replace(/-/g, '/');
-
-    return formattedDate
-}
-
-// setInterval(() => {
-//     notification.value = !notification.value
-// }, 3000);
-
-
-watch(searchParam, () => {
-    if (searchParam.value.length > 0) {
-        icon.value = ['fas', 'xmark']
-        filterWatches()
-
-
-    } else {
-        icon.value = ['fas', 'magnifying-glass']
-        displayWatches.value = allWatches.value
-    }
-})
-watch(modal, () => {
-    if (modal.value == false) {
-        getAllWatches()
-    }
-})
-
-
-
-onMounted(() => {
-    getAllWatches()
-    getMessages()
-    getRolexMessages()
-})
-
+import DashboardCard from '../../../components/dashboard/admin/DashboardCard.vue';
+import { RouterLink } from 'vue-router';
+const check = ref(false)
 </script>
 
 <template>
 
     <section class="flex flex-col  w-full justify-center items-center ">
+        {{ check }}
+        <Transition name="bounce">
+            <RelojeriaForm v-if="!check" v-model="check" />
 
-        <RelojeriaForm/>
+            <div v-else class="min-h-screen w-full flex justify-center items-center">
+                <DashboardCard class="w-11/12 h-36">
+                    <template #content>
+                        <div class="flex flex-col items-center justify-center h-full gap-3">
+                            <h2 class="font-bold text-2xl">Reloj agregado con exito</h2>
+                            <RouterLink to="/dashboard/"
+                                class="border border-rolex-green text-white bg-rolex-green hover:bg-white hover:text-rolex-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
+                                Volver a relojeria</RouterLink>
+                        </div>
+                    </template>
+
+                </DashboardCard>
+
+            </div>
+        </Transition>
 
     </section>
 </template>
@@ -180,7 +56,7 @@ onMounted(() => {
     }
 
     50% {
-        transform: scale(1.25);
+        transform: scale(1.1);
     }
 
     100% {

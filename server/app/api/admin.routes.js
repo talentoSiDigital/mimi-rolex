@@ -8,11 +8,11 @@ module.exports = app => {
     var router = require("express").Router()
 
     
-    router.get("/get-all",store.findAllWatches)
+    router.post("/get-all",uploadFiles.any(), store.findAllWatches)
 
     
-    router.get("/messages/get-all",store.findAllMessages)
-    router.get("/messages/rolex-get-all",store.findAllMessagesRolex)
+    router.post("/messages/get-all",uploadFiles.any(), store.findAllMessages)
+    router.post("/messages/rolex-get-all",uploadFiles.any(), store.findAllMessagesRolex)
     
 
 
@@ -29,7 +29,7 @@ module.exports = app => {
 
 
 
-    app.use('/api/admin/', router)
+    app.use('/api/admin', router)
 
 
 

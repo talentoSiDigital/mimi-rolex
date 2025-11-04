@@ -2,21 +2,41 @@ const { where } = require("sequelize");
 const db = require("../models");
 const Store = db.store;
 const User = db.user.User;
+const Role = db.user.Role
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
-const storagePath = 'https://mimijoyeria.com/storage'
-// const storagePath = 'https://localhost:3000/storage'
+// const storagePath = 'https://mimijoyeria.com/storage'
+const storagePath = 'https://localhost:3000/storage'
 
 
+async function isAdmin(user) {
+    if (user.roles[0] != "ROLE_ADMIN") {
+        return false
+    }
+    const userQuery = await User.findByPk(user.id, {
+        include: Role,
+        attributes: { exclude: ['password'] }
+    })
+    if (userQuery.roles[0].name !== "ROLE_ADMIN") {
+        return false
+    }
 
+    console.log(user);
+    return true
+}
 
 // GET WATCHES ANALYTICS
 exports.getStoreAnalytics = async (req, res) => {
     try {
-        if (!req.body.values) {
-            return res.status(400).send({ message: "Faltan los datos de los relojes" })
+         if (!req.body) {
+            return res.status(400).send({ message: "Faltan los datos para crear el producto" })
         }
+
+        if (!isAdmin(req.body.user)) {
+            return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
+        }
+
 
         const valuesArray = req.body.values.map(item => item.toLowerCase());
         const search = await Store.Watchmaking.findAll({
@@ -30,12 +50,12 @@ exports.getStoreAnalytics = async (req, res) => {
 
         const existingValues = search.map(item => item.serie)
         const nonExistingValues = valuesArray.filter(item => !existingValues.includes(item));
-        
+
         return res.send({
-            existing:existingValues,
-            nonExisting:nonExistingValues
+            existing: existingValues,
+            nonExisting: nonExistingValues
         })
-         
+
 
     } catch (error) {
 
@@ -54,10 +74,16 @@ exports.getStoreAnalytics = async (req, res) => {
 exports.updateStoreAvailability = async (req, res) => {
 
     try {
+        console.log(req.body);
 
-        if (!req.body.values) {
-            return res.status(400).send({ message: "Faltan los datos de los relojes" })
+        if (!req.body) {
+            return res.status(400).send({ message: "Faltan los datos para crear el producto" })
         }
+
+        if (!isAdmin(req.body.user)) {
+            return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
+        }
+
 
         const valuesArray = req.body.values.map(item => item.toLowerCase());
 
@@ -95,11 +121,17 @@ exports.updateStoreAvailability = async (req, res) => {
 //TOGGLE SPECIFIC WATCH AVAILABILITY
 exports.updateSingleAvailability = async (req, res) => {
 
+    
     try {
-        //handle
-        if (!req.body.values) {
-            return res.status(400).send({ message: "Faltan los datos del Reloj" })
+        
+         if (!req.body) {
+            return res.status(400).send({ message: "Faltan los datos para crear el producto" })
         }
+
+        if (!isAdmin(req.body.user)) {
+            return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
+        }
+
 
 
 
@@ -133,4 +165,47 @@ exports.updateSingleAvailability = async (req, res) => {
 
 
 //CREATE WATCH
+
+
+
+exports.createStoreProduct = async (req, res) => {
+    try {
+        if (!req.body) {
+            return res.status(400).send({ message: "Faltan los datos para crear el producto" })
+        }
+
+        if (!isAdmin(req.body.user)) {
+            return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
+        }
+
+        const data = req.body.data
+
+        const newProduct = await Store.Watchmaking.create({
+            serie:data.serie,
+            nombre:data.name,
+            titulo:data.name,
+            contenidoTabla:data.newTableContent,
+            coleccion:'Tudor',
+            precio:data.price,
+            cantidadImagenes:data.imageCount,
+            cantidad:999,
+            disponible:1,
+            tudorCollectionId:data.collection,
+            descripcion:data.description
+        })
+
+        if(newProduct){
+            return res.status(201).send({message:"Producto Creado correctamente"})
+        }
+        
+
+
+
+
+
+    } catch (err) {
+        res.status(500).send({ message: err.message || "Some error occurred while creating the Store Product." })
+    }
+}
+
 

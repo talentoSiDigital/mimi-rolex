@@ -2,8 +2,10 @@
 import { ref } from 'vue';
 import DashboardCard from './DashboardCard.vue';
 import adminDataServices from '../../../services/adminDataServices';
+import { auth } from '../../../store/auth.module';
 
 
+const piniaStore = auth()
 const loader = ref(false)
 const list = ref("")
 const watches = ref([])
@@ -16,18 +18,18 @@ const searchResult = ref({
 function checkUpdate() {
     loader.value = !loader.value
     watches.value = list.value.split('\n')
-    adminDataServices.checkAvailability(watches.value)
+    adminDataServices.checkAvailability(watches.value,piniaStore.$state.user)
         .then((d) => {
             console.log(d.data);
             searchResult.value.existing = d.data.existing
             searchResult.value.nonExisting = d.data.nonExisting
-            updateInventory()
+            updateInventory(piniaStore.$state.user)
         })
 
 }
 
-function updateInventory() {
-    adminDataServices.updateAvailability(searchResult.value.existing)
+function updateInventory(user) {
+    adminDataServices.updateAvailability(searchResult.value.existing, user)
         .then(()=>{
             loader.value = false
             isReady.value = true
@@ -37,7 +39,7 @@ function updateInventory() {
 </script>
 
 <template>
-    <section class="fixed h-screen w-full flex justify-center items-center z-[99] top-0 bg-white">
+    <section class="fixed h-screen w-full flex justify-center items-center z-[99] top-0 bg-white/60">
         <DashboardCard class="w-1/3 max-h-[600px]">
             <template #title>
                 <div class="flex justify-between">

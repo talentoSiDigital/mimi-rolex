@@ -1,7 +1,10 @@
 const multer = require('multer');
 
 const storagePath = require('path').resolve(__dirname, '..','..','storage','store-products')
-const {updateName} = require('../middleware/updateName')
+
+
+
+
 
 // Set up storage for uploaded files
 const storage = multer.diskStorage({
@@ -9,8 +12,7 @@ const storage = multer.diskStorage({
     cb(null, storagePath);
   },
   filename: (req, file, cb) => {
-    const fileName = updateName(file.originalname)
-    cb(null, fileName);
+    cb(null, file.originalname);
   }
 });
 
