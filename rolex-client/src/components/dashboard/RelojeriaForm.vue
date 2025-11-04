@@ -14,12 +14,10 @@ import * as yup from "yup";
 import DashboardCard from "./admin/DashboardCard.vue";
 import InputField from "../form-components/InputField.vue";
 
-
 defineRule('integer', integer);
 
 const loadingState = ref(false)
-const images2send = ref(1)
-const tableRows = ref(1)
+
 const collections = ref([])
 const isReady = ref(false)
 
@@ -40,7 +38,22 @@ const schema = yup.object().shape({
             'Debes seleccionar al menos un archivo',
             (value) => value && value.length > 0
         )
+
         .test(
+            'file-type',
+            'Algún archivo no es una imagen válida (solo se aceptan .jpg, .jpeg, .png)',
+            (value) => {
+                if (!value) return true;
+
+                for (let i = 0; i < value.length; i++) {
+                    if (!['image/jpeg', 'image/png'].includes(value[i].type)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        ).test(
             'file-size',
             'Algún archivo es demasiado grande (máx 10MB)',
             (value) => {
@@ -53,7 +66,7 @@ const schema = yup.object().shape({
                 }
                 return true;
             }
-        ),
+        )
 });
 
 
@@ -65,8 +78,41 @@ const handleFileChange = (event, veeValidateHandleChange) => {
 
 
 
+
+
+function formatTableInput(input) {
+    let formatInput = input.replace(/^\s*[\r\n]/gm, ';');
+    const keywords = ["Garantía de cinco años",
+        "Caja",
+        "Movimiento",
+        "Reserva de marcha",
+        "Corona",
+        "Hermeticidad",
+        "Bisel",
+        "Esfera",
+        "Cristal",
+        "Brazalete"
+    ]
+
+
+    keywords.forEach(word => {
+        const regex = new RegExp(`(${word})\\s*$`, 'gm');
+        formatInput = formatInput.replace(regex, `$1: `);
+    })
+
+    formatInput = formatInput.replace(/\n/g, ' ');
+
+    formatInput = formatInput.replace('‑', '-')
+
+    return formatInput
+}
+
 function onSubmit(values) {
+    values.newTableContent = formatTableInput(values.tableContent);
+    values.imageCount = values.imagenes.length
+    values.user = piniaStore.$state.user.email
     console.log(values);
+
 
 }
 
@@ -129,51 +175,27 @@ onMounted(() => {
 
                             <label for="imagenes" class="block mb-2 text-sm font-medium text-green-900 ">Agregar
                                 imagen</label>
-                            <Field type="file" multiple name="imagenes"
+                            <Field type="file" multiple name="imagenes" rules="image"
                                 v-slot="{ handleChange, handleBlur, errorMessage }" class="">
-                                <input type="file" name="imagenes" id="images" multiple
+                                <input type="file" name="imagenes" id="images" multiple accept=".png, .jpg"
                                     @change="e => handleFileChange(e, handleChange)"
                                     class="bg-gray-50 border border-rolex-green text-green-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5">
 
                             </Field>
+                            <ErrorMessage name="imagenes" class="text-red-700" />
                         </div>
 
-
-                        <div>
-                            
-                        </div>
-
-                        <!-- <div id="form-field"
-                            class="bg-neutral-100 border border-rolex-green shadow-lg p-4 rounded-lg space-y-4">
+                        <div id="form-field"
+                            class="bg-neutral-100 border border-rolex-green shadow-lg px-6 pt-6 pb-8 rounded-lg space-y-4">
                             <h3 class="block mb-2 text-md font-medium text-green-900">Contenido de la tabla</h3>
 
-                            <div v-for="index in tableRows" :key="index">
-                                <div class="flex gap-2 ">
-                                    <div class="w-1/3">
-                                        <label :for="`header${index}`"
-                                            class="block mb-2 text-sm font-medium text-green-900">Cabecera</label>
-                                        <Field type="text" :name="`header${index}`"
-                                            class="bg-gray-50 border border-rolex-green text-green-900 text-sm rounded-lg  block w-full p-2.5 " />
-                                    </div>
-                                    <div class="w-2/3">
-                                        <label :for="`content${index}`"
-                                            class="block mb-2 text-sm font-medium text-green-900">Contenido</label>
-                                        <Field type="text" :name="`content${index}`"
-                                            class="bg-gray-50 border border-rolex-green text-green-900 text-sm rounded-lg  block w-full p-2.5 " />
-                                    </div>
+                            <Field type="text" as="textarea" name="tableContent"
+                                class="bg-gray-50 border border-rolex-green text-green-900 text-sm rounded-lg  block w-full p-2.5 min-h-44 h-44" />
 
 
-                                </div>
-                            </div>
-                            <div v-if="tableRows < 8" class="flex justify-end gap-2 text-right w-full">
-                                <h2 class="block mb-2 text-sm font-medium text-green-900">
-                                    Agregar fila
-                                </h2>
-                                <font-awesome-icon @click="tableRows++" :icon="['fas', 'square-plus']"
-                                    class="text-2xl text-rolex-green  duration-100 cursor-pointer" />
 
-                            </div>
-                        </div> -->
+                        </div>
+
 
 
 

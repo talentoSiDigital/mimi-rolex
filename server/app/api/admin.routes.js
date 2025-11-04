@@ -23,6 +23,12 @@ module.exports = app => {
     router.post("/update/store-availability", uploadFiles.any(), update.updateStoreAvailability)
     
 
+
+    //Create and update single
+    router.post("/create/store-product", uploadFiles.any(), update.createStoreProduct)
+
+
+
     app.use('/api/admin/', router)
 
 
