@@ -18,7 +18,6 @@ const checkWindowSize = computed(() => {
 const router = useRouter();
 const links = [
   "/rolex/1908",
-  "/rolex/world-of-rolex/sailgp-championship",
   "/novedades/tudor",
 ]
 function checkClick(pos) {
@@ -36,20 +35,20 @@ const classes = ref([
 
 
 let carouselInterval;
-const IMAGE_QUANTITY = 3
+const IMAGE_QUANTITY = 2
 
-function startCarousel(){
-  if(carouselInterval) clearInterval(carouselInterval)  
+function startCarousel() {
+  if (carouselInterval) clearInterval(carouselInterval)
 
-  carouselInterval = setInterval(()=>{
-    if (counter.value == IMAGE_QUANTITY -1) {
+  carouselInterval = setInterval(() => {
+    if (counter.value == IMAGE_QUANTITY - 1) {
       counter.value = 0;
     } else {
       counter.value++;
     }
-  },5000)
+  }, 5000)
 }
-function stopCarousel(){
+function stopCarousel() {
   clearInterval(carouselInterval)
 }
 
@@ -58,20 +57,20 @@ onMounted(() => {
   startCarousel()
 });
 
-function changeCounter(direction){
-  if(direction == 'r'){
-    if(counter.value == IMAGE_QUANTITY-1){
+function changeCounter(direction) {
+  if (direction == 'r') {
+    if (counter.value == IMAGE_QUANTITY - 1) {
       counter.value = 0
-    }else{
-       counter.value++
+    } else {
+      counter.value++
     }
-  }else{
-    if(counter.value == 0){
-      counter.value = IMAGE_QUANTITY-1
-    }else{
-       counter.value--
+  } else {
+    if (counter.value == 0) {
+      counter.value = IMAGE_QUANTITY - 1
+    } else {
+      counter.value--
     }
-    
+
   }
 }
 
@@ -82,35 +81,32 @@ function changeCounter(direction){
 
     <div class="relative z-0 h-[300px] md:h-[650px] w-full pb-20">
       <div v-if="!checkWindowSize" class="overflow-hidden">
-        <div class="duration-500 flex cursor-pointer" :class="classes[counter]" @mouseenter="stopCarousel" @mouseleave="startCarousel">
+        <div class="duration-500 flex cursor-pointer" :class="classes[counter]" @mouseenter="stopCarousel"
+          @mouseleave="startCarousel">
           <img @click="checkClick(counter)" rel="preload" fetchpriority="high" as="image"
             src="/assets/routes-assets/headers/1-desktop.webp" alt="headers-1-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
-          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
-            src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-3-desktop" />
-          
         </div>
       </div>
       <div v-else class="overflow-hidden">
         <div class="duration-500 flex" :class="classes[counter]">
-          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/1-mobile.webp"
-            alt="headers-1-mobile" />
-          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/2-mobile.webp"
-            alt="headers-2-mobile"  />
-          <img @click="checkClick(counter)"  src="/assets/routes-assets/headers/3-mobile.webp"
-            alt="headers-3-mobile"  />
-          
+          <img @click="checkClick(counter)" src="/assets/routes-assets/headers/1-mobile.webp" alt="headers-1-mobile" />
+          <img @click="checkClick(counter)" src="/assets/routes-assets/headers/2-mobile.webp" alt="headers-2-mobile" />
         </div>
       </div>
 
 
 
-      <button aria-label="Previous" class="absolute top-[45%] md:left-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('l')">
-        <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green"/>
+      <button aria-label="Previous"
+        class="absolute top-[45%] md:left-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 "
+        @click="changeCounter('l')">
+        <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-rolex-green" />
       </button>
-      <button aria-label="Next" class="absolute top-[45%] right-0 md:right-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 " @click="changeCounter('r')">
-        <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-rolex-green"/>
+      <button aria-label="Next"
+        class="absolute top-[45%] right-0 md:right-10 md:bg-main-green w-8 h-8 rounded-full md:border border-main-green md:hover:bg-white duration-200 "
+        @click="changeCounter('r')">
+        <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-rolex-green" />
       </button>
     </div>
     <main ref="target" class=" pt-14">
@@ -206,7 +202,8 @@ function changeCounter(direction){
         <div class="py-10 w-full flex justify-center">
           <router-link :to="{ name: 'world-of-rolex-article-11' }" class="w-[90%]" aria-label="World of Rolex">
 
-            <img src="/assets/routes-assets/activations/sailgp-championship-banner-desktop.webp" alt="" v-if="!checkWindowSize">
+            <img src="/assets/routes-assets/activations/sailgp-championship-banner-desktop.webp" alt=""
+              v-if="!checkWindowSize">
             <img src="/assets/routes-assets/activations/sailgp-championship-banner-mobile.webp" alt="" v-else>
           </router-link>
         </div>
