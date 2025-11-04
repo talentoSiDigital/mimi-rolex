@@ -304,6 +304,21 @@ exports.findRMain = (req, res) => {
         });
 };
 
+// retrieve collections
+
+exports.getTudorCollections = (req, res) => {
+    Store.TudorCollection.findAll({
+        attributes: ['id', 'nombre']
+    }).then(data => res.send(data)).catch(err => {
+
+        res.status(500).json({
+            message:
+                err.message || "Some error occurred while retrieving tutorials."
+
+        });
+    });
+}
+
 
 exports.findR = (req, res) => {
     // Validate request
@@ -358,7 +373,7 @@ exports.findDetailR = (req, res) => {
         where: {
             serie: req.params.id
         },
-        include:Store.TudorCollection
+        include: Store.TudorCollection
     })
         .then(data => {
             data[0].dataValues.img = []
@@ -394,6 +409,9 @@ exports.updateR = (req, res) => {
 
 
 // SHOPPING CART 
+
+
+
 // Add watch to cart
 exports.addWatchToCart = async (req, res) => {
     // Validate request

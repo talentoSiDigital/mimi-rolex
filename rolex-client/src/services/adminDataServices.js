@@ -21,21 +21,22 @@ class AdminData {
     })
   }
 
-  updateAvailability(list){
+  updateAvailability(list) {
 
     return http.post("/admin/update/store-availability", {
       values: list
     })
   }
 
-  updateSingleWatch(){
+
+
+  updateSingleWatch() {
 
   }
 
-  toggleSingleWatch(){
-    
-  }
+  toggleSingleWatch() {
 
+  }
 
 }
 

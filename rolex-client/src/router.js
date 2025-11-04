@@ -684,7 +684,7 @@ const router = createRouter({
           component:()=>import("./views/Admin/nested/MainDashboard.view.vue")
         },
         {
-          path:'/agregar-reloj',
+          path:'/agregar-reloj/:serie?',
           name:'agregar-reloj',
           component:()=>import("./views/Admin/nested/AddWatch.view.vue")
         },

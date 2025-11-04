@@ -374,12 +374,7 @@ onMounted(() => {
             <WatchesAvailability v-if="modal" v-model="modal"/>
 
         </Transition>
-        <Transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"
-            enter-to-class="opacity-100" leave-active-class="duration-700 ease-in-out" leave-from-class="opacity-700"
-            leave-to-class="transform opacity-0">
-            <RelojeriaForm />
-
-        </Transition>
+      
 
     </section>
 </template>

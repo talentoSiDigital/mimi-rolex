@@ -15,6 +15,7 @@ module.exports = app => {
 
     //Relojeria
     router.get("/relojeria-slider", store.findRSlider)
+    router.get("/relojeria/colecciones/tudor", store.getTudorCollections)
     router.get("/relojeria-tudor", store.findRMain)
     router.put("/relojeria/:id",uploadFiles.any(), store.findR)
     router.get("/relojeria/producto/:id", store.findDetailR)
@@ -35,10 +36,6 @@ module.exports = app => {
 
 
 
-    //update
-
-    router.post("/update/store-analytics", uploadFiles.any(), update.getStoreAnalytics)
-    router.post("/update/store-availability", uploadFiles.any(), update.updateStoreAvailability)
     
 
     app.use('/api', router)
