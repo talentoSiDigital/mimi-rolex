@@ -34,7 +34,7 @@ const targetIsVisible = useElementVisibility(target)
 
 
 // const position = ref("-translate-x-2/3")
-const position = ref("-translate-x-0")
+const position = ref("translate-x-0")
 const statusMessage = ref("")
 // const position = ref("translate-x-0")
 let positionArray = ['translate-x-0', '-translate-x-1/3', '-translate-x-2/3']

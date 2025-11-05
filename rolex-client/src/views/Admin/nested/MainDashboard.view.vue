@@ -153,7 +153,7 @@ onMounted(() => {
 <template>
     <section>
         <div class=" flex justify-center w-full py-6">
-            <header class="text-center bg-main-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border border-gray-100 px-3 py-3 font-montserrat w-11/12 text-rolex-green">
+            <header class="text-center bg-main-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 border border-gray-100 px-3 py-3 font-montserrat w-11/12 text-rolex-green">
                 <h2 class="font-bold text-2xl">Bienvenido al panel de control</h2>
                 <p class="text-xl">Que deseas hacer?</p>
             </header>
@@ -162,7 +162,7 @@ onMounted(() => {
         <Transition name="notification">
 
             <section v-if="notification"
-                class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 custom-border px-3 py-3 fixed shadow border-2 border-white z-[99] top-6 right-6">
+                class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 custom-border px-3 py-3 fixed shadow-sm border-2 border-white z-99 top-6 right-6">
                 <h2>MMMMMM</h2>
             </section>
         </Transition>
@@ -260,7 +260,7 @@ onMounted(() => {
                         <div v-else-if="messages.messages.length > 0"
                             class=" overflow-scroll h-[450px] w-full space-y-4">
                             <div v-for="(value, index) in messages.messages"
-                                class="border  border-main-green bg-white rounded-xl shadow p-3" :key="value">
+                                class="border  border-main-green bg-white rounded-xl shadow-sm p-3" :key="value">
                                 <h2 class="font-bold">{{ value.name }}</h2>
                                 <p class="font-light">{{ value.email }} (+{{ value.phone }})</p>
                                 <p class="font-light">{{ getFormattedDate(value.createdAt) }}</p>
@@ -290,7 +290,7 @@ onMounted(() => {
                         <div v-else-if="messages.rolexMessages.length > 0"
                             class=" overflow-scroll h-[450px] w-full space-y-4">
                             <div v-for="(value, index) in messages.rolexMessages"
-                                class="border  border-main-green bg-white rounded-xl shadow p-3" :key="value">
+                                class="border  border-main-green bg-white rounded-xl shadow-sm p-3" :key="value">
                                 <h2 class="font-bold">{{ value.name }}</h2>
                                 <p class="font-light">{{ value.email }} (+{{ value.phone }})</p>
                                 <p class="font-light">{{ getFormattedDate(value.createdAt) }}</p>
@@ -350,7 +350,7 @@ onMounted(() => {
         <transition name="bounce">
             <div v-if="messageToggle" class="fixed w-full h-screen z-50 top-0 flex justify-center items-center">
 
-                <div class="border  border-main-green bg-white rounded-xl shadow p-3 w-1/2 relative">
+                <div class="border  border-main-green bg-white rounded-xl shadow-sm p-3 w-1/2 relative">
 
                     <button @click="messageToggle = false" class="absolute top-2 right-4 text-2xl text-rolex-green">
                         <font-awesome-icon :icon="['fas', 'xmark']" />

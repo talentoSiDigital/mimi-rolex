@@ -1,8 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@plugin '@tailwindcss/aspect-ratio';
+@plugin '@tushargugnani/tailwind-group-peer-checked';
 
+@theme {
+  --color-main-green: #adbaad;
+  --color-secondary-green: #adbaad;
+  --color-dashboard-green: #c2e2c2;
+  --color-highlight-green:#9bf9ce;
+  --color-dark-green: #01311e;
+  --color-tudor-red: #be0100;
+  --color-rolex-green: #01603a;
+  --color-rolex-green-2: #127849;
+  --color-gray-button: #767676;
+  --color-rolex-green-3: #61bc93;
+  --color-rolex-brown: #472c20;
+  --color-rolex-dark-grey: #212121;
+  --color-rolex-grey-light: #d4d4d4;
+  --color-rolex-brown-light-1: #f5efea;
+  --color-rolex-brown-light-2: #f9f7f3;
+  --color-opaco: rgba(0, 0, 0, 0.5);
+
+  --font-vilsuve: Vilsuve, sans-serif;
+  --font-tudor: Meta, sans-serif;
+  --font-montserrat: Montserrat, sans-serif;
+  --font-arial-light: Arial Light, sans-serif;
+  --font-tudor-title: Headline-tudor, sans-serif;
+  --font-arial-bold: Arial MT, sans-serif;
+  --font-helvetica-bold: Helvetica-Neue-Bold, sans-serif;
+  --font-helvetica-light: Helvetica-Light, sans-serif;
+  --font-helvetica: Helvetica Now Text, sans-serif;
+  --font-georgia: Georgia, sans-serif;
+
+  --background-image-rolex-gradient: linear-gradient(
+    90deg,
+    rgba(12, 66, 41, 1) 0%,
+    rgba(25, 111, 73, 1) 100%
+  );
+
+  --breakpoint-3xl: 1700px;
+  --breakpoint-xs: 500px;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @font-face {
     font-family: "Vilsuve";
@@ -33,41 +89,41 @@
     font-family: 'Helvetica Now Text';
     src: url(/fonts/Helvetica-300.woff) format("woff");
     font-weight: 300;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica Now Text';
     src: url(/fonts/Helvetica-300-Italic.woff) format("woff");
     font-weight: 300;
-    font-style: italic
+    font-style: italic;
 }
 
 @font-face {
     font-family: 'Helvetica Now Text';
     src: url(/fonts/Helvetica-400.woff) format("woff");
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica Now Text';
     src: url(/fonts/Helvetica-400-Italic.woff) format("woff");
     font-weight: 400;
-    font-style: italic
+    font-style: italic;
 }
 
 @font-face {
     font-family: 'Helvetica Now Text';
     src: url(/fonts/Helvetica-700.woff) format("woff");
     font-weight: 700;
-    font-style: normal
+    font-style: normal;
 }
 @font-face {
     font-family: 'Georgia';
     src: url(/fonts/georgia.woff) format("woff");
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 @font-face {
     font-family: 'Headline-tudor';

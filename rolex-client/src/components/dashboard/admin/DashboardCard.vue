@@ -8,7 +8,7 @@ const hasSlot = (name) => {
 </script>
 
 <template>
-    <div class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 custom-border px-3 py-3 shadow border-2 border-white">
+    <div class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 custom-border px-3 py-3 shadow-sm border-2 border-white">
         <div class="font-bold text-2xl ">
             <slot name="title"></slot>
         </div>

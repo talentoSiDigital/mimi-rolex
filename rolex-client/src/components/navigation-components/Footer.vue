@@ -8,8 +8,8 @@ import { RouterLink } from "vue-router";
 
 
 
-<footer class="bg-rolex-gradient border-t shadow relative z-30">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+<footer class="bg-rolex-gradient border-t shadow-sm relative z-30">
+    <div class="w-full max-w-(--breakpoint-xl) mx-auto p-4 md:py-8">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between">
             <RouterLink to="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/assets/mimi-logo-full-white.svg" class="h-14" alt="Mimi joyeria Logo" />

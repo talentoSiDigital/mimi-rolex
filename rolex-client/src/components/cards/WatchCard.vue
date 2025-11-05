@@ -18,7 +18,7 @@ defineProps({
     <img
       :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${item.modelo}-showcase.webp`"
       :alt="item.modelo"
-      class="w-[100%] md:w-1/2 lg:w-[55%] xl:w-[60%] duration-200 ease-in-out group-hover:scale-110"
+      class="w-full md:w-1/2 lg:w-[55%] xl:w-[60%] duration-200 ease-in-out group-hover:scale-110"
     />
     <div class="w-9/12">
       <p class="font-helvetica font-bold text-[16px]">Rolex</p>

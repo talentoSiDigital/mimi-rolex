@@ -75,7 +75,7 @@ function activateSearch() {
         <iframe
           src="https://static.rolex.com/retailers/clock/?colour=gold&apiKey=7513b85ede328a319698cf7a3eebed49&lang=es"
           frameborder="0"
-          class="w-40 h-[5.5rem] cursor-pointer"
+          class="w-40 h-22 cursor-pointer"
           title="Distribuidor oficial: Mimi Joyería"
         ></iframe>
       </div>

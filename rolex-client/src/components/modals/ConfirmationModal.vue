@@ -81,11 +81,11 @@ function checkError(status){
 
 
                         <button @click="$emit('activate-modal')"
-                            class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded text-sm px-5 py-2.5 text-center duration-200 mt-0">
+                            class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-sm text-sm px-5 py-2.5 text-center duration-200 mt-0">
                             Volver
                         </button>
                         <button @click="payWithData()"
-                            class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded text-sm px-5 py-2.5 text-center duration-200 mt-0">
+                            class="w-full border border-main-green text-white bg-main-green hover:bg-white hover:text-main-green font-medium rounded-sm text-sm px-5 py-2.5 text-center duration-200 mt-0">
                             Pagar
                         </button>
                     </div>

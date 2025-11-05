@@ -118,7 +118,7 @@ function onSubmit(values) {
 
 
 onMounted(() => {
-    
+
     storeDataService.getTudorCollections().then((response) => {
         collections.value = response.data
     }).catch((error) => {
@@ -180,10 +180,14 @@ onMounted(() => {
                                 v-slot="{ handleChange, handleBlur, errorMessage }" class="">
                                 <input type="file" name="imagenes" id="images" multiple accept=".png, .jpg"
                                     @change="e => handleFileChange(e, handleChange)"
-                                    class="bg-gray-50 border border-rolex-green text-green-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5">
-
+                                    class="bg-gray-50 border border-rolex-green text-green-900 sm:text-sm rounded-lg  block w-full p-2.5">
+                           
                             </Field>
                             <ErrorMessage name="imagenes" class="text-red-700" />
+
+
+                         
+
                         </div>
 
                         <div id="form-field"
@@ -192,14 +196,9 @@ onMounted(() => {
 
                             <Field type="text" as="textarea" name="tableContent"
                                 class="bg-gray-50 border border-rolex-green text-green-900 text-sm rounded-lg  block w-full p-2.5 min-h-44 h-44" />
-
-
-
                         </div>
 
-
-
-
+                        
                         <button
                             class="w-1/3 border border-rolex-green text-white bg-rolex-green hover:bg-white hover:text-rolex-green font-medium rounded-lg text-sm px-5 py-2.5 text-center duration-200 mt-0">
 

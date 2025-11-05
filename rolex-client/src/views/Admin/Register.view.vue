@@ -126,7 +126,7 @@ function handleRegister(user, phoneNumber) {
       <img src="/assets/mimi-logo.png" alt="logo" />
 
       <div
-        class="md:w-1/2 bg-white rounded-lg shadow md:mt-0 sm:max-w-md md:max-w-none xl:p-0"
+        class="md:w-1/2 bg-white rounded-lg shadow-sm md:mt-0 sm:max-w-md md:max-w-none xl:p-0"
       >
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1
@@ -293,7 +293,7 @@ function handleRegister(user, phoneNumber) {
             <RouterLink
               to="/login"
               :class="[successful ? 'block' : 'hidden']"
-              class="rounded px-4 py-2 text-white bg-rolex-green w-fit"
+              class="rounded-sm px-4 py-2 text-white bg-rolex-green w-fit"
             >
               Iniciar sesión
             </RouterLink>

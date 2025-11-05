@@ -131,7 +131,7 @@ const messageInfo = ref({
 
 
 
-const position = ref("-translate-x-0");
+const position = ref("translate-x-0");
 const statusMessage = ref("");
 let positionArray = ["translate-x-0", "-translate-x-1/3", "-translate-x-2/3"];
 function moveForm(pos) {
@@ -207,7 +207,7 @@ watch(isReady, () => {
               </carousel>
               <div class="flex gap-2 justify-center w-full mt-4 ">
                 <div v-for="(item, index) in 5" :key="item">
-                  <div class="duration-200  h-2 block rounded hover:bg-rolex-green active:bg-rolex-green"
+                  <div class="duration-200  h-2 block rounded-sm hover:bg-rolex-green active:bg-rolex-green"
                     @click="currentSlide = index" :class="currentSlide == index ? 'w-14 bg-rolex-green' : 'w-4 bg-gray-200'">
                   </div>
                 </div>
@@ -233,7 +233,7 @@ watch(isReady, () => {
                   </div>
                   <Transition name="fade">
                     <p v-if="isHovered"
-                      class="text-xs md:w-1/5 duration-200 absolute border-2 border-rolex-brown rounded p-4 bg-rolex-brown-light-1">
+                      class="text-xs md:w-1/5 duration-200 absolute border-2 border-rolex-brown rounded-sm p-4 bg-rolex-brown-light-1">
                       <span v-if="checkLocation">
                         Descargue la lista de precios recomendados de su país para
                         encontrar la información de los precios específicos de su

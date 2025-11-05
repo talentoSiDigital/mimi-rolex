@@ -28,7 +28,7 @@ function checkClick(pos) {
 const counter = ref(0);
 const classes = ref([
   "translate-x-0",
-  "-translate-x-[100%]",
+  "-translate-x-full",
   "-translate-x-[200%]",
   "-translate-x-[300%]",
 ]);

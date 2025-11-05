@@ -53,7 +53,7 @@ function sendValue(value, { resetForm }) {
 
 <template>
   <Transition>
-    <div v-if="notification" class="fixed z-[99] top-0 w-full flex justify-center">
+    <div v-if="notification" class="fixed z-99 top-0 w-full flex justify-center">
       <h2 class="border text-xl bg-main-green p-3">Mensaje enviado con éxito</h2>
     </div>
 

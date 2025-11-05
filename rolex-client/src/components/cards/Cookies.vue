@@ -65,7 +65,7 @@ watchEffect(() => {
       class="h-[10vh] duration-500 flex justify-end fixed z-20 left-[98%] right-4 mr-16 border"
     >
       <div
-        class="group border-l border-r border-t rounded-t-md shadow-md shadow-rolex-green border-rolex-green cursor-pointer p-4 fixed flex pt-5 gap-2 bg-white hover:text-rolex-green duration-100 h-[10rem]"
+        class="group border-l border-r border-t rounded-t-md shadow-md shadow-rolex-green border-rolex-green cursor-pointer p-4 fixed flex pt-5 gap-2 bg-white hover:text-rolex-green duration-100 h-40"
         @click="openUp">
         <font-awesome-icon :icon="['fas', 'gear']" class="group-hover:animate-spin" />
         <h2>Cookies</h2>

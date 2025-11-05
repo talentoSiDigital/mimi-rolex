@@ -66,7 +66,7 @@ const sizes = []
     <div class="flex gap-2 justify-center w-full absolute -bottom-6 md:bottom-10">
       <div v-for="(item,index) in sliderItems" :key="item">
         <div
-        class="duration-200  h-2 block rounded hover:bg-rolex-green active:bg-rolex-green"
+        class="duration-200  h-2 block rounded-sm hover:bg-rolex-green active:bg-rolex-green"
         @click="currentSlide = index" :class="currentSlide == index?'w-14 bg-rolex-green':'w-4 bg-white'"
       ></div>
       </div>
