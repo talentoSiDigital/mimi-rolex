@@ -6,8 +6,8 @@ import breadcrumb from "../../data/breadcrumb.json";
 const route = useRoute();
 const router = useRouter();
 const actual = ref(breadcrumb[route.name]);
-console.log(route.name );
-console.log(breadcrumb[route.name] );
+console.log(route.name);
+console.log(actual.value);
 const routeArray = ref(route.fullPath.split("/"));
 const parentRoutes = {
   "Mantenimiento Rolex": "mantenimiento-rolex",
@@ -66,77 +66,57 @@ function getCollectionName() {
 }
 
 
-function filterBreadcrumb(){
+function filterBreadcrumb() {
+  if (route.name === 'rolex-accesorios-display'){
 
-  const breadcrumbArray = actual.value
+  }else{
+    const breadcrumbArray = actual.value
   console.log(breadcrumbArray);
-   breadcrumbArray.filter((value, index, self) => self.indexOf(value) === index)
-   return breadcrumbArray
+  breadcrumbArray.filter((value, index, self) => self.indexOf(value) === index)
+  return breadcrumbArray
+
+  }
 }
 
 onMounted(() => {
   getCollectionName();
   getModelName();
-  filterBreadcrumb(); 
+  filterBreadcrumb();
 });
 </script>
 
 <template>
   <div class="h-12 items-center md:px-36 font-helvetica bg-rolex-gradient flex">
     <div class="hidden md:flex gap-4 pr-4">
-      <router-link :to="{ name: 'rolex' }" class="text-white hover:underline"
-        >Descubre Rolex
+      <router-link :to="{ name: 'rolex' }" class="text-white hover:underline">Descubre Rolex
       </router-link>
     </div>
 
     <div v-for="(item, index) in actual" :key="index">
       <div class="hidden md:flex gap-4 pr-4">
-        <font-awesome-icon
-          :icon="['fas', 'chevron-right']"
-          class="py-1 text-white"
-        />
+        <font-awesome-icon :icon="['fas', 'chevron-right']" class="py-1 text-white" />
 
-        <div
-          @click="generateLink(index)"
-          class="text-white hover:underline cursor-pointer"
-        >
+        <div @click="generateLink(index)" class="text-white hover:underline cursor-pointer">
           {{ item }}
         </div>
       </div>
 
-      
+
     </div>
 
-    <div
-      v-for="(item, index) in actual"
-      :key="index"
-      class="flex md:hidden  pr-4 pl-6"
-    >
-      <font-awesome-icon
-        v-if="!actual || actual.length == 1"
-        :icon="['fas', 'chevron-left']"
-        class="py-1 pr-2 text-white"
-      />
-      
-      <router-link
-        v-if="!actual || actual.length == 1"
-        :to="{ name: 'rolex' }"
-        class="text-white hover:underline"
-        >Descubre Rolex
+    <div v-for="(item, index) in actual" :key="index" class="flex md:hidden  pr-4 pl-6">
+      <font-awesome-icon v-if="!actual || actual.length == 1" :icon="['fas', 'chevron-left']"
+        class="py-1 pr-2 text-white" />
+
+      <router-link v-if="!actual || actual.length == 1" :to="{ name: 'rolex' }"
+        class="text-white hover:underline">Descubre Rolex
       </router-link>
-      
+
       <div class="flex gap-4" v-else>
-        <font-awesome-icon
-         v-if="index == actual.length - 1"
-        :icon="['fas', 'chevron-left']"
-        class="py-1 text-white"
-      /> 
-        <div
-          v-if="index == actual.length - 1"
-          @click="generateLink(index-1)"
-          class="text-white hover:underline cursor-pointer"
-        >
-          {{ actual[index-1] }}
+        <font-awesome-icon v-if="index == actual.length - 1" :icon="['fas', 'chevron-left']" class="py-1 text-white" />
+        <div v-if="index == actual.length - 1" @click="generateLink(index - 1)"
+          class="text-white hover:underline cursor-pointer">
+          {{ actual[index - 1] }}
         </div>
       </div>
     </div>

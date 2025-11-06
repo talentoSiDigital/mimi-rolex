@@ -56,6 +56,18 @@ const router = createRouter({
 
     },
     {
+      path: "/rolex/accesorios/:id",
+      name: "rolex-accesorios-display",
+      component: () => import("./views/Rolex/RolexAccesoriosDisplay.view.vue"),
+      meta: {
+        title: "Accesorios Rolex  | Mimi Joyería",
+        description: "Descubra los accesorios en Mimi Joyería, un Distribuidor Oficial, autorizado para vender accesorios Rolex.",
+        breadcrumb: "Accesorios",
+        pageType: "accessories model page"
+      }
+
+    },
+    {
       path: "/rolex/mantenimiento-procedimiento",
       name: "mantenimiento-procedimiento-rolex",
       component: () => import("./views/Rolex/RolexMantenimientoProcedimiento.view.vue"),

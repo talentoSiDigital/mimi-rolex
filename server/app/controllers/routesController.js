@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 const rolexBaseData = require("./routeData/rolexBaseData.json")
 const genericRoutesData = require("./routeData/genericRoutesData.json")
 
-const baseRoute = "https://mimijoyeria.com"
+const baseRoute = process.env.HOME_ROUTE
 
 
 exports.searchTags = (req, res) => {

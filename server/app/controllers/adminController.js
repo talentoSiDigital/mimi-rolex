@@ -7,8 +7,7 @@ const Role = db.user.Role
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
-const storagePath = 'https://mimijoyeria.com/storage'
-// const storagePath = 'https://localhost:3000/storage'
+const storagePath = process.env.STORAGE_PATH
 
 async function isAdmin(user) {
     if (user.roles[0] != "ROLE_ADMIN") {
