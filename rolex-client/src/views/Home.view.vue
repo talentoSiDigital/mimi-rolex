@@ -17,7 +17,7 @@ const checkWindowSize = computed(() => {
 
 const router = useRouter();
 const links = [
-  "/rolex/1908",
+  "/rolex/gmt-master-ii",
   "/novedades/tudor",
 ]
 function checkClick(pos) {

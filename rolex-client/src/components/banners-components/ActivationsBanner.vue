@@ -7,10 +7,10 @@ import { computed } from "vue";
 const sliderItems = [
   
   {
-    src: "1908",
-    link: {name:'rolex-coleccion-1908'},
-    alt: "1908-banner",
-    title: "1908 Banner",
+    src: "gmt-master-ii",
+    link: {name:'rolex-coleccion-gmt-master-ii'},
+    alt: "GMT-Master-II-banner",
+    title: "GMT-Master II Banner",
   },  
   {
     src: "sailgp-championship",
