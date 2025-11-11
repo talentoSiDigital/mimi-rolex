@@ -1,5 +1,6 @@
 const uploadFiles = require("../middleware/store")
 const existenceMiddleware = require("../middleware/verifyExistence")
+const express = require('express')
 
 
 module.exports = app => {
@@ -17,7 +18,7 @@ module.exports = app => {
     router.get("/relojeria-slider", store.findRSlider)
     router.get("/relojeria/colecciones/tudor", store.getTudorCollections)
     router.get("/relojeria-tudor", store.findRMain)
-    router.put("/relojeria/:id",uploadFiles.any(), store.findR)
+    router.put("/relojeria/:id",express.json(), store.findR)
     router.get("/relojeria/producto/:id", store.findDetailR)
 
     

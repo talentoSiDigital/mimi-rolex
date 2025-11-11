@@ -17,7 +17,9 @@ const searchResult = ref({
 })
 function checkUpdate() {
     loader.value = !loader.value
+    list.value = list.value.replaceAll(' ','')
     watches.value = list.value.split('\n')
+  
     adminDataServices.checkAvailability(watches.value,piniaStore.$state.user)
         .then((d) => {
             console.log(d.data);
@@ -72,7 +74,7 @@ function updateInventory(user) {
                     <div class="flex flex-col gap-2">
                         <label for="watches" class="font-bold">Listado de relojes:</label>
                         <textarea v-model="list" name="watches" id="watches" placeholder="Insertar lista..."
-                            class="min-h-[250px] h-[250px] max-h-[250px] p-1 border border-rolex-green rounded-sm"></textarea>
+                            class="min-h-[250px] h-[250px] max-h-[250px] p-1 border border-rolex-green rounded-sm bg-white"></textarea>
                         <button @click="checkUpdate"
                             class="bg-rolex-green  text-white rounded-sm w-full py-2 text-center border border-rolex-green duration-200 hover:bg-white hover:text-rolex-green">Verificar</button>
                     </div>

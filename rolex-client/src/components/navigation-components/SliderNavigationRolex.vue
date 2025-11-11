@@ -90,7 +90,7 @@ const sliderItems = [
 
 
 const carouselNavigation = computed(()=>{
-    return isDesktop.value ? sliderItems.length - 4 : sliderItems.length - 2
+    return isDesktop.value ? sliderItems.length - 3 : sliderItems.length - 2
 })
 
 

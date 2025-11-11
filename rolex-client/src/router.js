@@ -146,7 +146,7 @@ const router = createRouter({
     },
     {
       path: "/rolex/nuevos-modelos-2025/:id",
-      name: "rolex-nuevos-relojes-2025",
+      name: "rolex-nuevos-modelos-2025",
       component: () => import("./views/Rolex/NewModelCollection.view.vue"),
       meta: {
         title: " Nuevos Modelos 2024  | Mimi Joyería ",
@@ -180,86 +180,86 @@ const router = createRouter({
         pageType: "article page"
       }
     },
-    {
-      path: "/rolex/world-of-rolex/sail-gp",
-      name: "world-of-rolex-article-2",
-      component: () => import("./views/Rolex/articles/RolexWORArticle2.view.vue"),
-      meta: {
-        title: "Sail GP - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/SailGP",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-grand-slam",
-      name: "world-of-rolex-article-3",
-      component: () => import("./views/Rolex/articles/RolexWORArticle3.view.vue"),
-      meta: {
-        title: "Rolex Grand Slam - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexGrandSlam",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
-      name: "world-of-rolex-article-4",
-      component: () => import("./views/Rolex/articles/RolexWORArticle4.view.vue"),
-      meta: {
-        title: "Las 24 Horas de Le Mans - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/Las24HorasDeLemans",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
-      name: "world-of-rolex-article-5",
-      component: () => import("./views/Rolex/articles/RolexWORArticle5.view.vue"),
-      meta: {
-        title: "Rolex y The Championship, Wimbledon - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheChampionshipsWimbledon",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
-      name: "world-of-rolex-article-6",
-      component: () => import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
-      meta: {
-        title: "Rolex y The Amundi Evian Championship - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheAmundiEvianChampionship",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-open",
-      name: "world-of-rolex-article-7",
-      component: () => import("./views/Rolex/articles/RolexWORArticle7.view.vue"),
-      meta: {
-        title: "Rolex y The Open - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheOpen",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-us-open",
-      name: "world-of-rolex-article-8",
-      component: () => import("./views/Rolex/articles/RolexWORArticle8.view.vue"),
-      meta: {
-        title: "Rolex y The US Open - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
-        pageType: "article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-      name: "world-of-rolex-article-9",
-      component: () => import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
-      meta: {
-        title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
-        pageType: "article page"
-      }
-    },
+    // {
+    //   path: "/rolex/world-of-rolex/sail-gp",
+    //   name: "world-of-rolex-article-2",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle2.view.vue"),
+    //   meta: {
+    //     title: "Sail GP - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/SailGP",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-grand-slam",
+    //   name: "world-of-rolex-article-3",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle3.view.vue"),
+    //   meta: {
+    //     title: "Rolex Grand Slam - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexGrandSlam",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
+    //   name: "world-of-rolex-article-4",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle4.view.vue"),
+    //   meta: {
+    //     title: "Las 24 Horas de Le Mans - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/Las24HorasDeLemans",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
+    //   name: "world-of-rolex-article-5",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle5.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Championship, Wimbledon - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheChampionshipsWimbledon",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
+    //   name: "world-of-rolex-article-6",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Amundi Evian Championship - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheAmundiEvianChampionship",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-open",
+    //   name: "world-of-rolex-article-7",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle7.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Open - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheOpen",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-us-open",
+    //   name: "world-of-rolex-article-8",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle8.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The US Open - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    //   name: "world-of-rolex-article-9",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
+    //   meta: {
+    //     title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+    //     pageType: "article page"
+    //   }
+    // },
     {
       path: "/rolex/world-of-rolex/resistencia",
       name: "world-of-rolex-article-10",

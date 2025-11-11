@@ -1,4 +1,5 @@
 const uploadFiles = require("../middleware/store")
+const express = require('express')
 
 
 module.exports = app =>{
@@ -7,9 +8,9 @@ module.exports = app =>{
     
     // Routes
     router.get("/paymail/:codigo", mailController.payMail)
-    router.post("/email/rolex",uploadFiles.any() ,mailController.rolexContact)
-    router.post("/email/rolex-new",uploadFiles.any() ,mailController.rolexNewContact)
-    router.post("/email/contacto",uploadFiles.any() ,mailController.contact)
+    router.post("/email/rolex",express.json() ,mailController.rolexContact)
+    router.post("/email/rolex-new",express.json() ,mailController.rolexNewContact)
+    router.post("/email/contacto",express.json() ,mailController.contact)
         
     app.use('/api',router) 
 

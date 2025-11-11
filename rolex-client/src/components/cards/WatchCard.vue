@@ -1,4 +1,6 @@
 <script setup>
+import GLOBAL_OBJECT from '../../utils/globaj';
+
 
 defineProps({
   item: Object,
@@ -16,7 +18,7 @@ defineProps({
   >
   
     <img
-      :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${item.modelo}-showcase.webp`"
+      :src="`${GLOBAL_OBJECT.STORAGE_URL}rolex-relojes-new/${item.modelo}-showcase.webp`"
       :alt="item.modelo"
       class="w-full md:w-1/2 lg:w-[55%] xl:w-[60%] duration-200 ease-in-out group-hover:scale-110"
     />

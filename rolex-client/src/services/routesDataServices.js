@@ -8,6 +8,10 @@ class Search {
     return http.get(`/search/${id}`);
   }
 
+  updateRoutes(){
+    return http.get('/generate-search-routes')
+  }
+
  
 }
 

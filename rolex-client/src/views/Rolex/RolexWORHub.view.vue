@@ -57,7 +57,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
             <template #button>Más información</template>
           </SectionNavigationCard>
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-viena" :link="{ name: 'world-of-rolex-article-9' }"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-viena" :link="{ name: 'world-of-rolex-article-9' }"
             class="w-full">
             <template #sub>Publicado el 5 de Diciembre, 2025</template>
             <template #title>Rolex y la Filarmónica de Viena</template>
@@ -70,10 +70,10 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-us-open"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-us-open"
             :link="{ name: 'world-of-rolex-article-8' }" class="w-full">
             <template #sub>Publicado el 23 de Agosto, 2024</template>
             <template #title>Rolex y el US Open</template>
@@ -84,10 +84,10 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-the-open"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-the-open"
             :link="{ name: 'world-of-rolex-article-7' }" class="w-full">
             <template #sub>Publicado el 12 de Julio, 2024</template>
             <template #title>Rolex y The Open: el major más antiguo del golf</template>
@@ -100,8 +100,9 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-admundi"
+          </SectionNavigationCard> -->
+
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-admundi"
             :link="{ name: 'world-of-rolex-article-6' }" class="w-full">
             <template #sub>Publicado el 4 de Julio, 2024</template>
             <template #title>Rolex y The Amundi Evian Championship</template>
@@ -117,8 +118,9 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-wimbledon"
+          </SectionNavigationCard> -->
+
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-wimbledon"
             :link="{ name: 'world-of-rolex-article-5' }" class="w-full ">
             <template #sub>Publicado el 1 de Junio, 2024</template>
             <template #title>Rolex y The Championship, Wimbledon</template>
@@ -134,9 +136,9 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-lemans" :link="{ name: 'world-of-rolex-article-4' }"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-lemans" :link="{ name: 'world-of-rolex-article-4' }"
             class="w-full">
             <template #sub>Publicado el 21 de Junio, 2024</template>
             <template #title>Las 24 Horas de Le Mans</template>
@@ -149,9 +151,9 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-grand-slam"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-grand-slam"
             :link="{ name: 'world-of-rolex-article-3' }" class="w-full">
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>Rolex Grand Slam of Show Jumping</template>
@@ -166,9 +168,9 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
-          <SectionNavigationCard img="world-of-rolex/world-of-rolex-sailgp" :link="{ name: 'world-of-rolex-article-2' }"
+          <!-- <SectionNavigationCard img="world-of-rolex/world-of-rolex-sailgp" :link="{ name: 'world-of-rolex-article-2' }"
             class="w-full ">
             <template #sub>Publicado el 9 de Abril, 2024</template>
             <template #title>SailGP</template>
@@ -182,7 +184,7 @@ import SectionNavigationCard from "../../components/cards/SectionNavigationCard.
               </h2>
             </template>
             <template #button>Más información</template>
-          </SectionNavigationCard>
+          </SectionNavigationCard> -->
 
           <SectionNavigationCard img="world-of-rolex/world-of-rolex-beyond-rolex"
             :link="{ name: 'world-of-rolex-article-1' }" class="w-full">

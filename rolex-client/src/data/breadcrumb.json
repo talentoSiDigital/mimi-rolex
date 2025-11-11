@@ -8,7 +8,7 @@
     "mantenimiento-rolex": [
         "Mantenimiento Rolex"
     ],
-    "mantenimiento-rolex-procedimiento": [
+    "mantenimiento-procedimiento-rolex": [
         "Mantenimiento Rolex",
         "Procedimiento"
     ],
@@ -22,29 +22,32 @@
     "rolex-nuevos-modelos": [
         "Nuevos Modelos"
     ],
-    "rolex-nuevos-modelos-1908": [
+    "rolex-nuevos-modelos-2025-1908": [
         "Nuevos Modelos",
         "1908"
     ],
-    "rolex-nuevos-modelos-cosmograph-daytona": [
+    "rolex-nuevos-modelos-2025-cosmograph-daytona": [
         "Nuevos Modelos",
         "Cosmograph Daytona"
     ],
-    "rolex-nuevos-modelos-day-date": [
+    "rolex-nuevos-modelos-2025-day-date": [
         "Nuevos Modelos",
         "Day-Date"
     ],
-    "rolex-nuevos-modelos-deepsea": [
+    "rolex-nuevos-modelos-2025-deepsea": [
         "Nuevos Modelos",
         "Deepsea"
     ],
-    "rolex-nuevos-modelos-gmt-master-ii": [
+    "rolex-nuevos-modelos-2025-gmt-master-ii": [
         "Nuevos Modelos",
         "GMT-Master II"
     ],
-    "rolex-nuevos-modelos-sky-dweller": [
+    "rolex-nuevos-modelos-2025-sky-dweller": [
         "Nuevos Modelos",
         "Sky-Dweller"
+    ],
+    "rolex-nuevos-modelos-2025-land-dweller": [
+        "Nuevos Modelos"
     ],
     "world-of-rolex-hub": [
         "World Of Rolex"
@@ -87,10 +90,73 @@
     "rolex-coleccion": [
         "Colección Rolex"
     ],
+    "rolex-coleccion-cosmograph-daytona": [
+        "Colección Rolex",
+        "Cosmograph Daytona"
+    ],
+    "rolex-coleccion-1908": [
+        "Colección Rolex",
+        "1908"
+    ],
+    "rolex-coleccion-yacht-master": [
+        "Colección Rolex",
+        "Yacht Master"
+    ],
+    "rolex-coleccion-sky-dweller": [
+        "Colección Rolex",
+        "Sky-Dweller"
+    ],
+    "rolex-coleccion-gmt-master-ii": [
+        "Colección Rolex",
+        "GMT-Master-II"
+    ],
+    "rolex-coleccion-explorer": [
+        "Colección Rolex",
+        "Explorer"
+    ],
+    "rolex-coleccion-oyster-perpetual": [
+        "Colección Rolex",
+        "Oyster Perpetual"
+    ],
+    "rolex-coleccion-day-date": [
+        "Colección Rolex",
+        "Day-Date"
+    ],
+    "rolex-coleccion-datejust": [
+        "Colección Rolex",
+        "Datejust"
+    ],
+    "rolex-coleccion-lady-datejust": [
+        "Colección Rolex",
+        "Lady Datejust"
+    ],
+    "rolex-coleccion-air-king": [
+        "Colección Rolex",
+        "Air King"
+    ],
+    "rolex-coleccion-land-dweller": [
+        "Colección Rolex",
+        "Land Dweller"
+    ],
+    "rolex-coleccion-submariner": [
+        "Colección Rolex",
+        "Submariner"
+    ],
+    "rolex-coleccion-sea-dweller": [
+        "Colección Rolex",
+        "Sea Dweller"
+    ],
+    "rolex-coleccion-deepsea": [
+        "Colección Rolex",
+        "Deepsea"
+    ],
     "relojes-rolex": [
         "Colección Rolex"
     ],
     "rolex-accesorios": [
+        "Accesorios Rolex"
+    ],
+    "rolex-accesorios-display": [
         "Accesorios Rolex"
     ]
 }

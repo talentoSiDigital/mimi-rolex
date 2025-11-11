@@ -9,7 +9,6 @@ const check = ref(false)
 <template>
 
     <section class="flex flex-col  w-full justify-center items-center ">
-        {{ check }}
         <Transition name="bounce">
             <RelojeriaForm v-if="!check" v-model="check" />
 

@@ -34,6 +34,7 @@ const sliderItems = (item,modelo) => {
 }
 
 
+
 const textBoxCounter = ref(0)
 function isVisible(item) {
   if (textBoxCounter.value == item) {
@@ -42,7 +43,7 @@ function isVisible(item) {
   return false
 }
 
-const storageRoute = ref(GLOBAL_OBJECT.STORAGE_URL+'rolex-relojes-new');
+const storageRoute = ref(GLOBAL_OBJECT.STORAGE_URL+'rolex-relojes-new/');
 // const storageRoute = ref("http://localhost:3000/storage/rolex-relojes-new/");
 
 const route = useRoute();
@@ -52,6 +53,10 @@ const name = ref(currentRoute);
 const family = ref("")
 const rmc = ref("")
 const watchName = ref("")
+
+const sliderCounter = computed(()=>{
+  return currentRoute == 'm134300-0013' || currentRoute == 'm134300-0012' ? '':''
+})
 
 function getDiameter(text) {
   const r = /\d+/;
@@ -197,7 +202,7 @@ watch(isReady, () => {
             <div v-else>
               <carousel :items-to-show="1" v-model="currentSlide" :wrapAround="true" :autoplay="3000" :transition="600"
                 class="w-full ">
-                <slide v-for="slide in 5" :key="slide">
+                <slide v-for="slide in 4" :key="slide">
                   <div class=" flex justify-center w-full">
                     <img :src="sliderItems(slide-1, state.getAll.modelo)" :alt="`slide-${slide}`" class=" w-10/12 " :class="slide-1 == 0? 'w-2/3':'w-full'" />
 
@@ -206,7 +211,7 @@ watch(isReady, () => {
                 </slide>
               </carousel>
               <div class="flex gap-2 justify-center w-full mt-4 ">
-                <div v-for="(item, index) in 5" :key="item">
+                <div v-for="(item, index) in 4" :key="item">
                   <div class="duration-200  h-2 block rounded-sm hover:bg-rolex-green active:bg-rolex-green"
                     @click="currentSlide = index" :class="currentSlide == index ? 'w-14 bg-rolex-green' : 'w-4 bg-gray-200'">
                   </div>

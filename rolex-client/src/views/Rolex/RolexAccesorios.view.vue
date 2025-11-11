@@ -9,6 +9,12 @@ import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
 import GLOBAL_OBJECT from "../../utils/globaj";
 import { onMounted, ref } from "vue";
 import rolexDataService from "../../services/rolexDataService";
+import { useElementHover } from "@vueuse/core";
+
+
+const myHoverableElement = ref();
+const isHovered = useElementHover(myHoverableElement);
+
 
 const route = useRoute();
 const accesories = ref()
@@ -19,14 +25,14 @@ function getAllAccesories() {
         .then((d => {
             accesories.value = d.data
             isReady.value = true
+            console.log("ready");
         })).catch((e) => {
-
+            console.log(e);
         })
 }
 
-onMounted(() => {
-    getAllAccesories()
-})
+getAllAccesories()
+
 
 </script>
 
@@ -58,7 +64,7 @@ onMounted(() => {
                 </template>
             </RolexHeader>
 
-            <section v-if="isReady">
+            <section >
                 <div class="flex justify-center bg-rolex-brown-light-2 text-rolex-brown pb-[10vh]">
                     <div class="grid grid-cols-2 md:grid-cols-3 w-10/12 md:w-8/12 gap-2">
                         <a v-for="item in accesories" :key="item" :href="`/rolex/accesorios/${item.modelo}`"

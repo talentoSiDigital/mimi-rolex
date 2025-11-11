@@ -12,7 +12,7 @@ const bcrypt = require('bcrypt');
 // Save User to Database
 exports.signup = (req, res) => {
     // CREATE USER WITH REQUEST PARAMS
-
+    console.log(req.body);
 
     User.create({
         name: req.body.name,
@@ -38,6 +38,7 @@ exports.signup = (req, res) => {
 };
 
 exports.signin = (req, res) => {
+    console.log(req);
     User.findOne({
         where: {
             email: req.body.email

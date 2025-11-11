@@ -8,7 +8,7 @@ import Loading from '../../../components/global-components/Loading.vue';
 import WatchForm from '../../../components/form-components/WatchForm.vue';
 import RelojeriaForm from '../../../components/dashboard/RelojeriaForm.vue';
 import { auth } from '../../../store/auth.module';
-
+import routesDataServices from '../../../services/routesDataServices';
 const piniaStore = auth()
 const errorHandlerMessage = ref({
     messagesError: '',
@@ -28,15 +28,15 @@ const searchParam = ref('')
 
 const messageToggle = ref(false)
 const notification = ref(false)
-
+const notificationMessage = ref("Texto de prueba")
+const iconCharge = ref('globe')
 const icon = ref(['fas', 'magnifying-glass'])
 const sortingIndicator = ref(0)
-
 const modal = ref(false)
 
 function getAllWatches() {
-    allWatches.value=[]
-    displayWatches.value=[]
+    allWatches.value = []
+    displayWatches.value = []
     adminDataServices.getAllWatches(user)
         .then((data) => {
             allWatches.value = data.data
@@ -118,9 +118,44 @@ function getFormattedDate(ISODate) {
     return formattedDate
 }
 
-// setInterval(() => {
-//     notification.value = !notification.value
-// }, 3000);
+function activateNotification() {
+    notification.value = !notification.value
+    setTimeout(() => {
+        notification.value = !notification.value
+    }, 3000);
+}
+
+function toggleAvailable(id) {
+    adminDataServices.updateSingleWatch(id, user).then((d) => {
+        if (d.status == 200) {
+            getAllWatches()
+            notificationMessage.value = "Reloj actualizado con éxito"
+        }
+        activateNotification()
+    }).catch(() => {
+        notificationMessage.value = "Ha ocurrido un error, intente nuevamente"
+        activateNotification()
+    })
+}
+
+
+function updateRoutes() {
+    iconCharge.value = 'spinner'
+
+    routesDataServices.updateRoutes().then(() => {
+        notificationMessage.value = "Rutas actualizadas correctamente"
+        activateNotification()
+        iconCharge.value = 'globe'
+    }
+
+    ).catch(e => {
+        notificationMessage.value = "Hubo un error al actualizar las rutas"
+        activateNotification()
+        iconCharge.value = 'globe'
+    })
+
+}
+
 
 
 watch(searchParam, () => {
@@ -135,7 +170,7 @@ watch(searchParam, () => {
     }
 })
 watch(modal, () => {
-    if(modal.value == false){
+    if (modal.value == false) {
         getAllWatches()
     }
 })
@@ -151,9 +186,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <section>
+    <section class="w-full">
         <div class=" flex justify-center w-full py-6">
-            <header class="text-center bg-main-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 border border-gray-100 px-3 py-3 font-montserrat w-11/12 text-rolex-green">
+            <header
+                class="text-center bg-main-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 border border-gray-100 px-3 py-3 font-montserrat w-11/12 text-rolex-green">
                 <h2 class="font-bold text-2xl">Bienvenido al panel de control</h2>
                 <p class="text-xl">Que deseas hacer?</p>
             </header>
@@ -162,29 +198,29 @@ onMounted(() => {
         <Transition name="notification">
 
             <section v-if="notification"
-                class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 custom-border px-3 py-3 fixed shadow-sm border-2 border-white z-99 top-6 right-6">
-                <h2>MMMMMM</h2>
+                class="bg-main-green text-dark-green rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-80 custom-border px-3 py-3 fixed shadow-sm border-2 border-white z-99 top-6 right-6 w-1/4 text-center">
+                <h2>{{ notificationMessage }}</h2>
             </section>
         </Transition>
 
-        <section class="flex flex-col  w-full justify-center items-center ">
+        <section class="flex flex-col  w-full justify-center items-center overflow-hidden">
 
-            <DashboardCard class="col-span-2 w-11/12 shadow-xl">
+            <DashboardCard class="col-span-2 w-11/12 min-w-11/12 shadow-xl">
                 <template #title>
                     <div class="flex justify-between">
                         <h2 class="text-4xl">Relojes Tudor</h2>
                         <div class="relative">
                             <input type="text" name="" id="" v-model="searchParam" placeholder="m111111-0000"
-                                class="p-2 rounded-lg ">
+                                class="p-2 rounded-lg bg-white">
                             <font-awesome-icon @click="deleteParams" :icon="icon"
                                 class="absolute right-3 top-3 cursor-pointer" />
                         </div>
                     </div>
                 </template>
                 <template #content>
-                    <div class=" overflow-scroll h-[600px] pb-4 w-full">
+                    <div class=" h-[600px] pb-4 overflow-scroll  w-full min-w-full flex">
                         <div v-if="errorHandlerMessage.watchesError != ''"
-                            class=" overflow-scroll h-[450px] space-y-4 flex justify-center items-center">
+                            class=" overflow-scroll h-full space-y-4 flex  justify-center items-center">
                             <h2 class="text-3xl font-bold">{{ errorHandlerMessage.watchesError }}</h2>
 
                         </div>
@@ -199,22 +235,27 @@ onMounted(() => {
 
                                     <th @click="sortByParam('serie', 2)"
                                         :class="sortingIndicator == 2 ? 'font-black underline' : 'font-bold '"
-                                        class="h-10 border border-white w-[20%] hover:underline cursor-pointer">Serie
+                                        class="h-10 border border-white w-[30%] hover:underline cursor-pointer">Serie
+                                    </th>
+                                    <th @click="sortByParam('coleccion', 3)"
+                                        :class="sortingIndicator == 2 ? 'font-black underline' : 'font-bold '"
+                                        class="h-10 border border-white w-[10%] hover:underline cursor-pointer">
+                                        Coleccion
                                     </th>
 
-                                    <th class="h-10 border border-white w-[15%]">IMG</th>
+                                    <th class="h-10 border border-white w-[20%]">IMG</th>
 
-                                    <th @click="sortByParam('precio', 3)"
+                                    <th @click="sortByParam('precio', 4)"
                                         :class="sortingIndicator == 3 ? 'font-black underline' : 'font-bold '"
                                         class="h-10 border border-white w-[10%] hover:underline cursor-pointer">Precio
                                     </th>
 
-                                    <th @click="sortByParam('disponible', 4)"
+                                    <th @click="sortByParam('disponible', 5)"
                                         :class="sortingIndicator == 4 ? 'font-black underline' : 'font-bold '"
-                                        class="h-10 border border-white w-[10%] hover:underline cursor-pointer">
+                                        class="h-10 border border-white w-[15%] hover:underline cursor-pointer">
                                         Disponible</th>
 
-                                    <th class="h-10 border border-white w-[10%]">Acciones</th>
+                                    <th class="h-10 border border-white w-[15%]">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -222,22 +263,24 @@ onMounted(() => {
                                 <tr class="text-center" v-for="value in displayWatches" :key="value">
                                     <td class="border border-white ">{{ value.nombre }}</td>
                                     <td class="border border-white">{{ value.serie }}</td>
+                                    <td class="border border-white">{{ value.coleccion }}</td>
                                     <td class="border border-white flex justify-center"><img :src="value.img" alt=""
                                             class="w-2/3"></td>
                                     <td class="border border-white w-[10%]">${{ value.precio }}</td>
                                     <td class="border border-white w-[10%]">{{ value.disponible == 1 ? 'Disponible' :
                                         'No disponible' }}</td>
                                     <td class="border border-white w-[10%]">
-                                        <p class="underline cursor-pointer">Desactivar/Activar</p>
-                                        <p class="underline cursor-pointer">Actualizar</p>
+                                        <p @click="toggleAvailable(value.id)" class="underline cursor-pointer">{{
+                                            value.disponible
+                                                == 1 ? 'Desactivar' : 'Activar' }}</p>
                                     </td>
                                 </tr>
 
                             </tbody>
                         </table>
 
-                        <div v-else class=" overflow-scroll h-[450px] space-y-4 flex justify-center items-center">
-                            <h2 class="text-3xl font-bold">No hay resultados</h2>
+                        <div v-else class="overflow-hidden h-full space-y-4 w-full border flex items-center">
+                            <h2 class="text-3xl font-bold text-center w-full">No hay resultados</h2>
                         </div>
                     </div>
 
@@ -325,11 +368,18 @@ onMounted(() => {
                             <p>Agregar reloj</p>
                         </RouterLink>
                         <button @click="modal = true"
-                            class="p-2 border-2 border-rolex-green  rounded-xl bg-rolex-green text-white duration-200 hover:bg-white hover:text-dark-green  flex items-center gap-2 ">
+                            class="cursor-pointer p-2 border-2 border-rolex-green  rounded-xl bg-rolex-green text-white duration-200 hover:bg-white hover:text-dark-green  flex items-center gap-2 ">
                             <font-awesome-icon :icon="['fas', 'pen-to-square']" class="text-3xl" />
                             <p>Actualizar inventario</p>
 
                         </button>
+                        <button @click="updateRoutes"
+                            class="cursor-pointer p-2 border-2 border-rolex-green  rounded-xl bg-rolex-green text-white duration-200 hover:bg-white hover:text-dark-green  flex items-center gap-2 ">
+                            <font-awesome-icon :class="iconCharge == 'globe'?'animate-none':'animate-spin'" :icon="['fas', iconCharge]" class="text-3xl" />
+                            <p>Actualizar Rutas</p>
+
+                        </button>
+
 
                     </div>
                 </template>
@@ -374,10 +424,10 @@ onMounted(() => {
         <Transition enter-active-class="duration-100 ease-in-out" enter-from-class="transform opacity-0"
             enter-to-class="opacity-100" leave-active-class="duration-700 ease-in-out" leave-from-class="opacity-700"
             leave-to-class="transform opacity-0">
-            <WatchesAvailability v-if="modal" v-model="modal"/>
+            <WatchesAvailability v-if="modal" v-model="modal" />
 
         </Transition>
-      
+
 
     </section>
 </template>
@@ -393,11 +443,11 @@ onMounted(() => {
 
 
 .notification-enter-active {
-    animation: notificate 0.5s;
+    animation: notificate 0.2s ease-out;
 }
 
-.notification-enter-active {
-    animation: notificate 0.5s reverse;
+.notification-leave-active {
+    animation: notificate 0.2s reverse;
 }
 
 @keyframes bounce-in {
@@ -416,15 +466,19 @@ onMounted(() => {
 
 @keyframes notificate {
     0% {
-        transform: translateY(-100%);
+        transform: translateX(100%);
+    }
+
+    60% {
+        transform: translateX(-15%);
     }
 
     80% {
-        transform: translateY(1%);
+        transform: translateX(5%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
 

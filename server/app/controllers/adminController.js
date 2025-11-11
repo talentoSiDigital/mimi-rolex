@@ -25,16 +25,13 @@ async function isAdmin(user) {
 }
 
 exports.findAllWatches = async (req, res) => {
-    if (!isAdmin(req.body.user)) {
+    if (isAdmin(req.body.user)==false ||  !req.body.user) {
         return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
     }
     // Find all tudor rolex for showcase
     const toSend = []
     const watchesObject = await Store.Watchmaking.findAll({
-        where: {
-            coleccion: 'Tudor',
-
-        },
+        
         order: [['serie', 'ASC']],
     })
 
@@ -48,7 +45,7 @@ exports.findAllWatches = async (req, res) => {
 };
 
 exports.findAllMessages = async (req, res) => {
-    if (!isAdmin(req.body.user)) {
+    if (isAdmin(req.body.user)==false ||  !req.body.user) {
         return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
     }
     const allMessages = await Messages.contactTracking.findAll()
@@ -58,7 +55,7 @@ exports.findAllMessages = async (req, res) => {
 }
 
 exports.findAllMessagesRolex = async (req, res) => {
-    if (!isAdmin(req.body.user)) {
+    if (isAdmin(req.body.user)==false ||  !req.body.user) {
         return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
     }
     const allMessages = await Messages.rolexTracking.findAll()
