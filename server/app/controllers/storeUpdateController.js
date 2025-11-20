@@ -191,6 +191,43 @@ exports.updateStoreAvailabilitySingle = async (req, res) => {
 
 
 }
+exports.updateStoreAvailabilitySingleCollection = async (req, res) => {
+
+    try {
+
+        const user = req.body.user
+        if (!req.body) {
+            return res.status(400).send({ message: "Faltan los datos para crear el producto" })
+        }
+
+        if (await isAdmin(user) === false) {
+            console.log();
+            return res.status(403).send({ message: "No tienes permisos para realizar esta acción" })
+        }
+
+
+        const itemToSearch = req.body.id
+        const collectionToChange = req.body.collection == 'Tudor'? 'Novedades':'Tudor'
+
+
+        await Store.Watchmaking.update(
+            { coleccion:collectionToChange },
+            { where: { id: itemToSearch } }
+        );
+
+
+
+        res.status(200).send("Disponibilidad actualizada correctamente");
+
+
+    } catch (error) {
+        res.status(500).send({
+            message: error.message || "Ocurrió un error al actualizar la disponibilidad."
+        });
+    }
+
+
+}
 
 //TOGGLE SPECIFIC WATCH AVAILABILITY
 exports.updateSingleAvailability = async (req, res) => {

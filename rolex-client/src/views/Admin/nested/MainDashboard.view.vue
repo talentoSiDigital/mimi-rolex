@@ -2,13 +2,10 @@
 import { onMounted, ref, watch } from 'vue';
 import { RouterLink } from 'vue-router';
 import DashboardCard from '../../../components/dashboard/admin/DashboardCard.vue';
-import adminDataServices from '../../../services/adminDataServices';
 import WatchesAvailability from '../../../components/dashboard/admin/WatchesAvailability.vue';
-import Loading from '../../../components/global-components/Loading.vue';
-import WatchForm from '../../../components/form-components/WatchForm.vue';
-import RelojeriaForm from '../../../components/dashboard/RelojeriaForm.vue';
-import { auth } from '../../../store/auth.module';
+import adminDataServices from '../../../services/adminDataServices';
 import routesDataServices from '../../../services/routesDataServices';
+import { auth } from '../../../store/auth.module';
 const piniaStore = auth()
 const errorHandlerMessage = ref({
     messagesError: '',
@@ -137,6 +134,18 @@ function toggleAvailable(id) {
         activateNotification()
     })
 }
+function toggleCollection(id, collection) {
+    adminDataServices.updateCollection(id, collection, user).then((d) => {
+        if (d.status == 200) {
+            getAllWatches()
+            notificationMessage.value = "Reloj actualizado con éxito"
+        }
+        activateNotification()
+    }).catch(() => {
+        notificationMessage.value = "Ha ocurrido un error, intente nuevamente"
+        activateNotification()
+    })
+}
 
 
 function updateRoutes() {
@@ -252,10 +261,10 @@ onMounted(() => {
 
                                     <th @click="sortByParam('disponible', 5)"
                                         :class="sortingIndicator == 4 ? 'font-black underline' : 'font-bold '"
-                                        class="h-10 border border-white w-[15%] hover:underline cursor-pointer">
+                                        class="h-10 border border-white w-[10%] hover:underline cursor-pointer">
                                         Disponible</th>
 
-                                    <th class="h-10 border border-white w-[15%]">Acciones</th>
+                                    <th class="h-10 border border-white w-[20%]">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -269,7 +278,11 @@ onMounted(() => {
                                     <td class="border border-white w-[10%]">${{ value.precio }}</td>
                                     <td class="border border-white w-[10%]">{{ value.disponible == 1 ? 'Disponible' :
                                         'No disponible' }}</td>
-                                    <td class="border border-white w-[10%]">
+                                    <td class="border border-white w-[20%]">
+                                        <p @click="toggleCollection(value.id, value.coleccion)"
+                                            class="underline cursor-pointer">{{
+                                                value.collection
+                                                    == 'Tudor' ? 'Cambiar a Novedades' : 'Cambiar a Tudor' }}</p>
                                         <p @click="toggleAvailable(value.id)" class="underline cursor-pointer">{{
                                             value.disponible
                                                 == 1 ? 'Desactivar' : 'Activar' }}</p>
@@ -375,7 +388,8 @@ onMounted(() => {
                         </button>
                         <button @click="updateRoutes"
                             class="cursor-pointer p-2 border-2 border-rolex-green  rounded-xl bg-rolex-green text-white duration-200 hover:bg-white hover:text-dark-green  flex items-center gap-2 ">
-                            <font-awesome-icon :class="iconCharge == 'globe'?'animate-none':'animate-spin'" :icon="['fas', iconCharge]" class="text-3xl" />
+                            <font-awesome-icon :class="iconCharge == 'globe' ? 'animate-none' : 'animate-spin'"
+                                :icon="['fas', iconCharge]" class="text-3xl" />
                             <p>Actualizar Rutas</p>
 
                         </button>

@@ -21,7 +21,9 @@ module.exports = app => {
     router.post("/update/store-analytics", express.json(), update.getStoreAnalytics)
     router.post("/update/store-single-availability", express.json(), update.updateSingleAvailability)
     router.post("/update/store-availability", express.json(), update.updateStoreAvailability)
-    router.post("/update/store-availability-single", express.json(), update.updateStoreAvailabilitySingle)
+    router.post("/update/store-availability-single", express.json(), update.updateStoreAvailabilitySingle) //funciona
+    router.post("/update/store-availability-single-collection", express.json(), update.updateStoreAvailabilitySingleCollection) // da error de cors
+
     
  
 

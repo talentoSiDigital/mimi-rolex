@@ -19,6 +19,7 @@ const router = useRouter();
 const links = [
   "/rolex/gmt-master-ii",
   "/novedades/tudor",
+  "/novedades/tudor",
 ]
 function checkClick(pos) {
   router.push(links[pos]);
@@ -35,7 +36,7 @@ const classes = ref([
 
 
 let carouselInterval;
-const IMAGE_QUANTITY = 2
+const IMAGE_QUANTITY = 3
 
 function startCarousel() {
   if (carouselInterval) clearInterval(carouselInterval)
@@ -87,12 +88,15 @@ function changeCounter(direction) {
             src="/assets/routes-assets/headers/1-desktop.webp" alt="headers-1-desktop" />
           <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
             src="/assets/routes-assets/headers/2-desktop.webp" alt="headers-2-desktop" />
+          <img @click="checkClick(counter)" rel="preload" fetchpriority="low" as="image"
+            src="/assets/routes-assets/headers/3-desktop.webp" alt="headers-3-desktop" />
         </div>
       </div>
       <div v-else class="overflow-hidden">
         <div class="duration-500 flex" :class="classes[counter]">
           <img @click="checkClick(counter)" src="/assets/routes-assets/headers/1-mobile.webp" alt="headers-1-mobile" />
           <img @click="checkClick(counter)" src="/assets/routes-assets/headers/2-mobile.webp" alt="headers-2-mobile" />
+          <img @click="checkClick(counter)" src="/assets/routes-assets/headers/3-mobile.webp" alt="headers-3-mobile" />
         </div>
       </div>
 

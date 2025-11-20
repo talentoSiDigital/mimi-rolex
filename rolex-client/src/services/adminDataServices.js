@@ -32,7 +32,7 @@ class AdminData {
 
   // metodo enviado desde adminDataServices.js
   createWatch(data) {
-   
+
     return http.post("/admin/create/store-product", data)
   }
 
@@ -43,8 +43,15 @@ class AdminData {
       id: id
     })
   }
+  updateCollection(id,collection, user) {
+    return http.post("/admin/update/store-availability-single-collection", {
+      user: user,
+      id: id,
+      collection:collection
+    })
+  }
 
- 
+
 
 
 
