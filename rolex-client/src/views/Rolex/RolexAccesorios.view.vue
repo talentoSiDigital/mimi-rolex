@@ -30,8 +30,10 @@ function getAllAccesories() {
             console.log(e);
         })
 }
+onMounted(()=>{
+    getAllAccesories()
 
-getAllAccesories()
+})
 
 
 </script>
@@ -63,9 +65,9 @@ getAllAccesories()
                     <!-- <span v-html="currentData.headerSection.text"></span> -->
                 </template>
             </RolexHeader>
-
+            {{ isReady }} - {{ accesories }}
             <section >
-                <div class="flex justify-center bg-rolex-brown-light-2 text-rolex-brown pb-[10vh]">
+                <div v-if="isReady" class="flex justify-center bg-rolex-brown-light-2 text-rolex-brown pb-[10vh]">
                     <div class="grid grid-cols-2 md:grid-cols-3 w-10/12 md:w-8/12 gap-2">
                         <a v-for="item in accesories" :key="item" :href="`/rolex/accesorios/${item.modelo}`"
                             class="bg-rolex-brown-light-1 h-full flex flex-col items-center justify-center pb-6 cursor-pointer group ">

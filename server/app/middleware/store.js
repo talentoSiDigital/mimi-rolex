@@ -1,6 +1,6 @@
 const multer = require('multer');
 
-// const storagePath = require('path').resolve(__dirname, '..','..','storage','TEST')
+// const storagePath = require('path').resolve(__dirname, '..','..','..','public_html','storage','store-products')
 const storagePath = require('path').resolve(__dirname, '..','..','storage','store-products')
 function changeName(name) {
 

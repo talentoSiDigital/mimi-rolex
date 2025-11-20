@@ -44,9 +44,9 @@ const serveStatic = require("serve-static")
 
 
 //NO BORRES ESTAS LINEAS 
-// app.use(express.static(path));
-// app.use(history())
-// app.use(serveStatic(path));
+app.use(express.static(path));
+app.use(history())
+app.use(serveStatic(path));
 // 
 require('./app/api/admin.routes')(app);
 require("./app/api/slider.routes")(app);
