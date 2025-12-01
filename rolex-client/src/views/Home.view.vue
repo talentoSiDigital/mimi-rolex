@@ -17,7 +17,7 @@ const checkWindowSize = computed(() => {
 
 const router = useRouter();
 const links = [
-  "/rolex/gmt-master-ii",
+  "/rolex/datejust",
   "/novedades/tudor",
   "/novedades/tudor",
 ]

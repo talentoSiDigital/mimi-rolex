@@ -155,7 +155,7 @@ function startOver() {
 }
 
 function onSubmit(values) {
-    // loadingState.value = true
+    loadingState.value = true
     values.newTableContent = formatTableInput(values.tableContent);
     values.imageCount = values.imagenes.length
     values.user = piniaStore.$state.user
