@@ -105,6 +105,19 @@ const router = createRouter({
     }
     ,
     {
+      path: "/rolex/seleccion-para-las-fiestas",
+      name: "rolex-seleccion-festiva",
+      component: () => import("./views/Rolex/RolexFestiveSelection.view.vue"),
+      meta: {
+        title: "Selección Rolex para las fiestas | Mimi Joyería",
+        description: "Para las fiestas, Rolex presenta una selección especial de distintivos y refinados relojes y exclusivos accesorios. Descúbralos en Mimi Joyería, su Distribuidor Oficial Rolex en Venezuela.",
+        breadcrumb: "SeleccionFestiva",
+        pageType: "festive page"
+
+      }
+    }
+    ,
+    {
       path: "/rolex/contacto",
       name: "rolex-contacto",
       component: () => import("./views/Rolex/RolexContacto.view.vue"),

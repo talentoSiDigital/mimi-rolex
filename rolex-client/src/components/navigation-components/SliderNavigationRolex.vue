@@ -6,7 +6,7 @@ import { filename } from 'pathe/utils'
 import { useWindowSize } from '@vueuse/core'
 
 const { width } = useWindowSize()
-const isDesktop = computed(()=>{
+const isDesktop = computed(() => {
     return width.value >= 1024 ? true : false
 })
 
@@ -42,12 +42,20 @@ const sliderItems = [
 
     },
     {
+        "src": "festive",
+        "link": "rolex-seleccion-festiva",
+        "alt": "Rolex-seleccion-festiva",
+        "title": "Selección Festiva Rolex"
+
+    },
+    {
         "src": "nuevos-modelos",
         "link": "rolex-nuevos-modelos",
         "alt": "Rolex-nuevos-modelos",
         "title": "Nuevos modelos 2025"
 
     },
+    
     {
         "src": "accesorios",
         "link": "rolex-accesorios",
@@ -55,6 +63,7 @@ const sliderItems = [
         "title": "Rolex Accesorios"
 
     },
+
     {
         "src": "watchmaking",
         "link": "rolex-watchmaking",
@@ -89,23 +98,23 @@ const sliderItems = [
 ]
 
 
-const carouselNavigation = computed(()=>{
+const carouselNavigation = computed(() => {
     return isDesktop.value ? sliderItems.length - 3 : sliderItems.length - 2
 })
 
 
 
-function updateSlide(dir){
-    if(dir === 'next'){
-        if(currentSlide.value < sliderItems.length - (isDesktop.value ? 4 : 2)){
+function updateSlide(dir) {
+    if (dir === 'next') {
+        if (currentSlide.value < sliderItems.length - (isDesktop.value ? 4 : 2)) {
             currentSlide.value++
-        }else{
+        } else {
             currentSlide.value = 0
         }
     } else {
-        if(currentSlide.value > 0){
+        if (currentSlide.value > 0) {
             currentSlide.value--
-        }else{
+        } else {
             currentSlide.value = sliderItems.length - (isDesktop.value ? 4 : 2)
         }
     }
@@ -127,14 +136,14 @@ setInterval(() => {
                 class="bg-rolex-grey-light h-4 w-4 px-4 py-3 cursor-pointer rounded-full duration-200 hover:bg-rolex-green hover:text-white  "
                 @click="updateSlide('prev')" />
 
-            <carousel :items-to-show="isDesktop ? 4 : 2" :snap-align="'start'" v-model="currentSlide" :itemsToScroll="1" 
+            <carousel :items-to-show="isDesktop ? 4 : 2" :snap-align="'start'" v-model="currentSlide" :itemsToScroll="1"
                 :transition="600" class="w-11/12 md:w-full  ">
                 <slide v-for="slide in sliderItems" :key="slide">
                     <router-link :to="{ name: slide.link }" class="mx-1 group ">
-                        <img v-if="isDesktop" :src="`/assets/routes-assets/rolex-slider/${slide.src}.webp`" :alt="slide.alt"
-                            class="w-full lg:w-full">
-                        <img v-else :src="`/assets/routes-assets/rolex-slider/${slide.src}-mobile.webp`" :alt="slide.alt"
-                            class="w-full lg:w-full">
+                        <img v-if="isDesktop" :src="`/assets/routes-assets/rolex-slider/${slide.src}.webp`"
+                            :alt="slide.alt" class="w-full lg:w-full">
+                        <img v-else :src="`/assets/routes-assets/rolex-slider/${slide.src}-mobile.webp`"
+                            :alt="slide.alt" class="w-full lg:w-full">
                         <h2
                             class="duration-200 group-hover:text-rolex-green-2 text-rolex-brown text-lg font-helvetica font-bold text-left">
                             {{ slide.title }}</h2>
@@ -148,12 +157,12 @@ setInterval(() => {
                 @click="updateSlide('next')" />
 
         </div>
-      
 
-        <div  class="flex gap-2 my-4">
-            <div v-for="(item, index) in carouselNavigation" :key="item" class="h-6 flex items-center"  @click="currentSlide = index">
+
+        <div class="flex gap-2 my-4">
+            <div v-for="(item, index) in carouselNavigation" :key="item" class="h-6 flex items-center"
+                @click="currentSlide = index">
                 <div class="duration-200  h-1 block rounded-sm hover:bg-rolex-green active:bg-rolex-green"
-                  
                     :class="currentSlide == index ? 'w-14 bg-rolex-green' : 'w-6 bg-rolex-grey-light'"></div>
             </div>
 

@@ -65,7 +65,6 @@ onMounted(()=>{
                     <!-- <span v-html="currentData.headerSection.text"></span> -->
                 </template>
             </RolexHeader>
-            {{ isReady }} - {{ accesories }}
             <section >
                 <div v-if="isReady" class="flex justify-center bg-rolex-brown-light-2 text-rolex-brown pb-[10vh]">
                     <div class="grid grid-cols-2 md:grid-cols-3 w-10/12 md:w-8/12 gap-2">

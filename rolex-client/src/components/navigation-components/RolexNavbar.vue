@@ -95,55 +95,61 @@ watch(input, () => {
         />
         <router-link
           :to="{ name: 'rolex' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Descubre Rolex</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'coleccion-rolex' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Colección Rolex</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'rolex-nuevos-modelos' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Nuevos Modelos 2025</h2>
         </router-link>
         <router-link
+          :to="{ name: 'rolex-seleccion-festiva' }"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+        >
+          <h2>Selección para las fiestas</h2>
+        </router-link>
+        <router-link
           :to="{ name: 'rolex-accesorios' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Accesorios Rolex</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'rolex-watchmaking' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Rolex Watchmaking</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'mantenimiento-rolex' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Mantenimiento Rolex</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'world-of-rolex-hub' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>World of Rolex</h2>
         </router-link>
 
         <router-link
           :to="{ name: 'rolex-contacto' }"
-          class="pr-6 font-bold md:font-normal py-4 text-xl md:text-sm pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
+          class="pr-6 font-bold md:font-normal py-4 text-xl lg:text-xs pl-6 md:pl-16 lg:pl-6 hover:text-rolex-green-3 duration-200 w-full lg:w-fit lg:text-center"
         >
           <h2>Contacto</h2>
         </router-link>

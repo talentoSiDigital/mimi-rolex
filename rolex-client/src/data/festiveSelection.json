@@ -1,0 +1,97 @@
+{
+    "watches": [
+        {
+            "name":"Land-Dweller 36",
+            "description":"Oyster, 36 mm, acero Oystersteel y oro blanco",
+            "img":"rolex-relojes-new/m127234-0001-showcase.webp",
+            "url":"rolex/land-dweller-m127234-0001"
+        },
+        {
+            "name":"Day-Date 36",
+            "description":"Oyster, 36 mm, platino",
+            "img":"rolex-relojes-new/m128236-0018-showcase.webp",
+            "url":"rolex/day-date-m128236-0018"
+        },
+        {
+            "name":"Cosmograph Daytona",
+            "description":"Oyster, 40 mm, acero Oystersteel y oro amarillo",
+            "img":"rolex-relojes-new/m126506-0001-showcase.webp",
+            "url":"rolex/cosmograph-daytona-m126506-0001"
+        },
+        {
+            "name":"Land-Dweller 36",
+            "description":"Oyster, 36 mm, acero Oystersteel y oro blanco",
+            "img":"rolex-relojes-new/m127234-0001-showcase.webp",
+            "url":"rolex/land-dweller-m127234-0001"
+        },
+        {
+            "name":"Day-Date 36",
+            "description":"Oyster, 36 mm, platino",
+            "img":"rolex-relojes-new/m128236-0018-showcase.webp",
+            "url":"rolex/day-date-m128236-0018"
+        },
+        {
+            "name":"Cosmograph Daytona",
+            "description":"Oyster, 40 mm, platino",
+            "img":"rolex-relojes-new/m126506-0001-showcase.webp",
+            "url":"rolex/cosmograph-daytona-m126506-0001"
+        },
+        {
+            "name":"Land-Dweller 36",
+            "description":"Oyster, 36 mm, acero Oystersteel y oro blanco",
+            "img":"rolex-relojes-new/m127234-0001-showcase.webp",
+            "url":"rolex/land-dweller-m127234-0001"
+        },
+        {
+            "name":"Day-Date 36",
+            "description":"Oyster, 36 mm, platino",
+            "img":"rolex-relojes-new/m128236-0018-showcase.webp",
+            "url":"rolex/day-date-m128236-0018"
+        },
+        {
+            "name":"Cosmograph Daytona",
+            "description":"Oyster, 40 mm, platino",
+            "img":"rolex-relojes-new/m126506-0001-showcase.webp",
+            "url":"rolex/cosmograph-daytona-m126506-0001"
+        },
+        {
+            "name":"Land-Dweller 36",
+            "description":"Oyster, 36 mm, acero Oystersteel y oro blanco",
+            "img":"rolex-relojes-new/m127234-0001-showcase.webp",
+            "url":"rolex/land-dweller-m127234-0001"
+        },
+        {
+            "name":"Day-Date 36",
+            "description":"Oyster, 36 mm, platino",
+            "img":"rolex-relojes-new/m128236-0018-showcase.webp",
+            "url":"rolex/day-date-m128236-0018"
+        },
+        {
+            "name":"Cosmograph Daytona",
+            "description":"Oyster, 40 mm, platino",
+            "img":"rolex-relojes-new/m126506-0001-showcase.webp",
+            "url":"rolex/cosmograph-daytona-m126506-0001"
+        }
+       
+    ],
+    "accesories": [
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        },
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        },
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        }
+    ]
+}
