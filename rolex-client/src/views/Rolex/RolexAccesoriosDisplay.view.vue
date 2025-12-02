@@ -149,7 +149,7 @@ watch(accesories, () => {
 
           <Head>
             <title>
-              Rolex
+              Rolex {{ accesories.nombre }} - Distribuidor Oficial Rolex
             </title>
             <meta name="description"
               :content="`Descubra el reloj Rolex  en Mimi Joyería, Distribuidor Oficial Rolex autorizado para vender y realizar el mantenimiento de los relojes Rolex.`" />

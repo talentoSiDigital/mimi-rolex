@@ -24,6 +24,7 @@ function getAllAccesories() {
     rolexDataService.getAllAccesories()
         .then((d => {
             accesories.value = d.data
+            accesories.value.pop()
             isReady.value = true
             console.log("ready");
         })).catch((e) => {
@@ -180,7 +181,7 @@ onMounted(()=>{
 
                         </p>
                     </header>
-                    <header
+                    <!-- <header
                         class="flex flex-col gap-8 font-helvetica font-bold justify-around items-center text-rolex-brown h-fit py-[10vh] bg-rolex-brown-light-1">
                         <h1 class="text-2xl md:text-5xl w-10/12 md:w-1/2">
                             Relojes de sobremesa <br>
@@ -236,7 +237,7 @@ onMounted(()=>{
                             class="hidden md:block  w-1/2" />
                         <img src="/assets/routes-assets/accesorios/accesorios-6-mobile.webp" alt="article-3-mobile"
                             class="md:hidden block  w-10/12" />
-                    </div>
+                    </div> -->
 
 
                 </section>

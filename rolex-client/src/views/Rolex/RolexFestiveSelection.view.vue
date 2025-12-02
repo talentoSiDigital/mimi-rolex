@@ -67,7 +67,7 @@ const accesoriesItems = ref(festiveSelection["accesories"]);
                                 </a>
                             </div>
                         </div>
-                        <div class="w-11/12 md:w-8/12 ">
+                        <!-- <div class="w-11/12 md:w-8/12 ">
                             <img src="/assets/routes-assets/festive/festive-1.webp" alt="festive-banner" class="hidden md:block"/>
                             <img src="/assets/routes-assets/festive/festive-1-mobile.webp" alt="festive-banner-mobile" class="block md:hidden"/>
                         </div>
@@ -86,7 +86,7 @@ const accesoriesItems = ref(festiveSelection["accesories"]);
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </section>
