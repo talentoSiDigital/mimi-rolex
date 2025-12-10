@@ -7,7 +7,8 @@ module.exports = app =>{
 
     router.get("/rolex/:id", rolex.getRolexDetailsV2)
 
-    
+    router.get("/rolex-accesories/getAll",rolex.getAllAccesories)
+
+    router.get("/rolex-accesories/get/:id",rolex.getAccesoriesById)
     app.use('/api/v2',router)
-// 
 }

@@ -10,24 +10,24 @@ module.exports = (sequelize, Sequelize) => {
     subHeader: {
       type: Sequelize.STRING
 
-    }, 
-    watch:{
+    },
+    watch: {
       type: Sequelize.STRING
 
     },
-    idName:{
+    idName: {
       type: Sequelize.STRING
 
     },
-    hasVideo:{
+    hasVideo: {
       type: Sequelize.BOOLEAN
     }
-  },{
-    timestamps:false
+  }, {
+    timestamps: false
   })
 
   const RolexGetAllV2 = sequelize.define("rolex-get-all-v2", {
- 
+
     modelo: {
       type: Sequelize.STRING
     },
@@ -37,17 +37,17 @@ module.exports = (sequelize, Sequelize) => {
     cajaDelModelo: {
       type: Sequelize.STRING
     }
-  },{
-    timestamps:false
+  }, {
+    timestamps: false
   });
-  
+
   const RolexDetailsV2 = sequelize.define("rolex-details-v2", {
-   
+
 
     precio: {
       type: Sequelize.INTEGER
     },
-  
+
     bisel: {
       type: Sequelize.STRING
     },
@@ -76,8 +76,8 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     }
 
-  },{
-    timestamps:false
+  }, {
+    timestamps: false
   });
 
 
@@ -100,7 +100,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     texto2: {
-      type: Sequelize.TEXT('medium') 
+      type: Sequelize.TEXT('medium')
     },
     header3: {
       type: Sequelize.STRING
@@ -109,12 +109,41 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     texto3: {
-      type: Sequelize.TEXT('medium') 
+      type: Sequelize.TEXT('medium')
     },
 
-  },{
-    timestamps:false
+  }, {
+    timestamps: false
   });
+
+  const RolexAccesories = sequelize.define("rolex-accesories", {
+    modelo: {
+      type: Sequelize.TEXT
+    },
+    nombre: {
+      type: Sequelize.TEXT
+    },
+    precio: {
+      type: Sequelize.INTEGER
+    },
+    sub: {
+      type: Sequelize.TEXT
+    },
+    spec: {
+      type: Sequelize.TEXT
+    },
+    spec2: {
+      type: Sequelize.TEXT
+    },
+    titulo: {
+      type: Sequelize.TEXT
+    },
+    contenido: {
+      type: Sequelize.TEXT
+    },
+  }, {
+    timestamps: false
+  })
 
   RolexCollections.hasOne(RolexGetAllV2)
   RolexGetAllV2.belongsTo(RolexCollections)
@@ -123,10 +152,15 @@ module.exports = (sequelize, Sequelize) => {
   RolexDetailsV2.belongsTo(RolexGetAllV2)
   RolexHeadersV2.belongsTo(RolexGetAllV2)
 
+
+  RolexCollections.hasOne(RolexAccesories)
+  RolexAccesories.belongsTo(RolexCollections)
+
   return {
     RolexGetAllV2,
     RolexDetailsV2,
-    RolexHeadersV2, 
-    RolexCollections
+    RolexHeadersV2,
+    RolexCollections,
+    RolexAccesories
   };
 };

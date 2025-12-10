@@ -1,4 +1,5 @@
 const uploadFiles = require("../middleware/store")
+const express = require('express')
 
 
 
@@ -7,15 +8,15 @@ module.exports = app =>{
     var router = require("express").Router()
     
     // Routes
-    router.post("/payment/:id",uploadFiles.any() ,payment.paymentAuthenticationStep1)
+    router.post("/payment/:id",express.json() ,payment.paymentAuthenticationStep1)
 
-    router.post("/enroll-payment/:id", uploadFiles.any(), payment.paymentAuthenticationStep2)
-    router.post("/pay-with-data/:id", uploadFiles.any(), payment.paymentCheck)
-    router.post("/validation-step/", uploadFiles.any(), payment.paymentAuthenticationStep4)
-    router.post("/validate-auth/:id", uploadFiles.any(), payment.validationReturn)
-    router.post("/generate-token", uploadFiles.any(), payment.tokenGeneration)
-    router.post("/pay-with-token/:id", uploadFiles.any(), payment.payWithToken)
-    router.post("/testing", uploadFiles.any(), payment.testing)
+    router.post("/enroll-payment/:id", express.json(), payment.paymentAuthenticationStep2)
+    router.post("/pay-with-data/:id", express.json(), payment.paymentCheck)
+    router.post("/validation-step/", express.json(), payment.paymentAuthenticationStep4)
+    router.post("/validate-auth/:id", express.json(), payment.validationReturn)
+    router.post("/generate-token", express.json(), payment.tokenGeneration)
+    router.post("/pay-with-token/:id", express.json(), payment.payWithToken)
+    router.post("/testing", express.json(), payment.testing)
 
     // router.get("/payment/:id/bill",payment.createBill)
 

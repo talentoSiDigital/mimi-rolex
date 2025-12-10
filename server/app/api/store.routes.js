@@ -1,5 +1,6 @@
 const uploadFiles = require("../middleware/store")
 const existenceMiddleware = require("../middleware/verifyExistence")
+const express = require('express')
 
 
 module.exports = app => {
@@ -10,15 +11,16 @@ module.exports = app => {
     // Joyeria
     router.get("/joyeria/:id", store.findJ)
     router.get("/joyeria/producto/:id", store.findDetailJ)
-    router.post("/joyeria/producto/create", uploadFiles.fields([{ name: 'imagen1' }, { name: 'imagen2' }]), store.createJ)
+ 
 
 
     //Relojeria
     router.get("/relojeria-slider", store.findRSlider)
+    router.get("/relojeria/colecciones/tudor", store.getTudorCollections)
     router.get("/relojeria-tudor", store.findRMain)
-    router.put("/relojeria/:id",uploadFiles.any(), store.findR)
+    router.put("/relojeria/:id",express.json(), store.findR)
     router.get("/relojeria/producto/:id", store.findDetailR)
-    router.post("/relojeria/producto/create", uploadFiles.any(), store.createR)
+
     
 
     //Shopping Cart
@@ -35,10 +37,6 @@ module.exports = app => {
 
 
 
-    //update
-
-    router.post("/update/store-analytics", uploadFiles.any(), update.getStoreAnalytics)
-    router.post("/update/store-availability", uploadFiles.any(), update.updateStoreAvailability)
     
 
     app.use('/api', router)

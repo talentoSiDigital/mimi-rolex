@@ -1,7 +1,8 @@
 import axios from 'axios';
+import GLOBAL_OBJECT from '../../utils/globaj.js';
 
-// const API_URL = 'https://mimijoyeria.com/api/auth/';
-const API_URL = "http://localhost:3000/api/auth/";
+
+const API_URL = GLOBAL_OBJECT.AUTH_URL;
 
 
 class AuthService {

@@ -15,7 +15,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 Longines, es una marca afianzada en la gran tradición relojera, goza de una historia larga y próspera. Una historia jalonada de innovaciones técnicas y estéticas.
             </template>
             <template #button>
-                <router-link to="/relojeria/longines" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                <router-link to="/relojeria/longines" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded-sm hover:scale-110 duration-200">
                     Ver más
                 </router-link>
             </template>
@@ -31,7 +31,7 @@ import PageBanner from '../../components/banners-components/PageBanner.vue'
                 El legado de la marca Victorinox va más allá de sus productos, ya que representan calidad, funcionalidad, innovación y diseño icónico.            
             </template>
             <template #button>
-                <router-link to="/relojeria/victorinox" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded hover:scale-110 duration-200">
+                <router-link to="/relojeria/victorinox" class="mt-10 bg-[#818a91] text-lg text-white py-3 px-10 shadow-lg rounded-sm hover:scale-110 duration-200">
                     Ver más
                 </router-link>
             </template>

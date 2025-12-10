@@ -1,0 +1,117 @@
+{
+    "watches": [
+        {
+            "name":"Datejust 36",
+            "description":"Oyster, 36 mm, acero Oystersteel",
+            "img":"rolex-relojes-new/m126200-0017-showcase.webp",
+            "url":"rolex/datejust-m126200-0017"
+        },
+        {
+            "name":"Datejust 41",
+            "description":"Oyster, 41 mm, acero Oystersteel",
+            "img":"rolex-relojes-new/m126300-0014-showcase.webp",
+            "url":"rolex/datejust-m126300-0014"
+        },
+        {
+            "name":"Datejust 41",
+            "description":"Oyster, 41 mm, acero Oystersteel y oro Everose",
+            "img":"rolex-relojes-new/m126331-0016-showcase.webp",
+            "url":"rolex/datejust-m126331-0016"
+        },
+        {
+            "name":"Datejust 41",
+            "description":"Oyster, 41 mm, acero Oystersteel y oro blanco",
+            "img":"rolex-relojes-new/m126334-0022-showcase.webp",
+            "url":"rolex/datejust-m126334-0022"
+        },
+        {
+            "name":"Submariner Date",
+            "description":"Oyster, 41 mm, acero Oystersteel y oro amarillo",
+            "img":"rolex-relojes-new/m126613lb-0002-showcase.webp",
+            "url":"rolex/submariner-m126613lb-0002"
+        },
+        {
+            "name":"Submariner Date",
+            "description":"Oyster, 41 mm, oro amarillo",
+            "img":"rolex-relojes-new/m126618lb-0002-showcase.webp",
+            "url":"rolex/submariner-m126618lb-0002"
+        },
+        {
+            "name":"Yacht-Master 40",
+            "description":"Oyster, 40 mm, acero Oystersteel y oro Everose",
+            "img":"rolex-relojes-new/m126621-0001-showcase.webp",
+            "url":"rolex/yacht-master-m126621-0001"
+        },
+        {
+            "name":"Yacht-Master 40",
+            "description":"Oyster, 40 mm, acero Oystersteel y platino",
+            "img":"rolex-relojes-new/m126622-0002-showcase.webp",
+            "url":"rolex/yacht-master-m126622-0002"
+        },
+       
+        {
+            "name":"GMT-Master II",
+            "description":"Oyster, 40 mm, acero Oystersteel",
+            "img":"rolex-relojes-new/m126710blnr-0002-showcase.webp",
+            "url":"rolex/gmt-master-ii-m126710blnr-0002"
+        },
+        {
+            "name":"Oyster Perpetual 41",
+            "description":"Oyster, 41 mm, acero Oystersteel",
+            "img":"rolex-relojes-new/m134300-0007-showcase.webp",
+            "url":"rolex/oyster-perpetual-m134300-0007"
+        },
+        {
+            "name":"Explorer II",
+            "description":"Oyster, 42 mm, acero Oystersteel",
+            "img":"rolex-relojes-new/m226570-0002-showcase.webp",
+            "url":"rolex/explorer-m226570-0002"
+        },
+        {
+            "name":"Day-Date 40",
+            "description":"Oyster, 40 mm, oro Everose",
+            "img":"rolex-relojes-new/m228235-0025-showcase.webp",
+            "url":"rolex/day-date-m228235-0025"
+        },
+        {
+            "name":"Day-Date 40",
+            "description":"Oyster, 40 mm, oro amarillo",
+            "img":"rolex-relojes-new/m228238-0061-showcase.webp",
+            "url":"rolex/day-date-m228238-0061"
+        },
+        {
+            "name":"Datejust 31",
+            "description":"Oyster, 31 mm, acero Oystersteel y oro Everose",
+            "img":"rolex-relojes-new/m278271-0004-showcase.webp",
+            "url":"rolex/datejust-m278271-0004"
+        },
+        {
+            "name":"Datejust 31",
+            "description":"Oyster, 31 mm, acero Oystersteel y oro amarillo",
+            "img":"rolex-relojes-new/m278273-0030-showcase.webp",
+            "url":"rolex/datejust-m278273-0030"
+        }
+        
+       
+    ],
+    "accesories": [
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        },
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        },
+        {
+            "name":"Gemelos «Corona»",
+            "description":"Oro amarillo",
+            "img":"rolex-relojes-new/rolex-accessories-a1018-packshot.webp",
+            "url":"rolex/accesorios/a1018"
+        }
+    ]
+}

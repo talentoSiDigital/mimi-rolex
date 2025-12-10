@@ -104,7 +104,7 @@ function handleRegister() {
 
             <img src="/assets/mimi-logo.png" alt="logo">
 
-            <div class="w-1/2 bg-white rounded-lg shadow  md:mt-0 sm:max-w-md md:max-w-none  xl:p-0   ">
+            <div class="w-1/2 bg-white rounded-lg shadow-sm  md:mt-0 sm:max-w-md md:max-w-none  xl:p-0   ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl">
                         Actualizar datos

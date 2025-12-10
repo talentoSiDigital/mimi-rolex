@@ -1,4 +1,5 @@
 const uploadFiles = require("../middleware/store")
+const express = require('express')
 
 
 module.exports = app =>{
@@ -6,9 +7,9 @@ module.exports = app =>{
     var router = require("express").Router()
     
     // Routes
- 
-    router.post("/email/contacto-tracking/",uploadFiles.any() ,trackingController.contactTracking)
-    router.post("/email/rolex-tracking/",uploadFiles.any() ,trackingController.rolexTracking)
+    router.get("/env-testing/",trackingController.envTesting)
+    router.post("/email/contacto-tracking/",express.json() ,trackingController.contactTracking)
+    router.post("/email/rolex-tracking/",express.json() ,trackingController.rolexTracking)
         
     app.use('/api',router) 
 

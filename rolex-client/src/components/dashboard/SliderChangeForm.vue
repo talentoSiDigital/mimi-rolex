@@ -74,7 +74,7 @@ function setNewState(value) {
             <img :src="item.mobilePath" :alt="`banner-${item}`" class="w-32" />
             <button
               @click="setNewState(index)"
-              class="bg-main-green py-4 px-8 rounded"
+              class="bg-main-green py-4 px-8 rounded-sm"
             >
               Actualizar
             </button>

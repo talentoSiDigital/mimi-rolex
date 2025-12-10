@@ -42,8 +42,15 @@ class Store {
     getRelojeriaSlider() {
         return http.get(`/relojeria-slider`);
     }
+
+
+
     getRelojeriaPrincipal() {
         return http.get(`/relojeria-tudor`);
+    }
+
+    getTudorCollections(){
+        return http.get(`/relojeria/colecciones/tudor`);
     }
     getRelojeria(id,searchParam) {
         return http.put(`/relojeria/${id}`,searchParam);

@@ -2,6 +2,16 @@ const db = require("../models");
 const Tracking = db.tracking;
 const Op = db.Sequelize.Op;
 
+exports.envTesting = (req,res)=>{
+
+    const object = {
+        HOME_ROUTE: process.env.HOME_ROUTE,
+        STORAGE_PATH: process.env.STORAGE_PATH
+    }
+    res.send(object)
+}
+
+
 exports.contactTracking = async (req, res) => {
     const insertObject = {
         name: req.body.name,

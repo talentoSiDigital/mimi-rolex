@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router"
 import BreadCrumb from "./components/navigation-components/BreadCrumb.vue"
 import { useLoaderStore } from './store/loaderState';
-import {usePostHog} from './utils/posthog'
+import { usePostHog } from './utils/posthog'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -14,7 +14,7 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería | Distribuidor Oficial Rolex",
         breadcrumb: "HomePage"
-        
+
       }
     },
     // ROLEX STATIC ROUTES
@@ -26,8 +26,8 @@ const router = createRouter({
         title: "Distribuidor Oficial Rolex en Venezuela  | Mimi Joyería",
         description: "Mimi Joyería en Venezuela se enorgullece de formar parte de la red mundial de Distribuidores Oficiales Rolex, autorizados para vender y realizar el mantenimiento de los relojes Rolex.",
         breadcrumb: "DescubreRolex",
-        pageType:"home page"
-       
+        pageType: "home page"
+
       }
     },
 
@@ -39,7 +39,31 @@ const router = createRouter({
         title: "Mantenimiento Rolex  | Mimi Joyería",
         description: "Mimi Joyería se enorgullece de formar parte de la red de Distribuidores Oficiales Rolex de relojeros formados. Puede confiarnos cualquier tipo de procedimiento de mantenimiento.",
         breadcrumb: "Mantenimiento",
-        pageType:"servicing your rolex page"
+        pageType: "servicing your rolex page"
+      }
+
+    },
+    {
+      path: "/rolex/accesorios",
+      name: "rolex-accesorios",
+      component: () => import("./views/Rolex/RolexAccesorios.view.vue"),
+      meta: {
+        title: "Accesorios Rolex  | Mimi Joyería",
+        description: " Explore los accesorios Rolex en línea en Mimi Joyería, un Distribuidor Oficial Rolex autorizado para vender accesorios Rolex.",
+        breadcrumb: "Accesorios",
+        pageType: "accessories model page"
+      }
+
+    },
+    {
+      path: "/rolex/accesorios/:id",
+      name: "rolex-accesorios-display",
+      component: () => import("./views/Rolex/RolexAccesoriosDisplay.view.vue"),
+      meta: {
+        title: "Accesorios Rolex  | Mimi Joyería",
+        description: "Descubra los accesorios en Mimi Joyería, un Distribuidor Oficial, autorizado para vender accesorios Rolex.",
+        breadcrumb: "Accesorios",
+        pageType: "accessories model page"
       }
 
     },
@@ -51,11 +75,11 @@ const router = createRouter({
         title: "Procedimiento de mantenimiento Rolex | Mimi Joyería",
         description: "Explore el procedimiento del mantenimiento Rolex en Mimi Joyería, su Distribuidor Oficial Rolex para el cuidado y el mantenimiento experto de su reloj Rolex.",
         breadcrumb: "Mantenimiento",
-        pageType:"servicing your rolex page"
+        pageType: "servicing your rolex page"
       }
 
     },
-   
+
     {
       path: "/rolex/historia",
       name: "rolex-historia",
@@ -63,7 +87,7 @@ const router = createRouter({
       meta: {
         title: "Historia  | Mimi Joyería ",
         breadcrumb: "Historia",
-        pageType:"history page"
+        pageType: "history page"
       }
     },
 
@@ -75,7 +99,20 @@ const router = createRouter({
         title: "«Savoir-faire» relojero de Rolex | Mimi Joyería",
         description: "Descubra el enfoque «superlative» de Rolex al «savoir-faire» relojero y conozca más acerca de la constante búsqueda de la excelencia de Rolex en Mimi Joyería en Venezuela.",
         breadcrumb: "Watchmaking",
-        pageType:"watchmaking page"
+        pageType: "watchmaking page"
+
+      }
+    }
+    ,
+    {
+      path: "/rolex/seleccion-para-las-fiestas",
+      name: "rolex-seleccion-festiva",
+      component: () => import("./views/Rolex/RolexFestiveSelection.view.vue"),
+      meta: {
+        title: "Selección Rolex para las fiestas | Mimi Joyería",
+        description: "Para las fiestas, Rolex presenta una selección especial de distintivos y refinados relojes y exclusivos accesorios. Descúbralos en Mimi Joyería, su Distribuidor Oficial Rolex en Venezuela.",
+        breadcrumb: "SeleccionFestiva",
+        pageType: "festive page"
 
       }
     }
@@ -88,7 +125,7 @@ const router = createRouter({
         title: "Contacto Mimi Joyería en Venezuela - Distribuidor Oficial Rolex",
         meta: "Póngase en contacto con Mimi Joyería y deje que le ayudemos a escoger un Rolex o a dar respuestas a sus consultas.",
         breadcrumb: "Contacto",
-        pageType:"contact page"
+        pageType: "contact page"
 
       }
     }
@@ -101,7 +138,7 @@ const router = createRouter({
         title: "Formulario de contacto | Mimi Joyería",
         meta: "Póngase en contacto con su Distribuidor Oficial Rolex Mimi Joyería para obtener más información sobre nuestros servicios o cualquier consulta sobre Rolex que pueda tener",
         breadcrumb: "FormularioContacto",
-        pageType:"article page"
+        pageType: "article page"
 
       },
       props: true
@@ -116,23 +153,23 @@ const router = createRouter({
         title: "Nuevos Modelos Rolex 2025  | Mimi Joyería ",
         description: "Mimi Joyería presenta la última colección de relojes de lujo suizos de Rolex. Descubra las características únicas de los nuevos modelos de este año.",
         breadcrumb: "NuevosModelos",
-        pageType:"new watches page"
+        pageType: "new watches page"
 
       }
     },
     {
       path: "/rolex/nuevos-modelos-2025/:id",
-      name: "rolex-nuevos-relojes-2025",
+      name: "rolex-nuevos-modelos-2025",
       component: () => import("./views/Rolex/NewModelCollection.view.vue"),
       meta: {
         title: " Nuevos Modelos 2024  | Mimi Joyería ",
         breadcrumb: "NuevosModelos",
-        pageType:"family page 2025",
-        pageFamily:true
+        pageType: "family page 2025",
+        pageFamily: true
 
       }
     },
-   
+
 
     // ---------WORLD OF ROLEX SECTION ROUTES------------
     {
@@ -143,7 +180,7 @@ const router = createRouter({
         title: "El mundo de Rolex | Mimi Joyería ",
         description: "Explore el mundo de Rolex. Descubra datos y artículos que demuestran la esencia de Rolex y manténgase al día con las últimas noticias de Rolex | Mimi Joyería",
         breadcrumb: "WorldOfRolex",
-        pageType:"article hub page"
+        pageType: "article hub page"
       }
     },
     {
@@ -153,89 +190,89 @@ const router = createRouter({
       meta: {
         title: "Viaje al corazón del universo Rolex - World Of Rolex | Mimi Joyería ",
         breadcrumb: "WorldOfRolex/ViajeAlCorazonDelUniversoRolex",
-        pageType:"article page"
+        pageType: "article page"
       }
     },
-    {
-      path: "/rolex/world-of-rolex/sail-gp",
-      name: "world-of-rolex-article-2",
-      component: () => import("./views/Rolex/articles/RolexWORArticle2.view.vue"),
-      meta: {
-        title: "Sail GP - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/SailGP",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-grand-slam",
-      name: "world-of-rolex-article-3",
-      component: () => import("./views/Rolex/articles/RolexWORArticle3.view.vue"),
-      meta: {
-        title: "Rolex Grand Slam - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexGrandSlam",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
-      name: "world-of-rolex-article-4",
-      component: () => import("./views/Rolex/articles/RolexWORArticle4.view.vue"),
-      meta: {
-        title: "Las 24 Horas de Le Mans - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/Las24HorasDeLemans",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
-      name: "world-of-rolex-article-5",
-      component: () => import("./views/Rolex/articles/RolexWORArticle5.view.vue"),
-      meta: {
-        title: "Rolex y The Championship, Wimbledon - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheChampionshipsWimbledon",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
-      name: "world-of-rolex-article-6",
-      component: () => import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
-      meta: {
-        title: "Rolex y The Amundi Evian Championship - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheAmundiEvianChampionship",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-open",
-      name: "world-of-rolex-article-7",
-      component: () => import("./views/Rolex/articles/RolexWORArticle7.view.vue"),
-      meta: {
-        title: "Rolex y The Open - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheOpen",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-the-us-open",
-      name: "world-of-rolex-article-8",
-      component: () => import("./views/Rolex/articles/RolexWORArticle8.view.vue"),
-      meta: {
-        title: "Rolex y The US Open - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
-        pageType:"article page"
-      }
-    },
-    {
-      path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
-      name: "world-of-rolex-article-9",
-      component: () => import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
-      meta: {
-        title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
-        breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
-        pageType:"article page"
-      }
-    },
+    // {
+    //   path: "/rolex/world-of-rolex/sail-gp",
+    //   name: "world-of-rolex-article-2",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle2.view.vue"),
+    //   meta: {
+    //     title: "Sail GP - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/SailGP",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-grand-slam",
+    //   name: "world-of-rolex-article-3",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle3.view.vue"),
+    //   meta: {
+    //     title: "Rolex Grand Slam - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexGrandSlam",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/las-24-horas-de-le-mans",
+    //   name: "world-of-rolex-article-4",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle4.view.vue"),
+    //   meta: {
+    //     title: "Las 24 Horas de Le Mans - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/Las24HorasDeLemans",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-championships-wimbledon",
+    //   name: "world-of-rolex-article-5",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle5.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Championship, Wimbledon - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheChampionshipsWimbledon",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-amundi-evian-championship",
+    //   name: "world-of-rolex-article-6",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle6.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Amundi Evian Championship - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheAmundiEvianChampionship",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-open",
+    //   name: "world-of-rolex-article-7",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle7.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The Open - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheOpen",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-the-us-open",
+    //   name: "world-of-rolex-article-8",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle8.view.vue"),
+    //   meta: {
+    //     title: "Rolex y The US Open - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+    //     pageType: "article page"
+    //   }
+    // },
+    // {
+    //   path: "/rolex/world-of-rolex/rolex-y-la-filarmonica-de-viena",
+    //   name: "world-of-rolex-article-9",
+    //   component: () => import("./views/Rolex/articles/RolexWORArticle9.view.vue"),
+    //   meta: {
+    //     title: "Rolex y la Filarmónica de Viena - World Of Rolex | Mimi Joyería ",
+    //     breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
+    //     pageType: "article page"
+    //   }
+    // },
     {
       path: "/rolex/world-of-rolex/resistencia",
       name: "world-of-rolex-article-10",
@@ -243,7 +280,7 @@ const router = createRouter({
       meta: {
         title: "Resistencia - World Of Rolex | Mimi Joyería ",
         breadcrumb: "WorldOfRolex/RolexYTheUSOpen",
-        pageType:"article page"
+        pageType: "article page"
       }
     },
     {
@@ -270,20 +307,20 @@ const router = createRouter({
         title: "Relojes Rolex en Venezuela | Mimi Joyería",
         description: "Descubra los relojes Rolex en línea en Mimi Joyería, Distribuidor Oficial autorizado para vender relojes Rolex para hombre y mujer",
         breadcrumb: "Relojes",
-        pageType:"collection page"
+        pageType: "collection page"
       }
     },
 
-      {
+    {
       path: "/rolex/:collectionName-:id",
       name: "relojes-rolex",
       component: () => import("./views/Rolex/RolexWatchDetail.view.vue"),
       meta: {
         title: " Mimi Joyería ",
         breadcrumb: "Modelo",
-        pageType:"model page",
-        pageFamily:"",
-        productRMC:""
+        pageType: "model page",
+        pageFamily: "",
+        productRMC: ""
 
       }
     },
@@ -295,8 +332,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"cosmograph-daytona"
+        pageType: "family page",
+        pageFamily: "cosmograph-daytona"
       }
     },
 
@@ -307,8 +344,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"1908"
+        pageType: "family page",
+        pageFamily: "1908"
       }
     },
     {
@@ -318,8 +355,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"yacht-master"
+        pageType: "family page",
+        pageFamily: "yacht-master"
       }
     },
 
@@ -330,8 +367,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"sky-dweller"
+        pageType: "family page",
+        pageFamily: "sky-dweller"
       }
     },
     {
@@ -341,8 +378,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"gmt-master-ii"
+        pageType: "family page",
+        pageFamily: "gmt-master-ii"
       }
     },
 
@@ -353,8 +390,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"explorer"
+        pageType: "family page",
+        pageFamily: "explorer"
       }
     },
     {
@@ -364,8 +401,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"oyster-perpetual"
+        pageType: "family page",
+        pageFamily: "oyster-perpetual"
       }
     },
 
@@ -376,8 +413,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"day-date"
+        pageType: "family page",
+        pageFamily: "day-date"
       }
     },
     {
@@ -387,8 +424,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"datejust"
+        pageType: "family page",
+        pageFamily: "datejust"
       }
     },
 
@@ -399,8 +436,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"lady-datejust"
+        pageType: "family page",
+        pageFamily: "lady-datejust"
       }
     },
     {
@@ -410,8 +447,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"air-king"
+        pageType: "family page",
+        pageFamily: "air-king"
       }
     },
     {
@@ -421,8 +458,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"land-dweller"
+        pageType: "family page",
+        pageFamily: "land-dweller"
       }
     },
 
@@ -433,8 +470,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"submariner"
+        pageType: "family page",
+        pageFamily: "submariner"
       }
     },
     {
@@ -444,8 +481,8 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"sea-dweller"
+        pageType: "family page",
+        pageFamily: "sea-dweller"
       }
     },
 
@@ -456,11 +493,11 @@ const router = createRouter({
       meta: {
         title: "Mimi Joyería ",
         breadcrumb: "ColeccionRolex",
-        pageType:"family page",
-        pageFamily:"deepsea"
+        pageType: "family page",
+        pageFamily: "deepsea"
       }
     },
-  
+
     {
       path: "/rolex/busqueda",
       name: "rolex-busqueda",
@@ -468,7 +505,7 @@ const router = createRouter({
       meta: {
         title: "Busqueda | Mimi Joyería ",
         breadcrumb: "Busqueda",
-        pageType:""
+        pageType: ""
 
       },
       props: route => ({ query: route.query.q })
@@ -480,7 +517,7 @@ const router = createRouter({
       meta: {
         title: "Busqueda | Mimi Joyería ",
         breadcrumb: "Busqueda",
-        pageType:""
+        pageType: ""
 
       },
       props: route => ({ query: route.query.q })
@@ -629,7 +666,7 @@ const router = createRouter({
     },
     // ****************
     // AUTH AND USER ROUTES
-    
+
     {
       path: "/login",
       name: "login",
@@ -658,6 +695,39 @@ const router = createRouter({
         title: "Registrar  | Mimi Joyería "
       }
     }
+    ,
+
+    {
+      path: "/logout",
+      name: "logout",
+      component: () => import("./views/Admin/Logout.view.vue"),
+      meta: {
+        title: "Registrar  | Mimi Joyería "
+      }
+    }
+    ,
+
+    {
+      path: "/dashboard",
+      name: "dasboard",
+      component: () => import("./views/Admin/Dashboard.view.vue"),
+      meta: {
+        title: "Panel de control  | Mimi Joyería "
+      },
+      children:[
+        {
+          path:'',
+          name:'main-dashboard',
+          component:()=>import("./views/Admin/nested/MainDashboard.view.vue")
+        },
+        {
+          path:'/agregar-reloj/:serie?',
+          name:'agregar-reloj',
+          component:()=>import("./views/Admin/nested/AddWatch.view.vue")
+        },
+
+      ]
+    }
 
     ,
 
@@ -678,10 +748,10 @@ const router = createRouter({
         title: 'Compra exitosa  | Mimi Joyería '
       }
     }
-    
 
-   
-  
+
+
+
     // ,
     // ****************
     // PAYMENT ROUTES
@@ -699,7 +769,7 @@ const router = createRouter({
 
 })
 
-const { posthog } = usePostHog()
+// const { posthog } = usePostHog()
 
 
 
@@ -713,16 +783,16 @@ router.beforeEach((to, from, next) => {
     store.change()
   }
   const pageType = to.meta.pageType
-  if(pageType){
+  if (pageType) {
     document.pageType = pageType
   }
   const pageFamily = to.meta.pageFamily
-  if(pageFamily){
+  if (pageFamily) {
     document.pageFamily = pageFamily
   }
-  if (from.path !== to.path) {
-    posthog.capture('$pageleave')
-  }
+  // if (from.path !== to.path) {
+  //   posthog.capture('$pageleave')
+  // }
 
 
   // window.document.title = toRoute.meta && toRoute.meta.title ? toRoute.meta.title : "Home";
@@ -757,7 +827,7 @@ router.afterEach((to, from, next) => {
     store.change()
 
   }
-  posthog.capture('$pageview')
+  // posthog.capture('$pageview')
 
 
   // Continue resolving the route
