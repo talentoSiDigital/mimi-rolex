@@ -61,7 +61,7 @@ watch(isReady, () => {
     </div>
 
     <main v-else class="w-full overflow-hidden">
-      <div class="w-[100%] flex duration-200" :class="moveResults">
+      <div class="w-full flex duration-200" :class="moveResults">
         <div class="w-full bg-rolex-brown-light-1 pl-8">
           <header class="text-rolex-brown w-10/12 py-4">
             <h2 class="text-3xl font-bold">{{ query }}</h2>

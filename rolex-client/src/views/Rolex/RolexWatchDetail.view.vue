@@ -13,12 +13,12 @@ import RolexDataServices from "../../services/rolexDataService";
 import RolexTemplate from "./RolexTemplate.view.vue";
 import router from '../../router'
 import axios from "axios";
-
 import { useElementHover, useWindowSize } from "@vueuse/core";
 import Button from "../../components/global-components/Button.vue";
 import NewContactForm from "../../components/form-components/NewContactForm.vue";
 import mailDataService from "../../services/mailDataService";
 import digitalDataLayer from "../../utils/digitalDataLayer";
+import GLOBAL_OBJECT from "../../utils/globaj";
 const { width, height } = useWindowSize()
 const isDesktop = computed(() => width.value > 768)
 const currentSlide = ref(0);
@@ -34,6 +34,7 @@ const sliderItems = (item,modelo) => {
 }
 
 
+
 const textBoxCounter = ref(0)
 function isVisible(item) {
   if (textBoxCounter.value == item) {
@@ -42,7 +43,7 @@ function isVisible(item) {
   return false
 }
 
-const storageRoute = ref("https://mimijoyeria.com/storage/rolex-relojes-new/");
+const storageRoute = ref(GLOBAL_OBJECT.STORAGE_URL+'rolex-relojes-new/');
 // const storageRoute = ref("http://localhost:3000/storage/rolex-relojes-new/");
 
 const route = useRoute();
@@ -52,6 +53,10 @@ const name = ref(currentRoute);
 const family = ref("")
 const rmc = ref("")
 const watchName = ref("")
+
+const sliderCounter = computed(()=>{
+  return currentRoute == 'm134300-0013' || currentRoute == 'm134300-0012' ? '':''
+})
 
 function getDiameter(text) {
   const r = /\d+/;
@@ -131,7 +136,7 @@ const messageInfo = ref({
 
 
 
-const position = ref("-translate-x-0");
+const position = ref("translate-x-0");
 const statusMessage = ref("");
 let positionArray = ["translate-x-0", "-translate-x-1/3", "-translate-x-2/3"];
 function moveForm(pos) {
@@ -191,13 +196,13 @@ watch(isReady, () => {
           </Head>
           <section class=" relative md:h-[85vh]">
             <div v-if="isDesktop" class="flex items-center justify-center w-full">
-              <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.getAll.modelo}-showcase.webp`"
+              <img :src="`${storageRoute}/${state.getAll.modelo}-showcase.webp`"
                 :alt="`${state.getAll.nombre}-main-image`" class="w-1/2 md:w-[30%]" />
             </div>
             <div v-else>
               <carousel :items-to-show="1" v-model="currentSlide" :wrapAround="true" :autoplay="3000" :transition="600"
                 class="w-full ">
-                <slide v-for="slide in 5" :key="slide">
+                <slide v-for="slide in 4" :key="slide">
                   <div class=" flex justify-center w-full">
                     <img :src="sliderItems(slide-1, state.getAll.modelo)" :alt="`slide-${slide}`" class=" w-10/12 " :class="slide-1 == 0? 'w-2/3':'w-full'" />
 
@@ -206,8 +211,8 @@ watch(isReady, () => {
                 </slide>
               </carousel>
               <div class="flex gap-2 justify-center w-full mt-4 ">
-                <div v-for="(item, index) in 5" :key="item">
-                  <div class="duration-200  h-2 block rounded hover:bg-rolex-green active:bg-rolex-green"
+                <div v-for="(item, index) in 4" :key="item">
+                  <div class="duration-200  h-2 block rounded-sm hover:bg-rolex-green active:bg-rolex-green"
                     @click="currentSlide = index" :class="currentSlide == index ? 'w-14 bg-rolex-green' : 'w-4 bg-gray-200'">
                   </div>
                 </div>
@@ -233,7 +238,7 @@ watch(isReady, () => {
                   </div>
                   <Transition name="fade">
                     <p v-if="isHovered"
-                      class="text-xs md:w-1/5 duration-200 absolute border-2 border-rolex-brown rounded p-4 bg-rolex-brown-light-1">
+                      class="text-xs md:w-1/5 duration-200 absolute border-2 border-rolex-brown rounded-sm p-4 bg-rolex-brown-light-1">
                       <span v-if="checkLocation">
                         Descargue la lista de precios recomendados de su país para
                         encontrar la información de los precios específicos de su
@@ -498,9 +503,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen1}.webp`"
                   alt="heading-img-1" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen1}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen1}-mobile.webp`"
                   alt="heading-img-1-mobile" class="block md:hidden w-full" />
               </section>
             </div>
@@ -517,9 +522,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen2}.webp`"
                   alt="heading-img-2" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen2}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen2}-mobile.webp`"
                   alt="heading-img-2-mobile" class="block md:hidden w-full" />
               </section>
             </div>
@@ -536,9 +541,9 @@ watch(isReady, () => {
                 </p>
               </header>
               <section class="w-10/12 md:w-1/2">
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen3}.webp`"
                   alt="heading-img-3" class="hidden md:block" />
-                <img :src="`https://mimijoyeria.com/storage/rolex-relojes-new/${state.headers.imagen3}-mobile.webp`"
+                <img :src="`${storageRoute}/${state.headers.imagen3}-mobile.webp`"
                   alt="heading-img-3-mobile" class="block md:hidden w-full" />
               </section>
             </div>

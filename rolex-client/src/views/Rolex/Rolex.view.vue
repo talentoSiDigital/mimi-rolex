@@ -41,6 +41,18 @@ import SectionNavigationCard from '../../components/cards/SectionNavigationCard.
             </section>
 
             <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
+                <h2 class="w-11/12 pb-4 font-helvetica font-bold text-rolex-brown text-4xl">Accesorios Rolex</h2>
+                <div class="w-11/12 ">
+                    <SectionNavigationCard img="discover-rolex/discover-rolex-7" :link="{name:'rolex-accesorios'}"
+                        class="w-full  ">
+                        <template #title>Descubra los accesorios Rolex</template>
+                        <template #button>Contáctanos</template>
+
+                    </SectionNavigationCard>
+
+                </div>
+            </section>
+            <section class="bg-rolex-brown-light-2 flex flex-col justify-center items-center pb-[10vh]">
                 <h2 class="w-11/12 pb-4 font-helvetica font-bold text-rolex-brown text-4xl">Relojes Rolex</h2>
                 <div class="w-11/12 ">
                     <SectionNavigationCard img="discover-rolex/discover-rolex-3" :link="{name:'rolex-contacto'}"

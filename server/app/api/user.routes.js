@@ -1,6 +1,7 @@
 const authJwt = require("../middleware/authJwt");
 const controller = require("../controllers/userController");
 const uploadFiles = require("../middleware/store")
+const express = require('express')
 
 module.exports = function(app) {
   app.use(function(req, res, next) {
@@ -13,7 +14,7 @@ module.exports = function(app) {
 
   app.get("/api/user/get-all", controller.listUsers)
   app.get("/api/user/find-user/:id", controller.findUserData)
-  app.post("/api/user/update", uploadFiles.any(), controller.updateUserData)
+  app.post("/api/user/update", express.json(), controller.updateUserData)
 
   
 

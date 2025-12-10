@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 const rolexBaseData = require("./routeData/rolexBaseData.json")
 const genericRoutesData = require("./routeData/genericRoutesData.json")
 
-const baseRoute = "https://mimijoyeria.com"
+const baseRoute = process.env.HOME_ROUTE
 
 
 exports.searchTags = (req, res) => {
@@ -82,7 +82,7 @@ exports.getMetaBreadcrumbs = async (req, res) => {
                 "@type": "ListItem",
                 "position": index,
                 "name": obj.name,
-                "item": `${baseRoute}${obj.route}`
+                "item": `https://mimijoyeria.com${obj.route}`
 
             })
         }
@@ -93,7 +93,7 @@ exports.getMetaBreadcrumbs = async (req, res) => {
             "@type": "ListItem",
             "position": index + rolexBaseData.length,
             "name": obj.nombre,
-            "item": `${baseRoute}/rolex/${obj['Rolex-collection'].idName}-${obj.modelo}`
+            "item": `https://mimijoyeria.com/rolex/${obj['Rolex-collection'].idName}-${obj.modelo}`
         })
     })
 
@@ -107,20 +107,32 @@ exports.generateSearchRoutes = async (req, res) => {
 
 
     const rolexRoutesFromDB = await db.rolex.RolexGetAllV2.findAll({ include: db.rolex.RolexCollections })
+    const rolexAccesoriesFromDB = await db.rolex.RolexAccesories.findAll()
 
     genericRoutesData.forEach((obj) => {
         allRoutesInsert.push(obj)
-        allRoutesInsert[allRoutesInsert.length - 1].link = `${baseRoute}${obj.link}`
+        allRoutesInsert[allRoutesInsert.length - 1].link = `https://mimijoyeria.com${obj.link}`
     })
 
     rolexRoutesFromDB.forEach((obj) => {
         allRoutesInsert.push({
             "title": obj.nombre,
-            "watchSerial": obj.serial,
+            "watchSerial": obj.modelo,
             "description": obj.cajaDelModelo,
-            "link": `${baseRoute}/rolex/${obj['Rolex-collection'].idName}-${obj.modelo}`,
+            "link": `https://mimijoyeria.com/rolex/${obj['Rolex-collection'].idName}-${obj.modelo}`,
             "thumbnail": `https://mimijoyeria.com/storage/rolex-relojes-new/${obj.modelo}-showcase.webp`,
             "type": "reloj",
+            "brand": "rolex"
+        })
+    })
+    rolexAccesoriesFromDB.forEach((obj) => {
+        allRoutesInsert.push({
+            "title": obj.nombre,
+            "watchSerial": obj.modelo,
+            "description": obj.sub,
+            "link": `https://mimijoyeria.com/rolex/accesorios/${obj.modelo}`,
+            "thumbnail": `https://mimijoyeria.com/storage/rolex-relojes-new/${obj.modelo}-packshot.webp`,
+            "type": "accesorio",
             "brand": "rolex"
         })
     })
@@ -138,7 +150,7 @@ exports.generateSearchRoutes = async (req, res) => {
             "title": obj.nombre,
             "watchSerial": obj.serie,
             "description": obj.descripcion,
-            "link": `${baseRoute}/relojeria/tudor/${obj.serie}`,
+            "link": `https://mimijoyeria.com/relojeria/tudor/${obj.serie}`,
             "thumbnail": `https://mimijoyeria.com/storage/store-products/${obj.serie}-1.webp`,
             "type": "reloj",
             "brand": "tudor"
@@ -152,7 +164,7 @@ exports.generateSearchRoutes = async (req, res) => {
             "title": obj.nombre,
             "watchSerial": obj.serie,
             "description": obj.titulo,
-            "link": `${baseRoute}/joyeria/${obj.serie}`,
+            "link": `https://mimijoyeria.com/joyeria/${obj.serie}`,
             "thumbnail": `https://mimijoyeria.com/storage/rolex-relojes-new/${obj.serie}-1.webp`,
 
             "type": "joyeria",
@@ -167,8 +179,8 @@ exports.generateSearchRoutes = async (req, res) => {
         Routes.Routes.bulkCreate(allRoutesInsert, {
             validate: true
         }).then(() => {
-            res.send("All routes inserted successfully")
-        }).catch((err) => res.send(err.message))
+            res.status(200).send("All routes inserted successfully")
+        }).catch((err) => res.status(500).send(err.message))
 
     }).catch((err) => res.send(err.message))
 

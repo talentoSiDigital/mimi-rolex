@@ -4,8 +4,8 @@ const User = db.user.User;
 const Op = db.Sequelize.Op;
 
 const fs = require("fs");
-const storagePath = 'https://mimijoyeria.com/storage'
-// const storagePath = 'https://localhost:3000/storage'
+const storagePath = process.env.STORAGE_PATH
+
 
 
 function truncExtension(text) { return text.split('.')[0] }
@@ -24,64 +24,6 @@ function getRandomIntInclusive(array, maximum) {
 
 // JEWELS
 
-// Create and Save a new Jewel instance (ADMIN)
-exports.createJ = (req, res) => {
-
-
-    const files = [req.files.imagen1[0].filename, req.files.imagen2[0].filename]
-    const body = req.body
-
-    if (!files) {
-        res.status(404).send({
-            message: "El formulario no ha sido recibido"
-        })
-
-    } else {
-
-
-
-
-        fs.rename(`${storagePath}/${files[0]}`, `${storagePath}/${req.body.serie}-1.webp`,
-            (error) => {
-                if (error) {
-                    console.log(error);
-                    return
-                }
-                fs.rename(`${storagePath}/${files[1]}`, `${storagePath}/${req.body.serie}-2.webp`,
-                    (error) => {
-                        if (error) {
-                            console.log(error);
-                        }
-                        else {
-                            console.log("\nFile Renamed\n");
-                        }
-                    });
-            });
-
-
-        // Create object
-        const jewelerObject = {
-            "serie": body.serie,
-            "nombre": body.name,
-            "titulo": body.title,
-            "tipo": body.type,
-            "tags": body.collection,
-            "coleccion": body.collection,
-            "precio": `$${body.price}`
-        }
-
-        Store.Jeweler.create(jewelerObject).then(() => {
-            res.send("File added successfully")
-        }).catch(err => {
-            res.send(err.message)
-        })
-
-
-    }
-
-};
-
-// Retrieve jewels by collection.
 exports.findJ = (req, res) => {
     // Validate request
     if (!req.params.id) {
@@ -115,7 +57,6 @@ exports.findJ = (req, res) => {
 };
 
 
-// Retrieve Jewel for detailed view 
 exports.findDetailJ = (req, res) => {
     // Validate request
     if (!req.params.id) {
@@ -150,70 +91,11 @@ exports.findDetailJ = (req, res) => {
         });
 };
 
-// Update a jewel by the id in the request (ADMIN)
-exports.updateJ = (req, res) => {
-    // Validate request
-    if (!req.body.title) {
-        res.status(400).send({
-            message: "Content can not be empty!"
-        });
-        return;
-    }
-};
+
+// ===============
+
 
 // WATCHES
-// Create and Save a new WATCH instance (ADMIN)
-exports.createR = (req, res) => {
-    // Validate request
-    const files = req.files
-    const body = req.body
-
-    if (!files) {
-        res.status(404).send({
-            message: "El formulario no ha sido recibido"
-        })
-
-    } else {
-
-        for (let i = 0; i < body.quantity; i++) {
-            fs.rename(`${storagePath}/${files[i].filename}`, `${storagePath}/${req.body.serie}-${i + 1}.webp`,
-                (error) => {
-                    if (error) {
-                        console.log(error);
-                        return
-                    }
-                });
-        }
-
-
-
-        // Create object
-        const watchmakingObject = {
-            "serie": body.serie,
-            "nombre": body.name,
-            "titulo": body.title,
-            "contenidoTabla": body.tableRows[0],
-            "coleccion": body.collection,
-            "precio": `$${body.price}`,
-            "cantidadImagenes": body.quantity
-        }
-
-
-        Store.Watchmaking.create(watchmakingObject).then(() => {
-            res.send("File added successfully")
-        }).catch(err => {
-            res.send(err.message)
-        })
-
-
-    }
-
-};
-
-
-
-
-// Retrieve WATCH by collection.
 exports.findRSlider = (req, res) => {
 
 
@@ -266,7 +148,6 @@ exports.findRSlider = (req, res) => {
             });
         });
 };
-// Retrieve WATCH by collection.
 exports.findRMain = (req, res) => {
     // Validate request
 
@@ -303,6 +184,21 @@ exports.findRMain = (req, res) => {
             });
         });
 };
+
+
+
+exports.getTudorCollections = (req, res) => {
+    Store.TudorCollection.findAll({
+        attributes: ['id', 'nombre']
+    }).then(data => res.send(data)).catch(err => {
+
+        res.status(500).json({
+            message:
+                err.message || "Some error occurred while retrieving tutorials."
+
+        });
+    });
+}
 
 
 exports.findR = (req, res) => {
@@ -343,7 +239,6 @@ exports.findR = (req, res) => {
         });
 };
 
-//Retrieve Watch 
 
 exports.findDetailR = (req, res) => {
     // Validate request
@@ -358,7 +253,7 @@ exports.findDetailR = (req, res) => {
         where: {
             serie: req.params.id
         },
-        include:Store.TudorCollection
+        include: Store.TudorCollection
     })
         .then(data => {
             data[0].dataValues.img = []
@@ -381,20 +276,14 @@ exports.findDetailR = (req, res) => {
         });
 };
 
-// Update a WATCH by the id in the request (ADMIN)
-exports.updateR = (req, res) => {
-    // Validate request
-    if (!req.body.title) {
-        res.status(400).send({
-            message: "Content can not be empty!"
-        });
-        return;
-    }
-};
+// ===============
+
 
 
 // SHOPPING CART 
-// Add watch to cart
+
+
+
 exports.addWatchToCart = async (req, res) => {
     // Validate request
     const itemId = parseInt(req.params.id);
@@ -441,7 +330,6 @@ exports.addWatchToCart = async (req, res) => {
 
 };
 
-//remove product from cart  
 exports.removeCartProduct = async (req, res) => {
     const itemId = parseInt(req.params.id);
     const userId = parseInt(req.params.user)
@@ -473,7 +361,6 @@ exports.removeCartProduct = async (req, res) => {
 
 }
 
-// Retrieve cart by owner 
 exports.getCartByOwner = (req, res) => {
     // Validate request
     const userId = parseInt(req.params.user)
@@ -532,7 +419,6 @@ exports.getCartByOwner = (req, res) => {
 
 };
 
-// Retrieve Bills by owner 
 exports.getBillsByOwner = (req, res) => {
     // Validate request
     const userId = parseInt(req.params.user)
@@ -624,6 +510,7 @@ exports.testRoute = async (req, res) => {
 
 }
 
+// ===============
 
 
 

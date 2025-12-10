@@ -43,7 +43,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                 <div id="rolex-container"
                     class="grid grid-cols-1 place-items-center md:grid-cols-2 w-10/12 gap-x-2 gap-y-10">
                     <ModelsCard img="new-watches/hub/land-dweller-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'land-dweller'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'land-dweller'} }">
                         <template #sub>
                             Nuevos modelos 2025
                         </template>
@@ -58,7 +58,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
 
 
                     <ModelsCard img="new-watches/hub/gmt-master-ii-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'gmt-master-ii'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'gmt-master-ii'} }">
 
                         <template #sub>
                             Nuevos modelos 2025
@@ -71,7 +71,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                     </ModelsCard>
 
                     <ModelsCard img="new-watches/hub/oyster-perpetual-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'oyster-perpetual'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'oyster-perpetual'} }">
 
                         <template #sub>
                             Nuevos modelos 2025
@@ -84,7 +84,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                     </ModelsCard>
 
                     <ModelsCard img="new-watches/hub/1908-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'1908'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'1908'} }">
                         <template #sub>
                             Nuevos modelos 2025
                         </template>
@@ -97,7 +97,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
 
 
                     <ModelsCard img="new-watches/hub/datejust-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'datejust'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'datejust'} }">
                         <template #sub>
                             Nuevos modelos 2025
                         </template>
@@ -110,7 +110,7 @@ import ModelsCard from '../../components/cards/ModelsCard.vue';
                     </ModelsCard>
 
                     <ModelsCard img="new-watches/hub/esferas-ineditas-cover"
-                        :link="{ name: 'rolex-nuevos-relojes-2025',params:{id:'esferas-ineditas'} }">
+                        :link="{ name: 'rolex-nuevos-modelos-2025',params:{id:'esferas-ineditas'} }">
                         <template #sub>
                             Nuevos modelos 2025
                         </template>

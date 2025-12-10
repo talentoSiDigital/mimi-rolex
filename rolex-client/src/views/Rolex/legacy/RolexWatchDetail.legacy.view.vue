@@ -110,9 +110,9 @@ function getResponsiveColors(colors) {
                     <div v-if="state">
                        
                         <div id="banner" :class="getColors(state.details[0].color)"
-                            class="m-4 bg-gradient-to-t flex flex-col-reverse md:flex-row ">
+                            class="m-4 bg-linear-to-t flex flex-col-reverse md:flex-row ">
 
-                            <div id="carousel" class="md:w-3/4 bg-gradient-to-t"
+                            <div id="carousel" class="md:w-3/4 bg-linear-to-t"
                                 :class="getResponsiveColors(state.details[0].color)">
                                 <carousel :items-to-show="1" :wrap-around="false" v-model="currentSlide">
                                     <slide v-for="slide in state.details[0].sliderImg" :key="slide">

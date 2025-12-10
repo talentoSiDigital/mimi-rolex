@@ -1,15 +1,10 @@
 <script setup>
 import { Head } from "@unhead/vue/components";
-import { useAsyncState } from "@vueuse/core";
-import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import newModelsCopy from "../../data/newModelsCopy.json";
 import PageBanner from "../../components/banners-components/PageBanner.vue";
-import WatchCard from "../../components/cards/WatchCard.vue";
 import RolexHeader from "../../components/RolexHeader.vue";
-import RolexDataServices from "../../services/rolexDataService";
+import newModelsCopy from "../../data/newModelsCopy.json";
 import RolexTemplate from "../Rolex/RolexTemplate.view.vue";
-import PageLoader from '../../components/global-components/PageLoader.vue';
 const route = useRoute();
 const currentRoute = route.params.id
 const currentData = newModelsCopy[currentRoute];

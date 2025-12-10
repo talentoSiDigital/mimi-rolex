@@ -6,6 +6,6 @@ module.exports = createTransport({
   port: 2525,
   auth: {
     user: "api",
-    pass: "e76a54b096492edc2c1b115b81c1c407"
+    pass: process.env.TRANSPORTER_PASS
   }
 });

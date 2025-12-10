@@ -237,7 +237,7 @@ watch(isReady, () => {
                         + Especificaciones</button>
                     <Transition name="scale">
                         <section v-if="descriptionModal"
-                            class="fixed z-[999] w-full h-screen top-0 left-0 bg-white flex flex-col pt-14 items-center text-black overflow-y-scroll">
+                            class="fixed z-999 w-full h-screen top-0 left-0 bg-white flex flex-col pt-14 items-center text-black overflow-y-scroll">
                             <div class="w-10/12 md:w-1/2 flex justify-end">
                                 <button @click="descriptionModal = false">
                                     <p class="text-3xl">x</p>

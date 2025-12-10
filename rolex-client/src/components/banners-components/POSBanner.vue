@@ -85,7 +85,7 @@ function highlightDay(pos) {
     <div class="w-full flex flex-col-reverse sm:flex-row h-full relative">
       <div class="bg-[#0b3e27] sm:w-[400px] h-[65vh]">
         <div
-          class="flex flex-col items-center justify-evenly font-montserrat font-bold text-white text-sm h-full -translate-y-12 sm:-translate-y-0"
+          class="flex flex-col items-center justify-evenly font-montserrat font-bold text-white text-sm h-full -translate-y-12 sm:translate-y-0"
         >
           <Watch />
           <div class="flex justify-between w-9/12 py-4 sm:py-0">
@@ -115,7 +115,7 @@ function highlightDay(pos) {
           </div>
           <div
             @click="openHours()"
-            class="w-10/12 px-4 py-2 shadow-[0px_8px_30px_-7px_rgba(0,_0,_0,_0.5)] rounded-lg flex items-center justify-between cursor-pointer"
+            class="w-10/12 px-4 py-2 shadow-[0px_8px_30px_-7px_rgba(0,0,0,0.5)] rounded-lg flex items-center justify-between cursor-pointer"
           >
             <h2 class="opacity-50 text-[rgba(97_189_147)]">{{ dayChecker }}</h2>
             <font-awesome-icon :icon="['fas', 'chevron-right']" />

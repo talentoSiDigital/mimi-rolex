@@ -15,6 +15,16 @@ class Rolex {
     return http.get(`/v2/rolex/${id}`);
 
   }
+
+  getAllAccesories(){
+    return http.get('/v2/rolex-accesories/getAll')
+  }
+
+  getIndividualAccesories(code){
+    return http.get(`/v2/rolex-accesories/get/${code}`)
+  }
+
+
 }
 
 export default new Rolex();
